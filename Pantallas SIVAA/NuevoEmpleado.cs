@@ -92,15 +92,15 @@ namespace Pantallas_SIVAA
                 empleado.RFC = txtRFC.Text;
                 empleado.Contraseña = txtContraseña.Text;
                 empleado.EstadoEmpleado = "Activa";
-                if (cbPuesto.SelectedIndex == 1)
-                {
-                    empleado.Tipo = "Atencion";
+                //if (cbPuesto.SelectedIndex == 1)
+                //{
+                //    empleado.Tipo = "Atencion";
 
-                }
-                else
-                {
+                //}
+                //else
+                //{
                     empleado.Tipo = cbPuesto.Text;
-                }
+                //}
 
                 empleadolog.Registrar(empleado);
                 this.Close();
@@ -129,11 +129,11 @@ namespace Pantallas_SIVAA
             {
                 e.Handled = true;
             }
-            if (txtNombre.Text.Length > 9)
+            if (txtNombre.Text.Length > 34)
             {
                 e.Handled = true;
                 //MessageBox.Show("Limite de caracteres exedido");
-                string te = txtNombre.Text.Substring(0, 9).ToString();
+                string te = txtNombre.Text.Substring(0, 34).ToString();
                 txtNombre.Text = te;
             }
         }
@@ -148,11 +148,11 @@ namespace Pantallas_SIVAA
 
         private void txtContraseña_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (txtContraseña.Text.Length > 9)
+            if (txtContraseña.Text.Length > 30)
             {
                 e.Handled = true;
                 //MessageBox.Show("Limite de caracteres exedido");
-                string te = txtContraseña.Text.Substring(0, 9).ToString();
+                string te = txtContraseña.Text.Substring(0, 30).ToString();
                 txtContraseña.Text = te;
             }
         }
@@ -163,11 +163,11 @@ namespace Pantallas_SIVAA
             {
                 e.Handled = true;
             }
-            if (txtApellidoM.Text.Length > 9)
+            if (txtApellidoM.Text.Length > 34)
             {
                 e.Handled = true;
                 //MessageBox.Show("Limite de caracteres exedido");
-                string te = txtApellidoM.Text.Substring(0, 9).ToString();
+                string te = txtApellidoM.Text.Substring(0, 34).ToString();
                 txtApellidoM.Text = te;
             }
         }
@@ -178,39 +178,40 @@ namespace Pantallas_SIVAA
             {
                 e.Handled = true;
             }
-            if (txtApellidoP.Text.Length > 9)
+            if (txtApellidoP.Text.Length > 34)
             {
                 e.Handled = true;
                 //MessageBox.Show("Limite de caracteres exedido");
-                string te = txtApellidoP.Text.Substring(0, 9).ToString();
+                string te = txtApellidoP.Text.Substring(0, 34).ToString();
                 txtApellidoP.Text = te;
             }
         }
 
         private void txtCorreo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (txtCorreo.Text.Length > 9)
+            if (txtCorreo.Text.Length > 34)
             {
                 e.Handled = true;
                 //MessageBox.Show("Limite de caracteres exedido");
-                string te = txtCorreo.Text.Substring(0, 9).ToString();
+                string te = txtCorreo.Text.Substring(0, 34).ToString();
                 txtCorreo.Text = te;
             }
         }
 
         private void txtRFC_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (txtRFC.Text.Length > 9)
+            if (txtRFC.Text.Length > 12)
             {
                 e.Handled = true;
                 //MessageBox.Show("Limite de caracteres exedido");
-                string te = txtRFC.Text.Substring(0, 9).ToString();
+                string te = txtRFC.Text.Substring(0, 12).ToString();
                 txtRFC.Text = te;
             }
         }
 
         private void NuevoEmpleado_Load(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             switch (_pqt.Tipo.Trim())
             {
                 case "Atencion":
@@ -255,5 +256,10 @@ namespace Pantallas_SIVAA
                     break;
             }
         }
+=======
+
+        }
+
+>>>>>>> origin/master
     }
 }

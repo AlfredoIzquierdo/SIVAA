@@ -105,9 +105,13 @@ namespace Pantallas_SIVAA
             listas = ve;
             foreach (Versions x in ve)
             {
-                dataGridView1.Rows.Add(x.IDVersion, x.IDVehiculo, x.Llantas, x.TipoAsientos, x.CamaraTrasera, x.Pantalla, x.TipoCombustible, x.Version, x.Rines, x.Cilindraje,
-                x.Costo, x.CapacidadCajuela, x.DistanciaEjes, x.Anchura, x.Altura, x.AudioVelC, x.TomaCorriente, x.TipoTraccion, x.NumPuertas, x.Transmision, x.FarosHal, x.NumEngranajes,
-                x.ACAutom, x.FarosLED, x.RendimientoCombustible, x.FrenosTraseros, x.FrenosDelanteros, x.SuspensionDelantera, x.SuspensionTrasera, x.EspejosLatDirC, x.EspejosLatAE);
+                if (x.EstadoVersion == "Activo")
+                {
+                    dataGridView1.Rows.Add(x.IDVersion, x.IDVehiculo, x.Llantas, x.TipoAsientos, x.CamaraTrasera, x.Pantalla, x.TipoCombustible, x.Version, x.Rines, x.Cilindraje,
+               x.Costo, x.CapacidadCajuela, x.DistanciaEjes, x.Anchura, x.Altura, x.AudioVelC, x.TomaCorriente, x.TipoTraccion, x.NumPuertas, x.Transmision, x.FarosHal, x.NumEngranajes,
+               x.ACAutom, x.FarosLED, x.RendimientoCombustible, x.FrenosTraseros, x.FrenosDelanteros, x.SuspensionDelantera, x.SuspensionTrasera, x.EspejosLatDirC, x.EspejosLatAE);
+
+                }
 
             }
         }
@@ -217,9 +221,13 @@ namespace Pantallas_SIVAA
                 List<Versions> ve = version.ListadoTotal();
                 foreach (Versions x in ve)
                 {
-                    dataGridView1.Rows.Add(x.IDVersion, x.IDVehiculo, x.Llantas, x.TipoAsientos, x.CamaraTrasera, x.Pantalla, x.TipoCombustible, x.Version, x.Rines, x.Cilindraje,
+                    if (x.EstadoVersion == "Activo")
+                    {
+                        dataGridView1.Rows.Add(x.IDVersion, x.IDVehiculo, x.Llantas, x.TipoAsientos, x.CamaraTrasera, x.Pantalla, x.TipoCombustible, x.Version, x.Rines, x.Cilindraje,
                     x.Costo, x.CapacidadCajuela, x.DistanciaEjes, x.Anchura, x.Altura, x.AudioVelC, x.TomaCorriente, x.TipoTraccion, x.NumPuertas, x.Transmision, x.FarosHal, x.NumEngranajes,
                     x.ACAutom, x.FarosLED, x.RendimientoCombustible, x.FrenosTraseros, x.FrenosDelanteros, x.SuspensionDelantera, x.SuspensionTrasera, x.EspejosLatDirC, x.EspejosLatAE);
+
+                    }
 
                 }
             }
@@ -236,6 +244,32 @@ namespace Pantallas_SIVAA
             rp.Show();
         }
 
+<<<<<<< HEAD
         
+=======
+        private void dataGridView1_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                dataGridView1.Rows[e.RowIndex].Selected = true;
+            }
+        }
+
+        private void pictureBox11_Click_1(object sender, EventArgs e)
+        {
+            string id = null;
+            if (dataGridView1.SelectedRows.Count == 1)
+            {
+                id = dataGridView1[0, dataGridView1.SelectedRows[0].Index].Value.ToString();
+                version.Eliminar(id);
+                MessageBox.Show("Version Eliminada");
+                dataGridView1.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
+            }
+            else
+            {
+                MessageBox.Show("Favor de seleccionar una version");
+            }
+        }
+>>>>>>> origin/master
     }
 }

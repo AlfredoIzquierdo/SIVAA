@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace Pantallas_SIVAA
 {
@@ -109,12 +110,16 @@ namespace Pantallas_SIVAA
             timer1.Enabled = true;
             string time = DateTime.Now.ToString("HH:mm");
             TXTHORA.Text = time;
+            textBox11.Text = time;
             string dia = DateTime.Now.ToString("dd");
             numericUpDown2.Value = int.Parse(dia);
+            numericUpDown6.Value = int.Parse(dia);
             string mes = DateTime.Now.ToString("MM");
             numericUpDown3.Value = int.Parse(mes);
+            numericUpDown5.Value = int.Parse(mes);
             string an = DateTime.Now.ToString("yyyy");
             numericUpDown4.Value = int.Parse(an);
+            numericUpDown1.Value = int.Parse(an);
             panel9.Enabled = false;
         }
 
@@ -157,7 +162,7 @@ namespace Pantallas_SIVAA
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            if (radioButton1.Checked)
+            if (radioButton2.Checked)
             {
                 textBox7.Enabled = true;
             }
@@ -220,7 +225,24 @@ namespace Pantallas_SIVAA
         private void button1_Click(object sender, EventArgs e)
         {
             int k = rn.Next(100, 300);
-            if (double.Parse(textBox7.Text) >= double.Parse(textBox5.Text))
+            if (txtid.Text == "" || textBox5.Text == "")
+            {
+                MessageBox.Show("Favor de escrbir un voucher");
+                return;
+            }
+            if (radioButton2.Checked)
+            {
+                if (textBox7.Text == "")
+                {
+                    MessageBox.Show("Favor de escribir el monto a pagar");
+                    return;
+                }
+            }
+            else
+            {
+
+            }
+            if (radioButton1.Checked || (double.Parse(textBox7.Text) >= double.Parse(textBox5.Text)))
             {
                 try
                 {
@@ -344,6 +366,7 @@ namespace Pantallas_SIVAA
                 MessageBox.Show("El pago no puede ser menor que el monto a pagar");
                 return;
             }
+            MessageBox.Show("Pago efectuado");
             Limpiar();
         }
         public void Limpiar()
@@ -379,7 +402,7 @@ namespace Pantallas_SIVAA
             }
             else
             {
-                MessageBox.Show("No hay ventas a credito pendientes de entregar autos");
+                MessageBox.Show("No hay ventas a credito pendientes de abonos");
                 dataGridView6.DataSource = "";
             }
             dataGridView6.ClearSelection();
@@ -392,7 +415,7 @@ namespace Pantallas_SIVAA
                 MessageBox.Show("Favor de escribir el nombre y apellido del cliente para la busqueda");
                 return;
             }
-            List<VentasEntrega> listado = PqteLog1.Listaporcliente(nombre, apellido);
+            List<VentasEntrega> listado = PqteLog1.ListaporclienteENGANCHES(nombre, apellido);
             if (listado.Count > 0)
             {
                 dataGridView6.AutoGenerateColumns = false;
@@ -456,7 +479,7 @@ namespace Pantallas_SIVAA
                 MessageBox.Show("Favor de escribir el nombre y apellido del cliente para la busqueda");
                 return;
             }
-            List<VentasEntrega> listado = PqteLog1.ListaporclienteABONO(nombre, apellido);
+            List<VentasEntrega> listado = PqteLog1.ListaporclienteABONOS(nombre, apellido);
             if (listado.Count > 0)
             {
                 dataGridView6.AutoGenerateColumns = false;
@@ -527,9 +550,10 @@ namespace Pantallas_SIVAA
             if (textBox1.Text == "")
             {
                 MessageBox.Show("Favor de llenar todos los campos");
+                return;
                 //textBox1.Text = "0";
             }
-            if ((double.Parse(textBox12.Text) >= double.Parse(textBox1.Text)) || (radioButton4.Checked))
+            if ((radioButton4.Checked) || (double.Parse(textBox12.Text) >= double.Parse(textBox1.Text)))
             {
                 try
                 {
@@ -537,13 +561,13 @@ namespace Pantallas_SIVAA
                     corte = PqteLog.BuscarCajaAbierta();
                     Abono ab = Pqtelog8.BuscarSaldos(textBox3.Text);
                     //MessageBox.Show("id = "+ab.IDVenta+"\r\nsaldoAnt = "+ab.SaldoAnterior);
-                                        if (ab == null)
+                    if (ab == null)
                     {
                         san = cre.TotalFinal;
                     }
                     else
                         san = ab.SaldoAnterior;
-                        sac = san - double.Parse(textBox1.Text);
+                    sac = san - double.Parse(textBox1.Text);
                     //enganche en efectivo o tarjeta
                     if (radioButton5.Checked && radioButton3.Checked)
                     {
@@ -730,7 +754,7 @@ namespace Pantallas_SIVAA
                         else
                             est = "PENDIENTE";
                     }
-                    if (sac==0 || sac<1)
+                    if (sac == 0 || sac < 1)
                     {
                         est = "FINALIZADO";
                     }
@@ -760,6 +784,7 @@ namespace Pantallas_SIVAA
                 MessageBox.Show("El abono no puede ser menor que el monto a pagar");
                 return;
             }
+            MessageBox.Show("abono efectuado");
             //Limpiar();
         }
 
@@ -820,6 +845,39 @@ namespace Pantallas_SIVAA
             }
         }
 
-        
+        private void CorteDeCaja_Load_1(object sender, EventArgs e)
+        {
+            CorteDeCaja_Load(sender, e);
+        }
+
+        private void textBox7_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (textBox7.Text.Length > 7)
+            {
+                e.Handled = true;
+                //MessageBox.Show("Limite de caracteres exedido");
+                string te = textBox7.Text.Substring(0, 7).ToString();
+                textBox7.Text = te;
+            }
+        }
+
+        private void textBox12_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (textBox12.Text.Length > 5)
+            {
+                e.Handled = true;
+                //MessageBox.Show("Limite de caracteres exedido");
+                string te = textBox12.Text.Substring(0, 5).ToString();
+                textBox12.Text = te;
+            }
+        }
     }
 }

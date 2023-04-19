@@ -388,6 +388,7 @@
             txtApellidoM.PlaceholderText = "Apellido Materno";
             txtApellidoM.Size = new Size(516, 29);
             txtApellidoM.TabIndex = 113;
+            txtApellidoM.KeyPress += txtApellidoM_KeyPress;
             // 
             // txtApellidoP
             // 
@@ -397,6 +398,7 @@
             txtApellidoP.PlaceholderText = "Apellido Paterno";
             txtApellidoP.Size = new Size(516, 29);
             txtApellidoP.TabIndex = 112;
+            txtApellidoP.KeyPress += txtApellidoP_KeyPress;
             // 
             // button3
             // 
@@ -433,6 +435,7 @@
             txtContraseña.PlaceholderText = "*************";
             txtContraseña.Size = new Size(236, 29);
             txtContraseña.TabIndex = 100;
+            txtContraseña.KeyPress += txtContraseña_KeyPress;
             // 
             // txtTelefono
             // 
@@ -443,6 +446,7 @@
             txtTelefono.PromptChar = '-';
             txtTelefono.Size = new Size(234, 29);
             txtTelefono.TabIndex = 110;
+            txtTelefono.KeyPress += txtTelefono_KeyPress;
             // 
             // pictureBox15
             // 
@@ -476,6 +480,7 @@
             txtNombre.PlaceholderText = "Nombre";
             txtNombre.Size = new Size(516, 29);
             txtNombre.TabIndex = 99;
+            txtNombre.KeyPress += txtNombre_KeyPress;
             // 
             // txtRFC
             // 
@@ -486,6 +491,7 @@
             txtRFC.PlaceholderText = "RFC";
             txtRFC.Size = new Size(236, 29);
             txtRFC.TabIndex = 101;
+            txtRFC.KeyPress += txtRFC_KeyPress;
             // 
             // pictureBox4
             // 
@@ -507,6 +513,7 @@
             txtCorreo.PlaceholderText = "Agregar correo";
             txtCorreo.Size = new Size(515, 29);
             txtCorreo.TabIndex = 98;
+            txtCorreo.KeyPress += txtCorreo_KeyPress;
             // 
             // pictureBox7
             // 

@@ -440,6 +440,7 @@
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(1089, 532);
             dataGridView1.TabIndex = 49;
+            dataGridView1.CellClick += dataGridView1_CellClick_1;
             // 
             // Column1
             // 
@@ -692,6 +693,7 @@
             pictureBox11.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox11.TabIndex = 52;
             pictureBox11.TabStop = false;
+            pictureBox11.Click += pictureBox11_Click_1;
             // 
             // panel3
             // 

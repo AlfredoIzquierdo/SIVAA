@@ -25,6 +25,17 @@ namespace Pantallas_SIVAA
             label7.Text = "Alfredo Izquierdo";
             label8.Text = DateTime.Now.ToString();
             dataGridView1.DataSource = lista;
+            //dataGridView1.Rows.Clear();
+            //foreach (Empleado x in lista)
+            //{
+            //    if (x.EstadoEmpleado == "Activo")
+            //    {
+            //        //MessageBox.Show("Mens");
+            //        dataGridView1.Rows.Add(1);
+            //        dataGridView1.Rows.Add(x.IDEmpleado, x.Nombre, x.ApellidoPat, x.ApellidoMat, x.Correo, x.Telefono, x.RFC, x.Contraseña, x.Tipo);
+
+            //    }
+            //}
         }
     }
 }

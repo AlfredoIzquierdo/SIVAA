@@ -179,6 +179,7 @@ namespace Pantallas_SIVAA
         }
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
+<<<<<<< HEAD
             //    if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
             //    {
             //        e.Handled = true;
@@ -190,6 +191,19 @@ namespace Pantallas_SIVAA
             //        string te = txtNombre.Text.Substring(0, 9).ToString();
             //        txtNombre.Text = te;
             //    }
+=======
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                e.Handled = true;
+            }
+            if (txtNombre.Text.Length > 34)
+            {
+                e.Handled = true;
+                //MessageBox.Show("Limite de caracteres exedido");
+                string te = txtNombre.Text.Substring(0, 34).ToString();
+                txtNombre.Text = te;
+            }
+>>>>>>> origin/master
         }
 
         private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
@@ -202,43 +216,77 @@ namespace Pantallas_SIVAA
 
         private void txtContraseña_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (txtContraseña.Text.Length > 35)
+            if (txtContraseña.Text.Length > 34)
             {
                 e.Handled = true;
                 //MessageBox.Show("Limite de caracteres exedido");
-                string te = txtContraseña.Text.Substring(0, 9).ToString();
+                string te = txtContraseña.Text.Substring(0, 34).ToString();
                 txtContraseña.Text = te;
             }
         }
 
         private void txtApellidoM_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            //{
-            //    e.Handled = true;
-            //}
-            //if (txtApellidoM.Text.Length > 9)
-            //{
-            //    e.Handled = true;
-            //    //MessageBox.Show("Limite de caracteres exedido");
-            //    string te = txtApellidoM.Text.Substring(0, 9).ToString();
-            //    txtApellidoM.Text = te;
-            //}
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                e.Handled = true;
+            }
+            if (txtApellidoM.Text.Length > 34)
+            {
+                e.Handled = true;
+                //MessageBox.Show("Limite de caracteres exedido");
+                string te = txtApellidoM.Text.Substring(0, 34).ToString();
+                txtApellidoM.Text = te;
+            }
         }
 
         private void txtApellidoP_KeyPress(object sender, KeyPressEventArgs e)
         {
+<<<<<<< HEAD
 
+=======
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                e.Handled = true;
+            }
+            if (txtApellidoP.Text.Length > 34)
+            {
+                e.Handled = true;
+                //MessageBox.Show("Limite de caracteres exedido");
+                string te = txtApellidoP.Text.Substring(0, 34).ToString();
+                txtApellidoP.Text = te;
+            }
+>>>>>>> origin/master
         }
 
         private void txtCorreo_KeyPress(object sender, KeyPressEventArgs e)
         {
+<<<<<<< HEAD
 
+=======
+            if (txtCorreo.Text.Length > 34)
+            {
+                e.Handled = true;
+                //MessageBox.Show("Limite de caracteres exedido");
+                string te = txtCorreo.Text.Substring(0, 34).ToString();
+                txtCorreo.Text = te;
+            }
+>>>>>>> origin/master
         }
 
         private void txtRFC_KeyPress(object sender, KeyPressEventArgs e)
         {
+<<<<<<< HEAD
 
+=======
+            if (txtRFC.Text.Length > 12)
+            {
+                e.Handled = true;
+                //MessageBox.Show("Limite de caracteres exedido");
+                string te = txtRFC.Text.Substring(0, 12).ToString();
+                txtRFC.Text = te;
+            }
+>>>>>>> origin/master
         }
 
 

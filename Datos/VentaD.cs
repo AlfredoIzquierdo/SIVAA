@@ -354,6 +354,92 @@ namespace Datos
             }
             return productos;
         }
+        public List<VentasEntrega> ListadoTotalVentasEnganchePorClientes(string nom, string app)
+        {
+            List<VentasEntrega> productos = new List<VentasEntrega>();
+
+            //Vuelvo a crear la conexión
+            using (SqlConnection Cnx = new SqlConnection(CdCnx))
+            {
+                Cnx.Open();
+                //Creo el Query (todos los registros de la tabla Venta
+                string CdSql = "select Venta.IDVenta, Cliente.Nombre, Cliente.ApellidoPaterno, Cliente.ApellidoMaterno, Venta.Dia, venta.Mes,\r\nVenta.Año, Venta.Hora,Venta.TipoVenta, Vehiculo.Nombre Vehiculo, Version.Version, Version.Cilindraje, \r\nVersion.Transmision, Modelo.Año Modelo\r\nfrom Venta,VentaCredito, cliente, Cotizacion, CotizacionCredito, Version, ModeloVersion, Modelo, Vehiculo\r\nwhere venta.IDVenta=VentaCredito.IDVenta and VentaCredito.IDCotizacion=CotizacionCredito.IDCotizacion\r\nand CotizacionCredito.IDCotizacion=Cotizacion.IDCotizacion and Cotizacion.IDCliente=Cliente.IDCliente \r\nand Cotizacion.IDVersion=ModeloVersion.IDVersion and ModeloVersion.IDModelo=Modelo.IDModelo and \r\nVersion.IDVehiculo= Vehiculo.IDVehiculo and Cotizacion.IDVersion=Version.IDVersion\r\nand VentaCredito.Estatus='PENDIENTE' and Cliente.Nombre=@nom and Cliente.ApellidoPaterno=@app";
+                using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
+                {
+                    Cmd.Parameters.AddWithValue("@nom", nom);
+                    Cmd.Parameters.AddWithValue("@app", app);
+                    SqlDataReader Dr = Cmd.ExecuteReader();
+                    //Leo registro por registro que tiene la tabla 
+                    while (Dr.Read())
+                    {
+                        //Cada vez que lo lea se crea un nuevo objeto
+                        VentasEntrega Pqte = new VentasEntrega
+                        {
+                            IDVenta = Convert.ToString(Dr["IDVenta"]),
+                            Nombre = Convert.ToString(Dr["Nombre"]),
+                            ApellidoPaterno = Convert.ToString(Dr["ApellidoPaterno"]),
+                            ApellidoMaterno = Convert.ToString(Dr["ApellidoMaterno"]),
+                            Dia = Convert.ToInt32(Dr["Dia"]),
+                            Mes = Convert.ToInt32(Dr["Mes"]),
+                            Año = Convert.ToInt32(Dr["Año"]),
+                            Hora = Convert.ToString(Dr["Hora"]),
+                            TipoVenta = Convert.ToString(Dr["TipoVenta"]),
+                            Vehiculo = Convert.ToString(Dr["Nombre"]),
+                            Version = Convert.ToString(Dr["Version"]),
+                            Cilindraje = Convert.ToString(Dr["Cilindraje"]),
+                            Transmision = Convert.ToString(Dr["Transmision"]),
+                            Modelo = Convert.ToString(Dr["Año"])
+                        };
+                        productos.Add(Pqte);
+                    }
+                }
+                Cnx.Close();
+            }
+            return productos;
+        }
+        public List<VentasEntrega> ListadoTotalDEVENTASPORABONOPorClientes(string nom, string app)
+        {
+            List<VentasEntrega> productos = new List<VentasEntrega>();
+
+            //Vuelvo a crear la conexión
+            using (SqlConnection Cnx = new SqlConnection(CdCnx))
+            {
+                Cnx.Open();
+                //Creo el Query (todos los registros de la tabla Venta
+                string CdSql = "select Venta.IDVenta, Cliente.Nombre, Cliente.ApellidoPaterno, Cliente.ApellidoMaterno, Venta.Dia, venta.Mes,\r\nVenta.Año, Venta.Hora,Venta.TipoVenta, Vehiculo.Nombre Vehiculo, Version.Version, Version.Cilindraje, \r\nVersion.Transmision, Modelo.Año Modelo\r\nfrom Venta,VentaCredito, cliente, Cotizacion, CotizacionCredito, Version, ModeloVersion, Modelo, Vehiculo\r\nwhere venta.IDVenta=VentaCredito.IDVenta and VentaCredito.IDCotizacion=CotizacionCredito.IDCotizacion\r\nand CotizacionCredito.IDCotizacion=Cotizacion.IDCotizacion and Cotizacion.IDCliente=Cliente.IDCliente \r\nand Cotizacion.IDVersion=ModeloVersion.IDVersion and ModeloVersion.IDModelo=Modelo.IDModelo and \r\nVersion.IDVehiculo= Vehiculo.IDVehiculo and Cotizacion.IDVersion=Version.IDVersion\r\nand VentaCredito.Estatus='ACTIVO' and Cliente.Nombre=@nom and Cliente.ApellidoPaterno=@app";
+                using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
+                {
+                    Cmd.Parameters.AddWithValue("@nom", nom);
+                    Cmd.Parameters.AddWithValue("@app", app);
+                    SqlDataReader Dr = Cmd.ExecuteReader();
+                    //Leo registro por registro que tiene la tabla 
+                    while (Dr.Read())
+                    {
+                        //Cada vez que lo lea se crea un nuevo objeto
+                        VentasEntrega Pqte = new VentasEntrega
+                        {
+                            IDVenta = Convert.ToString(Dr["IDVenta"]),
+                            Nombre = Convert.ToString(Dr["Nombre"]),
+                            ApellidoPaterno = Convert.ToString(Dr["ApellidoPaterno"]),
+                            ApellidoMaterno = Convert.ToString(Dr["ApellidoMaterno"]),
+                            Dia = Convert.ToInt32(Dr["Dia"]),
+                            Mes = Convert.ToInt32(Dr["Mes"]),
+                            Año = Convert.ToInt32(Dr["Año"]),
+                            Hora = Convert.ToString(Dr["Hora"]),
+                            TipoVenta = Convert.ToString(Dr["TipoVenta"]),
+                            Vehiculo = Convert.ToString(Dr["Nombre"]),
+                            Version = Convert.ToString(Dr["Version"]),
+                            Cilindraje = Convert.ToString(Dr["Cilindraje"]),
+                            Transmision = Convert.ToString(Dr["Transmision"]),
+                            Modelo = Convert.ToString(Dr["Año"])
+                        };
+                        productos.Add(Pqte);
+                    }
+                }
+                Cnx.Close();
+            }
+            return productos;
+        }
         public List<VentasEntrega> ListadoTotalVentasABONOPorClientes(string nom, string app)
         {
             List<VentasEntrega> productos = new List<VentasEntrega>();
@@ -385,6 +471,92 @@ namespace Datos
                             Hora = Convert.ToString(Dr["Hora"]),
                             TipoVenta = Convert.ToString(Dr["TipoVenta"]),
                             Vehiculo = Convert.ToString(Dr["Nombre"]),
+                            Version = Convert.ToString(Dr["Version"]),
+                            Cilindraje = Convert.ToString(Dr["Cilindraje"]),
+                            Transmision = Convert.ToString(Dr["Transmision"]),
+                            Modelo = Convert.ToString(Dr["Año"])
+                        };
+                        productos.Add(Pqte);
+                    }
+                }
+                Cnx.Close();
+            }
+            return productos;
+        }
+        public List<VentasEntrega> ListadoTotalVentasABONOEspecificos(string nom, string app)
+        {
+            List<VentasEntrega> productos = new List<VentasEntrega>();
+
+            //Vuelvo a crear la conexión
+            using (SqlConnection Cnx = new SqlConnection(CdCnx))
+            {
+                Cnx.Open();
+                //Creo el Query (todos los registros de la tabla Venta
+                string CdSql = "select Venta.IDVenta, Cliente.Nombre, Cliente.ApellidoPaterno, Cliente.ApellidoMaterno, Venta.Dia, venta.Mes,\\r\\nVenta.Año, Venta.Hora,Venta.TipoVenta, Vehiculo.Nombre Vehiculo, Version.Version, Version.Cilindraje, \\r\\nVersion.Transmision, Modelo.Año Modelo\\r\\nfrom Venta,VentaCredito, cliente, Cotizacion, CotizacionCredito, Version, ModeloVersion, Modelo, Vehiculo\\r\\nwhere venta.IDVenta=VentaCredito.IDVenta and VentaCredito.IDCotizacion=CotizacionCredito.IDCotizacion\\r\\nand CotizacionCredito.IDCotizacion=Cotizacion.IDCotizacion and Cotizacion.IDCliente=Cliente.IDCliente \\r\\nand Cotizacion.IDVersion=ModeloVersion.IDVersion and ModeloVersion.IDModelo=Modelo.IDModelo and \\r\\nVersion.IDVehiculo= Vehiculo.IDVehiculo and Cotizacion.IDVersion=Version.IDVersion\\r\\nand VentaCredito.Estatus='Activo' and Cliente.Nombre=@nom and Cliente.ApellidoPaterno=@app";
+                using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
+                {
+                    Cmd.Parameters.AddWithValue("@nom", nom);
+                    Cmd.Parameters.AddWithValue("@app", app);
+                    SqlDataReader Dr = Cmd.ExecuteReader();
+                    //Leo registro por registro que tiene la tabla 
+                    while (Dr.Read())
+                    {
+                        //Cada vez que lo lea se crea un nuevo objeto
+                        VentasEntrega Pqte = new VentasEntrega
+                        {
+                            IDVenta = Convert.ToString(Dr["IDVenta"]),
+                            Nombre = Convert.ToString(Dr["Nombre"]),
+                            ApellidoPaterno = Convert.ToString(Dr["ApellidoPaterno"]),
+                            ApellidoMaterno = Convert.ToString(Dr["ApellidoMaterno"]),
+                            Dia = Convert.ToInt32(Dr["Dia"]),
+                            Mes = Convert.ToInt32(Dr["Mes"]),
+                            Año = Convert.ToInt32(Dr["Año"]),
+                            Hora = Convert.ToString(Dr["Hora"]),
+                            TipoVenta = Convert.ToString(Dr["TipoVenta"]),
+                            Vehiculo = Convert.ToString(Dr["Nombre"]),
+                            Version = Convert.ToString(Dr["Version"]),
+                            Cilindraje = Convert.ToString(Dr["Cilindraje"]),
+                            Transmision = Convert.ToString(Dr["Transmision"]),
+                            Modelo = Convert.ToString(Dr["Año"])
+                        };
+                        productos.Add(Pqte);
+                    }
+                }
+                Cnx.Close();
+            }
+            return productos;
+        }
+        public List<VentasEntrega> ListadoTotalVentasporABONAR()
+        {
+            List<VentasEntrega> productos = new List<VentasEntrega>();
+
+            //Vuelvo a crear la conexión
+            using (SqlConnection Cnx = new SqlConnection(CdCnx))
+            {
+                Cnx.Open();
+                //Creo el Query (todos los registros de la tabla Venta
+                string CdSql = "select Venta.IDVenta, Cliente.Nombre, Cliente.ApellidoPaterno, Cliente.ApellidoMaterno, Venta.Dia, venta.Mes,\r\nVenta.Año, Venta.Hora,Venta.TipoVenta, Vehiculo.Nombre Vehiculo, Version.Version, Version.Cilindraje, \r\nVersion.Transmision, Modelo.Año Modelo\r\nfrom Venta,VentaCredito, cliente, Cotizacion, CotizacionCredito, Version, ModeloVersion, Modelo, Vehiculo\r\nwhere venta.IDVenta=VentaCredito.IDVenta and VentaCredito.IDCotizacion=CotizacionCredito.IDCotizacion\r\nand CotizacionCredito.IDCotizacion=Cotizacion.IDCotizacion and Cotizacion.IDCliente=Cliente.IDCliente \r\nand Cotizacion.IDVersion=ModeloVersion.IDVersion and ModeloVersion.IDModelo=Modelo.IDModelo and \r\nVersion.IDVehiculo= Vehiculo.IDVehiculo and Cotizacion.IDVersion=Version.IDVersion\r\nand VentaCredito.Estatus='Activo'";
+                using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
+                {
+                    //Cmd.Parameters.AddWithValue("@nom", nom);
+                    //Cmd.Parameters.AddWithValue("@app", app);
+                    SqlDataReader Dr = Cmd.ExecuteReader();
+                    //Leo registro por registro que tiene la tabla 
+                    while (Dr.Read())
+                    {
+                        //Cada vez que lo lea se crea un nuevo objeto
+                        VentasEntrega Pqte = new VentasEntrega
+                        {
+                            IDVenta = Convert.ToString(Dr["IDVenta"]),
+                            Nombre = Convert.ToString(Dr["Nombre"]),
+                            ApellidoPaterno = Convert.ToString(Dr["ApellidoPaterno"]),
+                            ApellidoMaterno = Convert.ToString(Dr["ApellidoMaterno"]),
+                            Dia = Convert.ToInt32(Dr["Dia"]),
+                            Mes = Convert.ToInt32(Dr["Mes"]),
+                            Año = Convert.ToInt32(Dr["Año"]),
+                            Hora = Convert.ToString(Dr["Hora"]),
+                            TipoVenta = Convert.ToString(Dr["TipoVenta"]),
+                            Vehiculo = Convert.ToString(Dr["Vehiculo"]),
                             Version = Convert.ToString(Dr["Version"]),
                             Cilindraje = Convert.ToString(Dr["Cilindraje"]),
                             Transmision = Convert.ToString(Dr["Transmision"]),

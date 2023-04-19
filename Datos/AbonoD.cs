@@ -164,7 +164,8 @@ namespace Datos
             {
                 //Abro la conexión y creo el Query insertar, eliminar, consultar, elminar, actualizar, consulta individaul, general, orrar todo
                 Cnx.Open();
-                string CdSql = "select IDVenta, SUM(Abono.Monto) SaldoAnt\r\nfrom Abono where IDVenta=@Cl \r\ngroup by IDVenta";
+                //string CdSql = "select IDVenta, SUM(Abono.Monto) SaldoAnt\r\nfrom Abono where IDVenta=@Cl \r\ngroup by IDVenta";
+                string CdSql = "select Abono.IDVenta, ((VentaCredito.TotalFinal)-SUM(Abono.Monto)) SaldoAnt from Abono, VentaCredito where VentaCredito.IDVenta=Abono.IDVenta AND Abono.IDVenta='V148' group by Abono.IDVenta, VentaCredito.TotalFinal\r\n";
                 //Using que crea el comando que voy a ejecutar con relación al query que planeteo
                 using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
                 {
