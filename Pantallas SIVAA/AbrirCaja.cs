@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -96,12 +97,16 @@ namespace Pantallas_SIVAA
             {
                 MessageBox.Show("Ya hay una caja abierta");
                 btnAbrir.Enabled = false;
+                btnIrCaja.Enabled = true;
+                btnCerrar.Enabled = true;
             }
             else
             if (cor == null)
             {
-                //MessageBox.Show("Ya hay una caja abierta");
+                //MessageBox.Show("Aun no hay una caja abierta");
                 btnAbrir.Enabled = true;
+                btnIrCaja.Enabled = false;
+                btnCerrar.Enabled = false;
             }
             switch (_pqt.Tipo.Trim())
             {
@@ -287,9 +292,12 @@ namespace Pantallas_SIVAA
         public static CortePagoLog Pqtelog9 = new CortePagoLog();
         public static CorteAbonoLogcs Pqtelog10 = new CorteAbonoLogcs();
 
+        double efeini, efefin;
+        double balancefec = 0;
+        double balancetar = 0;
+
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            double efeini, efefin;
             if (textBox1.Text == "" || textBox2.Text == "")
             {
                 MessageBox.Show("Favor de llenar los campos requeridos");
@@ -297,12 +305,50 @@ namespace Pantallas_SIVAA
             }
             efeini = double.Parse(textBox1.Text);
             efefin = double.Parse(textBox2.Text);
+            //if (paefec == null || patar == null)
+            //{
+            //    balancefec = abonosefec + pagosefec;
+            //    //san = cre.TotalFinal;
+            //}
+            //else
+            //{
+            //    balancefec = abonosefec + pagosefec;
+            //}
+            //Busqueda en efectivo de abono y pagos
 
-            CorteCaja pqte;
-            CorteCaja pqt;
+            //Actualizacion del corte
+            pqt = new CorteCaja
+            {
+                IDCorteCaja = Convert.ToString(pqte.IDCorteCaja.ToString()),
+                IDEmpleado = Convert.ToString(pqte.IDEmpleado.ToString()),
+                Dia = Convert.ToInt32(pqte.Dia),
+                Mes = Convert.ToInt32(pqte.Mes),
+                Año = Convert.ToInt32(pqte.Año),
+                Hora = Convert.ToString(pqte.Hora),
+                FondoInicial = Convert.ToDouble(pqte.FondoInicial),
+                EfectivoFinal = Convert.ToDouble(efeini),
+                TarjetaFinal = Convert.ToDouble(efefin),
+                TotalFinal = Convert.ToDouble(efefin + efeini),
+                BalanceEfectivo = Convert.ToDouble(balancefec),
+                BalanceTarjeta = Convert.ToDouble(balancetar),
+                Estado = Convert.ToString("FINALIZADO")
+
+            };
+            //PqteLog2.Registrar(pqt);
+            PqteLog2.ModificarEstado(pqt);
+            MessageBox.Show("Cierre de caja exitoso");
+
+        }
+        CorteCaja pqte;
+        CorteCaja pqt;
+        private void tabPage4_Enter(object sender, EventArgs e)
+        {
+
+
             pqte = PqteLog2.BuscarCajaAbierta();
             if (pqte != null)
             {
+                btnCerrar.Enabled = true;
                 //Busqueda en efectivo y tarjeta de abono
                 Abono abefec = Pqtelog8.BuscarAbonosEfec(pqte.IDCorteCaja);
                 Abono abtar = Pqtelog8.BuscarAbonosTar(pqte.IDCorteCaja);
@@ -312,22 +358,7 @@ namespace Pantallas_SIVAA
                 //MessageBox.Show("id = "+ab.IDVenta+"\r\nsaldoAnt = "+ab.SaldoAnterior);
                 double abonosefec = 0, abonostar = 0;
                 double pagosefec = 0, pagostar = 0;
-                double balancefec = 0;
-                double balancetar = 0;
-                //if (abefec == null || abtar==null || paefec == null || patar == null)
-                //{
-                //    balancefec = abonosefec + pagosefec;
-                //    balancetar = abonostar + pagostar;
-                //    //san = cre.TotalFinal;
-                //}
-                //else
-                //{
-                //    abonosefec = abefec.SaldoAnterior;
-                //    abonostar=abtar.SaldoAnterior;
-                //    pagosefec = paefec.Monto;
-                //    pagostar = patar.Monto;
 
-                //}
                 if (abefec == null)
                 {
                     abonosefec = 0;
@@ -368,45 +399,33 @@ namespace Pantallas_SIVAA
                 {
                     pagostar = patar.Monto;
                 }
-                MessageBox.Show("abonosefec = " + abonosefec + "\r\nabonostar = " + abonostar + "\r\npagosefec" + pagosefec + "\r\npagostar = " + pagostar);
                 balancefec = abonosefec + pagosefec;
                 balancetar = abonostar + pagostar;
-                MessageBox.Show("balandeefec = " + balancefec + "\r\nbalancetar = " + balancetar);
-                //if (paefec == null || patar == null)
-                //{
-                //    balancefec = abonosefec + pagosefec;
-                //    //san = cre.TotalFinal;
-                //}
-                //else
-                //{
-                //    balancefec = abonosefec + pagosefec;
-                //}
-                //Busqueda en efectivo de abono y pagos
-
-                //Actualizacion del corte
-                pqt = new CorteCaja
-                {
-                    IDCorteCaja = Convert.ToString(pqte.IDCorteCaja.ToString()),
-                    IDEmpleado = Convert.ToString(pqte.IDEmpleado.ToString()),
-                    Dia = Convert.ToInt32(pqte.Dia),
-                    Mes = Convert.ToInt32(pqte.Mes),
-                    Año = Convert.ToInt32(pqte.Año),
-                    Hora = Convert.ToString(pqte.Hora),
-                    FondoInicial = Convert.ToDouble(pqte.FondoInicial),
-                    EfectivoFinal = Convert.ToDouble(efeini),
-                    TarjetaFinal = Convert.ToDouble(efefin),
-                    TotalFinal = Convert.ToDouble(efefin + efeini),
-                    BalanceEfectivo = Convert.ToDouble(balancefec),
-                    BalanceTarjeta = Convert.ToDouble(balancetar),
-                    Estado = Convert.ToString("FINALIZADO")
-
-                };
-                //PqteLog2.Registrar(pqt);
-                PqteLog2.ModificarEstado(pqt);
-                MessageBox.Show("Cierre de caja exitoso");
+                textBox3.Text = balancefec.ToString();
+                textBox4.Text = balancetar.ToString();
+                MessageBox.Show("abonos efectivo = " + abonosefec + "\r\nabonos tarjeta = " + abonostar + "\r\npagos efectivo = " + pagosefec + "\r\npagos tarjeta = " + pagostar);
+                MessageBox.Show("balande efectivo = " + balancefec + "\r\nbalance tarjeta = " + balancetar);
             }
         }
 
-       
+        private void panel4_Enter(object sender, EventArgs e)
+        {
+            CorteCaja cor = PqteLog2.BuscarCajaAbierta();
+            if (cor != null)
+            {
+                //MessageBox.Show("Ya hay una caja abierta");
+                btnAbrir.Enabled = false;
+                btnIrCaja.Enabled = true;
+                btnCerrar.Enabled = true;
+            }
+            else
+            if (cor == null)
+            {
+                //MessageBox.Show("Aun no hay una caja abierta");
+                btnAbrir.Enabled = true;
+                btnIrCaja.Enabled = false;
+                btnCerrar.Enabled = false;
+            }
+        }
     }
 }
