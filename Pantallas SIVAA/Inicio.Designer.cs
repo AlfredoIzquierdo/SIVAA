@@ -276,6 +276,7 @@
             btnVersiones.Text = "Versiones";
             btnVersiones.TextAlign = ContentAlignment.BottomCenter;
             btnVersiones.UseVisualStyleBackColor = false;
+            btnVersiones.Click += btnVersiones_Click;
             // 
             // imageList1
             // 
@@ -304,6 +305,7 @@
             btnEmpleados.Text = "Empleados";
             btnEmpleados.TextAlign = ContentAlignment.BottomCenter;
             btnEmpleados.UseVisualStyleBackColor = false;
+            btnEmpleados.Click += btnEmpleados_Click;
             // 
             // btnCotizacion
             // 
@@ -320,6 +322,7 @@
             btnCotizacion.Text = "Cotizacion";
             btnCotizacion.TextAlign = ContentAlignment.BottomCenter;
             btnCotizacion.UseVisualStyleBackColor = false;
+            btnCotizacion.Click += btnCotizacion_Click;
             // 
             // btnVehículos
             // 
@@ -353,6 +356,7 @@
             btnClientes.Text = "Clientes";
             btnClientes.TextAlign = ContentAlignment.BottomCenter;
             btnClientes.UseVisualStyleBackColor = false;
+            btnClientes.Click += btnClientes_Click;
             // 
             // btnProveedor
             // 
@@ -369,6 +373,7 @@
             btnProveedor.Text = "Proveedor";
             btnProveedor.TextAlign = ContentAlignment.BottomCenter;
             btnProveedor.UseVisualStyleBackColor = false;
+            btnProveedor.Click += btnProveedor_Click;
             // 
             // panel2
             // 
