@@ -42,8 +42,8 @@
             this.btnProveedor = new System.Windows.Forms.Button();
             this.btnrepventas = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblTituloEmpleado = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -253,8 +253,8 @@
             this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(58)))), ((int)(((byte)(86)))));
-            this.panel7.Controls.Add(this.label1);
-            this.panel7.Controls.Add(this.label3);
+            this.panel7.Controls.Add(this.lblTituloEmpleado);
+            this.panel7.Controls.Add(this.lblNombre);
             this.panel7.Controls.Add(this.label4);
             this.panel7.Controls.Add(this.label2);
             this.panel7.Controls.Add(this.label7);
@@ -265,30 +265,30 @@
             this.panel7.Size = new System.Drawing.Size(820, 57);
             this.panel7.TabIndex = 55;
             // 
-            // label1
+            // lblTituloEmpleado
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(691, 34);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 15);
-            this.label1.TabIndex = 57;
-            this.label1.Text = "Supervisor";
+            this.lblTituloEmpleado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTituloEmpleado.AutoSize = true;
+            this.lblTituloEmpleado.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTituloEmpleado.Location = new System.Drawing.Point(691, 34);
+            this.lblTituloEmpleado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTituloEmpleado.Name = "lblTituloEmpleado";
+            this.lblTituloEmpleado.Size = new System.Drawing.Size(62, 15);
+            this.lblTituloEmpleado.TabIndex = 57;
+            this.lblTituloEmpleado.Text = "Supervisor";
             // 
-            // label3
+            // lblNombre
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(596, 9);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(172, 21);
-            this.label3.TabIndex = 58;
-            this.label3.Text = "Bienvenido: Fulanito";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblNombre.Location = new System.Drawing.Point(596, 9);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(172, 21);
+            this.lblNombre.TabIndex = 58;
+            this.lblNombre.Text = "Bienvenido: Fulanito";
+            this.lblNombre.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label4
             // 
@@ -520,8 +520,8 @@
         private Button btnStock;
         private Button btnPedidos;
         private ImageList imageList2;
-        private Label label1;
-        private Label label3;
+        private Label lblTituloEmpleado;
+        private Label lblNombre;
         private ImageList IconosReportes;
         private Button button1;
         private Button button2;
