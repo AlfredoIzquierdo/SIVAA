@@ -74,7 +74,7 @@ namespace Pantallas_SIVAA
 
         private void btnCitas_Click(object sender, EventArgs e)
         {
-            ConsultaCitas citas = new ConsultaCitas();
+            ConsultaCitas citas = new ConsultaCitas(_pqt);
             this.Hide();
             citas.Show();
         }
@@ -88,7 +88,7 @@ namespace Pantallas_SIVAA
 
         private void btnCobros_Click(object sender, EventArgs e)
         {
-            CorteDeCaja corte = new CorteDeCaja();
+            CorteDeCaja corte = new CorteDeCaja(_pqt);
             this.Hide();
             corte.Show();
         }
@@ -96,7 +96,7 @@ namespace Pantallas_SIVAA
         private void btnReportes_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Reportes reportes = new Reportes();
+            Reportes reportes = new Reportes(_pqt);
             reportes.Show();
         }
 

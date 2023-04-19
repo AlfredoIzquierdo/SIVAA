@@ -317,6 +317,7 @@
             btnCitas.Text = "Citas";
             btnCitas.TextImageRelation = TextImageRelation.ImageAboveText;
             btnCitas.UseVisualStyleBackColor = false;
+            btnCitas.Click += btnCitas_Click;
             // 
             // btnStock
             // 
@@ -335,6 +336,7 @@
             btnStock.Text = "Inventario";
             btnStock.TextImageRelation = TextImageRelation.ImageAboveText;
             btnStock.UseVisualStyleBackColor = false;
+            btnStock.Click += btnStock_Click;
             // 
             // btnPedidos
             // 

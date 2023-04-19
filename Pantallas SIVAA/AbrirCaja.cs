@@ -19,7 +19,7 @@ namespace Pantallas_SIVAA
     {
 
         Empleado _pqt;
-        public static CorteDeCaja corteDeCaja = new CorteDeCaja();
+        public static CorteDeCaja corteDeCaja = new CorteDeCaja(null);
         EmpleadoLog emplog = new EmpleadoLog();
         CorteCajaLog PqteLog2 = new CorteCajaLog();
         public AbrirCaja(Empleado pqt)
@@ -31,48 +31,55 @@ namespace Pantallas_SIVAA
 
         private void btnPedidos_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Pedidos.Show();
+            this.Close();
+            GestionarPedidos pedidos = new GestionarPedidos(_pqt);
+            pedidos.Show();
         }
 
         private void btnStock_Click(object sender, EventArgs e)
         {
 
-            this.Hide();
-            Inicio.Stock.Show();
+            this.Close();
+            Inventario inventario = new Inventario(_pqt);
+            inventario.Show();
         }
 
         private void btnCitas_Click(object sender, EventArgs e)
         {
 
-            this.Hide();
-            Inicio.CalendarioCitas.Show();
+            this.Close();
+            CalendarioCitas citas = new CalendarioCitas(_pqt);
+            citas.Show();
         }
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
 
-            this.Hide();
-            Inicio.Ventas.Show();
+            this.Close();
+            Ventas ventas = new Ventas(_pqt);
+            ventas.Show();
         }
 
         private void btnCobros_Click(object sender, EventArgs e)
         {
 
-            this.Hide();
-            Inicio.Caja.Show();
+            this.Close();
+            AbrirCaja Caja = new AbrirCaja(_pqt);
+            Caja.Show();
         }
 
         private void btnReportes_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Reportes.Show();
+            this.Close();
+            Reportes reportes = new Reportes(_pqt);
+            reportes.Show();
         }
 
         private void pictureBox13_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Login.inicio.Show();
+            Inicio inicio = new Inicio(_pqt);
+            this.Close();
+            inicio.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -458,5 +465,7 @@ namespace Pantallas_SIVAA
                 textBox2.Text = te;
             }
         }
+
+        
     }
 }

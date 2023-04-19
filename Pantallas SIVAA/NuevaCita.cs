@@ -19,10 +19,11 @@ namespace Pantallas_SIVAA
         Cita cita = new Cita();
         EmpleadoLog empleado = new EmpleadoLog();
         CitaLog log = new CitaLog();
-
-        public NuevaCita()
+        Empleado _pqt;
+        public NuevaCita(Empleado pqt)
         {
             InitializeComponent();
+            _pqt = pqt;
         }
 
 

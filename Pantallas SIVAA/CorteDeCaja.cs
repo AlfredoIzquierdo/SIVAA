@@ -43,9 +43,11 @@ namespace Pantallas_SIVAA
         CotizacionCredito cotcre;
         Cliente cli;
         CorteCaja corte;
-        public CorteDeCaja()
+        Empleado _pqt;
+        public CorteDeCaja(Empleado pqt)
         {
             InitializeComponent();
+            this._pqt = pqt;
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
@@ -64,44 +66,51 @@ namespace Pantallas_SIVAA
         }
         private void pictureBox13_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Login.inicio.Show();
+            Inicio inicio = new Inicio(_pqt);
+            this.Close();
+            inicio.Show();
         }
 
         private void btnPedidos_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Pedidos.Show();
+            this.Close();
+            GestionarPedidos pedidos = new GestionarPedidos(_pqt);
+            pedidos.Show();
         }
 
         private void btnStock_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Stock.Show();
+            this.Close();
+            Inventario inventario = new Inventario(_pqt);
+            inventario.Show();
         }
 
         private void btnCitas_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.CalendarioCitas.Show();
+            this.Close();
+            CalendarioCitas citas = new CalendarioCitas(_pqt);
+            citas.Show();
         }
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Ventas.Show();
+            this.Close();
+            Ventas ventas = new Ventas(_pqt);
+            ventas.Show();
         }
 
         private void btnCobros_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Caja.Show();
+            this.Close();
+            AbrirCaja Caja = new AbrirCaja(_pqt);
+            Caja.Show();
         }
 
         private void btnReportes_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Reportes.Show();
+            this.Close();
+            Reportes reportes = new Reportes(_pqt);
+            reportes.Show();
         }
 
         private void CorteDeCaja_Load(object sender, EventArgs e)
@@ -121,30 +130,53 @@ namespace Pantallas_SIVAA
             numericUpDown4.Value = int.Parse(an);
             numericUpDown1.Value = int.Parse(an);
             panel9.Enabled = false;
+            CorteDeCaja_Load(sender, e);
+            switch (_pqt.Tipo.Trim())
+            {
+                case "Atencion":
+                    // Funciones activas: Citas e inventario
+                    lblTipoEmpleado.Text = _pqt.Tipo + " a clientes";
+                    lblNombre.Text = "Bienvenido: " + _pqt.Nombre + " " + _pqt.ApellidoPat;
+
+
+                    // Menu lateral
+                    btnCitas.Enabled = true;
+                    btnStock.Enabled = true;
+                    btnReportes.Enabled = false;
+                    btnPedidos.Enabled = false;
+                    btnVentas.Enabled = false;
+                    btnCobros.Enabled = false;
+                    break;
+                case "Vendedor":
+                    // Funciones activas: ventas, inventario y citas
+                    lblTipoEmpleado.Text = _pqt.Tipo;
+                    lblNombre.Text = "Bienvenido: " + _pqt.Nombre + " " + _pqt.ApellidoPat;
+
+
+                    //Menu lateral
+                    btnCitas.Enabled = true;
+                    btnStock.Enabled = true;
+                    btnReportes.Enabled = false;
+                    btnPedidos.Enabled = false;
+                    btnVentas.Enabled = true;
+                    btnCobros.Enabled = false;
+                    break;
+                // más casos...
+                case "Cajero":
+
+
+                    // El cajero no pasa por aqui, se va directo al apartado de caja
+
+                    break;
+                case "Supervisor":
+                    // Todo esta activado, es la vista de supervisor
+                    lblTipoEmpleado.Text = _pqt.Tipo;
+                    lblNombre.Text = "Bienvenido: " + _pqt.Nombre + " " + _pqt.ApellidoPat;
+                    break;
+            }
         }
 
-        //public void Valoresiniciales()
-        //{
-        //    double total = 0;
-        //    double billetes = 0;
-        //    //Billetes
-        //    billetes += (((double)numericUpDown20.Value) * 20);
-        //    billetes += (((double)numericUpDown18.Value) * 50);
-        //    billetes += (((double)numericUpDown16.Value) * 100);
-        //    billetes += (((double)numericUpDown19.Value) * 200);
-        //    billetes += (((double)numericUpDown17.Value) * 500);
-        //    billetes += (((double)numericUpDown15.Value) * 1000);
-        //    label53.Text = billetes.ToString();
-        //    double monedas = 0;
-        //    //Monedas
-        //    monedas += (((double)numericUpDown10.Value) * 10);
-        //    monedas += (((double)numericUpDown14.Value) * 5);
-        //    monedas += (((double)numericUpDown13.Value) * 2);
-        //    monedas += (((double)numericUpDown12.Value) * 1);
-        //    label54.Text = monedas.ToString();
-        //    total = monedas + billetes;
-        //    label55.Text = total.ToString();
-        //}
+       
 
         private void numericUpDown15_ValueChanged(object sender, EventArgs e)
         {
@@ -845,10 +877,7 @@ namespace Pantallas_SIVAA
             }
         }
 
-        private void CorteDeCaja_Load_1(object sender, EventArgs e)
-        {
-            CorteDeCaja_Load(sender, e);
-        }
+
 
         private void textBox7_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -879,5 +908,7 @@ namespace Pantallas_SIVAA
                 textBox12.Text = te;
             }
         }
+
+
     }
 }

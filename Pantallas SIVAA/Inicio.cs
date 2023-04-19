@@ -16,11 +16,11 @@ namespace Pantallas_SIVAA
     {
         // principal
         public static Vehiculos Vehiculos = new Vehiculos(null);
-        public static Versiones Versiones = new Versiones();
+        public static Versiones Versiones = new Versiones(null);
         public static ProovedoresPrin Proovedores = new ProovedoresPrin(null);
         public static GestionarEmpleados GestionarEmpleados = new GestionarEmpleados(null);
-        public static Cotizacion Cotizacion = new Cotizacion();
-        public static Clientes Clientes = new Clientes();
+        public static Cotizacion Cotizacion = new Cotizacion(null);
+        public static Clientes Clientes = new Clientes(null);
 
         // barra lateral
         public static GestionarPedidos Pedidos = new GestionarPedidos(null);
@@ -28,7 +28,7 @@ namespace Pantallas_SIVAA
         public static CalendarioCitas CalendarioCitas = new CalendarioCitas(null);
         public static Ventas Ventas = new Ventas(null);
         public static AbrirCaja Caja = new AbrirCaja(null);
-        public static Reportes Reportes = new Reportes();
+        public static Reportes Reportes = new Reportes(null);
 
         private Empleado _pqt;
         public Inicio(Empleado pqt)
@@ -52,32 +52,37 @@ namespace Pantallas_SIVAA
 
         private void btnVersiones_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Versiones.Show();
+            this.Close();
+            Versiones versiones = new Versiones(_pqt);
+            versiones.Show();
         }
 
         private void btnEmpleados_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            GestionarEmpleados.Show();
+            this.Close();
+            GestionarEmpleados gestionarEmpleados = new GestionarEmpleados(_pqt);
+            gestionarEmpleados.Show();
         }
 
         private void btnProveedor_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Proovedores.Show();
+            this.Close();
+            ProovedoresPrin proovedoresPrin = new ProovedoresPrin(_pqt);
+            proovedoresPrin.Show();
         }
 
         private void btnClientes_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Clientes.Show();
+            Clientes clientes = new Clientes(_pqt);
+            clientes.Show();
         }
 
         private void btnCotizacion_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Cotizacion.Show();
+            this.Close();
+            Cotizacion cotizacion = new Cotizacion(_pqt);
+            cotizacion.Show();
         }
 
         private void Inicio_Load(object sender, EventArgs e)
@@ -155,7 +160,7 @@ namespace Pantallas_SIVAA
 
         private void btnCitas_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             CalendarioCitas citas = new CalendarioCitas(_pqt);
             citas.Show();
         }
@@ -169,19 +174,24 @@ namespace Pantallas_SIVAA
 
         private void btnCobros_Click(object sender, EventArgs e)
         {
-            Caja = new AbrirCaja(_pqt);
-            this.Hide();
+            this.Close();
+            Caja = new AbrirCaja(_pqt);        
             Caja.Show();
         }
 
         private void btnReportes_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Reportes.Show();
+            this.Close();
+            Reportes reportes = new Reportes(_pqt);
+            reportes.Show();
+
         }
 
         private void pictureBox13_Click(object sender, EventArgs e)
         {
+            Inicio inicio = new Inicio (_pqt);
+            this.Close();
+            inicio.Show();
 
         }
 

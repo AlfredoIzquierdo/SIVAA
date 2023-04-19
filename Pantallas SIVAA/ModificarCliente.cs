@@ -7,13 +7,16 @@ namespace Pantallas_SIVAA
     {
         ClienteLog log = new ClienteLog();
         Cliente cliente = new Cliente();
-        Clientes clientes = new Clientes();
+        
         string id;
 
-        public ModificarCliente(string idCliente)
+        Empleado _pqt;
+        public ModificarCliente(string idCliente,Empleado pqt)
         {
             InitializeComponent();
+            _pqt = pqt;
             id = idCliente;
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -33,6 +36,7 @@ namespace Pantallas_SIVAA
             log.Modificar(cliente);
 
             this.Hide();
+            Clientes clientes = new Clientes(_pqt);
             clientes.Show();
         }
 

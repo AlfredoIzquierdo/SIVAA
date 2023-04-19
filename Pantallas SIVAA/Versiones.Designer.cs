@@ -31,8 +31,6 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Versiones));
             panel7 = new Panel();
-            label10 = new Label();
-            label11 = new Label();
             label8 = new Label();
             label9 = new Label();
             label5 = new Label();
@@ -93,6 +91,8 @@
             txtbusqueda = new TextBox();
             comboversion = new ComboBox();
             pictureBox1 = new PictureBox();
+            lblTipoEmpleado = new Label();
+            lblNombre = new Label();
             panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
@@ -109,8 +109,8 @@
             // 
             panel7.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel7.BackColor = Color.FromArgb(51, 58, 86);
-            panel7.Controls.Add(label10);
-            panel7.Controls.Add(label11);
+            panel7.Controls.Add(lblTipoEmpleado);
+            panel7.Controls.Add(lblNombre);
             panel7.Controls.Add(label8);
             panel7.Controls.Add(label9);
             panel7.Controls.Add(label5);
@@ -124,45 +124,20 @@
             panel7.Controls.Add(pictureBox10);
             panel7.ForeColor = Color.White;
             panel7.Location = new Point(0, 0);
-            panel7.Margin = new Padding(3, 4, 3, 4);
+            panel7.Margin = new Padding(4, 5, 4, 5);
             panel7.Name = "panel7";
-            panel7.Size = new Size(1034, 76);
+            panel7.Size = new Size(1292, 95);
             panel7.TabIndex = 46;
-            // 
-            // label10
-            // 
-            label10.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label10.Location = new Point(887, 42);
-            label10.Margin = new Padding(1, 0, 1, 0);
-            label10.Name = "label10";
-            label10.Size = new Size(78, 20);
-            label10.TabIndex = 54;
-            label10.Text = "Supervisor";
-            // 
-            // label11
-            // 
-            label11.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label11.AutoSize = true;
-            label11.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label11.Location = new Point(811, 18);
-            label11.Margin = new Padding(1, 0, 1, 0);
-            label11.Name = "label11";
-            label11.Size = new Size(217, 28);
-            label11.TabIndex = 55;
-            label11.Text = "Bienvenido: Fulanito";
-            label11.TextAlign = ContentAlignment.TopCenter;
             // 
             // label8
             // 
             label8.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(1683, 46);
+            label8.Location = new Point(2104, 58);
             label8.Margin = new Padding(1, 0, 1, 0);
             label8.Name = "label8";
-            label8.Size = new Size(78, 20);
+            label8.Size = new Size(96, 25);
             label8.TabIndex = 51;
             label8.Text = "Supervisor";
             // 
@@ -171,10 +146,10 @@
             label9.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.Location = new Point(1608, 20);
+            label9.Location = new Point(2010, 25);
             label9.Margin = new Padding(1, 0, 1, 0);
             label9.Name = "label9";
-            label9.Size = new Size(217, 28);
+            label9.Size = new Size(255, 32);
             label9.TabIndex = 52;
             label9.Text = "Bienvenido: Fulanito";
             label9.TextAlign = ContentAlignment.TopCenter;
@@ -184,10 +159,10 @@
             label5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(2469, 46);
+            label5.Location = new Point(3086, 58);
             label5.Margin = new Padding(1, 0, 1, 0);
             label5.Name = "label5";
-            label5.Size = new Size(78, 20);
+            label5.Size = new Size(96, 25);
             label5.TabIndex = 49;
             label5.Text = "Supervisor";
             // 
@@ -196,10 +171,10 @@
             label2.Anchor = AnchorStyles.Top;
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(382, 18);
+            label2.Location = new Point(478, 22);
             label2.Margin = new Padding(1, 0, 1, 0);
             label2.Name = "label2";
-            label2.Size = new Size(294, 41);
+            label2.Size = new Size(349, 48);
             label2.TabIndex = 49;
             label2.Text = "Gestión de versiones";
             // 
@@ -208,10 +183,10 @@
             label6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(2393, 20);
+            label6.Location = new Point(2991, 25);
             label6.Margin = new Padding(1, 0, 1, 0);
             label6.Name = "label6";
-            label6.Size = new Size(217, 28);
+            label6.Size = new Size(255, 32);
             label6.TabIndex = 50;
             label6.Text = "Bienvenido: Fulanito";
             label6.TextAlign = ContentAlignment.TopCenter;
@@ -221,10 +196,10 @@
             label3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(2983, 14);
+            label3.Location = new Point(3729, 18);
             label3.Margin = new Padding(1, 0, 1, 0);
             label3.Name = "label3";
-            label3.Size = new Size(229, 41);
+            label3.Size = new Size(272, 48);
             label3.TabIndex = 19;
             label3.Text = "Gestión de citas";
             // 
@@ -233,10 +208,10 @@
             label4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(3408, 42);
+            label4.Location = new Point(4260, 52);
             label4.Margin = new Padding(1, 0, 1, 0);
             label4.Name = "label4";
-            label4.Size = new Size(78, 20);
+            label4.Size = new Size(96, 25);
             label4.TabIndex = 17;
             label4.Text = "Supervisor";
             // 
@@ -245,10 +220,10 @@
             label1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(3408, 14);
+            label1.Location = new Point(4260, 18);
             label1.Margin = new Padding(1, 0, 1, 0);
             label1.Name = "label1";
-            label1.Size = new Size(217, 28);
+            label1.Size = new Size(255, 32);
             label1.TabIndex = 18;
             label1.Text = "Bienvenido: Fulanito";
             label1.TextAlign = ContentAlignment.TopCenter;
@@ -256,19 +231,20 @@
             // label7
             // 
             label7.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(122, 20);
+            label7.Location = new Point(152, 25);
+            label7.Margin = new Padding(4, 0, 4, 0);
             label7.Name = "label7";
-            label7.Size = new Size(91, 36);
+            label7.Size = new Size(114, 45);
             label7.TabIndex = 16;
             label7.Text = "SIVAA";
             // 
             // pictureBox13
             // 
             pictureBox13.Image = (Image)resources.GetObject("pictureBox13.Image");
-            pictureBox13.Location = new Point(17, 0);
+            pictureBox13.Location = new Point(21, 0);
             pictureBox13.Margin = new Padding(1, 2, 1, 2);
             pictureBox13.Name = "pictureBox13";
-            pictureBox13.Size = new Size(53, 76);
+            pictureBox13.Size = new Size(66, 95);
             pictureBox13.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox13.TabIndex = 2;
             pictureBox13.TabStop = false;
@@ -276,10 +252,10 @@
             // pictureBox10
             // 
             pictureBox10.Image = (Image)resources.GetObject("pictureBox10.Image");
-            pictureBox10.Location = new Point(72, 0);
+            pictureBox10.Location = new Point(90, 0);
             pictureBox10.Margin = new Padding(1, 2, 1, 2);
             pictureBox10.Name = "pictureBox10";
-            pictureBox10.Size = new Size(53, 76);
+            pictureBox10.Size = new Size(66, 95);
             pictureBox10.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox10.TabIndex = 2;
             pictureBox10.TabStop = false;
@@ -294,10 +270,10 @@
             panel1.Controls.Add(btnCitas);
             panel1.Controls.Add(btnStock);
             panel1.Controls.Add(btnPedidos);
-            panel1.Location = new Point(0, 76);
+            panel1.Location = new Point(0, 95);
             panel1.Margin = new Padding(1, 2, 1, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(75, 542);
+            panel1.Size = new Size(94, 678);
             panel1.TabIndex = 48;
             // 
             // btnReportes
@@ -308,10 +284,10 @@
             btnReportes.ImageAlign = ContentAlignment.TopCenter;
             btnReportes.ImageKey = "bar-chart.png";
             btnReportes.ImageList = imageList2;
-            btnReportes.Location = new Point(-1, 406);
+            btnReportes.Location = new Point(-1, 508);
             btnReportes.Margin = new Padding(2);
             btnReportes.Name = "btnReportes";
-            btnReportes.Size = new Size(75, 76);
+            btnReportes.Size = new Size(94, 95);
             btnReportes.TabIndex = 11;
             btnReportes.Text = "Reportes";
             btnReportes.TextAlign = ContentAlignment.BottomCenter;
@@ -339,10 +315,10 @@
             btnCobros.ImageAlign = ContentAlignment.TopCenter;
             btnCobros.ImageKey = "dollar-sign.png";
             btnCobros.ImageList = imageList2;
-            btnCobros.Location = new Point(-1, 330);
+            btnCobros.Location = new Point(-1, 412);
             btnCobros.Margin = new Padding(2);
             btnCobros.Name = "btnCobros";
-            btnCobros.Size = new Size(75, 76);
+            btnCobros.Size = new Size(94, 95);
             btnCobros.TabIndex = 10;
             btnCobros.Text = "Cobros";
             btnCobros.TextAlign = ContentAlignment.BottomCenter;
@@ -357,10 +333,10 @@
             btnVentas.ImageAlign = ContentAlignment.TopCenter;
             btnVentas.ImageKey = "shopping-cart.png";
             btnVentas.ImageList = imageList2;
-            btnVentas.Location = new Point(-1, 254);
+            btnVentas.Location = new Point(-1, 318);
             btnVentas.Margin = new Padding(2);
             btnVentas.Name = "btnVentas";
-            btnVentas.Size = new Size(75, 76);
+            btnVentas.Size = new Size(94, 95);
             btnVentas.TabIndex = 9;
             btnVentas.Text = "Ventas";
             btnVentas.TextAlign = ContentAlignment.BottomCenter;
@@ -375,10 +351,10 @@
             btnCitas.ImageAlign = ContentAlignment.TopCenter;
             btnCitas.ImageKey = "calendar.png";
             btnCitas.ImageList = imageList2;
-            btnCitas.Location = new Point(-1, 178);
+            btnCitas.Location = new Point(-1, 222);
             btnCitas.Margin = new Padding(2);
             btnCitas.Name = "btnCitas";
-            btnCitas.Size = new Size(75, 76);
+            btnCitas.Size = new Size(94, 95);
             btnCitas.TabIndex = 8;
             btnCitas.Text = "Citas";
             btnCitas.TextAlign = ContentAlignment.BottomCenter;
@@ -394,10 +370,10 @@
             btnStock.ImageAlign = ContentAlignment.TopCenter;
             btnStock.ImageKey = "book-open.png";
             btnStock.ImageList = imageList2;
-            btnStock.Location = new Point(-1, 102);
+            btnStock.Location = new Point(-1, 128);
             btnStock.Margin = new Padding(2);
             btnStock.Name = "btnStock";
-            btnStock.Size = new Size(75, 76);
+            btnStock.Size = new Size(94, 95);
             btnStock.TabIndex = 7;
             btnStock.Text = "Inventario";
             btnStock.TextAlign = ContentAlignment.BottomCenter;
@@ -412,10 +388,10 @@
             btnPedidos.ImageAlign = ContentAlignment.TopCenter;
             btnPedidos.ImageKey = "package.png";
             btnPedidos.ImageList = imageList2;
-            btnPedidos.Location = new Point(-1, 30);
+            btnPedidos.Location = new Point(-1, 38);
             btnPedidos.Margin = new Padding(2);
             btnPedidos.Name = "btnPedidos";
-            btnPedidos.Size = new Size(75, 76);
+            btnPedidos.Size = new Size(94, 95);
             btnPedidos.TabIndex = 6;
             btnPedidos.Text = "Pedidos";
             btnPedidos.TextAlign = ContentAlignment.BottomCenter;
@@ -427,13 +403,13 @@
             dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7, Column8, Column9, Column10, Column11, Column12, Column13, Column14, Column15, Column16, Column17, Column18, Column19, Column20, Column21, Column22, Column23, Column24, Column25, Column26, Column27, Column28, Column29, Column30, Column31 });
-            dataGridView1.Location = new Point(122, 176);
-            dataGridView1.Margin = new Padding(3, 4, 3, 4);
+            dataGridView1.Location = new Point(152, 220);
+            dataGridView1.Margin = new Padding(4, 5, 4, 5);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowHeadersWidth = 42;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(871, 426);
+            dataGridView1.Size = new Size(1089, 532);
             dataGridView1.TabIndex = 49;
             dataGridView1.CellClick += dataGridView1_CellClick_1;
             // 
@@ -657,10 +633,10 @@
             // pictureBox8
             // 
             pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
-            pictureBox8.Location = new Point(122, 128);
-            pictureBox8.Margin = new Padding(3, 2, 3, 2);
+            pictureBox8.Location = new Point(152, 160);
+            pictureBox8.Margin = new Padding(4, 2, 4, 2);
             pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(43, 42);
+            pictureBox8.Size = new Size(54, 52);
             pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox8.TabIndex = 50;
             pictureBox8.TabStop = false;
@@ -669,10 +645,10 @@
             // pictureBox9
             // 
             pictureBox9.Image = Properties.Resources.edit_2;
-            pictureBox9.Location = new Point(173, 128);
-            pictureBox9.Margin = new Padding(3, 2, 3, 2);
+            pictureBox9.Location = new Point(216, 160);
+            pictureBox9.Margin = new Padding(4, 2, 4, 2);
             pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(43, 42);
+            pictureBox9.Size = new Size(54, 52);
             pictureBox9.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox9.TabIndex = 51;
             pictureBox9.TabStop = false;
@@ -681,10 +657,10 @@
             // pictureBox11
             // 
             pictureBox11.Image = Properties.Resources.x;
-            pictureBox11.Location = new Point(223, 128);
-            pictureBox11.Margin = new Padding(3, 2, 3, 2);
+            pictureBox11.Location = new Point(279, 160);
+            pictureBox11.Margin = new Padding(4, 2, 4, 2);
             pictureBox11.Name = "pictureBox11";
-            pictureBox11.Size = new Size(43, 42);
+            pictureBox11.Size = new Size(54, 52);
             pictureBox11.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox11.TabIndex = 52;
             pictureBox11.TabStop = false;
@@ -697,10 +673,10 @@
             panel3.Controls.Add(label13);
             panel3.Controls.Add(txtbusqueda);
             panel3.Controls.Add(comboversion);
-            panel3.Location = new Point(429, 106);
-            panel3.Margin = new Padding(3, 2, 3, 2);
+            panel3.Location = new Point(536, 132);
+            panel3.Margin = new Padding(4, 2, 4, 2);
             panel3.Name = "panel3";
-            panel3.Size = new Size(565, 46);
+            panel3.Size = new Size(706, 58);
             panel3.TabIndex = 53;
             // 
             // button1
@@ -709,10 +685,10 @@
             button1.BackColor = Color.FromArgb(82, 101, 143);
             button1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             button1.ForeColor = SystemColors.ButtonHighlight;
-            button1.Location = new Point(444, 6);
-            button1.Margin = new Padding(3, 2, 3, 2);
+            button1.Location = new Point(555, 8);
+            button1.Margin = new Padding(4, 2, 4, 2);
             button1.Name = "button1";
-            button1.Size = new Size(118, 38);
+            button1.Size = new Size(148, 48);
             button1.TabIndex = 97;
             button1.Text = "Buscar";
             button1.UseVisualStyleBackColor = false;
@@ -722,9 +698,10 @@
             // 
             label13.AutoSize = true;
             label13.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label13.Location = new Point(0, 14);
+            label13.Location = new Point(0, 18);
+            label13.Margin = new Padding(4, 0, 4, 0);
             label13.Name = "label13";
-            label13.Size = new Size(92, 22);
+            label13.Size = new Size(110, 26);
             label13.TabIndex = 53;
             label13.Text = "Filtrar por:";
             // 
@@ -734,41 +711,66 @@
             txtbusqueda.BackColor = Color.White;
             txtbusqueda.Enabled = false;
             txtbusqueda.ForeColor = SystemColors.ControlDark;
-            txtbusqueda.Location = new Point(270, 14);
-            txtbusqueda.Margin = new Padding(3, 2, 3, 2);
+            txtbusqueda.Location = new Point(338, 18);
+            txtbusqueda.Margin = new Padding(4, 2, 4, 2);
             txtbusqueda.Name = "txtbusqueda";
             txtbusqueda.PlaceholderText = "Ingrese su busqueda";
-            txtbusqueda.Size = new Size(170, 27);
+            txtbusqueda.Size = new Size(212, 31);
             txtbusqueda.TabIndex = 96;
             // 
             // comboversion
             // 
             comboversion.FormattingEnabled = true;
             comboversion.Items.AddRange(new object[] { "Todos", "IDVersion", "IDVehiculo", "LLantas", "TipoAsientos", "CamaraTrasera", "Pantalla", "TipoCombustible", "Version", "Rines", "Cilindraje", "Costo", "CapacidadCajuela", "DistanciaEjes", "Anchura", "Altura", "AudioVelC", "TomaCorriente", "TipoTraccion", "NumPuertas", "Transmision", "FarosHal", "NumEngranajes", "ACAutom", "FarosLED", "RendimientoCombustible", "FrenosTraseros", "FrenosDelanteros", "SuspensionDelantera", "SuspensionTrasera", "EspejosLatDirC", "EspejosLatAE" });
-            comboversion.Location = new Point(98, 12);
-            comboversion.Margin = new Padding(3, 2, 3, 2);
+            comboversion.Location = new Point(122, 15);
+            comboversion.Margin = new Padding(4, 2, 4, 2);
             comboversion.Name = "comboversion";
-            comboversion.Size = new Size(166, 28);
+            comboversion.Size = new Size(206, 33);
             comboversion.TabIndex = 55;
             comboversion.SelectedValueChanged += comboversion_SelectedValueChanged;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.printer;
-            pictureBox1.Location = new Point(272, 128);
-            pictureBox1.Margin = new Padding(3, 2, 3, 2);
+            pictureBox1.Location = new Point(340, 160);
+            pictureBox1.Margin = new Padding(4, 2, 4, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(43, 42);
+            pictureBox1.Size = new Size(54, 52);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 52;
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
             // 
+            // lblTipoEmpleado
+            // 
+            lblTipoEmpleado.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblTipoEmpleado.AutoSize = true;
+            lblTipoEmpleado.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTipoEmpleado.Location = new Point(1069, 63);
+            lblTipoEmpleado.Margin = new Padding(2, 0, 2, 0);
+            lblTipoEmpleado.Name = "lblTipoEmpleado";
+            lblTipoEmpleado.Size = new Size(96, 25);
+            lblTipoEmpleado.TabIndex = 53;
+            lblTipoEmpleado.Text = "Supervisor";
+            // 
+            // lblNombre
+            // 
+            lblNombre.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblNombre.AutoSize = true;
+            lblNombre.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblNombre.Location = new Point(987, 22);
+            lblNombre.Margin = new Padding(2, 0, 2, 0);
+            lblNombre.Name = "lblNombre";
+            lblNombre.Size = new Size(255, 32);
+            lblNombre.TabIndex = 54;
+            lblNombre.Text = "Bienvenido: Fulanito";
+            lblNombre.TextAlign = ContentAlignment.TopCenter;
+            // 
             // Versiones
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1034, 618);
+            ClientSize = new Size(1292, 772);
             Controls.Add(panel3);
             Controls.Add(pictureBox1);
             Controls.Add(pictureBox11);
@@ -777,7 +779,7 @@
             Controls.Add(dataGridView1);
             Controls.Add(panel1);
             Controls.Add(panel7);
-            Margin = new Padding(3, 4, 3, 4);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "Versiones";
             Text = "Versiones";
             WindowState = FormWindowState.Maximized;
@@ -818,8 +820,6 @@
         private Button btnCitas;
         private Button btnStock;
         private Button btnPedidos;
-        private Label label10;
-        private Label label11;
         private DataGridView dataGridView1;
         private PictureBox pictureBox8;
         private PictureBox pictureBox9;
@@ -862,5 +862,7 @@
         private Button button1;
         private TextBox txtbusqueda;
         private PictureBox pictureBox1;
+        private Label lblTipoEmpleado;
+        private Label lblNombre;
     }
 }

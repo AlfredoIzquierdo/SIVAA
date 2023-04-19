@@ -16,7 +16,7 @@ namespace Pantallas_SIVAA.Pedidos
     public partial class GestionarPedidos : Form
     {
         public static EditarPedidos editarPedidos = new EditarPedidos();
-        public static AgregarPedidos agregarPedidos = new AgregarPedidos();
+        public static AgregarPedidos agregarPedidos = new AgregarPedidos(null);
         readonly PedidoD Producto = new PedidoD();
         Empleado _pqt;
         public GestionarPedidos(Empleado pqt)
@@ -27,8 +27,9 @@ namespace Pantallas_SIVAA.Pedidos
 
         private void pictureBox13_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Login.inicio.Show();
+            Inicio inicio = new Inicio(_pqt);
+            this.Close();
+            inicio.Show();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -52,8 +53,9 @@ namespace Pantallas_SIVAA.Pedidos
 
         private void btnPedidos_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Pedidos.Show();
+            this.Close();
+            GestionarPedidos pedidos = new GestionarPedidos(_pqt);
+            pedidos.Show();
         }
 
         private void btnStock_Click(object sender, EventArgs e)

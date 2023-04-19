@@ -32,8 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgregarVersion));
             imageList2 = new ImageList(components);
             panel7 = new Panel();
-            label34 = new Label();
-            label35 = new Label();
+            lblTipoEmpleado = new Label();
+            lblNombre = new Label();
             label1 = new Label();
             label4 = new Label();
             label2 = new Label();
@@ -157,52 +157,53 @@
             // 
             panel7.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel7.BackColor = Color.FromArgb(51, 58, 86);
-            panel7.Controls.Add(label34);
-            panel7.Controls.Add(label35);
+            panel7.Controls.Add(lblTipoEmpleado);
+            panel7.Controls.Add(lblNombre);
             panel7.Controls.Add(label1);
             panel7.Controls.Add(label4);
             panel7.Controls.Add(label2);
             panel7.Controls.Add(label7);
             panel7.Controls.Add(pictureBox13);
             panel7.ForeColor = Color.White;
-            panel7.Location = new Point(7, -3);
-            panel7.Margin = new Padding(3, 4, 3, 4);
+            panel7.Location = new Point(9, -4);
+            panel7.Margin = new Padding(4, 5, 4, 5);
             panel7.Name = "panel7";
-            panel7.Size = new Size(1477, 76);
+            panel7.Size = new Size(1846, 95);
             panel7.TabIndex = 120;
             // 
-            // label34
+            // lblTipoEmpleado
             // 
-            label34.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label34.AutoSize = true;
-            label34.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label34.Location = new Point(1334, 40);
-            label34.Margin = new Padding(1, 0, 1, 0);
-            label34.Name = "label34";
-            label34.Size = new Size(78, 20);
-            label34.TabIndex = 208;
-            label34.Text = "Supervisor";
+            lblTipoEmpleado.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblTipoEmpleado.AutoSize = true;
+            lblTipoEmpleado.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTipoEmpleado.Location = new Point(1656, 62);
+            lblTipoEmpleado.Margin = new Padding(2, 0, 2, 0);
+            lblTipoEmpleado.Name = "lblTipoEmpleado";
+            lblTipoEmpleado.Size = new Size(96, 25);
+            lblTipoEmpleado.TabIndex = 18;
+            lblTipoEmpleado.Text = "Supervisor";
             // 
-            // label35
+            // lblNombre
             // 
-            label35.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label35.AutoSize = true;
-            label35.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label35.Location = new Point(1269, 15);
-            label35.Margin = new Padding(1, 0, 1, 0);
-            label35.Name = "label35";
-            label35.Size = new Size(217, 28);
-            label35.TabIndex = 209;
-            label35.Text = "Bienvenido: Fulanito";
-            label35.TextAlign = ContentAlignment.TopCenter;
+            lblNombre.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblNombre.AutoSize = true;
+            lblNombre.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblNombre.Location = new Point(1574, 21);
+            lblNombre.Margin = new Padding(2, 0, 2, 0);
+            lblNombre.Name = "lblNombre";
+            lblNombre.Size = new Size(255, 32);
+            lblNombre.TabIndex = 19;
+            lblNombre.Text = "Bienvenido: Fulanito";
+            lblNombre.TextAlign = ContentAlignment.TopCenter;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(629, 17);
+            label1.Location = new Point(786, 21);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(230, 41);
+            label1.Size = new Size(275, 48);
             label1.TabIndex = 17;
             label1.Text = "Agregar Version";
             // 
@@ -211,10 +212,10 @@
             label4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(2529, 45);
+            label4.Location = new Point(3161, 56);
             label4.Margin = new Padding(1, 0, 1, 0);
             label4.Name = "label4";
-            label4.Size = new Size(78, 20);
+            label4.Size = new Size(96, 25);
             label4.TabIndex = 1;
             label4.Text = "Supervisor";
             // 
@@ -223,10 +224,10 @@
             label2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(2464, 12);
+            label2.Location = new Point(3080, 15);
             label2.Margin = new Padding(1, 0, 1, 0);
             label2.Name = "label2";
-            label2.Size = new Size(217, 28);
+            label2.Size = new Size(255, 32);
             label2.TabIndex = 1;
             label2.Text = "Bienvenido: Fulanito";
             label2.TextAlign = ContentAlignment.TopCenter;
@@ -235,22 +236,24 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(129, 20);
+            label7.Location = new Point(161, 25);
+            label7.Margin = new Padding(4, 0, 4, 0);
             label7.Name = "label7";
-            label7.Size = new Size(100, 38);
+            label7.Size = new Size(115, 45);
             label7.TabIndex = 16;
             label7.Text = "SIVAA";
             // 
             // pictureBox13
             // 
             pictureBox13.Image = (Image)resources.GetObject("pictureBox13.Image");
-            pictureBox13.Location = new Point(17, 9);
-            pictureBox13.Margin = new Padding(1, 3, 1, 3);
+            pictureBox13.Location = new Point(21, 11);
+            pictureBox13.Margin = new Padding(1, 4, 1, 4);
             pictureBox13.Name = "pictureBox13";
-            pictureBox13.Size = new Size(53, 53);
+            pictureBox13.Size = new Size(66, 66);
             pictureBox13.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox13.TabIndex = 2;
             pictureBox13.TabStop = false;
+            pictureBox13.Click += pictureBox13_Click;
             // 
             // panel1
             // 
@@ -262,10 +265,10 @@
             panel1.Controls.Add(btnCitas);
             panel1.Controls.Add(btnStock);
             panel1.Controls.Add(btnPedidos);
-            panel1.Location = new Point(7, 75);
-            panel1.Margin = new Padding(1, 3, 1, 3);
+            panel1.Location = new Point(9, 94);
+            panel1.Margin = new Padding(1, 4, 1, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(75, 923);
+            panel1.Size = new Size(94, 1154);
             panel1.TabIndex = 119;
             // 
             // btnReportes
@@ -276,10 +279,10 @@
             btnReportes.ImageAlign = ContentAlignment.TopCenter;
             btnReportes.ImageKey = "bar-chart.png";
             btnReportes.ImageList = imageList2;
-            btnReportes.Location = new Point(0, 384);
-            btnReportes.Margin = new Padding(1, 3, 1, 3);
+            btnReportes.Location = new Point(0, 480);
+            btnReportes.Margin = new Padding(1, 4, 1, 4);
             btnReportes.Name = "btnReportes";
-            btnReportes.Size = new Size(81, 76);
+            btnReportes.Size = new Size(101, 95);
             btnReportes.TabIndex = 10;
             btnReportes.Text = "Reportes";
             btnReportes.TextImageRelation = TextImageRelation.ImageAboveText;
@@ -293,10 +296,10 @@
             btnCobros.ImageAlign = ContentAlignment.TopCenter;
             btnCobros.ImageKey = "dollar-sign.png";
             btnCobros.ImageList = imageList2;
-            btnCobros.Location = new Point(0, 307);
-            btnCobros.Margin = new Padding(1, 3, 1, 3);
+            btnCobros.Location = new Point(0, 384);
+            btnCobros.Margin = new Padding(1, 4, 1, 4);
             btnCobros.Name = "btnCobros";
-            btnCobros.Size = new Size(81, 76);
+            btnCobros.Size = new Size(101, 95);
             btnCobros.TabIndex = 9;
             btnCobros.Text = "Cobros";
             btnCobros.TextImageRelation = TextImageRelation.ImageAboveText;
@@ -310,10 +313,10 @@
             btnVentas.ImageAlign = ContentAlignment.TopCenter;
             btnVentas.ImageKey = "shopping-cart.png";
             btnVentas.ImageList = imageList2;
-            btnVentas.Location = new Point(0, 229);
-            btnVentas.Margin = new Padding(1, 3, 1, 3);
+            btnVentas.Location = new Point(0, 286);
+            btnVentas.Margin = new Padding(1, 4, 1, 4);
             btnVentas.Name = "btnVentas";
-            btnVentas.Size = new Size(81, 76);
+            btnVentas.Size = new Size(101, 95);
             btnVentas.TabIndex = 8;
             btnVentas.Text = "Ventas";
             btnVentas.TextImageRelation = TextImageRelation.ImageAboveText;
@@ -327,10 +330,10 @@
             btnCitas.ImageAlign = ContentAlignment.TopCenter;
             btnCitas.ImageKey = "calendar.png";
             btnCitas.ImageList = imageList2;
-            btnCitas.Location = new Point(0, 155);
-            btnCitas.Margin = new Padding(1, 3, 1, 3);
+            btnCitas.Location = new Point(0, 194);
+            btnCitas.Margin = new Padding(1, 4, 1, 4);
             btnCitas.Name = "btnCitas";
-            btnCitas.Size = new Size(81, 76);
+            btnCitas.Size = new Size(101, 95);
             btnCitas.TabIndex = 7;
             btnCitas.Text = "Citas";
             btnCitas.TextImageRelation = TextImageRelation.ImageAboveText;
@@ -345,10 +348,10 @@
             btnStock.ImageAlign = ContentAlignment.TopCenter;
             btnStock.ImageKey = "book-open.png";
             btnStock.ImageList = imageList2;
-            btnStock.Location = new Point(0, 77);
-            btnStock.Margin = new Padding(1, 3, 1, 3);
+            btnStock.Location = new Point(0, 96);
+            btnStock.Margin = new Padding(1, 4, 1, 4);
             btnStock.Name = "btnStock";
-            btnStock.Size = new Size(81, 76);
+            btnStock.Size = new Size(101, 95);
             btnStock.TabIndex = 6;
             btnStock.Text = "Inventario";
             btnStock.TextImageRelation = TextImageRelation.ImageAboveText;
@@ -362,10 +365,10 @@
             btnPedidos.ImageAlign = ContentAlignment.TopCenter;
             btnPedidos.ImageKey = "package.png";
             btnPedidos.ImageList = imageList2;
-            btnPedidos.Location = new Point(0, 3);
-            btnPedidos.Margin = new Padding(1, 3, 1, 3);
+            btnPedidos.Location = new Point(0, 4);
+            btnPedidos.Margin = new Padding(1, 4, 1, 4);
             btnPedidos.Name = "btnPedidos";
-            btnPedidos.Size = new Size(81, 76);
+            btnPedidos.Size = new Size(101, 95);
             btnPedidos.TabIndex = 5;
             btnPedidos.Text = "Pedidos";
             btnPedidos.TextImageRelation = TextImageRelation.ImageAboveText;
@@ -375,9 +378,10 @@
             // 
             rbEspejosANo.AutoSize = true;
             rbEspejosANo.Checked = true;
-            rbEspejosANo.Location = new Point(97, 4);
+            rbEspejosANo.Location = new Point(121, 5);
+            rbEspejosANo.Margin = new Padding(4);
             rbEspejosANo.Name = "rbEspejosANo";
-            rbEspejosANo.Size = new Size(50, 24);
+            rbEspejosANo.Size = new Size(61, 29);
             rbEspejosANo.TabIndex = 123;
             rbEspejosANo.TabStop = true;
             rbEspejosANo.Text = "No";
@@ -386,9 +390,10 @@
             // rbEspejosASi
             // 
             rbEspejosASi.AutoSize = true;
-            rbEspejosASi.Location = new Point(11, 4);
+            rbEspejosASi.Location = new Point(14, 5);
+            rbEspejosASi.Margin = new Padding(4);
             rbEspejosASi.Name = "rbEspejosASi";
-            rbEspejosASi.Size = new Size(42, 24);
+            rbEspejosASi.Size = new Size(51, 29);
             rbEspejosASi.TabIndex = 122;
             rbEspejosASi.Text = "Si";
             rbEspejosASi.UseVisualStyleBackColor = true;
@@ -397,9 +402,10 @@
             // 
             label29.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             label29.AutoSize = true;
-            label29.Location = new Point(1031, 449);
+            label29.Location = new Point(1289, 561);
+            label29.Margin = new Padding(4, 0, 4, 0);
             label29.Name = "label29";
-            label29.Size = new Size(100, 20);
+            label29.Size = new Size(120, 25);
             label29.TabIndex = 190;
             label29.Text = "EspejosLatAE:";
             // 
@@ -407,9 +413,10 @@
             // 
             rbEspejosDirNo.AutoSize = true;
             rbEspejosDirNo.Checked = true;
-            rbEspejosDirNo.Location = new Point(101, 3);
+            rbEspejosDirNo.Location = new Point(126, 4);
+            rbEspejosDirNo.Margin = new Padding(4);
             rbEspejosDirNo.Name = "rbEspejosDirNo";
-            rbEspejosDirNo.Size = new Size(50, 24);
+            rbEspejosDirNo.Size = new Size(61, 29);
             rbEspejosDirNo.TabIndex = 123;
             rbEspejosDirNo.TabStop = true;
             rbEspejosDirNo.Text = "No";
@@ -418,9 +425,10 @@
             // rbEspejosDirSi
             // 
             rbEspejosDirSi.AutoSize = true;
-            rbEspejosDirSi.Location = new Point(15, 3);
+            rbEspejosDirSi.Location = new Point(19, 4);
+            rbEspejosDirSi.Margin = new Padding(4);
             rbEspejosDirSi.Name = "rbEspejosDirSi";
-            rbEspejosDirSi.Size = new Size(42, 24);
+            rbEspejosDirSi.Size = new Size(51, 29);
             rbEspejosDirSi.TabIndex = 122;
             rbEspejosDirSi.Text = "Si";
             rbEspejosDirSi.UseVisualStyleBackColor = true;
@@ -429,9 +437,10 @@
             // 
             label28.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             label28.AutoSize = true;
-            label28.Location = new Point(1024, 413);
+            label28.Location = new Point(1280, 516);
+            label28.Margin = new Padding(4, 0, 4, 0);
             label28.Name = "label28";
-            label28.Size = new Size(108, 20);
+            label28.Size = new Size(129, 25);
             label28.TabIndex = 186;
             label28.Text = "EspejosLatDirC";
             // 
@@ -439,9 +448,10 @@
             // 
             rbAcAutNo.AutoSize = true;
             rbAcAutNo.Checked = true;
-            rbAcAutNo.Location = new Point(97, 3);
+            rbAcAutNo.Location = new Point(121, 4);
+            rbAcAutNo.Margin = new Padding(4);
             rbAcAutNo.Name = "rbAcAutNo";
-            rbAcAutNo.Size = new Size(50, 24);
+            rbAcAutNo.Size = new Size(61, 29);
             rbAcAutNo.TabIndex = 123;
             rbAcAutNo.TabStop = true;
             rbAcAutNo.Text = "No";
@@ -450,9 +460,10 @@
             // rbAcAutSi
             // 
             rbAcAutSi.AutoSize = true;
-            rbAcAutSi.Location = new Point(10, 3);
+            rbAcAutSi.Location = new Point(12, 4);
+            rbAcAutSi.Margin = new Padding(4);
             rbAcAutSi.Name = "rbAcAutSi";
-            rbAcAutSi.Size = new Size(42, 24);
+            rbAcAutSi.Size = new Size(51, 29);
             rbAcAutSi.TabIndex = 122;
             rbAcAutSi.Text = "Si";
             rbAcAutSi.UseVisualStyleBackColor = true;
@@ -461,9 +472,10 @@
             // 
             label27.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             label27.AutoSize = true;
-            label27.Location = new Point(1024, 377);
+            label27.Location = new Point(1280, 471);
+            label27.Margin = new Padding(4, 0, 4, 0);
             label27.Name = "label27";
-            label27.Size = new Size(111, 20);
+            label27.Size = new Size(134, 25);
             label27.TabIndex = 182;
             label27.Text = "Ac Automatico:";
             // 
@@ -471,18 +483,20 @@
             // 
             cbEngranajes.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             cbEngranajes.FormattingEnabled = true;
-            cbEngranajes.Location = new Point(334, 471);
+            cbEngranajes.Location = new Point(418, 589);
+            cbEngranajes.Margin = new Padding(4);
             cbEngranajes.Name = "cbEngranajes";
-            cbEngranajes.Size = new Size(141, 28);
+            cbEngranajes.Size = new Size(175, 33);
             cbEngranajes.TabIndex = 9;
             // 
             // label26
             // 
             label26.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             label26.AutoSize = true;
-            label26.Location = new Point(199, 472);
+            label26.Location = new Point(249, 590);
+            label26.Margin = new Padding(4, 0, 4, 0);
             label26.Name = "label26";
-            label26.Size = new Size(120, 20);
+            label26.Size = new Size(145, 25);
             label26.TabIndex = 197;
             label26.Text = "Num Engranajes:";
             label26.TextAlign = ContentAlignment.BottomCenter;
@@ -492,18 +506,20 @@
             cbPuertas.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             cbPuertas.FormattingEnabled = true;
             cbPuertas.Items.AddRange(new object[] { "2", "4", "6" });
-            cbPuertas.Location = new Point(331, 432);
+            cbPuertas.Location = new Point(414, 540);
+            cbPuertas.Margin = new Padding(4);
             cbPuertas.Name = "cbPuertas";
-            cbPuertas.Size = new Size(141, 28);
+            cbPuertas.Size = new Size(175, 33);
             cbPuertas.TabIndex = 8;
             // 
             // label25
             // 
             label25.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             label25.AutoSize = true;
-            label25.Location = new Point(219, 433);
+            label25.Location = new Point(274, 541);
+            label25.Margin = new Padding(4, 0, 4, 0);
             label25.Name = "label25";
-            label25.Size = new Size(96, 20);
+            label25.Size = new Size(118, 25);
             label25.TabIndex = 195;
             label25.Text = "Num Puertas:";
             label25.TextAlign = ContentAlignment.BottomCenter;
@@ -513,9 +529,10 @@
             cbTransmision.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             cbTransmision.FormattingEnabled = true;
             cbTransmision.Items.AddRange(new object[] { "Manual", "Automatico" });
-            cbTransmision.Location = new Point(730, 275);
+            cbTransmision.Location = new Point(912, 344);
+            cbTransmision.Margin = new Padding(4);
             cbTransmision.Name = "cbTransmision";
-            cbTransmision.Size = new Size(141, 28);
+            cbTransmision.Size = new Size(175, 33);
             cbTransmision.TabIndex = 15;
             // 
             // cbTipo
@@ -523,18 +540,20 @@
             cbTipo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             cbTipo.FormattingEnabled = true;
             cbTipo.Items.AddRange(new object[] { "Delantera", "Trasera" });
-            cbTipo.Location = new Point(730, 313);
+            cbTipo.Location = new Point(912, 391);
+            cbTipo.Margin = new Padding(4);
             cbTipo.Name = "cbTipo";
-            cbTipo.Size = new Size(141, 28);
+            cbTipo.Size = new Size(175, 33);
             cbTipo.TabIndex = 16;
             // 
             // label23
             // 
             label23.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             label23.AutoSize = true;
-            label23.Location = new Point(592, 321);
+            label23.Location = new Point(740, 401);
+            label23.Margin = new Padding(4, 0, 4, 0);
             label23.Name = "label23";
-            label23.Size = new Size(124, 20);
+            label23.Size = new Size(149, 25);
             label23.TabIndex = 192;
             label23.Text = "Tipo Transmision:";
             // 
@@ -542,9 +561,10 @@
             // 
             label19.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             label19.AutoSize = true;
-            label19.Location = new Point(618, 281);
+            label19.Location = new Point(772, 351);
+            label19.Margin = new Padding(4, 0, 4, 0);
             label19.Name = "label19";
-            label19.Size = new Size(90, 20);
+            label19.Size = new Size(109, 25);
             label19.TabIndex = 189;
             label19.Text = "Transmision:";
             // 
@@ -552,9 +572,10 @@
             // 
             rbTomaNo.AutoSize = true;
             rbTomaNo.Checked = true;
-            rbTomaNo.Location = new Point(101, 5);
+            rbTomaNo.Location = new Point(126, 6);
+            rbTomaNo.Margin = new Padding(4);
             rbTomaNo.Name = "rbTomaNo";
-            rbTomaNo.Size = new Size(50, 24);
+            rbTomaNo.Size = new Size(61, 29);
             rbTomaNo.TabIndex = 123;
             rbTomaNo.TabStop = true;
             rbTomaNo.Text = "No";
@@ -563,9 +584,10 @@
             // rbTomaSi
             // 
             rbTomaSi.AutoSize = true;
-            rbTomaSi.Location = new Point(15, 5);
+            rbTomaSi.Location = new Point(19, 6);
+            rbTomaSi.Margin = new Padding(4);
             rbTomaSi.Name = "rbTomaSi";
-            rbTomaSi.Size = new Size(42, 24);
+            rbTomaSi.Size = new Size(51, 29);
             rbTomaSi.TabIndex = 122;
             rbTomaSi.Text = "Si";
             rbTomaSi.UseVisualStyleBackColor = true;
@@ -574,9 +596,10 @@
             // 
             label18.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             label18.AutoSize = true;
-            label18.Location = new Point(1024, 344);
+            label18.Location = new Point(1280, 430);
+            label18.Margin = new Padding(4, 0, 4, 0);
             label18.Name = "label18";
-            label18.Size = new Size(114, 20);
+            label18.Size = new Size(136, 25);
             label18.TabIndex = 177;
             label18.Text = "Toma Corriente:";
             // 
@@ -584,9 +607,10 @@
             // 
             rbAudioNo.AutoSize = true;
             rbAudioNo.Checked = true;
-            rbAudioNo.Location = new Point(101, 4);
+            rbAudioNo.Location = new Point(126, 5);
+            rbAudioNo.Margin = new Padding(4);
             rbAudioNo.Name = "rbAudioNo";
-            rbAudioNo.Size = new Size(50, 24);
+            rbAudioNo.Size = new Size(61, 29);
             rbAudioNo.TabIndex = 123;
             rbAudioNo.TabStop = true;
             rbAudioNo.Text = "No";
@@ -595,9 +619,10 @@
             // rbAudioSi
             // 
             rbAudioSi.AutoSize = true;
-            rbAudioSi.Location = new Point(15, 4);
+            rbAudioSi.Location = new Point(19, 5);
+            rbAudioSi.Margin = new Padding(4);
             rbAudioSi.Name = "rbAudioSi";
-            rbAudioSi.Size = new Size(42, 24);
+            rbAudioSi.Size = new Size(51, 29);
             rbAudioSi.TabIndex = 122;
             rbAudioSi.Text = "Si";
             rbAudioSi.UseVisualStyleBackColor = true;
@@ -606,66 +631,70 @@
             // 
             label17.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             label17.AutoSize = true;
-            label17.Location = new Point(1050, 311);
+            label17.Location = new Point(1312, 389);
+            label17.Margin = new Padding(4, 0, 4, 0);
             label17.Name = "label17";
-            label17.Size = new Size(81, 20);
+            label17.Size = new Size(98, 25);
             label17.TabIndex = 176;
             label17.Text = "AudioVelC:";
             // 
             // txtAltura
             // 
             txtAltura.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            txtAltura.Location = new Point(730, 237);
-            txtAltura.Margin = new Padding(3, 4, 3, 4);
+            txtAltura.Location = new Point(912, 296);
+            txtAltura.Margin = new Padding(4, 5, 4, 5);
             txtAltura.Name = "txtAltura";
-            txtAltura.Size = new Size(141, 27);
+            txtAltura.Size = new Size(175, 31);
             txtAltura.TabIndex = 14;
             // 
             // label16
             // 
             label16.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             label16.AutoSize = true;
-            label16.Location = new Point(654, 243);
+            label16.Location = new Point(818, 304);
+            label16.Margin = new Padding(4, 0, 4, 0);
             label16.Name = "label16";
-            label16.Size = new Size(52, 20);
+            label16.Size = new Size(63, 25);
             label16.TabIndex = 185;
             label16.Text = "Altura:";
             // 
             // txtAnchura
             // 
             txtAnchura.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            txtAnchura.Location = new Point(730, 199);
-            txtAnchura.Margin = new Padding(3, 4, 3, 4);
+            txtAnchura.Location = new Point(912, 249);
+            txtAnchura.Margin = new Padding(4, 5, 4, 5);
             txtAnchura.Name = "txtAnchura";
-            txtAnchura.Size = new Size(141, 27);
+            txtAnchura.Size = new Size(175, 31);
             txtAnchura.TabIndex = 13;
             // 
             // label15
             // 
             label15.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             label15.AutoSize = true;
-            label15.Location = new Point(642, 203);
+            label15.Location = new Point(802, 254);
+            label15.Margin = new Padding(4, 0, 4, 0);
             label15.Name = "label15";
-            label15.Size = new Size(66, 20);
+            label15.Size = new Size(81, 25);
             label15.TabIndex = 181;
             label15.Text = "Anchura:";
             // 
             // txtDistancia
             // 
             txtDistancia.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            txtDistancia.Location = new Point(730, 161);
-            txtDistancia.Margin = new Padding(3, 4, 3, 4);
+            txtDistancia.Location = new Point(912, 201);
+            txtDistancia.Margin = new Padding(4, 5, 4, 5);
             txtDistancia.Name = "txtDistancia";
-            txtDistancia.Size = new Size(141, 27);
+            txtDistancia.Size = new Size(175, 31);
             txtDistancia.TabIndex = 12;
             // 
             // label14
             // 
             label14.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             label14.AutoSize = true;
-            label14.Location = new Point(613, 164);
+            label14.Location = new Point(766, 205);
+            label14.Margin = new Padding(4, 0, 4, 0);
             label14.Name = "label14";
-            label14.Size = new Size(103, 20);
+            label14.Size = new Size(122, 25);
             label14.TabIndex = 175;
             label14.Text = "Distancia Ejes:";
             // 
@@ -673,9 +702,10 @@
             // 
             rbLEDNo.AutoSize = true;
             rbLEDNo.Checked = true;
-            rbLEDNo.Location = new Point(101, 5);
+            rbLEDNo.Location = new Point(126, 6);
+            rbLEDNo.Margin = new Padding(4);
             rbLEDNo.Name = "rbLEDNo";
-            rbLEDNo.Size = new Size(50, 24);
+            rbLEDNo.Size = new Size(61, 29);
             rbLEDNo.TabIndex = 123;
             rbLEDNo.TabStop = true;
             rbLEDNo.Text = "No";
@@ -684,9 +714,10 @@
             // rbLEDSi
             // 
             rbLEDSi.AutoSize = true;
-            rbLEDSi.Location = new Point(15, 5);
+            rbLEDSi.Location = new Point(19, 6);
+            rbLEDSi.Margin = new Padding(4);
             rbLEDSi.Name = "rbLEDSi";
-            rbLEDSi.Size = new Size(42, 24);
+            rbLEDSi.Size = new Size(51, 29);
             rbLEDSi.TabIndex = 122;
             rbLEDSi.Text = "Si";
             rbLEDSi.UseVisualStyleBackColor = true;
@@ -695,9 +726,10 @@
             // 
             label13.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             label13.AutoSize = true;
-            label13.Location = new Point(1065, 271);
+            label13.Location = new Point(1331, 339);
+            label13.Margin = new Padding(4, 0, 4, 0);
             label13.Name = "label13";
-            label13.Size = new Size(72, 20);
+            label13.Size = new Size(88, 25);
             label13.TabIndex = 173;
             label13.Text = "FarosLED:";
             // 
@@ -705,9 +737,10 @@
             // 
             rbFarosHalNo.AutoSize = true;
             rbFarosHalNo.Checked = true;
-            rbFarosHalNo.Location = new Point(101, 7);
+            rbFarosHalNo.Location = new Point(126, 9);
+            rbFarosHalNo.Margin = new Padding(4);
             rbFarosHalNo.Name = "rbFarosHalNo";
-            rbFarosHalNo.Size = new Size(50, 24);
+            rbFarosHalNo.Size = new Size(61, 29);
             rbFarosHalNo.TabIndex = 123;
             rbFarosHalNo.TabStop = true;
             rbFarosHalNo.Text = "No";
@@ -716,9 +749,10 @@
             // rbFarosHalSi
             // 
             rbFarosHalSi.AutoSize = true;
-            rbFarosHalSi.Location = new Point(15, 5);
+            rbFarosHalSi.Location = new Point(19, 6);
+            rbFarosHalSi.Margin = new Padding(4);
             rbFarosHalSi.Name = "rbFarosHalSi";
-            rbFarosHalSi.Size = new Size(42, 24);
+            rbFarosHalSi.Size = new Size(51, 29);
             rbFarosHalSi.TabIndex = 122;
             rbFarosHalSi.Text = "Si";
             rbFarosHalSi.UseVisualStyleBackColor = true;
@@ -727,9 +761,10 @@
             // 
             label12.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             label12.AutoSize = true;
-            label12.Location = new Point(1065, 235);
+            label12.Location = new Point(1331, 294);
+            label12.Margin = new Padding(4, 0, 4, 0);
             label12.Name = "label12";
-            label12.Size = new Size(74, 20);
+            label12.Size = new Size(91, 25);
             label12.TabIndex = 171;
             label12.Text = "FarosHAL:";
             // 
@@ -737,9 +772,10 @@
             // 
             rbCamaraNo.AutoSize = true;
             rbCamaraNo.Checked = true;
-            rbCamaraNo.Location = new Point(101, 3);
+            rbCamaraNo.Location = new Point(126, 4);
+            rbCamaraNo.Margin = new Padding(4);
             rbCamaraNo.Name = "rbCamaraNo";
-            rbCamaraNo.Size = new Size(50, 24);
+            rbCamaraNo.Size = new Size(61, 29);
             rbCamaraNo.TabIndex = 123;
             rbCamaraNo.TabStop = true;
             rbCamaraNo.Text = "No";
@@ -748,9 +784,10 @@
             // rbCamaraSi
             // 
             rbCamaraSi.AutoSize = true;
-            rbCamaraSi.Location = new Point(14, 3);
+            rbCamaraSi.Location = new Point(18, 4);
+            rbCamaraSi.Margin = new Padding(4);
             rbCamaraSi.Name = "rbCamaraSi";
-            rbCamaraSi.Size = new Size(42, 24);
+            rbCamaraSi.Size = new Size(51, 29);
             rbCamaraSi.TabIndex = 122;
             rbCamaraSi.Text = "Si";
             rbCamaraSi.UseVisualStyleBackColor = true;
@@ -758,19 +795,20 @@
             // txtCapacidad
             // 
             txtCapacidad.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            txtCapacidad.Location = new Point(335, 511);
-            txtCapacidad.Margin = new Padding(3, 4, 3, 4);
+            txtCapacidad.Location = new Point(419, 639);
+            txtCapacidad.Margin = new Padding(4, 5, 4, 5);
             txtCapacidad.Name = "txtCapacidad";
-            txtCapacidad.Size = new Size(140, 27);
+            txtCapacidad.Size = new Size(174, 31);
             txtCapacidad.TabIndex = 10;
             // 
             // label11
             // 
             label11.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             label11.AutoSize = true;
-            label11.Location = new Point(169, 511);
+            label11.Location = new Point(211, 639);
+            label11.Margin = new Padding(4, 0, 4, 0);
             label11.Name = "label11";
-            label11.Size = new Size(155, 20);
+            label11.Size = new Size(182, 25);
             label11.TabIndex = 168;
             label11.Text = "Capacidad de cajuela:";
             label11.TextAlign = ContentAlignment.BottomCenter;
@@ -780,18 +818,20 @@
             cbLlantas.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             cbLlantas.FormattingEnabled = true;
             cbLlantas.Items.AddRange(new object[] { "Deportivas", "Invierno" });
-            cbLlantas.Location = new Point(331, 315);
+            cbLlantas.Location = new Point(414, 394);
+            cbLlantas.Margin = new Padding(4);
             cbLlantas.Name = "cbLlantas";
-            cbLlantas.Size = new Size(141, 28);
+            cbLlantas.Size = new Size(175, 33);
             cbLlantas.TabIndex = 5;
             // 
             // cbRines
             // 
             cbRines.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             cbRines.FormattingEnabled = true;
-            cbRines.Location = new Point(331, 236);
+            cbRines.Location = new Point(414, 295);
+            cbRines.Margin = new Padding(4);
             cbRines.Name = "cbRines";
-            cbRines.Size = new Size(141, 28);
+            cbRines.Size = new Size(175, 33);
             cbRines.TabIndex = 3;
             // 
             // cbCilindros
@@ -799,9 +839,10 @@
             cbCilindros.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             cbCilindros.FormattingEnabled = true;
             cbCilindros.Items.AddRange(new object[] { "4 Cilindros", "6 Cilindros", "8 Cilindros" });
-            cbCilindros.Location = new Point(331, 275);
+            cbCilindros.Location = new Point(414, 344);
+            cbCilindros.Margin = new Padding(4);
             cbCilindros.Name = "cbCilindros";
-            cbCilindros.Size = new Size(141, 28);
+            cbCilindros.Size = new Size(175, 33);
             cbCilindros.TabIndex = 4;
             // 
             // cbCombustible
@@ -809,9 +850,10 @@
             cbCombustible.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             cbCombustible.FormattingEnabled = true;
             cbCombustible.Items.AddRange(new object[] { "Gasolina", "Diesel", "Electrico", "Hibrido" });
-            cbCombustible.Location = new Point(331, 393);
+            cbCombustible.Location = new Point(414, 491);
+            cbCombustible.Margin = new Padding(4);
             cbCombustible.Name = "cbCombustible";
-            cbCombustible.Size = new Size(141, 28);
+            cbCombustible.Size = new Size(175, 33);
             cbCombustible.TabIndex = 7;
             // 
             // cbAsientos
@@ -819,27 +861,29 @@
             cbAsientos.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             cbAsientos.FormattingEnabled = true;
             cbAsientos.Items.AddRange(new object[] { "Tela Normal", "Tela arabe", "Piel sintetica", "Piel de mamut" });
-            cbAsientos.Location = new Point(331, 353);
+            cbAsientos.Location = new Point(414, 441);
+            cbAsientos.Margin = new Padding(4);
             cbAsientos.Name = "cbAsientos";
-            cbAsientos.Size = new Size(141, 28);
+            cbAsientos.Size = new Size(175, 33);
             cbAsientos.TabIndex = 6;
             // 
             // cbVehiculo
             // 
             cbVehiculo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             cbVehiculo.FormattingEnabled = true;
-            cbVehiculo.Location = new Point(335, 159);
+            cbVehiculo.Location = new Point(419, 199);
+            cbVehiculo.Margin = new Padding(4);
             cbVehiculo.Name = "cbVehiculo";
-            cbVehiculo.Size = new Size(141, 28);
+            cbVehiculo.Size = new Size(175, 33);
             cbVehiculo.TabIndex = 1;
             // 
             // btnAgregarVersion
             // 
             btnAgregarVersion.Anchor = AnchorStyles.Bottom;
-            btnAgregarVersion.Location = new Point(671, 723);
-            btnAgregarVersion.Margin = new Padding(3, 4, 3, 4);
+            btnAgregarVersion.Location = new Point(839, 904);
+            btnAgregarVersion.Margin = new Padding(4, 5, 4, 5);
             btnAgregarVersion.Name = "btnAgregarVersion";
-            btnAgregarVersion.Size = new Size(177, 31);
+            btnAgregarVersion.Size = new Size(221, 39);
             btnAgregarVersion.TabIndex = 160;
             btnAgregarVersion.Text = "Agregar";
             btnAgregarVersion.UseVisualStyleBackColor = true;
@@ -849,9 +893,10 @@
             // 
             label8.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             label8.AutoSize = true;
-            label8.Location = new Point(1065, 199);
+            label8.Location = new Point(1331, 249);
+            label8.Margin = new Padding(4, 0, 4, 0);
             label8.Name = "label8";
-            label8.Size = new Size(64, 20);
+            label8.Size = new Size(76, 25);
             label8.TabIndex = 157;
             label8.Text = "Pantalla:";
             // 
@@ -859,9 +904,10 @@
             // 
             label24.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             label24.AutoSize = true;
-            label24.Location = new Point(1033, 163);
+            label24.Location = new Point(1291, 204);
+            label24.Margin = new Padding(4, 0, 4, 0);
             label24.Name = "label24";
-            label24.Size = new Size(112, 20);
+            label24.Size = new Size(134, 25);
             label24.TabIndex = 156;
             label24.Text = "Camara trasera:";
             // 
@@ -869,9 +915,10 @@
             // 
             label5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             label5.AutoSize = true;
-            label5.Location = new Point(265, 237);
+            label5.Location = new Point(331, 296);
+            label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
-            label5.Size = new Size(47, 20);
+            label5.Size = new Size(58, 25);
             label5.TabIndex = 154;
             label5.Text = "Rines:";
             // 
@@ -879,9 +926,10 @@
             // 
             label9.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             label9.AutoSize = true;
-            label9.Location = new Point(219, 393);
+            label9.Location = new Point(274, 491);
+            label9.Margin = new Padding(4, 0, 4, 0);
             label9.Name = "label9";
-            label9.Size = new Size(96, 20);
+            label9.Size = new Size(117, 25);
             label9.TabIndex = 149;
             label9.Text = "Combustible:";
             label9.TextAlign = ContentAlignment.BottomCenter;
@@ -890,9 +938,10 @@
             // 
             label6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             label6.AutoSize = true;
-            label6.Location = new Point(247, 355);
+            label6.Location = new Point(309, 444);
+            label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
-            label6.Size = new Size(68, 20);
+            label6.Size = new Size(84, 25);
             label6.TabIndex = 150;
             label6.Text = "Asientos:";
             label6.TextAlign = ContentAlignment.BottomCenter;
@@ -901,9 +950,10 @@
             // 
             label22.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             label22.AutoSize = true;
-            label22.Location = new Point(255, 315);
+            label22.Location = new Point(319, 394);
+            label22.Margin = new Padding(4, 0, 4, 0);
             label22.Name = "label22";
-            label22.Size = new Size(58, 20);
+            label22.Size = new Size(70, 25);
             label22.TabIndex = 155;
             label22.Text = "Llantas:";
             // 
@@ -911,9 +961,10 @@
             // 
             label3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             label3.AutoSize = true;
-            label3.Location = new Point(249, 159);
+            label3.Location = new Point(311, 199);
+            label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(68, 20);
+            label3.Size = new Size(82, 25);
             label3.TabIndex = 152;
             label3.Text = "Vehiculo:";
             label3.TextAlign = ContentAlignment.BottomCenter;
@@ -922,9 +973,10 @@
             // 
             label21.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             label21.AutoSize = true;
-            label21.Location = new Point(245, 276);
+            label21.Location = new Point(306, 345);
+            label21.Margin = new Padding(4, 0, 4, 0);
             label21.Name = "label21";
-            label21.Size = new Size(70, 20);
+            label21.Size = new Size(85, 25);
             label21.TabIndex = 153;
             label21.Text = "Cilindros:";
             // 
@@ -932,9 +984,10 @@
             // 
             label20.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             label20.AutoSize = true;
-            label20.Location = new Point(249, 197);
+            label20.Location = new Point(311, 246);
+            label20.Margin = new Padding(4, 0, 4, 0);
             label20.Name = "label20";
-            label20.Size = new Size(60, 20);
+            label20.Size = new Size(74, 25);
             label20.TabIndex = 151;
             label20.Text = "Version:";
             // 
@@ -942,9 +995,10 @@
             // 
             label10.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             label10.AutoSize = true;
-            label10.Location = new Point(255, 552);
+            label10.Location = new Point(319, 690);
+            label10.Margin = new Padding(4, 0, 4, 0);
             label10.Name = "label10";
-            label10.Size = new Size(68, 20);
+            label10.Size = new Size(83, 25);
             label10.TabIndex = 148;
             label10.Text = "Costo($):";
             // 
@@ -953,9 +1007,10 @@
             cbFrenosD.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             cbFrenosD.FormattingEnabled = true;
             cbFrenosD.Items.AddRange(new object[] { "Manual", "Automatico" });
-            cbFrenosD.Location = new Point(730, 353);
+            cbFrenosD.Location = new Point(912, 441);
+            cbFrenosD.Margin = new Padding(4);
             cbFrenosD.Name = "cbFrenosD";
-            cbFrenosD.Size = new Size(141, 28);
+            cbFrenosD.Size = new Size(175, 33);
             cbFrenosD.TabIndex = 17;
             // 
             // cbFrenosT
@@ -963,18 +1018,20 @@
             cbFrenosT.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             cbFrenosT.FormattingEnabled = true;
             cbFrenosT.Items.AddRange(new object[] { "Delantera", "Trasera" });
-            cbFrenosT.Location = new Point(730, 392);
+            cbFrenosT.Location = new Point(912, 490);
+            cbFrenosT.Margin = new Padding(4);
             cbFrenosT.Name = "cbFrenosT";
-            cbFrenosT.Size = new Size(141, 28);
+            cbFrenosT.Size = new Size(175, 33);
             cbFrenosT.TabIndex = 18;
             // 
             // label30
             // 
             label30.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             label30.AutoSize = true;
-            label30.Location = new Point(602, 399);
+            label30.Location = new Point(752, 499);
+            label30.Margin = new Padding(4, 0, 4, 0);
             label30.Name = "label30";
-            label30.Size = new Size(113, 20);
+            label30.Size = new Size(138, 25);
             label30.TabIndex = 200;
             label30.Text = "Frenos Traseros:";
             // 
@@ -982,9 +1039,10 @@
             // 
             label31.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             label31.AutoSize = true;
-            label31.Location = new Point(586, 360);
+            label31.Location = new Point(732, 450);
+            label31.Margin = new Padding(4, 0, 4, 0);
             label31.Name = "label31";
-            label31.Size = new Size(131, 20);
+            label31.Size = new Size(159, 25);
             label31.TabIndex = 199;
             label31.Text = "Frenos Delanteros:";
             // 
@@ -993,9 +1051,10 @@
             cbSuspensionD.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             cbSuspensionD.FormattingEnabled = true;
             cbSuspensionD.Items.AddRange(new object[] { "Manual", "Automatico" });
-            cbSuspensionD.Location = new Point(731, 431);
+            cbSuspensionD.Location = new Point(914, 539);
+            cbSuspensionD.Margin = new Padding(4);
             cbSuspensionD.Name = "cbSuspensionD";
-            cbSuspensionD.Size = new Size(141, 28);
+            cbSuspensionD.Size = new Size(175, 33);
             cbSuspensionD.TabIndex = 19;
             // 
             // cbSuspensionT
@@ -1003,18 +1062,20 @@
             cbSuspensionT.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             cbSuspensionT.FormattingEnabled = true;
             cbSuspensionT.Items.AddRange(new object[] { "Delantera", "Trasera" });
-            cbSuspensionT.Location = new Point(731, 471);
+            cbSuspensionT.Location = new Point(914, 589);
+            cbSuspensionT.Margin = new Padding(4);
             cbSuspensionT.Name = "cbSuspensionT";
-            cbSuspensionT.Size = new Size(141, 28);
+            cbSuspensionT.Size = new Size(175, 33);
             cbSuspensionT.TabIndex = 20;
             // 
             // label32
             // 
             label32.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             label32.AutoSize = true;
-            label32.Location = new Point(582, 477);
+            label32.Location = new Point(728, 596);
+            label32.Margin = new Padding(4, 0, 4, 0);
             label32.Name = "label32";
-            label32.Size = new Size(137, 20);
+            label32.Size = new Size(166, 25);
             label32.TabIndex = 204;
             label32.Text = "Suspension Trasera:";
             // 
@@ -1022,64 +1083,68 @@
             // 
             label33.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             label33.AutoSize = true;
-            label33.Location = new Point(565, 439);
+            label33.Location = new Point(706, 549);
+            label33.Margin = new Padding(4, 0, 4, 0);
             label33.Name = "label33";
-            label33.Size = new Size(155, 20);
+            label33.Size = new Size(187, 25);
             label33.TabIndex = 203;
             label33.Text = "Suspension Delantera:";
             // 
             // txtVersion
             // 
             txtVersion.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            txtVersion.Location = new Point(334, 199);
-            txtVersion.Margin = new Padding(3, 4, 3, 4);
+            txtVersion.Location = new Point(418, 249);
+            txtVersion.Margin = new Padding(4, 5, 4, 5);
             txtVersion.Name = "txtVersion";
-            txtVersion.Size = new Size(140, 27);
+            txtVersion.Size = new Size(174, 31);
             txtVersion.TabIndex = 2;
             // 
             // txtRendimiento
             // 
             txtRendimiento.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            txtRendimiento.Location = new Point(731, 507);
-            txtRendimiento.Margin = new Padding(3, 4, 3, 4);
+            txtRendimiento.Location = new Point(914, 634);
+            txtRendimiento.Margin = new Padding(4, 5, 4, 5);
             txtRendimiento.Name = "txtRendimiento";
-            txtRendimiento.Size = new Size(141, 27);
+            txtRendimiento.Size = new Size(175, 31);
             txtRendimiento.TabIndex = 21;
             // 
             // label36
             // 
             label36.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             label36.AutoSize = true;
-            label36.Location = new Point(537, 515);
+            label36.Location = new Point(671, 644);
+            label36.Margin = new Padding(4, 0, 4, 0);
             label36.Name = "label36";
-            label36.Size = new Size(185, 20);
+            label36.Size = new Size(222, 25);
             label36.TabIndex = 208;
             label36.Text = "Rendimiento Combustible:";
             // 
             // txtCosto
             // 
             txtCosto.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            txtCosto.Location = new Point(336, 548);
-            txtCosto.Margin = new Padding(3, 4, 3, 4);
+            txtCosto.Location = new Point(420, 685);
+            txtCosto.Margin = new Padding(4, 5, 4, 5);
             txtCosto.Name = "txtCosto";
-            txtCosto.Size = new Size(141, 27);
+            txtCosto.Size = new Size(175, 31);
             txtCosto.TabIndex = 11;
             // 
             // panel3
             // 
             panel3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            panel3.Location = new Point(1170, 191);
+            panel3.Location = new Point(1462, 239);
+            panel3.Margin = new Padding(4);
             panel3.Name = "panel3";
-            panel3.Size = new Size(143, 0);
+            panel3.Size = new Size(179, 0);
             panel3.TabIndex = 171;
             // 
             // rbPantallaNo
             // 
             rbPantallaNo.AutoSize = true;
             rbPantallaNo.Checked = true;
-            rbPantallaNo.Location = new Point(102, 4);
+            rbPantallaNo.Location = new Point(128, 5);
+            rbPantallaNo.Margin = new Padding(4);
             rbPantallaNo.Name = "rbPantallaNo";
-            rbPantallaNo.Size = new Size(50, 24);
+            rbPantallaNo.Size = new Size(61, 29);
             rbPantallaNo.TabIndex = 123;
             rbPantallaNo.TabStop = true;
             rbPantallaNo.Text = "No";
@@ -1088,9 +1153,10 @@
             // rbPantallaSi
             // 
             rbPantallaSi.AutoSize = true;
-            rbPantallaSi.Location = new Point(15, 5);
+            rbPantallaSi.Location = new Point(19, 6);
+            rbPantallaSi.Margin = new Padding(4);
             rbPantallaSi.Name = "rbPantallaSi";
-            rbPantallaSi.Size = new Size(42, 24);
+            rbPantallaSi.Size = new Size(51, 29);
             rbPantallaSi.TabIndex = 122;
             rbPantallaSi.Text = "Si";
             rbPantallaSi.UseVisualStyleBackColor = true;
@@ -1099,97 +1165,97 @@
             // 
             panel2.Controls.Add(rbCamaraSi);
             panel2.Controls.Add(rbCamaraNo);
-            panel2.Location = new Point(1170, 159);
-            panel2.Margin = new Padding(2, 3, 2, 3);
+            panel2.Location = new Point(1462, 199);
+            panel2.Margin = new Padding(2, 4, 2, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(167, 31);
+            panel2.Size = new Size(209, 39);
             panel2.TabIndex = 22;
             // 
             // panel4
             // 
             panel4.Controls.Add(rbPantallaSi);
             panel4.Controls.Add(rbPantallaNo);
-            panel4.Location = new Point(1170, 192);
-            panel4.Margin = new Padding(2, 3, 2, 3);
+            panel4.Location = new Point(1462, 240);
+            panel4.Margin = new Padding(2, 4, 2, 4);
             panel4.Name = "panel4";
-            panel4.Size = new Size(167, 31);
+            panel4.Size = new Size(209, 39);
             panel4.TabIndex = 23;
             // 
             // panel5
             // 
             panel5.Controls.Add(rbFarosHalSi);
             panel5.Controls.Add(rbFarosHalNo);
-            panel5.Location = new Point(1170, 224);
-            panel5.Margin = new Padding(2, 3, 2, 3);
+            panel5.Location = new Point(1462, 280);
+            panel5.Margin = new Padding(2, 4, 2, 4);
             panel5.Name = "panel5";
-            panel5.Size = new Size(167, 31);
+            panel5.Size = new Size(209, 39);
             panel5.TabIndex = 24;
             // 
             // panel6
             // 
             panel6.Controls.Add(rbLEDSi);
             panel6.Controls.Add(rbLEDNo);
-            panel6.Location = new Point(1170, 260);
-            panel6.Margin = new Padding(2, 3, 2, 3);
+            panel6.Location = new Point(1462, 325);
+            panel6.Margin = new Padding(2, 4, 2, 4);
             panel6.Name = "panel6";
-            panel6.Size = new Size(167, 31);
+            panel6.Size = new Size(209, 39);
             panel6.TabIndex = 25;
             // 
             // panel8
             // 
             panel8.Controls.Add(rbAudioSi);
             panel8.Controls.Add(rbAudioNo);
-            panel8.Location = new Point(1170, 299);
-            panel8.Margin = new Padding(2, 3, 2, 3);
+            panel8.Location = new Point(1462, 374);
+            panel8.Margin = new Padding(2, 4, 2, 4);
             panel8.Name = "panel8";
-            panel8.Size = new Size(167, 31);
+            panel8.Size = new Size(209, 39);
             panel8.TabIndex = 26;
             // 
             // panel9
             // 
             panel9.Controls.Add(rbTomaSi);
             panel9.Controls.Add(rbTomaNo);
-            panel9.Location = new Point(1170, 335);
-            panel9.Margin = new Padding(2, 3, 2, 3);
+            panel9.Location = new Point(1462, 419);
+            panel9.Margin = new Padding(2, 4, 2, 4);
             panel9.Name = "panel9";
-            panel9.Size = new Size(167, 31);
+            panel9.Size = new Size(209, 39);
             panel9.TabIndex = 216;
             // 
             // panel10
             // 
             panel10.Controls.Add(rbAcAutSi);
             panel10.Controls.Add(rbAcAutNo);
-            panel10.Location = new Point(1170, 369);
-            panel10.Margin = new Padding(2, 3, 2, 3);
+            panel10.Location = new Point(1462, 461);
+            panel10.Margin = new Padding(2, 4, 2, 4);
             panel10.Name = "panel10";
-            panel10.Size = new Size(167, 31);
+            panel10.Size = new Size(209, 39);
             panel10.TabIndex = 27;
             // 
             // panel11
             // 
             panel11.Controls.Add(rbEspejosDirSi);
             panel11.Controls.Add(rbEspejosDirNo);
-            panel11.Location = new Point(1170, 401);
-            panel11.Margin = new Padding(2, 3, 2, 3);
+            panel11.Location = new Point(1462, 501);
+            panel11.Margin = new Padding(2, 4, 2, 4);
             panel11.Name = "panel11";
-            panel11.Size = new Size(167, 31);
+            panel11.Size = new Size(209, 39);
             panel11.TabIndex = 28;
             // 
             // panel12
             // 
             panel12.Controls.Add(rbEspejosASi);
             panel12.Controls.Add(rbEspejosANo);
-            panel12.Location = new Point(1170, 433);
-            panel12.Margin = new Padding(2, 3, 2, 3);
+            panel12.Location = new Point(1462, 541);
+            panel12.Margin = new Padding(2, 4, 2, 4);
             panel12.Name = "panel12";
-            panel12.Size = new Size(167, 31);
+            panel12.Size = new Size(209, 39);
             panel12.TabIndex = 29;
             // 
             // AgregarVersion
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1486, 849);
+            ClientSize = new Size(1858, 1050);
             Controls.Add(panel5);
             Controls.Add(panel6);
             Controls.Add(panel12);
@@ -1254,7 +1320,7 @@
             Controls.Add(label10);
             Controls.Add(panel7);
             Controls.Add(panel1);
-            Margin = new Padding(3, 4, 3, 4);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "AgregarVersion";
             Text = "AgregarVersion";
             WindowState = FormWindowState.Maximized;
@@ -1364,8 +1430,6 @@
         private ComboBox cbSuspensionT;
         private Label label32;
         private Label label33;
-        private Label label34;
-        private Label label35;
         private TextBox txtVersion;
         private TextBox txtRendimiento;
         private Label label36;
@@ -1382,5 +1446,7 @@
         private Panel panel10;
         private Panel panel11;
         private Panel panel12;
+        private Label lblTipoEmpleado;
+        private Label lblNombre;
     }
 }

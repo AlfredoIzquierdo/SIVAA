@@ -17,9 +17,11 @@ namespace Pantallas_SIVAA
     {
         Empleado empleado = new Empleado();
         EmpleadoLog empleadolog = new EmpleadoLog();
-        public NuevoEmpleado()
+        Empleado _pqt;
+        public NuevoEmpleado(Empleado pqt)
         {
             InitializeComponent();
+            this._pqt = pqt;
         }
 
         private void pictureBox13_Click(object sender, EventArgs e)

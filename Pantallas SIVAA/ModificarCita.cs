@@ -12,6 +12,7 @@ using Logicas;
 using Datos;
 using System.Configuration;
 using System.Data.SqlClient;
+using Pantallas_SIVAA.Pedidos;
 
 namespace Pantallas_SIVAA
 {
@@ -68,8 +69,8 @@ namespace Pantallas_SIVAA
             CitaD citaD = new CitaD();
             citaD.ObtenerPdto(_idCita);
             cmbVendedor.Items.AddRange(ListadoTotal().ToArray());
-            
-            
+
+
             CitaLog log = new CitaLog();
             List<Cita> ver = citaD.ListadoTotal();
             foreach (Cita x in ver)
@@ -82,6 +83,50 @@ namespace Pantallas_SIVAA
                     txtHora.Text = x.Hora.ToString();
                     cmbVendedor.Text = x.IDEmpleado.ToString();
                 }
+            }
+
+            switch (_pqt.Tipo.Trim())
+            {
+                case "Atencion":
+                    // Funciones activas: Citas e inventario
+                    lblTipoEmpleado.Text = _pqt.Tipo + " a clientes";
+                    lblNombre.Text = "Bienvenido: " + _pqt.Nombre + " " + _pqt.ApellidoPat;
+
+
+                    // Menu lateral
+                    btnCitas.Enabled = true;
+                    btnStock.Enabled = true;
+                    btnReportes.Enabled = false;
+                    btnPedidos.Enabled = false;
+                    btnVentas.Enabled = false;
+                    btnCobros.Enabled = false;
+                    break;
+                case "Vendedor":
+                    // Funciones activas: ventas, inventario y citas
+                    lblTipoEmpleado.Text = _pqt.Tipo;
+                    lblNombre.Text = "Bienvenido: " + _pqt.Nombre + " " + _pqt.ApellidoPat;
+
+
+                    //Menu lateral
+                    btnCitas.Enabled = true;
+                    btnStock.Enabled = true;
+                    btnReportes.Enabled = false;
+                    btnPedidos.Enabled = false;
+                    btnVentas.Enabled = true;
+                    btnCobros.Enabled = false;
+                    break;
+                // más casos...
+                case "Cajero":
+
+
+                    // El cajero no pasa por aqui, se va directo al apartado de caja
+
+                    break;
+                case "Supervisor":
+                    // Todo esta activado, es la vista de supervisor
+                    lblTipoEmpleado.Text = _pqt.Tipo;
+                    lblNombre.Text = "Bienvenido: " + _pqt.Nombre + " " + _pqt.ApellidoPat;
+                    break;
             }
         }
         private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
@@ -97,16 +142,65 @@ namespace Pantallas_SIVAA
         private void btnAgregarCita_Click(object sender, EventArgs e)
         {
             CitaLog log = new CitaLog();
-           cita.Año= Convert.ToInt32( lblAño.Text);
-           cita.Dia = Convert.ToInt32( lblDia.Text);
-           cita.Mes = Convert.ToInt32 ( lblMes.Text);
-           cita.Hora =  txtHora.Text;
-           cita.IDEmpleado= cmbVendedor.Text;
+            cita.Año = Convert.ToInt32(lblAño.Text);
+            cita.Dia = Convert.ToInt32(lblDia.Text);
+            cita.Mes = Convert.ToInt32(lblMes.Text);
+            cita.Hora = txtHora.Text;
+            cita.IDEmpleado = cmbVendedor.Text;
             cita.IDCita = lblIDCliente.Text;
             log.Modificar(cita);
             CalendarioCitas citaas = new CalendarioCitas(_pqt);
             this.Close();
             citaas.Show();
+        }
+
+        private void pictureBox13_Click(object sender, EventArgs e)
+        {
+            Inicio inicio = new Inicio(_pqt);
+            this.Close();
+            inicio.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            GestionarPedidos pedidos = new GestionarPedidos(_pqt);
+            pedidos.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Inventario inventario = new Inventario(_pqt);
+            inventario.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            CalendarioCitas citas = new CalendarioCitas(_pqt);
+            citas.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Ventas ventas = new Ventas(_pqt);
+            ventas.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            AbrirCaja Caja = new AbrirCaja(_pqt);
+            Caja.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Reportes reportes = new Reportes(_pqt);
+            reportes.Show();
         }
     }
 }

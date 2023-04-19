@@ -22,10 +22,12 @@ namespace Pantallas_SIVAA
         VehiculoLog veh = new VehiculoLog();
         string id;
 
-        public ModificarVersion(string idVersion)
+        Empleado _pqt;
+        public ModificarVersion(string idVersion, Empleado pqt)
         {
             InitializeComponent();
             id = idVersion;
+            _pqt = pqt;
         }
 
         private void btnModifcarVersion_Click(object sender, EventArgs e)
@@ -64,57 +66,65 @@ namespace Pantallas_SIVAA
             version.CamaraTrasera = verificacion(rbCamaraSi, rbCamaraNo);
 
             log.Modificar(version);
-            Versiones versiones = new Versiones();
+            Versiones versiones = new Versiones(_pqt);
             this.Hide();
             versiones.Show();
         }
 
         private void pictureBox13_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Login.inicio.Show();
+            Inicio inicio = new Inicio(_pqt);
+            this.Close();
+            inicio.Show();
         }
 
         private void btnPedidos_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Pedidos.Show();
+            this.Close();
+            GestionarPedidos pedidos = new GestionarPedidos(_pqt);
+            pedidos.Show();
         }
 
         private void btnStock_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Stock.Show();
+            this.Close();
+            Inventario inventario = new Inventario(_pqt);
+            inventario.Show();
         }
 
         private void btnCitas_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.CalendarioCitas.Show();
+            this.Close();
+            CalendarioCitas citas = new CalendarioCitas(_pqt);
+            citas.Show();
         }
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Ventas.Show();
+            this.Close();
+            Ventas ventas = new Ventas(_pqt);
+            ventas.Show();
         }
 
         private void btnCobros_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Caja.Show();
+            this.Close();
+            AbrirCaja Caja = new AbrirCaja(_pqt);
+            Caja.Show();
         }
 
         private void btnReportes_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Reportes.Show();
+            this.Close();
+            Reportes reportes = new Reportes(_pqt);
+            reportes.Show();
         }
 
         private void btnRegresarModificarVersion_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Versiones.Show();
+            Versiones versiones = new Versiones(_pqt);
+            this.Close();
+            versiones.Show();
         }
 
         private void btnAgregarVersion_Click(object sender, EventArgs e)
@@ -153,7 +163,7 @@ namespace Pantallas_SIVAA
 
             log.Registrar(version);
 
-            Versiones versiones = new Versiones();
+            Versiones versiones = new Versiones(_pqt);
             this.Hide();
             versiones.Show();
         }
@@ -203,6 +213,51 @@ namespace Pantallas_SIVAA
                     asignar(rbTomaSi, rbTomaNo, x.TomaCorriente);
                 }
             }
+
+            switch (_pqt.Tipo.Trim())
+            {
+                case "Atencion":
+                    // Funciones activas: Citas e inventario
+                    lblTipoEmpleado.Text = _pqt.Tipo + " a clientes";
+                    lblNombre.Text = "Bienvenido: " + _pqt.Nombre + " " + _pqt.ApellidoPat;
+
+
+                    // Menu lateral
+                    btnCitas.Enabled = true;
+                    btnStock.Enabled = true;
+                    btnReportes.Enabled = false;
+                    btnPedidos.Enabled = false;
+                    btnVentas.Enabled = false;
+                    btnCobros.Enabled = false;
+                    break;
+                case "Vendedor":
+                    // Funciones activas: ventas, inventario y citas
+                    lblTipoEmpleado.Text = _pqt.Tipo;
+                    lblNombre.Text = "Bienvenido: " + _pqt.Nombre + " " + _pqt.ApellidoPat;
+
+
+                    //Menu lateral
+                    btnCitas.Enabled = true;
+                    btnStock.Enabled = true;
+                    btnReportes.Enabled = false;
+                    btnPedidos.Enabled = false;
+                    btnVentas.Enabled = true;
+                    btnCobros.Enabled = false;
+                    break;
+                // más casos...
+                case "Cajero":
+
+
+                    // El cajero no pasa por aqui, se va directo al apartado de caja
+
+                    break;
+                case "Supervisor":
+                    // Todo esta activado, es la vista de supervisor
+                    lblTipoEmpleado.Text = _pqt.Tipo;
+                    lblNombre.Text = "Bienvenido: " + _pqt.Nombre + " " + _pqt.ApellidoPat;
+                    break;
+            }
+
         }
 
 

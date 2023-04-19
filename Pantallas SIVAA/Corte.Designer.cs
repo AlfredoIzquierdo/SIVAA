@@ -49,8 +49,6 @@
             label3 = new Label();
             comboBox2 = new ComboBox();
             dataGridView1 = new DataGridView();
-            panel7 = new Panel();
-            panel1 = new Panel();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
@@ -66,6 +64,10 @@
             Column13 = new DataGridViewTextBoxColumn();
             Column14 = new DataGridViewTextBoxColumn();
             Column15 = new DataGridViewTextBoxColumn();
+            panel7 = new Panel();
+            lblTipoEmpleado = new Label();
+            lblNombre = new Label();
+            panel1 = new Panel();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             panel3.SuspendLayout();
@@ -79,10 +81,10 @@
             label4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(2949, 39);
+            label4.Location = new Point(3686, 49);
             label4.Margin = new Padding(1, 0, 1, 0);
             label4.Name = "label4";
-            label4.Size = new Size(78, 20);
+            label4.Size = new Size(96, 25);
             label4.TabIndex = 39;
             label4.Text = "Supervisor";
             // 
@@ -91,10 +93,10 @@
             label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(442, 16);
+            label2.Location = new Point(552, 20);
             label2.Margin = new Padding(1, 0, 1, 0);
             label2.Name = "label2";
-            label2.Size = new Size(270, 41);
+            label2.Size = new Size(321, 48);
             label2.TabIndex = 20;
             label2.Text = "Gestión de clientes";
             // 
@@ -103,10 +105,10 @@
             label1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(2934, 12);
+            label1.Location = new Point(3668, 15);
             label1.Margin = new Padding(1, 0, 1, 0);
             label1.Name = "label1";
-            label1.Size = new Size(93, 28);
+            label1.Size = new Size(109, 32);
             label1.TabIndex = 40;
             label1.Text = "Fulanito";
             label1.TextAlign = ContentAlignment.TopCenter;
@@ -114,19 +116,20 @@
             // label7
             // 
             label7.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(122, 20);
+            label7.Location = new Point(152, 25);
+            label7.Margin = new Padding(4, 0, 4, 0);
             label7.Name = "label7";
-            label7.Size = new Size(91, 36);
+            label7.Size = new Size(114, 45);
             label7.TabIndex = 16;
             label7.Text = "SIVAA";
             // 
             // pictureBox13
             // 
             pictureBox13.Image = (Image)resources.GetObject("pictureBox13.Image");
-            pictureBox13.Location = new Point(11, 0);
-            pictureBox13.Margin = new Padding(1, 3, 1, 3);
+            pictureBox13.Location = new Point(14, 0);
+            pictureBox13.Margin = new Padding(1, 4, 1, 4);
             pictureBox13.Name = "pictureBox13";
-            pictureBox13.Size = new Size(53, 76);
+            pictureBox13.Size = new Size(66, 95);
             pictureBox13.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox13.TabIndex = 2;
             pictureBox13.TabStop = false;
@@ -139,14 +142,15 @@
             btnCobros.ImageAlign = ContentAlignment.TopCenter;
             btnCobros.ImageKey = "dollar-sign.png";
             btnCobros.ImageList = imageList2;
-            btnCobros.Location = new Point(0, 301);
-            btnCobros.Margin = new Padding(2, 3, 2, 3);
+            btnCobros.Location = new Point(0, 376);
+            btnCobros.Margin = new Padding(2, 4, 2, 4);
             btnCobros.Name = "btnCobros";
-            btnCobros.Size = new Size(75, 76);
+            btnCobros.Size = new Size(94, 95);
             btnCobros.TabIndex = 10;
             btnCobros.Text = "Cobros";
             btnCobros.TextImageRelation = TextImageRelation.ImageAboveText;
             btnCobros.UseVisualStyleBackColor = false;
+            btnCobros.Click += btnCobros_Click;
             // 
             // imageList2
             // 
@@ -169,14 +173,15 @@
             btnVentas.ImageAlign = ContentAlignment.TopCenter;
             btnVentas.ImageKey = "shopping-cart.png";
             btnVentas.ImageList = imageList2;
-            btnVentas.Location = new Point(0, 225);
-            btnVentas.Margin = new Padding(2, 3, 2, 3);
+            btnVentas.Location = new Point(0, 281);
+            btnVentas.Margin = new Padding(2, 4, 2, 4);
             btnVentas.Name = "btnVentas";
-            btnVentas.Size = new Size(75, 76);
+            btnVentas.Size = new Size(94, 95);
             btnVentas.TabIndex = 9;
             btnVentas.Text = "Ventas";
             btnVentas.TextImageRelation = TextImageRelation.ImageAboveText;
             btnVentas.UseVisualStyleBackColor = false;
+            btnVentas.Click += btnVentas_Click;
             // 
             // btnCitas
             // 
@@ -186,14 +191,15 @@
             btnCitas.ImageAlign = ContentAlignment.TopCenter;
             btnCitas.ImageKey = "calendar.png";
             btnCitas.ImageList = imageList2;
-            btnCitas.Location = new Point(0, 149);
-            btnCitas.Margin = new Padding(2, 3, 2, 3);
+            btnCitas.Location = new Point(0, 186);
+            btnCitas.Margin = new Padding(2, 4, 2, 4);
             btnCitas.Name = "btnCitas";
-            btnCitas.Size = new Size(75, 76);
+            btnCitas.Size = new Size(94, 95);
             btnCitas.TabIndex = 8;
             btnCitas.Text = "Citas";
             btnCitas.TextImageRelation = TextImageRelation.ImageAboveText;
             btnCitas.UseVisualStyleBackColor = false;
+            btnCitas.Click += btnCitas_Click;
             // 
             // btnStock
             // 
@@ -203,14 +209,15 @@
             btnStock.ImageAlign = ContentAlignment.TopCenter;
             btnStock.ImageKey = "book-open.png";
             btnStock.ImageList = imageList2;
-            btnStock.Location = new Point(0, 73);
-            btnStock.Margin = new Padding(2, 3, 2, 3);
+            btnStock.Location = new Point(0, 91);
+            btnStock.Margin = new Padding(2, 4, 2, 4);
             btnStock.Name = "btnStock";
-            btnStock.Size = new Size(75, 76);
+            btnStock.Size = new Size(94, 95);
             btnStock.TabIndex = 7;
             btnStock.Text = "Stock";
             btnStock.TextImageRelation = TextImageRelation.ImageAboveText;
             btnStock.UseVisualStyleBackColor = false;
+            btnStock.Click += btnStock_Click;
             // 
             // btnPedidos
             // 
@@ -221,14 +228,15 @@
             btnPedidos.ImageKey = "package.png";
             btnPedidos.ImageList = imageList2;
             btnPedidos.Location = new Point(0, 0);
-            btnPedidos.Margin = new Padding(2, 3, 2, 3);
+            btnPedidos.Margin = new Padding(2, 4, 2, 4);
             btnPedidos.Name = "btnPedidos";
-            btnPedidos.Size = new Size(75, 76);
+            btnPedidos.Size = new Size(94, 95);
             btnPedidos.TabIndex = 6;
             btnPedidos.Text = "Pedidos";
             btnPedidos.TextAlign = ContentAlignment.BottomCenter;
             btnPedidos.TextImageRelation = TextImageRelation.ImageAboveText;
             btnPedidos.UseVisualStyleBackColor = false;
+            btnPedidos.Click += btnPedidos_Click;
             // 
             // btnReportes
             // 
@@ -238,22 +246,23 @@
             btnReportes.ImageAlign = ContentAlignment.TopCenter;
             btnReportes.ImageKey = "bar-chart.png";
             btnReportes.ImageList = imageList2;
-            btnReportes.Location = new Point(0, 377);
-            btnReportes.Margin = new Padding(2, 3, 2, 3);
+            btnReportes.Location = new Point(0, 471);
+            btnReportes.Margin = new Padding(2, 4, 2, 4);
             btnReportes.Name = "btnReportes";
-            btnReportes.Size = new Size(75, 76);
+            btnReportes.Size = new Size(94, 95);
             btnReportes.TabIndex = 11;
             btnReportes.Text = "Reportes";
             btnReportes.TextImageRelation = TextImageRelation.ImageAboveText;
             btnReportes.UseVisualStyleBackColor = false;
+            btnReportes.Click += btnReportes_Click;
             // 
             // pictureBox10
             // 
             pictureBox10.Image = (Image)resources.GetObject("pictureBox10.Image");
-            pictureBox10.Location = new Point(72, 0);
-            pictureBox10.Margin = new Padding(1, 3, 1, 3);
+            pictureBox10.Location = new Point(90, 0);
+            pictureBox10.Margin = new Padding(1, 4, 1, 4);
             pictureBox10.Name = "pictureBox10";
-            pictureBox10.Size = new Size(53, 76);
+            pictureBox10.Size = new Size(66, 95);
             pictureBox10.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox10.TabIndex = 2;
             pictureBox10.TabStop = false;
@@ -265,26 +274,29 @@
             panel3.Controls.Add(label5);
             panel3.Controls.Add(label3);
             panel3.Controls.Add(comboBox2);
-            panel3.Location = new Point(439, 89);
+            panel3.Location = new Point(549, 111);
+            panel3.Margin = new Padding(4);
             panel3.Name = "panel3";
-            panel3.Size = new Size(565, 47);
+            panel3.Size = new Size(706, 59);
             panel3.TabIndex = 69;
             // 
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(389, 12);
+            comboBox1.Location = new Point(486, 15);
+            comboBox1.Margin = new Padding(4);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(167, 28);
+            comboBox1.Size = new Size(208, 33);
             comboBox1.TabIndex = 54;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(270, 13);
+            label5.Location = new Point(338, 16);
+            label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
-            label5.Size = new Size(112, 22);
+            label5.Size = new Size(134, 26);
             label5.TabIndex = 52;
             label5.Text = "Ordenar por:";
             // 
@@ -292,18 +304,20 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(0, 13);
+            label3.Location = new Point(0, 16);
+            label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(92, 22);
+            label3.Size = new Size(110, 26);
             label3.TabIndex = 53;
             label3.Text = "Filtrar por:";
             // 
             // comboBox2
             // 
             comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(98, 12);
+            comboBox2.Location = new Point(122, 15);
+            comboBox2.Margin = new Padding(4);
             comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(166, 28);
+            comboBox2.Size = new Size(206, 33);
             comboBox2.TabIndex = 55;
             // 
             // dataGridView1
@@ -314,49 +328,16 @@
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column5, Column6, Column7, Column4, Column8, Column9, Column10, Column11, Column12, Column13, Column14, Column15 });
-            dataGridView1.Location = new Point(109, 157);
-            dataGridView1.Margin = new Padding(3, 4, 3, 4);
+            dataGridView1.Location = new Point(136, 196);
+            dataGridView1.Margin = new Padding(4, 5, 4, 5);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(1197, 313);
+            dataGridView1.Size = new Size(1496, 391);
             dataGridView1.TabIndex = 68;
             dataGridView1.Click += dataGridView1_Click;
-            // 
-            // panel7
-            // 
-            panel7.BackColor = Color.FromArgb(51, 58, 86);
-            panel7.Controls.Add(label4);
-            panel7.Controls.Add(label2);
-            panel7.Controls.Add(label1);
-            panel7.Controls.Add(label7);
-            panel7.Controls.Add(pictureBox13);
-            panel7.Controls.Add(pictureBox10);
-            panel7.Dock = DockStyle.Top;
-            panel7.ForeColor = Color.White;
-            panel7.Location = new Point(75, 0);
-            panel7.Margin = new Padding(3, 4, 3, 4);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(1243, 76);
-            panel7.TabIndex = 63;
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.FromArgb(82, 101, 143);
-            panel1.Controls.Add(btnReportes);
-            panel1.Controls.Add(btnCobros);
-            panel1.Controls.Add(btnVentas);
-            panel1.Controls.Add(btnCitas);
-            panel1.Controls.Add(btnStock);
-            panel1.Controls.Add(btnPedidos);
-            panel1.Dock = DockStyle.Left;
-            panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(1, 3, 1, 3);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(75, 483);
-            panel1.TabIndex = 64;
             // 
             // Column1
             // 
@@ -463,16 +444,77 @@
             Column15.Name = "Column15";
             Column15.ReadOnly = true;
             // 
+            // panel7
+            // 
+            panel7.BackColor = Color.FromArgb(51, 58, 86);
+            panel7.Controls.Add(lblTipoEmpleado);
+            panel7.Controls.Add(lblNombre);
+            panel7.Controls.Add(label4);
+            panel7.Controls.Add(label2);
+            panel7.Controls.Add(label1);
+            panel7.Controls.Add(label7);
+            panel7.Controls.Add(pictureBox13);
+            panel7.Controls.Add(pictureBox10);
+            panel7.Dock = DockStyle.Top;
+            panel7.ForeColor = Color.White;
+            panel7.Location = new Point(94, 0);
+            panel7.Margin = new Padding(4, 5, 4, 5);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(1554, 95);
+            panel7.TabIndex = 63;
+            // 
+            // lblTipoEmpleado
+            // 
+            lblTipoEmpleado.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblTipoEmpleado.AutoSize = true;
+            lblTipoEmpleado.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTipoEmpleado.Location = new Point(1306, 61);
+            lblTipoEmpleado.Margin = new Padding(2, 0, 2, 0);
+            lblTipoEmpleado.Name = "lblTipoEmpleado";
+            lblTipoEmpleado.Size = new Size(96, 25);
+            lblTipoEmpleado.TabIndex = 41;
+            lblTipoEmpleado.Text = "Supervisor";
+            // 
+            // lblNombre
+            // 
+            lblNombre.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblNombre.AutoSize = true;
+            lblNombre.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblNombre.Location = new Point(1224, 20);
+            lblNombre.Margin = new Padding(2, 0, 2, 0);
+            lblNombre.Name = "lblNombre";
+            lblNombre.Size = new Size(255, 32);
+            lblNombre.TabIndex = 42;
+            lblNombre.Text = "Bienvenido: Fulanito";
+            lblNombre.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(82, 101, 143);
+            panel1.Controls.Add(btnReportes);
+            panel1.Controls.Add(btnCobros);
+            panel1.Controls.Add(btnVentas);
+            panel1.Controls.Add(btnCitas);
+            panel1.Controls.Add(btnStock);
+            panel1.Controls.Add(btnPedidos);
+            panel1.Dock = DockStyle.Left;
+            panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(1, 4, 1, 4);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(94, 604);
+            panel1.TabIndex = 64;
+            // 
             // Corte
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1318, 483);
+            ClientSize = new Size(1648, 604);
             Controls.Add(panel3);
             Controls.Add(dataGridView1);
             Controls.Add(panel7);
             Controls.Add(panel1);
+            Margin = new Padding(4);
             Name = "Corte";
             Text = "Corte";
             Load += Corte_Load;
@@ -525,5 +567,7 @@
         private DataGridViewTextBoxColumn Column15;
         private Panel panel7;
         private Panel panel1;
+        private Label lblTipoEmpleado;
+        private Label lblNombre;
     }
 }

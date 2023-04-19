@@ -20,53 +20,60 @@ namespace Pantallas_SIVAA
         Versions version = new Versions();
         VersionLog log = new VersionLog();
         VehiculoLog veh = new VehiculoLog();
-        Versiones versiones = new Versiones();
-
-        public AgregarVersion()
+        Empleado _pqt;
+        public AgregarVersion(Empleado pqt)
         {
             InitializeComponent();
+            _pqt = pqt;
         }
 
         private void btnPedidos_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Pedidos.Show();
+            this.Close();
+            GestionarPedidos pedidos = new GestionarPedidos(_pqt);
+            pedidos.Show();
         }
 
         private void btnStock_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Stock.Show();
+            this.Close();
+            Inventario inventario = new Inventario(_pqt);
+            inventario.Show();
         }
 
         private void btnCitas_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.CalendarioCitas.Show();
+            this.Close();
+            CalendarioCitas citas = new CalendarioCitas(_pqt);
+            citas.Show();
         }
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Ventas.Show();
+            this.Close();
+            Ventas ventas = new Ventas(_pqt);
+            ventas.Show();
         }
 
         private void btnCobros_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Caja.Show();
+            this.Close();
+            AbrirCaja Caja = new AbrirCaja(_pqt);
+            Caja.Show();
         }
 
         private void btnReportes_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Reportes.Show();
+            this.Close();
+            Reportes reportes = new Reportes(_pqt);
+            reportes.Show();
         }
 
         private void pictureBox13_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Login.inicio.Show();
+            Inicio inicio = new Inicio(_pqt);
+            this.Close();
+            inicio.Show();
         }
 
         private void btnAgregarVersion_Click(object sender, EventArgs e)
@@ -84,7 +91,7 @@ namespace Pantallas_SIVAA
                 version.Llantas = cbLlantas.Text;
                 version.Version = txtVersion.Text;
                 version.IDVehiculo = idVehiculo(cbVehiculo.Text);
-               
+
                 //version.IDVehiculo = "VH1";
 
                 version.Transmision = cbTransmision.Text;
@@ -113,14 +120,16 @@ namespace Pantallas_SIVAA
                 version.EstadoVersion = "Activo";
                 log.Registrar(version);
 
-                
-                this.Hide();
+
+                this.Close();
+                Versiones versiones = new Versiones(_pqt);
                 versiones.Show();
-            } else
+            }
+            else
             {
                 MessageBox.Show("Favor de rellanar todos los campos");
             }
-            
+
         }
 
         private void AgregarVersion_Load(object sender, EventArgs e)
@@ -130,6 +139,51 @@ namespace Pantallas_SIVAA
             {
                 cbVehiculo.Items.Add(x.Nombre);
             }
+            switch (_pqt.Tipo.Trim())
+            {
+                case "Atencion":
+                    // Funciones activas: Citas e inventario
+                    lblTipoEmpleado.Text = _pqt.Tipo + " a clientes";
+                    lblNombre.Text = "Bienvenido: " + _pqt.Nombre + " " + _pqt.ApellidoPat;
+
+
+                    // Menu lateral
+                    btnCitas.Enabled = true;
+                    btnStock.Enabled = true;
+                    btnReportes.Enabled = false;
+                    btnPedidos.Enabled = false;
+                    btnVentas.Enabled = false;
+                    btnCobros.Enabled = false;
+                    break;
+                case "Vendedor":
+                    // Funciones activas: ventas, inventario y citas
+                    lblTipoEmpleado.Text = _pqt.Tipo;
+                    lblNombre.Text = "Bienvenido: " + _pqt.Nombre + " " + _pqt.ApellidoPat;
+
+
+                    //Menu lateral
+                    btnCitas.Enabled = true;
+                    btnStock.Enabled = true;
+                    btnReportes.Enabled = false;
+                    btnPedidos.Enabled = false;
+                    btnVentas.Enabled = true;
+                    btnCobros.Enabled = false;
+                    break;
+                // más casos...
+                case "Cajero":
+
+
+                    // El cajero no pasa por aqui, se va directo al apartado de caja
+
+                    break;
+                case "Supervisor":
+                    // Todo esta activado, es la vista de supervisor
+                    lblTipoEmpleado.Text = _pqt.Tipo;
+                    lblNombre.Text = "Bienvenido: " + _pqt.Nombre + " " + _pqt.ApellidoPat;
+                    break;
+            }
+
+
         }
 
         private string verificacion(RadioButton x, RadioButton y)
@@ -145,22 +199,23 @@ namespace Pantallas_SIVAA
             return "";
         }
 
-        private bool ComprobarEspacioVacio ()
+        private bool ComprobarEspacioVacio()
         {
             bool vacio = false;
-            if (string.IsNullOrEmpty(cbVehiculo.Text)| string.IsNullOrEmpty(txtVersion.Text) | string.IsNullOrEmpty(cbRines.Text) | string.IsNullOrEmpty(cbCilindros.Text) |
+            if (string.IsNullOrEmpty(cbVehiculo.Text) | string.IsNullOrEmpty(txtVersion.Text) | string.IsNullOrEmpty(cbRines.Text) | string.IsNullOrEmpty(cbCilindros.Text) |
                 string.IsNullOrEmpty(cbLlantas.Text) | string.IsNullOrEmpty(cbAsientos.Text) | string.IsNullOrEmpty(cbCombustible.Text) | string.IsNullOrEmpty(cbEngranajes.Text) |
-                string.IsNullOrEmpty(txtCapacidad.Text) | string.IsNullOrEmpty(txtDistancia.Text) | string.IsNullOrEmpty(txtAltura.Text) | string.IsNullOrEmpty(txtAnchura.Text) | 
+                string.IsNullOrEmpty(txtCapacidad.Text) | string.IsNullOrEmpty(txtDistancia.Text) | string.IsNullOrEmpty(txtAltura.Text) | string.IsNullOrEmpty(txtAnchura.Text) |
                 string.IsNullOrEmpty(cbTransmision.Text) | string.IsNullOrEmpty(cbTipo.Text) | string.IsNullOrEmpty(cbFrenosD.Text) | string.IsNullOrEmpty(cbFrenosT.Text) |
                 string.IsNullOrEmpty(cbSuspensionD.Text) | string.IsNullOrEmpty(cbSuspensionT.Text) | string.IsNullOrEmpty(txtRendimiento.Text))
             {
                 vacio = true;
                 return vacio;
-            } else
+            }
+            else
             {
                 return vacio;
             }
-            
+
         }
 
         private string idVehiculo(string nombre)
@@ -178,6 +233,6 @@ namespace Pantallas_SIVAA
             return id;
         }
 
-
+        
     }
 }

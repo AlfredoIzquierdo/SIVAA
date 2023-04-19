@@ -1,4 +1,5 @@
-﻿using Pantallas_SIVAA.Pedidos;
+﻿using Entidades;
+using Pantallas_SIVAA.Pedidos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,66 +15,75 @@ namespace Pantallas_SIVAA
     public partial class Reportes : Form
     {
         PeriodoMejorCliente periodoMejorCliente = new PeriodoMejorCliente();
-
-        public Reportes()
+        Empleado _pqt;
+        public Reportes(Empleado pqt)
         {
             InitializeComponent();
+            this._pqt = pqt;
         }
 
         private void pictureBox13_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Login.inicio.Show();
+            Inicio inicio = new Inicio(_pqt);
+            this.Close();
+            inicio.Show();
         }
 
         private void btnPedidos_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Pedidos.Show();
+            this.Close();
+            GestionarPedidos pedidos = new GestionarPedidos(_pqt);
+            pedidos.Show();
         }
 
         private void btnStock_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Stock.Show();
+            this.Close();
+            Inventario inventario = new Inventario(_pqt);
+            inventario.Show();
         }
 
         private void btnCitas_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.CalendarioCitas.Show();
+            this.Close();
+            CalendarioCitas citas = new CalendarioCitas(_pqt);
+            citas.Show();
         }
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Ventas.Show();
+            this.Close();
+            Ventas ventas = new Ventas(_pqt);
+            ventas.Show();
         }
 
         private void btnCorteCaja_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Reporte_Caja reporte_Caja = new Reporte_Caja();
-            reporte_Caja.Show();
+            Corte corte = new Corte(_pqt);
+            this.Close();
+            corte.Show();
+
         }
 
         private void btnVersiones_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             ReporteVentas reporteVentas = new ReporteVentas();
             reporteVentas.Show();
         }
 
         private void btnCobros_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Caja.Show();
+            this.Close();
+            AbrirCaja Caja = new AbrirCaja(_pqt);
+            Caja.Show();
         }
 
         private void btnReportes_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Reportes.Show();
+            this.Close();
+            Reportes reportes = new Reportes(_pqt);
+            reportes.Show();
         }
 
         private void Reportes_Load(object sender, EventArgs e)
@@ -83,8 +93,9 @@ namespace Pantallas_SIVAA
 
         private void pictureBox13_Click_1(object sender, EventArgs e)
         {
-            this.Hide();
-            Login.inicio.Show();
+            Inicio inicio = new Inicio(_pqt);
+            this.Close();
+            inicio.Show();
         }
 
         private void btnEmpleados_Click(object sender, EventArgs e)
@@ -95,7 +106,7 @@ namespace Pantallas_SIVAA
 
         private void btnProveedor_Click(object sender, EventArgs e)
         {
-            PeriodoMejorEmpleado periodoMejorEmpleado = new PeriodoMejorEmpleado();
+            PeriodoMejorEmpleado periodoMejorEmpleado = new PeriodoMejorEmpleado(_pqt);
             periodoMejorEmpleado.Show();
         }
 
@@ -119,9 +130,7 @@ namespace Pantallas_SIVAA
 
         private void btnCorteCaja_Click_1(object sender, EventArgs e)
         {
-            //PeriodoCorteCaja periodoCorteCaja = new PeriodoCorteCaja();
-            //periodoCorteCaja.Show();
-            Corte C = new Corte();
+            Corte C = new Corte(_pqt);
             C.Show();
         }
 

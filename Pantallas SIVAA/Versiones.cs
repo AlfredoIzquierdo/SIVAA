@@ -18,23 +18,26 @@ namespace Pantallas_SIVAA
 {
     public partial class Versiones : Form
     {
-        public static AgregarVersion agregarVersion = new AgregarVersion();
+        public static AgregarVersion agregarVersion = new AgregarVersion(null);
         readonly VersionLog version = new VersionLog();
-
-        public Versiones()
+        Empleado _pqt;
+        public Versiones(Empleado pqt)
         {
             InitializeComponent();
+            _pqt = pqt;
         }
 
         private void pictureBox13_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Login.inicio.Show();
+            Inicio inicio = new Inicio(_pqt);
+            this.Close();
+            inicio.Show();
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            AgregarVersion agregarVersion = new AgregarVersion(_pqt);
+            this.Close();
             agregarVersion.Show();
         }
 
@@ -44,7 +47,7 @@ namespace Pantallas_SIVAA
             if (dataGridView1.SelectedRows.Count == 1)
             {
                 id = dataGridView1[0, dataGridView1.SelectedRows[0].Index].Value.ToString();
-                ModificarVersion modificarVehiculo = new ModificarVersion(id);
+                ModificarVersion modificarVehiculo = new ModificarVersion(id,_pqt);
                 this.Hide();
                 modificarVehiculo.Show();
             }
@@ -111,6 +114,51 @@ namespace Pantallas_SIVAA
                 }
 
             }
+            switch (_pqt.Tipo.Trim())
+            {
+                case "Atencion":
+                    // Funciones activas: Citas e inventario
+                    lblTipoEmpleado.Text = _pqt.Tipo + " a clientes";
+                    lblNombre.Text = "Bienvenido: " + _pqt.Nombre + " " + _pqt.ApellidoPat;
+
+
+                    // Menu lateral
+                    btnCitas.Enabled = true;
+                    btnStock.Enabled = true;
+                    btnReportes.Enabled = false;
+                    btnPedidos.Enabled = false;
+                    btnVentas.Enabled = false;
+                    btnCobros.Enabled = false;
+                    break;
+                case "Vendedor":
+                    // Funciones activas: ventas, inventario y citas
+                    lblTipoEmpleado.Text = _pqt.Tipo;
+                    lblNombre.Text = "Bienvenido: " + _pqt.Nombre + " " + _pqt.ApellidoPat;
+
+
+                    //Menu lateral
+                    btnCitas.Enabled = true;
+                    btnStock.Enabled = true;
+                    btnReportes.Enabled = false;
+                    btnPedidos.Enabled = false;
+                    btnVentas.Enabled = true;
+                    btnCobros.Enabled = false;
+                    break;
+                // más casos...
+                case "Cajero":
+
+
+                    // El cajero no pasa por aqui, se va directo al apartado de caja
+
+                    break;
+                case "Supervisor":
+                    // Todo esta activado, es la vista de supervisor
+                    lblTipoEmpleado.Text = _pqt.Tipo;
+                    lblNombre.Text = "Bienvenido: " + _pqt.Nombre + " " + _pqt.ApellidoPat;
+                    break;
+            }
+
+
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)

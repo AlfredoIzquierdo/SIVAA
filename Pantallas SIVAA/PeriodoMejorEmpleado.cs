@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +13,16 @@ namespace Pantallas_SIVAA
 {
     public partial class PeriodoMejorEmpleado : Form
     {
-        public PeriodoMejorEmpleado()
+        Empleado _pqt;
+        public PeriodoMejorEmpleado(Empleado pqt)
         {
             InitializeComponent();
+            _pqt = pqt;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ReporteMejoresEmpleados mejorem = new ReporteMejoresEmpleados();
+            ReporteMejoresEmpleados mejorem = new ReporteMejoresEmpleados(_pqt);
             this.Close();
             mejorem.Show();
         }
