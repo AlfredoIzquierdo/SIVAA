@@ -135,13 +135,24 @@ namespace Pantallas_SIVAA
         {
             List<Empleado> pro;
             int opcion = comboempleado.SelectedIndex;
+            if (opcion == 0)
+            {
+                dataGridView1.Rows.Clear();
+                List<Empleado> em = empleado.ListadoAll();
+                lista = em;
+                foreach (Empleado x in em)
+                {
+                    dataGridView1.Rows.Add(x.IDEmpleado, x.Nombre, x.ApellidoPat, x.ApellidoMat, x.Correo, x.Telefono, x.RFC, x.Contraseña, x.Tipo);
+                }
+                return;
+            }
             dataGridView1.ClearSelection();
             pro = ListadoEspecifico(txtbusqueda.Text, comboempleado.Text);
             lista = pro;
             dataGridView1.Rows.Clear();
             foreach (Empleado x in pro)
             {
-                dataGridView1.Rows.Add(x.IDEmpleado, x.Nombre, x.ApellidoPat, x.ApellidoMat, x.Telefono, x.Correo, x.Contraseña, x.Tipo);
+                dataGridView1.Rows.Add(x.IDEmpleado, x.Nombre, x.ApellidoPat, x.ApellidoMat, x.Correo, x.Telefono, x.RFC, x.Contraseña, x.Tipo);
             }
         }
         public List<Empleado> ListadoEspecifico(string CodPqt, string opcion)
