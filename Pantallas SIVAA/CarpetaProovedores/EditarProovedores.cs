@@ -14,7 +14,7 @@ namespace Pantallas_SIVAA.Proovedores
 {
     public partial class EditarProovedores : Form
     {
-        ProovedoresPrin proveedor = new ProovedoresPrin();
+        ProovedoresPrin proveedor = new ProovedoresPrin(null);
         ProveedorLog log = new ProveedorLog();
         string id;
         public EditarProovedores(string idProveedor)

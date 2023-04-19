@@ -27,10 +27,11 @@ namespace Pantallas_SIVAA
         readonly CotizacionContadoLog PqteLog7 = new CotizacionContadoLog();
         string[] vehiculosD = { "", "", "" };
         int activarPagare = 0;
-
-        public Ventas()
+        Empleado _pqt;
+        public Ventas(Empleado pqt)
         {
             InitializeComponent();
+            _pqt = pqt;
         }
 
         private void pictureBox13_Click(object sender, EventArgs e)

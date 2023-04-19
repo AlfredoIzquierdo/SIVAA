@@ -8,84 +8,87 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entidades;
 
 namespace Pantallas_SIVAA
 {
     public partial class Reportes : Form
     {
         PeriodoMejorCliente periodoMejorCliente = new PeriodoMejorCliente();
-
-        public Reportes()
+        Empleado _pqt;
+        public Reportes(Empleado pqt)
         {
             InitializeComponent();
+            _pqt = pqt;
         }
 
         private void pictureBox13_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Login.inicio.Show();
+            this.Close();
+            Inicio inicio = new Inicio(_pqt);
+            inicio.Show();
         }
 
         private void btnPedidos_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Pedidos.Show();
+            this.Close();
+            GestionarPedidos pedidos = new GestionarPedidos();
+            pedidos.Show();
         }
 
         private void btnStock_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Stock.Show();
+            this.Close();
+            Inventario inventario = new Inventario(_pqt);
+            inventario.Show();
         }
 
         private void btnCitas_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.CalendarioCitas.Show();
+            this.Close();
+            CalendarioCitas citas = new CalendarioCitas(_pqt);
+            citas.Show();
         }
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Ventas.Show();
+            this.Close();
+            Ventas ventas = new Ventas(_pqt);
+            ventas.Show();
         }
 
         private void btnCorteCaja_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             Reporte_Caja reporte_Caja = new Reporte_Caja();
             reporte_Caja.Show();
         }
 
         private void btnVersiones_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             ReporteVentas reporteVentas = new ReporteVentas();
             reporteVentas.Show();
         }
 
         private void btnCobros_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Caja.Show();
+           AbrirCaja Caja = new AbrirCaja(_pqt);
+            this.Close();
+            Caja.Show();
         }
 
         private void btnReportes_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Reportes.Show();
+            
         }
 
         private void Reportes_Load(object sender, EventArgs e)
         {
-
+            btnReportes.Enabled = false;
         }
 
-        private void pictureBox13_Click_1(object sender, EventArgs e)
-        {
-            this.Hide();
-            Login.inicio.Show();
-        }
+       
 
         private void btnEmpleados_Click(object sender, EventArgs e)
         {
@@ -95,12 +98,13 @@ namespace Pantallas_SIVAA
 
         private void btnProveedor_Click(object sender, EventArgs e)
         {
-            PeriodoMejorEmpleado periodoMejorEmpleado = new PeriodoMejorEmpleado();
+            PeriodoMejorEmpleado periodoMejorEmpleado = new PeriodoMejorEmpleado(_pqt);
             periodoMejorEmpleado.Show();
         }
 
         private void btnCitasxvendedor_Click(object sender, EventArgs e)
         {
+
             PeriodoCitasPorVendedor periodoCitasPorVendedor = new PeriodoCitasPorVendedor();
             periodoCitasPorVendedor.Show();
         }
@@ -136,5 +140,14 @@ namespace Pantallas_SIVAA
             PeriodoContadoContraCredito periodoContadoContraCredito = new PeriodoContadoContraCredito();
             periodoContadoContraCredito.Show();
         }
+
+        private void pictureHome_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Inicio inicio = new Inicio(_pqt);
+            inicio.Show();
+        }
+
+       
     }
 }

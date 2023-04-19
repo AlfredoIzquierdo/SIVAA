@@ -15,7 +15,7 @@ namespace Pantallas_SIVAA
 
     public partial class AgregarProovedor : Form
     {
-        public static ProovedoresPrin proovedoresagr = new ProovedoresPrin();
+        public static ProovedoresPrin proovedoresagr = new ProovedoresPrin(null);
         Proveedor proveedor = new Proveedor();
         ProveedorLog ProveedorLog = new ProveedorLog();
 
