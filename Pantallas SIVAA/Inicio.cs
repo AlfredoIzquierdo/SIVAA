@@ -16,7 +16,7 @@ namespace Pantallas_SIVAA
     {
         // principal
         //public static Vehiculos Vehiculos = new Vehiculos(null);
-        public static Versiones Versiones = new Versiones(null);
+        //public static Versiones Versiones = new Versiones(null);
         public static ProovedoresPrin Proovedores = new ProovedoresPrin(null);
         public static GestionarEmpleados GestionarEmpleados = new GestionarEmpleados(null);
         public static Cotizacion Cotizacion = new Cotizacion(null);

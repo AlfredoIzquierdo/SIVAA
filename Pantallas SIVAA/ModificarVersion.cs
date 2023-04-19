@@ -80,43 +80,51 @@ namespace Pantallas_SIVAA
         private void btnPedidos_Click(object sender, EventArgs e)
         {
             this.Close();
-            Inicio.Pedidos.Show();
+            Inicio inicio = new Inicio(_pqt);
+            inicio.Show();
         }
 
         private void btnStock_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Stock.Show();
+            this.Close();
+            Inventario inventario = new Inventario(_pqt);
+            inventario.Show();
         }
 
         private void btnCitas_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.CalendarioCitas.Show();
+            this.Close();
+            CalendarioCitas calendarioCitas = new CalendarioCitas(_pqt);
+            calendarioCitas.Show();
         }
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Ventas.Show();
+            this.Close();
+            Ventas ventas = new Ventas(_pqt);
+            ventas.Show();
         }
 
         private void btnCobros_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Caja.Show();
+            
+            this.Close();
+            AbrirCaja caja = new AbrirCaja(_pqt);
+            caja.Show();
         }
 
         private void btnReportes_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Reportes.Show();
+            this.Close();
+            Reportes reportes = new Reportes(_pqt);
+            reportes.Show();
         }
 
         private void btnRegresarModificarVersion_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Versiones.Show();
+            this.Close();
+            Inicio inicio = new Inicio(_pqt);
+            inicio.Show();
         }
 
         private void btnAgregarVersion_Click(object sender, EventArgs e)
@@ -267,6 +275,6 @@ namespace Pantallas_SIVAA
             return id;
         }
 
-       
+        
     }
 }

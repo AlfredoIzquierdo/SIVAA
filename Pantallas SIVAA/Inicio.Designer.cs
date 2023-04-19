@@ -414,6 +414,7 @@
             Name = "Inicio";
             Text = "Inicio";
             WindowState = FormWindowState.Maximized;
+            Load += Inicio_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
             panel7.ResumeLayout(false);
             panel7.PerformLayout();
