@@ -17,5 +17,7 @@ namespace Entidades
         public string RFC { get; set; }
         public string Contraseña { get; set; }
         public string Tipo { get; set; }
+
+        public string EstadoEmpleado { get; set; }
     }
 }

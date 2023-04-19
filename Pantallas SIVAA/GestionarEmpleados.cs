@@ -13,6 +13,7 @@ using Logicas;
 using Entidades;
 using System.Configuration;
 using System.Data.SqlClient;
+using Datos;
 
 namespace Pantallas_SIVAA
 {
@@ -30,15 +31,17 @@ namespace Pantallas_SIVAA
 
         private void pictureBox11_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedCells.Count > 0)
+            string id = null;
+            if (dataGridView1.SelectedRows.Count == 1)
             {
-                MessageBox.Show("La accion que realizaras es irreversible ¿estas seguro de esto?", "Eliminacion de empleado", MessageBoxButtons.OKCancel);
-                dataGridView1.ClearSelection();
-                MessageBox.Show("Empleado eliminado con éxito");
+                id = dataGridView1[0, dataGridView1.SelectedRows[0].Index].Value.ToString();
+                empleado.EliminarPorStatus(id);
+                MessageBox.Show("Empleado eliminado");
+                dataGridView1.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
             }
             else
             {
-                MessageBox.Show("Favor de seleccionar un empleado para eliminar");
+                MessageBox.Show("Favor de seleccionar un empleado");
             }
         }
 
@@ -145,15 +148,18 @@ namespace Pantallas_SIVAA
                     dataGridView1.Rows.Add(x.IDEmpleado, x.Nombre, x.ApellidoPat, x.ApellidoMat, x.Correo, x.Telefono, x.RFC, x.Contraseña, x.Tipo);
                 }
                 return;
-            }
-            dataGridView1.ClearSelection();
-            pro = ListadoEspecifico(txtbusqueda.Text, comboempleado.Text);
-            lista = pro;
-            dataGridView1.Rows.Clear();
-            foreach (Empleado x in pro)
+            } else
             {
-                dataGridView1.Rows.Add(x.IDEmpleado, x.Nombre, x.ApellidoPat, x.ApellidoMat, x.Correo, x.Telefono, x.RFC, x.Contraseña, x.Tipo);
+                dataGridView1.ClearSelection();
+                pro = ListadoEspecifico(txtbusqueda.Text, comboempleado.Text);
+                lista = pro;
+                dataGridView1.Rows.Clear();
+                foreach (Empleado x in pro)
+                {
+                    dataGridView1.Rows.Add(x.IDEmpleado, x.Nombre, x.ApellidoPat, x.ApellidoMat, x.Correo, x.Telefono, x.RFC, x.Contraseña, x.Tipo);
+                }
             }
+            
         }
         public List<Empleado> ListadoEspecifico(string CodPqt, string opcion)
         {

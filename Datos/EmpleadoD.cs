@@ -20,7 +20,7 @@ namespace Datos
             {
                 //Abrir la conexión y crear el Query
                 Cnx.Open();
-                string CdSql = "INSERT INTO Empleado (IDEmpleado,Nombre,ApellidoPaterno,ApellidoMaterno,Correo,Telefono,RFC,Contraseña,Tipo) VALUES (@Cl,@Nm,@App,@Apm,@Cr,@Tl,@Rfc,@Co,@Ti)";
+                string CdSql = "INSERT INTO Empleado (IDEmpleado,Nombre,ApellidoPaterno,ApellidoMaterno,Correo,Telefono,RFC,Contraseña,Tipo,EstadoEmpleado) VALUES (@Cl,@Nm,@App,@Apm,@Cr,@Tl,@Rfc,@Co,@Ti,@EsE)";
                 using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))//SolicitA: la cadena de SQL y la conexeión
                 {
                     //Añadir los parámetros
@@ -33,6 +33,7 @@ namespace Datos
                     Cmd.Parameters.AddWithValue("@Rfc", Pqte.RFC);
                     Cmd.Parameters.AddWithValue("@Co", Pqte.Contraseña);
                     Cmd.Parameters.AddWithValue("@Ti", Pqte.Tipo);
+                    Cmd.Parameters.AddWithValue("@EsE", Pqte.EstadoEmpleado);
                     Cmd.ExecuteNonQuery();
                     //Borrar variable cmd de la memoria
                     Cmd.Dispose();
@@ -68,7 +69,8 @@ namespace Datos
                             Correo = Convert.ToString(Dr["Correo"]),
                             Telefono = Convert.ToString(Dr["Telefono"]),
                             Contraseña = Convert.ToString(Dr["Contraseña"]),
-                            Tipo = Convert.ToString(Dr["Tipo"])
+                            Tipo = Convert.ToString(Dr["Tipo"]),
+                            EstadoEmpleado = Convert.ToString(Dr["EstadoEmpleado"])
                         };
                         productos.Add(Pqte);
                     }
@@ -104,7 +106,8 @@ namespace Datos
                             Correo = Convert.ToString(Dr["Correo"]),
                             Telefono = Convert.ToString(Dr["Telefono"]),
                             Contraseña = Convert.ToString(Dr["Contraseña"]),
-                            Tipo = Convert.ToString(Dr["Tipo"])
+                            Tipo = Convert.ToString(Dr["Tipo"]),
+                            EstadoEmpleado = Convert.ToString(Dr["EstadoEmpleado"])
                         };
                         productos.Add(Pqte);
                     }
@@ -142,7 +145,8 @@ namespace Datos
                             Telefono = Convert.ToString(Dr["Telefono"]),
                             RFC = Convert.ToString(Dr["RFC"]),
                             Contraseña = Convert.ToString(Dr["Contraseña"]),
-                            Tipo = Convert.ToString(Dr["Tipo"])
+                            Tipo = Convert.ToString(Dr["Tipo"]),
+                            EstadoEmpleado = Convert.ToString(Dr["EstadoEmpleado"])
                         };
                         return Pqte;
                     }
@@ -178,7 +182,8 @@ namespace Datos
                             Correo = Convert.ToString(Dr["Correo"]),
                             Telefono = Convert.ToString(Dr["Telefono"]),
                             Contraseña = Convert.ToString(Dr["Contraseña"]),
-                            Tipo = Convert.ToString(Dr["Tipo"])
+                            Tipo = Convert.ToString(Dr["Tipo"]),
+                            EstadoEmpleado = Convert.ToString(Dr["EstadoEmpleado"])
                         };
                         return Pqte;
                     }
@@ -188,12 +193,12 @@ namespace Datos
             return null;
         }
 
-        public void Eliminar(string CodPqt)
+        public void EliminarDesaparecer(string CodPqt)
         {
             using (SqlConnection Cnx = new SqlConnection(CdCnx))
             {
                 Cnx.Open();
-                string CdSql = "DELETE FROM Cliente WHERE IDEmpleado=@Cl";
+                string CdSql = "Update Empleado Set EstadoEmpleado='Inactivo' WHERE IDEmpleado=@Cl";
                 using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
                 {
                     Cmd.Parameters.AddWithValue("@Cl", CodPqt);
@@ -212,7 +217,7 @@ namespace Datos
             using (SqlConnection Cnx = new SqlConnection(CdCnx))
             {
                 Cnx.Open();
-                string CdSql = "UPDATE Empleado SET Nombre=@Nm,ApellidoPaterno=@App, ApellidoMaterno=@Apm,RFC=@Rfc,Correo=@Cr,Telefono=@Tl,Contraseña=@Co, Tipo=@Ti WHERE IDEmpleado=@Cl";
+                string CdSql = "UPDATE Empleado SET Nombre=@Nm,ApellidoPaterno=@App, ApellidoMaterno=@Apm,RFC=@Rfc,Correo=@Cr,Telefono=@Tl,Contraseña=@Co, Tipo=@Ti,EstadoEmpleado=@EsE WHERE IDEmpleado=@Cl";
                 using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
                 {
                     //Añadir los parámetros
@@ -225,6 +230,7 @@ namespace Datos
                     Cmd.Parameters.AddWithValue("@Rfc", Pqte.RFC);
                     Cmd.Parameters.AddWithValue("@Co", Pqte.Contraseña);
                     Cmd.Parameters.AddWithValue("@Ti", Pqte.Tipo);
+                    Cmd.Parameters.AddWithValue("@EsE", Pqte.EstadoEmpleado);
                     Cmd.ExecuteNonQuery();
                     //Borrar variable cmd de la memoria
                     Cmd.Dispose();

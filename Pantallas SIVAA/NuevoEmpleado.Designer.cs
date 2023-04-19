@@ -366,12 +366,10 @@
             panel2.Controls.Add(pictureBox5);
             panel2.Controls.Add(pictureBox6);
             panel2.Font = new Font("Century", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            panel2.Location = new Point(87, 82);
-            panel2.Margin = new Padding(3, 2, 3, 2);
+            panel2.Location = new Point(87, 83);
             panel2.Name = "panel2";
-            panel2.Size = new Size(657, 522);
+            panel2.Size = new Size(657, 523);
             panel2.TabIndex = 77;
-            panel2.Paint += panel2_Paint;
             // 
             // txtApellidoM
             // 
