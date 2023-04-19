@@ -159,7 +159,7 @@ namespace Datos
             {
                 Cnx.Open();
                 // Crear el query
-                string cdSql = "Select U.NoSerie, V.Nombre, Ve.[Version], M.Año, U.Color,U.Estatus from Unidad U\r\ninner join [Version] Ve on U.IDVersion = Ve.IDVersion\r\ninner join ModeloVersion MV on MV.IDVersion = Ve.IDVersion\r\ninner join Modelo M on M.IDModelo = MV.IDModelo\r\ninner join Vehiculo V on V.IDVehiculo = Ve.IDVehiculo order by V.Nombre, Ve.[Version]";
+                string cdSql = "Select U.NoSerie, V.Nombre, Ve.[Version], M.Año, U.Color,U.Estatus from Unidad U\r\ninner join [Version] Ve on U.IDVersion = Ve.IDVersion\r\ninner join ModeloVersion MV on MV.IDVersion = Ve.IDVersion\r\ninner join Modelo M on M.IDModelo = MV.IDModelo\r\ninner join Vehiculo V on V.IDVehiculo = Ve.IDVehiculo where U.Estatus = 'Disponible' order by V.Nombre, Ve.[Version]";
                 using (SqlCommand Cmd = new SqlCommand(cdSql, Cnx))
                 {
                     SqlDataReader Dr = Cmd.ExecuteReader();
@@ -185,7 +185,7 @@ namespace Datos
             return unidades;
         }
 
-        public List<UnidadNoUsar> InventarioFiltro(string nom)
+        public List<UnidadNoUsar> InventarioFiltro(string nom,string buscar)
         {
             List<UnidadNoUsar> productos = new List<UnidadNoUsar>();
 
@@ -194,7 +194,7 @@ namespace Datos
             {
                 Cnx.Open();
                 //Creo el Query (todos los registros de la tabla unidad
-                string CdSql = "SELECT Unidad.NoSerie, Vehiculo.Nombre, [Version].[Version], Unidad.Color, Modelo.Año,Unidad.Estatus\r\nfrom Unidad, Vehiculo, Version, ModeloVersion, Modelo\r\nwhere Version.IDVehiculo=Vehiculo.IDVehiculo and ModeloVersion.IDModelo=Modelo.IDModelo\r\nand ModeloVersion.IDVersion=Version.IDVersion and Unidad.IDVersion=Version.IDVersion AND Unidad.Estatus=@Cl order by Vehiculo.Nombre, [Version].[Version]";
+                string CdSql = "SELECT Unidad.NoSerie, Vehiculo.Nombre, [Version].[Version], Unidad.Color, Modelo.Año,Unidad.Estatus\r\nfrom Unidad, Vehiculo, Version, ModeloVersion, Modelo\r\nwhere Version.IDVehiculo=Vehiculo.IDVehiculo and ModeloVersion.IDModelo=Modelo.IDModelo\r\nand ModeloVersion.IDVersion=Version.IDVersion and Unidad.IDVersion=Version.IDVersion AND Unidad."+buscar+ " =@Cl and Unidad.Estatus = 'Disponible' order by Vehiculo.Nombre, [Version].[Version]";
                 using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
                 {
                     Cmd.Parameters.AddWithValue("@Cl", nom);
@@ -220,7 +220,76 @@ namespace Datos
             return productos;
         }
 
+        public List<UnidadNoUsar> InventarioVersion(string nom)
+        {
+            List<UnidadNoUsar> productos = new List<UnidadNoUsar>();
 
+            //Vuelvo a crear la conexión
+            using (SqlConnection Cnx = new SqlConnection(CdCnx))
+            {
+                Cnx.Open();
+                //Creo el Query (todos los registros de la tabla unidad
+                string CdSql = "SELECT Unidad.NoSerie, Vehiculo.Nombre, [Version].[Version], Unidad.Color, Modelo.Año,Unidad.Estatus\r\nfrom Unidad, Vehiculo, Version, ModeloVersion, Modelo\r\nwhere Version.IDVehiculo=Vehiculo.IDVehiculo and ModeloVersion.IDModelo=Modelo.IDModelo\r\nand ModeloVersion.IDVersion=Version.IDVersion and Unidad.IDVersion=Version.IDVersion AND [Version].[Version]=@Cl and Unidad.Estatus = 'Disponible' order by Vehiculo.Nombre, [Version].[Version]";
+                using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
+                {
+                    Cmd.Parameters.AddWithValue("@Cl", nom);
+                    SqlDataReader Dr = Cmd.ExecuteReader();
+                    //Leo registro por registro que tiene la tabla 
+                    while (Dr.Read())
+                    {
+                        //Cada vez que lo lea se crea un nuevo objeto
+                        UnidadNoUsar Pqte = new UnidadNoUsar
+                        {
+                            NoSerie = Convert.ToString(Dr["NoSerie"]),
+                            Vehiculo = Convert.ToString(Dr["Nombre"]),
+                            Version = Convert.ToString(Dr["Version"]),
+                            Color = Convert.ToString(Dr["Color"]),
+                            Modelo = Convert.ToString(Dr["Año"]),
+                            Estatus = Convert.ToString(Dr["Estatus"])
+                        };
+                        productos.Add(Pqte);
+                    }
+                }
+                Cnx.Close();
+            }
+            return productos;
+        }
+
+        public List<UnidadNoUsar> InventarioVehiculo(string nom)
+        {
+            List<UnidadNoUsar> productos = new List<UnidadNoUsar>();
+
+            //Vuelvo a crear la conexión
+            using (SqlConnection Cnx = new SqlConnection(CdCnx))
+            {
+                Cnx.Open();
+                //Creo el Query (todos los registros de la tabla unidad
+                string CdSql = "SELECT Unidad.NoSerie, Vehiculo.Nombre, [Version].[Version], Unidad.Color, Modelo.Año,Unidad.Estatus\r\nfrom Unidad, Vehiculo, Version, " +
+                    "ModeloVersion, Modelo\r\nwhere Version.IDVehiculo=Vehiculo.IDVehiculo and ModeloVersion.IDModelo=Modelo.IDModelo\r\nand ModeloVersion.IDVersion=Version.IDVersion and Unidad.IDVersion=Version.IDVersion AND Vehiculo.Nombre=@Cl and Unidad.Estatus = 'Disponible' order by Vehiculo.Nombre, [Version].[Version]";
+                using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
+                {
+                    Cmd.Parameters.AddWithValue("@Cl", nom);
+                    SqlDataReader Dr = Cmd.ExecuteReader();
+                    //Leo registro por registro que tiene la tabla 
+                    while (Dr.Read())
+                    {
+                        //Cada vez que lo lea se crea un nuevo objeto
+                        UnidadNoUsar Pqte = new UnidadNoUsar
+                        {
+                            NoSerie = Convert.ToString(Dr["NoSerie"]),
+                            Vehiculo = Convert.ToString(Dr["Nombre"]),
+                            Version = Convert.ToString(Dr["Version"]),
+                            Color = Convert.ToString(Dr["Color"]),
+                            Modelo = Convert.ToString(Dr["Año"]),
+                            Estatus = Convert.ToString(Dr["Estatus"])
+                        };
+                        productos.Add(Pqte);
+                    }
+                }
+                Cnx.Close();
+            }
+            return productos;
+        }
         public List<UnidadNoUsar> ListadoUnidESP(string nom)
         {
             List<UnidadNoUsar> productos = new List<UnidadNoUsar>();

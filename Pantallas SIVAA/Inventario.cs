@@ -1,7 +1,9 @@
-﻿using Entidades;
+﻿using Datos;
+using Entidades;
 using Logicas;
 using Pantallas_SIVAA.Pedidos;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.Design.AxImporter;
 
 namespace Pantallas_SIVAA
 {
@@ -18,6 +21,7 @@ namespace Pantallas_SIVAA
         readonly UnidadLog PqteLog5 = new UnidadLog();
         string Noserie, vehiculostr, versionstr, colorstr, disponibilidadstr, model;
         Empleado _pqt;
+        List<UnidadNoUsar> lista;
         public Inventario(Empleado pqt)
         {
             InitializeComponent();
@@ -89,7 +93,12 @@ namespace Pantallas_SIVAA
 
         private void Inventario_Load(object sender, EventArgs e)
         {
-            MostrarInventario();
+            List<UnidadNoUsar> clie = PqteLog5.Inventario();
+            lista = clie;
+            foreach (UnidadNoUsar x in clie)
+            {
+                dataGridView1.Rows.Add(x.NoSerie, x.Vehiculo, x.Version, x.Color,x.Estatus);
+            }
             switch (_pqt.Tipo.Trim())
             {
                 case "Atencion":
@@ -138,13 +147,49 @@ namespace Pantallas_SIVAA
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-        }
-
-        public void MostrarInventario()
-        {
-            List<UnidadNoUsar> listado = PqteLog5.Inventario();
-            dataGridView1.DataSource = listado;
+            int opcion = cmbOpcionBusqueda.SelectedIndex;
+            if (opcion == 0)
+            {
+                txtValorBusqueda.Text = "";
+                dataGridView1.Rows.Clear();
+                List<UnidadNoUsar> em = PqteLog5.Inventario();
+                lista = em;
+                foreach (UnidadNoUsar x in em)
+                {
+                    dataGridView1.Rows.Add(x.NoSerie, x.Vehiculo, x.Version, x.Color, x.Estatus);
+                }
+                return;
+            }
+            if(opcion==1 ||opcion == 4)
+            {
+                dataGridView1.Rows.Clear();
+                List<UnidadNoUsar> em = PqteLog5.InventarioFiltro(txtValorBusqueda.Text,cmbOpcionBusqueda.Text);
+                lista = em;
+                foreach (UnidadNoUsar x in em)
+                {
+                    dataGridView1.Rows.Add(x.NoSerie, x.Vehiculo, x.Version, x.Color, x.Estatus);
+                }
+            }
+            if (opcion == 2)
+            {
+                dataGridView1.Rows.Clear();
+                List<UnidadNoUsar> em = PqteLog5.InventarioVehiculo(txtValorBusqueda.Text);
+                lista = em;
+                foreach (UnidadNoUsar x in em)
+                {
+                    dataGridView1.Rows.Add(x.NoSerie, x.Vehiculo, x.Version, x.Color, x.Estatus);
+                }
+            }
+            if (opcion == 3)
+            {
+                dataGridView1.Rows.Clear();
+                List<UnidadNoUsar> em = PqteLog5.InventarioVersion(txtValorBusqueda.Text);
+                lista = em;
+                foreach (UnidadNoUsar x in em)
+                {
+                    dataGridView1.Rows.Add(x.NoSerie, x.Vehiculo, x.Version, x.Color, x.Estatus);
+                }
+            }
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)

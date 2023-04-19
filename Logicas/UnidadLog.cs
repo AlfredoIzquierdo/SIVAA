@@ -38,12 +38,22 @@ namespace Logicas
             //Método que obtiene la lista dinámica de todos los registro que tiene mi tabla
             return Pdto.InventarioGral();
         }
-        public List<UnidadNoUsar> InventarioFiltro(string disp)
+        public List<UnidadNoUsar> InventarioFiltro(string disp,string buscar)
         {
             //Método que obtiene la lista dinámica de todos los registro que tiene mi tabla
-            return Pdto.InventarioFiltro(disp);
+            return Pdto.InventarioFiltro(disp,buscar);
+        }
+        public List<UnidadNoUsar>InventarioVehiculo(string disp)
+        {
+            //Método que obtiene la lista dinámica de todos los registro que tiene mi tabla
+            return Pdto.InventarioVehiculo(disp);
         }
 
+        public List<UnidadNoUsar>InventarioVersion(string disp)
+        {
+            //Método que obtiene la lista dinámica de todos los registro que tiene mi tabla
+            return Pdto.InventarioVersion(disp);
+        }
         public AutoNoUsar BuscarAuto(string ClPdto)
         {
             AutoNoUsar Pd = null;
