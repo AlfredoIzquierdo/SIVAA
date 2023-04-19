@@ -19,9 +19,11 @@ namespace Pantallas_SIVAA
     public partial class ProovedoresPrin : Form
     {
         readonly ProveedorLog proveedor = new ProveedorLog();
-        public ProovedoresPrin()
+        Empleado _pqt;
+        public ProovedoresPrin(Empleado pqt)
         {
             InitializeComponent();
+            _pqt = pqt;
         }
 
 
@@ -58,14 +60,14 @@ namespace Pantallas_SIVAA
 
         private void btnPedidos_Click(object sender, EventArgs e)
         {
-            GestionarPedidos pedidos = new GestionarPedidos();
+            GestionarPedidos pedidos = new GestionarPedidos(_pqt);
             this.Hide();
             pedidos.Show();
         }
 
         private void btnStock_Click(object sender, EventArgs e)
         {
-            Inventario stock = new Inventario();
+            Inventario stock = new Inventario(_pqt);
             this.Hide();
             stock.Show();
         }
@@ -79,7 +81,7 @@ namespace Pantallas_SIVAA
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            Ventas ventas = new Ventas();
+            Ventas ventas = new Ventas(_pqt);
             this.Hide();
             ventas.Show();
         }

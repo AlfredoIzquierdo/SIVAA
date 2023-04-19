@@ -15,7 +15,7 @@ namespace Pantallas_SIVAA
 {
     public partial class AgregarVehiculos : Form
     {
-        public static ProovedoresPrin proovedoresagr = new ProovedoresPrin();
+        public static ProovedoresPrin proovedoresagr = new ProovedoresPrin(null);
         Vehiculo vehiculo = new Vehiculo();
         VehiculoLog vehiculoLog = new VehiculoLog();
 

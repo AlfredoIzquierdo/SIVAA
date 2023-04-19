@@ -17,9 +17,11 @@ namespace Pantallas_SIVAA
     {
         readonly UnidadLog PqteLog5 = new UnidadLog();
         string Noserie, vehiculostr, versionstr, colorstr, disponibilidadstr, model;
-        public Inventario()
+        Empleado pqt;
+        public Inventario(Empleado pqt)
         {
             InitializeComponent();
+            this.pqt = pqt;
         }
 
         private void pictureBox13_Click(object sender, EventArgs e)

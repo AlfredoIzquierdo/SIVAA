@@ -98,7 +98,7 @@ namespace Pantallas_SIVAA
             dataGridView1.Rows.Clear();
             foreach (Cita x in pro)
             {
-                dataGridView1.Rows.Add(x.IDCita,x.IDEmpleado,x.IDCliente,x.Dia,x.Mes,x.Año,x.Hora);
+                dataGridView1.Rows.Add(x.IDCita, x.IDEmpleado, x.IDCliente, x.Dia, x.Mes, x.Año, x.Hora);
             }
 
         }
@@ -201,11 +201,11 @@ namespace Pantallas_SIVAA
         {
             List<Cita> pro;
             dataGridView1.ClearSelection();
-            pro = ListadoEspecifico(numericUpDown1.Value.ToString(),numericUpDown2.Value.ToString(),numericUpDown3.Value.ToString());
+            pro = ListadoEspecifico(numericUpDown1.Value.ToString(), numericUpDown2.Value.ToString(), numericUpDown3.Value.ToString());
             dataGridView1.Rows.Clear();
             foreach (Cita x in pro)
             {
-                dataGridView1.Rows.Add(x.IDCita,x.IDEmpleado,x.IDCliente,x.Dia,x.Mes,x.Año,x.Hora);
+                dataGridView1.Rows.Add(x.IDCita, x.IDEmpleado, x.IDCliente, x.Dia, x.Mes, x.Año, x.Hora);
             }
         }
         public List<Cita> ListadoEspecifico(string dia, string mes, string año)
@@ -271,7 +271,7 @@ namespace Pantallas_SIVAA
         {
             if (idCita != null)
             {
-                ModificarCita modificarCita = new ModificarCita(idCita,_pqt);
+                ModificarCita modificarCita = new ModificarCita(idCita, _pqt);
                 this.Close();
                 modificarCita.Show();
             }
@@ -279,6 +279,6 @@ namespace Pantallas_SIVAA
                 MessageBox.Show("Seleccione una cita haciendo click");
         }
 
-       
+        
     }
 }

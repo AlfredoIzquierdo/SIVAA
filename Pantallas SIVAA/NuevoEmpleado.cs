@@ -90,7 +90,7 @@ namespace Pantallas_SIVAA
                 //}
                 //else
                 //{
-                    empleado.Tipo = cbPuesto.Text;
+                empleado.Tipo = cbPuesto.Text;
                 //}
 
                 empleadolog.Registrar(empleado);
