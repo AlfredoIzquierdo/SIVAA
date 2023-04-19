@@ -62,10 +62,10 @@
             // pictureBox13
             // 
             pictureBox13.Image = (Image)resources.GetObject("pictureBox13.Image");
-            pictureBox13.Location = new Point(21, 11);
-            pictureBox13.Margin = new Padding(2, 4, 2, 4);
+            pictureBox13.Location = new Point(17, 9);
+            pictureBox13.Margin = new Padding(2, 3, 2, 3);
             pictureBox13.Name = "pictureBox13";
-            pictureBox13.Size = new Size(66, 66);
+            pictureBox13.Size = new Size(53, 53);
             pictureBox13.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox13.TabIndex = 2;
             pictureBox13.TabStop = false;
@@ -74,10 +74,9 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(162, 25);
-            label7.Margin = new Padding(4, 0, 4, 0);
+            label7.Location = new Point(130, 20);
             label7.Name = "label7";
-            label7.Size = new Size(115, 45);
+            label7.Size = new Size(100, 38);
             label7.TabIndex = 16;
             label7.Text = "SIVAA";
             // 
@@ -86,10 +85,10 @@
             lblNombre.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblNombre.AutoSize = true;
             lblNombre.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblNombre.Location = new Point(806, 15);
+            lblNombre.Location = new Point(645, 12);
             lblNombre.Margin = new Padding(2, 0, 2, 0);
             lblNombre.Name = "lblNombre";
-            lblNombre.Size = new Size(255, 32);
+            lblNombre.Size = new Size(217, 28);
             lblNombre.TabIndex = 1;
             lblNombre.Text = "Bienvenido: Fulanito";
             lblNombre.TextAlign = ContentAlignment.TopCenter;
@@ -104,20 +103,19 @@
             panel7.Controls.Add(label7);
             panel7.Controls.Add(pictureBox13);
             panel7.ForeColor = Color.White;
-            panel7.Location = new Point(0, -4);
-            panel7.Margin = new Padding(4, 5, 4, 5);
+            panel7.Location = new Point(0, -3);
+            panel7.Margin = new Padding(3, 4, 3, 4);
             panel7.Name = "panel7";
-            panel7.Size = new Size(1108, 95);
+            panel7.Size = new Size(886, 76);
             panel7.TabIndex = 36;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(529, 21);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Location = new Point(423, 17);
             label1.Name = "label1";
-            label1.Size = new Size(106, 48);
+            label1.Size = new Size(89, 41);
             label1.TabIndex = 17;
             label1.Text = "Inicio";
             // 
@@ -126,10 +124,10 @@
             lblTipoEmpleado.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblTipoEmpleado.AutoSize = true;
             lblTipoEmpleado.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lblTipoEmpleado.Location = new Point(888, 56);
+            lblTipoEmpleado.Location = new Point(710, 45);
             lblTipoEmpleado.Margin = new Padding(2, 0, 2, 0);
             lblTipoEmpleado.Name = "lblTipoEmpleado";
-            lblTipoEmpleado.Size = new Size(96, 25);
+            lblTipoEmpleado.Size = new Size(78, 20);
             lblTipoEmpleado.TabIndex = 1;
             lblTipoEmpleado.Text = "Supervisor";
             // 
@@ -143,10 +141,10 @@
             panel1.Controls.Add(btnCitas);
             panel1.Controls.Add(btnStock);
             panel1.Controls.Add(btnPedidos);
-            panel1.Location = new Point(0, 94);
-            panel1.Margin = new Padding(2, 4, 2, 4);
+            panel1.Location = new Point(0, 75);
+            panel1.Margin = new Padding(2, 3, 2, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(94, 606);
+            panel1.Size = new Size(75, 485);
             panel1.TabIndex = 35;
             // 
             // btnReportes
@@ -157,10 +155,10 @@
             btnReportes.ImageAlign = ContentAlignment.TopCenter;
             btnReportes.ImageKey = "bar-chart.png";
             btnReportes.ImageList = imageList2;
-            btnReportes.Location = new Point(0, 480);
-            btnReportes.Margin = new Padding(2, 4, 2, 4);
+            btnReportes.Location = new Point(0, 384);
+            btnReportes.Margin = new Padding(2, 3, 2, 3);
             btnReportes.Name = "btnReportes";
-            btnReportes.Size = new Size(102, 95);
+            btnReportes.Size = new Size(82, 76);
             btnReportes.TabIndex = 10;
             btnReportes.Text = "Reportes";
             btnReportes.TextImageRelation = TextImageRelation.ImageAboveText;
@@ -188,10 +186,10 @@
             btnCobros.ImageAlign = ContentAlignment.TopCenter;
             btnCobros.ImageKey = "dollar-sign.png";
             btnCobros.ImageList = imageList2;
-            btnCobros.Location = new Point(0, 384);
-            btnCobros.Margin = new Padding(2, 4, 2, 4);
+            btnCobros.Location = new Point(0, 307);
+            btnCobros.Margin = new Padding(2, 3, 2, 3);
             btnCobros.Name = "btnCobros";
-            btnCobros.Size = new Size(102, 95);
+            btnCobros.Size = new Size(82, 76);
             btnCobros.TabIndex = 9;
             btnCobros.Text = "Cobros";
             btnCobros.TextImageRelation = TextImageRelation.ImageAboveText;
@@ -206,10 +204,10 @@
             btnVentas.ImageAlign = ContentAlignment.TopCenter;
             btnVentas.ImageKey = "shopping-cart.png";
             btnVentas.ImageList = imageList2;
-            btnVentas.Location = new Point(0, 286);
-            btnVentas.Margin = new Padding(2, 4, 2, 4);
+            btnVentas.Location = new Point(0, 229);
+            btnVentas.Margin = new Padding(2, 3, 2, 3);
             btnVentas.Name = "btnVentas";
-            btnVentas.Size = new Size(102, 95);
+            btnVentas.Size = new Size(82, 76);
             btnVentas.TabIndex = 8;
             btnVentas.Text = "Ventas";
             btnVentas.TextImageRelation = TextImageRelation.ImageAboveText;
@@ -224,10 +222,10 @@
             btnCitas.ImageAlign = ContentAlignment.TopCenter;
             btnCitas.ImageKey = "calendar.png";
             btnCitas.ImageList = imageList2;
-            btnCitas.Location = new Point(0, 194);
-            btnCitas.Margin = new Padding(2, 4, 2, 4);
+            btnCitas.Location = new Point(0, 155);
+            btnCitas.Margin = new Padding(2, 3, 2, 3);
             btnCitas.Name = "btnCitas";
-            btnCitas.Size = new Size(102, 95);
+            btnCitas.Size = new Size(82, 76);
             btnCitas.TabIndex = 7;
             btnCitas.Text = "Citas";
             btnCitas.TextImageRelation = TextImageRelation.ImageAboveText;
@@ -242,10 +240,10 @@
             btnStock.ImageAlign = ContentAlignment.TopCenter;
             btnStock.ImageKey = "book-open.png";
             btnStock.ImageList = imageList2;
-            btnStock.Location = new Point(-20, 95);
-            btnStock.Margin = new Padding(2, 4, 2, 4);
+            btnStock.Location = new Point(-16, 76);
+            btnStock.Margin = new Padding(2, 3, 2, 3);
             btnStock.Name = "btnStock";
-            btnStock.Size = new Size(142, 106);
+            btnStock.Size = new Size(114, 85);
             btnStock.TabIndex = 6;
             btnStock.Text = "Inventario";
             btnStock.TextImageRelation = TextImageRelation.ImageAboveText;
@@ -260,10 +258,10 @@
             btnPedidos.ImageAlign = ContentAlignment.TopCenter;
             btnPedidos.ImageKey = "package.png";
             btnPedidos.ImageList = imageList2;
-            btnPedidos.Location = new Point(0, 4);
-            btnPedidos.Margin = new Padding(2, 4, 2, 4);
+            btnPedidos.Location = new Point(0, 3);
+            btnPedidos.Margin = new Padding(2, 3, 2, 3);
             btnPedidos.Name = "btnPedidos";
-            btnPedidos.Size = new Size(102, 95);
+            btnPedidos.Size = new Size(82, 76);
             btnPedidos.TabIndex = 5;
             btnPedidos.Text = "Pedidos";
             btnPedidos.TextImageRelation = TextImageRelation.ImageAboveText;
@@ -277,10 +275,9 @@
             btnVersiones.ImageAlign = ContentAlignment.TopCenter;
             btnVersiones.ImageKey = "Tipos.png";
             btnVersiones.ImageList = imageList1;
-            btnVersiones.Location = new Point(352, 36);
-            btnVersiones.Margin = new Padding(4);
+            btnVersiones.Location = new Point(282, 29);
             btnVersiones.Name = "btnVersiones";
-            btnVersiones.Size = new Size(246, 159);
+            btnVersiones.Size = new Size(197, 127);
             btnVersiones.TabIndex = 52;
             btnVersiones.Text = "Versiones";
             btnVersiones.TextAlign = ContentAlignment.BottomCenter;
@@ -306,10 +303,9 @@
             btnEmpleados.ImageAlign = ContentAlignment.TopCenter;
             btnEmpleados.ImageKey = "EMP.png";
             btnEmpleados.ImageList = imageList1;
-            btnEmpleados.Location = new Point(684, 34);
-            btnEmpleados.Margin = new Padding(4);
+            btnEmpleados.Location = new Point(547, 27);
             btnEmpleados.Name = "btnEmpleados";
-            btnEmpleados.Size = new Size(246, 159);
+            btnEmpleados.Size = new Size(197, 127);
             btnEmpleados.TabIndex = 52;
             btnEmpleados.Text = "Empleados";
             btnEmpleados.TextAlign = ContentAlignment.BottomCenter;
@@ -323,10 +319,9 @@
             btnCotizacion.ImageAlign = ContentAlignment.TopCenter;
             btnCotizacion.ImageKey = "Cot.png";
             btnCotizacion.ImageList = imageList1;
-            btnCotizacion.Location = new Point(684, 226);
-            btnCotizacion.Margin = new Padding(4);
+            btnCotizacion.Location = new Point(547, 181);
             btnCotizacion.Name = "btnCotizacion";
-            btnCotizacion.Size = new Size(246, 159);
+            btnCotizacion.Size = new Size(197, 127);
             btnCotizacion.TabIndex = 52;
             btnCotizacion.Text = "Cotizacion";
             btnCotizacion.TextAlign = ContentAlignment.BottomCenter;
@@ -340,10 +335,9 @@
             btnVehículos.ImageAlign = ContentAlignment.TopCenter;
             btnVehículos.ImageKey = "Auto.png";
             btnVehículos.ImageList = imageList1;
-            btnVehículos.Location = new Point(20, 36);
-            btnVehículos.Margin = new Padding(4);
+            btnVehículos.Location = new Point(16, 29);
             btnVehículos.Name = "btnVehículos";
-            btnVehículos.Size = new Size(246, 159);
+            btnVehículos.Size = new Size(197, 127);
             btnVehículos.TabIndex = 52;
             btnVehículos.Text = "Vehiculos";
             btnVehículos.TextAlign = ContentAlignment.BottomCenter;
@@ -357,10 +351,9 @@
             btnClientes.ImageAlign = ContentAlignment.TopCenter;
             btnClientes.ImageKey = "Cli.png";
             btnClientes.ImageList = imageList1;
-            btnClientes.Location = new Point(352, 226);
-            btnClientes.Margin = new Padding(4);
+            btnClientes.Location = new Point(282, 181);
             btnClientes.Name = "btnClientes";
-            btnClientes.Size = new Size(246, 159);
+            btnClientes.Size = new Size(197, 127);
             btnClientes.TabIndex = 52;
             btnClientes.Text = "Clientes";
             btnClientes.TextAlign = ContentAlignment.BottomCenter;
@@ -374,10 +367,9 @@
             btnProveedor.ImageAlign = ContentAlignment.TopCenter;
             btnProveedor.ImageKey = "Prov.png";
             btnProveedor.ImageList = imageList1;
-            btnProveedor.Location = new Point(20, 226);
-            btnProveedor.Margin = new Padding(4);
+            btnProveedor.Location = new Point(16, 181);
             btnProveedor.Name = "btnProveedor";
-            btnProveedor.Size = new Size(246, 159);
+            btnProveedor.Size = new Size(197, 127);
             btnProveedor.TabIndex = 52;
             btnProveedor.Text = "Proveedor";
             btnProveedor.TextAlign = ContentAlignment.BottomCenter;
@@ -395,32 +387,32 @@
             panel2.Controls.Add(btnEmpleados);
             panel2.Controls.Add(btnProveedor);
             panel2.Controls.Add(btnVersiones);
-            panel2.Location = new Point(128, 170);
-            panel2.Margin = new Padding(2, 4, 2, 4);
+            panel2.Location = new Point(102, 136);
+            panel2.Margin = new Padding(2, 3, 2, 3);
             panel2.Name = "panel2";
-            panel2.Size = new Size(934, 389);
+            panel2.Size = new Size(747, 311);
             panel2.TabIndex = 53;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(484, 624);
+            label2.Location = new Point(387, 499);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(363, 25);
+            label2.Size = new Size(361, 20);
             label2.TabIndex = 54;
-            label2.Text = "esta es una prueba, pueden borrar esta label";
+            label2.Text = "esta es una prueba, pueden borrar esta label - si sirve";
             // 
             // Inicio
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1122, 704);
+            ClientSize = new Size(898, 563);
             Controls.Add(label2);
             Controls.Add(panel2);
             Controls.Add(panel7);
             Controls.Add(panel1);
-            Margin = new Padding(4);
             Name = "Inicio";
             Text = "Inicio";
             WindowState = FormWindowState.Maximized;
