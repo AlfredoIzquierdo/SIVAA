@@ -146,22 +146,6 @@ namespace Pantallas_SIVAA
             List<UnidadNoUsar> listado = PqteLog5.Inventario();
             dataGridView1.DataSource = listado;
         }
-        public void MostrarInventarioFiltro(string filtro)
-        {
-            List<UnidadNoUsar> listado = PqteLog5.InventarioFiltro(filtro);
-            dataGridView1.DataSource = listado;
-        }
-
-        private void cbFiltro_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cbFiltro.SelectedIndex == 0)
-                MostrarInventario();
-            if (cbFiltro.SelectedIndex == 1)
-                MostrarInventarioFiltro(cbFiltro.Text.ToString());
-            if (cbFiltro.SelectedIndex == 2)
-                MostrarInventarioFiltro(cbFiltro.Text.ToString());
-
-        }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
