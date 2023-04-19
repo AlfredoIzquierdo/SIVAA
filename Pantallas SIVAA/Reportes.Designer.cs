@@ -97,6 +97,7 @@
             this.button1.Text = "Otro";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // IconosReportes
             // 
@@ -127,6 +128,7 @@
             this.button2.Text = "Comparacion ventas";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -160,6 +162,7 @@
             this.btnCorteCaja.Text = "Corte de caja";
             this.btnCorteCaja.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCorteCaja.UseVisualStyleBackColor = false;
+            this.btnCorteCaja.Click += new System.EventHandler(this.btnCorteCaja_Click);
             // 
             // btnClientefrecuente
             // 
@@ -176,6 +179,7 @@
             this.btnClientefrecuente.Text = "Clientes frecuentes";
             this.btnClientefrecuente.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnClientefrecuente.UseVisualStyleBackColor = false;
+            this.btnClientefrecuente.Click += new System.EventHandler(this.btnClientefrecuente_Click);
             // 
             // btnCitasxvendedor
             // 
@@ -192,6 +196,7 @@
             this.btnCitasxvendedor.Text = "Citas por vendedor";
             this.btnCitasxvendedor.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCitasxvendedor.UseVisualStyleBackColor = false;
+            this.btnCitasxvendedor.Click += new System.EventHandler(this.btnCitasxvendedor_Click);
             // 
             // btnEmpleados
             // 
@@ -208,6 +213,7 @@
             this.btnEmpleados.Text = "Servicios mas usados";
             this.btnEmpleados.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEmpleados.UseVisualStyleBackColor = false;
+            this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click);
             // 
             // btnProveedor
             // 
@@ -224,6 +230,7 @@
             this.btnProveedor.Text = "Mejores empleados";
             this.btnProveedor.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnProveedor.UseVisualStyleBackColor = false;
+            this.btnProveedor.Click += new System.EventHandler(this.btnProveedor_Click);
             // 
             // btnrepventas
             // 

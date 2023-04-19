@@ -14,7 +14,7 @@ namespace Pantallas_SIVAA
 {
     public partial class Reportes : Form
     {
-        PeriodoMejorCliente periodoMejorCliente = new PeriodoMejorCliente();
+        
         Empleado _pqt;
         public Reportes(Empleado pqt)
         {
@@ -58,10 +58,9 @@ namespace Pantallas_SIVAA
         }
 
         private void btnCorteCaja_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            Reporte_Caja reporte_Caja = new Reporte_Caja();
-            reporte_Caja.Show();
+        {                       
+            Corte C = new Corte();
+            C.Show();
         }
 
         private void btnVersiones_Click(object sender, EventArgs e)
@@ -111,7 +110,7 @@ namespace Pantallas_SIVAA
 
         private void btnClientefrecuente_Click(object sender, EventArgs e)
         {
-
+            PeriodoMejorCliente periodoMejorCliente = new PeriodoMejorCliente();
             periodoMejorCliente.Show();
         }
 
@@ -125,8 +124,7 @@ namespace Pantallas_SIVAA
         {
             //PeriodoCorteCaja periodoCorteCaja = new PeriodoCorteCaja();
             //periodoCorteCaja.Show();
-            Corte C = new Corte();
-            C.Show();
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -148,6 +146,9 @@ namespace Pantallas_SIVAA
             inicio.Show();
         }
 
-       
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

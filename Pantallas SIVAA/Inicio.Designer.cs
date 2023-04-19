@@ -344,6 +344,7 @@
             this.btnVehículos.Text = "Vehiculos";
             this.btnVehículos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnVehículos.UseVisualStyleBackColor = false;
+            this.btnVehículos.Click += new System.EventHandler(this.btnVehículos_Click);
             // 
             // btnClientes
             // 

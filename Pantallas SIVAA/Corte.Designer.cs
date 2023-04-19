@@ -28,463 +28,483 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Corte));
-            label4 = new Label();
-            label2 = new Label();
-            label1 = new Label();
-            label7 = new Label();
-            pictureBox13 = new PictureBox();
-            btnCobros = new Button();
-            imageList2 = new ImageList(components);
-            btnVentas = new Button();
-            btnCitas = new Button();
-            btnStock = new Button();
-            btnPedidos = new Button();
-            btnReportes = new Button();
-            pictureBox10 = new PictureBox();
-            panel3 = new Panel();
-            comboBox1 = new ComboBox();
-            label5 = new Label();
-            label3 = new Label();
-            comboBox2 = new ComboBox();
-            dataGridView1 = new DataGridView();
-            panel7 = new Panel();
-            panel1 = new Panel();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
-            Column6 = new DataGridViewTextBoxColumn();
-            Column7 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column8 = new DataGridViewTextBoxColumn();
-            Column9 = new DataGridViewTextBoxColumn();
-            Column10 = new DataGridViewTextBoxColumn();
-            Column11 = new DataGridViewTextBoxColumn();
-            Column12 = new DataGridViewTextBoxColumn();
-            Column13 = new DataGridViewTextBoxColumn();
-            Column14 = new DataGridViewTextBoxColumn();
-            Column15 = new DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
-            panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            panel7.SuspendLayout();
-            panel1.SuspendLayout();
-            SuspendLayout();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.btnCobros = new System.Windows.Forms.Button();
+            this.imageList2 = new System.Windows.Forms.ImageList(this.components);
+            this.btnVentas = new System.Windows.Forms.Button();
+            this.btnCitas = new System.Windows.Forms.Button();
+            this.btnStock = new System.Windows.Forms.Button();
+            this.btnPedidos = new System.Windows.Forms.Button();
+            this.btnReportes = new System.Windows.Forms.Button();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel7.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.SuspendLayout();
             // 
             // label4
             // 
-            label4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(2949, 39);
-            label4.Margin = new Padding(1, 0, 1, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(78, 20);
-            label4.TabIndex = 39;
-            label4.Text = "Supervisor";
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(2579, 29);
+            this.label4.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(62, 15);
+            this.label4.TabIndex = 39;
+            this.label4.Text = "Supervisor";
             // 
             // label2
             // 
-            label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(442, 16);
-            label2.Margin = new Padding(1, 0, 1, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(270, 41);
-            label2.TabIndex = 20;
-            label2.Text = "Gestión de clientes";
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(387, 12);
+            this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(217, 32);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Gestión de clientes";
             // 
             // label1
             // 
-            label1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(2934, 12);
-            label1.Margin = new Padding(1, 0, 1, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(93, 28);
-            label1.TabIndex = 40;
-            label1.Text = "Fulanito";
-            label1.TextAlign = ContentAlignment.TopCenter;
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(2566, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(75, 21);
+            this.label1.TabIndex = 40;
+            this.label1.Text = "Fulanito";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label7
             // 
-            label7.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(122, 20);
-            label7.Name = "label7";
-            label7.Size = new Size(91, 36);
-            label7.TabIndex = 16;
-            label7.Text = "SIVAA";
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(107, 15);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(80, 27);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "SIVAA";
             // 
             // pictureBox13
             // 
-            pictureBox13.Image = (Image)resources.GetObject("pictureBox13.Image");
-            pictureBox13.Location = new Point(11, 0);
-            pictureBox13.Margin = new Padding(1, 3, 1, 3);
-            pictureBox13.Name = "pictureBox13";
-            pictureBox13.Size = new Size(53, 76);
-            pictureBox13.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox13.TabIndex = 2;
-            pictureBox13.TabStop = false;
+            this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
+            this.pictureBox13.Location = new System.Drawing.Point(10, 0);
+            this.pictureBox13.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(46, 57);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox13.TabIndex = 2;
+            this.pictureBox13.TabStop = false;
             // 
             // btnCobros
             // 
-            btnCobros.BackColor = Color.FromArgb(82, 101, 143);
-            btnCobros.FlatStyle = FlatStyle.Flat;
-            btnCobros.ForeColor = Color.White;
-            btnCobros.ImageAlign = ContentAlignment.TopCenter;
-            btnCobros.ImageKey = "dollar-sign.png";
-            btnCobros.ImageList = imageList2;
-            btnCobros.Location = new Point(0, 301);
-            btnCobros.Margin = new Padding(2, 3, 2, 3);
-            btnCobros.Name = "btnCobros";
-            btnCobros.Size = new Size(75, 76);
-            btnCobros.TabIndex = 10;
-            btnCobros.Text = "Cobros";
-            btnCobros.TextImageRelation = TextImageRelation.ImageAboveText;
-            btnCobros.UseVisualStyleBackColor = false;
+            this.btnCobros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(101)))), ((int)(((byte)(143)))));
+            this.btnCobros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCobros.ForeColor = System.Drawing.Color.White;
+            this.btnCobros.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCobros.ImageKey = "dollar-sign.png";
+            this.btnCobros.ImageList = this.imageList2;
+            this.btnCobros.Location = new System.Drawing.Point(0, 226);
+            this.btnCobros.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCobros.Name = "btnCobros";
+            this.btnCobros.Size = new System.Drawing.Size(66, 57);
+            this.btnCobros.TabIndex = 10;
+            this.btnCobros.Text = "Cobros";
+            this.btnCobros.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnCobros.UseVisualStyleBackColor = false;
             // 
             // imageList2
             // 
-            imageList2.ColorDepth = ColorDepth.Depth8Bit;
-            imageList2.ImageStream = (ImageListStreamer)resources.GetObject("imageList2.ImageStream");
-            imageList2.TransparentColor = Color.Transparent;
-            imageList2.Images.SetKeyName(0, "archive.png");
-            imageList2.Images.SetKeyName(1, "bar-chart.png");
-            imageList2.Images.SetKeyName(2, "book-open.png");
-            imageList2.Images.SetKeyName(3, "calendar.png");
-            imageList2.Images.SetKeyName(4, "dollar-sign.png");
-            imageList2.Images.SetKeyName(5, "package.png");
-            imageList2.Images.SetKeyName(6, "shopping-cart.png");
+            this.imageList2.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList2.ImageStream")));
+            this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList2.Images.SetKeyName(0, "archive.png");
+            this.imageList2.Images.SetKeyName(1, "bar-chart.png");
+            this.imageList2.Images.SetKeyName(2, "book-open.png");
+            this.imageList2.Images.SetKeyName(3, "calendar.png");
+            this.imageList2.Images.SetKeyName(4, "dollar-sign.png");
+            this.imageList2.Images.SetKeyName(5, "package.png");
+            this.imageList2.Images.SetKeyName(6, "shopping-cart.png");
             // 
             // btnVentas
             // 
-            btnVentas.BackColor = Color.FromArgb(82, 101, 143);
-            btnVentas.FlatStyle = FlatStyle.Flat;
-            btnVentas.ForeColor = Color.White;
-            btnVentas.ImageAlign = ContentAlignment.TopCenter;
-            btnVentas.ImageKey = "shopping-cart.png";
-            btnVentas.ImageList = imageList2;
-            btnVentas.Location = new Point(0, 225);
-            btnVentas.Margin = new Padding(2, 3, 2, 3);
-            btnVentas.Name = "btnVentas";
-            btnVentas.Size = new Size(75, 76);
-            btnVentas.TabIndex = 9;
-            btnVentas.Text = "Ventas";
-            btnVentas.TextImageRelation = TextImageRelation.ImageAboveText;
-            btnVentas.UseVisualStyleBackColor = false;
+            this.btnVentas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(101)))), ((int)(((byte)(143)))));
+            this.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVentas.ForeColor = System.Drawing.Color.White;
+            this.btnVentas.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnVentas.ImageKey = "shopping-cart.png";
+            this.btnVentas.ImageList = this.imageList2;
+            this.btnVentas.Location = new System.Drawing.Point(0, 169);
+            this.btnVentas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVentas.Name = "btnVentas";
+            this.btnVentas.Size = new System.Drawing.Size(66, 57);
+            this.btnVentas.TabIndex = 9;
+            this.btnVentas.Text = "Ventas";
+            this.btnVentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnVentas.UseVisualStyleBackColor = false;
             // 
             // btnCitas
             // 
-            btnCitas.BackColor = Color.FromArgb(82, 101, 143);
-            btnCitas.FlatStyle = FlatStyle.Flat;
-            btnCitas.ForeColor = Color.White;
-            btnCitas.ImageAlign = ContentAlignment.TopCenter;
-            btnCitas.ImageKey = "calendar.png";
-            btnCitas.ImageList = imageList2;
-            btnCitas.Location = new Point(0, 149);
-            btnCitas.Margin = new Padding(2, 3, 2, 3);
-            btnCitas.Name = "btnCitas";
-            btnCitas.Size = new Size(75, 76);
-            btnCitas.TabIndex = 8;
-            btnCitas.Text = "Citas";
-            btnCitas.TextImageRelation = TextImageRelation.ImageAboveText;
-            btnCitas.UseVisualStyleBackColor = false;
+            this.btnCitas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(101)))), ((int)(((byte)(143)))));
+            this.btnCitas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCitas.ForeColor = System.Drawing.Color.White;
+            this.btnCitas.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCitas.ImageKey = "calendar.png";
+            this.btnCitas.ImageList = this.imageList2;
+            this.btnCitas.Location = new System.Drawing.Point(0, 112);
+            this.btnCitas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCitas.Name = "btnCitas";
+            this.btnCitas.Size = new System.Drawing.Size(66, 57);
+            this.btnCitas.TabIndex = 8;
+            this.btnCitas.Text = "Citas";
+            this.btnCitas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnCitas.UseVisualStyleBackColor = false;
             // 
             // btnStock
             // 
-            btnStock.BackColor = Color.FromArgb(82, 101, 143);
-            btnStock.FlatStyle = FlatStyle.Flat;
-            btnStock.ForeColor = Color.White;
-            btnStock.ImageAlign = ContentAlignment.TopCenter;
-            btnStock.ImageKey = "book-open.png";
-            btnStock.ImageList = imageList2;
-            btnStock.Location = new Point(0, 73);
-            btnStock.Margin = new Padding(2, 3, 2, 3);
-            btnStock.Name = "btnStock";
-            btnStock.Size = new Size(75, 76);
-            btnStock.TabIndex = 7;
-            btnStock.Text = "Stock";
-            btnStock.TextImageRelation = TextImageRelation.ImageAboveText;
-            btnStock.UseVisualStyleBackColor = false;
+            this.btnStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(101)))), ((int)(((byte)(143)))));
+            this.btnStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStock.ForeColor = System.Drawing.Color.White;
+            this.btnStock.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnStock.ImageKey = "book-open.png";
+            this.btnStock.ImageList = this.imageList2;
+            this.btnStock.Location = new System.Drawing.Point(0, 55);
+            this.btnStock.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnStock.Name = "btnStock";
+            this.btnStock.Size = new System.Drawing.Size(66, 57);
+            this.btnStock.TabIndex = 7;
+            this.btnStock.Text = "Stock";
+            this.btnStock.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnStock.UseVisualStyleBackColor = false;
             // 
             // btnPedidos
             // 
-            btnPedidos.BackColor = Color.FromArgb(82, 101, 143);
-            btnPedidos.FlatStyle = FlatStyle.Flat;
-            btnPedidos.ForeColor = Color.White;
-            btnPedidos.ImageAlign = ContentAlignment.TopCenter;
-            btnPedidos.ImageKey = "package.png";
-            btnPedidos.ImageList = imageList2;
-            btnPedidos.Location = new Point(0, 0);
-            btnPedidos.Margin = new Padding(2, 3, 2, 3);
-            btnPedidos.Name = "btnPedidos";
-            btnPedidos.Size = new Size(75, 76);
-            btnPedidos.TabIndex = 6;
-            btnPedidos.Text = "Pedidos";
-            btnPedidos.TextAlign = ContentAlignment.BottomCenter;
-            btnPedidos.TextImageRelation = TextImageRelation.ImageAboveText;
-            btnPedidos.UseVisualStyleBackColor = false;
+            this.btnPedidos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(101)))), ((int)(((byte)(143)))));
+            this.btnPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPedidos.ForeColor = System.Drawing.Color.White;
+            this.btnPedidos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnPedidos.ImageKey = "package.png";
+            this.btnPedidos.ImageList = this.imageList2;
+            this.btnPedidos.Location = new System.Drawing.Point(0, 0);
+            this.btnPedidos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPedidos.Name = "btnPedidos";
+            this.btnPedidos.Size = new System.Drawing.Size(66, 57);
+            this.btnPedidos.TabIndex = 6;
+            this.btnPedidos.Text = "Pedidos";
+            this.btnPedidos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnPedidos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnPedidos.UseVisualStyleBackColor = false;
             // 
             // btnReportes
             // 
-            btnReportes.BackColor = Color.FromArgb(82, 101, 143);
-            btnReportes.FlatStyle = FlatStyle.Flat;
-            btnReportes.ForeColor = Color.White;
-            btnReportes.ImageAlign = ContentAlignment.TopCenter;
-            btnReportes.ImageKey = "bar-chart.png";
-            btnReportes.ImageList = imageList2;
-            btnReportes.Location = new Point(0, 377);
-            btnReportes.Margin = new Padding(2, 3, 2, 3);
-            btnReportes.Name = "btnReportes";
-            btnReportes.Size = new Size(75, 76);
-            btnReportes.TabIndex = 11;
-            btnReportes.Text = "Reportes";
-            btnReportes.TextImageRelation = TextImageRelation.ImageAboveText;
-            btnReportes.UseVisualStyleBackColor = false;
+            this.btnReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(101)))), ((int)(((byte)(143)))));
+            this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportes.ForeColor = System.Drawing.Color.White;
+            this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnReportes.ImageKey = "bar-chart.png";
+            this.btnReportes.ImageList = this.imageList2;
+            this.btnReportes.Location = new System.Drawing.Point(0, 283);
+            this.btnReportes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReportes.Name = "btnReportes";
+            this.btnReportes.Size = new System.Drawing.Size(66, 57);
+            this.btnReportes.TabIndex = 11;
+            this.btnReportes.Text = "Reportes";
+            this.btnReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnReportes.UseVisualStyleBackColor = false;
             // 
             // pictureBox10
             // 
-            pictureBox10.Image = (Image)resources.GetObject("pictureBox10.Image");
-            pictureBox10.Location = new Point(72, 0);
-            pictureBox10.Margin = new Padding(1, 3, 1, 3);
-            pictureBox10.Name = "pictureBox10";
-            pictureBox10.Size = new Size(53, 76);
-            pictureBox10.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox10.TabIndex = 2;
-            pictureBox10.TabStop = false;
+            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
+            this.pictureBox10.Location = new System.Drawing.Point(63, 0);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(46, 57);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox10.TabIndex = 2;
+            this.pictureBox10.TabStop = false;
             // 
             // panel3
             // 
-            panel3.Anchor = AnchorStyles.None;
-            panel3.Controls.Add(comboBox1);
-            panel3.Controls.Add(label5);
-            panel3.Controls.Add(label3);
-            panel3.Controls.Add(comboBox2);
-            panel3.Location = new Point(439, 89);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(565, 47);
-            panel3.TabIndex = 69;
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel3.Controls.Add(this.comboBox1);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.comboBox2);
+            this.panel3.Location = new System.Drawing.Point(384, 67);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(494, 35);
+            this.panel3.TabIndex = 69;
             // 
             // comboBox1
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(389, 12);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(167, 28);
-            comboBox1.TabIndex = 54;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(340, 9);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(147, 23);
+            this.comboBox1.TabIndex = 54;
             // 
             // label5
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(270, 13);
-            label5.Name = "label5";
-            label5.Size = new Size(112, 22);
-            label5.TabIndex = 52;
-            label5.Text = "Ordenar por:";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(236, 10);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(92, 18);
+            this.label5.TabIndex = 52;
+            this.label5.Text = "Ordenar por:";
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(0, 13);
-            label3.Name = "label3";
-            label3.Size = new Size(92, 22);
-            label3.TabIndex = 53;
-            label3.Text = "Filtrar por:";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(0, 10);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(75, 18);
+            this.label3.TabIndex = 53;
+            this.label3.Text = "Filtrar por:";
             // 
             // comboBox2
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(98, 12);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(166, 28);
-            comboBox2.TabIndex = 55;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(86, 9);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(146, 23);
+            this.comboBox2.TabIndex = 55;
             // 
             // dataGridView1
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column5, Column6, Column7, Column4, Column8, Column9, Column10, Column11, Column12, Column13, Column14, Column15 });
-            dataGridView1.Location = new Point(109, 157);
-            dataGridView1.Margin = new Padding(3, 4, 3, 4);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.RowHeadersVisible = false;
-            dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(1197, 313);
-            dataGridView1.TabIndex = 68;
-            dataGridView1.Click += dataGridView1_Click;
-            // 
-            // panel7
-            // 
-            panel7.BackColor = Color.FromArgb(51, 58, 86);
-            panel7.Controls.Add(label4);
-            panel7.Controls.Add(label2);
-            panel7.Controls.Add(label1);
-            panel7.Controls.Add(label7);
-            panel7.Controls.Add(pictureBox13);
-            panel7.Controls.Add(pictureBox10);
-            panel7.Dock = DockStyle.Top;
-            panel7.ForeColor = Color.White;
-            panel7.Location = new Point(75, 0);
-            panel7.Margin = new Padding(3, 4, 3, 4);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(1243, 76);
-            panel7.TabIndex = 63;
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.FromArgb(82, 101, 143);
-            panel1.Controls.Add(btnReportes);
-            panel1.Controls.Add(btnCobros);
-            panel1.Controls.Add(btnVentas);
-            panel1.Controls.Add(btnCitas);
-            panel1.Controls.Add(btnStock);
-            panel1.Controls.Add(btnPedidos);
-            panel1.Dock = DockStyle.Left;
-            panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(1, 3, 1, 3);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(75, 483);
-            panel1.TabIndex = 64;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column4,
+            this.Column8,
+            this.Column9,
+            this.Column10,
+            this.Column11,
+            this.Column12,
+            this.Column13,
+            this.Column14,
+            this.Column15});
+            this.dataGridView1.Location = new System.Drawing.Point(95, 118);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(1047, 235);
+            this.dataGridView1.TabIndex = 68;
             // 
             // Column1
             // 
-            Column1.HeaderText = "IdCorteCaja";
-            Column1.MinimumWidth = 8;
-            Column1.Name = "Column1";
-            Column1.ReadOnly = true;
+            this.Column1.HeaderText = "IdCorteCaja";
+            this.Column1.MinimumWidth = 8;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
-            Column2.HeaderText = "Dia";
-            Column2.MinimumWidth = 8;
-            Column2.Name = "Column2";
-            Column2.ReadOnly = true;
+            this.Column2.HeaderText = "Dia";
+            this.Column2.MinimumWidth = 8;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
-            Column3.HeaderText = "Mes";
-            Column3.MinimumWidth = 8;
-            Column3.Name = "Column3";
-            Column3.ReadOnly = true;
+            this.Column3.HeaderText = "Mes";
+            this.Column3.MinimumWidth = 8;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // Column5
             // 
-            Column5.HeaderText = "Año";
-            Column5.MinimumWidth = 8;
-            Column5.Name = "Column5";
-            Column5.ReadOnly = true;
+            this.Column5.HeaderText = "Año";
+            this.Column5.MinimumWidth = 8;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             // 
             // Column6
             // 
-            Column6.HeaderText = "Hora";
-            Column6.MinimumWidth = 8;
-            Column6.Name = "Column6";
-            Column6.ReadOnly = true;
+            this.Column6.HeaderText = "Hora";
+            this.Column6.MinimumWidth = 8;
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
             // 
             // Column7
             // 
-            Column7.HeaderText = "Fondo Inicial";
-            Column7.MinimumWidth = 8;
-            Column7.Name = "Column7";
-            Column7.ReadOnly = true;
+            this.Column7.HeaderText = "Fondo Inicial";
+            this.Column7.MinimumWidth = 8;
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
             // 
             // Column4
             // 
-            Column4.HeaderText = "EfectivoFinal";
-            Column4.MinimumWidth = 6;
-            Column4.Name = "Column4";
-            Column4.ReadOnly = true;
+            this.Column4.HeaderText = "EfectivoFinal";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // Column8
             // 
-            Column8.HeaderText = "Tarjeta Final";
-            Column8.MinimumWidth = 6;
-            Column8.Name = "Column8";
-            Column8.ReadOnly = true;
+            this.Column8.HeaderText = "Tarjeta Final";
+            this.Column8.MinimumWidth = 6;
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
             // 
             // Column9
             // 
-            Column9.HeaderText = "Total Final";
-            Column9.MinimumWidth = 6;
-            Column9.Name = "Column9";
-            Column9.ReadOnly = true;
+            this.Column9.HeaderText = "Total Final";
+            this.Column9.MinimumWidth = 6;
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
             // 
             // Column10
             // 
-            Column10.HeaderText = "Efectivo Total";
-            Column10.MinimumWidth = 6;
-            Column10.Name = "Column10";
-            Column10.ReadOnly = true;
+            this.Column10.HeaderText = "Efectivo Total";
+            this.Column10.MinimumWidth = 6;
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
             // 
             // Column11
             // 
-            Column11.HeaderText = "Total Tarjeta";
-            Column11.MinimumWidth = 6;
-            Column11.Name = "Column11";
-            Column11.ReadOnly = true;
+            this.Column11.HeaderText = "Total Tarjeta";
+            this.Column11.MinimumWidth = 6;
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
             // 
             // Column12
             // 
-            Column12.HeaderText = "Total";
-            Column12.MinimumWidth = 6;
-            Column12.Name = "Column12";
-            Column12.ReadOnly = true;
+            this.Column12.HeaderText = "Total";
+            this.Column12.MinimumWidth = 6;
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
             // 
             // Column13
             // 
-            Column13.HeaderText = "Balance";
-            Column13.MinimumWidth = 6;
-            Column13.Name = "Column13";
-            Column13.ReadOnly = true;
+            this.Column13.HeaderText = "Balance";
+            this.Column13.MinimumWidth = 6;
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
             // 
             // Column14
             // 
-            Column14.HeaderText = "IdEmpleado";
-            Column14.MinimumWidth = 6;
-            Column14.Name = "Column14";
-            Column14.ReadOnly = true;
+            this.Column14.HeaderText = "IdEmpleado";
+            this.Column14.MinimumWidth = 6;
+            this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
             // 
             // Column15
             // 
-            Column15.HeaderText = "IdventaCorte";
-            Column15.MinimumWidth = 6;
-            Column15.Name = "Column15";
-            Column15.ReadOnly = true;
+            this.Column15.HeaderText = "IdventaCorte";
+            this.Column15.MinimumWidth = 6;
+            this.Column15.Name = "Column15";
+            this.Column15.ReadOnly = true;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(58)))), ((int)(((byte)(86)))));
+            this.panel7.Controls.Add(this.label4);
+            this.panel7.Controls.Add(this.label2);
+            this.panel7.Controls.Add(this.label1);
+            this.panel7.Controls.Add(this.label7);
+            this.panel7.Controls.Add(this.pictureBox13);
+            this.panel7.Controls.Add(this.pictureBox10);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.ForeColor = System.Drawing.Color.White;
+            this.panel7.Location = new System.Drawing.Point(66, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(1087, 57);
+            this.panel7.TabIndex = 63;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(101)))), ((int)(((byte)(143)))));
+            this.panel1.Controls.Add(this.btnReportes);
+            this.panel1.Controls.Add(this.btnCobros);
+            this.panel1.Controls.Add(this.btnVentas);
+            this.panel1.Controls.Add(this.btnCitas);
+            this.panel1.Controls.Add(this.btnStock);
+            this.panel1.Controls.Add(this.btnPedidos);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(66, 362);
+            this.panel1.TabIndex = 64;
             // 
             // Corte
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
-            ClientSize = new Size(1318, 483);
-            Controls.Add(panel3);
-            Controls.Add(dataGridView1);
-            Controls.Add(panel7);
-            Controls.Add(panel1);
-            Name = "Corte";
-            Text = "Corte";
-            Load += Corte_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            panel7.ResumeLayout(false);
-            panel7.PerformLayout();
-            panel1.ResumeLayout(false);
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1153, 362);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.panel7);
+            this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "Corte";
+            this.Text = "Corte";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
