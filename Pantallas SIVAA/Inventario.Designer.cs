@@ -52,14 +52,15 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnConsultar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.printDialog1 = new System.Windows.Forms.PrintDialog();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.cmbOpcionBusqueda = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.txtValorBusqueda = new System.Windows.Forms.TextBox();
+            this.btnConsultar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             this.panel6.SuspendLayout();
@@ -68,6 +69,7 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -367,16 +369,65 @@
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.cmbOpcionBusqueda);
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.txtValorBusqueda);
+            this.panel3.Controls.Add(this.panel2);
             this.panel3.Controls.Add(this.btnConsultar);
             this.panel3.Location = new System.Drawing.Point(366, 112);
             this.panel3.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1105, 58);
             this.panel3.TabIndex = 52;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(13, 14);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(123, 26);
+            this.label6.TabIndex = 101;
+            this.label6.Text = "Buscar por:";
+            // 
+            // cmbOpcionBusqueda
+            // 
+            this.cmbOpcionBusqueda.FormattingEnabled = true;
+            this.cmbOpcionBusqueda.Items.AddRange(new object[] {
+            "Todos",
+            "NoSerie",
+            "Vehiculo",
+            "Versión",
+            "Color"});
+            this.cmbOpcionBusqueda.Location = new System.Drawing.Point(144, 11);
+            this.cmbOpcionBusqueda.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.cmbOpcionBusqueda.Name = "cmbOpcionBusqueda";
+            this.cmbOpcionBusqueda.Size = new System.Drawing.Size(177, 33);
+            this.cmbOpcionBusqueda.TabIndex = 100;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(101)))), ((int)(((byte)(143)))));
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(492, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(86, 47);
+            this.button1.TabIndex = 99;
+            this.button1.Text = "Buscar";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // txtValorBusqueda
+            // 
+            this.txtValorBusqueda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtValorBusqueda.BackColor = System.Drawing.Color.White;
+            this.txtValorBusqueda.ForeColor = System.Drawing.Color.Black;
+            this.txtValorBusqueda.Location = new System.Drawing.Point(333, 11);
+            this.txtValorBusqueda.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtValorBusqueda.Name = "txtValorBusqueda";
+            this.txtValorBusqueda.PlaceholderText = "Ingrese su busqueda";
+            this.txtValorBusqueda.Size = new System.Drawing.Size(151, 31);
+            this.txtValorBusqueda.TabIndex = 98;
             // 
             // btnConsultar
             // 
@@ -417,57 +468,16 @@
             this.dataGridView1.Size = new System.Drawing.Size(1362, 738);
             this.dataGridView1.TabIndex = 59;
             // 
-            // label6
+            // panel2
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(355, 14);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(123, 26);
-            this.label6.TabIndex = 101;
-            this.label6.Text = "Buscar por:";
-            // 
-            // cmbOpcionBusqueda
-            // 
-            this.cmbOpcionBusqueda.FormattingEnabled = true;
-            this.cmbOpcionBusqueda.Items.AddRange(new object[] {
-            "Todos",
-            "NoSerie",
-            "Vehiculo",
-            "Versión",
-            "Color"});
-            this.cmbOpcionBusqueda.Location = new System.Drawing.Point(486, 11);
-            this.cmbOpcionBusqueda.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.cmbOpcionBusqueda.Name = "cmbOpcionBusqueda";
-            this.cmbOpcionBusqueda.Size = new System.Drawing.Size(177, 33);
-            this.cmbOpcionBusqueda.TabIndex = 100;
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(101)))), ((int)(((byte)(143)))));
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(830, 2);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 47);
-            this.button1.TabIndex = 99;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // txtValorBusqueda
-            // 
-            this.txtValorBusqueda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtValorBusqueda.BackColor = System.Drawing.Color.White;
-            this.txtValorBusqueda.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.txtValorBusqueda.Location = new System.Drawing.Point(671, 11);
-            this.txtValorBusqueda.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtValorBusqueda.Name = "txtValorBusqueda";
-            this.txtValorBusqueda.PlaceholderText = "Ingrese su busqueda";
-            this.txtValorBusqueda.Size = new System.Drawing.Size(151, 31);
-            this.txtValorBusqueda.TabIndex = 98;
+            this.panel2.Controls.Add(this.cmbOpcionBusqueda);
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.txtValorBusqueda);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Location = new System.Drawing.Point(3, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(628, 55);
+            this.panel2.TabIndex = 102;
             // 
             // Inventario
             // 
@@ -483,6 +493,7 @@
             this.Name = "Inventario";
             this.Text = "Inventario";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Inventario_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             this.panel6.ResumeLayout(false);
@@ -491,9 +502,10 @@
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -530,5 +542,6 @@
         private ComboBox cmbOpcionBusqueda;
         private Button button1;
         private TextBox txtValorBusqueda;
+        private Panel panel2;
     }
 }
