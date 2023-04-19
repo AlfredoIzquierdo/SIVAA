@@ -31,9 +31,7 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestionarPedidos));
             panel7 = new Panel();
-            label4 = new Label();
             label2 = new Label();
-            label1 = new Label();
             label7 = new Label();
             pictureBox13 = new PictureBox();
             pictureBox10 = new PictureBox();
@@ -64,6 +62,8 @@
             label5 = new Label();
             label3 = new Label();
             comboBox2 = new ComboBox();
+            lblTipoEmpleado = new Label();
+            lblNombre = new Label();
             panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
@@ -80,72 +80,48 @@
             // 
             panel7.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel7.BackColor = Color.FromArgb(51, 58, 86);
-            panel7.Controls.Add(label4);
+            panel7.Controls.Add(lblTipoEmpleado);
+            panel7.Controls.Add(lblNombre);
             panel7.Controls.Add(label2);
-            panel7.Controls.Add(label1);
             panel7.Controls.Add(label7);
             panel7.Controls.Add(pictureBox13);
             panel7.Controls.Add(pictureBox10);
             panel7.ForeColor = Color.White;
             panel7.Location = new Point(0, 0);
+            panel7.Margin = new Padding(4, 5, 4, 5);
             panel7.Name = "panel7";
-            panel7.Size = new Size(1043, 57);
+            panel7.Size = new Size(1490, 95);
             panel7.TabIndex = 37;
-            // 
-            // label4
-            // 
-            label4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(954, 29);
-            label4.Margin = new Padding(1, 0, 1, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(62, 15);
-            label4.TabIndex = 39;
-            label4.Text = "Supervisor";
             // 
             // label2
             // 
             label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(387, 12);
+            label2.Location = new Point(553, 20);
             label2.Margin = new Padding(1, 0, 1, 0);
             label2.Name = "label2";
-            label2.Size = new Size(221, 32);
+            label2.Size = new Size(328, 48);
             label2.TabIndex = 20;
             label2.Text = "Gestión de pedidos";
-            // 
-            // label1
-            // 
-            label1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(941, 9);
-            label1.Margin = new Padding(1, 0, 1, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(75, 21);
-            label1.TabIndex = 40;
-            label1.Text = "Fulanito";
-            label1.TextAlign = ContentAlignment.TopCenter;
-            label1.Click += label1_Click;
             // 
             // label7
             // 
             label7.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(107, 15);
+            label7.Location = new Point(153, 25);
+            label7.Margin = new Padding(4, 0, 4, 0);
             label7.Name = "label7";
-            label7.Size = new Size(80, 27);
+            label7.Size = new Size(114, 45);
             label7.TabIndex = 16;
             label7.Text = "SIVAA";
             // 
             // pictureBox13
             // 
             pictureBox13.Image = (Image)resources.GetObject("pictureBox13.Image");
-            pictureBox13.Location = new Point(10, 0);
-            pictureBox13.Margin = new Padding(1, 2, 1, 2);
+            pictureBox13.Location = new Point(14, 0);
+            pictureBox13.Margin = new Padding(1, 3, 1, 3);
             pictureBox13.Name = "pictureBox13";
-            pictureBox13.Size = new Size(46, 57);
+            pictureBox13.Size = new Size(66, 95);
             pictureBox13.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox13.TabIndex = 2;
             pictureBox13.TabStop = false;
@@ -154,10 +130,10 @@
             // pictureBox10
             // 
             pictureBox10.Image = (Image)resources.GetObject("pictureBox10.Image");
-            pictureBox10.Location = new Point(63, 0);
-            pictureBox10.Margin = new Padding(1, 2, 1, 2);
+            pictureBox10.Location = new Point(90, 0);
+            pictureBox10.Margin = new Padding(1, 3, 1, 3);
             pictureBox10.Name = "pictureBox10";
-            pictureBox10.Size = new Size(46, 57);
+            pictureBox10.Size = new Size(66, 95);
             pictureBox10.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox10.TabIndex = 2;
             pictureBox10.TabStop = false;
@@ -172,10 +148,10 @@
             panel1.Controls.Add(btnCitas);
             panel1.Controls.Add(btnStock);
             panel1.Controls.Add(btnPedidos);
-            panel1.Location = new Point(0, 57);
-            panel1.Margin = new Padding(1, 2, 1, 2);
+            panel1.Location = new Point(0, 95);
+            panel1.Margin = new Padding(1, 3, 1, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(66, 510);
+            panel1.Size = new Size(94, 850);
             panel1.TabIndex = 38;
             // 
             // btnReportes
@@ -186,10 +162,9 @@
             btnReportes.ImageAlign = ContentAlignment.TopCenter;
             btnReportes.ImageKey = "bar-chart.png";
             btnReportes.ImageList = imageList2;
-            btnReportes.Location = new Point(0, 283);
-            btnReportes.Margin = new Padding(2);
+            btnReportes.Location = new Point(0, 472);
             btnReportes.Name = "btnReportes";
-            btnReportes.Size = new Size(66, 57);
+            btnReportes.Size = new Size(94, 95);
             btnReportes.TabIndex = 11;
             btnReportes.Text = "Reportes";
             btnReportes.TextImageRelation = TextImageRelation.ImageAboveText;
@@ -217,10 +192,9 @@
             btnCobros.ImageAlign = ContentAlignment.TopCenter;
             btnCobros.ImageKey = "dollar-sign.png";
             btnCobros.ImageList = imageList2;
-            btnCobros.Location = new Point(0, 226);
-            btnCobros.Margin = new Padding(2);
+            btnCobros.Location = new Point(0, 377);
             btnCobros.Name = "btnCobros";
-            btnCobros.Size = new Size(66, 57);
+            btnCobros.Size = new Size(94, 95);
             btnCobros.TabIndex = 10;
             btnCobros.Text = "Cobros";
             btnCobros.TextImageRelation = TextImageRelation.ImageAboveText;
@@ -235,10 +209,9 @@
             btnVentas.ImageAlign = ContentAlignment.TopCenter;
             btnVentas.ImageKey = "shopping-cart.png";
             btnVentas.ImageList = imageList2;
-            btnVentas.Location = new Point(0, 169);
-            btnVentas.Margin = new Padding(2);
+            btnVentas.Location = new Point(0, 282);
             btnVentas.Name = "btnVentas";
-            btnVentas.Size = new Size(66, 57);
+            btnVentas.Size = new Size(94, 95);
             btnVentas.TabIndex = 9;
             btnVentas.Text = "Ventas";
             btnVentas.TextImageRelation = TextImageRelation.ImageAboveText;
@@ -253,10 +226,9 @@
             btnCitas.ImageAlign = ContentAlignment.TopCenter;
             btnCitas.ImageKey = "calendar.png";
             btnCitas.ImageList = imageList2;
-            btnCitas.Location = new Point(0, 112);
-            btnCitas.Margin = new Padding(2);
+            btnCitas.Location = new Point(0, 187);
             btnCitas.Name = "btnCitas";
-            btnCitas.Size = new Size(66, 57);
+            btnCitas.Size = new Size(94, 95);
             btnCitas.TabIndex = 8;
             btnCitas.Text = "Citas";
             btnCitas.TextImageRelation = TextImageRelation.ImageAboveText;
@@ -271,10 +243,9 @@
             btnStock.ImageAlign = ContentAlignment.TopCenter;
             btnStock.ImageKey = "book-open.png";
             btnStock.ImageList = imageList2;
-            btnStock.Location = new Point(0, 55);
-            btnStock.Margin = new Padding(2);
+            btnStock.Location = new Point(0, 92);
             btnStock.Name = "btnStock";
-            btnStock.Size = new Size(66, 57);
+            btnStock.Size = new Size(94, 95);
             btnStock.TabIndex = 7;
             btnStock.Text = "Stock";
             btnStock.TextImageRelation = TextImageRelation.ImageAboveText;
@@ -290,9 +261,8 @@
             btnPedidos.ImageKey = "package.png";
             btnPedidos.ImageList = imageList2;
             btnPedidos.Location = new Point(0, 0);
-            btnPedidos.Margin = new Padding(2);
             btnPedidos.Name = "btnPedidos";
-            btnPedidos.Size = new Size(66, 57);
+            btnPedidos.Size = new Size(94, 95);
             btnPedidos.TabIndex = 6;
             btnPedidos.Text = "Pedidos";
             btnPedidos.TextAlign = ContentAlignment.BottomCenter;
@@ -303,10 +273,10 @@
             // pictureBox11
             // 
             pictureBox11.Image = Properties.Resources.x;
-            pictureBox11.Location = new Point(181, 76);
-            pictureBox11.Margin = new Padding(3, 2, 3, 2);
+            pictureBox11.Location = new Point(259, 127);
+            pictureBox11.Margin = new Padding(4, 3, 4, 3);
             pictureBox11.Name = "pictureBox11";
-            pictureBox11.Size = new Size(38, 31);
+            pictureBox11.Size = new Size(54, 52);
             pictureBox11.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox11.TabIndex = 44;
             pictureBox11.TabStop = false;
@@ -315,10 +285,10 @@
             // pictureBox9
             // 
             pictureBox9.Image = Properties.Resources.edit_2;
-            pictureBox9.Location = new Point(138, 76);
-            pictureBox9.Margin = new Padding(3, 2, 3, 2);
+            pictureBox9.Location = new Point(197, 127);
+            pictureBox9.Margin = new Padding(4, 3, 4, 3);
             pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(38, 31);
+            pictureBox9.Size = new Size(54, 52);
             pictureBox9.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox9.TabIndex = 43;
             pictureBox9.TabStop = false;
@@ -327,10 +297,10 @@
             // pictureBox8
             // 
             pictureBox8.Image = Properties.Resources.file_plus;
-            pictureBox8.Location = new Point(95, 76);
-            pictureBox8.Margin = new Padding(3, 2, 3, 2);
+            pictureBox8.Location = new Point(136, 127);
+            pictureBox8.Margin = new Padding(4, 3, 4, 3);
             pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(38, 31);
+            pictureBox8.Size = new Size(54, 52);
             pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox8.TabIndex = 42;
             pictureBox8.TabStop = false;
@@ -344,13 +314,14 @@
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column9, Column6, Column7, Column8 });
-            dataGridView1.Location = new Point(95, 129);
+            dataGridView1.Location = new Point(136, 215);
+            dataGridView1.Margin = new Padding(4, 5, 4, 5);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(921, 392);
+            dataGridView1.Size = new Size(1316, 653);
             dataGridView1.TabIndex = 49;
             // 
             // Column1
@@ -420,10 +391,10 @@
             // 
             pictureBox2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox2.Image = Properties.Resources.printer;
-            pictureBox2.Location = new Point(225, 76);
-            pictureBox2.Margin = new Padding(3, 2, 3, 2);
+            pictureBox2.Location = new Point(321, 127);
+            pictureBox2.Margin = new Padding(4, 3, 4, 3);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(47, 31);
+            pictureBox2.Size = new Size(67, 52);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 52;
             pictureBox2.TabStop = false;
@@ -435,20 +406,20 @@
             panel3.Controls.Add(label5);
             panel3.Controls.Add(label3);
             panel3.Controls.Add(comboBox2);
-            panel3.Location = new Point(466, 79);
-            panel3.Margin = new Padding(3, 2, 3, 2);
+            panel3.Location = new Point(666, 132);
+            panel3.Margin = new Padding(4, 3, 4, 3);
             panel3.Name = "panel3";
-            panel3.Size = new Size(495, 35);
+            panel3.Size = new Size(707, 58);
             panel3.TabIndex = 53;
             // 
             // comboBox1
             // 
             comboBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(340, 9);
-            comboBox1.Margin = new Padding(3, 2, 3, 2);
+            comboBox1.Location = new Point(486, 15);
+            comboBox1.Margin = new Padding(4, 3, 4, 3);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(124, 23);
+            comboBox1.Size = new Size(175, 33);
             comboBox1.TabIndex = 54;
             // 
             // label5
@@ -456,9 +427,10 @@
             label5.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label5.AutoSize = true;
             label5.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(236, 10);
+            label5.Location = new Point(337, 17);
+            label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
-            label5.Size = new Size(92, 18);
+            label5.Size = new Size(134, 26);
             label5.TabIndex = 52;
             label5.Text = "Ordenar por:";
             // 
@@ -467,9 +439,10 @@
             label3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label3.AutoSize = true;
             label3.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(0, 10);
+            label3.Location = new Point(0, 17);
+            label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(75, 18);
+            label3.Size = new Size(110, 26);
             label3.TabIndex = 53;
             label3.Text = "Filtrar por:";
             // 
@@ -477,17 +450,40 @@
             // 
             comboBox2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(86, 9);
-            comboBox2.Margin = new Padding(3, 2, 3, 2);
+            comboBox2.Location = new Point(123, 15);
+            comboBox2.Margin = new Padding(4, 3, 4, 3);
             comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(123, 23);
+            comboBox2.Size = new Size(174, 33);
             comboBox2.TabIndex = 55;
+            // 
+            // lblTipoEmpleado
+            // 
+            lblTipoEmpleado.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblTipoEmpleado.AutoSize = true;
+            lblTipoEmpleado.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTipoEmpleado.Location = new Point(1261, 62);
+            lblTipoEmpleado.Name = "lblTipoEmpleado";
+            lblTipoEmpleado.Size = new Size(96, 25);
+            lblTipoEmpleado.TabIndex = 21;
+            lblTipoEmpleado.Text = "Supervisor";
+            // 
+            // lblNombre
+            // 
+            lblNombre.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblNombre.AutoSize = true;
+            lblNombre.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblNombre.Location = new Point(1180, 20);
+            lblNombre.Name = "lblNombre";
+            lblNombre.Size = new Size(255, 32);
+            lblNombre.TabIndex = 22;
+            lblNombre.Text = "Bienvenido: Fulanito";
+            lblNombre.TextAlign = ContentAlignment.TopCenter;
             // 
             // GestionarPedidos
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1043, 567);
+            ClientSize = new Size(1490, 945);
             Controls.Add(panel3);
             Controls.Add(pictureBox2);
             Controls.Add(dataGridView1);
@@ -496,6 +492,7 @@
             Controls.Add(pictureBox8);
             Controls.Add(panel1);
             Controls.Add(panel7);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "GestionarPedidos";
             Text = "Pedidos";
             WindowState = FormWindowState.Maximized;
@@ -534,8 +531,6 @@
         private PictureBox pictureBox9;
         private PictureBox pictureBox8;
         private DataGridView dataGridView1;
-        private Label label4;
-        private Label label1;
         private PictureBox pictureBox2;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
@@ -551,5 +546,7 @@
         private Label label5;
         private Label label3;
         private ComboBox comboBox2;
+        private Label lblTipoEmpleado;
+        private Label lblNombre;
     }
 }

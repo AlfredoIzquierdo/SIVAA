@@ -102,13 +102,49 @@ namespace Pantallas_SIVAA.Pedidos
 
         private void GestionarPedidos_Load(object sender, EventArgs e)
         {
-            /*
-            dataGridView1.Rows.Clear();
-            List<Pedido> p = Producto.ListadoTotal();
-            foreach (Pedido x in p) { 
-                dataGridView1.Rows.Add(x.IDProveedor, x.);
+            switch (_pqt.Tipo.Trim())
+            {
+                case "Atencion":
+                    // Funciones activas: Citas e inventario
+                    lblTipoEmpleado.Text = _pqt.Tipo + " a clientes";
+                    lblNombre.Text = "Bienvenido: " + _pqt.Nombre + " " + _pqt.ApellidoPat;
+
+
+                    // Menu lateral
+                    btnCitas.Enabled = true;
+                    btnStock.Enabled = true;
+                    btnReportes.Enabled = false;
+                    btnPedidos.Enabled = false;
+                    btnVentas.Enabled = false;
+                    btnCobros.Enabled = false;
+                    break;
+                case "Vendedor":
+                    // Funciones activas: ventas, inventario y citas
+                    lblTipoEmpleado.Text = _pqt.Tipo;
+                    lblNombre.Text = "Bienvenido: " + _pqt.Nombre + " " + _pqt.ApellidoPat;
+
+
+                    //Menu lateral
+                    btnCitas.Enabled = true;
+                    btnStock.Enabled = true;
+                    btnReportes.Enabled = false;
+                    btnPedidos.Enabled = false;
+                    btnVentas.Enabled = true;
+                    btnCobros.Enabled = false;
+                    break;
+                // más casos...
+                case "Cajero":
+
+
+                    // El cajero no pasa por aqui, se va directo al apartado de caja
+
+                    break;
+                case "Supervisor":
+                    // Todo esta activado, es la vista de supervisor
+                    lblTipoEmpleado.Text = _pqt.Tipo;
+                    lblNombre.Text = "Bienvenido: " + _pqt.Nombre + " " + _pqt.ApellidoPat;
+                    break;
             }
-            */
         }
     }
 }

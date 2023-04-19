@@ -56,6 +56,8 @@
             pictureBox1 = new PictureBox();
             printDialog1 = new PrintDialog();
             dataGridView1 = new DataGridView();
+            lblTipoEmpleado = new Label();
+            lblNombre = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
             panel6.SuspendLayout();
@@ -309,6 +311,8 @@
             // 
             panel7.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel7.BackColor = Color.FromArgb(51, 58, 86);
+            panel7.Controls.Add(lblTipoEmpleado);
+            panel7.Controls.Add(lblNombre);
             panel7.Controls.Add(label11);
             panel7.Controls.Add(panel6);
             panel7.Controls.Add(label3);
@@ -412,6 +416,29 @@
             dataGridView1.CellClick += dataGridView1_CellClick;
             dataGridView1.CellDoubleClick += dataGridView1_CellDoubleClick;
             // 
+            // lblTipoEmpleado
+            // 
+            lblTipoEmpleado.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblTipoEmpleado.AutoSize = true;
+            lblTipoEmpleado.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTipoEmpleado.Location = new Point(1221, 51);
+            lblTipoEmpleado.Name = "lblTipoEmpleado";
+            lblTipoEmpleado.Size = new Size(96, 25);
+            lblTipoEmpleado.TabIndex = 25;
+            lblTipoEmpleado.Text = "Supervisor";
+            // 
+            // lblNombre
+            // 
+            lblNombre.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblNombre.AutoSize = true;
+            lblNombre.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblNombre.Location = new Point(1140, 9);
+            lblNombre.Name = "lblNombre";
+            lblNombre.Size = new Size(255, 32);
+            lblNombre.TabIndex = 26;
+            lblNombre.Text = "Bienvenido: Fulanito";
+            lblNombre.TextAlign = ContentAlignment.TopCenter;
+            // 
             // Inventario
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -469,5 +496,7 @@
         private PrintDialog printDialog1;
         private DataGridView dataGridView1;
         private Button btnConsultar;
+        private Label lblTipoEmpleado;
+        private Label lblNombre;
     }
 }
