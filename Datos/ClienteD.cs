@@ -20,7 +20,7 @@ namespace Datos
             {
                 //Abrir la conexión y crear el Query
                 Cnx.Open();
-                string CdSql = "INSERT INTO Cliente (IDCliente,Nombre,ApellidoPaterno,ApellidoMaterno,RFC,Correo,Telefono,NoExterior,Colonia,Ciudad,Estado) VALUES (@Cl,@Nm,@App,@Apm,@Rfc,@Cr,@Tl,@No,@Col,@Ci,@Es)";
+                string CdSql = "INSERT INTO Cliente (IDCliente,Nombre,ApellidoPaterno,ApellidoMaterno,RFC,Correo,Telefono,NoExterior,Colonia,Ciudad,Estado,EstadoCliente) VALUES (@Cl,@Nm,@App,@Apm,@Rfc,@Cr,@Tl,@No,@Col,@Ci,@Es,@EsC)";
                 using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))//SolicitA: la cadena de SQL y la conexeión
                 {
                     //Añadir los parámetros
@@ -35,6 +35,7 @@ namespace Datos
                     Cmd.Parameters.AddWithValue("@Col", Pqte.Colonia);
                     Cmd.Parameters.AddWithValue("@Ci", Pqte.Ciudad);
                     Cmd.Parameters.AddWithValue("@Es", Pqte.Estado);
+                    Cmd.Parameters.AddWithValue("@EsC", Pqte.EstadoCliente);
                     Cmd.ExecuteNonQuery();
                     //Borrar variable cmd de la memoria
                     Cmd.Dispose();
@@ -42,6 +43,22 @@ namespace Datos
                 //Cierre
                 Cnx.Close();
             }
+        }
+        public void EliminarDesaparecer(string CodPqt)
+        {
+            using (SqlConnection Cnx = new SqlConnection(CdCnx))
+            {
+                Cnx.Open();
+                string CdSql = "Update Cliente Set EstadoCliente='Inactivo' WHERE IDCliente=@Cl";
+                using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
+                {
+                    Cmd.Parameters.AddWithValue("@Cl", CodPqt);
+                    Cmd.ExecuteNonQuery();
+                    Cmd.Dispose();
+                }
+                Cnx.Close();
+            }
+
         }
         public List<Cliente> ListadoTotalEspecifico(string nom, string parametro)
         {
@@ -75,7 +92,8 @@ namespace Datos
                             NoExterior = Convert.ToString(Dr["NoExterior"]),
                             Colonia = Convert.ToString(Dr["Colonia"]),
                             Ciudad = Convert.ToString(Dr["Ciudad"]),
-                            Estado = Convert.ToString(Dr["Estado"])
+                            Estado = Convert.ToString(Dr["Estado"]),
+                            EstadoCliente = Convert.ToString(Dr["EstadoCliente"])
                         };
                         productos.Add(Pqte);
                     }
@@ -113,7 +131,9 @@ namespace Datos
                             NoExterior = Convert.ToString(Dr["NoExterior"]),
                             Colonia = Convert.ToString(Dr["Colonia"]),
                             Ciudad = Convert.ToString(Dr["Ciudad"]),
-                            Estado = Convert.ToString(Dr["Estado"])
+                            Estado = Convert.ToString(Dr["Estado"]),
+                            EstadoCliente = Convert.ToString(Dr["EstadoCliente"])
+
                         };
                         productos.Add(Pqte);
                     }
@@ -153,7 +173,8 @@ namespace Datos
                             NoExterior = Convert.ToString(Dr["NoExterior"]),
                             Colonia = Convert.ToString(Dr["Colonia"]),
                             Ciudad = Convert.ToString(Dr["Ciudad"]),
-                            Estado = Convert.ToString(Dr["Estado"])
+                            Estado = Convert.ToString(Dr["Estado"]),
+                            EstadoCliente = Convert.ToString(Dr["EstadoCliente"])
                         };
                         productos.Add(Pqte);
                     }
@@ -192,7 +213,8 @@ namespace Datos
                             NoExterior = Convert.ToString(Dr["NoExterior"]),
                             Colonia = Convert.ToString(Dr["Colonia"]),
                             Ciudad = Convert.ToString(Dr["Ciudad"]),
-                            Estado = Convert.ToString(Dr["Estado"])
+                            Estado = Convert.ToString(Dr["Estado"]),
+                            EstadoCliente = Convert.ToString(Dr["EstadoCliente"])
                         };
                         return Pqte;
                     }
@@ -232,7 +254,8 @@ namespace Datos
                             NoExterior = Convert.ToString(Dr["NoExterior"]),
                             Colonia = Convert.ToString(Dr["Colonia"]),
                             Ciudad = Convert.ToString(Dr["Ciudad"]),
-                            Estado = Convert.ToString(Dr["Estado"])
+                            Estado = Convert.ToString(Dr["Estado"]),
+                            EstadoCliente = Convert.ToString(Dr["EstadoCliente"])
                         };
                         return Pqte;
                     }
@@ -271,7 +294,8 @@ namespace Datos
                             NoExterior = Convert.ToString(Dr["NoExterior"]),
                             Colonia = Convert.ToString(Dr["Colonia"]),
                             Ciudad = Convert.ToString(Dr["Ciudad"]),
-                            Estado = Convert.ToString(Dr["Estado"])
+                            Estado = Convert.ToString(Dr["Estado"]),
+                            EstadoCliente = Convert.ToString(Dr["EstadoCliente"])
                         };
                         return Pqte;
                     }

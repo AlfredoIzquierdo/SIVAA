@@ -19,5 +19,7 @@ namespace Entidades
         public string Colonia { get; set; }
         public string Ciudad { get; set; }
         public string Estado { get; set; }
+        
+        public string EstadoCliente { get; set; }
     }
 }

@@ -72,7 +72,6 @@ namespace Pantallas_SIVAA
             }
             List<Empleado> x = empleadolog.ListadoAll();
             string i = "E" + (x.Count + 1).ToString();
-            empleado.IDEmpleado = i;
             empleado.Nombre = txtNombre.Text;
             empleado.ApellidoPat = txtApellidoP.Text;
             empleado.ApellidoMat = txtApellidoM.Text;

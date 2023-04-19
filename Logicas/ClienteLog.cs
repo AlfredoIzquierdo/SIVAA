@@ -42,6 +42,20 @@ namespace Logicas
             }
             return null;
         }
+        public void EliminarPorStatus(string CodPqte)
+        {
+            //Agregar esto
+            Mensaje.Clear();
+            if (CodPqte == null)
+                Mensaje.Append("Por favor proporcionar un Codigo valido");
+            if (Mensaje.Length == 0)
+            {
+                Pdto.EliminarDesaparecer(CodPqte);
+            }
+
+
+        }
+
         public List<Cliente> ListadoAll()
         {
             //Método que obtiene la lista dinámica de todos los registro que tiene mi tabla

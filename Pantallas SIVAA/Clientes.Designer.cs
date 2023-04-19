@@ -152,6 +152,7 @@
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(952, 372);
             dataGridView1.TabIndex = 59;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // Column1
             // 
@@ -239,6 +240,7 @@
             pictureBox11.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox11.TabIndex = 58;
             pictureBox11.TabStop = false;
+            pictureBox11.Click += pictureBox11_Click;
             // 
             // pictureBox9
             // 

@@ -27,25 +27,37 @@ namespace Pantallas_SIVAA
 
         private void button3_Click(object sender, EventArgs e)
         {
-            List<Cliente> x = clienteLog.ListadoAll();
-            string i = "C" + (x.Count+1).ToString();
-            cliente.IDCliente = i;
-            cliente.Nombre = txtNombreCliente.Text;
-            cliente.ApellidoPat = txtApellidoPat.Text;
-            cliente.ApellidoMat = txtApellidoMat.Text;
-            cliente.Correo = txtAgregarCorreo.Text;
-            cliente.Telefono = mtxtTelefono.Text;
-            cliente.RFC = txtRfc.Text;
-            cliente.NoExterior = txtNoExterior.Text;
-            cliente.Colonia = txtColonia.Text;
-            cliente.Estado = txtEstado.Text;
-            cliente.Ciudad = txtCiudad.Text;
+            if (String.IsNullOrEmpty(txtApellidoPat.Text) | String.IsNullOrEmpty(txtNombreCliente.Text) | String.IsNullOrEmpty(txtApellidoMat.Text) | String.IsNullOrEmpty(txtCiudad.Text) | String.IsNullOrEmpty(txtRfc.Text) || String.IsNullOrEmpty(mtxtTelefono.Text)
+              | String.IsNullOrEmpty(txtEstado.Text) | String.IsNullOrEmpty(txtColonia.Text) | String.IsNullOrEmpty(txtAgregarCorreo.Text) | String.IsNullOrEmpty(txtNoExterior.Text))
+            {
+                MessageBox.Show("Favor de llenar todos los campos");
+            }
+            else
+            {
 
-            clienteLog.Registrar(cliente);
+                List<Cliente> x = clienteLog.ListadoAll();
+                string i = "C" + (x.Count + 3).ToString();
+                cliente.IDCliente = i;
+                cliente.Nombre = txtNombreCliente.Text;
+                cliente.ApellidoPat = txtApellidoPat.Text;
+                cliente.ApellidoMat = txtApellidoMat.Text;
+                cliente.Correo = txtAgregarCorreo.Text;
+                cliente.Telefono = mtxtTelefono.Text;
+                cliente.RFC = txtRfc.Text;
+                cliente.NoExterior = txtNoExterior.Text;
+                cliente.Colonia = txtColonia.Text;
+                cliente.Estado = txtEstado.Text;
+                cliente.Ciudad = txtCiudad.Text;
+                cliente.EstadoCliente = "Activo";
 
-            this.Hide();
-            Clientes clientes = new Clientes();
-            clientes.Show();
+                clienteLog.Registrar(cliente);
+
+                this.Hide();
+                Clientes clientes = new Clientes();
+                clientes.Show();
+
+
+            }
         }
 
         private void pictureBox13_Click(object sender, EventArgs e)

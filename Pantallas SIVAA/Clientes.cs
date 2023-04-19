@@ -98,10 +98,16 @@ namespace Pantallas_SIVAA
         {
             dataGridView1.ClearSelection();
             List<Cliente> clie = cliente.ListadoAll();
-            listas = clie;
             foreach (Cliente x in clie)
             {
-                dataGridView1.Rows.Add(x.IDCliente, x.Nombre, x.ApellidoPat, x.ApellidoMat, x.RFC, x.Correo, x.Telefono, x.NoExterior, x.Colonia, x.Ciudad, x.Estado);
+                if (x.EstadoCliente == "Activo")
+                {
+
+                    dataGridView1.Rows.Add(x.IDCliente, x.Nombre, x.ApellidoPat, x.ApellidoMat, x.RFC, x.Correo, x.Telefono, x.NoExterior, x.Colonia, x.Ciudad, x.Estado);
+
+                }
+
+
             }
         }
 
@@ -149,6 +155,22 @@ namespace Pantallas_SIVAA
             }
         }
 
+        private void pictureBox11_Click(object sender, EventArgs e)
+        {
+            string id = null;
+            if (dataGridView1.SelectedRows.Count == 1)
+            {
+                id = dataGridView1[0, dataGridView1.SelectedRows[0].Index].Value.ToString();
+                cliente.EliminarPorStatus(id);
+                MessageBox.Show("Cliente Eliminado");
+                dataGridView1.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
+            }
+            else
+            {
+                MessageBox.Show("Favor de seleccionar un cliente");
+            }
+        }
 
+       
     }
 }
