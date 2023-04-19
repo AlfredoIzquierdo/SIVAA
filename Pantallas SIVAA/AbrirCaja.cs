@@ -11,6 +11,7 @@ using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Pantallas_SIVAA
 {
@@ -425,6 +426,36 @@ namespace Pantallas_SIVAA
                 btnAbrir.Enabled = true;
                 btnIrCaja.Enabled = false;
                 btnCerrar.Enabled = false;
+            }
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (textBox1.Text.Length > 5)
+            {
+                e.Handled = true;
+                //MessageBox.Show("Limite de caracteres exedido");
+                string te = textBox1.Text.Substring(0, 5).ToString();
+                textBox1.Text = te;
+            }
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (textBox2.Text.Length > 5)
+            {
+                e.Handled = true;
+                //MessageBox.Show("Limite de caracteres exedido");
+                string te = textBox2.Text.Substring(0, 5).ToString();
+                textBox2.Text = te;
             }
         }
     }

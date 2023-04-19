@@ -340,6 +340,7 @@ namespace Pantallas_SIVAA
                 MessageBox.Show("Favor de llenar los campos");
                 return;
             }
+
             List<Cliente> listado = PqteLog.ListadoPorNA(n, a);
             if (listado.Count > 0)
             {
@@ -655,6 +656,11 @@ namespace Pantallas_SIVAA
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            if (txtid.Text == "" || TXTCOT.Text == "" || txtVehiculo.Text == "")
+            {
+                MessageBox.Show("Favor de llenar los campos");
+                return;
+            }
             Venta pqt; ;
             VentaContado Deb;
             VentaCredito Deb2;
@@ -1420,6 +1426,11 @@ namespace Pantallas_SIVAA
 
         private void tabPage5_Enter(object sender, EventArgs e)
         {
+            if (txtid.Text == "")
+            {
+                MessageBox.Show("Favor de llenar los campos");
+                return;
+            }
             if (radioButton2.Checked)
             {
                 mostrarcotizaciones();
@@ -2080,6 +2091,6 @@ namespace Pantallas_SIVAA
             CalcularMensualidadAnualiad();
         }
 
-       
+
     }
 }

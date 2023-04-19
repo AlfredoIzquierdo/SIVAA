@@ -56,10 +56,15 @@ namespace Logicas
             //Método que obtiene la lista dinámica de todos los registro que tiene mi tabla
             return Pdto.ListadoTotalVentasEntregaCredito2();
         }
+        //public List<VentasEntrega> ListadoAllAbonosYAnualidad()
+        //{
+        //    //Método que obtiene la lista dinámica de todos los registro que tiene mi tabla
+        //    return Pdto.ListadoTotalVentasABONOEspecificos();
+        //}
         public List<VentasEntrega> ListadoAllVentasABONOCredito()
         {
             //Método que obtiene la lista dinámica de todos los registro que tiene mi tabla
-            return Pdto.ListadoTotalVentasABONOCredito();
+            return Pdto.ListadoTotalVentasporABONAR();
         }
         public List<VentasEntrega> Listaporcliente(string nom, string app)
         {
@@ -72,6 +77,51 @@ namespace Logicas
                 Pd = Pdto.ListadoTotalVentasEntregaPorClientes(nom, app);
                 if (Pd == null)
                     Mensaje.Append("nombre o apellido no encontrado en la B.D.");
+                return Pd;
+            }
+            return null;
+        }
+        public List<VentasEntrega> ListaporclienteENGANCHES(string nom, string app)
+        {
+            List<VentasEntrega> Pd = null;
+            Mensaje.Clear();
+            if (app == "0")
+                Mensaje.Append("Por favor proporcionar un nombre valida");
+            if (Mensaje.Length == 0)
+            {
+                Pd = Pdto.ListadoTotalVentasEnganchePorClientes(nom, app);
+                if (Pd == null)
+                    Mensaje.Append("nombre o apellido no encontrado en la B.D.");
+                return Pd;
+            }
+            return null;
+        }
+        public List<VentasEntrega> ListaporclienteABONOS(string nom, string app)
+        {
+            List<VentasEntrega> Pd = null;
+            Mensaje.Clear();
+            if (app == "0")
+                Mensaje.Append("Por favor proporcionar un nombre valida");
+            if (Mensaje.Length == 0)
+            {
+                Pd = Pdto.ListadoTotalDEVENTASPORABONOPorClientes(nom, app);
+                if (Pd == null)
+                    Mensaje.Append("nombre o apellido no encontrado en la B.D.");
+                return Pd;
+            }
+            return null;
+        }
+        public List<VentasEntrega> Listaporclientedeventasacreditoporabonar(string nom, string app)
+        {
+            List<VentasEntrega> Pd = null;
+            Mensaje.Clear();
+            if (app == "0")
+                Mensaje.Append("Por favor proporcionar un nombre valida");
+            if (Mensaje.Length == 0)
+            {
+                Pd = Pdto.ListadoTotalVentasABONOEspecificos(nom, app);
+                if (Pd == null)
+                    Mensaje.Append("cliente no encontrado en la B.D.");
                 return Pd;
             }
             return null;

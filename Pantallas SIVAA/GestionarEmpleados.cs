@@ -73,6 +73,7 @@ namespace Pantallas_SIVAA
             
             dataGridView1.ClearSelection();
             List<Empleado> clie = empleado.ListadoAll();
+            lista = clie;
             foreach (Empleado x in clie)
             {
                 if (x.EstadoEmpleado == "Activo")
@@ -81,8 +82,6 @@ namespace Pantallas_SIVAA
                     dataGridView1.Rows.Add(x.IDEmpleado, x.Nombre, x.ApellidoPat, x.ApellidoMat, x.Correo, x.Telefono, x.RFC, x.Contraseña, x.Tipo);
 
                 }
-
-
             }
         }
 
