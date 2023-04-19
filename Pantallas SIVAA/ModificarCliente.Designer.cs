@@ -185,6 +185,7 @@
             // 
             txtRFC.Location = new Point(375, 301);
             txtRFC.Margin = new Padding(2, 3, 2, 3);
+            txtRFC.MaxLength = 13;
             txtRFC.Name = "txtRFC";
             txtRFC.PlaceholderText = "RFC";
             txtRFC.Size = new Size(190, 26);
@@ -194,6 +195,7 @@
             // 
             txtNoExterior.Location = new Point(86, 357);
             txtNoExterior.Margin = new Padding(2, 3, 2, 3);
+            txtNoExterior.MaxLength = 3;
             txtNoExterior.Name = "txtNoExterior";
             txtNoExterior.PlaceholderText = "No. exterior";
             txtNoExterior.Size = new Size(199, 26);
