@@ -93,7 +93,7 @@
             btnCobros.ImageKey = "dollar-sign.png";
             btnCobros.ImageList = imageList2;
             btnCobros.Location = new Point(0, 302);
-            btnCobros.Margin = new Padding(2, 2, 2, 2);
+            btnCobros.Margin = new Padding(2);
             btnCobros.Name = "btnCobros";
             btnCobros.Size = new Size(75, 76);
             btnCobros.TabIndex = 10;
@@ -123,7 +123,7 @@
             btnVentas.ImageKey = "shopping-cart.png";
             btnVentas.ImageList = imageList2;
             btnVentas.Location = new Point(0, 226);
-            btnVentas.Margin = new Padding(2, 2, 2, 2);
+            btnVentas.Margin = new Padding(2);
             btnVentas.Name = "btnVentas";
             btnVentas.Size = new Size(75, 76);
             btnVentas.TabIndex = 9;
@@ -140,7 +140,7 @@
             btnCitas.ImageKey = "calendar.png";
             btnCitas.ImageList = imageList2;
             btnCitas.Location = new Point(0, 150);
-            btnCitas.Margin = new Padding(2, 2, 2, 2);
+            btnCitas.Margin = new Padding(2);
             btnCitas.Name = "btnCitas";
             btnCitas.Size = new Size(75, 76);
             btnCitas.TabIndex = 8;
@@ -157,7 +157,7 @@
             btnPedidos.ImageKey = "package.png";
             btnPedidos.ImageList = imageList2;
             btnPedidos.Location = new Point(0, -2);
-            btnPedidos.Margin = new Padding(2, 2, 2, 2);
+            btnPedidos.Margin = new Padding(2);
             btnPedidos.Name = "btnPedidos";
             btnPedidos.Size = new Size(75, 76);
             btnPedidos.TabIndex = 6;
@@ -175,7 +175,7 @@
             btnReportes.ImageKey = "bar-chart.png";
             btnReportes.ImageList = imageList2;
             btnReportes.Location = new Point(0, 378);
-            btnReportes.Margin = new Padding(2, 2, 2, 2);
+            btnReportes.Margin = new Padding(2);
             btnReportes.Name = "btnReportes";
             btnReportes.Size = new Size(75, 76);
             btnReportes.TabIndex = 11;
@@ -193,7 +193,7 @@
             btnStock.ImageKey = "book-open.png";
             btnStock.ImageList = imageList2;
             btnStock.Location = new Point(0, 74);
-            btnStock.Margin = new Padding(2, 2, 2, 2);
+            btnStock.Margin = new Padding(2);
             btnStock.Name = "btnStock";
             btnStock.Size = new Size(75, 76);
             btnStock.TabIndex = 7;
@@ -358,7 +358,7 @@
             panel6.Controls.Add(label8);
             panel6.Controls.Add(label9);
             panel6.Location = new Point(859, 0);
-            panel6.Margin = new Padding(2, 2, 2, 2);
+            panel6.Margin = new Padding(2);
             panel6.Name = "panel6";
             panel6.Size = new Size(207, 90);
             panel6.TabIndex = 24;
@@ -367,7 +367,7 @@
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(0, 20);
-            pictureBox1.Margin = new Padding(2, 2, 2, 2);
+            pictureBox1.Margin = new Padding(2);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(49, 54);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -517,7 +517,7 @@
             comboempleado.FormattingEnabled = true;
             comboempleado.Items.AddRange(new object[] { "Todos", "IDEmpleado", "Nombre", "ApellidoPaterno", "ApellidoMaterno", "Correo", "Teléfono", "RFC", "Contraseña", "Tipo" });
             comboempleado.Location = new Point(270, 8);
-            comboempleado.Margin = new Padding(2, 2, 2, 2);
+            comboempleado.Margin = new Padding(2);
             comboempleado.Name = "comboempleado";
             comboempleado.Size = new Size(146, 28);
             comboempleado.TabIndex = 103;
@@ -564,6 +564,7 @@
             Text = "NuevoEmpleado";
             WindowState = FormWindowState.Maximized;
             Load += GestionarEmpleados_Load;
+            VisibleChanged += GestionarEmpleados_VisibleChanged;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel1.ResumeLayout(false);
             panel7.ResumeLayout(false);

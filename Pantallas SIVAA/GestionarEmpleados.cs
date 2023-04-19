@@ -23,6 +23,7 @@ namespace Pantallas_SIVAA
         readonly EmpleadoLog empleado = new EmpleadoLog();
         string ID;
         Empleado _pqt;
+        string inicia="Activo";
         public GestionarEmpleados(Empleado pqt)
         {
             InitializeComponent();
@@ -53,19 +54,35 @@ namespace Pantallas_SIVAA
 
         private void pictureBox9_Click(object sender, EventArgs e)
         {
-            ModificarEmpleado modificarEmpleado = new ModificarEmpleado(ID, _pqt);
-            this.Hide();
-            modificarEmpleado.Show();
+            string id = null;
+            if (dataGridView1.SelectedRows.Count == 1)
+            {
+                id = dataGridView1[0, dataGridView1.SelectedRows[0].Index].Value.ToString();
+                ModificarEmpleado modificarEmpleado = new ModificarEmpleado(id);
+                this.Hide();
+                modificarEmpleado.Show();
+            }
+            else
+            {
+                MessageBox.Show("Favor de seleccionar un cliente");
+            }
         }
 
         private void GestionarEmpleados_Load(object sender, EventArgs e)
         {
-            dataGridView1.Rows.Clear();
-            List<Empleado> em = empleado.ListadoAll();
-            lista = em;
-            foreach (Empleado x in em)
+            
+            dataGridView1.ClearSelection();
+            List<Empleado> clie = empleado.ListadoAll();
+            foreach (Empleado x in clie)
             {
-                dataGridView1.Rows.Add(x.IDEmpleado, x.Nombre, x.ApellidoPat, x.ApellidoMat, x.Correo, x.Telefono, x.RFC, x.Contraseña, x.Tipo);
+                if (x.EstadoEmpleado == "Activo")
+                {
+
+                    dataGridView1.Rows.Add(x.IDEmpleado, x.Nombre, x.ApellidoPat, x.ApellidoMat, x.Correo, x.Telefono, x.RFC, x.Contraseña, x.Tipo);
+
+                }
+
+
             }
         }
 
@@ -126,11 +143,9 @@ namespace Pantallas_SIVAA
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridView1.CurrentCell.RowIndex >= 0)
+            if (e.RowIndex >= 0)
             {
-                int i = dataGridView1.CurrentCell.RowIndex;
-
-                ID = dataGridView1[0, i].Value.ToString();
+                dataGridView1.Rows[e.RowIndex].Selected = true;
             }
         }
 
@@ -140,17 +155,24 @@ namespace Pantallas_SIVAA
             int opcion = comboempleado.SelectedIndex;
             if (opcion == 0)
             {
+                //txtbusqueda.Enabled = false;
                 dataGridView1.Rows.Clear();
                 List<Empleado> em = empleado.ListadoAll();
                 lista = em;
                 foreach (Empleado x in em)
                 {
-                    dataGridView1.Rows.Add(x.IDEmpleado, x.Nombre, x.ApellidoPat, x.ApellidoMat, x.Correo, x.Telefono, x.RFC, x.Contraseña, x.Tipo);
+                    if (x.EstadoEmpleado == "Activo")
+                    {
+                        dataGridView1.Rows.Add(x.IDEmpleado, x.Nombre, x.ApellidoPat, x.ApellidoMat, x.Correo, x.Telefono, x.RFC, x.Contraseña, x.Tipo);
+                    }
+
                 }
                 return;
-            } else
+            }
+            else
             {
-                dataGridView1.ClearSelection();
+                if (txtbusqueda.Text != "")
+                    dataGridView1.ClearSelection();
                 pro = ListadoEspecifico(txtbusqueda.Text, comboempleado.Text);
                 lista = pro;
                 dataGridView1.Rows.Clear();
@@ -159,7 +181,7 @@ namespace Pantallas_SIVAA
                     dataGridView1.Rows.Add(x.IDEmpleado, x.Nombre, x.ApellidoPat, x.ApellidoMat, x.Correo, x.Telefono, x.RFC, x.Contraseña, x.Tipo);
                 }
             }
-            
+
         }
         public List<Empleado> ListadoEspecifico(string CodPqt, string opcion)
         {
@@ -201,5 +223,28 @@ namespace Pantallas_SIVAA
             return productos;
         }
 
+        private void GestionarEmpleados_VisibleChanged(object sender, EventArgs e)
+        {
+            if (inicia == "Activo")
+            {
+                inicia = "NoActivo";
+            }else
+            {
+                dataGridView1.Rows.Clear();
+                List<Empleado> clie = empleado.ListadoAll();
+                foreach (Empleado x in clie)
+                {
+                    if (x.EstadoEmpleado == "Activo")
+                    {
+
+                        dataGridView1.Rows.Add(x.IDEmpleado, x.Nombre, x.ApellidoPat, x.ApellidoMat, x.Correo, x.Telefono, x.RFC, x.Contraseña, x.Tipo);
+
+                    }
+
+
+                }
+            }
+            
+        }
     }
 }

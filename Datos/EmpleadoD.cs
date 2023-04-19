@@ -230,7 +230,7 @@ namespace Datos
                     Cmd.Parameters.AddWithValue("@Rfc", Pqte.RFC);
                     Cmd.Parameters.AddWithValue("@Co", Pqte.Contraseña);
                     Cmd.Parameters.AddWithValue("@Ti", Pqte.Tipo);
-                    Cmd.Parameters.AddWithValue("@EsE", Pqte.EstadoEmpleado);
+                    Cmd.Parameters.AddWithValue("@EsE", "Activo");
                     Cmd.ExecuteNonQuery();
                     //Borrar variable cmd de la memoria
                     Cmd.Dispose();

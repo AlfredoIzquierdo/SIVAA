@@ -19,11 +19,11 @@ namespace Pantallas_SIVAA
         EmpleadoLog empleadoLog = new EmpleadoLog();
         Empleado _pqt;
         Empleado emp = new Empleado();
-        public ModificarEmpleado(string idEmpleado, Empleado pqt)
+        public ModificarEmpleado(string idEmpleado)
         {
             InitializeComponent();
             id = idEmpleado;
-            this._pqt = pqt;
+           
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -128,17 +128,17 @@ namespace Pantallas_SIVAA
         }
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                e.Handled = true;
-            }
-            if (txtNombre.Text.Length > 9)
-            {
-                e.Handled = true;
-                //MessageBox.Show("Limite de caracteres exedido");
-                string te = txtNombre.Text.Substring(0, 9).ToString();
-                txtNombre.Text = te;
-            }
+        //    if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+        //    {
+        //        e.Handled = true;
+        //    }
+        //    if (txtNombre.Text.Length > 9)
+        //    {
+        //        e.Handled = true;
+        //        //MessageBox.Show("Limite de caracteres exedido");
+        //        string te = txtNombre.Text.Substring(0, 9).ToString();
+        //        txtNombre.Text = te;
+        //    }
         }
 
         private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
@@ -151,7 +151,7 @@ namespace Pantallas_SIVAA
 
         private void txtContraseña_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (txtContraseña.Text.Length > 9)
+            if (txtContraseña.Text.Length > 35)
             {
                 e.Handled = true;
                 //MessageBox.Show("Limite de caracteres exedido");
@@ -162,54 +162,32 @@ namespace Pantallas_SIVAA
 
         private void txtApellidoM_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                e.Handled = true;
-            }
-            if (txtApellidoM.Text.Length > 9)
-            {
-                e.Handled = true;
-                //MessageBox.Show("Limite de caracteres exedido");
-                string te = txtApellidoM.Text.Substring(0, 9).ToString();
-                txtApellidoM.Text = te;
-            }
+            //if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            //{
+            //    e.Handled = true;
+            //}
+            //if (txtApellidoM.Text.Length > 9)
+            //{
+            //    e.Handled = true;
+            //    //MessageBox.Show("Limite de caracteres exedido");
+            //    string te = txtApellidoM.Text.Substring(0, 9).ToString();
+            //    txtApellidoM.Text = te;
+            //}
         }
 
         private void txtApellidoP_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                e.Handled = true;
-            }
-            if (txtApellidoP.Text.Length > 9)
-            {
-                e.Handled = true;
-                //MessageBox.Show("Limite de caracteres exedido");
-                string te = txtApellidoP.Text.Substring(0, 9).ToString();
-                txtApellidoP.Text = te;
-            }
+           
         }
 
         private void txtCorreo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (txtCorreo.Text.Length > 9)
-            {
-                e.Handled = true;
-                //MessageBox.Show("Limite de caracteres exedido");
-                string te = txtCorreo.Text.Substring(0, 9).ToString();
-                txtCorreo.Text = te;
-            }
+            
         }
 
         private void txtRFC_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (txtRFC.Text.Length > 9)
-            {
-                e.Handled = true;
-                //MessageBox.Show("Limite de caracteres exedido");
-                string te = txtRFC.Text.Substring(0, 9).ToString();
-                txtRFC.Text = te;
-            }
+            
         }
     }
 }

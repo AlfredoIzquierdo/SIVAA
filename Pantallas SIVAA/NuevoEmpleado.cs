@@ -70,32 +70,38 @@ namespace Pantallas_SIVAA
             {
                 return;
             }
-            List<Empleado> x = empleadolog.ListadoAll();
-            string i = "E" + (x.Count + 1).ToString();
-            empleado.Nombre = txtNombre.Text;
-            empleado.ApellidoPat = txtApellidoP.Text;
-            empleado.ApellidoMat = txtApellidoM.Text;
-            empleado.Correo = txtCorreo.Text;
-            empleado.Telefono = txtTelefono.Text;
-            empleado.RFC = txtRFC.Text;
-            empleado.Contraseña = txtContraseña.Text;
-            if (cbPuesto.SelectedIndex==1)
-            {
-                empleado.Tipo = "Atencion";
-
-            }
             else
             {
-                empleado.Tipo = cbPuesto.Text;
+                List<Empleado> x = empleadolog.ListadoAll();
+                string i = "E" + (x.Count + 1).ToString();
+                empleado.IDEmpleado = i;
+                empleado.Nombre = txtNombre.Text;
+                empleado.ApellidoPat = txtApellidoP.Text;
+                empleado.ApellidoMat = txtApellidoM.Text;
+                empleado.Correo = txtCorreo.Text;
+                empleado.Telefono = txtTelefono.Text;
+                empleado.RFC = txtRFC.Text;
+                empleado.Contraseña = txtContraseña.Text;
+                empleado.EstadoEmpleado = "Activa";
+                if (cbPuesto.SelectedIndex == 1)
+                {
+                    empleado.Tipo = "Atencion";
+
+                }
+                else
+                {
+                    empleado.Tipo = cbPuesto.Text;
+                }
+
+                empleadolog.Registrar(empleado);
+                this.Hide();
+                Inicio.GestionarEmpleados.Show();
             }
 
-            empleadolog.Registrar(empleado);
-            this.Hide();
-            Inicio.GestionarEmpleados.Show();
         }
         public bool ValidarVacios()
         {
-            if (txtNombre.Text == "" || txtApellidoP.Text == "" || txtApellidoM.Text == "" || txtCorreo.Text == "" || txtContraseña.Text == "" || txtRFC.Text == "" || txtTelefono.Text == "")
+            if (txtNombre.Text == "" || txtApellidoP.Text == "" || txtApellidoM.Text == "" || txtCorreo.Text == "" || txtContraseña.Text == "" || txtRFC.Text == "" || txtTelefono.Text == "" || cbPuesto.Text == "Puesto")
             {
                 MessageBox.Show("Favor de llenar todos los campos");
                 return true;

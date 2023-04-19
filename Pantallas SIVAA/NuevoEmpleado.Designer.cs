@@ -88,7 +88,7 @@
             btnCobros.ImageKey = "dollar-sign.png";
             btnCobros.ImageList = imageList2;
             btnCobros.Location = new Point(0, 302);
-            btnCobros.Margin = new Padding(2, 2, 2, 2);
+            btnCobros.Margin = new Padding(2);
             btnCobros.Name = "btnCobros";
             btnCobros.Size = new Size(80, 76);
             btnCobros.TabIndex = 10;
@@ -119,7 +119,7 @@
             btnVentas.ImageKey = "shopping-cart.png";
             btnVentas.ImageList = imageList2;
             btnVentas.Location = new Point(0, 226);
-            btnVentas.Margin = new Padding(2, 2, 2, 2);
+            btnVentas.Margin = new Padding(2);
             btnVentas.Name = "btnVentas";
             btnVentas.Size = new Size(80, 76);
             btnVentas.TabIndex = 9;
@@ -137,7 +137,7 @@
             btnCitas.ImageKey = "calendar.png";
             btnCitas.ImageList = imageList2;
             btnCitas.Location = new Point(0, 150);
-            btnCitas.Margin = new Padding(2, 2, 2, 2);
+            btnCitas.Margin = new Padding(2);
             btnCitas.Name = "btnCitas";
             btnCitas.Size = new Size(80, 76);
             btnCitas.TabIndex = 8;
@@ -155,7 +155,7 @@
             btnReportes.ImageKey = "bar-chart.png";
             btnReportes.ImageList = imageList2;
             btnReportes.Location = new Point(0, 378);
-            btnReportes.Margin = new Padding(2, 2, 2, 2);
+            btnReportes.Margin = new Padding(2);
             btnReportes.Name = "btnReportes";
             btnReportes.Size = new Size(80, 76);
             btnReportes.TabIndex = 11;
@@ -210,7 +210,7 @@
             btnStock.ImageKey = "book-open.png";
             btnStock.ImageList = imageList2;
             btnStock.Location = new Point(0, 74);
-            btnStock.Margin = new Padding(2, 2, 2, 2);
+            btnStock.Margin = new Padding(2);
             btnStock.Name = "btnStock";
             btnStock.Size = new Size(80, 76);
             btnStock.TabIndex = 7;
@@ -228,7 +228,7 @@
             btnPedidos.ImageKey = "package.png";
             btnPedidos.ImageList = imageList2;
             btnPedidos.Location = new Point(0, -2);
-            btnPedidos.Margin = new Padding(2, 2, 2, 2);
+            btnPedidos.Margin = new Padding(2);
             btnPedidos.Name = "btnPedidos";
             btnPedidos.Size = new Size(80, 76);
             btnPedidos.TabIndex = 6;
@@ -309,7 +309,7 @@
             panel6.Controls.Add(label2);
             panel6.Controls.Add(label5);
             panel6.Location = new Point(541, 2);
-            panel6.Margin = new Padding(2, 2, 2, 2);
+            panel6.Margin = new Padding(2);
             panel6.Name = "panel6";
             panel6.Size = new Size(207, 90);
             panel6.TabIndex = 21;
@@ -318,7 +318,7 @@
             // 
             pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
             pictureBox8.Location = new Point(0, 20);
-            pictureBox8.Margin = new Padding(2, 2, 2, 2);
+            pictureBox8.Margin = new Padding(2);
             pictureBox8.Name = "pictureBox8";
             pictureBox8.Size = new Size(49, 54);
             pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
@@ -374,7 +374,7 @@
             // txtApellidoM
             // 
             txtApellidoM.Location = new Point(130, 142);
-            txtApellidoM.Margin = new Padding(2, 2, 2, 2);
+            txtApellidoM.Margin = new Padding(2);
             txtApellidoM.Name = "txtApellidoM";
             txtApellidoM.PlaceholderText = "Apellido Materno";
             txtApellidoM.Size = new Size(414, 26);
@@ -383,7 +383,7 @@
             // txtApellidoP
             // 
             txtApellidoP.Location = new Point(131, 100);
-            txtApellidoP.Margin = new Padding(2, 2, 2, 2);
+            txtApellidoP.Margin = new Padding(2);
             txtApellidoP.Name = "txtApellidoP";
             txtApellidoP.PlaceholderText = "Apellido Paterno";
             txtApellidoP.Size = new Size(414, 26);
@@ -396,7 +396,7 @@
             button3.Font = new Font("Century", 10F, FontStyle.Regular, GraphicsUnit.Point);
             button3.ForeColor = Color.White;
             button3.Location = new Point(369, 276);
-            button3.Margin = new Padding(2, 2, 2, 2);
+            button3.Margin = new Padding(2);
             button3.Name = "button3";
             button3.Size = new Size(176, 34);
             button3.TabIndex = 97;
@@ -409,7 +409,7 @@
             pictureBox3.BackColor = Color.FromArgb(232, 232, 232);
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
             pictureBox3.Location = new Point(88, 190);
-            pictureBox3.Margin = new Padding(2, 2, 2, 2);
+            pictureBox3.Margin = new Padding(2);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(34, 40);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
@@ -419,7 +419,7 @@
             // txtContraseña
             // 
             txtContraseña.Location = new Point(130, 318);
-            txtContraseña.Margin = new Padding(2, 2, 2, 2);
+            txtContraseña.Margin = new Padding(2);
             txtContraseña.Name = "txtContraseña";
             txtContraseña.PlaceholderText = "*************";
             txtContraseña.Size = new Size(190, 26);
@@ -440,7 +440,7 @@
             pictureBox15.BackColor = Color.FromArgb(232, 232, 232);
             pictureBox15.Image = (Image)resources.GetObject("pictureBox15.Image");
             pictureBox15.Location = new Point(87, 250);
-            pictureBox15.Margin = new Padding(2, 2, 2, 2);
+            pictureBox15.Margin = new Padding(2);
             pictureBox15.Name = "pictureBox15";
             pictureBox15.Size = new Size(34, 40);
             pictureBox15.SizeMode = PictureBoxSizeMode.Zoom;
@@ -462,7 +462,7 @@
             // txtNombre
             // 
             txtNombre.Location = new Point(131, 58);
-            txtNombre.Margin = new Padding(2, 2, 2, 2);
+            txtNombre.Margin = new Padding(2);
             txtNombre.Name = "txtNombre";
             txtNombre.PlaceholderText = "Nombre";
             txtNombre.Size = new Size(414, 26);
@@ -471,7 +471,8 @@
             // txtRFC
             // 
             txtRFC.Location = new Point(133, 380);
-            txtRFC.Margin = new Padding(2, 2, 2, 2);
+            txtRFC.Margin = new Padding(2);
+            txtRFC.MaxLength = 13;
             txtRFC.Name = "txtRFC";
             txtRFC.PlaceholderText = "RFC";
             txtRFC.Size = new Size(190, 26);
@@ -482,7 +483,7 @@
             pictureBox4.BackColor = Color.FromArgb(232, 232, 232);
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
             pictureBox4.Location = new Point(87, 428);
-            pictureBox4.Margin = new Padding(2, 2, 2, 2);
+            pictureBox4.Margin = new Padding(2);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(34, 40);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
@@ -492,7 +493,7 @@
             // txtCorreo
             // 
             txtCorreo.Location = new Point(133, 194);
-            txtCorreo.Margin = new Padding(2, 2, 2, 2);
+            txtCorreo.Margin = new Padding(2);
             txtCorreo.Name = "txtCorreo";
             txtCorreo.PlaceholderText = "Agregar correo";
             txtCorreo.Size = new Size(413, 26);
@@ -503,7 +504,7 @@
             pictureBox7.BackColor = Color.FromArgb(232, 232, 232);
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
             pictureBox7.Location = new Point(87, 372);
-            pictureBox7.Margin = new Padding(2, 2, 2, 2);
+            pictureBox7.Margin = new Padding(2);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(34, 40);
             pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
@@ -515,7 +516,7 @@
             pictureBox5.BackColor = Color.FromArgb(232, 232, 232);
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
             pictureBox5.Location = new Point(88, 54);
-            pictureBox5.Margin = new Padding(2, 2, 2, 2);
+            pictureBox5.Margin = new Padding(2);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(34, 40);
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
@@ -527,7 +528,7 @@
             pictureBox6.BackColor = Color.FromArgb(232, 232, 232);
             pictureBox6.Image = Properties.Resources.Can;
             pictureBox6.Location = new Point(87, 314);
-            pictureBox6.Margin = new Padding(2, 2, 2, 2);
+            pictureBox6.Margin = new Padding(2);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(34, 40);
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
