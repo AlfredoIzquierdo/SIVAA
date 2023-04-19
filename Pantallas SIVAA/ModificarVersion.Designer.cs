@@ -28,1582 +28,1460 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModificarVersion));
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnReportes = new System.Windows.Forms.Button();
-            this.imageList2 = new System.Windows.Forms.ImageList(this.components);
-            this.btnCobros = new System.Windows.Forms.Button();
-            this.btnVentas = new System.Windows.Forms.Button();
-            this.btnCitas = new System.Windows.Forms.Button();
-            this.btnStock = new System.Windows.Forms.Button();
-            this.btnPedidos = new System.Windows.Forms.Button();
-            this.cbSuspensionD = new System.Windows.Forms.ComboBox();
-            this.cbSuspensionT = new System.Windows.Forms.ComboBox();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.cbFrenosD = new System.Windows.Forms.ComboBox();
-            this.cbFrenosT = new System.Windows.Forms.ComboBox();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.rbEspejosANo = new System.Windows.Forms.RadioButton();
-            this.rbEspejosASi = new System.Windows.Forms.RadioButton();
-            this.label29 = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.rbEspejosDirNo = new System.Windows.Forms.RadioButton();
-            this.rbEspejosDirSi = new System.Windows.Forms.RadioButton();
-            this.label28 = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.rbAcAutNo = new System.Windows.Forms.RadioButton();
-            this.rbAcAutSi = new System.Windows.Forms.RadioButton();
-            this.label27 = new System.Windows.Forms.Label();
-            this.cbEngranajes = new System.Windows.Forms.ComboBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.cbPuertas = new System.Windows.Forms.ComboBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.cbTransmision = new System.Windows.Forms.ComboBox();
-            this.cbTipo = new System.Windows.Forms.ComboBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.rbTomaNo = new System.Windows.Forms.RadioButton();
-            this.rbTomaSi = new System.Windows.Forms.RadioButton();
-            this.label21 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.rbAudioNo = new System.Windows.Forms.RadioButton();
-            this.rbAudioSi = new System.Windows.Forms.RadioButton();
-            this.label22 = new System.Windows.Forms.Label();
-            this.txtAltura = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.txtAnchura = new System.Windows.Forms.TextBox();
-            this.label34 = new System.Windows.Forms.Label();
-            this.txtDistancia = new System.Windows.Forms.TextBox();
-            this.label35 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.rbLEDNo = new System.Windows.Forms.RadioButton();
-            this.rbLEDSi = new System.Windows.Forms.RadioButton();
-            this.label36 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.rbFarosHalNo = new System.Windows.Forms.RadioButton();
-            this.rbFarosHalSi = new System.Windows.Forms.RadioButton();
-            this.label37 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.rbCamaraNo = new System.Windows.Forms.RadioButton();
-            this.rbCamaraSi = new System.Windows.Forms.RadioButton();
-            this.txtCapacidad = new System.Windows.Forms.TextBox();
-            this.label38 = new System.Windows.Forms.Label();
-            this.cbLlantas = new System.Windows.Forms.ComboBox();
-            this.cbRines = new System.Windows.Forms.ComboBox();
-            this.cbCilindros = new System.Windows.Forms.ComboBox();
-            this.cbCombustible = new System.Windows.Forms.ComboBox();
-            this.cbAsientos = new System.Windows.Forms.ComboBox();
-            this.cbVehiculo = new System.Windows.Forms.ComboBox();
-            this.btnAgregarVersion = new System.Windows.Forms.Button();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
-            this.txtVersion = new System.Windows.Forms.TextBox();
-            this.txtRendimiento = new System.Windows.Forms.TextBox();
-            this.label49 = new System.Windows.Forms.Label();
-            this.txtCosto = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.rbPantallaNo = new System.Windows.Forms.RadioButton();
-            this.rbPantallaSi = new System.Windows.Forms.RadioButton();
-            this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.panel11.SuspendLayout();
-            this.panel10.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.SuspendLayout();
+            panel7 = new Panel();
+            label25 = new Label();
+            label16 = new Label();
+            label26 = new Label();
+            label14 = new Label();
+            label17 = new Label();
+            label15 = new Label();
+            label12 = new Label();
+            label13 = new Label();
+            label10 = new Label();
+            label11 = new Label();
+            label8 = new Label();
+            label9 = new Label();
+            label5 = new Label();
+            label2 = new Label();
+            label6 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            label1 = new Label();
+            label7 = new Label();
+            pictureBox13 = new PictureBox();
+            pictureBox10 = new PictureBox();
+            panel1 = new Panel();
+            btnReportes = new Button();
+            imageList2 = new ImageList(components);
+            btnCobros = new Button();
+            btnVentas = new Button();
+            btnCitas = new Button();
+            btnStock = new Button();
+            btnPedidos = new Button();
+            cbSuspensionD = new ComboBox();
+            cbSuspensionT = new ComboBox();
+            label32 = new Label();
+            label33 = new Label();
+            cbFrenosD = new ComboBox();
+            cbFrenosT = new ComboBox();
+            label30 = new Label();
+            label31 = new Label();
+            panel11 = new Panel();
+            rbEspejosANo = new RadioButton();
+            rbEspejosASi = new RadioButton();
+            label29 = new Label();
+            panel10 = new Panel();
+            rbEspejosDirNo = new RadioButton();
+            rbEspejosDirSi = new RadioButton();
+            label28 = new Label();
+            panel9 = new Panel();
+            rbAcAutNo = new RadioButton();
+            rbAcAutSi = new RadioButton();
+            label27 = new Label();
+            cbEngranajes = new ComboBox();
+            label18 = new Label();
+            cbPuertas = new ComboBox();
+            label19 = new Label();
+            cbTransmision = new ComboBox();
+            cbTipo = new ComboBox();
+            label23 = new Label();
+            label20 = new Label();
+            panel8 = new Panel();
+            rbTomaNo = new RadioButton();
+            rbTomaSi = new RadioButton();
+            label21 = new Label();
+            panel6 = new Panel();
+            rbAudioNo = new RadioButton();
+            rbAudioSi = new RadioButton();
+            label22 = new Label();
+            txtAltura = new TextBox();
+            label24 = new Label();
+            txtAnchura = new TextBox();
+            label34 = new Label();
+            txtDistancia = new TextBox();
+            label35 = new Label();
+            panel5 = new Panel();
+            rbLEDNo = new RadioButton();
+            rbLEDSi = new RadioButton();
+            label36 = new Label();
+            panel4 = new Panel();
+            rbFarosHalNo = new RadioButton();
+            rbFarosHalSi = new RadioButton();
+            label37 = new Label();
+            panel2 = new Panel();
+            rbCamaraNo = new RadioButton();
+            rbCamaraSi = new RadioButton();
+            txtCapacidad = new TextBox();
+            label38 = new Label();
+            cbLlantas = new ComboBox();
+            cbRines = new ComboBox();
+            cbCilindros = new ComboBox();
+            cbCombustible = new ComboBox();
+            cbAsientos = new ComboBox();
+            cbVehiculo = new ComboBox();
+            btnAgregarVersion = new Button();
+            label39 = new Label();
+            label40 = new Label();
+            label41 = new Label();
+            label42 = new Label();
+            label43 = new Label();
+            label44 = new Label();
+            label45 = new Label();
+            label46 = new Label();
+            label47 = new Label();
+            label48 = new Label();
+            txtVersion = new TextBox();
+            txtRendimiento = new TextBox();
+            label49 = new Label();
+            txtCosto = new TextBox();
+            panel3 = new Panel();
+            rbPantallaNo = new RadioButton();
+            rbPantallaSi = new RadioButton();
+            panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
+            panel1.SuspendLayout();
+            panel11.SuspendLayout();
+            panel10.SuspendLayout();
+            panel9.SuspendLayout();
+            panel8.SuspendLayout();
+            panel6.SuspendLayout();
+            panel5.SuspendLayout();
+            panel4.SuspendLayout();
+            panel2.SuspendLayout();
+            panel3.SuspendLayout();
+            SuspendLayout();
             // 
             // panel7
             // 
-            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(58)))), ((int)(((byte)(86)))));
-            this.panel7.Controls.Add(this.label25);
-            this.panel7.Controls.Add(this.label16);
-            this.panel7.Controls.Add(this.label26);
-            this.panel7.Controls.Add(this.label14);
-            this.panel7.Controls.Add(this.label17);
-            this.panel7.Controls.Add(this.label15);
-            this.panel7.Controls.Add(this.label12);
-            this.panel7.Controls.Add(this.label13);
-            this.panel7.Controls.Add(this.label10);
-            this.panel7.Controls.Add(this.label11);
-            this.panel7.Controls.Add(this.label8);
-            this.panel7.Controls.Add(this.label9);
-            this.panel7.Controls.Add(this.label5);
-            this.panel7.Controls.Add(this.label2);
-            this.panel7.Controls.Add(this.label6);
-            this.panel7.Controls.Add(this.label3);
-            this.panel7.Controls.Add(this.label4);
-            this.panel7.Controls.Add(this.label1);
-            this.panel7.Controls.Add(this.label7);
-            this.panel7.Controls.Add(this.pictureBox13);
-            this.panel7.Controls.Add(this.pictureBox10);
-            this.panel7.ForeColor = System.Drawing.Color.White;
-            this.panel7.Location = new System.Drawing.Point(0, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(967, 57);
-            this.panel7.TabIndex = 50;
+            panel7.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            panel7.BackColor = Color.FromArgb(51, 58, 86);
+            panel7.Controls.Add(label25);
+            panel7.Controls.Add(label16);
+            panel7.Controls.Add(label26);
+            panel7.Controls.Add(label14);
+            panel7.Controls.Add(label17);
+            panel7.Controls.Add(label15);
+            panel7.Controls.Add(label12);
+            panel7.Controls.Add(label13);
+            panel7.Controls.Add(label10);
+            panel7.Controls.Add(label11);
+            panel7.Controls.Add(label8);
+            panel7.Controls.Add(label9);
+            panel7.Controls.Add(label5);
+            panel7.Controls.Add(label2);
+            panel7.Controls.Add(label6);
+            panel7.Controls.Add(label3);
+            panel7.Controls.Add(label4);
+            panel7.Controls.Add(label1);
+            panel7.Controls.Add(label7);
+            panel7.Controls.Add(pictureBox13);
+            panel7.Controls.Add(pictureBox10);
+            panel7.ForeColor = Color.White;
+            panel7.Location = new Point(0, 0);
+            panel7.Margin = new Padding(3, 4, 3, 4);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(1105, 76);
+            panel7.TabIndex = 50;
             // 
             // label25
             // 
-            this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label25.Location = new System.Drawing.Point(829, 34);
-            this.label25.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(62, 15);
-            this.label25.TabIndex = 133;
-            this.label25.Text = "Supervisor";
+            label25.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label25.AutoSize = true;
+            label25.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label25.Location = new Point(947, 45);
+            label25.Margin = new Padding(1, 0, 1, 0);
+            label25.Name = "label25";
+            label25.Size = new Size(78, 20);
+            label25.TabIndex = 133;
+            label25.Text = "Supervisor";
             // 
             // label16
             // 
-            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label16.Location = new System.Drawing.Point(1438, 34);
-            this.label16.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(62, 15);
-            this.label16.TabIndex = 60;
-            this.label16.Text = "Supervisor";
+            label16.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label16.AutoSize = true;
+            label16.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label16.Location = new Point(1643, 45);
+            label16.Margin = new Padding(1, 0, 1, 0);
+            label16.Name = "label16";
+            label16.Size = new Size(78, 20);
+            label16.TabIndex = 60;
+            label16.Text = "Supervisor";
             // 
             // label26
             // 
-            this.label26.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label26.Location = new System.Drawing.Point(772, 15);
-            this.label26.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(172, 21);
-            this.label26.TabIndex = 134;
-            this.label26.Text = "Bienvenido: Fulanito";
-            this.label26.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            label26.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label26.AutoSize = true;
+            label26.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label26.Location = new Point(882, 20);
+            label26.Margin = new Padding(1, 0, 1, 0);
+            label26.Name = "label26";
+            label26.Size = new Size(217, 28);
+            label26.TabIndex = 134;
+            label26.Text = "Bienvenido: Fulanito";
+            label26.TextAlign = ContentAlignment.TopCenter;
             // 
             // label14
             // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label14.Location = new System.Drawing.Point(2038, 34);
-            this.label14.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(62, 15);
-            this.label14.TabIndex = 58;
-            this.label14.Text = "Supervisor";
+            label14.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label14.AutoSize = true;
+            label14.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label14.Location = new Point(2329, 45);
+            label14.Margin = new Padding(1, 0, 1, 0);
+            label14.Name = "label14";
+            label14.Size = new Size(78, 20);
+            label14.TabIndex = 58;
+            label14.Text = "Supervisor";
             // 
             // label17
             // 
-            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label17.Location = new System.Drawing.Point(1372, 15);
-            this.label17.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(172, 21);
-            this.label17.TabIndex = 61;
-            this.label17.Text = "Bienvenido: Fulanito";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            label17.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label17.AutoSize = true;
+            label17.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label17.Location = new Point(1568, 20);
+            label17.Margin = new Padding(1, 0, 1, 0);
+            label17.Name = "label17";
+            label17.Size = new Size(217, 28);
+            label17.TabIndex = 61;
+            label17.Text = "Bienvenido: Fulanito";
+            label17.TextAlign = ContentAlignment.TopCenter;
             // 
             // label15
             // 
-            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label15.Location = new System.Drawing.Point(1972, 15);
-            this.label15.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(172, 21);
-            this.label15.TabIndex = 59;
-            this.label15.Text = "Bienvenido: Fulanito";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            label15.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label15.AutoSize = true;
+            label15.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label15.Location = new Point(2254, 20);
+            label15.Margin = new Padding(1, 0, 1, 0);
+            label15.Name = "label15";
+            label15.Size = new Size(217, 28);
+            label15.TabIndex = 59;
+            label15.Text = "Bienvenido: Fulanito";
+            label15.TextAlign = ContentAlignment.TopCenter;
             // 
             // label12
             // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(2726, 34);
-            this.label12.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(62, 15);
-            this.label12.TabIndex = 56;
-            this.label12.Text = "Supervisor";
+            label12.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label12.Location = new Point(3115, 45);
+            label12.Margin = new Padding(1, 0, 1, 0);
+            label12.Name = "label12";
+            label12.Size = new Size(78, 20);
+            label12.TabIndex = 56;
+            label12.Text = "Supervisor";
             // 
             // label13
             // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(2660, 15);
-            this.label13.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(172, 21);
-            this.label13.TabIndex = 57;
-            this.label13.Text = "Bienvenido: Fulanito";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            label13.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label13.AutoSize = true;
+            label13.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label13.Location = new Point(3040, 20);
+            label13.Margin = new Padding(1, 0, 1, 0);
+            label13.Name = "label13";
+            label13.Size = new Size(217, 28);
+            label13.TabIndex = 57;
+            label13.Text = "Bienvenido: Fulanito";
+            label13.TextAlign = ContentAlignment.TopCenter;
             // 
             // label10
             // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(3401, 32);
-            this.label10.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(62, 15);
-            this.label10.TabIndex = 54;
-            this.label10.Text = "Supervisor";
+            label10.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label10.Location = new Point(3887, 43);
+            label10.Margin = new Padding(1, 0, 1, 0);
+            label10.Name = "label10";
+            label10.Size = new Size(78, 20);
+            label10.TabIndex = 54;
+            label10.Text = "Supervisor";
             // 
             // label11
             // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(3335, 13);
-            this.label11.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(172, 21);
-            this.label11.TabIndex = 55;
-            this.label11.Text = "Bienvenido: Fulanito";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            label11.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label11.Location = new Point(3811, 17);
+            label11.Margin = new Padding(1, 0, 1, 0);
+            label11.Name = "label11";
+            label11.Size = new Size(217, 28);
+            label11.TabIndex = 55;
+            label11.Text = "Bienvenido: Fulanito";
+            label11.TextAlign = ContentAlignment.TopCenter;
             // 
             // label8
             // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(4098, 34);
-            this.label8.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(62, 15);
-            this.label8.TabIndex = 51;
-            this.label8.Text = "Supervisor";
+            label8.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label8.Location = new Point(4683, 45);
+            label8.Margin = new Padding(1, 0, 1, 0);
+            label8.Name = "label8";
+            label8.Size = new Size(78, 20);
+            label8.TabIndex = 51;
+            label8.Text = "Supervisor";
             // 
             // label9
             // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(4032, 15);
-            this.label9.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(172, 21);
-            this.label9.TabIndex = 52;
-            this.label9.Text = "Bienvenido: Fulanito";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            label9.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label9.Location = new Point(4608, 20);
+            label9.Margin = new Padding(1, 0, 1, 0);
+            label9.Name = "label9";
+            label9.Size = new Size(217, 28);
+            label9.TabIndex = 52;
+            label9.Text = "Bienvenido: Fulanito";
+            label9.TextAlign = ContentAlignment.TopCenter;
             // 
             // label5
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(4785, 34);
-            this.label5.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 15);
-            this.label5.TabIndex = 49;
-            this.label5.Text = "Supervisor";
+            label5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(5469, 45);
+            label5.Margin = new Padding(1, 0, 1, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(78, 20);
+            label5.TabIndex = 49;
+            label5.Text = "Supervisor";
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(356, 13);
-            this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(199, 32);
-            this.label2.TabIndex = 49;
-            this.label2.Text = "Modificar version";
+            label2.Anchor = AnchorStyles.Top;
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(407, 17);
+            label2.Margin = new Padding(1, 0, 1, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(246, 41);
+            label2.TabIndex = 49;
+            label2.Text = "Modificar version";
             // 
             // label6
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(4719, 15);
-            this.label6.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(172, 21);
-            this.label6.TabIndex = 50;
-            this.label6.Text = "Bienvenido: Fulanito";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            label6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.Location = new Point(5393, 20);
+            label6.Margin = new Padding(1, 0, 1, 0);
+            label6.Name = "label6";
+            label6.Size = new Size(217, 28);
+            label6.TabIndex = 50;
+            label6.Text = "Bienvenido: Fulanito";
+            label6.TextAlign = ContentAlignment.TopCenter;
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(5235, 11);
-            this.label3.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(183, 32);
-            this.label3.TabIndex = 19;
-            this.label3.Text = "Gestión de citas";
+            label3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(5983, 15);
+            label3.Margin = new Padding(1, 0, 1, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(229, 41);
+            label3.TabIndex = 19;
+            label3.Text = "Gestión de citas";
             // 
             // label4
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(5607, 31);
-            this.label4.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 15);
-            this.label4.TabIndex = 17;
-            this.label4.Text = "Supervisor";
+            label4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(6408, 41);
+            label4.Margin = new Padding(1, 0, 1, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(78, 20);
+            label4.TabIndex = 17;
+            label4.Text = "Supervisor";
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(5607, 11);
-            this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(172, 21);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Bienvenido: Fulanito";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(6408, 15);
+            label1.Margin = new Padding(1, 0, 1, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(217, 28);
+            label1.TabIndex = 18;
+            label1.Text = "Bienvenido: Fulanito";
+            label1.TextAlign = ContentAlignment.TopCenter;
             // 
             // label7
             // 
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(107, 15);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(80, 27);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "SIVAA";
+            label7.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.Location = new Point(122, 20);
+            label7.Name = "label7";
+            label7.Size = new Size(91, 36);
+            label7.TabIndex = 16;
+            label7.Text = "SIVAA";
             // 
             // pictureBox13
             // 
-            this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
-            this.pictureBox13.Location = new System.Drawing.Point(15, 0);
-            this.pictureBox13.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(46, 57);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox13.TabIndex = 2;
-            this.pictureBox13.TabStop = false;
+            pictureBox13.Image = (Image)resources.GetObject("pictureBox13.Image");
+            pictureBox13.Location = new Point(17, 0);
+            pictureBox13.Margin = new Padding(1, 3, 1, 3);
+            pictureBox13.Name = "pictureBox13";
+            pictureBox13.Size = new Size(53, 76);
+            pictureBox13.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox13.TabIndex = 2;
+            pictureBox13.TabStop = false;
             // 
             // pictureBox10
             // 
-            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(63, 0);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(46, 57);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox10.TabIndex = 2;
-            this.pictureBox10.TabStop = false;
+            pictureBox10.Image = (Image)resources.GetObject("pictureBox10.Image");
+            pictureBox10.Location = new Point(72, 0);
+            pictureBox10.Margin = new Padding(1, 3, 1, 3);
+            pictureBox10.Name = "pictureBox10";
+            pictureBox10.Size = new Size(53, 76);
+            pictureBox10.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox10.TabIndex = 2;
+            pictureBox10.TabStop = false;
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(101)))), ((int)(((byte)(143)))));
-            this.panel1.Controls.Add(this.btnReportes);
-            this.panel1.Controls.Add(this.btnCobros);
-            this.panel1.Controls.Add(this.btnVentas);
-            this.panel1.Controls.Add(this.btnCitas);
-            this.panel1.Controls.Add(this.btnStock);
-            this.panel1.Controls.Add(this.btnPedidos);
-            this.panel1.Location = new System.Drawing.Point(0, 57);
-            this.panel1.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(66, 628);
-            this.panel1.TabIndex = 52;
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            panel1.BackColor = Color.FromArgb(82, 101, 143);
+            panel1.Controls.Add(btnReportes);
+            panel1.Controls.Add(btnCobros);
+            panel1.Controls.Add(btnVentas);
+            panel1.Controls.Add(btnCitas);
+            panel1.Controls.Add(btnStock);
+            panel1.Controls.Add(btnPedidos);
+            panel1.Location = new Point(0, 76);
+            panel1.Margin = new Padding(1, 3, 1, 3);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(75, 837);
+            panel1.TabIndex = 52;
             // 
             // btnReportes
             // 
-            this.btnReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(101)))), ((int)(((byte)(143)))));
-            this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportes.ForeColor = System.Drawing.Color.White;
-            this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnReportes.ImageKey = "bar-chart.png";
-            this.btnReportes.ImageList = this.imageList2;
-            this.btnReportes.Location = new System.Drawing.Point(-1, 304);
-            this.btnReportes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnReportes.Name = "btnReportes";
-            this.btnReportes.Size = new System.Drawing.Size(66, 57);
-            this.btnReportes.TabIndex = 11;
-            this.btnReportes.Text = "Reportes";
-            this.btnReportes.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnReportes.UseVisualStyleBackColor = false;
+            btnReportes.BackColor = Color.FromArgb(82, 101, 143);
+            btnReportes.FlatStyle = FlatStyle.Flat;
+            btnReportes.ForeColor = Color.White;
+            btnReportes.ImageAlign = ContentAlignment.TopCenter;
+            btnReportes.ImageKey = "bar-chart.png";
+            btnReportes.ImageList = imageList2;
+            btnReportes.Location = new Point(-1, 405);
+            btnReportes.Margin = new Padding(2, 3, 2, 3);
+            btnReportes.Name = "btnReportes";
+            btnReportes.Size = new Size(75, 76);
+            btnReportes.TabIndex = 11;
+            btnReportes.Text = "Reportes";
+            btnReportes.TextAlign = ContentAlignment.BottomCenter;
+            btnReportes.TextImageRelation = TextImageRelation.ImageAboveText;
+            btnReportes.UseVisualStyleBackColor = false;
             // 
             // imageList2
             // 
-            this.imageList2.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList2.ImageStream")));
-            this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList2.Images.SetKeyName(0, "archive.png");
-            this.imageList2.Images.SetKeyName(1, "bar-chart.png");
-            this.imageList2.Images.SetKeyName(2, "book-open.png");
-            this.imageList2.Images.SetKeyName(3, "calendar.png");
-            this.imageList2.Images.SetKeyName(4, "dollar-sign.png");
-            this.imageList2.Images.SetKeyName(5, "package.png");
-            this.imageList2.Images.SetKeyName(6, "shopping-cart.png");
+            imageList2.ColorDepth = ColorDepth.Depth8Bit;
+            imageList2.ImageStream = (ImageListStreamer)resources.GetObject("imageList2.ImageStream");
+            imageList2.TransparentColor = Color.Transparent;
+            imageList2.Images.SetKeyName(0, "archive.png");
+            imageList2.Images.SetKeyName(1, "bar-chart.png");
+            imageList2.Images.SetKeyName(2, "book-open.png");
+            imageList2.Images.SetKeyName(3, "calendar.png");
+            imageList2.Images.SetKeyName(4, "dollar-sign.png");
+            imageList2.Images.SetKeyName(5, "package.png");
+            imageList2.Images.SetKeyName(6, "shopping-cart.png");
             // 
             // btnCobros
             // 
-            this.btnCobros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(101)))), ((int)(((byte)(143)))));
-            this.btnCobros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCobros.ForeColor = System.Drawing.Color.White;
-            this.btnCobros.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCobros.ImageKey = "dollar-sign.png";
-            this.btnCobros.ImageList = this.imageList2;
-            this.btnCobros.Location = new System.Drawing.Point(-1, 248);
-            this.btnCobros.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnCobros.Name = "btnCobros";
-            this.btnCobros.Size = new System.Drawing.Size(66, 57);
-            this.btnCobros.TabIndex = 10;
-            this.btnCobros.Text = "Cobros";
-            this.btnCobros.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnCobros.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnCobros.UseVisualStyleBackColor = false;
+            btnCobros.BackColor = Color.FromArgb(82, 101, 143);
+            btnCobros.FlatStyle = FlatStyle.Flat;
+            btnCobros.ForeColor = Color.White;
+            btnCobros.ImageAlign = ContentAlignment.TopCenter;
+            btnCobros.ImageKey = "dollar-sign.png";
+            btnCobros.ImageList = imageList2;
+            btnCobros.Location = new Point(-1, 331);
+            btnCobros.Margin = new Padding(2, 3, 2, 3);
+            btnCobros.Name = "btnCobros";
+            btnCobros.Size = new Size(75, 76);
+            btnCobros.TabIndex = 10;
+            btnCobros.Text = "Cobros";
+            btnCobros.TextAlign = ContentAlignment.BottomCenter;
+            btnCobros.TextImageRelation = TextImageRelation.ImageAboveText;
+            btnCobros.UseVisualStyleBackColor = false;
             // 
             // btnVentas
             // 
-            this.btnVentas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(101)))), ((int)(((byte)(143)))));
-            this.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVentas.ForeColor = System.Drawing.Color.White;
-            this.btnVentas.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnVentas.ImageKey = "shopping-cart.png";
-            this.btnVentas.ImageList = this.imageList2;
-            this.btnVentas.Location = new System.Drawing.Point(-1, 190);
-            this.btnVentas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnVentas.Name = "btnVentas";
-            this.btnVentas.Size = new System.Drawing.Size(66, 57);
-            this.btnVentas.TabIndex = 9;
-            this.btnVentas.Text = "Ventas";
-            this.btnVentas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnVentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnVentas.UseVisualStyleBackColor = false;
+            btnVentas.BackColor = Color.FromArgb(82, 101, 143);
+            btnVentas.FlatStyle = FlatStyle.Flat;
+            btnVentas.ForeColor = Color.White;
+            btnVentas.ImageAlign = ContentAlignment.TopCenter;
+            btnVentas.ImageKey = "shopping-cart.png";
+            btnVentas.ImageList = imageList2;
+            btnVentas.Location = new Point(-1, 253);
+            btnVentas.Margin = new Padding(2, 3, 2, 3);
+            btnVentas.Name = "btnVentas";
+            btnVentas.Size = new Size(75, 76);
+            btnVentas.TabIndex = 9;
+            btnVentas.Text = "Ventas";
+            btnVentas.TextAlign = ContentAlignment.BottomCenter;
+            btnVentas.TextImageRelation = TextImageRelation.ImageAboveText;
+            btnVentas.UseVisualStyleBackColor = false;
             // 
             // btnCitas
             // 
-            this.btnCitas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(101)))), ((int)(((byte)(143)))));
-            this.btnCitas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCitas.ForeColor = System.Drawing.Color.White;
-            this.btnCitas.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCitas.ImageKey = "calendar.png";
-            this.btnCitas.ImageList = this.imageList2;
-            this.btnCitas.Location = new System.Drawing.Point(-1, 134);
-            this.btnCitas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnCitas.Name = "btnCitas";
-            this.btnCitas.Size = new System.Drawing.Size(66, 57);
-            this.btnCitas.TabIndex = 8;
-            this.btnCitas.Text = "Citas";
-            this.btnCitas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnCitas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnCitas.UseVisualStyleBackColor = false;
+            btnCitas.BackColor = Color.FromArgb(82, 101, 143);
+            btnCitas.FlatStyle = FlatStyle.Flat;
+            btnCitas.ForeColor = Color.White;
+            btnCitas.ImageAlign = ContentAlignment.TopCenter;
+            btnCitas.ImageKey = "calendar.png";
+            btnCitas.ImageList = imageList2;
+            btnCitas.Location = new Point(-1, 179);
+            btnCitas.Margin = new Padding(2, 3, 2, 3);
+            btnCitas.Name = "btnCitas";
+            btnCitas.Size = new Size(75, 76);
+            btnCitas.TabIndex = 8;
+            btnCitas.Text = "Citas";
+            btnCitas.TextAlign = ContentAlignment.BottomCenter;
+            btnCitas.TextImageRelation = TextImageRelation.ImageAboveText;
+            btnCitas.UseVisualStyleBackColor = false;
             // 
             // btnStock
             // 
-            this.btnStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(101)))), ((int)(((byte)(143)))));
-            this.btnStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStock.ForeColor = System.Drawing.Color.White;
-            this.btnStock.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnStock.ImageKey = "book-open.png";
-            this.btnStock.ImageList = this.imageList2;
-            this.btnStock.Location = new System.Drawing.Point(-1, 76);
-            this.btnStock.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnStock.Name = "btnStock";
-            this.btnStock.Size = new System.Drawing.Size(66, 57);
-            this.btnStock.TabIndex = 7;
-            this.btnStock.Text = "Stock";
-            this.btnStock.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnStock.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnStock.UseVisualStyleBackColor = false;
+            btnStock.BackColor = Color.FromArgb(82, 101, 143);
+            btnStock.FlatStyle = FlatStyle.Flat;
+            btnStock.ForeColor = Color.White;
+            btnStock.ImageAlign = ContentAlignment.TopCenter;
+            btnStock.ImageKey = "book-open.png";
+            btnStock.ImageList = imageList2;
+            btnStock.Location = new Point(-1, 101);
+            btnStock.Margin = new Padding(2, 3, 2, 3);
+            btnStock.Name = "btnStock";
+            btnStock.Size = new Size(75, 76);
+            btnStock.TabIndex = 7;
+            btnStock.Text = "Stock";
+            btnStock.TextAlign = ContentAlignment.BottomCenter;
+            btnStock.TextImageRelation = TextImageRelation.ImageAboveText;
+            btnStock.UseVisualStyleBackColor = false;
             // 
             // btnPedidos
             // 
-            this.btnPedidos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(101)))), ((int)(((byte)(143)))));
-            this.btnPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPedidos.ForeColor = System.Drawing.Color.White;
-            this.btnPedidos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnPedidos.ImageKey = "package.png";
-            this.btnPedidos.ImageList = this.imageList2;
-            this.btnPedidos.Location = new System.Drawing.Point(-1, 22);
-            this.btnPedidos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnPedidos.Name = "btnPedidos";
-            this.btnPedidos.Size = new System.Drawing.Size(66, 57);
-            this.btnPedidos.TabIndex = 6;
-            this.btnPedidos.Text = "Pedidos";
-            this.btnPedidos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnPedidos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnPedidos.UseVisualStyleBackColor = false;
+            btnPedidos.BackColor = Color.FromArgb(82, 101, 143);
+            btnPedidos.FlatStyle = FlatStyle.Flat;
+            btnPedidos.ForeColor = Color.White;
+            btnPedidos.ImageAlign = ContentAlignment.TopCenter;
+            btnPedidos.ImageKey = "package.png";
+            btnPedidos.ImageList = imageList2;
+            btnPedidos.Location = new Point(-1, 29);
+            btnPedidos.Margin = new Padding(2, 3, 2, 3);
+            btnPedidos.Name = "btnPedidos";
+            btnPedidos.Size = new Size(75, 76);
+            btnPedidos.TabIndex = 6;
+            btnPedidos.Text = "Pedidos";
+            btnPedidos.TextAlign = ContentAlignment.BottomCenter;
+            btnPedidos.TextImageRelation = TextImageRelation.ImageAboveText;
+            btnPedidos.UseVisualStyleBackColor = false;
             // 
             // cbSuspensionD
             // 
-            this.cbSuspensionD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.cbSuspensionD.FormattingEnabled = true;
-            this.cbSuspensionD.Items.AddRange(new object[] {
-            "Manual",
-            "Automatico"});
-            this.cbSuspensionD.Location = new System.Drawing.Point(282, 601);
-            this.cbSuspensionD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbSuspensionD.Name = "cbSuspensionD";
-            this.cbSuspensionD.Size = new System.Drawing.Size(124, 23);
-            this.cbSuspensionD.TabIndex = 265;
+            cbSuspensionD.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            cbSuspensionD.FormattingEnabled = true;
+            cbSuspensionD.Items.AddRange(new object[] { "Manual", "Automatico" });
+            cbSuspensionD.Location = new Point(322, 801);
+            cbSuspensionD.Name = "cbSuspensionD";
+            cbSuspensionD.Size = new Size(141, 28);
+            cbSuspensionD.TabIndex = 265;
             // 
             // cbSuspensionT
             // 
-            this.cbSuspensionT.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.cbSuspensionT.FormattingEnabled = true;
-            this.cbSuspensionT.Items.AddRange(new object[] {
-            "Delantera",
-            "Trasera"});
-            this.cbSuspensionT.Location = new System.Drawing.Point(282, 634);
-            this.cbSuspensionT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbSuspensionT.Name = "cbSuspensionT";
-            this.cbSuspensionT.Size = new System.Drawing.Size(124, 23);
-            this.cbSuspensionT.TabIndex = 264;
+            cbSuspensionT.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            cbSuspensionT.FormattingEnabled = true;
+            cbSuspensionT.Items.AddRange(new object[] { "Delantera", "Trasera" });
+            cbSuspensionT.Location = new Point(322, 845);
+            cbSuspensionT.Name = "cbSuspensionT";
+            cbSuspensionT.Size = new Size(141, 28);
+            cbSuspensionT.TabIndex = 264;
             // 
             // label32
             // 
-            this.label32.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(151, 637);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(109, 15);
-            this.label32.TabIndex = 263;
-            this.label32.Text = "Suspension Trasera:";
+            label32.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            label32.AutoSize = true;
+            label32.Location = new Point(173, 849);
+            label32.Name = "label32";
+            label32.Size = new Size(137, 20);
+            label32.TabIndex = 263;
+            label32.Text = "Suspension Trasera:";
             // 
             // label33
             // 
-            this.label33.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(137, 604);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(123, 15);
-            this.label33.TabIndex = 262;
-            this.label33.Text = "Suspension Delantera:";
+            label33.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            label33.AutoSize = true;
+            label33.Location = new Point(157, 805);
+            label33.Name = "label33";
+            label33.Size = new Size(155, 20);
+            label33.TabIndex = 262;
+            label33.Text = "Suspension Delantera:";
             // 
             // cbFrenosD
             // 
-            this.cbFrenosD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.cbFrenosD.FormattingEnabled = true;
-            this.cbFrenosD.Items.AddRange(new object[] {
-            "Manual",
-            "Automatico"});
-            this.cbFrenosD.Location = new System.Drawing.Point(282, 537);
-            this.cbFrenosD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbFrenosD.Name = "cbFrenosD";
-            this.cbFrenosD.Size = new System.Drawing.Size(124, 23);
-            this.cbFrenosD.TabIndex = 261;
+            cbFrenosD.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            cbFrenosD.FormattingEnabled = true;
+            cbFrenosD.Items.AddRange(new object[] { "Manual", "Automatico" });
+            cbFrenosD.Location = new Point(322, 716);
+            cbFrenosD.Name = "cbFrenosD";
+            cbFrenosD.Size = new Size(141, 28);
+            cbFrenosD.TabIndex = 261;
             // 
             // cbFrenosT
             // 
-            this.cbFrenosT.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.cbFrenosT.FormattingEnabled = true;
-            this.cbFrenosT.Items.AddRange(new object[] {
-            "Delantera",
-            "Trasera"});
-            this.cbFrenosT.Location = new System.Drawing.Point(282, 569);
-            this.cbFrenosT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbFrenosT.Name = "cbFrenosT";
-            this.cbFrenosT.Size = new System.Drawing.Size(124, 23);
-            this.cbFrenosT.TabIndex = 260;
+            cbFrenosT.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            cbFrenosT.FormattingEnabled = true;
+            cbFrenosT.Items.AddRange(new object[] { "Delantera", "Trasera" });
+            cbFrenosT.Location = new Point(322, 759);
+            cbFrenosT.Name = "cbFrenosT";
+            cbFrenosT.Size = new Size(141, 28);
+            cbFrenosT.TabIndex = 260;
             // 
             // label30
             // 
-            this.label30.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(170, 572);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(90, 15);
-            this.label30.TabIndex = 259;
-            this.label30.Text = "Frenos Traseros:";
+            label30.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            label30.AutoSize = true;
+            label30.Location = new Point(194, 763);
+            label30.Name = "label30";
+            label30.Size = new Size(113, 20);
+            label30.TabIndex = 259;
+            label30.Text = "Frenos Traseros:";
             // 
             // label31
             // 
-            this.label31.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(156, 541);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(104, 15);
-            this.label31.TabIndex = 258;
-            this.label31.Text = "Frenos Delanteros:";
+            label31.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            label31.AutoSize = true;
+            label31.Location = new Point(178, 721);
+            label31.Name = "label31";
+            label31.Size = new Size(131, 20);
+            label31.TabIndex = 258;
+            label31.Text = "Frenos Delanteros:";
             // 
             // panel11
             // 
-            this.panel11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel11.Controls.Add(this.rbEspejosANo);
-            this.panel11.Controls.Add(this.rbEspejosASi);
-            this.panel11.Location = new System.Drawing.Point(653, 304);
-            this.panel11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(125, 23);
-            this.panel11.TabIndex = 250;
+            panel11.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            panel11.Controls.Add(rbEspejosANo);
+            panel11.Controls.Add(rbEspejosASi);
+            panel11.Location = new Point(746, 405);
+            panel11.Name = "panel11";
+            panel11.Size = new Size(143, 31);
+            panel11.TabIndex = 250;
             // 
             // rbEspejosANo
             // 
-            this.rbEspejosANo.AutoSize = true;
-            this.rbEspejosANo.Checked = true;
-            this.rbEspejosANo.Location = new System.Drawing.Point(70, 2);
-            this.rbEspejosANo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.rbEspejosANo.Name = "rbEspejosANo";
-            this.rbEspejosANo.Size = new System.Drawing.Size(41, 19);
-            this.rbEspejosANo.TabIndex = 123;
-            this.rbEspejosANo.TabStop = true;
-            this.rbEspejosANo.Text = "No";
-            this.rbEspejosANo.UseVisualStyleBackColor = true;
+            rbEspejosANo.AutoSize = true;
+            rbEspejosANo.Checked = true;
+            rbEspejosANo.Location = new Point(80, 3);
+            rbEspejosANo.Name = "rbEspejosANo";
+            rbEspejosANo.Size = new Size(50, 24);
+            rbEspejosANo.TabIndex = 123;
+            rbEspejosANo.TabStop = true;
+            rbEspejosANo.Text = "No";
+            rbEspejosANo.UseVisualStyleBackColor = true;
             // 
             // rbEspejosASi
             // 
-            this.rbEspejosASi.AutoSize = true;
-            this.rbEspejosASi.Location = new System.Drawing.Point(7, 2);
-            this.rbEspejosASi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.rbEspejosASi.Name = "rbEspejosASi";
-            this.rbEspejosASi.Size = new System.Drawing.Size(34, 19);
-            this.rbEspejosASi.TabIndex = 122;
-            this.rbEspejosASi.Text = "Si";
-            this.rbEspejosASi.UseVisualStyleBackColor = true;
+            rbEspejosASi.AutoSize = true;
+            rbEspejosASi.Location = new Point(8, 3);
+            rbEspejosASi.Name = "rbEspejosASi";
+            rbEspejosASi.Size = new Size(42, 24);
+            rbEspejosASi.TabIndex = 122;
+            rbEspejosASi.Text = "Si";
+            rbEspejosASi.UseVisualStyleBackColor = true;
             // 
             // label29
             // 
-            this.label29.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(556, 308);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(79, 15);
-            this.label29.TabIndex = 249;
-            this.label29.Text = "EspejosLatAE:";
+            label29.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            label29.AutoSize = true;
+            label29.Location = new Point(635, 411);
+            label29.Name = "label29";
+            label29.Size = new Size(100, 20);
+            label29.TabIndex = 249;
+            label29.Text = "EspejosLatAE:";
             // 
             // panel10
             // 
-            this.panel10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel10.Controls.Add(this.rbEspejosDirNo);
-            this.panel10.Controls.Add(this.rbEspejosDirSi);
-            this.panel10.Location = new System.Drawing.Point(653, 277);
-            this.panel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(125, 23);
-            this.panel10.TabIndex = 247;
+            panel10.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            panel10.Controls.Add(rbEspejosDirNo);
+            panel10.Controls.Add(rbEspejosDirSi);
+            panel10.Location = new Point(746, 369);
+            panel10.Name = "panel10";
+            panel10.Size = new Size(143, 31);
+            panel10.TabIndex = 247;
             // 
             // rbEspejosDirNo
             // 
-            this.rbEspejosDirNo.AutoSize = true;
-            this.rbEspejosDirNo.Checked = true;
-            this.rbEspejosDirNo.Location = new System.Drawing.Point(70, 2);
-            this.rbEspejosDirNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.rbEspejosDirNo.Name = "rbEspejosDirNo";
-            this.rbEspejosDirNo.Size = new System.Drawing.Size(41, 19);
-            this.rbEspejosDirNo.TabIndex = 123;
-            this.rbEspejosDirNo.TabStop = true;
-            this.rbEspejosDirNo.Text = "No";
-            this.rbEspejosDirNo.UseVisualStyleBackColor = true;
+            rbEspejosDirNo.AutoSize = true;
+            rbEspejosDirNo.Checked = true;
+            rbEspejosDirNo.Location = new Point(80, 3);
+            rbEspejosDirNo.Name = "rbEspejosDirNo";
+            rbEspejosDirNo.Size = new Size(50, 24);
+            rbEspejosDirNo.TabIndex = 123;
+            rbEspejosDirNo.TabStop = true;
+            rbEspejosDirNo.Text = "No";
+            rbEspejosDirNo.UseVisualStyleBackColor = true;
             // 
             // rbEspejosDirSi
             // 
-            this.rbEspejosDirSi.AutoSize = true;
-            this.rbEspejosDirSi.Location = new System.Drawing.Point(7, 2);
-            this.rbEspejosDirSi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.rbEspejosDirSi.Name = "rbEspejosDirSi";
-            this.rbEspejosDirSi.Size = new System.Drawing.Size(34, 19);
-            this.rbEspejosDirSi.TabIndex = 122;
-            this.rbEspejosDirSi.Text = "Si";
-            this.rbEspejosDirSi.UseVisualStyleBackColor = true;
+            rbEspejosDirSi.AutoSize = true;
+            rbEspejosDirSi.Location = new Point(8, 3);
+            rbEspejosDirSi.Name = "rbEspejosDirSi";
+            rbEspejosDirSi.Size = new Size(42, 24);
+            rbEspejosDirSi.TabIndex = 122;
+            rbEspejosDirSi.Text = "Si";
+            rbEspejosDirSi.UseVisualStyleBackColor = true;
             // 
             // label28
             // 
-            this.label28.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(550, 281);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(85, 15);
-            this.label28.TabIndex = 245;
-            this.label28.Text = "EspejosLatDirC";
+            label28.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            label28.AutoSize = true;
+            label28.Location = new Point(629, 375);
+            label28.Name = "label28";
+            label28.Size = new Size(108, 20);
+            label28.TabIndex = 245;
+            label28.Text = "EspejosLatDirC";
             // 
             // panel9
             // 
-            this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel9.Controls.Add(this.rbAcAutNo);
-            this.panel9.Controls.Add(this.rbAcAutSi);
-            this.panel9.Location = new System.Drawing.Point(653, 250);
-            this.panel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(125, 23);
-            this.panel9.TabIndex = 242;
+            panel9.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            panel9.Controls.Add(rbAcAutNo);
+            panel9.Controls.Add(rbAcAutSi);
+            panel9.Location = new Point(746, 333);
+            panel9.Name = "panel9";
+            panel9.Size = new Size(143, 31);
+            panel9.TabIndex = 242;
             // 
             // rbAcAutNo
             // 
-            this.rbAcAutNo.AutoSize = true;
-            this.rbAcAutNo.Checked = true;
-            this.rbAcAutNo.Location = new System.Drawing.Point(70, 2);
-            this.rbAcAutNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.rbAcAutNo.Name = "rbAcAutNo";
-            this.rbAcAutNo.Size = new System.Drawing.Size(41, 19);
-            this.rbAcAutNo.TabIndex = 123;
-            this.rbAcAutNo.TabStop = true;
-            this.rbAcAutNo.Text = "No";
-            this.rbAcAutNo.UseVisualStyleBackColor = true;
+            rbAcAutNo.AutoSize = true;
+            rbAcAutNo.Checked = true;
+            rbAcAutNo.Location = new Point(80, 3);
+            rbAcAutNo.Name = "rbAcAutNo";
+            rbAcAutNo.Size = new Size(50, 24);
+            rbAcAutNo.TabIndex = 123;
+            rbAcAutNo.TabStop = true;
+            rbAcAutNo.Text = "No";
+            rbAcAutNo.UseVisualStyleBackColor = true;
             // 
             // rbAcAutSi
             // 
-            this.rbAcAutSi.AutoSize = true;
-            this.rbAcAutSi.Location = new System.Drawing.Point(7, 2);
-            this.rbAcAutSi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.rbAcAutSi.Name = "rbAcAutSi";
-            this.rbAcAutSi.Size = new System.Drawing.Size(34, 19);
-            this.rbAcAutSi.TabIndex = 122;
-            this.rbAcAutSi.Text = "Si";
-            this.rbAcAutSi.UseVisualStyleBackColor = true;
+            rbAcAutSi.AutoSize = true;
+            rbAcAutSi.Location = new Point(8, 3);
+            rbAcAutSi.Name = "rbAcAutSi";
+            rbAcAutSi.Size = new Size(42, 24);
+            rbAcAutSi.TabIndex = 122;
+            rbAcAutSi.Text = "Si";
+            rbAcAutSi.UseVisualStyleBackColor = true;
             // 
             // label27
             // 
-            this.label27.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(550, 254);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(90, 15);
-            this.label27.TabIndex = 241;
-            this.label27.Text = "Ac Automatico:";
+            label27.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            label27.AutoSize = true;
+            label27.Location = new Point(629, 339);
+            label27.Name = "label27";
+            label27.Size = new Size(111, 20);
+            label27.TabIndex = 241;
+            label27.Text = "Ac Automatico:";
             // 
             // cbEngranajes
             // 
-            this.cbEngranajes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.cbEngranajes.FormattingEnabled = true;
-            this.cbEngranajes.Location = new System.Drawing.Point(281, 317);
-            this.cbEngranajes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbEngranajes.Name = "cbEngranajes";
-            this.cbEngranajes.Size = new System.Drawing.Size(124, 23);
-            this.cbEngranajes.TabIndex = 257;
+            cbEngranajes.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            cbEngranajes.FormattingEnabled = true;
+            cbEngranajes.Location = new Point(321, 423);
+            cbEngranajes.Name = "cbEngranajes";
+            cbEngranajes.Size = new Size(141, 28);
+            cbEngranajes.TabIndex = 257;
             // 
             // label18
             // 
-            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(163, 320);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(97, 15);
-            this.label18.TabIndex = 256;
-            this.label18.Text = "Num Engranajes:";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            label18.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            label18.AutoSize = true;
+            label18.Location = new Point(186, 427);
+            label18.Name = "label18";
+            label18.Size = new Size(120, 20);
+            label18.TabIndex = 256;
+            label18.Text = "Num Engranajes:";
+            label18.TextAlign = ContentAlignment.BottomCenter;
             // 
             // cbPuertas
             // 
-            this.cbPuertas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.cbPuertas.FormattingEnabled = true;
-            this.cbPuertas.Items.AddRange(new object[] {
-            "2",
-            "4",
-            "6"});
-            this.cbPuertas.Location = new System.Drawing.Point(280, 290);
-            this.cbPuertas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbPuertas.Name = "cbPuertas";
-            this.cbPuertas.Size = new System.Drawing.Size(124, 23);
-            this.cbPuertas.TabIndex = 255;
+            cbPuertas.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            cbPuertas.FormattingEnabled = true;
+            cbPuertas.Items.AddRange(new object[] { "2", "4", "6" });
+            cbPuertas.Location = new Point(320, 387);
+            cbPuertas.Name = "cbPuertas";
+            cbPuertas.Size = new Size(141, 28);
+            cbPuertas.TabIndex = 255;
             // 
             // label19
             // 
-            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(181, 294);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(79, 15);
-            this.label19.TabIndex = 254;
-            this.label19.Text = "Num Puertas:";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            label19.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            label19.AutoSize = true;
+            label19.Location = new Point(207, 392);
+            label19.Name = "label19";
+            label19.Size = new Size(96, 20);
+            label19.TabIndex = 254;
+            label19.Text = "Num Puertas:";
+            label19.TextAlign = ContentAlignment.BottomCenter;
             // 
             // cbTransmision
             // 
-            this.cbTransmision.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.cbTransmision.FormattingEnabled = true;
-            this.cbTransmision.Items.AddRange(new object[] {
-            "Manual",
-            "Automatico"});
-            this.cbTransmision.Location = new System.Drawing.Point(282, 477);
-            this.cbTransmision.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbTransmision.Name = "cbTransmision";
-            this.cbTransmision.Size = new System.Drawing.Size(124, 23);
-            this.cbTransmision.TabIndex = 253;
+            cbTransmision.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            cbTransmision.FormattingEnabled = true;
+            cbTransmision.Items.AddRange(new object[] { "Manual", "Automatico" });
+            cbTransmision.Location = new Point(322, 636);
+            cbTransmision.Name = "cbTransmision";
+            cbTransmision.Size = new Size(141, 28);
+            cbTransmision.TabIndex = 253;
             // 
             // cbTipo
             // 
-            this.cbTipo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.cbTipo.FormattingEnabled = true;
-            this.cbTipo.Items.AddRange(new object[] {
-            "Delantera",
-            "Trasera"});
-            this.cbTipo.Location = new System.Drawing.Point(282, 505);
-            this.cbTipo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbTipo.Name = "cbTipo";
-            this.cbTipo.Size = new System.Drawing.Size(124, 23);
-            this.cbTipo.TabIndex = 252;
+            cbTipo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            cbTipo.FormattingEnabled = true;
+            cbTipo.Items.AddRange(new object[] { "Delantera", "Trasera" });
+            cbTipo.Location = new Point(322, 673);
+            cbTipo.Name = "cbTipo";
+            cbTipo.Size = new Size(141, 28);
+            cbTipo.TabIndex = 252;
             // 
             // label23
             // 
-            this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(161, 508);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(99, 15);
-            this.label23.TabIndex = 251;
-            this.label23.Text = "Tipo Transmision:";
+            label23.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            label23.AutoSize = true;
+            label23.Location = new Point(184, 677);
+            label23.Name = "label23";
+            label23.Size = new Size(124, 20);
+            label23.TabIndex = 251;
+            label23.Text = "Tipo Transmision:";
             // 
             // label20
             // 
-            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(184, 480);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(73, 15);
-            this.label20.TabIndex = 248;
-            this.label20.Text = "Transmision:";
+            label20.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            label20.AutoSize = true;
+            label20.Location = new Point(210, 640);
+            label20.Name = "label20";
+            label20.Size = new Size(90, 20);
+            label20.TabIndex = 248;
+            label20.Text = "Transmision:";
             // 
             // panel8
             // 
-            this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel8.Controls.Add(this.rbTomaNo);
-            this.panel8.Controls.Add(this.rbTomaSi);
-            this.panel8.Location = new System.Drawing.Point(653, 223);
-            this.panel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(125, 23);
-            this.panel8.TabIndex = 238;
+            panel8.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            panel8.Controls.Add(rbTomaNo);
+            panel8.Controls.Add(rbTomaSi);
+            panel8.Location = new Point(746, 297);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(143, 31);
+            panel8.TabIndex = 238;
             // 
             // rbTomaNo
             // 
-            this.rbTomaNo.AutoSize = true;
-            this.rbTomaNo.Checked = true;
-            this.rbTomaNo.Location = new System.Drawing.Point(70, 2);
-            this.rbTomaNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.rbTomaNo.Name = "rbTomaNo";
-            this.rbTomaNo.Size = new System.Drawing.Size(41, 19);
-            this.rbTomaNo.TabIndex = 123;
-            this.rbTomaNo.TabStop = true;
-            this.rbTomaNo.Text = "No";
-            this.rbTomaNo.UseVisualStyleBackColor = true;
+            rbTomaNo.AutoSize = true;
+            rbTomaNo.Checked = true;
+            rbTomaNo.Location = new Point(80, 3);
+            rbTomaNo.Name = "rbTomaNo";
+            rbTomaNo.Size = new Size(50, 24);
+            rbTomaNo.TabIndex = 123;
+            rbTomaNo.TabStop = true;
+            rbTomaNo.Text = "No";
+            rbTomaNo.UseVisualStyleBackColor = true;
             // 
             // rbTomaSi
             // 
-            this.rbTomaSi.AutoSize = true;
-            this.rbTomaSi.Location = new System.Drawing.Point(7, 2);
-            this.rbTomaSi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.rbTomaSi.Name = "rbTomaSi";
-            this.rbTomaSi.Size = new System.Drawing.Size(34, 19);
-            this.rbTomaSi.TabIndex = 122;
-            this.rbTomaSi.Text = "Si";
-            this.rbTomaSi.UseVisualStyleBackColor = true;
+            rbTomaSi.AutoSize = true;
+            rbTomaSi.Location = new Point(8, 3);
+            rbTomaSi.Name = "rbTomaSi";
+            rbTomaSi.Size = new Size(42, 24);
+            rbTomaSi.TabIndex = 122;
+            rbTomaSi.Text = "Si";
+            rbTomaSi.UseVisualStyleBackColor = true;
             // 
             // label21
             // 
-            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(550, 227);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(91, 15);
-            this.label21.TabIndex = 236;
-            this.label21.Text = "Toma Corriente:";
+            label21.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            label21.AutoSize = true;
+            label21.Location = new Point(629, 303);
+            label21.Name = "label21";
+            label21.Size = new Size(114, 20);
+            label21.TabIndex = 236;
+            label21.Text = "Toma Corriente:";
             // 
             // panel6
             // 
-            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel6.Controls.Add(this.rbAudioNo);
-            this.panel6.Controls.Add(this.rbAudioSi);
-            this.panel6.Location = new System.Drawing.Point(653, 196);
-            this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(125, 23);
-            this.panel6.TabIndex = 237;
+            panel6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            panel6.Controls.Add(rbAudioNo);
+            panel6.Controls.Add(rbAudioSi);
+            panel6.Location = new Point(746, 261);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(143, 31);
+            panel6.TabIndex = 237;
             // 
             // rbAudioNo
             // 
-            this.rbAudioNo.AutoSize = true;
-            this.rbAudioNo.Checked = true;
-            this.rbAudioNo.Location = new System.Drawing.Point(70, 2);
-            this.rbAudioNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.rbAudioNo.Name = "rbAudioNo";
-            this.rbAudioNo.Size = new System.Drawing.Size(41, 19);
-            this.rbAudioNo.TabIndex = 123;
-            this.rbAudioNo.TabStop = true;
-            this.rbAudioNo.Text = "No";
-            this.rbAudioNo.UseVisualStyleBackColor = true;
+            rbAudioNo.AutoSize = true;
+            rbAudioNo.Checked = true;
+            rbAudioNo.Location = new Point(80, 3);
+            rbAudioNo.Name = "rbAudioNo";
+            rbAudioNo.Size = new Size(50, 24);
+            rbAudioNo.TabIndex = 123;
+            rbAudioNo.TabStop = true;
+            rbAudioNo.Text = "No";
+            rbAudioNo.UseVisualStyleBackColor = true;
             // 
             // rbAudioSi
             // 
-            this.rbAudioSi.AutoSize = true;
-            this.rbAudioSi.Location = new System.Drawing.Point(7, 2);
-            this.rbAudioSi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.rbAudioSi.Name = "rbAudioSi";
-            this.rbAudioSi.Size = new System.Drawing.Size(34, 19);
-            this.rbAudioSi.TabIndex = 122;
-            this.rbAudioSi.Text = "Si";
-            this.rbAudioSi.UseVisualStyleBackColor = true;
+            rbAudioSi.AutoSize = true;
+            rbAudioSi.Location = new Point(8, 3);
+            rbAudioSi.Name = "rbAudioSi";
+            rbAudioSi.Size = new Size(42, 24);
+            rbAudioSi.TabIndex = 122;
+            rbAudioSi.Text = "Si";
+            rbAudioSi.UseVisualStyleBackColor = true;
             // 
             // label22
             // 
-            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(573, 204);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(65, 15);
-            this.label22.TabIndex = 235;
-            this.label22.Text = "AudioVelC:";
+            label22.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            label22.AutoSize = true;
+            label22.Location = new Point(655, 272);
+            label22.Name = "label22";
+            label22.Size = new Size(81, 20);
+            label22.TabIndex = 235;
+            label22.Text = "AudioVelC:";
             // 
             // txtAltura
             // 
-            this.txtAltura.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtAltura.Location = new System.Drawing.Point(282, 448);
-            this.txtAltura.Name = "txtAltura";
-            this.txtAltura.Size = new System.Drawing.Size(124, 23);
-            this.txtAltura.TabIndex = 246;
+            txtAltura.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            txtAltura.Location = new Point(322, 597);
+            txtAltura.Margin = new Padding(3, 4, 3, 4);
+            txtAltura.Name = "txtAltura";
+            txtAltura.Size = new Size(141, 27);
+            txtAltura.TabIndex = 246;
             // 
             // label24
             // 
-            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(215, 451);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(42, 15);
-            this.label24.TabIndex = 244;
-            this.label24.Text = "Altura:";
+            label24.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            label24.AutoSize = true;
+            label24.Location = new Point(246, 601);
+            label24.Name = "label24";
+            label24.Size = new Size(52, 20);
+            label24.TabIndex = 244;
+            label24.Text = "Altura:";
             // 
             // txtAnchura
             // 
-            this.txtAnchura.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtAnchura.Location = new System.Drawing.Point(282, 419);
-            this.txtAnchura.Name = "txtAnchura";
-            this.txtAnchura.Size = new System.Drawing.Size(124, 23);
-            this.txtAnchura.TabIndex = 243;
+            txtAnchura.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            txtAnchura.Location = new Point(322, 559);
+            txtAnchura.Margin = new Padding(3, 4, 3, 4);
+            txtAnchura.Name = "txtAnchura";
+            txtAnchura.Size = new Size(141, 27);
+            txtAnchura.TabIndex = 243;
             // 
             // label34
             // 
-            this.label34.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(205, 422);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(55, 15);
-            this.label34.TabIndex = 240;
-            this.label34.Text = "Anchura:";
+            label34.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            label34.AutoSize = true;
+            label34.Location = new Point(234, 563);
+            label34.Name = "label34";
+            label34.Size = new Size(66, 20);
+            label34.TabIndex = 240;
+            label34.Text = "Anchura:";
             // 
             // txtDistancia
             // 
-            this.txtDistancia.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtDistancia.Location = new System.Drawing.Point(282, 390);
-            this.txtDistancia.Name = "txtDistancia";
-            this.txtDistancia.Size = new System.Drawing.Size(124, 23);
-            this.txtDistancia.TabIndex = 239;
+            txtDistancia.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            txtDistancia.Location = new Point(322, 520);
+            txtDistancia.Margin = new Padding(3, 4, 3, 4);
+            txtDistancia.Name = "txtDistancia";
+            txtDistancia.Size = new Size(141, 27);
+            txtDistancia.TabIndex = 239;
             // 
             // label35
             // 
-            this.label35.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(179, 393);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(81, 15);
-            this.label35.TabIndex = 234;
-            this.label35.Text = "Distancia Ejes:";
+            label35.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            label35.AutoSize = true;
+            label35.Location = new Point(205, 524);
+            label35.Name = "label35";
+            label35.Size = new Size(103, 20);
+            label35.TabIndex = 234;
+            label35.Text = "Distancia Ejes:";
             // 
             // panel5
             // 
-            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel5.Controls.Add(this.rbLEDNo);
-            this.panel5.Controls.Add(this.rbLEDSi);
-            this.panel5.Location = new System.Drawing.Point(653, 169);
-            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(125, 23);
-            this.panel5.TabIndex = 233;
+            panel5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            panel5.Controls.Add(rbLEDNo);
+            panel5.Controls.Add(rbLEDSi);
+            panel5.Location = new Point(746, 225);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(143, 31);
+            panel5.TabIndex = 233;
             // 
             // rbLEDNo
             // 
-            this.rbLEDNo.AutoSize = true;
-            this.rbLEDNo.Checked = true;
-            this.rbLEDNo.Location = new System.Drawing.Point(70, 2);
-            this.rbLEDNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.rbLEDNo.Name = "rbLEDNo";
-            this.rbLEDNo.Size = new System.Drawing.Size(41, 19);
-            this.rbLEDNo.TabIndex = 123;
-            this.rbLEDNo.TabStop = true;
-            this.rbLEDNo.Text = "No";
-            this.rbLEDNo.UseVisualStyleBackColor = true;
+            rbLEDNo.AutoSize = true;
+            rbLEDNo.Checked = true;
+            rbLEDNo.Location = new Point(80, 3);
+            rbLEDNo.Name = "rbLEDNo";
+            rbLEDNo.Size = new Size(50, 24);
+            rbLEDNo.TabIndex = 123;
+            rbLEDNo.TabStop = true;
+            rbLEDNo.Text = "No";
+            rbLEDNo.UseVisualStyleBackColor = true;
             // 
             // rbLEDSi
             // 
-            this.rbLEDSi.AutoSize = true;
-            this.rbLEDSi.Location = new System.Drawing.Point(7, 2);
-            this.rbLEDSi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.rbLEDSi.Name = "rbLEDSi";
-            this.rbLEDSi.Size = new System.Drawing.Size(34, 19);
-            this.rbLEDSi.TabIndex = 122;
-            this.rbLEDSi.Text = "Si";
-            this.rbLEDSi.UseVisualStyleBackColor = true;
+            rbLEDSi.AutoSize = true;
+            rbLEDSi.Location = new Point(8, 3);
+            rbLEDSi.Name = "rbLEDSi";
+            rbLEDSi.Size = new Size(42, 24);
+            rbLEDSi.TabIndex = 122;
+            rbLEDSi.Text = "Si";
+            rbLEDSi.UseVisualStyleBackColor = true;
             // 
             // label36
             // 
-            this.label36.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(586, 175);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(58, 15);
-            this.label36.TabIndex = 232;
-            this.label36.Text = "FarosLED:";
+            label36.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            label36.AutoSize = true;
+            label36.Location = new Point(670, 233);
+            label36.Name = "label36";
+            label36.Size = new Size(72, 20);
+            label36.TabIndex = 232;
+            label36.Text = "FarosLED:";
             // 
             // panel4
             // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.Controls.Add(this.rbFarosHalNo);
-            this.panel4.Controls.Add(this.rbFarosHalSi);
-            this.panel4.Location = new System.Drawing.Point(653, 142);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(125, 23);
-            this.panel4.TabIndex = 231;
+            panel4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            panel4.Controls.Add(rbFarosHalNo);
+            panel4.Controls.Add(rbFarosHalSi);
+            panel4.Location = new Point(746, 189);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(143, 31);
+            panel4.TabIndex = 231;
             // 
             // rbFarosHalNo
             // 
-            this.rbFarosHalNo.AutoSize = true;
-            this.rbFarosHalNo.Checked = true;
-            this.rbFarosHalNo.Location = new System.Drawing.Point(70, 2);
-            this.rbFarosHalNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.rbFarosHalNo.Name = "rbFarosHalNo";
-            this.rbFarosHalNo.Size = new System.Drawing.Size(41, 19);
-            this.rbFarosHalNo.TabIndex = 123;
-            this.rbFarosHalNo.TabStop = true;
-            this.rbFarosHalNo.Text = "No";
-            this.rbFarosHalNo.UseVisualStyleBackColor = true;
+            rbFarosHalNo.AutoSize = true;
+            rbFarosHalNo.Checked = true;
+            rbFarosHalNo.Location = new Point(80, 3);
+            rbFarosHalNo.Name = "rbFarosHalNo";
+            rbFarosHalNo.Size = new Size(50, 24);
+            rbFarosHalNo.TabIndex = 123;
+            rbFarosHalNo.TabStop = true;
+            rbFarosHalNo.Text = "No";
+            rbFarosHalNo.UseVisualStyleBackColor = true;
             // 
             // rbFarosHalSi
             // 
-            this.rbFarosHalSi.AutoSize = true;
-            this.rbFarosHalSi.Location = new System.Drawing.Point(7, 2);
-            this.rbFarosHalSi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.rbFarosHalSi.Name = "rbFarosHalSi";
-            this.rbFarosHalSi.Size = new System.Drawing.Size(34, 19);
-            this.rbFarosHalSi.TabIndex = 122;
-            this.rbFarosHalSi.Text = "Si";
-            this.rbFarosHalSi.UseVisualStyleBackColor = true;
+            rbFarosHalSi.AutoSize = true;
+            rbFarosHalSi.Location = new Point(8, 3);
+            rbFarosHalSi.Name = "rbFarosHalSi";
+            rbFarosHalSi.Size = new Size(42, 24);
+            rbFarosHalSi.TabIndex = 122;
+            rbFarosHalSi.Text = "Si";
+            rbFarosHalSi.UseVisualStyleBackColor = true;
             // 
             // label37
             // 
-            this.label37.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(586, 148);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(61, 15);
-            this.label37.TabIndex = 230;
-            this.label37.Text = "FarosHAL:";
+            label37.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            label37.AutoSize = true;
+            label37.Location = new Point(670, 197);
+            label37.Name = "label37";
+            label37.Size = new Size(74, 20);
+            label37.TabIndex = 230;
+            label37.Text = "FarosHAL:";
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Controls.Add(this.rbCamaraNo);
-            this.panel2.Controls.Add(this.rbCamaraSi);
-            this.panel2.Location = new System.Drawing.Point(653, 88);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(125, 23);
-            this.panel2.TabIndex = 229;
+            panel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            panel2.Controls.Add(rbCamaraNo);
+            panel2.Controls.Add(rbCamaraSi);
+            panel2.Location = new Point(746, 117);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(143, 31);
+            panel2.TabIndex = 229;
             // 
             // rbCamaraNo
             // 
-            this.rbCamaraNo.AutoSize = true;
-            this.rbCamaraNo.Checked = true;
-            this.rbCamaraNo.Location = new System.Drawing.Point(70, 2);
-            this.rbCamaraNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.rbCamaraNo.Name = "rbCamaraNo";
-            this.rbCamaraNo.Size = new System.Drawing.Size(41, 19);
-            this.rbCamaraNo.TabIndex = 123;
-            this.rbCamaraNo.TabStop = true;
-            this.rbCamaraNo.Text = "No";
-            this.rbCamaraNo.UseVisualStyleBackColor = true;
+            rbCamaraNo.AutoSize = true;
+            rbCamaraNo.Checked = true;
+            rbCamaraNo.Location = new Point(80, 3);
+            rbCamaraNo.Name = "rbCamaraNo";
+            rbCamaraNo.Size = new Size(50, 24);
+            rbCamaraNo.TabIndex = 123;
+            rbCamaraNo.TabStop = true;
+            rbCamaraNo.Text = "No";
+            rbCamaraNo.UseVisualStyleBackColor = true;
             // 
             // rbCamaraSi
             // 
-            this.rbCamaraSi.AutoSize = true;
-            this.rbCamaraSi.Location = new System.Drawing.Point(7, 2);
-            this.rbCamaraSi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.rbCamaraSi.Name = "rbCamaraSi";
-            this.rbCamaraSi.Size = new System.Drawing.Size(34, 19);
-            this.rbCamaraSi.TabIndex = 122;
-            this.rbCamaraSi.Text = "Si";
-            this.rbCamaraSi.UseVisualStyleBackColor = true;
+            rbCamaraSi.AutoSize = true;
+            rbCamaraSi.Location = new Point(8, 3);
+            rbCamaraSi.Name = "rbCamaraSi";
+            rbCamaraSi.Size = new Size(42, 24);
+            rbCamaraSi.TabIndex = 122;
+            rbCamaraSi.Text = "Si";
+            rbCamaraSi.UseVisualStyleBackColor = true;
             // 
             // txtCapacidad
             // 
-            this.txtCapacidad.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtCapacidad.Location = new System.Drawing.Point(282, 361);
-            this.txtCapacidad.Name = "txtCapacidad";
-            this.txtCapacidad.Size = new System.Drawing.Size(123, 23);
-            this.txtCapacidad.TabIndex = 228;
+            txtCapacidad.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            txtCapacidad.Location = new Point(322, 481);
+            txtCapacidad.Margin = new Padding(3, 4, 3, 4);
+            txtCapacidad.Name = "txtCapacidad";
+            txtCapacidad.Size = new Size(140, 27);
+            txtCapacidad.TabIndex = 228;
             // 
             // label38
             // 
-            this.label38.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(138, 364);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(122, 15);
-            this.label38.TabIndex = 227;
-            this.label38.Text = "Capacidad de cajuela:";
-            this.label38.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            label38.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            label38.AutoSize = true;
+            label38.Location = new Point(158, 485);
+            label38.Name = "label38";
+            label38.Size = new Size(155, 20);
+            label38.TabIndex = 227;
+            label38.Text = "Capacidad de cajuela:";
+            label38.TextAlign = ContentAlignment.BottomCenter;
             // 
             // cbLlantas
             // 
-            this.cbLlantas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.cbLlantas.FormattingEnabled = true;
-            this.cbLlantas.Items.AddRange(new object[] {
-            "Deportivas",
-            "Invierno"});
-            this.cbLlantas.Location = new System.Drawing.Point(280, 206);
-            this.cbLlantas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbLlantas.Name = "cbLlantas";
-            this.cbLlantas.Size = new System.Drawing.Size(124, 23);
-            this.cbLlantas.TabIndex = 220;
+            cbLlantas.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            cbLlantas.FormattingEnabled = true;
+            cbLlantas.Items.AddRange(new object[] { "Deportivas", "Invierno" });
+            cbLlantas.Location = new Point(320, 275);
+            cbLlantas.Name = "cbLlantas";
+            cbLlantas.Size = new Size(141, 28);
+            cbLlantas.TabIndex = 220;
             // 
             // cbRines
             // 
-            this.cbRines.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.cbRines.FormattingEnabled = true;
-            this.cbRines.Location = new System.Drawing.Point(280, 147);
-            this.cbRines.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbRines.Name = "cbRines";
-            this.cbRines.Size = new System.Drawing.Size(124, 23);
-            this.cbRines.TabIndex = 221;
+            cbRines.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            cbRines.FormattingEnabled = true;
+            cbRines.Location = new Point(320, 196);
+            cbRines.Name = "cbRines";
+            cbRines.Size = new Size(141, 28);
+            cbRines.TabIndex = 221;
             // 
             // cbCilindros
             // 
-            this.cbCilindros.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.cbCilindros.FormattingEnabled = true;
-            this.cbCilindros.Items.AddRange(new object[] {
-            "4 Cilindros",
-            "6 Cilindros",
-            "8 Cilindros"});
-            this.cbCilindros.Location = new System.Drawing.Point(280, 175);
-            this.cbCilindros.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbCilindros.Name = "cbCilindros";
-            this.cbCilindros.Size = new System.Drawing.Size(124, 23);
-            this.cbCilindros.TabIndex = 224;
+            cbCilindros.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            cbCilindros.FormattingEnabled = true;
+            cbCilindros.Items.AddRange(new object[] { "4 Cilindros", "6 Cilindros", "8 Cilindros" });
+            cbCilindros.Location = new Point(320, 233);
+            cbCilindros.Name = "cbCilindros";
+            cbCilindros.Size = new Size(141, 28);
+            cbCilindros.TabIndex = 224;
             // 
             // cbCombustible
             // 
-            this.cbCombustible.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.cbCombustible.FormattingEnabled = true;
-            this.cbCombustible.Items.AddRange(new object[] {
-            "Gasolina",
-            "Diesel",
-            "Electrico",
-            "Hibrido"});
-            this.cbCombustible.Location = new System.Drawing.Point(280, 263);
-            this.cbCombustible.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbCombustible.Name = "cbCombustible";
-            this.cbCombustible.Size = new System.Drawing.Size(124, 23);
-            this.cbCombustible.TabIndex = 222;
+            cbCombustible.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            cbCombustible.FormattingEnabled = true;
+            cbCombustible.Items.AddRange(new object[] { "Gasolina", "Diesel", "Electrico", "Hibrido" });
+            cbCombustible.Location = new Point(320, 351);
+            cbCombustible.Name = "cbCombustible";
+            cbCombustible.Size = new Size(141, 28);
+            cbCombustible.TabIndex = 222;
             // 
             // cbAsientos
             // 
-            this.cbAsientos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.cbAsientos.FormattingEnabled = true;
-            this.cbAsientos.Items.AddRange(new object[] {
-            "Tela Normal",
-            "Tela arabe",
-            "Piel sintetica",
-            "Piel de mamut"});
-            this.cbAsientos.Location = new System.Drawing.Point(280, 234);
-            this.cbAsientos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbAsientos.Name = "cbAsientos";
-            this.cbAsientos.Size = new System.Drawing.Size(124, 23);
-            this.cbAsientos.TabIndex = 223;
+            cbAsientos.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            cbAsientos.FormattingEnabled = true;
+            cbAsientos.Items.AddRange(new object[] { "Tela Normal", "Tela arabe", "Piel sintetica", "Piel de mamut" });
+            cbAsientos.Location = new Point(320, 312);
+            cbAsientos.Name = "cbAsientos";
+            cbAsientos.Size = new Size(141, 28);
+            cbAsientos.TabIndex = 223;
             // 
             // cbVehiculo
             // 
-            this.cbVehiculo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.cbVehiculo.FormattingEnabled = true;
-            this.cbVehiculo.Location = new System.Drawing.Point(280, 91);
-            this.cbVehiculo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbVehiculo.Name = "cbVehiculo";
-            this.cbVehiculo.Size = new System.Drawing.Size(124, 23);
-            this.cbVehiculo.TabIndex = 225;
+            cbVehiculo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            cbVehiculo.FormattingEnabled = true;
+            cbVehiculo.Location = new Point(320, 121);
+            cbVehiculo.Name = "cbVehiculo";
+            cbVehiculo.Size = new Size(141, 28);
+            cbVehiculo.TabIndex = 225;
             // 
             // btnAgregarVersion
             // 
-            this.btnAgregarVersion.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnAgregarVersion.Location = new System.Drawing.Point(609, 596);
-            this.btnAgregarVersion.Name = "btnAgregarVersion";
-            this.btnAgregarVersion.Size = new System.Drawing.Size(155, 23);
-            this.btnAgregarVersion.TabIndex = 219;
-            this.btnAgregarVersion.Text = "Confirmar";
-            this.btnAgregarVersion.UseVisualStyleBackColor = true;
-            this.btnAgregarVersion.Click += new System.EventHandler(this.btnModifcarVersion_Click);
+            btnAgregarVersion.Anchor = AnchorStyles.Bottom;
+            btnAgregarVersion.Location = new Point(696, 795);
+            btnAgregarVersion.Margin = new Padding(3, 4, 3, 4);
+            btnAgregarVersion.Name = "btnAgregarVersion";
+            btnAgregarVersion.Size = new Size(177, 31);
+            btnAgregarVersion.TabIndex = 219;
+            btnAgregarVersion.Text = "Confirmar";
+            btnAgregarVersion.UseVisualStyleBackColor = true;
+            btnAgregarVersion.Click += btnModifcarVersion_Click;
             // 
             // label39
             // 
-            this.label39.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(586, 121);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(52, 15);
-            this.label39.TabIndex = 217;
-            this.label39.Text = "Pantalla:";
+            label39.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            label39.AutoSize = true;
+            label39.Location = new Point(670, 161);
+            label39.Name = "label39";
+            label39.Size = new Size(64, 20);
+            label39.TabIndex = 217;
+            label39.Text = "Pantalla:";
             // 
             // label40
             // 
-            this.label40.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(558, 94);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(89, 15);
-            this.label40.TabIndex = 216;
-            this.label40.Text = "Camara trasera:";
+            label40.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            label40.AutoSize = true;
+            label40.Location = new Point(638, 125);
+            label40.Name = "label40";
+            label40.Size = new Size(112, 20);
+            label40.TabIndex = 216;
+            label40.Text = "Camara trasera:";
             // 
             // label41
             // 
-            this.label41.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(222, 150);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(38, 15);
-            this.label41.TabIndex = 214;
-            this.label41.Text = "Rines:";
+            label41.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            label41.AutoSize = true;
+            label41.Location = new Point(254, 200);
+            label41.Name = "label41";
+            label41.Size = new Size(47, 20);
+            label41.TabIndex = 214;
+            label41.Text = "Rines:";
             // 
             // label42
             // 
-            this.label42.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(182, 266);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(78, 15);
-            this.label42.TabIndex = 209;
-            this.label42.Text = "Combustible:";
-            this.label42.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            label42.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            label42.AutoSize = true;
+            label42.Location = new Point(208, 355);
+            label42.Name = "label42";
+            label42.Size = new Size(96, 20);
+            label42.TabIndex = 209;
+            label42.Text = "Combustible:";
+            label42.TextAlign = ContentAlignment.BottomCenter;
             // 
             // label43
             // 
-            this.label43.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(205, 242);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(55, 15);
-            this.label43.TabIndex = 210;
-            this.label43.Text = "Asientos:";
-            this.label43.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            label43.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            label43.AutoSize = true;
+            label43.Location = new Point(234, 323);
+            label43.Name = "label43";
+            label43.Size = new Size(68, 20);
+            label43.TabIndex = 210;
+            label43.Text = "Asientos:";
+            label43.TextAlign = ContentAlignment.BottomCenter;
             // 
             // label44
             // 
-            this.label44.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(213, 214);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(47, 15);
-            this.label44.TabIndex = 215;
-            this.label44.Text = "Llantas:";
+            label44.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            label44.AutoSize = true;
+            label44.Location = new Point(243, 285);
+            label44.Name = "label44";
+            label44.Size = new Size(58, 20);
+            label44.TabIndex = 215;
+            label44.Text = "Llantas:";
             // 
             // label45
             // 
-            this.label45.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(205, 96);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(55, 15);
-            this.label45.TabIndex = 212;
-            this.label45.Text = "Vehiculo:";
-            this.label45.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            label45.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            label45.AutoSize = true;
+            label45.Location = new Point(234, 128);
+            label45.Name = "label45";
+            label45.Size = new Size(68, 20);
+            label45.TabIndex = 212;
+            label45.Text = "Vehiculo:";
+            label45.TextAlign = ContentAlignment.BottomCenter;
             // 
             // label46
             // 
-            this.label46.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(203, 178);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(57, 15);
-            this.label46.TabIndex = 213;
-            this.label46.Text = "Cilindros:";
+            label46.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            label46.AutoSize = true;
+            label46.Location = new Point(232, 237);
+            label46.Name = "label46";
+            label46.Size = new Size(70, 20);
+            label46.TabIndex = 213;
+            label46.Text = "Cilindros:";
             // 
             // label47
             // 
-            this.label47.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(207, 124);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(48, 15);
-            this.label47.TabIndex = 211;
-            this.label47.Text = "Version:";
+            label47.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            label47.AutoSize = true;
+            label47.Location = new Point(237, 165);
+            label47.Name = "label47";
+            label47.Size = new Size(60, 20);
+            label47.TabIndex = 211;
+            label47.Text = "Version:";
             // 
             // label48
             // 
-            this.label48.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(570, 511);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(55, 15);
-            this.label48.TabIndex = 208;
-            this.label48.Text = "Costo($):";
+            label48.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            label48.AutoSize = true;
+            label48.Location = new Point(651, 681);
+            label48.Name = "label48";
+            label48.Size = new Size(68, 20);
+            label48.TabIndex = 208;
+            label48.Text = "Costo($):";
             // 
             // txtVersion
             // 
-            this.txtVersion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtVersion.Location = new System.Drawing.Point(280, 119);
-            this.txtVersion.Name = "txtVersion";
-            this.txtVersion.Size = new System.Drawing.Size(124, 23);
-            this.txtVersion.TabIndex = 266;
+            txtVersion.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            txtVersion.Location = new Point(320, 159);
+            txtVersion.Margin = new Padding(3, 4, 3, 4);
+            txtVersion.Name = "txtVersion";
+            txtVersion.Size = new Size(141, 27);
+            txtVersion.TabIndex = 266;
             // 
             // txtRendimiento
             // 
-            this.txtRendimiento.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtRendimiento.Location = new System.Drawing.Point(654, 472);
-            this.txtRendimiento.Name = "txtRendimiento";
-            this.txtRendimiento.Size = new System.Drawing.Size(124, 23);
-            this.txtRendimiento.TabIndex = 268;
+            txtRendimiento.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            txtRendimiento.Location = new Point(747, 629);
+            txtRendimiento.Margin = new Padding(3, 4, 3, 4);
+            txtRendimiento.Name = "txtRendimiento";
+            txtRendimiento.Size = new Size(141, 27);
+            txtRendimiento.TabIndex = 268;
             // 
             // label49
             // 
-            this.label49.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(489, 480);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(149, 15);
-            this.label49.TabIndex = 267;
-            this.label49.Text = "Rendimiento Combustible:";
+            label49.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            label49.AutoSize = true;
+            label49.Location = new Point(559, 640);
+            label49.Name = "label49";
+            label49.Size = new Size(185, 20);
+            label49.TabIndex = 267;
+            label49.Text = "Rendimiento Combustible:";
             // 
             // txtCosto
             // 
-            this.txtCosto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCosto.Location = new System.Drawing.Point(654, 508);
-            this.txtCosto.Name = "txtCosto";
-            this.txtCosto.Size = new System.Drawing.Size(124, 23);
-            this.txtCosto.TabIndex = 269;
+            txtCosto.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            txtCosto.Location = new Point(747, 677);
+            txtCosto.Margin = new Padding(3, 4, 3, 4);
+            txtCosto.Name = "txtCosto";
+            txtCosto.Size = new Size(141, 27);
+            txtCosto.TabIndex = 269;
             // 
             // panel3
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.Controls.Add(this.rbPantallaNo);
-            this.panel3.Controls.Add(this.rbPantallaSi);
-            this.panel3.Location = new System.Drawing.Point(653, 115);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(125, 23);
-            this.panel3.TabIndex = 230;
+            panel3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            panel3.Controls.Add(rbPantallaNo);
+            panel3.Controls.Add(rbPantallaSi);
+            panel3.Location = new Point(746, 153);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(143, 31);
+            panel3.TabIndex = 230;
             // 
             // rbPantallaNo
             // 
-            this.rbPantallaNo.AutoSize = true;
-            this.rbPantallaNo.Checked = true;
-            this.rbPantallaNo.Location = new System.Drawing.Point(70, 2);
-            this.rbPantallaNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.rbPantallaNo.Name = "rbPantallaNo";
-            this.rbPantallaNo.Size = new System.Drawing.Size(41, 19);
-            this.rbPantallaNo.TabIndex = 123;
-            this.rbPantallaNo.TabStop = true;
-            this.rbPantallaNo.Text = "No";
-            this.rbPantallaNo.UseVisualStyleBackColor = true;
+            rbPantallaNo.AutoSize = true;
+            rbPantallaNo.Checked = true;
+            rbPantallaNo.Location = new Point(80, 3);
+            rbPantallaNo.Name = "rbPantallaNo";
+            rbPantallaNo.Size = new Size(50, 24);
+            rbPantallaNo.TabIndex = 123;
+            rbPantallaNo.TabStop = true;
+            rbPantallaNo.Text = "No";
+            rbPantallaNo.UseVisualStyleBackColor = true;
             // 
             // rbPantallaSi
             // 
-            this.rbPantallaSi.AutoSize = true;
-            this.rbPantallaSi.Location = new System.Drawing.Point(7, 2);
-            this.rbPantallaSi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.rbPantallaSi.Name = "rbPantallaSi";
-            this.rbPantallaSi.Size = new System.Drawing.Size(34, 19);
-            this.rbPantallaSi.TabIndex = 122;
-            this.rbPantallaSi.Text = "Si";
-            this.rbPantallaSi.UseVisualStyleBackColor = true;
+            rbPantallaSi.AutoSize = true;
+            rbPantallaSi.Location = new Point(8, 3);
+            rbPantallaSi.Name = "rbPantallaSi";
+            rbPantallaSi.Size = new Size(42, 24);
+            rbPantallaSi.TabIndex = 122;
+            rbPantallaSi.Text = "Si";
+            rbPantallaSi.UseVisualStyleBackColor = true;
             // 
             // ModificarVersion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(967, 637);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.txtCosto);
-            this.Controls.Add(this.txtRendimiento);
-            this.Controls.Add(this.label49);
-            this.Controls.Add(this.txtVersion);
-            this.Controls.Add(this.cbSuspensionD);
-            this.Controls.Add(this.cbSuspensionT);
-            this.Controls.Add(this.label32);
-            this.Controls.Add(this.label33);
-            this.Controls.Add(this.cbFrenosD);
-            this.Controls.Add(this.cbFrenosT);
-            this.Controls.Add(this.label30);
-            this.Controls.Add(this.label31);
-            this.Controls.Add(this.panel11);
-            this.Controls.Add(this.label29);
-            this.Controls.Add(this.panel10);
-            this.Controls.Add(this.label28);
-            this.Controls.Add(this.panel9);
-            this.Controls.Add(this.label27);
-            this.Controls.Add(this.cbEngranajes);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.cbPuertas);
-            this.Controls.Add(this.label19);
-            this.Controls.Add(this.cbTransmision);
-            this.Controls.Add(this.cbTipo);
-            this.Controls.Add(this.label23);
-            this.Controls.Add(this.label20);
-            this.Controls.Add(this.panel8);
-            this.Controls.Add(this.label21);
-            this.Controls.Add(this.panel6);
-            this.Controls.Add(this.label22);
-            this.Controls.Add(this.txtAltura);
-            this.Controls.Add(this.label24);
-            this.Controls.Add(this.txtAnchura);
-            this.Controls.Add(this.label34);
-            this.Controls.Add(this.txtDistancia);
-            this.Controls.Add(this.label35);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.label36);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.label37);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.txtCapacidad);
-            this.Controls.Add(this.label38);
-            this.Controls.Add(this.cbLlantas);
-            this.Controls.Add(this.cbRines);
-            this.Controls.Add(this.cbCilindros);
-            this.Controls.Add(this.cbCombustible);
-            this.Controls.Add(this.cbAsientos);
-            this.Controls.Add(this.cbVehiculo);
-            this.Controls.Add(this.btnAgregarVersion);
-            this.Controls.Add(this.label39);
-            this.Controls.Add(this.label40);
-            this.Controls.Add(this.label41);
-            this.Controls.Add(this.label42);
-            this.Controls.Add(this.label43);
-            this.Controls.Add(this.label44);
-            this.Controls.Add(this.label45);
-            this.Controls.Add(this.label46);
-            this.Controls.Add(this.label47);
-            this.Controls.Add(this.label48);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel7);
-            this.Name = "ModificarVersion";
-            this.Text = "ModificarVersion";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.ModificarVersion_Load);
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1105, 849);
+            Controls.Add(panel6);
+            Controls.Add(panel8);
+            Controls.Add(panel9);
+            Controls.Add(panel4);
+            Controls.Add(panel5);
+            Controls.Add(panel3);
+            Controls.Add(txtCosto);
+            Controls.Add(txtRendimiento);
+            Controls.Add(label49);
+            Controls.Add(txtVersion);
+            Controls.Add(cbSuspensionD);
+            Controls.Add(cbSuspensionT);
+            Controls.Add(label32);
+            Controls.Add(label33);
+            Controls.Add(cbFrenosD);
+            Controls.Add(cbFrenosT);
+            Controls.Add(label30);
+            Controls.Add(label31);
+            Controls.Add(panel11);
+            Controls.Add(label29);
+            Controls.Add(panel10);
+            Controls.Add(label28);
+            Controls.Add(label27);
+            Controls.Add(cbEngranajes);
+            Controls.Add(label18);
+            Controls.Add(cbPuertas);
+            Controls.Add(label19);
+            Controls.Add(cbTransmision);
+            Controls.Add(cbTipo);
+            Controls.Add(label23);
+            Controls.Add(label20);
+            Controls.Add(label21);
+            Controls.Add(label22);
+            Controls.Add(txtAltura);
+            Controls.Add(label24);
+            Controls.Add(txtAnchura);
+            Controls.Add(label34);
+            Controls.Add(txtDistancia);
+            Controls.Add(label35);
+            Controls.Add(label36);
+            Controls.Add(label37);
+            Controls.Add(panel2);
+            Controls.Add(txtCapacidad);
+            Controls.Add(label38);
+            Controls.Add(cbLlantas);
+            Controls.Add(cbRines);
+            Controls.Add(cbCilindros);
+            Controls.Add(cbCombustible);
+            Controls.Add(cbAsientos);
+            Controls.Add(cbVehiculo);
+            Controls.Add(btnAgregarVersion);
+            Controls.Add(label39);
+            Controls.Add(label40);
+            Controls.Add(label41);
+            Controls.Add(label42);
+            Controls.Add(label43);
+            Controls.Add(label44);
+            Controls.Add(label45);
+            Controls.Add(label46);
+            Controls.Add(label47);
+            Controls.Add(label48);
+            Controls.Add(panel1);
+            Controls.Add(panel7);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "ModificarVersion";
+            Text = "ModificarVersion";
+            WindowState = FormWindowState.Maximized;
+            Load += ModificarVersion_Load;
+            panel7.ResumeLayout(false);
+            panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
+            panel1.ResumeLayout(false);
+            panel11.ResumeLayout(false);
+            panel11.PerformLayout();
+            panel10.ResumeLayout(false);
+            panel10.PerformLayout();
+            panel9.ResumeLayout(false);
+            panel9.PerformLayout();
+            panel8.ResumeLayout(false);
+            panel8.PerformLayout();
+            panel6.ResumeLayout(false);
+            panel6.PerformLayout();
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

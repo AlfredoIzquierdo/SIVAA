@@ -61,7 +61,7 @@ namespace Logicas
             if (CodPqte == "0")
                 Mensaje.Append("Por favor proporcionar un Codigo valido");
             if (Mensaje.Length == 0)
-                Pdto.Eliminar(CodPqte);
+                Pdto.EliminarDesaparecer(CodPqte);
         }
 
         public void Modificar(Versions Pqte)

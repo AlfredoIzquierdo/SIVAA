@@ -71,49 +71,56 @@ namespace Pantallas_SIVAA
 
         private void btnAgregarVersion_Click(object sender, EventArgs e)
         {
-            List<Versions> x = log.ListadoTotal();
-            string i = "VR" + (x.Count + 1).ToString();
-          //  MessageBox.Show("I:" + i);
-            version.IDVersion = i;
-            version.Costo = Convert.ToDouble(txtCosto.Text);
-            version.DistanciaEjes = txtDistancia.Text;
-            version.Altura = txtAltura.Text;
-            version.Anchura = txtAnchura.Text;
-            version.Llantas = cbLlantas.Text;
-            version.Version = txtVersion.Text;
-            version.IDVehiculo = idVehiculo(cbVehiculo.Text);
-            MessageBox.Show(version.IDVehiculo);
-            //version.IDVehiculo = "VH1";
+            if (ComprobarEspacioVacio() == false)
+            {
+                List<Versions> x = log.ListadoTotal();
+                string i = "VR" + (x.Count + 1).ToString();
+                //  MessageBox.Show("I:" + i);
+                version.IDVersion = i;
+                version.Costo = Convert.ToDouble(txtCosto.Text);
+                version.DistanciaEjes = txtDistancia.Text;
+                version.Altura = txtAltura.Text;
+                version.Anchura = txtAnchura.Text;
+                version.Llantas = cbLlantas.Text;
+                version.Version = txtVersion.Text;
+                version.IDVehiculo = idVehiculo(cbVehiculo.Text);
+               
+                //version.IDVehiculo = "VH1";
 
-            version.Transmision = cbTransmision.Text;
-            version.Cilindraje = cbCilindros.Text;
-            version.TipoAsientos = cbAsientos.Text;
-            version.TipoCombustible = cbCombustible.Text;
-            version.Rines = cbRines.Text;
-            version.CapacidadCajuela = txtCapacidad.Text;
-            version.TipoTraccion = cbTipo.Text;
-            version.NumPuertas = cbPuertas.Text;
-            version.NumEngranajes = cbEngranajes.Text;
-            version.RendimientoCombustible = txtRendimiento.Text;
-            version.FrenosDelanteros = cbFrenosD.Text;
-            version.FrenosTraseros = cbFrenosT.Text;
-            version.SuspensionDelantera = cbSuspensionD.Text;
-            version.SuspensionTrasera = cbSuspensionT.Text;
-            version.ACAutom = verificacion(rbAcAutSi, rbAcAutNo);
-            version.Pantalla = verificacion(rbPantallaSi, rbPantallaNo);
-            version.FarosHal = verificacion(rbFarosHalSi, rbFarosHalNo);
-            version.FarosLED = verificacion(rbLEDSi, rbLEDNo);
-            version.AudioVelC = verificacion(rbAudioSi, rbAudioNo);
-            version.TomaCorriente = verificacion(rbTomaSi, rbTomaNo);
-            version.EspejosLatDirC = verificacion(rbEspejosDirSi, rbEspejosDirNo);
-            version.EspejosLatAE = verificacion(rbEspejosASi, rbEspejosANo);
-            version.CamaraTrasera = verificacion(rbCamaraSi, rbCamaraNo);
+                version.Transmision = cbTransmision.Text;
+                version.Cilindraje = cbCilindros.Text;
+                version.TipoAsientos = cbAsientos.Text;
+                version.TipoCombustible = cbCombustible.Text;
+                version.Rines = cbRines.Text;
+                version.CapacidadCajuela = txtCapacidad.Text;
+                version.TipoTraccion = cbTipo.Text;
+                version.NumPuertas = cbPuertas.Text;
+                version.NumEngranajes = cbEngranajes.Text;
+                version.RendimientoCombustible = txtRendimiento.Text;
+                version.FrenosDelanteros = cbFrenosD.Text;
+                version.FrenosTraseros = cbFrenosT.Text;
+                version.SuspensionDelantera = cbSuspensionD.Text;
+                version.SuspensionTrasera = cbSuspensionT.Text;
+                version.ACAutom = verificacion(rbAcAutSi, rbAcAutNo);
+                version.Pantalla = verificacion(rbPantallaSi, rbPantallaNo);
+                version.FarosHal = verificacion(rbFarosHalSi, rbFarosHalNo);
+                version.FarosLED = verificacion(rbLEDSi, rbLEDNo);
+                version.AudioVelC = verificacion(rbAudioSi, rbAudioNo);
+                version.TomaCorriente = verificacion(rbTomaSi, rbTomaNo);
+                version.EspejosLatDirC = verificacion(rbEspejosDirSi, rbEspejosDirNo);
+                version.EspejosLatAE = verificacion(rbEspejosASi, rbEspejosANo);
+                version.CamaraTrasera = verificacion(rbCamaraSi, rbCamaraNo);
+                version.EstadoVersion = "Activo";
+                log.Registrar(version);
 
-            log.Registrar(version);
-
-
-            this.Hide();
-            versiones.Show();
+                
+                this.Hide();
+                versiones.Show();
+            } else
+            {
+                MessageBox.Show("Favor de rellanar todos los campos");
+            }
+            
         }
 
         private void AgregarVersion_Load(object sender, EventArgs e)
@@ -138,7 +145,24 @@ namespace Pantallas_SIVAA
             return "";
         }
 
-        
+        private bool ComprobarEspacioVacio ()
+        {
+            bool vacio = false;
+            if (string.IsNullOrEmpty(cbVehiculo.Text)| string.IsNullOrEmpty(txtVersion.Text) | string.IsNullOrEmpty(cbRines.Text) | string.IsNullOrEmpty(cbCilindros.Text) |
+                string.IsNullOrEmpty(cbLlantas.Text) | string.IsNullOrEmpty(cbAsientos.Text) | string.IsNullOrEmpty(cbCombustible.Text) | string.IsNullOrEmpty(cbEngranajes.Text) |
+                string.IsNullOrEmpty(txtCapacidad.Text) | string.IsNullOrEmpty(txtDistancia.Text) | string.IsNullOrEmpty(txtAltura.Text) | string.IsNullOrEmpty(txtAnchura.Text) | 
+                string.IsNullOrEmpty(cbTransmision.Text) | string.IsNullOrEmpty(cbTipo.Text) | string.IsNullOrEmpty(cbFrenosD.Text) | string.IsNullOrEmpty(cbFrenosT.Text) |
+                string.IsNullOrEmpty(cbSuspensionD.Text) | string.IsNullOrEmpty(cbSuspensionT.Text) | string.IsNullOrEmpty(txtRendimiento.Text))
+            {
+                vacio = true;
+                return vacio;
+            } else
+            {
+                return vacio;
+            }
+            
+        }
+
         private string idVehiculo(string nombre)
         {
             List<Vehiculo> em = veh.ListadoAll();
@@ -154,6 +178,6 @@ namespace Pantallas_SIVAA
             return id;
         }
 
-        
+
     }
 }

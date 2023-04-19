@@ -39,5 +39,7 @@ namespace Entidades
         public string SuspensionTrasera { get; set; }
         public string EspejosLatDirC { get; set; }
         public string EspejosLatAE { get; set; }
+
+        public string EstadoVersion { get; set; }
     }
 }
