@@ -211,7 +211,11 @@ namespace Pantallas_SIVAA
 
         private void NuevoEmpleado_Load(object sender, EventArgs e)
         {
-<<<<<<< HEAD
+
+        }
+
+        private void NuevoEmpleado_Load(object sender, EventArgs e)
+        {
             switch (_pqt.Tipo.Trim())
             {
                 case "Atencion":
@@ -256,10 +260,5 @@ namespace Pantallas_SIVAA
                     break;
             }
         }
-=======
-
-        }
-
->>>>>>> origin/master
     }
 }

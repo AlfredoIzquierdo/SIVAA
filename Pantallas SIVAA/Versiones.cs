@@ -244,9 +244,6 @@ namespace Pantallas_SIVAA
             rp.Show();
         }
 
-<<<<<<< HEAD
-        
-=======
         private void dataGridView1_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -270,6 +267,5 @@ namespace Pantallas_SIVAA
                 MessageBox.Show("Favor de seleccionar una version");
             }
         }
->>>>>>> origin/master
     }
 }

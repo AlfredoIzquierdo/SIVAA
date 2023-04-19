@@ -79,7 +79,6 @@ namespace Pantallas_SIVAA
 
         private void btnAgregarVersion_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             List<Versions> x = log.ListadoTotal();
             string i = "VR" + (x.Count + 1).ToString();
             //  MessageBox.Show("I:" + i);
@@ -93,7 +92,6 @@ namespace Pantallas_SIVAA
             version.IDVehiculo = idVehiculo(cbVehiculo.Text);
             MessageBox.Show(version.IDVehiculo);
             //version.IDVehiculo = "VH1";
-=======
             if (ComprobarEspacioVacio() == false)
             {
                 List<Versions> x = log.ListadoTotal();
@@ -109,7 +107,6 @@ namespace Pantallas_SIVAA
                 version.IDVehiculo = idVehiculo(cbVehiculo.Text);
                
                 //version.IDVehiculo = "VH1";
->>>>>>> origin/master
 
                 version.Transmision = cbTransmision.Text;
                 version.Cilindraje = cbCilindros.Text;
@@ -137,14 +134,10 @@ namespace Pantallas_SIVAA
                 version.EstadoVersion = "Activo";
                 log.Registrar(version);
 
-<<<<<<< HEAD
-            log.Registrar(version);
-
 
             this.Close();
             Versiones versiones = new Versiones(_pqt);
             versiones.Show();
-=======
                 
                 this.Hide();
                 versiones.Show();
@@ -153,7 +146,6 @@ namespace Pantallas_SIVAA
                 MessageBox.Show("Favor de rellanar todos los campos");
             }
             
->>>>>>> origin/master
         }
 
         private void AgregarVersion_Load(object sender, EventArgs e)
@@ -178,8 +170,7 @@ namespace Pantallas_SIVAA
             return "";
         }
 
-<<<<<<< HEAD
-=======
+
         private bool ComprobarEspacioVacio ()
         {
             bool vacio = false;
@@ -197,7 +188,6 @@ namespace Pantallas_SIVAA
             }
             
         }
->>>>>>> origin/master
 
         private string idVehiculo(string nombre)
         {
@@ -214,10 +204,7 @@ namespace Pantallas_SIVAA
             return id;
         }
 
-<<<<<<< HEAD
        
-=======
 
->>>>>>> origin/master
     }
 }

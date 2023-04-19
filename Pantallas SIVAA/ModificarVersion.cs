@@ -275,10 +275,6 @@ namespace Pantallas_SIVAA
             return id;
         }
 
-<<<<<<< HEAD
         
-=======
-
->>>>>>> origin/master
     }
 }
