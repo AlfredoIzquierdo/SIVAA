@@ -17,9 +17,11 @@ namespace Pantallas_SIVAA
     {
         public static NuevoCliente nuevoCliente = new NuevoCliente();
         readonly ClienteLog cliente = new ClienteLog();
-        public Clientes()
+        Empleado pqt;
+        public Clientes(Empleado pqt)
         {
             InitializeComponent();
+            this.pqt = pqt;
         }
 
         private void pictureBox13_Click(object sender, EventArgs e)

@@ -20,10 +20,11 @@ namespace Pantallas_SIVAA
     {
         public static AgregarVersion agregarVersion = new AgregarVersion();
         readonly VersionLog version = new VersionLog();
-
-        public Versiones()
+        Empleado _pqt;
+        public Versiones(Empleado pqt)
         {
             InitializeComponent();
+            _pqt = pqt;
         }
 
         private void pictureBox13_Click(object sender, EventArgs e)

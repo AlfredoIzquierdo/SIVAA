@@ -142,7 +142,7 @@ namespace Pantallas_SIVAA
         private void btnPedidos_Click(object sender, EventArgs e)
         {
             this.Close();
-            GestionarPedidos pedidos = new GestionarPedidos();
+            GestionarPedidos pedidos = new GestionarPedidos(_pqt);
             pedidos.Show();
         }
 
@@ -169,7 +169,7 @@ namespace Pantallas_SIVAA
 
         private void btnCobros_Click(object sender, EventArgs e)
         {
-           AbrirCaja Caja = new AbrirCaja(_pqt);
+            AbrirCaja Caja = new AbrirCaja(_pqt);
             this.Close();
             Caja.Show();
         }
