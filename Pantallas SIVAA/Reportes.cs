@@ -32,7 +32,7 @@ namespace Pantallas_SIVAA
         private void btnPedidos_Click(object sender, EventArgs e)
         {
             this.Close();
-            GestionarPedidos pedidos = new GestionarPedidos();
+            GestionarPedidos pedidos = new GestionarPedidos(_pqt);
             pedidos.Show();
         }
 

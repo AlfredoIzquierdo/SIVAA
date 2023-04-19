@@ -21,11 +21,12 @@ namespace Pantallas_SIVAA
         VersionLog log = new VersionLog();
         VehiculoLog veh = new VehiculoLog();
         string id;
-
-        public ModificarVersion(string idVersion)
+        Empleado _pqt;
+        public ModificarVersion(string idVersion, Empleado pqt)
         {
             InitializeComponent();
             id = idVersion;
+            _pqt = pqt;
         }
 
         private void btnModifcarVersion_Click(object sender, EventArgs e)
@@ -64,20 +65,21 @@ namespace Pantallas_SIVAA
             version.CamaraTrasera = verificacion(rbCamaraSi, rbCamaraNo);
 
             log.Modificar(version);
-            Versiones versiones = new Versiones();
-            this.Hide();
+            Versiones versiones = new Versiones(_pqt);
+            this.Close();
             versiones.Show();
         }
 
         private void pictureBox13_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Login.inicio.Show();
+            this.Close();
+            Inicio inicio = new Inicio(_pqt);
+            inicio.Show();
         }
 
         private void btnPedidos_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             Inicio.Pedidos.Show();
         }
 
@@ -153,7 +155,7 @@ namespace Pantallas_SIVAA
 
             log.Registrar(version);
 
-            Versiones versiones = new Versiones();
+            Versiones versiones = new Versiones(_pqt);
             this.Hide();
             versiones.Show();
         }

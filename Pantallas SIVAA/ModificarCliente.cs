@@ -7,13 +7,13 @@ namespace Pantallas_SIVAA
     {
         ClienteLog log = new ClienteLog();
         Cliente cliente = new Cliente();
-        Clientes clientes = new Clientes();
         string id;
-
-        public ModificarCliente(string idCliente)
+        Empleado _pqt;
+        public ModificarCliente(string idCliente, Empleado pqt)
         {
             InitializeComponent();
             id = idCliente;
+            _pqt = pqt;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -32,14 +32,16 @@ namespace Pantallas_SIVAA
 
             log.Modificar(cliente);
 
-            this.Hide();
+            this.Close();
+            Clientes clientes = new Clientes(_pqt);
             clientes.Show();
         }
 
         private void pictureBox13_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Login.inicio.Show();
+            this.Close();
+            Inicio inico = new Inicio(_pqt);
+            inico.Show();
         }
 
         private void btnPedidos_Click(object sender, EventArgs e)
@@ -100,8 +102,6 @@ namespace Pantallas_SIVAA
             }
         }
 
-
-
-
+        
     }
 }

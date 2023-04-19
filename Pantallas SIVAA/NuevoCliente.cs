@@ -19,10 +19,11 @@ namespace Pantallas_SIVAA
     {
         ClienteLog clienteLog = new ClienteLog();
         Cliente cliente = new Cliente();
-
-        public NuevoCliente()
+        Empleado _pqt;
+        public NuevoCliente(Empleado pqt)
         {
             InitializeComponent();
+            _pqt = pqt;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -53,7 +54,7 @@ namespace Pantallas_SIVAA
                 clienteLog.Registrar(cliente);
 
                 this.Hide();
-                Clientes clientes = new Clientes();
+                Clientes clientes = new Clientes(_pqt);
                 clientes.Show();
 
 

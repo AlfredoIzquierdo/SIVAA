@@ -19,10 +19,11 @@ namespace Pantallas_SIVAA
         Cita cita = new Cita();
         EmpleadoLog empleado = new EmpleadoLog();
         CitaLog log = new CitaLog();
-
-        public NuevaCita()
+        Empleado _pqt;
+        public NuevaCita(Empleado pqt)
         {
             InitializeComponent();
+            _pqt = pqt;
         }
 
 
@@ -92,8 +93,9 @@ namespace Pantallas_SIVAA
 
         private void pictureBox13_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Clientes.nuevoCliente.Show();
+            this.Close();
+            NuevoCliente nuevoCliente = new NuevoCliente(_pqt);
+            nuevoCliente.Show();
         }
 
         private void NuevaCita_Load(object sender, EventArgs e)

@@ -17,12 +17,12 @@ namespace Pantallas_SIVAA
 {
     public partial class ConsultaCitas : Form
     {
-        public static NuevaCita nuevaCita = new NuevaCita();
         CitaLog log = new CitaLog();
-
-        public ConsultaCitas()
+        Empleado _pqt;
+        public ConsultaCitas(Empleado pqt)
         {
             InitializeComponent();
+            _pqt = pqt;
         }
 
         private void pictureBox13_Click(object sender, EventArgs e)
@@ -35,6 +35,7 @@ namespace Pantallas_SIVAA
         {
 
             this.Hide();
+            NuevaCita nuevaCita = new NuevaCita(_pqt);
             nuevaCita.Show();
         }
 
@@ -97,8 +98,9 @@ namespace Pantallas_SIVAA
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            nuevaCita.Show();
+        this.Hide();
+        NuevaCita nuevaCita = new NuevaCita(_pqt);
+        nuevaCita.Show();
         }
 
         private void ConsultaCitas_Load(object sender, EventArgs e)

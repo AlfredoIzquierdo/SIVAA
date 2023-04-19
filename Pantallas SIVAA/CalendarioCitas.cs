@@ -21,7 +21,6 @@ namespace Pantallas_SIVAA
 
 
         Empleado _pqt;
-        NuevaCita nuevaCita = new NuevaCita();
         readonly CitaLog citaLog = new CitaLog();
         String ID;
         string idCita = null;
@@ -125,7 +124,8 @@ namespace Pantallas_SIVAA
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
+            NuevaCita nuevaCita = new NuevaCita(_pqt);
             nuevaCita.Show();
         }
 

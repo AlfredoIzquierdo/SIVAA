@@ -15,7 +15,6 @@ namespace Pantallas_SIVAA
 {
     public partial class Clientes : Form
     {
-        public static NuevoCliente nuevoCliente = new NuevoCliente();
         readonly ClienteLog cliente = new ClienteLog();
         Empleado pqt;
         public Clientes(Empleado pqt)
@@ -32,8 +31,9 @@ namespace Pantallas_SIVAA
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            nuevoCliente.Show();
+        this.Hide();
+        NuevoCliente nuevoCliente = new NuevoCliente(pqt);
+        nuevoCliente.Show();
         }
 
         private void pictureBox9_Click(object sender, EventArgs e)
@@ -42,7 +42,7 @@ namespace Pantallas_SIVAA
             if (dataGridView1.SelectedRows.Count == 1)
             {
                 id = dataGridView1[0, dataGridView1.SelectedRows[0].Index].Value.ToString();
-                ModificarCliente modificarCliente = new ModificarCliente(id);
+                ModificarCliente modificarCliente = new ModificarCliente(id,pqt);
                 this.Hide();
                 modificarCliente.Show();
             }

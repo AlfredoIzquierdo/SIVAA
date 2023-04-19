@@ -18,7 +18,7 @@ namespace Pantallas_SIVAA
 {
     public partial class Versiones : Form
     {
-        public static AgregarVersion agregarVersion = new AgregarVersion();
+        public static AgregarVersion agregarVersion = new AgregarVersion(null);
         readonly VersionLog version = new VersionLog();
         Empleado _pqt;
         public Versiones(Empleado pqt)
@@ -29,8 +29,9 @@ namespace Pantallas_SIVAA
 
         private void pictureBox13_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Login.inicio.Show();
+            this.Close();
+            Inicio inicio = new Inicio(_pqt);
+            inicio.Show();
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)
@@ -45,7 +46,7 @@ namespace Pantallas_SIVAA
             if (dataGridView1.SelectedRows.Count == 1)
             {
                 id = dataGridView1[0, dataGridView1.SelectedRows[0].Index].Value.ToString();
-                ModificarVersion modificarVehiculo = new ModificarVersion(id);
+                ModificarVersion modificarVehiculo = new ModificarVersion(id, _pqt);
                 this.Hide();
                 modificarVehiculo.Show();
             }
@@ -57,8 +58,9 @@ namespace Pantallas_SIVAA
 
         private void btnPedidos_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Pedidos.Show();
+            this.Close();
+            GestionarPedidos pedidos = new GestionarPedidos(_pqt);
+            pedidos.Show();
         }
 
         private void btnStock_Click(object sender, EventArgs e)
@@ -233,5 +235,7 @@ namespace Pantallas_SIVAA
             ReporteVersiones rp = new ReporteVersiones(listas);
             rp.Show();
         }
+
+        
     }
 }

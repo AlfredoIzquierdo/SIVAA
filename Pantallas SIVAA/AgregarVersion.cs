@@ -20,7 +20,6 @@ namespace Pantallas_SIVAA
         Versions version = new Versions();
         VersionLog log = new VersionLog();
         VehiculoLog veh = new VehiculoLog();
-        Versiones versiones = new Versiones();
 
         Empleado _pqt;
         public AgregarVersion(Empleado pqt)
@@ -121,7 +120,8 @@ namespace Pantallas_SIVAA
             log.Registrar(version);
 
 
-            this.Hide();
+            this.Close();
+            Versiones versiones = new Versiones(_pqt);
             versiones.Show();
         }
 
