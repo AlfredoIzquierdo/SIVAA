@@ -285,7 +285,7 @@ namespace Pantallas_SIVAA
             numericUpDown3.Value = int.Parse(mes);
             string an = DateTime.Now.ToString("yyyy");
             numericUpDown4.Value = int.Parse(an);
-            switch (_pqt.Tipo.Trim())
+            /*switch (_pqt.Tipo.Trim())
             {
                 case "Atencion":
                     // Funciones activas: Citas e inventario
@@ -327,7 +327,7 @@ namespace Pantallas_SIVAA
                     lblTipoEmpleado.Text = _pqt.Tipo;
                     lblNombre.Text = "Bienvenido: " + _pqt.Nombre + " " + _pqt.ApellidoPat;
                     break;
-            }
+            }*/
         }
 
         private void btnCliente_Click(object sender, EventArgs e)
@@ -1000,7 +1000,8 @@ namespace Pantallas_SIVAA
                             //MessageBox.Show("Cambio de estatus exitoso en la B.D \r\n\r\n Estatus = " + est);
 
                             k++;
-                            btncompraven.Enabled = true;
+                            //btncompraven.Enabled = true;
+                            btnContratoCompraVenta.Enabled = true;
                             //Limpiar();
                         }
                     }
@@ -1064,6 +1065,7 @@ namespace Pantallas_SIVAA
                             k++;
 
                             btncompraven.Enabled = true;
+
                             //Limpiar();
                         }
 
@@ -1076,6 +1078,7 @@ namespace Pantallas_SIVAA
                 }
             }
             btnFacturaEntrega.Enabled = true;
+            btnContratoCompraVenta.Enabled = true;
             //LimpiarEntregas();
         }
 

@@ -366,22 +366,21 @@
             // 
             // btnReportes
             // 
-            this.btnReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(101)))), ((int)(((byte)(143)))));
-            this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportes.ForeColor = System.Drawing.Color.White;
-            this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnReportes.ImageKey = "bar-chart.png";
-            this.btnReportes.ImageList = this.imageList2;
-            this.btnReportes.Location = new System.Drawing.Point(0, 471);
-            this.btnReportes.Margin = new System.Windows.Forms.Padding(1);
-            this.btnReportes.Name = "btnReportes";
-            this.btnReportes.Size = new System.Drawing.Size(100, 95);
-            this.btnReportes.TabIndex = 11;
-            this.btnReportes.Text = "Reportes";
-            this.btnReportes.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnReportes.UseVisualStyleBackColor = false;
-            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
+            btnReportes.BackColor = Color.FromArgb(82, 101, 143);
+            btnReportes.FlatStyle = FlatStyle.Flat;
+            btnReportes.ForeColor = Color.White;
+            btnReportes.ImageAlign = ContentAlignment.TopCenter;
+            btnReportes.ImageKey = "bar-chart.png";
+            btnReportes.ImageList = imageList2;
+            btnReportes.Location = new Point(0, 377);
+            btnReportes.Margin = new Padding(1);
+            btnReportes.Name = "btnReportes";
+            btnReportes.Size = new Size(80, 76);
+            btnReportes.TabIndex = 11;
+            btnReportes.Text = "Reportes";
+            btnReportes.TextAlign = ContentAlignment.BottomCenter;
+            btnReportes.TextImageRelation = TextImageRelation.ImageAboveText;
+            btnReportes.UseVisualStyleBackColor = false;
             // 
             // imageList2
             // 
@@ -398,100 +397,99 @@
             // 
             // btnCobros
             // 
-            this.btnCobros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(101)))), ((int)(((byte)(143)))));
-            this.btnCobros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCobros.ForeColor = System.Drawing.Color.White;
-            this.btnCobros.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCobros.ImageKey = "dollar-sign.png";
-            this.btnCobros.ImageList = this.imageList2;
-            this.btnCobros.Location = new System.Drawing.Point(0, 379);
-            this.btnCobros.Margin = new System.Windows.Forms.Padding(1);
-            this.btnCobros.Name = "btnCobros";
-            this.btnCobros.Size = new System.Drawing.Size(100, 95);
-            this.btnCobros.TabIndex = 10;
-            this.btnCobros.Text = "Cobros";
-            this.btnCobros.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnCobros.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnCobros.UseVisualStyleBackColor = false;
-            this.btnCobros.Click += new System.EventHandler(this.btnCobros_Click);
+            btnCobros.BackColor = Color.FromArgb(82, 101, 143);
+            btnCobros.FlatStyle = FlatStyle.Flat;
+            btnCobros.ForeColor = Color.White;
+            btnCobros.ImageAlign = ContentAlignment.TopCenter;
+            btnCobros.ImageKey = "dollar-sign.png";
+            btnCobros.ImageList = imageList2;
+            btnCobros.Location = new Point(0, 303);
+            btnCobros.Margin = new Padding(1);
+            btnCobros.Name = "btnCobros";
+            btnCobros.Size = new Size(80, 76);
+            btnCobros.TabIndex = 10;
+            btnCobros.Text = "Cobros";
+            btnCobros.TextAlign = ContentAlignment.BottomCenter;
+            btnCobros.TextImageRelation = TextImageRelation.ImageAboveText;
+            btnCobros.UseVisualStyleBackColor = false;
+            btnCobros.Click += btnCobros_Click;
             // 
             // btnVentas
             // 
-            this.btnVentas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(101)))), ((int)(((byte)(143)))));
-            this.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVentas.ForeColor = System.Drawing.Color.White;
-            this.btnVentas.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnVentas.ImageKey = "shopping-cart.png";
-            this.btnVentas.ImageList = this.imageList2;
-            this.btnVentas.Location = new System.Drawing.Point(0, 281);
-            this.btnVentas.Margin = new System.Windows.Forms.Padding(1);
-            this.btnVentas.Name = "btnVentas";
-            this.btnVentas.Size = new System.Drawing.Size(100, 95);
-            this.btnVentas.TabIndex = 9;
-            this.btnVentas.Text = "Ventas";
-            this.btnVentas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnVentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnVentas.UseVisualStyleBackColor = false;
-            this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
+            btnVentas.BackColor = Color.FromArgb(82, 101, 143);
+            btnVentas.FlatStyle = FlatStyle.Flat;
+            btnVentas.ForeColor = Color.White;
+            btnVentas.ImageAlign = ContentAlignment.TopCenter;
+            btnVentas.ImageKey = "shopping-cart.png";
+            btnVentas.ImageList = imageList2;
+            btnVentas.Location = new Point(0, 225);
+            btnVentas.Margin = new Padding(1);
+            btnVentas.Name = "btnVentas";
+            btnVentas.Size = new Size(80, 76);
+            btnVentas.TabIndex = 9;
+            btnVentas.Text = "Ventas";
+            btnVentas.TextAlign = ContentAlignment.BottomCenter;
+            btnVentas.TextImageRelation = TextImageRelation.ImageAboveText;
+            btnVentas.UseVisualStyleBackColor = false;
+            btnVentas.Click += btnVentas_Click;
             // 
             // btnCitas
             // 
-            this.btnCitas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(101)))), ((int)(((byte)(143)))));
-            this.btnCitas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCitas.ForeColor = System.Drawing.Color.White;
-            this.btnCitas.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCitas.ImageKey = "calendar.png";
-            this.btnCitas.ImageList = this.imageList2;
-            this.btnCitas.Location = new System.Drawing.Point(0, 189);
-            this.btnCitas.Margin = new System.Windows.Forms.Padding(1);
-            this.btnCitas.Name = "btnCitas";
-            this.btnCitas.Size = new System.Drawing.Size(100, 95);
-            this.btnCitas.TabIndex = 8;
-            this.btnCitas.Text = "Citas";
-            this.btnCitas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnCitas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnCitas.UseVisualStyleBackColor = false;
-            this.btnCitas.Click += new System.EventHandler(this.btnCitas_Click);
+            btnCitas.BackColor = Color.FromArgb(82, 101, 143);
+            btnCitas.FlatStyle = FlatStyle.Flat;
+            btnCitas.ForeColor = Color.White;
+            btnCitas.ImageAlign = ContentAlignment.TopCenter;
+            btnCitas.ImageKey = "calendar.png";
+            btnCitas.ImageList = imageList2;
+            btnCitas.Location = new Point(0, 151);
+            btnCitas.Margin = new Padding(1);
+            btnCitas.Name = "btnCitas";
+            btnCitas.Size = new Size(80, 76);
+            btnCitas.TabIndex = 8;
+            btnCitas.Text = "Citas";
+            btnCitas.TextAlign = ContentAlignment.BottomCenter;
+            btnCitas.TextImageRelation = TextImageRelation.ImageAboveText;
+            btnCitas.UseVisualStyleBackColor = false;
             // 
             // btnStock
             // 
-            this.btnStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(101)))), ((int)(((byte)(143)))));
-            this.btnStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStock.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnStock.ForeColor = System.Drawing.Color.White;
-            this.btnStock.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnStock.ImageKey = "book-open.png";
-            this.btnStock.ImageList = this.imageList2;
-            this.btnStock.Location = new System.Drawing.Point(0, 91);
-            this.btnStock.Margin = new System.Windows.Forms.Padding(1);
-            this.btnStock.Name = "btnStock";
-            this.btnStock.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnStock.Size = new System.Drawing.Size(100, 95);
-            this.btnStock.TabIndex = 7;
-            this.btnStock.Text = "Inventario";
-            this.btnStock.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnStock.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnStock.UseVisualStyleBackColor = false;
-            this.btnStock.Click += new System.EventHandler(this.btnStock_Click);
+            btnStock.BackColor = Color.FromArgb(82, 101, 143);
+            btnStock.FlatStyle = FlatStyle.Flat;
+            btnStock.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
+            btnStock.ForeColor = Color.White;
+            btnStock.ImageAlign = ContentAlignment.TopCenter;
+            btnStock.ImageKey = "book-open.png";
+            btnStock.ImageList = imageList2;
+            btnStock.Location = new Point(0, 73);
+            btnStock.Margin = new Padding(1);
+            btnStock.Name = "btnStock";
+            btnStock.RightToLeft = RightToLeft.No;
+            btnStock.Size = new Size(80, 76);
+            btnStock.TabIndex = 7;
+            btnStock.Text = "Inventario";
+            btnStock.TextAlign = ContentAlignment.BottomCenter;
+            btnStock.TextImageRelation = TextImageRelation.ImageAboveText;
+            btnStock.UseVisualStyleBackColor = false;
+            btnStock.Click += btnStock_Click;
             // 
             // btnPedidos
             // 
-            this.btnPedidos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(101)))), ((int)(((byte)(143)))));
-            this.btnPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPedidos.ForeColor = System.Drawing.Color.White;
-            this.btnPedidos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnPedidos.ImageKey = "package.png";
-            this.btnPedidos.ImageList = this.imageList2;
-            this.btnPedidos.Location = new System.Drawing.Point(0, -1);
-            this.btnPedidos.Margin = new System.Windows.Forms.Padding(1);
-            this.btnPedidos.Name = "btnPedidos";
-            this.btnPedidos.Size = new System.Drawing.Size(100, 95);
-            this.btnPedidos.TabIndex = 6;
-            this.btnPedidos.Text = "Pedidos";
-            this.btnPedidos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnPedidos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnPedidos.UseVisualStyleBackColor = false;
-            this.btnPedidos.Click += new System.EventHandler(this.btnPedidos_Click);
+            btnPedidos.BackColor = Color.FromArgb(82, 101, 143);
+            btnPedidos.FlatStyle = FlatStyle.Flat;
+            btnPedidos.ForeColor = Color.White;
+            btnPedidos.ImageAlign = ContentAlignment.TopCenter;
+            btnPedidos.ImageKey = "package.png";
+            btnPedidos.ImageList = imageList2;
+            btnPedidos.Location = new Point(0, -1);
+            btnPedidos.Margin = new Padding(1);
+            btnPedidos.Name = "btnPedidos";
+            btnPedidos.Size = new Size(80, 76);
+            btnPedidos.TabIndex = 6;
+            btnPedidos.Text = "Pedidos";
+            btnPedidos.TextAlign = ContentAlignment.BottomCenter;
+            btnPedidos.TextImageRelation = TextImageRelation.ImageAboveText;
+            btnPedidos.UseVisualStyleBackColor = false;
+            btnPedidos.Click += btnPedidos_Click;
             // 
             // tabControl1
             // 
@@ -572,17 +570,17 @@
             // 
             // btncompraven
             // 
-            this.btncompraven.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(58)))), ((int)(((byte)(86)))));
-            this.btncompraven.Enabled = false;
-            this.btncompraven.ForeColor = System.Drawing.Color.White;
-            this.btncompraven.Location = new System.Drawing.Point(1314, 349);
-            this.btncompraven.Margin = new System.Windows.Forms.Padding(4);
-            this.btncompraven.Name = "btncompraven";
-            this.btncompraven.Size = new System.Drawing.Size(231, 60);
-            this.btncompraven.TabIndex = 125;
-            this.btncompraven.Text = "Generar contrato compra - venta";
-            this.btncompraven.UseVisualStyleBackColor = false;
-            this.btncompraven.Click += new System.EventHandler(this.btncompraven_Click);
+            btncompraven.BackColor = Color.FromArgb(51, 58, 86);
+            btncompraven.Enabled = false;
+            btncompraven.ForeColor = Color.White;
+            btncompraven.Location = new Point(1051, 279);
+            btncompraven.Name = "btncompraven";
+            btncompraven.Size = new Size(185, 48);
+            btncompraven.TabIndex = 125;
+            btncompraven.Text = "Generar contrato compra - venta";
+            btncompraven.UseVisualStyleBackColor = false;
+            btncompraven.Visible = false;
+            btncompraven.Click += btncompraven_Click;
             // 
             // btnpagare
             // 
@@ -1359,18 +1357,16 @@
             // 
             // btnContratoCompraVenta
             // 
-            this.btnContratoCompraVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(58)))), ((int)(((byte)(86)))));
-            this.btnContratoCompraVenta.Enabled = false;
-            this.btnContratoCompraVenta.ForeColor = System.Drawing.Color.White;
-            this.btnContratoCompraVenta.Location = new System.Drawing.Point(1446, 239);
-            this.btnContratoCompraVenta.Margin = new System.Windows.Forms.Padding(4);
-            this.btnContratoCompraVenta.Name = "btnContratoCompraVenta";
-            this.btnContratoCompraVenta.Size = new System.Drawing.Size(189, 60);
-            this.btnContratoCompraVenta.TabIndex = 140;
-            this.btnContratoCompraVenta.Text = "Comtrato compra venta";
-            this.btnContratoCompraVenta.UseVisualStyleBackColor = false;
-            this.btnContratoCompraVenta.Visible = false;
-            this.btnContratoCompraVenta.Click += new System.EventHandler(this.btnContratoCompraVenta_Click);
+            btnContratoCompraVenta.BackColor = Color.FromArgb(51, 58, 86);
+            btnContratoCompraVenta.Enabled = false;
+            btnContratoCompraVenta.ForeColor = Color.White;
+            btnContratoCompraVenta.Location = new Point(1157, 191);
+            btnContratoCompraVenta.Name = "btnContratoCompraVenta";
+            btnContratoCompraVenta.Size = new Size(151, 48);
+            btnContratoCompraVenta.TabIndex = 140;
+            btnContratoCompraVenta.Text = "Comtrato compra venta";
+            btnContratoCompraVenta.UseVisualStyleBackColor = false;
+            btnContratoCompraVenta.Click += btnContratoCompraVenta_Click;
             // 
             // btnFacturaEntrega
             // 
@@ -1802,42 +1798,42 @@
             // 
             // tabCotizacion
             // 
-            this.tabCotizacion.Controls.Add(this.tabControl4);
-            this.tabCotizacion.Controls.Add(this.TXTIDEMPCOT);
-            this.tabCotizacion.Controls.Add(this.pictureBox1);
-            this.tabCotizacion.Controls.Add(this.comboAno);
-            this.tabCotizacion.Controls.Add(this.comboColor);
-            this.tabCotizacion.Controls.Add(this.ComboVersion1);
-            this.tabCotizacion.Controls.Add(this.comboVehiculo);
-            this.tabCotizacion.Controls.Add(this.btnGuardarCot);
-            this.tabCotizacion.Controls.Add(this.TXTAPELLIDO);
-            this.tabCotizacion.Controls.Add(this.TXTNOMBRE);
-            this.tabCotizacion.Controls.Add(this.numericanocot);
-            this.tabCotizacion.Controls.Add(this.numericmescot);
-            this.tabCotizacion.Controls.Add(this.numericdiacot);
-            this.tabCotizacion.Controls.Add(this.rbtnConCot);
-            this.tabCotizacion.Controls.Add(this.rbtnCredCot);
-            this.tabCotizacion.Controls.Add(this.label18);
-            this.tabCotizacion.Controls.Add(this.label19);
-            this.tabCotizacion.Controls.Add(this.label20);
-            this.tabCotizacion.Controls.Add(this.label21);
-            this.tabCotizacion.Controls.Add(this.label22);
-            this.tabCotizacion.Controls.Add(this.label23);
-            this.tabCotizacion.Controls.Add(this.txPrecioCot);
-            this.tabCotizacion.Controls.Add(this.txthoracot);
-            this.tabCotizacion.Controls.Add(this.TXTIDCLIENTE);
-            this.tabCotizacion.Controls.Add(this.pictureBox6);
-            this.tabCotizacion.Controls.Add(this.pictureBox15);
-            this.tabCotizacion.Controls.Add(this.pictureBox16);
-            this.tabCotizacion.Controls.Add(this.pictureBox17);
-            this.tabCotizacion.Location = new System.Drawing.Point(4, 34);
-            this.tabCotizacion.Margin = new System.Windows.Forms.Padding(4);
-            this.tabCotizacion.Name = "tabCotizacion";
-            this.tabCotizacion.Padding = new System.Windows.Forms.Padding(4);
-            this.tabCotizacion.Size = new System.Drawing.Size(1641, 627);
-            this.tabCotizacion.TabIndex = 2;
-            this.tabCotizacion.Text = "Cotizacion";
-            this.tabCotizacion.UseVisualStyleBackColor = true;
+            tabCotizacion.Controls.Add(tabControl4);
+            tabCotizacion.Controls.Add(TXTIDEMPCOT);
+            tabCotizacion.Controls.Add(pictureBox1);
+            tabCotizacion.Controls.Add(comboAno);
+            tabCotizacion.Controls.Add(comboColor);
+            tabCotizacion.Controls.Add(ComboVersion1);
+            tabCotizacion.Controls.Add(comboVehiculo);
+            tabCotizacion.Controls.Add(btnGuardarCot);
+            tabCotizacion.Controls.Add(TXTAPELLIDO);
+            tabCotizacion.Controls.Add(TXTNOMBRE);
+            tabCotizacion.Controls.Add(numericanocot);
+            tabCotizacion.Controls.Add(numericmescot);
+            tabCotizacion.Controls.Add(numericdiacot);
+            tabCotizacion.Controls.Add(rbtnConCot);
+            tabCotizacion.Controls.Add(rbtnCredCot);
+            tabCotizacion.Controls.Add(label18);
+            tabCotizacion.Controls.Add(label19);
+            tabCotizacion.Controls.Add(label20);
+            tabCotizacion.Controls.Add(label21);
+            tabCotizacion.Controls.Add(label22);
+            tabCotizacion.Controls.Add(label23);
+            tabCotizacion.Controls.Add(txPrecioCot);
+            tabCotizacion.Controls.Add(txthoracot);
+            tabCotizacion.Controls.Add(TXTIDCLIENTE);
+            tabCotizacion.Controls.Add(pictureBox6);
+            tabCotizacion.Controls.Add(pictureBox15);
+            tabCotizacion.Controls.Add(pictureBox16);
+            tabCotizacion.Controls.Add(pictureBox17);
+            tabCotizacion.Location = new Point(4, 29);
+            tabCotizacion.Name = "tabCotizacion";
+            tabCotizacion.Padding = new Padding(3);
+            tabCotizacion.Size = new Size(1311, 499);
+            tabCotizacion.TabIndex = 2;
+            tabCotizacion.Text = "Cotizacion";
+            tabCotizacion.UseVisualStyleBackColor = true;
+            tabCotizacion.Enter += tabCotizacion_Enter_1;
             // 
             // tabControl4
             // 

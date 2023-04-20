@@ -172,7 +172,15 @@ namespace Pantallas_SIVAA
             e.Graphics.DrawImage(bitmap, 0, 0);
         }
 
-       
+        private void c_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Factura_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

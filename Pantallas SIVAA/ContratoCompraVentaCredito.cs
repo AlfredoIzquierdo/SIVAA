@@ -55,6 +55,11 @@ namespace Pantallas_SIVAA
             lblcombus.Text = versiondoc.TipoCombustible;
             lblmodelo.Text = modelo.Año;
             lblnombre.Text = vehiculo.Nombre;
+            lblnoserie.Text = pqtvent.NoSerie.ToString().Trim();
+            UnidadLog uni = new UnidadLog();
+            Unidad un;
+            un = uni.LeerPorClave(pqtvent.NoSerie.ToString());
+            lblcolor.Text = un.Color.ToString();
             //final
             lblenganche.Text = cotizacion1.Enganche.ToString();
             lblplazo.Text = cotizacion1.Plazo.ToString();
