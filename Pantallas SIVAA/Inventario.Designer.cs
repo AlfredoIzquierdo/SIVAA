@@ -456,6 +456,7 @@
             this.btnConsultar.TabIndex = 60;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = false;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // pictureBox1
             // 
