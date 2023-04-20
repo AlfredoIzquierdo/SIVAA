@@ -291,13 +291,9 @@ namespace Pantallas_SIVAA
                         dataGridView1.Rows.Add(x.IDEmpleado, x.Nombre, x.ApellidoPat, x.ApellidoMat, x.Correo, x.Telefono, x.RFC, x.Contraseña, x.Tipo);
 
                     }
-
-
                 }
             }
 
         }
-
-
     }
 }

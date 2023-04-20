@@ -210,6 +210,14 @@ namespace Pantallas_SIVAA
             citas.Show();
         }
 
-        
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            int dia = monthCalendar1.SelectionRange.Start.Day;
+            int mes = monthCalendar1.SelectionRange.Start.Month;
+            int año = monthCalendar1.SelectionRange.Start.Year;
+            lblDia.Text = monthCalendar1.SelectionRange.Start.Day.ToString();
+            lblMes.Text = monthCalendar1.SelectionRange.Start.Month.ToString();
+            lblAño.Text = monthCalendar1.SelectionRange.Start.Year.ToString();
+        }
     }
 }

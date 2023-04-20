@@ -233,5 +233,6 @@ namespace Pantallas_SIVAA
             CalendarioCitas citas = new CalendarioCitas(_pqt);
             citas.Show();
         }
+
     }
 }

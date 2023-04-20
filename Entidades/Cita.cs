@@ -15,5 +15,6 @@ namespace Entidades
         public int Mes { get; set; }
         public int Año { get; set; }
         public string Hora { get; set; }
+        public string EstadoCita { get; set; }
     }
 }

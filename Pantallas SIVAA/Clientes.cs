@@ -229,7 +229,14 @@ namespace Pantallas_SIVAA
         {
 
         }
+        private bool isFormBorderStyleNone = false;
+        private bool isFormBorderStyleChanged = false;
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            Bitmap bitmap = new Bitmap(this.Width, this.Height);
+            this.DrawToBitmap(bitmap, new Rectangle(0, 0, this.Width, this.Height));
+            e.Graphics.DrawImage(bitmap, 0, 0);
 
-      
+        }
     }
 }

@@ -18,7 +18,7 @@ namespace Datos
             {
                 //Abrir la conexión y crear el Query
                 Cnx.Open();
-                string CdSql = "INSERT INTO Cita (IDCita,IDEmpleado,IDCliente,Dia,Mes,Año,Hora) VALUES (@Ci,@Em,@C,@D,@M,@A,@H)";
+                string CdSql = "INSERT INTO Cita (IDCita,IDEmpleado,IDCliente,Dia,Mes,Año,Hora,EstadoCita) VALUES (@Ci,@Em,@C,@D,@M,@A,@H,'Activa')";
                 using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))//SolicitA: la cadena de SQL y la conexeión
                 {
                     //Añadir los parámetros
@@ -63,7 +63,8 @@ namespace Datos
                             Dia = Convert.ToInt32(Dr["Dia"]),
                             Mes = Convert.ToInt32(Dr["Mes"]),
                             Año = Convert.ToInt32(Dr["Año"]),
-                            Hora = Convert.ToString(Dr["Hora"])
+                            Hora = Convert.ToString(Dr["Hora"]),
+                            EstadoCita = Convert.ToString(Dr["EstadoCita"])
                         };
                         productos.Add(Pqte);
                     }
@@ -73,6 +74,21 @@ namespace Datos
             return productos;
         }
 
+        public void EliminarDesaparecer(string CodPqt)
+        {
+            using (SqlConnection Cnx = new SqlConnection(CdCnx))
+            {
+                Cnx.Open();
+                string CdSql = "Update Cita Set EstadoCita='Inactivo' WHERE IDCita=@Cl";
+                using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
+                {
+                    Cmd.Parameters.AddWithValue("@Cl", CodPqt);
+                    Cmd.ExecuteNonQuery();
+                    Cmd.Dispose();
+                }
+                Cnx.Close();
+            }
+        }
         public Cita ObtenerPdto(string CodPqt)
         {
             //Using que crea la conexión
@@ -97,7 +113,8 @@ namespace Datos
                             Dia = Convert.ToInt32(Dr["Dia"]),
                             Mes = Convert.ToInt32(Dr["Mes"]),
                             Año = Convert.ToInt32(Dr["Año"]),
-                            Hora = Convert.ToString(Dr["Hora"])
+                            Hora = Convert.ToString(Dr["Hora"]),
+                            EstadoCita = Convert.ToString(Dr["EstadoCita"])
                         };
                         return Pqte;
                     }
@@ -137,7 +154,7 @@ namespace Datos
                     Cmd.Parameters.AddWithValue("@App", Pqte.IDCliente);
                     Cmd.Parameters.AddWithValue("@Apm", Pqte.Dia);
                     Cmd.Parameters.AddWithValue("@Rfc", Pqte.Mes);
-                    Cmd.Parameters.AddWithValue("@Cr", Pqte.Año);
+                    Cmd.Parameters.AddWithValue("@Cr", Pqte.Año); 
                     Cmd.ExecuteNonQuery();
                     //Borrar variable cmd de la memoria
                     Cmd.Dispose();

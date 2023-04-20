@@ -207,9 +207,6 @@ namespace Datos
                 }
                 Cnx.Close();
             }
-
-
-
         }
 
         public void Actualizar(Empleado Pqte)
