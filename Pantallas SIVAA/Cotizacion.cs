@@ -1,4 +1,6 @@
-﻿using Entidades;
+﻿using Datos;
+using Entidades;
+using Logicas;
 using Pantallas_SIVAA.Pedidos;
 using System;
 using System.Collections.Generic;
@@ -15,6 +17,8 @@ namespace Pantallas_SIVAA
     public partial class Cotizacion : Form
     {
         Empleado _pqt;
+        readonly ClienteLog cliente = new ClienteLog();
+        List<Cliente> listas;
         public Cotizacion(Empleado pqt)
         {
             InitializeComponent();
@@ -79,6 +83,13 @@ namespace Pantallas_SIVAA
 
         private void Cotizacion_Load(object sender, EventArgs e)
         {
+            dataGridView1.ClearSelection();
+            List<Cliente> clie = cliente.ListadoAll();
+            foreach (Cliente x in clie)
+            {
+                if (x.EstadoCliente == "Activo")
+                    dataGridView1.Rows.Add(x.IDCliente, x.Nombre, x.ApellidoPat, x.ApellidoMat, x.RFC, x.Correo, x.Telefono, x.NoExterior, x.Colonia, x.Ciudad, x.Estado);
+            }
             switch (_pqt.Tipo.Trim())
             {
                 case "Atencion":
@@ -121,6 +132,52 @@ namespace Pantallas_SIVAA
                     lblTipoEmpleado.Text = _pqt.Tipo;
                     lblNombre.Text = "Bienvenido: " + _pqt.Nombre + " " + _pqt.ApellidoPat;
                     break;
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtBusqueda.Text))
+            {
+                MessageBox.Show("Llene el campo busqueda");
+            }
+            else
+            {
+                List<Cliente> datos = new List<Cliente>();
+
+                datos = cliente.ListadoEspecifico(txtBusqueda.Text, comboBusqueda.Text);
+                listas = datos;
+                dataGridView1.Rows.Clear();
+                foreach (Cliente x in datos)
+                {
+                    dataGridView1.Rows.Add(x.IDCliente, x.Nombre, x.ApellidoPat, x.ApellidoMat, x.RFC, x.Correo, x.Telefono, x.NoExterior, x.Colonia, x.Ciudad, x.Estado);
+                }
+
+            }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            lblIDCliente.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString().Trim();
+            string nombreCompleto = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString().Trim();
+            nombreCompleto+= dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString().Trim();
+            nombreCompleto += dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString().Trim();
+            lblNomreCompleto.Text = nombreCompleto;
+
+        }
+
+        private void comboBusqueda_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtBusqueda.Enabled = true;
+            if (comboBusqueda.Text == "Todos")
+            {
+                txtBusqueda.Enabled = false;
+                dataGridView1.ClearSelection();
+                List<Cliente> clie = cliente.ListadoAll();
+                foreach (Cliente x in clie)
+                {
+                    dataGridView1.Rows.Add(x.IDCliente, x.Nombre, x.ApellidoPat, x.ApellidoMat, x.RFC, x.Correo, x.Telefono, x.NoExterior, x.Colonia, x.Ciudad, x.Estado);
+                }
             }
         }
     }
