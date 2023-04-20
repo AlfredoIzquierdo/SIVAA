@@ -44,28 +44,28 @@ namespace Pantallas_SIVAA
                     {
                         //MessageBox.Show("Atencion a clientes");
                         Inicio AteInicio = new Inicio(pqt);
-                        this.Hide();
+                        this.Close();
                         AteInicio.Show();
                     }
                     else if (pqt.Tipo.Trim() == "Vendedor")
                     {
                         //MessageBox.Show("Vendedor");
                         Inicio VenInicio = new Inicio(pqt);
-                        this.Hide();
+                        this.Close();
                         VenInicio.Show();
                     }
                     else if (pqt.Tipo.Trim() == "Cajero")
                     {
                         //MessageBox.Show("Cajero");
                         AbrirCaja CajInicio = new AbrirCaja(pqt);
-                        this.Hide();
+                        this.Close();
                         CajInicio.Show();
                     }
                     else if (pqt.Tipo.Trim() == "Supervisor")
                     {
                         //MessageBox.Show("Supervisor");
                         Inicio SupInicio = new Inicio(pqt);
-                        this.Hide();
+                        this.Close();
                         SupInicio.Show();
                     }
                     //else
@@ -102,28 +102,28 @@ namespace Pantallas_SIVAA
                     {
                         //MessageBox.Show("Atencion a clientes");
                         Inicio AteInicio = new Inicio(pqt);
-                        this.Hide();
+                        this.Close();
                         AteInicio.Show();
                     }
                     else if (pqt.Tipo.Trim() == "Vendedor")
                     {
                         //MessageBox.Show("Vendedor");
                         Inicio VenInicio = new Inicio(pqt);
-                        this.Hide();
+                        this.Close();
                         VenInicio.Show();
                     }
                     else if (pqt.Tipo.Trim() == "Cajero")
                     {
                         //MessageBox.Show("Cajero");
                         AbrirCaja CajInicio = new AbrirCaja(pqt);
-                        this.Hide();
+                        this.Close();
                         CajInicio.Show();
                     }
                     else if (pqt.Tipo.Trim() == "Supervisor")
                     {
                         //MessageBox.Show("Supervisor");
                         Inicio SupInicio = new Inicio(pqt);
-                        this.Hide();
+                        this.Close();
                         SupInicio.Show();
                     }
                     //else
@@ -141,7 +141,7 @@ namespace Pantallas_SIVAA
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Hide();
+            this.Close();
             ContraseñaOlvidada contra = new ContraseñaOlvidada();
             contra.Show();
         }

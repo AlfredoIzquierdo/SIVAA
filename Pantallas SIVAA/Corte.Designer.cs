@@ -79,7 +79,7 @@
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(3686, 49);
+            this.label4.Location = new System.Drawing.Point(3780, 49);
             this.label4.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(96, 25);
@@ -105,7 +105,7 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(3668, 15);
+            this.label1.Location = new System.Drawing.Point(3762, 15);
             this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(109, 32);
@@ -206,6 +206,7 @@
             // 
             this.btnStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(101)))), ((int)(((byte)(143)))));
             this.btnStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStock.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnStock.ForeColor = System.Drawing.Color.White;
             this.btnStock.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnStock.ImageKey = "book-open.png";
@@ -264,7 +265,7 @@
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.comboBox2);
-            this.panel3.Location = new System.Drawing.Point(549, 111);
+            this.panel3.Location = new System.Drawing.Point(543, 115);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(706, 59);
@@ -342,7 +343,7 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(1496, 391);
+            this.dataGridView1.Size = new System.Drawing.Size(1496, 572);
             this.dataGridView1.TabIndex = 68;
             // 
             // Column1
@@ -462,10 +463,10 @@
             this.panel7.Controls.Add(this.pictureBox13);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.ForeColor = System.Drawing.Color.White;
-            this.panel7.Location = new System.Drawing.Point(94, 0);
+            this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1554, 95);
+            this.panel7.Size = new System.Drawing.Size(1648, 95);
             this.panel7.TabIndex = 63;
             // 
             // lblTipoEmpleado
@@ -473,7 +474,7 @@
             this.lblTipoEmpleado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTipoEmpleado.AutoSize = true;
             this.lblTipoEmpleado.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTipoEmpleado.Location = new System.Drawing.Point(1306, 61);
+            this.lblTipoEmpleado.Location = new System.Drawing.Point(1400, 61);
             this.lblTipoEmpleado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTipoEmpleado.Name = "lblTipoEmpleado";
             this.lblTipoEmpleado.Size = new System.Drawing.Size(96, 25);
@@ -485,7 +486,7 @@
             this.lblNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblNombre.Location = new System.Drawing.Point(1224, 20);
+            this.lblNombre.Location = new System.Drawing.Point(1318, 20);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(255, 32);
@@ -502,11 +503,10 @@
             this.panel1.Controls.Add(this.btnCitas);
             this.panel1.Controls.Add(this.btnStock);
             this.panel1.Controls.Add(this.btnPedidos);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(2, 97);
             this.panel1.Margin = new System.Windows.Forms.Padding(1, 4, 1, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(94, 604);
+            this.panel1.Size = new System.Drawing.Size(94, 687);
             this.panel1.TabIndex = 64;
             // 
             // Corte
@@ -514,7 +514,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1648, 604);
+            this.ClientSize = new System.Drawing.Size(1648, 785);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel7);

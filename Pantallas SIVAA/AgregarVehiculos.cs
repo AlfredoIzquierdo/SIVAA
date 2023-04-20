@@ -84,7 +84,7 @@ namespace Pantallas_SIVAA
             vehiculo.Nombre = txtNombre.Text;
             vehiculoLog.Registrar(vehiculo);
             MessageBox.Show("Agregado" + i.ToString());
-            this.Hide();
+            this.Close();
             Vehiculos vehiculos = new Vehiculos(_pqt);
             vehiculos.Show();
         }

@@ -366,6 +366,7 @@
             // 
             this.btnStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(101)))), ((int)(((byte)(143)))));
             this.btnStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStock.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnStock.ForeColor = System.Drawing.Color.White;
             this.btnStock.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnStock.ImageKey = "book-open.png";
@@ -374,7 +375,7 @@
             this.btnStock.Name = "btnStock";
             this.btnStock.Size = new System.Drawing.Size(100, 95);
             this.btnStock.TabIndex = 7;
-            this.btnStock.Text = "Stock";
+            this.btnStock.Text = "Inventario";
             this.btnStock.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnStock.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnStock.UseVisualStyleBackColor = false;

@@ -109,7 +109,7 @@ namespace Pantallas_SIVAA.Proovedores
 
             MessageBox.Show("Vas a modificar los datos de un empleado ¿estas seguro de esto?", "Modificacion de empleado", MessageBoxButtons.OKCancel);
 
-            this.Hide();
+            this.Close();
             this.proveedor.Show();
         }
 

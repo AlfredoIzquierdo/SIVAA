@@ -130,7 +130,7 @@ namespace Pantallas_SIVAA
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             NuevaCita nuevaCita = new NuevaCita(_pqt);
             nuevaCita.Show();
         }
@@ -371,7 +371,6 @@ namespace Pantallas_SIVAA
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             ReporteCitas r = new ReporteCitas(listas);
-            //this.Hide();
             r.Show();
         }
 

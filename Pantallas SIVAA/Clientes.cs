@@ -45,7 +45,7 @@ namespace Pantallas_SIVAA
             {
                 id = dataGridView1[0, dataGridView1.SelectedRows[0].Index].Value.ToString();
                 ModificarCliente modificarCliente = new ModificarCliente(id, _pqt);
-                this.Hide();
+                this.Close();
                 modificarCliente.Show();
             }
             else
@@ -100,7 +100,6 @@ namespace Pantallas_SIVAA
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             ReporteClientes r = new ReporteClientes(listas);
-            //this.Hide();
             r.Show();
         }
 

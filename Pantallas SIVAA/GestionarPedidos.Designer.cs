@@ -147,6 +147,7 @@
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox13.TabIndex = 2;
             this.pictureBox13.TabStop = false;
+            this.pictureBox13.Click += new System.EventHandler(this.pictureBox13_Click);
             // 
             // panel1
             // 
@@ -292,7 +293,7 @@
             // 
             this.pictureBox11.Image = global::Pantallas_SIVAA.Properties.Resources.x;
             this.pictureBox11.Location = new System.Drawing.Point(259, 126);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(54, 51);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -304,7 +305,7 @@
             // 
             this.pictureBox9.Image = global::Pantallas_SIVAA.Properties.Resources.edit_2;
             this.pictureBox9.Location = new System.Drawing.Point(198, 126);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(54, 51);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -316,7 +317,7 @@
             // 
             this.pictureBox8.Image = global::Pantallas_SIVAA.Properties.Resources.file_plus;
             this.pictureBox8.Location = new System.Drawing.Point(136, 126);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(54, 51);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -397,7 +398,7 @@
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = global::Pantallas_SIVAA.Properties.Resources.printer;
             this.pictureBox2.Location = new System.Drawing.Point(321, 126);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(68, 51);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -413,7 +414,7 @@
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.comboBox2);
             this.panel3.Location = new System.Drawing.Point(666, 131);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(708, 59);
             this.panel3.TabIndex = 53;
@@ -425,7 +426,7 @@
             this.button1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Location = new System.Drawing.Point(539, 4);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(148, 46);
             this.button1.TabIndex = 103;
@@ -440,7 +441,7 @@
             this.txtbusqueda.Enabled = false;
             this.txtbusqueda.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.txtbusqueda.Location = new System.Drawing.Point(321, 12);
-            this.txtbusqueda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtbusqueda.Margin = new System.Windows.Forms.Padding(4);
             this.txtbusqueda.Name = "txtbusqueda";
             this.txtbusqueda.PlaceholderText = "Ingrese su busqueda";
             this.txtbusqueda.Size = new System.Drawing.Size(213, 31);
@@ -472,7 +473,7 @@
             "Importe mayor a",
             "Importe menor a "});
             this.comboBox2.Location = new System.Drawing.Point(122, 15);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(174, 33);
             this.comboBox2.TabIndex = 55;

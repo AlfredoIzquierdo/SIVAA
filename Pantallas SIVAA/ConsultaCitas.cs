@@ -37,7 +37,7 @@ namespace Pantallas_SIVAA
         private void pictureBox8_Click_1(object sender, EventArgs e)
         {
 
-            this.Hide();
+            this.Close();
             nuevaCita.Show();
         }
 
@@ -48,7 +48,7 @@ namespace Pantallas_SIVAA
             {
                 id = dataGridView1[0, dataGridView1.SelectedRows[0].Index].Value.ToString();
                 ModificarCita editar = new ModificarCita(id,_pqt);
-                this.Hide();
+                this.Close();
                 editar.Show();
             }
             else

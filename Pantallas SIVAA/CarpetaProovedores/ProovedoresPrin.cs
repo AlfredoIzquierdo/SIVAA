@@ -23,6 +23,7 @@ namespace Pantallas_SIVAA
         public ProovedoresPrin(Empleado pqt)
         {
             InitializeComponent();
+            this.pictureBox13.Click += new System.EventHandler(this.pictureBox13_Click);
             _pqt = pqt;
         }
 
@@ -30,14 +31,14 @@ namespace Pantallas_SIVAA
         private void pictureBox8_Click(object sender, EventArgs e)
         {
             AgregarProovedor agregarprov = new AgregarProovedor(_pqt);
-            this.Hide();
+            this.Close();
             agregarprov.Show();
         }
 
         private void pictureBox13_Click(object sender, EventArgs e)
         {
-            Inicio inicio = new Inicio();
-            this.Hide();
+            Inicio inicio = new Inicio(_pqt);
+            this.Close();
             inicio.Show();
         }
 
@@ -48,7 +49,7 @@ namespace Pantallas_SIVAA
             {
                 id = dataGridView1[0, dataGridView1.SelectedRows[0].Index].Value.ToString();
                 EditarProovedores modificarEmpleado = new EditarProovedores(id,_pqt);
-                this.Hide();
+                this.Close();
                 modificarEmpleado.Show();
             }
             else
@@ -61,41 +62,41 @@ namespace Pantallas_SIVAA
         private void btnPedidos_Click(object sender, EventArgs e)
         {
             GestionarPedidos pedidos = new GestionarPedidos(_pqt);
-            this.Hide();
+            this.Close();
             pedidos.Show();
         }
 
         private void btnStock_Click(object sender, EventArgs e)
         {
             Inventario stock = new Inventario(_pqt);
-            this.Hide();
+            this.Close();
             stock.Show();
         }
 
         private void btnCitas_Click(object sender, EventArgs e)
         {
             ConsultaCitas citas = new ConsultaCitas(_pqt);
-            this.Hide();
+            this.Close();
             citas.Show();
         }
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
             Ventas ventas = new Ventas(_pqt);
-            this.Hide();
+            this.Close();
             ventas.Show();
         }
 
         private void btnCobros_Click(object sender, EventArgs e)
         {
             CorteDeCaja corte = new CorteDeCaja(_pqt);
-            this.Hide();
+            this.Close();
             corte.Show();
         }
 
         private void btnReportes_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             Reportes reportes = new Reportes(_pqt);
             reportes.Show();
         }
@@ -224,71 +225,10 @@ namespace Pantallas_SIVAA
             return productos;
         }
 
-        private void comboversion_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtbusqueda_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             ReporteProveedores pr = new ReporteProveedores(listas);
             pr.Show();
-        }
-
-        
-        private void btnPedidos_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnVentas_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnCobros_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnReportes_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox8_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox9_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-
         }
     }
 }

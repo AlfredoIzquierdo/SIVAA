@@ -59,7 +59,7 @@ namespace Pantallas_SIVAA
             {
                 id = dataGridView1[0, dataGridView1.SelectedRows[0].Index].Value.ToString();
                 ModificarEmpleado modificarEmpleado = new ModificarEmpleado(id,_pqt);
-                this.Hide();
+                this.Close();
                 modificarEmpleado.Show();
             }
             else
@@ -187,7 +187,7 @@ namespace Pantallas_SIVAA
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             ReporteEmpleados r = new ReporteEmpleados(lista);
-            //this.Hide();
+            //this.Close();
             r.Show();
         }
 
@@ -293,6 +293,11 @@ namespace Pantallas_SIVAA
                     }
                 }
             }
+
+        }
+
+        private void pictureBox13_Click_1(object sender, EventArgs e)
+        {
 
         }
     }

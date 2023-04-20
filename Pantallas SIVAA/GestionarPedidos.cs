@@ -53,7 +53,7 @@ namespace Pantallas_SIVAA.Pedidos
             {
                 id = dataGridView1[0, dataGridView1.SelectedRows[0].Index].Value.ToString();
                 EditarPedidos editar = new EditarPedidos(id, _pqt);
-                this.Hide();
+                this.Close();
                 editar.Show();
             }
             else

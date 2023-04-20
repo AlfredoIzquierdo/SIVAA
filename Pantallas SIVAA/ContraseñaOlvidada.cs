@@ -56,7 +56,7 @@ namespace Pantallas_SIVAA
                     {
                         MessageBox.Show("Contraseña actualizada con exito");
                         Login login = new Login();
-                        this.Hide();
+                        this.Close();
                         login.Show();
                         Cmd.Dispose();
                     }
@@ -68,7 +68,7 @@ namespace Pantallas_SIVAA
         private void label6_Click(object sender, EventArgs e)
         {
             Login login = new Login();
-            this.Hide();
+            this.Close();
             login.Show();
         }
 
