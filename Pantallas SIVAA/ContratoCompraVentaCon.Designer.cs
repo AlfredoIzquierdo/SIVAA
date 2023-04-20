@@ -83,6 +83,7 @@
             lblclien1 = new Label();
             pictureBox1 = new PictureBox();
             printDialog1 = new PrintDialog();
+            printDocument1 = new System.Drawing.Printing.PrintDocument();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -112,7 +113,7 @@
             label20.AutoSize = true;
             label20.Location = new Point(18, 387);
             label20.Name = "label20";
-            label20.Size = new Size(1035, 320);
+            label20.Size = new Size(1002, 320);
             label20.TabIndex = 169;
             label20.Text = resources.GetString("label20.Text");
             // 
@@ -120,7 +121,7 @@
             // 
             lblcombus.AutoSize = true;
             lblcombus.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            lblcombus.Location = new Point(940, 147);
+            lblcombus.Location = new Point(830, 181);
             lblcombus.Name = "lblcombus";
             lblcombus.Size = new Size(33, 20);
             lblcombus.TabIndex = 168;
@@ -528,7 +529,7 @@
             // lblnomven3
             // 
             lblnomven3.AutoSize = true;
-            lblnomven3.Location = new Point(910, 745);
+            lblnomven3.Location = new Point(816, 745);
             lblnomven3.Name = "lblnomven3";
             lblnomven3.Size = new Size(33, 20);
             lblnomven3.TabIndex = 177;
@@ -537,7 +538,7 @@
             // label25
             // 
             label25.AutoSize = true;
-            label25.Location = new Point(782, 765);
+            label25.Location = new Point(688, 765);
             label25.Name = "label25";
             label25.Size = new Size(285, 20);
             label25.TabIndex = 176;
@@ -546,7 +547,7 @@
             // lblnomven2
             // 
             lblnomven2.AutoSize = true;
-            lblnomven2.Location = new Point(833, 789);
+            lblnomven2.Location = new Point(739, 789);
             lblnomven2.Name = "lblnomven2";
             lblnomven2.Size = new Size(189, 20);
             lblnomven2.TabIndex = 175;
@@ -582,7 +583,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.print_FILL0_wght400_GRAD0_opsz48;
-            pictureBox1.Location = new Point(1002, 10);
+            pictureBox1.Location = new Point(954, 13);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(56, 51);
             pictureBox1.TabIndex = 184;
@@ -593,12 +594,22 @@
             // 
             printDialog1.UseEXDialog = true;
             // 
+            // printDocument1
+            // 
+            printDocument1.BeginPrint += printDocument1_BeginPrint;
+            printDocument1.EndPrint += printDocument1_EndPrint;
+            printDocument1.PrintPage += printDocument1_PrintPage_1;
+            // 
             // ContratoCompraVentaCon
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1068, 844);
+            ClientSize = new Size(1022, 844);
+            Controls.Add(lblenganche);
+            Controls.Add(lblnomclien);
+            Controls.Add(lbltotalven);
+            Controls.Add(lblnomven);
             Controls.Add(pictureBox1);
             Controls.Add(label21);
             Controls.Add(lblano);
@@ -613,7 +624,6 @@
             Controls.Add(label22);
             Controls.Add(lblclien1);
             Controls.Add(pictureBox2);
-            Controls.Add(lblenganche);
             Controls.Add(label20);
             Controls.Add(lblcombus);
             Controls.Add(lbltrans);
@@ -647,9 +657,6 @@
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
-            Controls.Add(lblnomclien);
-            Controls.Add(lblnomven);
-            Controls.Add(lbltotalven);
             Controls.Add(label1);
             Controls.Add(label2);
             Margin = new Padding(2);
@@ -718,5 +725,6 @@
         private Label lblclien1;
         private PictureBox pictureBox1;
         private PrintDialog printDialog1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }

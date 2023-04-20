@@ -163,6 +163,7 @@
             label17 = new Label();
             label15 = new Label();
             label14 = new Label();
+            printDocument1 = new System.Drawing.Printing.PrintDocument();
             panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -234,26 +235,27 @@
             panel6.Location = new Point(2, 618);
             panel6.Margin = new Padding(3, 4, 3, 4);
             panel6.Name = "panel6";
-            panel6.Size = new Size(936, 300);
+            panel6.Size = new Size(1016, 300);
             panel6.TabIndex = 22;
             // 
             // pictureBox4
             // 
             pictureBox4.Anchor = AnchorStyles.None;
             pictureBox4.Image = Properties.Resources.print_FILL0_wght400_GRAD0_opsz48;
-            pictureBox4.Location = new Point(627, 227);
+            pictureBox4.Location = new Point(667, 227);
             pictureBox4.Margin = new Padding(3, 4, 3, 4);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(55, 60);
             pictureBox4.TabIndex = 235;
             pictureBox4.TabStop = false;
+            pictureBox4.Click += pictureBox4_Click;
             // 
             // label72
             // 
             label72.Anchor = AnchorStyles.None;
             label72.AutoSize = true;
             label72.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label72.Location = new Point(812, 267);
+            label72.Location = new Point(852, 267);
             label72.Name = "label72";
             label72.Size = new Size(104, 28);
             label72.TabIndex = 234;
@@ -264,7 +266,7 @@
             label73.Anchor = AnchorStyles.None;
             label73.AutoSize = true;
             label73.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label73.Location = new Point(812, 229);
+            label73.Location = new Point(852, 229);
             label73.Name = "label73";
             label73.Size = new Size(104, 28);
             label73.TabIndex = 233;
@@ -275,7 +277,7 @@
             label74.Anchor = AnchorStyles.None;
             label74.AutoSize = true;
             label74.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label74.Location = new Point(812, 195);
+            label74.Location = new Point(852, 195);
             label74.Name = "label74";
             label74.Size = new Size(104, 28);
             label74.TabIndex = 232;
@@ -286,7 +288,7 @@
             label75.Anchor = AnchorStyles.None;
             label75.AutoSize = true;
             label75.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label75.Location = new Point(695, 229);
+            label75.Location = new Point(735, 229);
             label75.Name = "label75";
             label75.Size = new Size(76, 28);
             label75.TabIndex = 231;
@@ -297,7 +299,7 @@
             label76.Anchor = AnchorStyles.None;
             label76.AutoSize = true;
             label76.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label76.Location = new Point(707, 195);
+            label76.Location = new Point(747, 195);
             label76.Name = "label76";
             label76.Size = new Size(91, 28);
             label76.TabIndex = 230;
@@ -308,7 +310,7 @@
             label77.Anchor = AnchorStyles.None;
             label77.AutoSize = true;
             label77.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label77.Location = new Point(764, 229);
+            label77.Location = new Point(804, 229);
             label77.Name = "label77";
             label77.Size = new Size(45, 28);
             label77.TabIndex = 228;
@@ -319,7 +321,7 @@
             label78.Anchor = AnchorStyles.None;
             label78.AutoSize = true;
             label78.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label78.Location = new Point(689, 267);
+            label78.Location = new Point(729, 267);
             label78.Name = "label78";
             label78.Size = new Size(128, 28);
             label78.TabIndex = 229;
@@ -329,7 +331,7 @@
             // 
             pictureBox1.Anchor = AnchorStyles.None;
             pictureBox1.Image = Properties.Resources.print_FILL0_wght400_GRAD0_opsz48;
-            pictureBox1.Location = new Point(1006, 337);
+            pictureBox1.Location = new Point(1046, 337);
             pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(55, 60);
@@ -341,7 +343,7 @@
             label51.Anchor = AnchorStyles.None;
             label51.AutoSize = true;
             label51.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label51.Location = new Point(1192, 377);
+            label51.Location = new Point(1232, 377);
             label51.Name = "label51";
             label51.Size = new Size(104, 28);
             label51.TabIndex = 226;
@@ -352,7 +354,7 @@
             label66.Anchor = AnchorStyles.None;
             label66.AutoSize = true;
             label66.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label66.Location = new Point(1192, 337);
+            label66.Location = new Point(1232, 337);
             label66.Name = "label66";
             label66.Size = new Size(104, 28);
             label66.TabIndex = 225;
@@ -363,7 +365,7 @@
             label67.Anchor = AnchorStyles.None;
             label67.AutoSize = true;
             label67.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label67.Location = new Point(1192, 305);
+            label67.Location = new Point(1232, 305);
             label67.Name = "label67";
             label67.Size = new Size(104, 28);
             label67.TabIndex = 224;
@@ -374,7 +376,7 @@
             label68.Anchor = AnchorStyles.None;
             label68.AutoSize = true;
             label68.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label68.Location = new Point(1074, 337);
+            label68.Location = new Point(1114, 337);
             label68.Name = "label68";
             label68.Size = new Size(76, 28);
             label68.TabIndex = 223;
@@ -385,7 +387,7 @@
             label69.Anchor = AnchorStyles.None;
             label69.AutoSize = true;
             label69.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label69.Location = new Point(1086, 305);
+            label69.Location = new Point(1126, 305);
             label69.Name = "label69";
             label69.Size = new Size(91, 28);
             label69.TabIndex = 222;
@@ -396,7 +398,7 @@
             label70.Anchor = AnchorStyles.None;
             label70.AutoSize = true;
             label70.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label70.Location = new Point(1144, 337);
+            label70.Location = new Point(1184, 337);
             label70.Name = "label70";
             label70.Size = new Size(45, 28);
             label70.TabIndex = 220;
@@ -407,7 +409,7 @@
             label71.Anchor = AnchorStyles.None;
             label71.AutoSize = true;
             label71.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label71.Location = new Point(1069, 377);
+            label71.Location = new Point(1109, 377);
             label71.Name = "label71";
             label71.Size = new Size(128, 28);
             label71.TabIndex = 221;
@@ -577,7 +579,7 @@
             // 
             pictureBox2.Anchor = AnchorStyles.None;
             pictureBox2.Image = Properties.Resources.print_FILL0_wght400_GRAD0_opsz48;
-            pictureBox2.Location = new Point(1373, 432);
+            pictureBox2.Location = new Point(1413, 432);
             pictureBox2.Margin = new Padding(3, 4, 3, 4);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(55, 60);
@@ -589,7 +591,7 @@
             lbltotalgeneral.Anchor = AnchorStyles.None;
             lbltotalgeneral.AutoSize = true;
             lbltotalgeneral.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lbltotalgeneral.Location = new Point(1558, 472);
+            lbltotalgeneral.Location = new Point(1598, 472);
             lbltotalgeneral.Name = "lbltotalgeneral";
             lbltotalgeneral.Size = new Size(104, 28);
             lbltotalgeneral.TabIndex = 41;
@@ -600,7 +602,7 @@
             label52.Anchor = AnchorStyles.None;
             label52.AutoSize = true;
             label52.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label52.Location = new Point(1558, 433);
+            label52.Location = new Point(1598, 433);
             label52.Name = "label52";
             label52.Size = new Size(104, 28);
             label52.TabIndex = 40;
@@ -611,7 +613,7 @@
             label54.Anchor = AnchorStyles.None;
             label54.AutoSize = true;
             label54.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label54.Location = new Point(1558, 400);
+            label54.Location = new Point(1598, 400);
             label54.Name = "label54";
             label54.Size = new Size(104, 28);
             label54.TabIndex = 39;
@@ -622,7 +624,7 @@
             label55.Anchor = AnchorStyles.None;
             label55.AutoSize = true;
             label55.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label55.Location = new Point(1441, 433);
+            label55.Location = new Point(1481, 433);
             label55.Name = "label55";
             label55.Size = new Size(76, 28);
             label55.TabIndex = 38;
@@ -633,7 +635,7 @@
             label56.Anchor = AnchorStyles.None;
             label56.AutoSize = true;
             label56.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label56.Location = new Point(1453, 400);
+            label56.Location = new Point(1493, 400);
             label56.Name = "label56";
             label56.Size = new Size(91, 28);
             label56.TabIndex = 37;
@@ -644,7 +646,7 @@
             label57.Anchor = AnchorStyles.None;
             label57.AutoSize = true;
             label57.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label57.Location = new Point(1510, 433);
+            label57.Location = new Point(1550, 433);
             label57.Name = "label57";
             label57.Size = new Size(45, 28);
             label57.TabIndex = 35;
@@ -655,7 +657,7 @@
             label60.Anchor = AnchorStyles.None;
             label60.AutoSize = true;
             label60.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label60.Location = new Point(1434, 472);
+            label60.Location = new Point(1474, 472);
             label60.Name = "label60";
             label60.Size = new Size(128, 28);
             label60.TabIndex = 36;
@@ -667,7 +669,7 @@
             panel9.Location = new Point(3, 4);
             panel9.Margin = new Padding(3, 4, 3, 4);
             panel9.Name = "panel9";
-            panel9.Size = new Size(931, 29);
+            panel9.Size = new Size(1011, 29);
             panel9.TabIndex = 34;
             // 
             // lbltotalgen
@@ -675,7 +677,7 @@
             lbltotalgen.Anchor = AnchorStyles.None;
             lbltotalgen.AutoSize = true;
             lbltotalgen.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lbltotalgen.Location = new Point(1890, 477);
+            lbltotalgen.Location = new Point(1930, 477);
             lbltotalgen.Name = "lbltotalgen";
             lbltotalgen.Size = new Size(104, 28);
             lbltotalgen.TabIndex = 27;
@@ -706,7 +708,7 @@
             lbliva.Anchor = AnchorStyles.None;
             lbliva.AutoSize = true;
             lbliva.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lbliva.Location = new Point(1890, 438);
+            lbliva.Location = new Point(1930, 438);
             lbliva.Name = "lbliva";
             lbliva.Size = new Size(104, 28);
             lbliva.TabIndex = 26;
@@ -717,7 +719,7 @@
             lblsubtotal.Anchor = AnchorStyles.None;
             lblsubtotal.AutoSize = true;
             lblsubtotal.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblsubtotal.Location = new Point(1890, 405);
+            lblsubtotal.Location = new Point(1930, 405);
             lblsubtotal.Name = "lblsubtotal";
             lblsubtotal.Size = new Size(104, 28);
             lblsubtotal.TabIndex = 25;
@@ -728,7 +730,7 @@
             label34.Anchor = AnchorStyles.None;
             label34.AutoSize = true;
             label34.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label34.Location = new Point(1773, 438);
+            label34.Location = new Point(1813, 438);
             label34.Name = "label34";
             label34.Size = new Size(76, 28);
             label34.TabIndex = 24;
@@ -739,7 +741,7 @@
             label31.Anchor = AnchorStyles.None;
             label31.AutoSize = true;
             label31.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label31.Location = new Point(1785, 405);
+            label31.Location = new Point(1825, 405);
             label31.Name = "label31";
             label31.Size = new Size(91, 28);
             label31.TabIndex = 23;
@@ -750,7 +752,7 @@
             label32.Anchor = AnchorStyles.None;
             label32.AutoSize = true;
             label32.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label32.Location = new Point(1842, 438);
+            label32.Location = new Point(1882, 438);
             label32.Name = "label32";
             label32.Size = new Size(45, 28);
             label32.TabIndex = 21;
@@ -761,7 +763,7 @@
             label33.Anchor = AnchorStyles.None;
             label33.AutoSize = true;
             label33.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label33.Location = new Point(1766, 477);
+            label33.Location = new Point(1806, 477);
             label33.Name = "label33";
             label33.Size = new Size(128, 28);
             label33.TabIndex = 22;
@@ -832,7 +834,7 @@
             panel4.Location = new Point(2, 295);
             panel4.Margin = new Padding(3, 4, 3, 4);
             panel4.Name = "panel4";
-            panel4.Size = new Size(931, 321);
+            panel4.Size = new Size(1016, 321);
             panel4.TabIndex = 21;
             // 
             // lblcostover
@@ -1206,7 +1208,7 @@
             panel7.Location = new Point(0, 0);
             panel7.Margin = new Padding(3, 4, 3, 4);
             panel7.Name = "panel7";
-            panel7.Size = new Size(940, 29);
+            panel7.Size = new Size(1024, 29);
             panel7.TabIndex = 34;
             // 
             // label48
@@ -1307,7 +1309,7 @@
             panel1.Location = new Point(2, 142);
             panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(922, 151);
+            panel1.Size = new Size(1026, 151);
             panel1.TabIndex = 20;
             // 
             // panel8
@@ -1317,7 +1319,7 @@
             panel8.Location = new Point(0, 3);
             panel8.Margin = new Padding(3, 4, 3, 4);
             panel8.Name = "panel8";
-            panel8.Size = new Size(920, 29);
+            panel8.Size = new Size(1019, 29);
             panel8.TabIndex = 34;
             // 
             // label43
@@ -1505,7 +1507,7 @@
             panel2.Location = new Point(3, 2);
             panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(644, 138);
+            panel2.Size = new Size(737, 138);
             panel2.TabIndex = 23;
             // 
             // label41
@@ -1600,7 +1602,7 @@
             panel3.Controls.Add(label17);
             panel3.Controls.Add(label15);
             panel3.Controls.Add(label14);
-            panel3.Location = new Point(653, 2);
+            panel3.Location = new Point(741, 3);
             panel3.Margin = new Padding(3, 4, 3, 4);
             panel3.Name = "panel3";
             panel3.Size = new Size(282, 138);
@@ -1685,12 +1687,18 @@
             label14.TabIndex = 16;
             label14.Text = "Fecha de expedicion";
             // 
+            // printDocument1
+            // 
+            printDocument1.BeginPrint += printDocument1_BeginPrint;
+            printDocument1.EndPrint += printDocument1_EndPrint;
+            printDocument1.PrintPage += printDocument1_PrintPage;
+            // 
             // FacturaCredito
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(927, 917);
+            ClientSize = new Size(1020, 928);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel6);
@@ -1858,5 +1866,6 @@
         private Label label76;
         private Label label77;
         private Label label78;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }

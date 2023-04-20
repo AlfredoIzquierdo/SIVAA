@@ -18,7 +18,8 @@ namespace Pantallas_SIVAA
         readonly ClienteLog PqteLog = new ClienteLog();
         readonly VentaCreditoLog PqteLog33 = new VentaCreditoLog();
         readonly PagareLog pagareLog = new Logicas.PagareLog();
-
+        private bool isFormBorderStyleNone = false;
+        private bool isFormBorderStyleChanged = false;
         public Pagare(Venta pqtVenta, VentaCredito pqtVentaC, string nombreclien, string apellidoclien)
         {
             InitializeComponent();
@@ -98,16 +99,17 @@ namespace Pantallas_SIVAA
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             // Crear un objeto PrintDocument
-            PrintDocument pd = new PrintDocument();
-
-            // Asociar el controlador de eventos PrintPage con el evento PrintDocument.PrintPage
-            pd.PrintPage += new PrintPageEventHandler(this.printDocument1_PrintPage);
-
-            // Llamar al cuadro de diálogo de impresión y imprimir el documento si el usuario hace clic en "Imprimir"
-            if (printDialog1.ShowDialog() == DialogResult.OK)
+            pictureBox1.Hide();
+            //Guardar el estado original de la propiedad "BorderStyle"
+            isFormBorderStyleNone = this.FormBorderStyle == FormBorderStyle.None;
+            isFormBorderStyleChanged = true;
+            if (!isFormBorderStyleNone)
             {
-                pd.Print();
+                this.FormBorderStyle = FormBorderStyle.None;
             }
+
+
+            printDocument1.Print();
         }
         private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
         {
@@ -119,6 +121,30 @@ namespace Pantallas_SIVAA
 
             // Dibujar el Bitmap en la página de impresión
             e.Graphics.DrawImage(bm, 0, 0);
+        }
+
+        private void printDocument1_BeginPrint(object sender, PrintEventArgs e)
+        {
+            printDocument1.DefaultPageSettings.Landscape = false;
+            printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Letter", 850, 1100);
+        }
+
+        private void printDocument1_EndPrint(object sender, PrintEventArgs e)
+        {
+            // Restablecer el estado original de la propiedad "BorderStyle"
+            if (isFormBorderStyleChanged)
+            {
+                this.FormBorderStyle = isFormBorderStyleNone ? FormBorderStyle.None : FormBorderStyle.FixedSingle;
+            }
+            pictureBox1.Show();
+        }
+
+        private void printDocument1_PrintPage_1(object sender, PrintPageEventArgs e)
+        {
+
+            Bitmap bitmap = new Bitmap(this.Width, this.Height);
+            this.DrawToBitmap(bitmap, new Rectangle(0, 0, this.Width, this.Height));
+            e.Graphics.DrawImage(bitmap, 0, 0);
         }
     }
 }

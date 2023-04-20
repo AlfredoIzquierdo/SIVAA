@@ -109,7 +109,7 @@ namespace Pantallas_SIVAA
         }
         Random rn = new Random();
 
-        int k = 230;
+        int k = 600;
         private void button1_Click(object sender, EventArgs e)
         {
             Venta pqt; ;
@@ -128,7 +128,7 @@ namespace Pantallas_SIVAA
                     pqt = new Venta
                     {
                         IDVenta = Convert.ToString("V" + k),
-                        IDEmpleado = Convert.ToString(TXTIDEMP.Text),
+                        IDEmpleado = Convert.ToString(TXTIDEMPCOT.Text),
                         NoSerie = "",
                         Dia = Convert.ToInt32(numericUpDown2.Value),
                         Mes = Convert.ToInt32(numericUpDown3.Value),
@@ -199,7 +199,7 @@ namespace Pantallas_SIVAA
                     pqt = new Venta
                     {
                         IDVenta = Convert.ToString("V" + k),
-                        IDEmpleado = Convert.ToString(TXTIDEMP.Text),
+                        IDEmpleado = Convert.ToString(TXTIDEMPCOT.Text),
                         NoSerie = "",
                         Dia = Convert.ToInt32(numericUpDown2.Value),
                         Mes = Convert.ToInt32(numericUpDown3.Value),
@@ -728,7 +728,7 @@ namespace Pantallas_SIVAA
                     pqt = new Venta
                     {
                         IDVenta = Convert.ToString("V" + k),
-                        IDEmpleado = Convert.ToString(TXTIDEMP.Text),
+                        IDEmpleado = Convert.ToString(TXTIDEMPCOT.Text),
                         NoSerie = "",
                         Dia = Convert.ToInt32(numericUpDown2.Value),
                         Mes = Convert.ToInt32(numericUpDown3.Value),
@@ -800,7 +800,7 @@ namespace Pantallas_SIVAA
                     pqt = new Venta
                     {
                         IDVenta = Convert.ToString("V" + k),
-                        IDEmpleado = Convert.ToString(TXTIDEMP.Text),
+                        IDEmpleado = Convert.ToString(TXTIDEMPCOT.Text),
                         NoSerie = "",
                         Dia = Convert.ToInt32(numericUpDown2.Value),
                         Mes = Convert.ToInt32(numericUpDown3.Value),
@@ -877,7 +877,7 @@ namespace Pantallas_SIVAA
             Venta pqt = new Venta
             {
                 IDVenta = Convert.ToString("V" + k),
-                IDEmpleado = Convert.ToString(TXTIDEMP.Text),
+                IDEmpleado = Convert.ToString(TXTIDEMPCOT.Text),
                 NoSerie = "",
                 Dia = Convert.ToInt32(numericUpDown2.Value),
                 Mes = Convert.ToInt32(numericUpDown3.Value),
@@ -893,11 +893,28 @@ namespace Pantallas_SIVAA
                 IDCotizacion = Convert.ToString(TXTCOT.Text),
                 Estatus = Convert.ToString("PENDIENTE"),
             };
+            VentaCredito Deb2 = new VentaCredito
+            {
+
+                IDVenta = Convert.ToString("V" + k),
+                IDCotizacion = Convert.ToString(TXTCOT.Text),
+                TotalFinal = Convert.ToDouble(double.Parse(TXTPRECIO.Text) * 1.10),
+                Estatus = Convert.ToString("PENDIENTE"),
+
+                //Estatus = Convert.ToString("PENDIENTE")
+
+            };
             //contado
             if (radioButton2.Checked == true)
             {
                 ContratoCompraVentaCon contratoCompraVentaCon = new ContratoCompraVentaCon(Deb, pqt, txtnom.Text, txtap.Text);
                 contratoCompraVentaCon.Show();
+            }
+            //credito
+            if (radioButton1.Checked == true)
+            {
+                ContratoCompraVentaCredito contratoCompraVentaCred = new ContratoCompraVentaCredito(Deb2, pqt, txtnom.Text, txtap.Text);
+                contratoCompraVentaCred.Show();
             }
         }
 
@@ -1309,7 +1326,7 @@ namespace Pantallas_SIVAA
             Venta pqt = new Venta
             {
                 IDVenta = Convert.ToString("V" + k),
-                IDEmpleado = Convert.ToString(TXTIDEMP.Text),
+                IDEmpleado = Convert.ToString(TXTIDEMPCOT.Text),
                 NoSerie = "",
                 Dia = Convert.ToInt32(numericUpDown2.Value),
                 Mes = Convert.ToInt32(numericUpDown3.Value),
@@ -1339,12 +1356,12 @@ namespace Pantallas_SIVAA
 
             if (radioButton2.Checked == true)
             {
-                Factura factura = new Factura(Deb, pqt, txtnom.Text, txtap.Text, TXTIDEMP.Text);
+                Factura factura = new Factura(Deb, pqt, txtnom.Text, txtap.Text, TXTIDEMPCOT.Text);
                 factura.Show();
             }
             if (radioButton1.Checked == true)
             {
-                FacturaCredito facturaCredito = new FacturaCredito(Deb2, pqt, txtnom.Text, txtap.Text, TXTIDEMP.Text);
+                FacturaCredito facturaCredito = new FacturaCredito(Deb2, pqt, txtnom.Text, txtap.Text, TXTIDEMPCOT.Text);
                 facturaCredito.Show();
             }
         }
@@ -1354,7 +1371,7 @@ namespace Pantallas_SIVAA
             Venta pqt = new Venta
             {
                 IDVenta = Convert.ToString("V" + k),
-                IDEmpleado = Convert.ToString(TXTIDEMP.Text),
+                IDEmpleado = Convert.ToString(TXTIDEMPCOT.Text),
                 NoSerie = "",
                 Dia = Convert.ToInt32(numericUpDown2.Value),
                 Mes = Convert.ToInt32(numericUpDown3.Value),
@@ -1557,6 +1574,7 @@ namespace Pantallas_SIVAA
 
         private void tabCotizacion_Enter(object sender, EventArgs e)
         {
+            TXTIDEMPCOT.Text = _pqt.IDEmpleado;
             comboVehiculo.SelectedItem = "March";
             ComboVersion1.SelectedItem = "SR";
             List<Unidad> Colores = new List<Unidad>();
@@ -1607,95 +1625,97 @@ namespace Pantallas_SIVAA
 
         private void btnGuardarCot_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(comboAno.Text) | string.IsNullOrEmpty(comboColor.Text) | string.IsNullOrEmpty(comboVehiculo.Text) | string.IsNullOrEmpty(ComboVersion1.Text))
+            if (string.IsNullOrEmpty(comboAno.Text) | string.IsNullOrEmpty(comboColor.Text) | string.IsNullOrEmpty(comboVehiculo.Text) | string.IsNullOrEmpty(ComboVersion1.Text) | string.IsNullOrEmpty(txtNomClien.Text) | string.IsNullOrEmpty(txtApClien.Text) | string.IsNullOrEmpty(TXTIDCLIENTE.Text))
             {
                 MessageBox.Show("Por favor llene todo los campos");
             }
             else
             {
+
                 Entidades.Cotizacion pqt;
                 CotizacionContado Deb;
                 CotizacionCredito Deb2;
                 k = rn.Next(250, 600);
-                if (!radioButton2.Checked && !radioButton1.Checked)
+                if (!rbtnConCot.Checked && !rbtnCredCot.Checked)
                 {
                     MessageBox.Show("Favor de selecionar un tipo de Cotizacion");
+
                     return;
                 }
-                if (radioButton2.Checked)
+                if (rbtnConCot.Checked)
                 {
                     Versions versionSeleccionada = PqteLog4.ObtenerVersionPrecio(ComboVersion1.Text, comboVehiculo.Text);
                     int pruebadia = (int)numericdiacot.Value;
-                    //try
-                    //{
-                    pqt = new Entidades.Cotizacion
+                    try
                     {
-                        IDCotizacion = Convert.ToString("CO" + k),
-                        IDVersion = versionSeleccionada.IDVersion.Trim(),
-                        IDCliente = Convert.ToString(TXTIDCLIENTE.Text),
-                        IDEmpleado = TXTIDEMP.Text,
-                        Dia = ((int)numericdiacot.Value),
-                        Mes = (int)(numericmescot.Value),
-                        Año = ((int)numericanocot.Value),
-                        PrecioInicial = Convert.ToDouble(txPrecioCot.Text),
-                        TipoPago = Convert.ToString("CONTADO"),
-                        Hora = "10:00:00"
-
-                    };
-                    PqteLog4.Registrar(pqt);
-
-                    if (PqteLog4.Mensaje.Length != 0)
-                    {
-                        //Hubo un error
-                        MessageBox.Show(PqteLog2.Mensaje.ToString(), "Mensaje de Error");
-                    }
-                    else
-                    {
-                        //MessageBox.Show("Venta guardada exitosamente en la B.D");
-                        //Limpiar();
-
-                        //Metodo de factura
-                        //vehiculosD[0] = txtVehiculo.Text;
-                        //vehiculosD[1] = txtVersion.Text;
-                        //vehiculosD[2] = txtAño.Text;
-                        //string id = txtid.Text;
-                        //Factura factura = new Factura(pqt, id, txtid.Text, TXTAPP.Text, TXTIDEMP.Text, vehiculosD);
-                        //factura.Show();
-                    }
-                    //Parte donde se guarda la venta a contado
-                    if (radioButton2.Checked && PqteLog4.Mensaje.Length == 0)
-                    {
-                        //double men = 0;
-                        //men = (double.Parse(txtTotal.Text) / (int)numericUpDown1.Value);
-                        //int c = int.Parse(txtCod.Text + 2);
-
-                        Deb = new CotizacionContado
+                        pqt = new Entidades.Cotizacion
                         {
                             IDCotizacion = Convert.ToString("CO" + k),
+                            IDVersion = versionSeleccionada.IDVersion.Trim(),
+                            IDCliente = Convert.ToString(TXTIDCLIENTE.Text),
+                            IDEmpleado = TXTIDEMPCOT.Text,
+                            Dia = ((int)numericdiacot.Value),
+                            Mes = (int)(numericmescot.Value),
+                            Año = ((int)numericanocot.Value),
+                            PrecioInicial = Convert.ToDouble(txPrecioCot.Text),
+                            TipoPago = Convert.ToString("CONTADO"),
+                            Hora = txthoracot.Text
 
                         };
-                        PqteLog7.Registrar(Deb);
-                        if (PqteLog3.Mensaje.Length != 0)
+                        PqteLog4.Registrar(pqt);
+
+                        if (PqteLog4.Mensaje.Length != 0)
                         {
                             //Hubo un error
-                            MessageBox.Show(PqteLog3.Mensaje.ToString(), "Mensaje de Error");
+                            MessageBox.Show(PqteLog2.Mensaje.ToString(), "Mensaje de Error");
                         }
                         else
                         {
-                            MessageBox.Show("Cotizacion guardada exitosamente en la B.D \r\n\r\n Folio de pago = " + Deb.IDCotizacion.ToString());
-                            k++;
-
+                            //MessageBox.Show("Venta guardada exitosamente en la B.D");
                             //Limpiar();
-                        }
-                    }
 
-                    //}
-                    // catch (Exception ex)
-                    //{
-                    //MessageBox.Show(String.Format("Error {0}", ex.Message, "Error inesperado "));
-                    //}
+                            //Metodo de factura
+                            //vehiculosD[0] = txtVehiculo.Text;
+                            //vehiculosD[1] = txtVersion.Text;
+                            //vehiculosD[2] = txtAño.Text;
+                            //string id = txtid.Text;
+                            //Factura factura = new Factura(pqt, id, txtid.Text, TXTAPP.Text, TXTIDEMP.Text, vehiculosD);
+                            //factura.Show();
+                        }
+                        //Parte donde se guarda la venta a contado
+                        if (rbtnConCot.Checked && PqteLog4.Mensaje.Length == 0)
+                        {
+                            //double men = 0;
+                            //men = (double.Parse(txtTotal.Text) / (int)numericUpDown1.Value);
+                            //int c = int.Parse(txtCod.Text + 2);
+
+                            Deb = new CotizacionContado
+                            {
+                                IDCotizacion = Convert.ToString("CO" + k),
+
+                            };
+                            PqteLog7.Registrar(Deb);
+                            if (PqteLog3.Mensaje.Length != 0)
+                            {
+                                //Hubo un error
+                                MessageBox.Show(PqteLog3.Mensaje.ToString(), "Mensaje de Error");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Cotizacion guardada exitosamente en la B.D \r\n\r\n Folio de pago = " + Deb.IDCotizacion.ToString());
+                                k++;
+
+                                //Limpiar();
+                            }
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(String.Format("Error {0}", ex.Message, "Error inesperado "));
+                    }
                 }
-                if (radioButton1.Checked)
+                if (rbtnCredCot.Checked)
                 {
                     Versions versionseleccionada = PqteLog4.ObtenerVersionPrecio(ComboVersion1.Text, comboVehiculo.Text);
                     try
@@ -1705,7 +1725,7 @@ namespace Pantallas_SIVAA
                             IDCotizacion = Convert.ToString("CO" + k),
                             IDVersion = versionseleccionada.IDVersion,
                             IDCliente = Convert.ToString(TXTIDCLIENTE.Text),
-                            IDEmpleado = TXTIDEMP.Text,
+                            IDEmpleado = TXTIDEMPCOT.Text,
                             Dia = Convert.ToInt32(numericdiacot.Value),
                             Mes = Convert.ToInt32(numericmescot.Value),
                             Año = Convert.ToInt32(numericanocot.Value),
@@ -1734,7 +1754,7 @@ namespace Pantallas_SIVAA
                             //factura.Show();
                         }
                         //Parte donde se guarda la venta a credito
-                        if (radioButton1.Checked && PqteLog2.Mensaje.Length == 0)
+                        if (rbtnCredCot.Checked && PqteLog2.Mensaje.Length == 0)
                         {
                             //double men = 0;
                             //men = (double.Parse(txtTotal.Text) / (int)numericUpDown1.Value);
@@ -1748,11 +1768,11 @@ namespace Pantallas_SIVAA
                                 Plazo = Convert.ToInt32(numericplazos.Value),
                                 Enganche = Convert.ToDouble(txtengancheCot.Text),
                                 Anualidad = Convert.ToDouble(txtanualidadCot.Text),
-                                Precio = Convert.ToDouble(double.Parse(TXTPRECIO.Text) * 1.10),
+                                Precio = Convert.ToDouble(txtFinanciamiento.Text) + Convert.ToDouble(txPrecioCot.Text),
                                 Interes = "10%",
                                 Mensualidad = Convert.ToDouble(txtmensualidadCot.Text),
                                 PorcentajeEnganche = Convert.ToString(numericporengan.Value),
-                                Financiamiento = (double.Parse(TXTPRECIO.Text) * 1.10) - Convert.ToDouble(txtengancheCot.Text)
+                                Financiamiento = Convert.ToDouble(txtFinanciamiento.Text)
 
                                 //Estatus = Convert.ToString("PENDIENTE")
 
@@ -1761,11 +1781,13 @@ namespace Pantallas_SIVAA
                             if (PqteLog6.Mensaje.Length != 0)
                             {
                                 //Hubo un error
-                                MessageBox.Show(PqteLog33.Mensaje.ToString(), "Mensaje de Error");
+                                MessageBox.Show(PqteLog6.Mensaje.ToString(), "Mensaje de Error");
                             }
                             else
                             {
                                 MessageBox.Show("Cotizacion guardada exitosamente en la B.D \r\n\r\n Folio de Cotizacion = " + Deb2.IDCotizacion.ToString());
+                                TablaAmortizacion tablaAmortizacion = new TablaAmortizacion("CO" + k);
+                                tablaAmortizacion.Show();
                                 k++;
 
                                 //Limpiar();
@@ -1783,7 +1805,9 @@ namespace Pantallas_SIVAA
 
         private void groupCotCred_EnabledChanged(object sender, EventArgs e)
         {
-            txtengancheCot.Text = ((Convert.ToDouble(numericporengan.Value) * 0.01) * double.Parse(TXTPRECIO.Text)).ToString();
+            CalcularEnganche();
+            CalcularFinanciamiento();
+            CalcularMensualidadAnualiad();
         }
 
         private void btnGuardarCot_Click_1(object sender, EventArgs e)
@@ -1816,7 +1840,7 @@ namespace Pantallas_SIVAA
                             IDCotizacion = Convert.ToString("CO" + k),
                             IDVersion = versionSeleccionada.IDVersion.Trim(),
                             IDCliente = Convert.ToString(TXTIDCLIENTE.Text),
-                            IDEmpleado = TXTIDEMP.Text,
+                            IDEmpleado = TXTIDEMPCOT.Text,
                             Dia = ((int)numericdiacot.Value),
                             Mes = (int)(numericmescot.Value),
                             Año = ((int)numericanocot.Value),
@@ -1888,7 +1912,7 @@ namespace Pantallas_SIVAA
                             IDCotizacion = Convert.ToString("CO" + k),
                             IDVersion = versionseleccionada.IDVersion,
                             IDCliente = Convert.ToString(TXTIDCLIENTE.Text),
-                            IDEmpleado = TXTIDEMP.Text,
+                            IDEmpleado = TXTIDEMPCOT.Text,
                             Dia = Convert.ToInt32(numericdiacot.Value),
                             Mes = Convert.ToInt32(numericmescot.Value),
                             Año = Convert.ToInt32(numericanocot.Value),
@@ -2205,7 +2229,7 @@ namespace Pantallas_SIVAA
 
         private void tabControl2_Click(object sender, EventArgs e)
         {
-            if(tabControl2.SelectedIndex == 2)
+            if (tabControl2.SelectedIndex == 2)
             {
                 if (radioButton2.Checked)
                 {
@@ -2216,6 +2240,11 @@ namespace Pantallas_SIVAA
                     mostrarcotizacionescredito();
                 }
             }
+        }
+
+        private void Ventas_Load_2(object sender, EventArgs e)
+        {
+
         }
 
         

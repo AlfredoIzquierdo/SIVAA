@@ -58,28 +58,32 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="label6.Text" xml:space="preserve">
-    <value>El(Los) suscritos(s)                                                                 (en adelante "EL(LOS) SUSCRIPTORES(ES)"),  por este pagare (en adelante "PAGARE"), promete incondicionalme,-
-te pagar a la orden de BBVA BANCOMER S.A, INSTITUCION DE BANCA MULTIPLE, GRUPO FINANCIERO BBVA BANCOMER, en lo sucesivo "BANCOMER", la suma principal de
-                    , mediante          amortizaciones mensuales iguales y sucesivas por la cantidad de                   cada una, exigibles y pagaderas cada una de ellas en la "FECHA DE 
-PAGO DE MENSUALIDAD" (segun este termino se define mas adelante) que corresponda, en la inteligencia que, el periodo de presentacion de este "PAGARE" se extiende 
+    <value>El(Los) suscritos(s)                                                                 (en adelante "EL(LOS) SUSCRIPTORES(ES)"),  por este pagare (en adelante "PAGARE"), 
+promete incondicionalmente pagar a la orden de BBVA BANCOMER S.A, INSTITUCION DE BANCA MULTIPLE, GRUPO FINANCIERO BBVA BAN
+COMER, en lo sucesivo "BANCOMER", la suma principal de                     , mediante          amortizaciones mensuales iguales y sucesivas por la can
+tidad de                   cada una, exigibles y pagaderas cada una de ellas en la "FECHA DE PAGO DE MENSUALIDAD" (segun este termino se define 
+mas adelante) que corresponda, en la inteligencia que, el periodo de presentacion de este "PAGARE" se extiende 
 hasta 180 dias despues de la fecha de vencimiento de la ultima de las amortizaciones de la suma principal de este "PAGARE".</value>
   </data>
   <data name="label5.Text" xml:space="preserve">
-    <value>A partir de la fecha de suscripcion del presente "PAGARE" y hasta su vencimiento, la suma principal insoluta  devengara intereses ordinarios, que seran pagaderos en cada 
-"FECHA DE PAGO DE MENSUALIDAD", a una tasa de interes anualizada del                             aplicable durante cada "PERIODO DE INTERESES".</value>
+    <value>A partir de la fecha de suscripcion del presente "PAGARE" y hasta su vencimiento, la suma principal insoluta  devengara intereses ordinarios, que 
+seran pagaderos en cada "FECHA DE PAGO DE MENSUALIDAD", a una tasa de interes anualizada del                             aplicable durante cada 
+"PERIODO DE INTERESES".</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
-    <value>Si "El (LOS SUSCRIPTORES)(ES)"  no realizan(n) cualquier pago en las fechas establecidas en el presente "PAGARE" por cualquier concepto, se dara por vencido en forma 
-anticipada y seran pagados de inmediatola suma principal y sus accesorios.
+    <value>Si "El (LOS SUSCRIPTORES)(ES)"  no realizan(n) cualquier pago en las fechas establecidas en el presente "PAGARE" por cualquier concepto, se dara 
+por vencido en forma anticipada y seran pagados de inmediatola suma principal y sus accesorios.
 
-La suma principal de este "PAGARE" y los intereses correspondientes al mismo se pagaran a "BANCOMER",en sus oficinas ubicadas en el lugar de suscripcion de este "P-
-AGARE" en la fecha en que deba hacerse pago correspondiente, en pesos moneda de curso legal en Mexico y fondos disponibles el mismo dia.
+La suma principal de este "PAGARE" y los intereses correspondientes al mismo se pagaran a "BANCOMER",en sus oficinas ubicadas en el lugar de 
+suscripcion de este "PAGARE" en la fecha en que deba hacerse pago correspondiente, en pesos moneda de curso legal en Mexico y fondos dispo
+nibles el mismo dia.
 
-En el supuesto de que cualquier pago conforme a este "PAGARE" debiere hacerse en un dia que no fuere un "DIA HABIL" (segun dicho termino se define a continuacion), 
-dicho pago se hara, en el "DIA HABIL" inmediato siguiente.
+En el supuesto de que cualquier pago conforme a este "PAGARE" debiere hacerse en un dia que no fuere un "DIA HABIL" (segun dicho termino se
+ define a continuacion),dicho pago se hara, en el "DIA HABIL" inmediato siguiente.
 
-La suma principal de este "PAGARE", asi como los intereses correspondientes al mismo, se pagaran libres de toda deduccion de impuestos, derechos, tributos, contribuc-
-iones,cargos, retenciones y cualquier responsabilidad fiscal, presenta o futura, respecto a las sumas pagaderas conforme a este "PAGARE"
+La suma principal de este "PAGARE", asi como los intereses correspondientes al mismo, se pagaran libres de toda deduccion de impuestos, derech
+os, tributos, contribucioniones,cargos, retenciones y cualquier responsabilidad fiscal, presenta o futura, respecto a las sumas pagaderas conforme a 
+este "PAGARE"
 
 </value>
   </data>
@@ -87,13 +91,16 @@ iones,cargos, retenciones y cualquier responsabilidad fiscal, presenta o futura,
     <value>----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</value>
   </data>
   <data name="label9.Text" xml:space="preserve">
-    <value>Para todo lo relativo al presente "PAGARE", "EL SUSCRIPTOR" y, en su caso, los de mas obligados cambiarios. se someten(n) a la juridisccion y competencias de los tribuna-
-les del lugar donde se firme el presente "PAGARE", en BAJA CALIFORNIA SUR a los         dias del mes de         del año     ,   a la eleccion de la parte actora, renunciando a cu
-alquier otro afuero o domicilio
+    <value>Para todo lo relativo al presente "PAGARE", "EL SUSCRIPTOR" y, en su caso, los de mas obligados cambiarios. se someten(n) a la juridisccion y compe
+tencias de los tribunales del lugar donde se firme el presente "PAGARE", en BAJA CALIFORNIA SUR a los         dias del mes de         del año     ,   a la 
+eleccion de la parte actora, renunciando a cualquier otro afuero o domicilio
 
 </value>
   </data>
   <metadata name="printDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
+  </metadata>
+  <metadata name="printDocument1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>158, 17</value>
   </metadata>
 </root>

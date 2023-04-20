@@ -178,7 +178,7 @@
             label25 = new Label();
             label26 = new Label();
             label27 = new Label();
-            TXTIDEMP = new TextBox();
+            TXTIDEMPCOT = new TextBox();
             pictureBox1 = new PictureBox();
             comboAno = new ComboBox();
             comboColor = new ComboBox();
@@ -1621,7 +1621,7 @@
             // tabCotizacion
             // 
             tabCotizacion.Controls.Add(tabControl4);
-            tabCotizacion.Controls.Add(TXTIDEMP);
+            tabCotizacion.Controls.Add(TXTIDEMPCOT);
             tabCotizacion.Controls.Add(pictureBox1);
             tabCotizacion.Controls.Add(comboAno);
             tabCotizacion.Controls.Add(comboColor);
@@ -1655,6 +1655,8 @@
             tabCotizacion.TabIndex = 2;
             tabCotizacion.Text = "Cotizacion";
             tabCotizacion.UseVisualStyleBackColor = true;
+            tabCotizacion.Click += tabCotizacion_Click;
+            tabCotizacion.Enter += tabCotizacion_Enter;
             // 
             // tabControl4
             // 
@@ -1709,6 +1711,7 @@
             btnBuscarClienteCot.TabIndex = 152;
             btnBuscarClienteCot.Text = "Buscar Cliente";
             btnBuscarClienteCot.UseVisualStyleBackColor = true;
+            btnBuscarClienteCot.Click += btnBuscarClienteCot_Click;
             // 
             // dgvClientCot
             // 
@@ -1724,6 +1727,7 @@
             dgvClientCot.RowTemplate.Height = 29;
             dgvClientCot.Size = new Size(449, 315);
             dgvClientCot.TabIndex = 155;
+            dgvClientCot.CellClick += dgvClientCot_CellClick;
             // 
             // dataGridViewTextBoxColumn7
             // 
@@ -1792,6 +1796,7 @@
             groupCotCred.TabIndex = 149;
             groupCotCred.TabStop = false;
             groupCotCred.Text = "Pago a credito";
+            groupCotCred.EnabledChanged += groupCotCred_EnabledChanged;
             // 
             // txtFinanciamiento
             // 
@@ -1819,6 +1824,7 @@
             numericporengan.Size = new Size(143, 27);
             numericporengan.TabIndex = 34;
             numericporengan.Value = new decimal(new int[] { 10, 0, 0, 0 });
+            numericporengan.ValueChanged += numericporengan_ValueChanged;
             // 
             // label28
             // 
@@ -1838,6 +1844,7 @@
             numericplazos.Size = new Size(143, 27);
             numericplazos.TabIndex = 28;
             numericplazos.Value = new decimal(new int[] { 12, 0, 0, 0 });
+            numericplazos.ValueChanged += numericplazos_ValueChanged;
             // 
             // txtmensualidadCot
             // 
@@ -1902,16 +1909,17 @@
             label27.TabIndex = 29;
             label27.Text = "Plazo:";
             // 
-            // TXTIDEMP
+            // TXTIDEMPCOT
             // 
-            TXTIDEMP.ForeColor = SystemColors.WindowFrame;
-            TXTIDEMP.Location = new Point(1097, 31);
-            TXTIDEMP.Margin = new Padding(3, 1, 3, 1);
-            TXTIDEMP.Name = "TXTIDEMP";
-            TXTIDEMP.PlaceholderText = "IdEmpleado";
-            TXTIDEMP.Size = new Size(129, 27);
-            TXTIDEMP.TabIndex = 161;
-            TXTIDEMP.Text = "E19";
+            TXTIDEMPCOT.Enabled = false;
+            TXTIDEMPCOT.ForeColor = SystemColors.WindowFrame;
+            TXTIDEMPCOT.Location = new Point(1097, 31);
+            TXTIDEMPCOT.Margin = new Padding(3, 1, 3, 1);
+            TXTIDEMPCOT.Name = "TXTIDEMPCOT";
+            TXTIDEMPCOT.PlaceholderText = "IdEmpleado";
+            TXTIDEMPCOT.Size = new Size(129, 27);
+            TXTIDEMPCOT.TabIndex = 161;
+            TXTIDEMPCOT.Text = "E19";
             // 
             // pictureBox1
             // 
@@ -1932,6 +1940,7 @@
             comboAno.Name = "comboAno";
             comboAno.Size = new Size(181, 28);
             comboAno.TabIndex = 159;
+            comboAno.SelectedValueChanged += comboAno_SelectedValueChanged;
             // 
             // comboColor
             // 
@@ -1941,6 +1950,7 @@
             comboColor.Name = "comboColor";
             comboColor.Size = new Size(181, 28);
             comboColor.TabIndex = 158;
+            comboColor.SelectedValueChanged += comboColor_SelectedValueChanged;
             // 
             // ComboVersion1
             // 
@@ -1951,6 +1961,7 @@
             ComboVersion1.Name = "ComboVersion1";
             ComboVersion1.Size = new Size(399, 28);
             ComboVersion1.TabIndex = 157;
+            ComboVersion1.SelectedValueChanged += ComboVersion1_SelectedValueChanged;
             // 
             // comboVehiculo
             // 
@@ -1961,6 +1972,7 @@
             comboVehiculo.Name = "comboVehiculo";
             comboVehiculo.Size = new Size(399, 28);
             comboVehiculo.TabIndex = 156;
+            comboVehiculo.SelectedValueChanged += comboVehiculo_SelectedValueChanged;
             // 
             // btnGuardarCot
             // 
@@ -1973,6 +1985,7 @@
             btnGuardarCot.TabIndex = 153;
             btnGuardarCot.Text = "Guardar";
             btnGuardarCot.UseVisualStyleBackColor = false;
+            btnGuardarCot.Click += btnGuardarCot_Click;
             // 
             // TXTAPELLIDO
             // 
@@ -2041,6 +2054,7 @@
             rbtnConCot.TabStop = true;
             rbtnConCot.Text = "Contado";
             rbtnConCot.UseVisualStyleBackColor = true;
+            rbtnConCot.CheckedChanged += rbtnConCot_CheckedChanged;
             // 
             // rbtnCredCot
             // 
@@ -2052,6 +2066,7 @@
             rbtnCredCot.TabIndex = 140;
             rbtnCredCot.Text = "Credito";
             rbtnCredCot.UseVisualStyleBackColor = true;
+            rbtnCredCot.CheckedChanged += rbtnCredCot_CheckedChanged;
             // 
             // label18
             // 
@@ -2269,6 +2284,7 @@
             Name = "Ventas";
             Text = "Ventas";
             WindowState = FormWindowState.Maximized;
+            Load += Ventas_Load_2;
             panel7.ResumeLayout(false);
             panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
@@ -2491,7 +2507,7 @@
         private ComboBox comboVehiculo;
         private ComboBox comboAno;
         private ComboBox comboColor;
-        private TextBox TXTIDEMP;
+        private TextBox TXTIDEMPCOT;
         private PictureBox pictureBox1;
         private NumericUpDown numericporengan;
         private Label label28;

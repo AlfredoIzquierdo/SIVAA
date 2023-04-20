@@ -84,6 +84,7 @@
             label22 = new Label();
             lblclien1 = new Label();
             printDialog1 = new PrintDialog();
+            printDocument1 = new System.Drawing.Printing.PrintDocument();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -111,7 +112,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.print_FILL0_wght400_GRAD0_opsz48;
-            pictureBox1.Location = new Point(994, 24);
+            pictureBox1.Location = new Point(937, 24);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(56, 51);
             pictureBox1.TabIndex = 225;
@@ -133,7 +134,7 @@
             label20.AutoSize = true;
             label20.Location = new Point(15, 388);
             label20.Name = "label20";
-            label20.Size = new Size(1035, 300);
+            label20.Size = new Size(1012, 300);
             label20.TabIndex = 223;
             label20.Text = resources.GetString("label20.Text");
             // 
@@ -604,12 +605,18 @@
             // 
             printDialog1.UseEXDialog = true;
             // 
+            // printDocument1
+            // 
+            printDocument1.BeginPrint += printDocument1_BeginPrint;
+            printDocument1.EndPrint += printDocument1_EndPrint;
+            printDocument1.PrintPage += printDocument1_PrintPage_1;
+            // 
             // ContratoCompraVentaCredito
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1066, 844);
+            ClientSize = new Size(1022, 844);
             Controls.Add(label21);
             Controls.Add(lblano);
             Controls.Add(label26);
@@ -626,7 +633,6 @@
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             Controls.Add(lblenganche);
-            Controls.Add(label20);
             Controls.Add(lblcombus);
             Controls.Add(lbltrans);
             Controls.Add(lblengra);
@@ -662,11 +668,13 @@
             Controls.Add(lblnomclien);
             Controls.Add(lblnomven);
             Controls.Add(lbltotalven);
-            Controls.Add(label1);
             Controls.Add(label2);
-            Margin = new Padding(2, 2, 2, 2);
+            Controls.Add(label20);
+            Controls.Add(label1);
+            Margin = new Padding(2);
             Name = "ContratoCompraVentaCredito";
             Text = "ContratoCompraVentaCredito";
+            Load += ContratoCompraVentaCredito_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
@@ -730,5 +738,6 @@
         private Label label22;
         private Label lblclien1;
         private PrintDialog printDialog1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }

@@ -17,6 +17,8 @@ namespace Pantallas_SIVAA
         readonly ClienteLog PqteLog = new ClienteLog();
         readonly EmpleadoLog empleadoLog = new EmpleadoLog();
         readonly FacturaLOG facturaLOG = new FacturaLOG();
+        private bool isFormBorderStyleNone = false;
+        private bool isFormBorderStyleChanged = false;
         ModeloVersion datosModVer;
         public FacturaCredito(VentaCredito pqtVC, Venta pdqV, string nombreclien, string apellidoclien, string idempleado)
         {
@@ -76,6 +78,45 @@ namespace Pantallas_SIVAA
         private void FacturaCredito_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            // Crear un objeto PrintDocument
+            pictureBox4.Hide();
+            //Guardar el estado original de la propiedad "BorderStyle"
+            isFormBorderStyleNone = this.FormBorderStyle == FormBorderStyle.None;
+            isFormBorderStyleChanged = true;
+            if (!isFormBorderStyleNone)
+            {
+                this.FormBorderStyle = FormBorderStyle.None;
+            }
+
+
+            printDocument1.Print();
+        }
+
+        private void printDocument1_BeginPrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        {
+            printDocument1.DefaultPageSettings.Landscape = false;
+            printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Letter", 850, 1100);
+        }
+
+        private void printDocument1_EndPrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        {
+            // Restablecer el estado original de la propiedad "BorderStyle"
+            if (isFormBorderStyleChanged)
+            {
+                this.FormBorderStyle = isFormBorderStyleNone ? FormBorderStyle.None : FormBorderStyle.FixedSingle;
+            }
+            pictureBox4.Show();
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            Bitmap bitmap = new Bitmap(this.Width, this.Height);
+            this.DrawToBitmap(bitmap, new Rectangle(0, 0, this.Width, this.Height));
+            e.Graphics.DrawImage(bitmap, 0, 0);
         }
     }
 }

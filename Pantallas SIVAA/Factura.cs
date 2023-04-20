@@ -22,6 +22,8 @@ namespace Pantallas_SIVAA
         readonly ClienteLog PqteLog = new ClienteLog();
         readonly EmpleadoLog empleadoLog = new EmpleadoLog();
         readonly FacturaLOG facturaLOG = new FacturaLOG();
+        private bool isFormBorderStyleNone = false;
+        private bool isFormBorderStyleChanged = false;
         ModeloVersion datosModVer;
         public Factura(VentaContado pqtVC, Venta pdqV, string nombreclien, string apellidoclien, string idempleado)
         {
@@ -123,17 +125,41 @@ namespace Pantallas_SIVAA
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            PrintDocument document = new PrintDocument();
-            document.DefaultPageSettings.Landscape = true; // Set the orientation to landscape
-            document.DefaultPageSettings.Margins = new Margins(100, 100, 100, 100); // 2.5cm margins on each side
-            document.DefaultPageSettings.PaperSize = new PaperSize("Letter", 1920, 850); // Swap the paper width and height
-            document.PrintPage += new PrintPageEventHandler(PrintPage);
-            PrintDialog dialog = new PrintDialog();
-            dialog.Document = document;
-            if (dialog.ShowDialog() == DialogResult.OK)
+            // Crear un objeto PrintDocument
+            pictureBox4.Hide();
+            //Guardar el estado original de la propiedad "BorderStyle"
+            isFormBorderStyleNone = this.FormBorderStyle == FormBorderStyle.None;
+            isFormBorderStyleChanged = true;
+            if (!isFormBorderStyleNone)
             {
-                document.Print();
+                this.FormBorderStyle = FormBorderStyle.None;
             }
+
+
+            printDocument1.Print();
+        }
+
+        private void printDocument1_BeginPrint(object sender, PrintEventArgs e)
+        {
+            printDocument1.DefaultPageSettings.Landscape = false;
+            printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Letter", 850, 1100);
+        }
+
+        private void printDocument1_EndPrint(object sender, PrintEventArgs e)
+        {
+            // Restablecer el estado original de la propiedad "BorderStyle"
+            if (isFormBorderStyleChanged)
+            {
+                this.FormBorderStyle = isFormBorderStyleNone ? FormBorderStyle.None : FormBorderStyle.FixedSingle;
+            }
+            pictureBox4.Show();
+        }
+
+        private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            Bitmap bitmap = new Bitmap(this.Width, this.Height);
+            this.DrawToBitmap(bitmap, new Rectangle(0, 0, this.Width, this.Height));
+            e.Graphics.DrawImage(bitmap, 0, 0);
         }
     }
 
