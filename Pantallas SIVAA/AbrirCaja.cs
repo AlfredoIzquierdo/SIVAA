@@ -20,7 +20,6 @@ namespace Pantallas_SIVAA
     {
 
         Empleado _pqt;
-        public static CorteDeCaja corteDeCaja = new CorteDeCaja(null);
         EmpleadoLog emplog = new EmpleadoLog();
         CorteCajaLog PqteLog2 = new CorteCajaLog();
         public AbrirCaja(Empleado pqt)
@@ -294,7 +293,9 @@ namespace Pantallas_SIVAA
 
         private void btnIrCaja_Click(object sender, EventArgs e)
         {
-            corteDeCaja.Show();
+        CorteDeCaja corteDeCaja = new CorteDeCaja(_pqt);
+        this.Close();
+        corteDeCaja.Show();
         }
         public static PagoLog Pqtelog7 = new PagoLog();
         public static AbonoLog Pqtelog8 = new AbonoLog();
