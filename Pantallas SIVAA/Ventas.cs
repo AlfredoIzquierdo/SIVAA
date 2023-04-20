@@ -2142,6 +2142,23 @@ namespace Pantallas_SIVAA
             CalcularMensualidadAnualiad();
         }
 
+        private void btnFichaPago_Click(object sender, EventArgs e)
+        {
+            string concepto, monto;
+            string idficha = "FP" + TXTCOT.Text;
+            if (radioButton1.Checked == true)
+            {
+                concepto = "Enganche";
+                monto = textBox7.Text;
+            }
+            else
+            {
+                concepto = "Pago";
+                monto = TXTPRECIO.Text;
 
+            }
+            FichaDePago ficha = new FichaDePago(txtSerie.Text,txtVehiculo.Text,txtVersion.Text,txtAño.Text,concepto,monto,idficha,TXTIDCLI);
+            ficha.Show();
+        }
     }
 }

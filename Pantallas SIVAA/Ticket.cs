@@ -16,5 +16,10 @@ namespace Pantallas_SIVAA
         {
             InitializeComponent();
         }
+
+        private void Ticket_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
