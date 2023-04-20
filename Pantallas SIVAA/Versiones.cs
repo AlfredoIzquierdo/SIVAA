@@ -27,12 +27,7 @@ namespace Pantallas_SIVAA
             _pqt = pqt;
         }
 
-        private void pictureBox13_Click(object sender, EventArgs e)
-        {
-            Inicio inicio = new Inicio(_pqt);
-            this.Close();
-            inicio.Show();
-        }
+
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
@@ -47,7 +42,7 @@ namespace Pantallas_SIVAA
             if (dataGridView1.SelectedRows.Count == 1)
             {
                 id = dataGridView1[0, dataGridView1.SelectedRows[0].Index].Value.ToString();
-                ModificarVersion modificarVehiculo = new ModificarVersion(id,_pqt);
+                ModificarVersion modificarVehiculo = new ModificarVersion(id, _pqt);
                 this.Hide();
                 modificarVehiculo.Show();
             }
@@ -108,6 +103,7 @@ namespace Pantallas_SIVAA
 
         private void Versiones_Load(object sender, EventArgs e)
         {
+            Versiones_Load(sender, e);
             dataGridView1.Rows.Clear();
             List<Versions> ve = version.ListadoTotal();
             listas = ve;
@@ -286,10 +282,7 @@ namespace Pantallas_SIVAA
             }
         }
 
-        private void Versiones_Load_1(object sender, EventArgs e)
-        {
-            Versiones_Load(sender, e);
-        }
+
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -321,6 +314,11 @@ namespace Pantallas_SIVAA
             }
         }
 
-        
+        private void btnInicio_Click(object sender, EventArgs e)
+        {
+            Inicio inicio = new Inicio(_pqt);
+            this.Close();
+            inicio.Show();
+        }
     }
 }
