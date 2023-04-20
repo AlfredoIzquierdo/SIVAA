@@ -569,6 +569,7 @@ namespace Pantallas_SIVAA
                     else
                     {
                         MessageBox.Show("Por el momento no contamos con unidades de esa version de auto");
+                        TXTCOT.Text = "";
                         return;
                     }
                 }
@@ -612,7 +613,7 @@ namespace Pantallas_SIVAA
                 dgvElegirAuto.Columns["Column36"].DataPropertyName = "Color";
             }
             else
-                MessageBox.Show("No hay registro de ventas pendientes de ese cliente");
+                MessageBox.Show("No hay autos disponibles de esa version por el momento");
             dgvElegirAuto.ClearSelection();
         }
 
@@ -721,6 +722,7 @@ namespace Pantallas_SIVAA
                 MessageBox.Show("Favor de selecionar un tipo de venta");
                 return;
             }
+            idventa = "V" + k;
             if (radioButton2.Checked)
             {
                 try
@@ -779,10 +781,11 @@ namespace Pantallas_SIVAA
                         }
                         else
                         {
-                            MessageBox.Show("Venta guardada exitosamente en la B.D \r\n\r\n Folio de pago = " + Deb.IDVenta.ToString());
+                            //MessageBox.Show("Venta guardada exitosamente en la B.D \r\n\r\n Folio de pago = " + Deb.IDVenta.ToString());
                             k++;
                             btncompraven.Enabled = true;
                             btnFactura.Enabled = true;
+                            btnFichaPago.Enabled = true;
                             //Limpiar();
                         }
                     }
@@ -855,12 +858,12 @@ namespace Pantallas_SIVAA
                         }
                         else
                         {
-                            MessageBox.Show("Venta guardada exitosamente en la B.D \r\n\r\n Folio de venta = " + Deb2.IDVenta.ToString());
+                            //MessageBox.Show("Venta guardada exitosamente en la B.D \r\n\r\n Folio de venta = " + Deb2.IDVenta.ToString());
                             k++;
                             btnpagare.Enabled = true;
                             btnFactura.Enabled = true;
                             btncompraven.Enabled = true;
-                            //Limpiar();
+                            Limpiar();
                         }
                     }
 
@@ -1072,7 +1075,8 @@ namespace Pantallas_SIVAA
                     MessageBox.Show(String.Format("Error {0}", ex.Message, "Error inesperado "));
                 }
             }
-            LimpiarEntregas();
+            btnFacturaEntrega.Enabled = true;
+            //LimpiarEntregas();
         }
 
         private void btnClienteEntrega_Click(object sender, EventArgs e)
@@ -1368,31 +1372,37 @@ namespace Pantallas_SIVAA
 
         private void btnpagare_Click(object sender, EventArgs e)
         {
-            Venta pqt = new Venta
-            {
-                IDVenta = Convert.ToString("V" + k),
-                IDEmpleado = Convert.ToString(TXTIDEMPCOT.Text),
-                NoSerie = "",
-                Dia = Convert.ToInt32(numericUpDown2.Value),
-                Mes = Convert.ToInt32(numericUpDown3.Value),
-                Año = Convert.ToInt32(numericUpDown4.Value),
-                Hora = Convert.ToString(TXTHORA.Text),
-                Subtotal = Convert.ToDouble(TXTPRECIO.Text),
-                TipoVenta = Convert.ToString("CREDITO")
+            VentaLog pqtelog = new VentaLog();
+            Venta ven;
+            ven = pqtelog.LeerPorClave(idventa);
+            //Venta pqt = new Venta
+            //{
+            //    IDVenta = Convert.ToString("V" + k),
+            //    IDEmpleado = Convert.ToString(TXTIDEMPCOT.Text),
+            //    NoSerie = "",
+            //    Dia = Convert.ToInt32(numericUpDown2.Value),
+            //    Mes = Convert.ToInt32(numericUpDown3.Value),
+            //    Año = Convert.ToInt32(numericUpDown4.Value),
+            //    Hora = Convert.ToString(TXTHORA.Text),
+            //    Subtotal = Convert.ToDouble(TXTPRECIO.Text),
+            //    TipoVenta = Convert.ToString("CREDITO")
 
-            };
-            VentaCredito Deb2 = new VentaCredito
-            {
+            //};
+            VentaCreditoLog crelog = new VentaCreditoLog();
+            VentaCredito vencre;
+            vencre = crelog.LeerPorClave(idventa);
+            //VentaCredito Deb2 = new VentaCredito
+            //{
 
-                IDVenta = Convert.ToString("V" + k),
-                IDCotizacion = Convert.ToString(TXTCOT.Text),
-                TotalFinal = Convert.ToDouble(double.Parse(TXTPRECIO.Text) * 1.10),
-                Estatus = Convert.ToString("PENDIENTE"),
+            //    IDVenta = Convert.ToString("V" + k),
+            //    IDCotizacion = Convert.ToString(TXTCOT.Text),
+            //    TotalFinal = Convert.ToDouble(double.Parse(TXTPRECIO.Text) * 1.10),
+            //    Estatus = Convert.ToString("PENDIENTE"),
 
-                //Estatus = Convert.ToString("PENDIENTE")
+            //    //Estatus = Convert.ToString("PENDIENTE")
 
-            };
-            Pagare pagare = new Pagare(pqt, Deb2, txtnom.Text, txtap.Text);
+            //};
+            Pagare pagare = new Pagare(ven, vencre, txtnom.Text, txtap.Text);
             pagare.Show();
         }
 
@@ -2177,11 +2187,11 @@ namespace Pantallas_SIVAA
             CalcularFinanciamiento();
             CalcularMensualidadAnualiad();
         }
-
+        string idventa = "";
         private void btnFichaPago_Click(object sender, EventArgs e)
         {
             string concepto, monto;
-            string idficha = "FP" + TXTCOT.Text;
+            string idficha = "" + idventa;
             if (radioButton1.Checked == true)
             {
                 concepto = "Enganche";
@@ -2242,6 +2252,132 @@ namespace Pantallas_SIVAA
             }
         }
 
-        
+        private void btnFacturaEntrega_Click(object sender, EventArgs e)
+        {
+            if (textBox3.Text == "" || textBox4.Text == "")
+            {
+                return;
+            }
+            VentaLog pqtelog = new VentaLog();
+            Venta ven;
+            ven = pqtelog.LeerPorClave(textBox3.Text);
+            //Venta pqt = new Venta
+            //{
+            //    IDVenta = Convert.ToString("V" + k),
+            //    IDEmpleado = Convert.ToString(TXTIDEMPCOT.Text),
+            //    NoSerie = "",
+            //    Dia = Convert.ToInt32(numericUpDown2.Value),
+            //    Mes = Convert.ToInt32(numericUpDown3.Value),
+            //    Año = Convert.ToInt32(numericUpDown4.Value),
+            //    Hora = Convert.ToString(TXTHORA.Text),
+            //    Subtotal = Convert.ToDouble(TXTPRECIO.Text),
+            //    TipoVenta = Convert.ToString("CREDITO")
+
+            //};
+            VentaContadoLog contadoLog = new VentaContadoLog();
+            VentaContado vencon;
+            vencon = contadoLog.LeerPorClave(ven.IDVenta);
+            //VentaContado Deb = new VentaContado
+            //{
+            //    IDVenta = Convert.ToString(ven.IDVenta),
+            //    IDCotizacion = Convert.ToString(TXTCOT.Text),
+            //    Estatus = Convert.ToString("PENDIENTE"),
+            //};
+            VentaCreditoLog creditoLog = new VentaCreditoLog();
+            VentaCredito vencre;
+            vencre = creditoLog.LeerPorClave(ven.IDVenta);
+            //VentaCredito Deb2 = new VentaCredito
+            //{
+
+            //    IDVenta = Convert.ToString("V" + k),
+            //    IDCotizacion = Convert.ToString(TXTCOT.Text),
+            //    TotalFinal = Convert.ToDouble(double.Parse(TXTPRECIO.Text) * 1.10),
+            //    Estatus = Convert.ToString("PENDIENTE"),
+
+            //    //Estatus = Convert.ToString("PENDIENTE")
+
+            //};
+
+            if (textBox11.Text.Trim() == "CONTADO")
+            {
+                Factura factura = new Factura(vencon, ven, textBox2.Text, textBox1.Text, TXTIDEMPCOT.Text);
+                factura.Show();
+            }
+            if (textBox11.Text.Trim() == "CREDITO")
+            {
+                FacturaCredito facturaCredito = new FacturaCredito(vencre, ven, textBox2.Text, textBox1.Text, TXTIDEMPCOT.Text);
+                facturaCredito.Show();
+            }
+        }
+
+        private void btnContratoCompraVenta_Click(object sender, EventArgs e)
+        {
+            if (textBox3.Text == "" || textBox4.Text == "")
+            {
+                return;
+            }
+            VentaLog pqtelog = new VentaLog();
+            Venta ven;
+            ven = pqtelog.LeerPorClave(textBox3.Text);
+            //Venta pqt = new Venta
+            //{
+            //    IDVenta = Convert.ToString("V" + k),
+            //    IDEmpleado = Convert.ToString(TXTIDEMPCOT.Text),
+            //    NoSerie = "",
+            //    Dia = Convert.ToInt32(numericUpDown2.Value),
+            //    Mes = Convert.ToInt32(numericUpDown3.Value),
+            //    Año = Convert.ToInt32(numericUpDown4.Value),
+            //    Hora = Convert.ToString(TXTHORA.Text),
+            //    Subtotal = Convert.ToDouble(TXTPRECIO.Text),
+            //    TipoVenta = Convert.ToString("CONTADO")
+
+            //};
+            VentaContadoLog contadoLog = new VentaContadoLog();
+            VentaContado vencon;
+            vencon = contadoLog.LeerPorClave(ven.IDVenta);
+            //VentaContado Deb = new VentaContado
+            //{
+            //    IDVenta = Convert.ToString("V" + k),
+            //    IDCotizacion = Convert.ToString(TXTCOT.Text),
+            //    Estatus = Convert.ToString("PENDIENTE"),
+            //};
+            VentaCreditoLog creditoLog = new VentaCreditoLog();
+            VentaCredito vencre;
+            vencre = creditoLog.LeerPorClave(ven.IDVenta);
+            //VentaCredito Deb2 = new VentaCredito
+            //{
+
+            //    IDVenta = Convert.ToString("V" + k),
+            //    IDCotizacion = Convert.ToString(TXTCOT.Text),
+            //    TotalFinal = Convert.ToDouble(double.Parse(TXTPRECIO.Text) * 1.10),
+            //    Estatus = Convert.ToString("PENDIENTE"),
+
+            //    //Estatus = Convert.ToString("PENDIENTE")
+
+            //};
+            //contado
+            if (textBox11.Text.Trim() == "CONTADO")
+            {
+                ContratoCompraVentaCon contratoCompraVentaCon = new ContratoCompraVentaCon(vencon, ven, txtnom.Text, txtap.Text);
+                contratoCompraVentaCon.Show();
+            }
+            //credito
+            if (textBox11.Text.Trim() == "CREDITO")
+            {
+                ContratoCompraVentaCredito contratoCompraVentaCred = new ContratoCompraVentaCredito(vencre, ven, txtnom.Text, txtap.Text);
+                contratoCompraVentaCred.Show();
+            }
+        }
+
+        private void btnNuevaventa_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+
+        }
+
+        private void btnNuevaEntrega_Click(object sender, EventArgs e)
+        {
+            LimpiarEntregas();
+        }
     }
 }

@@ -15,10 +15,10 @@ namespace Pantallas_SIVAA
     public partial class Inicio : Form
     {
         // principal
-        
+
 
         // barra lateral
-       
+
 
         private Empleado _pqt;
         public Inicio(Empleado pqt)
@@ -165,7 +165,7 @@ namespace Pantallas_SIVAA
         private void btnCobros_Click(object sender, EventArgs e)
         {
             this.Close();
-            AbrirCaja Caja = new AbrirCaja(_pqt);        
+            AbrirCaja Caja = new AbrirCaja(_pqt);
             Caja.Show();
         }
 
@@ -179,12 +179,12 @@ namespace Pantallas_SIVAA
 
         private void pictureBox13_Click(object sender, EventArgs e)
         {
-            Inicio inicio = new Inicio (_pqt);
+            Inicio inicio = new Inicio(_pqt);
             this.Close();
             inicio.Show();
 
         }
 
-        
+
     }
 }

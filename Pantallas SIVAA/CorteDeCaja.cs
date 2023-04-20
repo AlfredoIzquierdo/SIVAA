@@ -176,7 +176,7 @@ namespace Pantallas_SIVAA
             //}
         }
 
-       
+
 
         private void numericUpDown15_ValueChanged(object sender, EventArgs e)
         {

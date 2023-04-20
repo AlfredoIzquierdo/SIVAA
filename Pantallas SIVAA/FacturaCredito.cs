@@ -35,6 +35,9 @@ namespace Pantallas_SIVAA
 
             double subtotal = (pqtVC.TotalFinal * 0.84);
             double iva = (pqtVC.TotalFinal * .16);
+            label74.Text=subtotal.ToString();
+            label73.Text=iva.ToString();
+            label72.Text = (subtotal + iva).ToString();
             lbldia.Text = pdqV.Dia.ToString();
             lblmes.Text = pdqV.Mes.ToString();
             lblano.Text = pdqV.Año.ToString();

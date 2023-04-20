@@ -103,7 +103,7 @@ namespace Datos
                             Precio = Convert.ToDouble(Dr["Precio"]),
                             Interes = Convert.ToString(Dr["Interes"]),
                             Mensualidad = Convert.ToDouble(Dr["Mensualidad"]),
-                            PorcentajeEnganche = Convert.ToString(Dr["PorcentajeEnganche"]),
+                            PorcentajeEnganche = Convert.ToString(Dr["PorcentajeEngance"]),
                             Financiamiento = Convert.ToDouble(Dr["Financiamiento"])
                         };
                         return Pqte;

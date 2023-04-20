@@ -8,6 +8,7 @@ using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
@@ -39,6 +40,9 @@ namespace Pantallas_SIVAA
             Modelo datosmodelo = facturaLOG.ObtenerDatosModelo(datosModVer.IDModelo);
             double subtotal = (pdqV.Subtotal * 0.84);
             double iva = (pdqV.Subtotal * .16);
+            label57.Text = subtotal.ToString();
+            label56.Text = iva.ToString();
+            label55.Text = (subtotal + iva).ToString();
             lbldia.Text = pdqV.Dia.ToString();
             lblmes.Text = pdqV.Mes.ToString();
             lblano.Text = pdqV.Año.ToString();

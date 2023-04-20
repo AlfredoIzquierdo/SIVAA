@@ -105,7 +105,8 @@ namespace Pantallas_SIVAA
             CorteCaja cor = PqteLog2.BuscarCajaAbierta();
             if (cor != null)
             {
-                MessageBox.Show("Ya hay una caja abierta");
+                //MessageBox.Show("Ya hay una caja abierta");
+                label48.Text = "ACTIVA";
                 btnAbrir.Enabled = false;
                 btnIrCaja.Enabled = true;
                 btnCerrar.Enabled = true;
@@ -114,6 +115,7 @@ namespace Pantallas_SIVAA
             if (cor == null)
             {
                 //MessageBox.Show("Aun no hay una caja abierta");
+                label48.Text = "APAGADA";
                 btnAbrir.Enabled = true;
                 btnIrCaja.Enabled = false;
                 btnCerrar.Enabled = false;
@@ -204,7 +206,7 @@ namespace Pantallas_SIVAA
                     }
                     else
                     {
-                        MessageBox.Show("Caja abierta con exito");
+                        //MessageBox.Show("Caja abierta con exito");
                         //Limpiar();
                     }
                 }
@@ -218,6 +220,10 @@ namespace Pantallas_SIVAA
                 MessageBox.Show("Una caja no se puede abrir con tan poco dinero");
                 return;
             }
+            btnIrCaja.Enabled = true;
+            btnAbrir.Enabled = false;
+            btnCerrar.Enabled = true;
+            label48.Text = "ACTIVA";
         }
 
         private void numericUpDown14_ValueChanged(object sender, EventArgs e)
@@ -247,7 +253,7 @@ namespace Pantallas_SIVAA
         {
             List<Empleado> listado = emplog.ListadoAllCajeros();
 
-            
+
             if (listado.Count > 0)
             {
                 dataGridView1.AutoGenerateColumns = false;
@@ -339,7 +345,11 @@ namespace Pantallas_SIVAA
             };
             //PqteLog2.Registrar(pqt);
             PqteLog2.ModificarEstado(pqt);
-            MessageBox.Show("Cierre de caja exitoso");
+            //MessageBox.Show("Cierre de caja exitoso");
+            label48.Text = "APAGADA";
+            btnCerrar.Enabled = false;
+            btnIrCaja.Enabled = false;
+            btnAbrir.Enabled = true;
             Limpiar();
         }
         CorteCaja pqte;
@@ -545,7 +555,7 @@ namespace Pantallas_SIVAA
             }
         }
 
-        
+
 
         public void Limpiar()
         {
@@ -558,7 +568,7 @@ namespace Pantallas_SIVAA
             lbltotaltarjeta.Text = "";
             dataGridView2.Rows.Clear();
 
-            numericUpDown18.Value=0;
+            numericUpDown18.Value = 0;
             numericUpDown19.Value = 0;
             numericUpDown20.Value = 0;
             numericUpDown21.Value = 0;
