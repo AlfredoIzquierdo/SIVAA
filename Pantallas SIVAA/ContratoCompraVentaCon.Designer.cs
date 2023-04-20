@@ -652,9 +652,10 @@
             Controls.Add(lbltotalven);
             Controls.Add(label1);
             Controls.Add(label2);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "ContratoCompraVentaCon";
             Text = "ContratoCompraVenta";
+            Load += ContratoCompraVentaCon_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);

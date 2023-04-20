@@ -145,5 +145,10 @@ namespace Pantallas_SIVAA
             // Dibujar el Bitmap en la página de impresión
             e.Graphics.DrawImage(bm, 0, 0);
         }
+
+        private void ContratoCompraVentaCon_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -19,6 +19,7 @@ namespace Pantallas_SIVAA
     {
         Empleado _pqt;
         readonly PedidoLOG pedidoLog = new PedidoLOG();
+        Pedido pedido = new Pedido();
         public AgregarPedidos(Empleado pqt)
         {
             InitializeComponent();
@@ -124,20 +125,20 @@ namespace Pantallas_SIVAA
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //List<Pedido> x = pedidoLog.ListadoAll();
-            //string i = "PD" + (x.Count + 1).ToString();
-            //pedido.IDPedido = i;
-            //pedido.IDProveedor = pedidoLog.IdentProveed(cbProov.Text);
-            //pedido.IDEmpleado = "E4";
-            //pedido.Dia = Convert.ToInt32(numDiaP.Value);
-            //pedido.Mes = Convert.ToInt32(numMesPed.Value);
-            //pedido.Año = Convert.ToInt32(numAnoPed.Value);
-            //pedido.Importe = Convert.ToDouble(txtcost.Text);
-            //pedido.EstadoPedido = "Activo";
-            //pedidoLog.Registrar(pedido);
-            //this.Close();
-            //GestionarPedidos gestionarPedidos = new GestionarPedidos(null);
-            //gestionarPedidos.Show();
+            List<Pedido> x = pedidoLog.ListadoAll();
+            string i = "PD" + (x.Count + 1).ToString();
+            pedido.IDPedido = i;
+            pedido.IDProveedor = pedidoLog.IdentProveed(cbProov.Text);
+            pedido.IDEmpleado = _pqt.IDEmpleado;
+            pedido.Dia = Convert.ToInt32(numericUpDownDia.Value);
+            pedido.Mes = Convert.ToInt32(numericUpDownMes.Value);
+            pedido.Año = Convert.ToInt32(numericUpDownAno.Value);
+            pedido.Importe = Convert.ToDouble(txtImporte.Text);
+            pedido.EstadoPedido = "Activo";
+            pedidoLog.Registrar(pedido);
+            this.Close();
+            GestionarPedidos gestionarPedidos = new GestionarPedidos(null);
+            gestionarPedidos.Show();
         }
 
         private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
@@ -147,5 +148,30 @@ namespace Pantallas_SIVAA
                 e.Handled = true;
             }
         }
+
+        private void cbProov_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void txtImporte_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtImporte_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
+
+
     }
 }

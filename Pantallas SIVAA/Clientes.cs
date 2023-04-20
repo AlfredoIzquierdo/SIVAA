@@ -43,7 +43,7 @@ namespace Pantallas_SIVAA
             if (dataGridView1.SelectedRows.Count == 1)
             {
                 id = dataGridView1[0, dataGridView1.SelectedRows[0].Index].Value.ToString();
-                ModificarCliente modificarCliente = new ModificarCliente(id,_pqt);
+                ModificarCliente modificarCliente = new ModificarCliente(id, _pqt);
                 this.Hide();
                 modificarCliente.Show();
             }
@@ -228,5 +228,7 @@ namespace Pantallas_SIVAA
         {
 
         }
+
+      
     }
 }

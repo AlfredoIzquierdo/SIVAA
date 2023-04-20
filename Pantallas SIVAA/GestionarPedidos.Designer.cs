@@ -427,6 +427,7 @@
             button1.TabIndex = 103;
             button1.Text = "Buscar";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // txtbusqueda
             // 
@@ -455,11 +456,12 @@
             // 
             comboBox2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "Dia ", "Mes ", "Año", "Importe mayor a", "Importe menor a " });
+            comboBox2.Items.AddRange(new object[] { "Todos", "Dia ", "Mes ", "Año", "Importe mayor a", "Importe menor a " });
             comboBox2.Location = new Point(98, 12);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(140, 28);
             comboBox2.TabIndex = 55;
+            comboBox2.SelectedValueChanged += comboBox2_SelectedValueChanged;
             // 
             // GestionarPedidos
             // 

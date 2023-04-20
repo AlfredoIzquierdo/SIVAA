@@ -7,11 +7,11 @@ namespace Pantallas_SIVAA
     {
         ClienteLog log = new ClienteLog();
         Cliente cliente = new Cliente();
-        
+
         string id;
 
         Empleado _pqt;
-        public ModificarCliente(string idCliente,Empleado pqt)
+        public ModificarCliente(string idCliente, Empleado pqt)
         {
             InitializeComponent();
             _pqt = pqt;
@@ -104,8 +104,9 @@ namespace Pantallas_SIVAA
             }
         }
 
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
 
-
-
+        }
     }
 }

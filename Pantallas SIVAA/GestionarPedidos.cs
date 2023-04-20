@@ -15,7 +15,7 @@ namespace Pantallas_SIVAA.Pedidos
 {
     public partial class GestionarPedidos : Form
     {
-        public static EditarPedidos editarPedidos = new EditarPedidos();
+
         public static AgregarPedidos agregarPedidos = new AgregarPedidos(null);
         readonly PedidoD Producto = new PedidoD();
         readonly PedidoLOG pedlog = new PedidoLOG();
@@ -41,15 +41,27 @@ namespace Pantallas_SIVAA.Pedidos
         private void pictureBox8_Click(object sender, EventArgs e)
         {
 
-            this.Hide();
+            this.Close();
+            AgregarPedidos agregarPedidos = new AgregarPedidos(_pqt);
             agregarPedidos.Show();
         }
 
         private void pictureBox9_Click(object sender, EventArgs e)
         {
+            string id = null;
+            if (dataGridView1.SelectedRows.Count == 1)
+            {
+                id = dataGridView1[0, dataGridView1.SelectedRows[0].Index].Value.ToString();
+                EditarPedidos editar = new EditarPedidos(id, _pqt);
+                this.Hide();
+                editar.Show();
+            }
+            else
+            {
+                MessageBox.Show("Favor de seleccionar un cliente");
+            }
 
-            this.Hide();
-            editarPedidos.Show();
+
         }
 
         private void btnPedidos_Click(object sender, EventArgs e)
@@ -91,20 +103,31 @@ namespace Pantallas_SIVAA.Pedidos
 
         private void pictureBox11_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            editarPedidos.Show();
+            string id = null;
+            if (dataGridView1.SelectedRows.Count == 1)
+            {
+                id = dataGridView1[0, dataGridView1.SelectedRows[0].Index].Value.ToString();
+                pedlog.EliminarPorStatus(id);
+                MessageBox.Show("Pedido Eliminado");
+                dataGridView1.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
+            }
+            else
+            {
+                MessageBox.Show("Favor de seleccionar un cliente");
+            }
         }
 
         private void GestionarPedidos_Load(object sender, EventArgs e)
         {
             dataGridView1.ClearSelection();
+            comboBox2.SelectedIndex = 0;
             List<Pedido> clie = pedlog.ListadoAll();
             foreach (Pedido x in clie)
             {
                 if (x.EstadoPedido == "Activo")
                 {
 
-                    dataGridView1.Rows.Add(x.IDPedido, x.IDProveedor, x.Dia, x.Mes, x.Año, x.Importe);
+                    dataGridView1.Rows.Add(x.IDPedido, x.IDProveedor, x.Dia, pedlog.MesALetra(Convert.ToString(x.Mes)), x.Año, x.Importe);
 
                 }
 
@@ -117,6 +140,81 @@ namespace Pantallas_SIVAA.Pedidos
             if (e.RowIndex >= 0)
             {
                 dataGridView1.Rows[e.RowIndex].Selected = true;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtbusqueda.Text))
+            {
+                MessageBox.Show("Llene el campo busqueda");
+            }
+            if (comboBox2.Text == "Importe mayor a")
+            {
+                List<Pedido> datos = new List<Pedido>();
+
+                datos = pedlog.ListadoMayorA(Convert.ToDouble(txtbusqueda.Text));
+                //listas = datos;
+                dataGridView1.Rows.Clear();
+                foreach (Pedido x in datos)
+                {
+                    dataGridView1.Rows.Add(x.IDPedido, x.IDProveedor, x.Dia, pedlog.MesALetra(Convert.ToString(x.Mes)), x.Año, x.Importe);
+                }
+            }
+            else if (comboBox2.Text == "Importe menor a ")
+            {
+                List<Pedido> datos = new List<Pedido>();
+
+                datos = pedlog.ListadoMenorA(Convert.ToDouble(txtbusqueda.Text));
+                //listas = datos;
+                dataGridView1.Rows.Clear();
+                foreach (Pedido x in datos)
+                {
+                    dataGridView1.Rows.Add(x.IDPedido, x.IDProveedor, x.Dia, pedlog.MesALetra(Convert.ToString(x.Mes)), x.Año, x.Importe);
+                }
+            }else 
+            
+            {
+                List<Pedido> datos = new List<Pedido>();
+
+                datos = pedlog.ListadoEspecifico(txtbusqueda.Text, comboBox2.Text);
+                //listas = datos;
+                dataGridView1.Rows.Clear();
+                foreach (Pedido x in datos)
+                {
+                    dataGridView1.Rows.Add(x.IDPedido, x.IDProveedor, x.Dia, pedlog.MesALetra(Convert.ToString(x.Mes)), x.Año, x.Importe);
+                }
+
+            }
+        }
+
+
+        private void comboBox2_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (comboBox2.Text != "Todos")
+            {
+                txtbusqueda.Enabled = true;
+                button1.Enabled = true;
+
+
+            }else
+            {
+                txtbusqueda.Enabled = false;
+                button1.Enabled = false;
+                dataGridView1.ClearSelection();
+                //comboBox2.SelectedIndex = 0;
+                List<Pedido> clie = pedlog.ListadoAll();
+                foreach (Pedido x in clie)
+                {
+                    if (x.EstadoPedido == "Activo")
+                    {
+
+                        dataGridView1.Rows.Add(x.IDPedido, x.IDProveedor, x.Dia, pedlog.MesALetra(Convert.ToString(x.Mes)), x.Año, x.Importe);
+
+                    }
+
+
+                }
             }
         }
     }
