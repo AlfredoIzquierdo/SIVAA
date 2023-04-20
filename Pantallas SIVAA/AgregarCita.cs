@@ -226,5 +226,12 @@ namespace Pantallas_SIVAA
             this.Close();
             inicio.Show();
         }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            CalendarioCitas citas = new CalendarioCitas(_pqt);
+            citas.Show();
+        }
     }
 }

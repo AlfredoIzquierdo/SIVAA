@@ -60,10 +60,9 @@
             this.btnAgregarVehiculo.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnAgregarVehiculo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(58)))), ((int)(((byte)(86)))));
             this.btnAgregarVehiculo.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarVehiculo.Location = new System.Drawing.Point(571, 449);
-            this.btnAgregarVehiculo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnAgregarVehiculo.Location = new System.Drawing.Point(400, 269);
             this.btnAgregarVehiculo.Name = "btnAgregarVehiculo";
-            this.btnAgregarVehiculo.Size = new System.Drawing.Size(221, 38);
+            this.btnAgregarVehiculo.Size = new System.Drawing.Size(155, 23);
             this.btnAgregarVehiculo.TabIndex = 108;
             this.btnAgregarVehiculo.Text = "Agregar";
             this.btnAgregarVehiculo.UseVisualStyleBackColor = false;
@@ -72,20 +71,18 @@
             // 
             this.label15.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(457, 272);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Location = new System.Drawing.Point(320, 163);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(78, 25);
+            this.label15.Size = new System.Drawing.Size(51, 15);
             this.label15.TabIndex = 110;
             this.label15.Text = "Nombre";
             // 
             // txtNombre
             // 
             this.txtNombre.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtNombre.Location = new System.Drawing.Point(324, 328);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNombre.Location = new System.Drawing.Point(227, 197);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(331, 31);
+            this.txtNombre.Size = new System.Drawing.Size(233, 23);
             this.txtNombre.TabIndex = 112;
             // 
             // imageList2
@@ -114,10 +111,9 @@
             this.panel7.Controls.Add(this.label7);
             this.panel7.Controls.Add(this.pictureBox13);
             this.panel7.ForeColor = System.Drawing.Color.White;
-            this.panel7.Location = new System.Drawing.Point(4, 8);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel7.Location = new System.Drawing.Point(3, 5);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(977, 95);
+            this.panel7.Size = new System.Drawing.Size(684, 57);
             this.panel7.TabIndex = 118;
             // 
             // lblTipoEmpleado
@@ -125,10 +121,10 @@
             this.lblTipoEmpleado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTipoEmpleado.AutoSize = true;
             this.lblTipoEmpleado.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTipoEmpleado.Location = new System.Drawing.Point(798, 63);
-            this.lblTipoEmpleado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTipoEmpleado.Location = new System.Drawing.Point(559, 38);
+            this.lblTipoEmpleado.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblTipoEmpleado.Name = "lblTipoEmpleado";
-            this.lblTipoEmpleado.Size = new System.Drawing.Size(96, 25);
+            this.lblTipoEmpleado.Size = new System.Drawing.Size(62, 15);
             this.lblTipoEmpleado.TabIndex = 18;
             this.lblTipoEmpleado.Text = "Supervisor";
             // 
@@ -137,10 +133,10 @@
             this.lblNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblNombre.Location = new System.Drawing.Point(716, 22);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNombre.Location = new System.Drawing.Point(501, 13);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(255, 32);
+            this.lblNombre.Size = new System.Drawing.Size(172, 21);
             this.lblNombre.TabIndex = 19;
             this.lblNombre.Text = "Bienvenido: Fulanito";
             this.lblNombre.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -149,10 +145,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(347, 22);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(243, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(305, 48);
+            this.label1.Size = new System.Drawing.Size(205, 32);
             this.label1.TabIndex = 17;
             this.label1.Text = "Agregar vehiculos";
             // 
@@ -161,9 +156,10 @@
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(3253, 57);
+            this.label4.Location = new System.Drawing.Point(2277, 34);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(96, 25);
+            this.label4.Size = new System.Drawing.Size(62, 15);
             this.label4.TabIndex = 1;
             this.label4.Text = "Supervisor";
             // 
@@ -172,9 +168,10 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(3171, 15);
+            this.label2.Location = new System.Drawing.Point(2220, 9);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(255, 32);
+            this.label2.Size = new System.Drawing.Size(172, 21);
             this.label2.TabIndex = 1;
             this.label2.Text = "Bienvenido: Fulanito";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -183,19 +180,19 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(163, 25);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(114, 15);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(102, 45);
+            this.label7.Size = new System.Drawing.Size(68, 30);
             this.label7.TabIndex = 16;
             this.label7.Text = "SIIVA";
             // 
             // pictureBox13
             // 
             this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
-            this.pictureBox13.Location = new System.Drawing.Point(21, 12);
+            this.pictureBox13.Location = new System.Drawing.Point(15, 7);
+            this.pictureBox13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(66, 67);
+            this.pictureBox13.Size = new System.Drawing.Size(46, 40);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox13.TabIndex = 2;
             this.pictureBox13.TabStop = false;
@@ -211,9 +208,10 @@
             this.panel1.Controls.Add(this.btnCitas);
             this.panel1.Controls.Add(this.btnStock);
             this.panel1.Controls.Add(this.btnPedidos);
-            this.panel1.Location = new System.Drawing.Point(4, 105);
+            this.panel1.Location = new System.Drawing.Point(3, 63);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(94, 580);
+            this.panel1.Size = new System.Drawing.Size(66, 348);
             this.panel1.TabIndex = 117;
             // 
             // btnReportes
@@ -224,9 +222,10 @@
             this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnReportes.ImageKey = "bar-chart.png";
             this.btnReportes.ImageList = this.imageList2;
-            this.btnReportes.Location = new System.Drawing.Point(0, 480);
+            this.btnReportes.Location = new System.Drawing.Point(0, 288);
+            this.btnReportes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnReportes.Name = "btnReportes";
-            this.btnReportes.Size = new System.Drawing.Size(103, 95);
+            this.btnReportes.Size = new System.Drawing.Size(72, 57);
             this.btnReportes.TabIndex = 10;
             this.btnReportes.Text = "Reportes";
             this.btnReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -240,9 +239,10 @@
             this.btnCobros.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnCobros.ImageKey = "dollar-sign.png";
             this.btnCobros.ImageList = this.imageList2;
-            this.btnCobros.Location = new System.Drawing.Point(0, 383);
+            this.btnCobros.Location = new System.Drawing.Point(0, 230);
+            this.btnCobros.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCobros.Name = "btnCobros";
-            this.btnCobros.Size = new System.Drawing.Size(103, 95);
+            this.btnCobros.Size = new System.Drawing.Size(72, 57);
             this.btnCobros.TabIndex = 9;
             this.btnCobros.Text = "Cobros";
             this.btnCobros.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -256,9 +256,10 @@
             this.btnVentas.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnVentas.ImageKey = "shopping-cart.png";
             this.btnVentas.ImageList = this.imageList2;
-            this.btnVentas.Location = new System.Drawing.Point(0, 287);
+            this.btnVentas.Location = new System.Drawing.Point(0, 172);
+            this.btnVentas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnVentas.Name = "btnVentas";
-            this.btnVentas.Size = new System.Drawing.Size(103, 95);
+            this.btnVentas.Size = new System.Drawing.Size(72, 57);
             this.btnVentas.TabIndex = 8;
             this.btnVentas.Text = "Ventas";
             this.btnVentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -272,9 +273,10 @@
             this.btnCitas.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnCitas.ImageKey = "calendar.png";
             this.btnCitas.ImageList = this.imageList2;
-            this.btnCitas.Location = new System.Drawing.Point(0, 193);
+            this.btnCitas.Location = new System.Drawing.Point(0, 116);
+            this.btnCitas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCitas.Name = "btnCitas";
-            this.btnCitas.Size = new System.Drawing.Size(103, 95);
+            this.btnCitas.Size = new System.Drawing.Size(72, 57);
             this.btnCitas.TabIndex = 7;
             this.btnCitas.Text = "Citas";
             this.btnCitas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -289,9 +291,10 @@
             this.btnStock.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnStock.ImageKey = "book-open.png";
             this.btnStock.ImageList = this.imageList2;
-            this.btnStock.Location = new System.Drawing.Point(0, 97);
+            this.btnStock.Location = new System.Drawing.Point(0, 58);
+            this.btnStock.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnStock.Name = "btnStock";
-            this.btnStock.Size = new System.Drawing.Size(103, 95);
+            this.btnStock.Size = new System.Drawing.Size(72, 57);
             this.btnStock.TabIndex = 6;
             this.btnStock.Text = "Inventario";
             this.btnStock.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -305,9 +308,10 @@
             this.btnPedidos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnPedidos.ImageKey = "package.png";
             this.btnPedidos.ImageList = this.imageList2;
-            this.btnPedidos.Location = new System.Drawing.Point(0, 3);
+            this.btnPedidos.Location = new System.Drawing.Point(0, 2);
+            this.btnPedidos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPedidos.Name = "btnPedidos";
-            this.btnPedidos.Size = new System.Drawing.Size(103, 95);
+            this.btnPedidos.Size = new System.Drawing.Size(72, 57);
             this.btnPedidos.TabIndex = 5;
             this.btnPedidos.Text = "Pedidos";
             this.btnPedidos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -315,25 +319,27 @@
             // 
             // btnRegresar
             // 
-            this.btnRegresar.Location = new System.Drawing.Point(214, 449);
+            this.btnRegresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(58)))), ((int)(((byte)(86)))));
+            this.btnRegresar.ForeColor = System.Drawing.Color.White;
+            this.btnRegresar.Location = new System.Drawing.Point(150, 269);
+            this.btnRegresar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(200, 34);
+            this.btnRegresar.Size = new System.Drawing.Size(140, 23);
             this.btnRegresar.TabIndex = 119;
             this.btnRegresar.Text = "Regresar";
-            this.btnRegresar.UseVisualStyleBackColor = true;
+            this.btnRegresar.UseVisualStyleBackColor = false;
             // 
             // AgregarVehiculos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(986, 692);
+            this.ClientSize = new System.Drawing.Size(690, 415);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.btnAgregarVehiculo);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "AgregarVehiculos";
             this.Text = "AgregarVehiculos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

@@ -139,6 +139,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.rbPantallaNo = new System.Windows.Forms.RadioButton();
             this.rbPantallaSi = new System.Windows.Forms.RadioButton();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -1311,12 +1312,15 @@
             // btnAgregarVersion
             // 
             this.btnAgregarVersion.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnAgregarVersion.Location = new System.Drawing.Point(609, 596);
+            this.btnAgregarVersion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(58)))), ((int)(((byte)(86)))));
+            this.btnAgregarVersion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAgregarVersion.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarVersion.Location = new System.Drawing.Point(673, 595);
             this.btnAgregarVersion.Name = "btnAgregarVersion";
             this.btnAgregarVersion.Size = new System.Drawing.Size(155, 23);
             this.btnAgregarVersion.TabIndex = 219;
             this.btnAgregarVersion.Text = "Confirmar";
-            this.btnAgregarVersion.UseVisualStyleBackColor = true;
+            this.btnAgregarVersion.UseVisualStyleBackColor = false;
             this.btnAgregarVersion.Click += new System.EventHandler(this.btnAgregarVersion_Click);
             // 
             // label39
@@ -1506,11 +1510,26 @@
             this.rbPantallaSi.Text = "Si";
             this.rbPantallaSi.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(58)))), ((int)(((byte)(86)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(470, 595);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(155, 23);
+            this.button1.TabIndex = 270;
+            this.button1.Text = "Confirmar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // ModificarVersion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(967, 630);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel9);
@@ -1716,5 +1735,6 @@
         private Panel panel3;
         private RadioButton rbPantallaNo;
         private RadioButton rbPantallaSi;
+        private Button button1;
     }
 }

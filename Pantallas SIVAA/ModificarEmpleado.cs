@@ -264,6 +264,11 @@ namespace Pantallas_SIVAA
             }
         }
 
-        
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            GestionarEmpleados gestionarEmpleados = new GestionarEmpleados(_pqt);
+            gestionarEmpleados.Show();
+        }
     }
 }

@@ -320,6 +320,11 @@ namespace Pantallas_SIVAA
             return id;
         }
 
-       
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Versiones versiones = new Versiones(_pqt);
+            this.Close();
+            versiones.Show();
+        }
     }
 }

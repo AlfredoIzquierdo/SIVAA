@@ -73,6 +73,7 @@
             this.btnAgregarCita = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.txtHora = new System.Windows.Forms.MaskedTextBox();
+            this.btnRegresar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
@@ -528,12 +529,15 @@
             // 
             // btnAgregarCita
             // 
-            this.btnAgregarCita.Location = new System.Drawing.Point(717, 184);
+            this.btnAgregarCita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(58)))), ((int)(((byte)(86)))));
+            this.btnAgregarCita.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAgregarCita.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarCita.Location = new System.Drawing.Point(823, 171);
             this.btnAgregarCita.Name = "btnAgregarCita";
             this.btnAgregarCita.Size = new System.Drawing.Size(120, 35);
             this.btnAgregarCita.TabIndex = 68;
             this.btnAgregarCita.Text = "Agregar";
-            this.btnAgregarCita.UseVisualStyleBackColor = true;
+            this.btnAgregarCita.UseVisualStyleBackColor = false;
             // 
             // label9
             // 
@@ -553,11 +557,25 @@
             this.txtHora.TabIndex = 70;
             this.txtHora.ValidatingType = typeof(System.DateTime);
             // 
+            // btnRegresar
+            // 
+            this.btnRegresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(58)))), ((int)(((byte)(86)))));
+            this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRegresar.ForeColor = System.Drawing.Color.White;
+            this.btnRegresar.Location = new System.Drawing.Point(649, 171);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(120, 35);
+            this.btnRegresar.TabIndex = 71;
+            this.btnRegresar.Text = "Regresar";
+            this.btnRegresar.UseVisualStyleBackColor = false;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
+            // 
             // AgregarCita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1210, 564);
+            this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.txtHora);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.btnAgregarCita);
@@ -633,5 +651,6 @@
         private Button btnAgregarCita;
         private Label label9;
         private MaskedTextBox txtHora;
+        private Button btnRegresar;
     }
 }

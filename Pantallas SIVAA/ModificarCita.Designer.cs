@@ -595,7 +595,7 @@
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(120, 35);
             this.btnRegresar.TabIndex = 85;
-            this.btnRegresar.Text = "Cancelar";
+            this.btnRegresar.Text = "Regresar";
             this.btnRegresar.UseVisualStyleBackColor = true;
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 

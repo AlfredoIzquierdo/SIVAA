@@ -146,6 +146,6 @@ namespace Pantallas_SIVAA
             contra.Show();
         }
 
-       
+        
     }
 }

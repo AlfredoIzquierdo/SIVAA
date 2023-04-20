@@ -172,6 +172,11 @@ namespace Pantallas_SIVAA
             }
         }
 
-
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            GestionarPedidos pedidos = new GestionarPedidos(_pqt);
+            pedidos.Show();
+        }
     }
 }

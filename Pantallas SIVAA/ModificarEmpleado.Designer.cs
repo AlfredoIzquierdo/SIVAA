@@ -66,6 +66,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtApellidoM = new System.Windows.Forms.TextBox();
             this.txtApellidoP = new System.Windows.Forms.TextBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
@@ -343,10 +344,10 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Century", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(301, 212);
+            this.button3.Location = new System.Drawing.Point(424, 284);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(154, 26);
+            this.button3.Size = new System.Drawing.Size(115, 26);
             this.button3.TabIndex = 80;
             this.button3.Text = "Actualizar";
             this.button3.UseVisualStyleBackColor = false;
@@ -515,6 +516,7 @@
             // panel2
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel2.Controls.Add(this.btnCancelar);
             this.panel2.Controls.Add(this.txtApellidoM);
             this.panel2.Controls.Add(this.txtApellidoP);
             this.panel2.Controls.Add(this.button3);
@@ -554,6 +556,21 @@
             this.txtApellidoP.PlaceholderText = "Apellido Paterno";
             this.txtApellidoP.Size = new System.Drawing.Size(363, 22);
             this.txtApellidoP.TabIndex = 95;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(58)))), ((int)(((byte)(86)))));
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancelar.Font = new System.Drawing.Font("Century", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Location = new System.Drawing.Point(285, 284);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(116, 26);
+            this.btnCancelar.TabIndex = 127;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // ModificarEmpleado
             // 
@@ -627,5 +644,6 @@
         private Label label8;
         private TextBox txtApellidoM;
         private TextBox txtApellidoP;
+        private Button btnCancelar;
     }
 }
