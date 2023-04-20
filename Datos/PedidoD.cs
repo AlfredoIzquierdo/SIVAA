@@ -32,6 +32,7 @@ namespace Datos
                     Cmd.Parameters.AddWithValue("@EsP", Pqte.EstadoPedido);
                     Cmd.ExecuteNonQuery();
                     //Borrar variable cmd de la memoria
+                    //PRUEBA
                     Cmd.Dispose();
                 }
                 //Cierre
