@@ -19,10 +19,11 @@ namespace Pantallas_SIVAA
         EmpleadoLog empleadoLog = new EmpleadoLog();
         Empleado _pqt;
         Empleado emp = new Empleado();
-        public ModificarEmpleado(string idEmpleado)
+        public ModificarEmpleado(string idEmpleado,Empleado pqt)
         {
             InitializeComponent();
             id = idEmpleado;
+            _pqt = pqt;
            
         }
 

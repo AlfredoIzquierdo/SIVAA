@@ -58,7 +58,7 @@ namespace Pantallas_SIVAA
             if (dataGridView1.SelectedRows.Count == 1)
             {
                 id = dataGridView1[0, dataGridView1.SelectedRows[0].Index].Value.ToString();
-                ModificarEmpleado modificarEmpleado = new ModificarEmpleado(id);
+                ModificarEmpleado modificarEmpleado = new ModificarEmpleado(id,_pqt);
                 this.Hide();
                 modificarEmpleado.Show();
             }
