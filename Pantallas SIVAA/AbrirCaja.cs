@@ -1,4 +1,5 @@
-﻿using Entidades;
+﻿using Datos;
+using Entidades;
 using Logicas;
 using Pantallas_SIVAA.Pedidos;
 using System;
@@ -306,13 +307,13 @@ namespace Pantallas_SIVAA
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "" || textBox2.Text == "")
+            if (lbltotaltarjeta.Text == "" || label37.Text == "")
             {
                 MessageBox.Show("Favor de llenar los campos requeridos");
                 return;
             }
-            efeini = double.Parse(textBox1.Text);
-            efefin = double.Parse(textBox2.Text);
+            efeini = double.Parse(label37.Text);
+            efefin = double.Parse(lbltotaltarjeta.Text);
             //if (paefec == null || patar == null)
             //{
             //    balancefec = abonosefec + pagosefec;
@@ -345,7 +346,7 @@ namespace Pantallas_SIVAA
             //PqteLog2.Registrar(pqt);
             PqteLog2.ModificarEstado(pqt);
             MessageBox.Show("Cierre de caja exitoso");
-
+            Limpiar();
         }
         CorteCaja pqte;
         CorteCaja pqt;
@@ -411,8 +412,8 @@ namespace Pantallas_SIVAA
                 balancetar = abonostar + pagostar;
                 textBox3.Text = balancefec.ToString();
                 textBox4.Text = balancetar.ToString();
-                MessageBox.Show("abonos efectivo = " + abonosefec + "\r\nabonos tarjeta = " + abonostar + "\r\npagos efectivo = " + pagosefec + "\r\npagos tarjeta = " + pagostar);
-                MessageBox.Show("balande efectivo = " + balancefec + "\r\nbalance tarjeta = " + balancetar);
+                //MessageBox.Show("abonos efectivo = " + abonosefec + "\r\nabonos tarjeta = " + abonostar + "\r\npagos efectivo = " + pagosefec + "\r\npagos tarjeta = " + pagostar);
+                //MessageBox.Show("balande efectivo = " + balancefec + "\r\nbalance tarjeta = " + balancetar);
             }
         }
 
@@ -466,6 +467,114 @@ namespace Pantallas_SIVAA
             }
         }
 
-        
+        private void numericUpDown21_ValueChanged(object sender, EventArgs e)
+        {
+            if (textBox3.Text == "")
+            {
+                MessageBox.Show("Error 404");
+                return;
+            }
+            double total = 0;
+            double billetes = 0;
+            //Billetes
+            billetes += (((double)numericUpDown23.Value) * 20);
+            billetes += (((double)numericUpDown22.Value) * 50);
+            billetes += (((double)numericUpDown21.Value) * 100);
+            billetes += (((double)numericUpDown20.Value) * 200);
+            billetes += (((double)numericUpDown19.Value) * 500);
+            billetes += (((double)numericUpDown18.Value) * 1000);
+            label42.Text = billetes.ToString();
+            double monedas = 0;
+            //Monedas
+            monedas += (((double)numericUpDown7.Value) * 10);
+            monedas += (((double)numericUpDown8.Value) * 5);
+            monedas += (((double)numericUpDown9.Value) * 2);
+            monedas += (((double)numericUpDown11.Value) * 1);
+            label41.Text = monedas.ToString();
+            total = monedas + billetes;
+            label37.Text = total.ToString();
+
+            double totalefec;
+            totalefec = double.Parse(label37.Text);
+            textBox3.Text = (balancefec - totalefec).ToString();
+        }
+
+        private void btnIngresarMonto_Click(object sender, EventArgs e)
+        {
+            if (textBox2.Text == "")
+            {
+                MessageBox.Show("Favor de ingresar un monto");
+                return;
+            }
+            dataGridView2.Rows.Add(textBox2.Text);
+            actualizartarjeta();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            string id = null;
+            if (dataGridView2.SelectedRows.Count == 1)
+            {
+                //id = dataGridView2[0, dataGridView2.SelectedRows[0].Index].Value.ToString();
+                //MessageBox.Show("Empleado eliminado");
+                dataGridView2.Rows.RemoveAt(dataGridView2.SelectedRows[0].Index);
+                actualizartarjeta();
+            }
+            else
+            {
+                MessageBox.Show("Favor de seleccionar un ingreso para eliminar");
+            }
+        }
+
+        public void actualizartarjeta()
+        {
+            if (textBox4.Text != "")
+            {
+                //double tarjeta, totaltar=0;
+                double totaltar = 0;
+                //tarjeta= double.Parse(textBox4.Text);
+                for (int i = 0; i < dataGridView2.Rows.Count - 1; i++)
+                {
+                    totaltar += double.Parse(dataGridView2[0, i].Value.ToString());
+                    //MessageBox.Show("total= " + totaltar);
+                }
+                textBox4.Text = (balancetar - totaltar).ToString();
+                lbltotaltarjeta.Text = totaltar.ToString();
+            }
+        }
+
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                dataGridView2.Rows[e.RowIndex].Selected = true;
+            }
+        }
+        public void Limpiar()
+        {
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            label42.Text = "";
+            label41.Text = "";
+            label37.Text = "";
+            lbltotaltarjeta.Text = "";
+            dataGridView2.Rows.Clear();
+
+            numericUpDown18.Value=0;
+            numericUpDown19.Value = 0;
+            numericUpDown20.Value = 0;
+            numericUpDown21.Value = 0;
+            numericUpDown22.Value = 0;
+            numericUpDown23.Value = 0;
+
+            numericUpDown7.Value = 0;
+            numericUpDown8.Value = 0;
+            numericUpDown9.Value = 0;
+            numericUpDown11.Value = 0;
+
+
+        }
     }
+
 }

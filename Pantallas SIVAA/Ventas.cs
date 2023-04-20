@@ -72,7 +72,7 @@ namespace Pantallas_SIVAA
         private void btnCobros_Click(object sender, EventArgs e)
         {
             this.Close();
-           AbrirCaja Caja = new AbrirCaja(_pqt);
+            AbrirCaja Caja = new AbrirCaja(_pqt);
             Caja.Show();
         }
 
@@ -903,6 +903,14 @@ namespace Pantallas_SIVAA
 
         private void btnGuardarEntrega_Click(object sender, EventArgs e)
         {
+            if (textBox3.Text == "" || textBox8.Text == "")
+            {
+                MessageBox.Show("Favor de escoger una venta para que pueda elegir el auto");
+            }
+            if (textBox4.Text == "")
+            {
+                MessageBox.Show("Favor de escoger un auto");
+            }
             Venta pqt; ;
 
             k = rn.Next(250, 600);
@@ -1294,6 +1302,10 @@ namespace Pantallas_SIVAA
 
         private void btnFactura_Click(object sender, EventArgs e)
         {
+            if (TXTCOT.Text == "")
+            {
+                return;
+            }
             Venta pqt = new Venta
             {
                 IDVenta = Convert.ToString("V" + k),
@@ -2157,7 +2169,7 @@ namespace Pantallas_SIVAA
                 monto = TXTPRECIO.Text;
 
             }
-            FichaDePago ficha = new FichaDePago(txtSerie.Text,txtVehiculo.Text,txtVersion.Text,txtAño.Text,concepto,monto,idficha,TXTIDCLI);
+            FichaDePago ficha = new FichaDePago(txtSerie.Text, txtVehiculo.Text, txtVersion.Text, txtAño.Text, concepto, monto, idficha, TXTIDCLI.Text);
             ficha.Show();
         }
     }
