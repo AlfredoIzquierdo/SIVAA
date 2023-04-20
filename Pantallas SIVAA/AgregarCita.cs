@@ -222,7 +222,9 @@ namespace Pantallas_SIVAA
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-
+            Inicio inicio = new Inicio(_pqt);
+            this.Close();
+            inicio.Show();
         }
     }
 }

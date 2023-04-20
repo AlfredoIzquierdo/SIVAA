@@ -28,775 +28,831 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Versiones));
-            panel7 = new Panel();
-            label8 = new Label();
-            label9 = new Label();
-            label5 = new Label();
-            label2 = new Label();
-            label6 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label1 = new Label();
-            label7 = new Label();
-            pictureBox13 = new PictureBox();
-            pictureBox10 = new PictureBox();
-            panel1 = new Panel();
-            btnReportes = new Button();
-            imageList2 = new ImageList(components);
-            btnCobros = new Button();
-            btnVentas = new Button();
-            btnCitas = new Button();
-            btnStock = new Button();
-            btnPedidos = new Button();
-            dataGridView1 = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
-            Column6 = new DataGridViewTextBoxColumn();
-            Column7 = new DataGridViewTextBoxColumn();
-            Column8 = new DataGridViewTextBoxColumn();
-            Column9 = new DataGridViewTextBoxColumn();
-            Column10 = new DataGridViewTextBoxColumn();
-            Column11 = new DataGridViewTextBoxColumn();
-            Column12 = new DataGridViewTextBoxColumn();
-            Column13 = new DataGridViewTextBoxColumn();
-            Column14 = new DataGridViewTextBoxColumn();
-            Column15 = new DataGridViewTextBoxColumn();
-            Column16 = new DataGridViewTextBoxColumn();
-            Column17 = new DataGridViewTextBoxColumn();
-            Column18 = new DataGridViewTextBoxColumn();
-            Column19 = new DataGridViewTextBoxColumn();
-            Column20 = new DataGridViewTextBoxColumn();
-            Column21 = new DataGridViewTextBoxColumn();
-            Column22 = new DataGridViewTextBoxColumn();
-            Column23 = new DataGridViewTextBoxColumn();
-            Column24 = new DataGridViewTextBoxColumn();
-            Column25 = new DataGridViewTextBoxColumn();
-            Column26 = new DataGridViewTextBoxColumn();
-            Column27 = new DataGridViewTextBoxColumn();
-            Column28 = new DataGridViewTextBoxColumn();
-            Column29 = new DataGridViewTextBoxColumn();
-            Column30 = new DataGridViewTextBoxColumn();
-            Column31 = new DataGridViewTextBoxColumn();
-            pictureBox8 = new PictureBox();
-            pictureBox9 = new PictureBox();
-            pictureBox11 = new PictureBox();
-            panel3 = new Panel();
-            button1 = new Button();
-            label13 = new Label();
-            txtbusqueda = new TextBox();
-            comboversion = new ComboBox();
-            pictureBox1 = new PictureBox();
-            lblTipoEmpleado = new Label();
-            lblNombre = new Label();
-            panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
-            panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            SuspendLayout();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.lblTipoEmpleado = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnReportes = new System.Windows.Forms.Button();
+            this.imageList2 = new System.Windows.Forms.ImageList(this.components);
+            this.btnCobros = new System.Windows.Forms.Button();
+            this.btnVentas = new System.Windows.Forms.Button();
+            this.btnCitas = new System.Windows.Forms.Button();
+            this.btnStock = new System.Windows.Forms.Button();
+            this.btnPedidos = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtbusqueda = new System.Windows.Forms.TextBox();
+            this.comboversion = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
             // 
             // panel7
             // 
-            panel7.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            panel7.BackColor = Color.FromArgb(51, 58, 86);
-            panel7.Controls.Add(lblTipoEmpleado);
-            panel7.Controls.Add(lblNombre);
-            panel7.Controls.Add(label8);
-            panel7.Controls.Add(label9);
-            panel7.Controls.Add(label5);
-            panel7.Controls.Add(label2);
-            panel7.Controls.Add(label6);
-            panel7.Controls.Add(label3);
-            panel7.Controls.Add(label4);
-            panel7.Controls.Add(label1);
-            panel7.Controls.Add(label7);
-            panel7.Controls.Add(pictureBox13);
-            panel7.Controls.Add(pictureBox10);
-            panel7.ForeColor = Color.White;
-            panel7.Location = new Point(0, 0);
-            panel7.Margin = new Padding(4, 5, 4, 5);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(1292, 95);
-            panel7.TabIndex = 46;
-            // 
-            // label8
-            // 
-            label8.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(2104, 58);
-            label8.Margin = new Padding(1, 0, 1, 0);
-            label8.Name = "label8";
-            label8.Size = new Size(96, 25);
-            label8.TabIndex = 51;
-            label8.Text = "Supervisor";
-            // 
-            // label9
-            // 
-            label9.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.Location = new Point(2010, 25);
-            label9.Margin = new Padding(1, 0, 1, 0);
-            label9.Name = "label9";
-            label9.Size = new Size(255, 32);
-            label9.TabIndex = 52;
-            label9.Text = "Bienvenido: Fulanito";
-            label9.TextAlign = ContentAlignment.TopCenter;
-            // 
-            // label5
-            // 
-            label5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(3086, 58);
-            label5.Margin = new Padding(1, 0, 1, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(96, 25);
-            label5.TabIndex = 49;
-            label5.Text = "Supervisor";
-            // 
-            // label2
-            // 
-            label2.Anchor = AnchorStyles.Top;
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(478, 22);
-            label2.Margin = new Padding(1, 0, 1, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(349, 48);
-            label2.TabIndex = 49;
-            label2.Text = "Gestión de versiones";
-            // 
-            // label6
-            // 
-            label6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(2991, 25);
-            label6.Margin = new Padding(1, 0, 1, 0);
-            label6.Name = "label6";
-            label6.Size = new Size(255, 32);
-            label6.TabIndex = 50;
-            label6.Text = "Bienvenido: Fulanito";
-            label6.TextAlign = ContentAlignment.TopCenter;
-            // 
-            // label3
-            // 
-            label3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(3729, 18);
-            label3.Margin = new Padding(1, 0, 1, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(272, 48);
-            label3.TabIndex = 19;
-            label3.Text = "Gestión de citas";
-            // 
-            // label4
-            // 
-            label4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(4260, 52);
-            label4.Margin = new Padding(1, 0, 1, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(96, 25);
-            label4.TabIndex = 17;
-            label4.Text = "Supervisor";
-            // 
-            // label1
-            // 
-            label1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(4260, 18);
-            label1.Margin = new Padding(1, 0, 1, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(255, 32);
-            label1.TabIndex = 18;
-            label1.Text = "Bienvenido: Fulanito";
-            label1.TextAlign = ContentAlignment.TopCenter;
-            // 
-            // label7
-            // 
-            label7.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(152, 25);
-            label7.Margin = new Padding(4, 0, 4, 0);
-            label7.Name = "label7";
-            label7.Size = new Size(114, 45);
-            label7.TabIndex = 16;
-            label7.Text = "SIVAA";
-            // 
-            // pictureBox13
-            // 
-            pictureBox13.Image = (Image)resources.GetObject("pictureBox13.Image");
-            pictureBox13.Location = new Point(21, 0);
-            pictureBox13.Margin = new Padding(1, 2, 1, 2);
-            pictureBox13.Name = "pictureBox13";
-            pictureBox13.Size = new Size(66, 95);
-            pictureBox13.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox13.TabIndex = 2;
-            pictureBox13.TabStop = false;
-            // 
-            // pictureBox10
-            // 
-            pictureBox10.Image = (Image)resources.GetObject("pictureBox10.Image");
-            pictureBox10.Location = new Point(90, 0);
-            pictureBox10.Margin = new Padding(1, 2, 1, 2);
-            pictureBox10.Name = "pictureBox10";
-            pictureBox10.Size = new Size(66, 95);
-            pictureBox10.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox10.TabIndex = 2;
-            pictureBox10.TabStop = false;
-            // 
-            // panel1
-            // 
-            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            panel1.BackColor = Color.FromArgb(82, 101, 143);
-            panel1.Controls.Add(btnReportes);
-            panel1.Controls.Add(btnCobros);
-            panel1.Controls.Add(btnVentas);
-            panel1.Controls.Add(btnCitas);
-            panel1.Controls.Add(btnStock);
-            panel1.Controls.Add(btnPedidos);
-            panel1.Location = new Point(0, 95);
-            panel1.Margin = new Padding(1, 2, 1, 2);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(94, 678);
-            panel1.TabIndex = 48;
-            // 
-            // btnReportes
-            // 
-            btnReportes.BackColor = Color.FromArgb(82, 101, 143);
-            btnReportes.FlatStyle = FlatStyle.Flat;
-            btnReportes.ForeColor = Color.White;
-            btnReportes.ImageAlign = ContentAlignment.TopCenter;
-            btnReportes.ImageKey = "bar-chart.png";
-            btnReportes.ImageList = imageList2;
-            btnReportes.Location = new Point(-1, 508);
-            btnReportes.Margin = new Padding(2);
-            btnReportes.Name = "btnReportes";
-            btnReportes.Size = new Size(94, 95);
-            btnReportes.TabIndex = 11;
-            btnReportes.Text = "Reportes";
-            btnReportes.TextAlign = ContentAlignment.BottomCenter;
-            btnReportes.TextImageRelation = TextImageRelation.ImageAboveText;
-            btnReportes.UseVisualStyleBackColor = false;
-            // 
-            // imageList2
-            // 
-            imageList2.ColorDepth = ColorDepth.Depth8Bit;
-            imageList2.ImageStream = (ImageListStreamer)resources.GetObject("imageList2.ImageStream");
-            imageList2.TransparentColor = Color.Transparent;
-            imageList2.Images.SetKeyName(0, "archive.png");
-            imageList2.Images.SetKeyName(1, "bar-chart.png");
-            imageList2.Images.SetKeyName(2, "book-open.png");
-            imageList2.Images.SetKeyName(3, "calendar.png");
-            imageList2.Images.SetKeyName(4, "dollar-sign.png");
-            imageList2.Images.SetKeyName(5, "package.png");
-            imageList2.Images.SetKeyName(6, "shopping-cart.png");
-            // 
-            // btnCobros
-            // 
-            btnCobros.BackColor = Color.FromArgb(82, 101, 143);
-            btnCobros.FlatStyle = FlatStyle.Flat;
-            btnCobros.ForeColor = Color.White;
-            btnCobros.ImageAlign = ContentAlignment.TopCenter;
-            btnCobros.ImageKey = "dollar-sign.png";
-            btnCobros.ImageList = imageList2;
-            btnCobros.Location = new Point(-1, 412);
-            btnCobros.Margin = new Padding(2);
-            btnCobros.Name = "btnCobros";
-            btnCobros.Size = new Size(94, 95);
-            btnCobros.TabIndex = 10;
-            btnCobros.Text = "Cobros";
-            btnCobros.TextAlign = ContentAlignment.BottomCenter;
-            btnCobros.TextImageRelation = TextImageRelation.ImageAboveText;
-            btnCobros.UseVisualStyleBackColor = false;
-            // 
-            // btnVentas
-            // 
-            btnVentas.BackColor = Color.FromArgb(82, 101, 143);
-            btnVentas.FlatStyle = FlatStyle.Flat;
-            btnVentas.ForeColor = Color.White;
-            btnVentas.ImageAlign = ContentAlignment.TopCenter;
-            btnVentas.ImageKey = "shopping-cart.png";
-            btnVentas.ImageList = imageList2;
-            btnVentas.Location = new Point(-1, 318);
-            btnVentas.Margin = new Padding(2);
-            btnVentas.Name = "btnVentas";
-            btnVentas.Size = new Size(94, 95);
-            btnVentas.TabIndex = 9;
-            btnVentas.Text = "Ventas";
-            btnVentas.TextAlign = ContentAlignment.BottomCenter;
-            btnVentas.TextImageRelation = TextImageRelation.ImageAboveText;
-            btnVentas.UseVisualStyleBackColor = false;
-            // 
-            // btnCitas
-            // 
-            btnCitas.BackColor = Color.FromArgb(82, 101, 143);
-            btnCitas.FlatStyle = FlatStyle.Flat;
-            btnCitas.ForeColor = Color.White;
-            btnCitas.ImageAlign = ContentAlignment.TopCenter;
-            btnCitas.ImageKey = "calendar.png";
-            btnCitas.ImageList = imageList2;
-            btnCitas.Location = new Point(-1, 222);
-            btnCitas.Margin = new Padding(2);
-            btnCitas.Name = "btnCitas";
-            btnCitas.Size = new Size(94, 95);
-            btnCitas.TabIndex = 8;
-            btnCitas.Text = "Citas";
-            btnCitas.TextAlign = ContentAlignment.BottomCenter;
-            btnCitas.TextImageRelation = TextImageRelation.ImageAboveText;
-            btnCitas.UseVisualStyleBackColor = false;
-            // 
-            // btnStock
-            // 
-            btnStock.BackColor = Color.FromArgb(82, 101, 143);
-            btnStock.FlatStyle = FlatStyle.Flat;
-            btnStock.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            btnStock.ForeColor = Color.White;
-            btnStock.ImageAlign = ContentAlignment.TopCenter;
-            btnStock.ImageKey = "book-open.png";
-            btnStock.ImageList = imageList2;
-            btnStock.Location = new Point(-1, 128);
-            btnStock.Margin = new Padding(2);
-            btnStock.Name = "btnStock";
-            btnStock.Size = new Size(94, 95);
-            btnStock.TabIndex = 7;
-            btnStock.Text = "Inventario";
-            btnStock.TextAlign = ContentAlignment.BottomCenter;
-            btnStock.TextImageRelation = TextImageRelation.ImageAboveText;
-            btnStock.UseVisualStyleBackColor = false;
-            // 
-            // btnPedidos
-            // 
-            btnPedidos.BackColor = Color.FromArgb(82, 101, 143);
-            btnPedidos.FlatStyle = FlatStyle.Flat;
-            btnPedidos.ForeColor = Color.White;
-            btnPedidos.ImageAlign = ContentAlignment.TopCenter;
-            btnPedidos.ImageKey = "package.png";
-            btnPedidos.ImageList = imageList2;
-            btnPedidos.Location = new Point(-1, 38);
-            btnPedidos.Margin = new Padding(2);
-            btnPedidos.Name = "btnPedidos";
-            btnPedidos.Size = new Size(94, 95);
-            btnPedidos.TabIndex = 6;
-            btnPedidos.Text = "Pedidos";
-            btnPedidos.TextAlign = ContentAlignment.BottomCenter;
-            btnPedidos.TextImageRelation = TextImageRelation.ImageAboveText;
-            btnPedidos.UseVisualStyleBackColor = false;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7, Column8, Column9, Column10, Column11, Column12, Column13, Column14, Column15, Column16, Column17, Column18, Column19, Column20, Column21, Column22, Column23, Column24, Column25, Column26, Column27, Column28, Column29, Column30, Column31 });
-            dataGridView1.Location = new Point(152, 220);
-            dataGridView1.Margin = new Padding(4, 5, 4, 5);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersVisible = false;
-            dataGridView1.RowHeadersWidth = 42;
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(1089, 532);
-            dataGridView1.TabIndex = 49;
-            dataGridView1.CellClick += dataGridView1_CellClick_1;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "IDVersion";
-            Column1.MinimumWidth = 8;
-            Column1.Name = "Column1";
-            Column1.Width = 150;
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "IDVehiculo";
-            Column2.MinimumWidth = 8;
-            Column2.Name = "Column2";
-            Column2.Width = 150;
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Llantas";
-            Column3.MinimumWidth = 8;
-            Column3.Name = "Column3";
-            Column3.Width = 150;
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "TipoAsientos";
-            Column4.MinimumWidth = 8;
-            Column4.Name = "Column4";
-            Column4.Width = 150;
-            // 
-            // Column5
-            // 
-            Column5.HeaderText = "CamaraTrasera";
-            Column5.MinimumWidth = 8;
-            Column5.Name = "Column5";
-            Column5.Width = 150;
-            // 
-            // Column6
-            // 
-            Column6.HeaderText = "Pantalla";
-            Column6.MinimumWidth = 8;
-            Column6.Name = "Column6";
-            Column6.Width = 150;
-            // 
-            // Column7
-            // 
-            Column7.HeaderText = "TipoCombustible";
-            Column7.MinimumWidth = 8;
-            Column7.Name = "Column7";
-            Column7.Width = 150;
-            // 
-            // Column8
-            // 
-            Column8.HeaderText = "Version";
-            Column8.MinimumWidth = 8;
-            Column8.Name = "Column8";
-            Column8.Width = 150;
-            // 
-            // Column9
-            // 
-            Column9.HeaderText = "Rines";
-            Column9.MinimumWidth = 8;
-            Column9.Name = "Column9";
-            Column9.Width = 150;
-            // 
-            // Column10
-            // 
-            Column10.HeaderText = "Cilindraje";
-            Column10.MinimumWidth = 8;
-            Column10.Name = "Column10";
-            Column10.Width = 150;
-            // 
-            // Column11
-            // 
-            Column11.HeaderText = "Costo";
-            Column11.MinimumWidth = 8;
-            Column11.Name = "Column11";
-            Column11.Width = 150;
-            // 
-            // Column12
-            // 
-            Column12.HeaderText = "CapacidadCajuela";
-            Column12.MinimumWidth = 8;
-            Column12.Name = "Column12";
-            Column12.Width = 150;
-            // 
-            // Column13
-            // 
-            Column13.HeaderText = "DistanciaEjes";
-            Column13.MinimumWidth = 8;
-            Column13.Name = "Column13";
-            Column13.Width = 150;
-            // 
-            // Column14
-            // 
-            Column14.HeaderText = "Anchura";
-            Column14.MinimumWidth = 8;
-            Column14.Name = "Column14";
-            Column14.Width = 150;
-            // 
-            // Column15
-            // 
-            Column15.HeaderText = "Altura";
-            Column15.MinimumWidth = 8;
-            Column15.Name = "Column15";
-            Column15.Width = 150;
-            // 
-            // Column16
-            // 
-            Column16.HeaderText = "AudioVelC";
-            Column16.MinimumWidth = 8;
-            Column16.Name = "Column16";
-            Column16.Width = 150;
-            // 
-            // Column17
-            // 
-            Column17.HeaderText = "TomaCorriente";
-            Column17.MinimumWidth = 8;
-            Column17.Name = "Column17";
-            Column17.Width = 150;
-            // 
-            // Column18
-            // 
-            Column18.HeaderText = "TipoTraccion";
-            Column18.MinimumWidth = 8;
-            Column18.Name = "Column18";
-            Column18.Width = 150;
-            // 
-            // Column19
-            // 
-            Column19.HeaderText = "NumPuertas";
-            Column19.MinimumWidth = 8;
-            Column19.Name = "Column19";
-            Column19.Width = 150;
-            // 
-            // Column20
-            // 
-            Column20.HeaderText = "Transmision";
-            Column20.MinimumWidth = 8;
-            Column20.Name = "Column20";
-            Column20.Width = 150;
-            // 
-            // Column21
-            // 
-            Column21.HeaderText = "FarosHal";
-            Column21.MinimumWidth = 8;
-            Column21.Name = "Column21";
-            Column21.Width = 150;
-            // 
-            // Column22
-            // 
-            Column22.HeaderText = "NumEngranajes";
-            Column22.MinimumWidth = 8;
-            Column22.Name = "Column22";
-            Column22.Width = 150;
-            // 
-            // Column23
-            // 
-            Column23.HeaderText = "ACAutom";
-            Column23.MinimumWidth = 8;
-            Column23.Name = "Column23";
-            Column23.Width = 150;
-            // 
-            // Column24
-            // 
-            Column24.HeaderText = "FarosLED";
-            Column24.MinimumWidth = 8;
-            Column24.Name = "Column24";
-            Column24.Width = 150;
-            // 
-            // Column25
-            // 
-            Column25.HeaderText = "RendimientoCombustible";
-            Column25.MinimumWidth = 8;
-            Column25.Name = "Column25";
-            Column25.Width = 150;
-            // 
-            // Column26
-            // 
-            Column26.HeaderText = "FrenosTraseros";
-            Column26.MinimumWidth = 8;
-            Column26.Name = "Column26";
-            Column26.Width = 150;
-            // 
-            // Column27
-            // 
-            Column27.HeaderText = "FrenosDelanteros";
-            Column27.MinimumWidth = 8;
-            Column27.Name = "Column27";
-            Column27.Width = 150;
-            // 
-            // Column28
-            // 
-            Column28.HeaderText = "SuspensionDelantera";
-            Column28.MinimumWidth = 8;
-            Column28.Name = "Column28";
-            Column28.Width = 150;
-            // 
-            // Column29
-            // 
-            Column29.HeaderText = "SuspensionTrasera";
-            Column29.MinimumWidth = 8;
-            Column29.Name = "Column29";
-            Column29.Width = 150;
-            // 
-            // Column30
-            // 
-            Column30.HeaderText = "EspejosLatDirC";
-            Column30.MinimumWidth = 8;
-            Column30.Name = "Column30";
-            Column30.Width = 150;
-            // 
-            // Column31
-            // 
-            Column31.HeaderText = "EspejosLatAE";
-            Column31.MinimumWidth = 8;
-            Column31.Name = "Column31";
-            Column31.Width = 150;
-            // 
-            // pictureBox8
-            // 
-            pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
-            pictureBox8.Location = new Point(152, 160);
-            pictureBox8.Margin = new Padding(4, 2, 4, 2);
-            pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(54, 52);
-            pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox8.TabIndex = 50;
-            pictureBox8.TabStop = false;
-            pictureBox8.Click += pictureBox8_Click;
-            // 
-            // pictureBox9
-            // 
-            pictureBox9.Image = Properties.Resources.edit_2;
-            pictureBox9.Location = new Point(216, 160);
-            pictureBox9.Margin = new Padding(4, 2, 4, 2);
-            pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(54, 52);
-            pictureBox9.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox9.TabIndex = 51;
-            pictureBox9.TabStop = false;
-            pictureBox9.Click += pictureBox9_Click;
-            // 
-            // pictureBox11
-            // 
-            pictureBox11.Image = Properties.Resources.x;
-            pictureBox11.Location = new Point(279, 160);
-            pictureBox11.Margin = new Padding(4, 2, 4, 2);
-            pictureBox11.Name = "pictureBox11";
-            pictureBox11.Size = new Size(54, 52);
-            pictureBox11.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox11.TabIndex = 52;
-            pictureBox11.TabStop = false;
-            pictureBox11.Click += pictureBox11_Click_1;
-            // 
-            // panel3
-            // 
-            panel3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            panel3.Controls.Add(button1);
-            panel3.Controls.Add(label13);
-            panel3.Controls.Add(txtbusqueda);
-            panel3.Controls.Add(comboversion);
-            panel3.Location = new Point(536, 132);
-            panel3.Margin = new Padding(4, 2, 4, 2);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(706, 58);
-            panel3.TabIndex = 53;
-            // 
-            // button1
-            // 
-            button1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button1.BackColor = Color.FromArgb(82, 101, 143);
-            button1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.ForeColor = SystemColors.ButtonHighlight;
-            button1.Location = new Point(555, 8);
-            button1.Margin = new Padding(4, 2, 4, 2);
-            button1.Name = "button1";
-            button1.Size = new Size(148, 48);
-            button1.TabIndex = 97;
-            button1.Text = "Buscar";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label13.Location = new Point(0, 18);
-            label13.Margin = new Padding(4, 0, 4, 0);
-            label13.Name = "label13";
-            label13.Size = new Size(110, 26);
-            label13.TabIndex = 53;
-            label13.Text = "Filtrar por:";
-            // 
-            // txtbusqueda
-            // 
-            txtbusqueda.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txtbusqueda.BackColor = Color.White;
-            txtbusqueda.Enabled = false;
-            txtbusqueda.ForeColor = SystemColors.ControlDark;
-            txtbusqueda.Location = new Point(338, 18);
-            txtbusqueda.Margin = new Padding(4, 2, 4, 2);
-            txtbusqueda.Name = "txtbusqueda";
-            txtbusqueda.PlaceholderText = "Ingrese su busqueda";
-            txtbusqueda.Size = new Size(212, 31);
-            txtbusqueda.TabIndex = 96;
-            // 
-            // comboversion
-            // 
-            comboversion.FormattingEnabled = true;
-            comboversion.Items.AddRange(new object[] { "Todos", "IDVersion", "IDVehiculo", "LLantas", "TipoAsientos", "CamaraTrasera", "Pantalla", "TipoCombustible", "Version", "Rines", "Cilindraje", "Costo", "CapacidadCajuela", "DistanciaEjes", "Anchura", "Altura", "AudioVelC", "TomaCorriente", "TipoTraccion", "NumPuertas", "Transmision", "FarosHal", "NumEngranajes", "ACAutom", "FarosLED", "RendimientoCombustible", "FrenosTraseros", "FrenosDelanteros", "SuspensionDelantera", "SuspensionTrasera", "EspejosLatDirC", "EspejosLatAE" });
-            comboversion.Location = new Point(122, 15);
-            comboversion.Margin = new Padding(4, 2, 4, 2);
-            comboversion.Name = "comboversion";
-            comboversion.Size = new Size(206, 33);
-            comboversion.TabIndex = 55;
-            comboversion.SelectedValueChanged += comboversion_SelectedValueChanged;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources.printer;
-            pictureBox1.Location = new Point(340, 160);
-            pictureBox1.Margin = new Padding(4, 2, 4, 2);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(54, 52);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 52;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
+            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(58)))), ((int)(((byte)(86)))));
+            this.panel7.Controls.Add(this.lblTipoEmpleado);
+            this.panel7.Controls.Add(this.lblNombre);
+            this.panel7.Controls.Add(this.label8);
+            this.panel7.Controls.Add(this.label9);
+            this.panel7.Controls.Add(this.label5);
+            this.panel7.Controls.Add(this.label2);
+            this.panel7.Controls.Add(this.label6);
+            this.panel7.Controls.Add(this.label3);
+            this.panel7.Controls.Add(this.label4);
+            this.panel7.Controls.Add(this.label1);
+            this.panel7.Controls.Add(this.label7);
+            this.panel7.Controls.Add(this.pictureBox13);
+            this.panel7.Controls.Add(this.pictureBox10);
+            this.panel7.ForeColor = System.Drawing.Color.White;
+            this.panel7.Location = new System.Drawing.Point(0, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(904, 57);
+            this.panel7.TabIndex = 46;
             // 
             // lblTipoEmpleado
             // 
-            lblTipoEmpleado.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            lblTipoEmpleado.AutoSize = true;
-            lblTipoEmpleado.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lblTipoEmpleado.Location = new Point(1069, 63);
-            lblTipoEmpleado.Margin = new Padding(2, 0, 2, 0);
-            lblTipoEmpleado.Name = "lblTipoEmpleado";
-            lblTipoEmpleado.Size = new Size(96, 25);
-            lblTipoEmpleado.TabIndex = 53;
-            lblTipoEmpleado.Text = "Supervisor";
+            this.lblTipoEmpleado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTipoEmpleado.AutoSize = true;
+            this.lblTipoEmpleado.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTipoEmpleado.Location = new System.Drawing.Point(748, 38);
+            this.lblTipoEmpleado.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.lblTipoEmpleado.Name = "lblTipoEmpleado";
+            this.lblTipoEmpleado.Size = new System.Drawing.Size(62, 15);
+            this.lblTipoEmpleado.TabIndex = 53;
+            this.lblTipoEmpleado.Text = "Supervisor";
             // 
             // lblNombre
             // 
-            lblNombre.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            lblNombre.AutoSize = true;
-            lblNombre.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblNombre.Location = new Point(987, 22);
-            lblNombre.Margin = new Padding(2, 0, 2, 0);
-            lblNombre.Name = "lblNombre";
-            lblNombre.Size = new Size(255, 32);
-            lblNombre.TabIndex = 54;
-            lblNombre.Text = "Bienvenido: Fulanito";
-            lblNombre.TextAlign = ContentAlignment.TopCenter;
+            this.lblNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblNombre.Location = new System.Drawing.Point(691, 13);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(172, 21);
+            this.lblNombre.TabIndex = 54;
+            this.lblNombre.Text = "Bienvenido: Fulanito";
+            this.lblNombre.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(1473, 35);
+            this.label8.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(62, 15);
+            this.label8.TabIndex = 51;
+            this.label8.Text = "Supervisor";
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label9.Location = new System.Drawing.Point(1407, 15);
+            this.label9.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(172, 21);
+            this.label9.TabIndex = 52;
+            this.label9.Text = "Bienvenido: Fulanito";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(2160, 35);
+            this.label5.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(62, 15);
+            this.label5.TabIndex = 49;
+            this.label5.Text = "Supervisor";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(335, 13);
+            this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(236, 32);
+            this.label2.TabIndex = 49;
+            this.label2.Text = "Gestión de versiones";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(2094, 15);
+            this.label6.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(172, 21);
+            this.label6.TabIndex = 50;
+            this.label6.Text = "Bienvenido: Fulanito";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(2610, 11);
+            this.label3.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(183, 32);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "Gestión de citas";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(2982, 31);
+            this.label4.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(62, 15);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Supervisor";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(2982, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(172, 21);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Bienvenido: Fulanito";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(106, 15);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(80, 27);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "SIVAA";
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
+            this.pictureBox13.Location = new System.Drawing.Point(15, 0);
+            this.pictureBox13.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(46, 57);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox13.TabIndex = 2;
+            this.pictureBox13.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
+            this.pictureBox10.Location = new System.Drawing.Point(63, 0);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(46, 57);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox10.TabIndex = 2;
+            this.pictureBox10.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(101)))), ((int)(((byte)(143)))));
+            this.panel1.Controls.Add(this.btnReportes);
+            this.panel1.Controls.Add(this.btnCobros);
+            this.panel1.Controls.Add(this.btnVentas);
+            this.panel1.Controls.Add(this.btnCitas);
+            this.panel1.Controls.Add(this.btnStock);
+            this.panel1.Controls.Add(this.btnPedidos);
+            this.panel1.Location = new System.Drawing.Point(0, 57);
+            this.panel1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(66, 407);
+            this.panel1.TabIndex = 48;
+            // 
+            // btnReportes
+            // 
+            this.btnReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(101)))), ((int)(((byte)(143)))));
+            this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportes.ForeColor = System.Drawing.Color.White;
+            this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnReportes.ImageKey = "bar-chart.png";
+            this.btnReportes.ImageList = this.imageList2;
+            this.btnReportes.Location = new System.Drawing.Point(-1, 305);
+            this.btnReportes.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnReportes.Name = "btnReportes";
+            this.btnReportes.Size = new System.Drawing.Size(66, 57);
+            this.btnReportes.TabIndex = 11;
+            this.btnReportes.Text = "Reportes";
+            this.btnReportes.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnReportes.UseVisualStyleBackColor = false;
+            // 
+            // imageList2
+            // 
+            this.imageList2.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList2.ImageStream")));
+            this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList2.Images.SetKeyName(0, "archive.png");
+            this.imageList2.Images.SetKeyName(1, "bar-chart.png");
+            this.imageList2.Images.SetKeyName(2, "book-open.png");
+            this.imageList2.Images.SetKeyName(3, "calendar.png");
+            this.imageList2.Images.SetKeyName(4, "dollar-sign.png");
+            this.imageList2.Images.SetKeyName(5, "package.png");
+            this.imageList2.Images.SetKeyName(6, "shopping-cart.png");
+            // 
+            // btnCobros
+            // 
+            this.btnCobros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(101)))), ((int)(((byte)(143)))));
+            this.btnCobros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCobros.ForeColor = System.Drawing.Color.White;
+            this.btnCobros.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCobros.ImageKey = "dollar-sign.png";
+            this.btnCobros.ImageList = this.imageList2;
+            this.btnCobros.Location = new System.Drawing.Point(-1, 247);
+            this.btnCobros.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnCobros.Name = "btnCobros";
+            this.btnCobros.Size = new System.Drawing.Size(66, 57);
+            this.btnCobros.TabIndex = 10;
+            this.btnCobros.Text = "Cobros";
+            this.btnCobros.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCobros.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnCobros.UseVisualStyleBackColor = false;
+            // 
+            // btnVentas
+            // 
+            this.btnVentas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(101)))), ((int)(((byte)(143)))));
+            this.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVentas.ForeColor = System.Drawing.Color.White;
+            this.btnVentas.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnVentas.ImageKey = "shopping-cart.png";
+            this.btnVentas.ImageList = this.imageList2;
+            this.btnVentas.Location = new System.Drawing.Point(-1, 191);
+            this.btnVentas.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnVentas.Name = "btnVentas";
+            this.btnVentas.Size = new System.Drawing.Size(66, 57);
+            this.btnVentas.TabIndex = 9;
+            this.btnVentas.Text = "Ventas";
+            this.btnVentas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnVentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnVentas.UseVisualStyleBackColor = false;
+            // 
+            // btnCitas
+            // 
+            this.btnCitas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(101)))), ((int)(((byte)(143)))));
+            this.btnCitas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCitas.ForeColor = System.Drawing.Color.White;
+            this.btnCitas.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCitas.ImageKey = "calendar.png";
+            this.btnCitas.ImageList = this.imageList2;
+            this.btnCitas.Location = new System.Drawing.Point(-1, 133);
+            this.btnCitas.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnCitas.Name = "btnCitas";
+            this.btnCitas.Size = new System.Drawing.Size(66, 57);
+            this.btnCitas.TabIndex = 8;
+            this.btnCitas.Text = "Citas";
+            this.btnCitas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCitas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnCitas.UseVisualStyleBackColor = false;
+            // 
+            // btnStock
+            // 
+            this.btnStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(101)))), ((int)(((byte)(143)))));
+            this.btnStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStock.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnStock.ForeColor = System.Drawing.Color.White;
+            this.btnStock.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnStock.ImageKey = "book-open.png";
+            this.btnStock.ImageList = this.imageList2;
+            this.btnStock.Location = new System.Drawing.Point(-1, 77);
+            this.btnStock.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnStock.Name = "btnStock";
+            this.btnStock.Size = new System.Drawing.Size(66, 57);
+            this.btnStock.TabIndex = 7;
+            this.btnStock.Text = "Inventario";
+            this.btnStock.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnStock.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnStock.UseVisualStyleBackColor = false;
+            // 
+            // btnPedidos
+            // 
+            this.btnPedidos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(101)))), ((int)(((byte)(143)))));
+            this.btnPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPedidos.ForeColor = System.Drawing.Color.White;
+            this.btnPedidos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnPedidos.ImageKey = "package.png";
+            this.btnPedidos.ImageList = this.imageList2;
+            this.btnPedidos.Location = new System.Drawing.Point(-1, 23);
+            this.btnPedidos.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnPedidos.Name = "btnPedidos";
+            this.btnPedidos.Size = new System.Drawing.Size(66, 57);
+            this.btnPedidos.TabIndex = 6;
+            this.btnPedidos.Text = "Pedidos";
+            this.btnPedidos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnPedidos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnPedidos.UseVisualStyleBackColor = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column8,
+            this.Column9,
+            this.Column10,
+            this.Column11,
+            this.Column12,
+            this.Column13,
+            this.Column14,
+            this.Column15,
+            this.Column16,
+            this.Column17,
+            this.Column18,
+            this.Column19,
+            this.Column20,
+            this.Column21,
+            this.Column22,
+            this.Column23,
+            this.Column24,
+            this.Column25,
+            this.Column26,
+            this.Column27,
+            this.Column28,
+            this.Column29,
+            this.Column30,
+            this.Column31});
+            this.dataGridView1.Location = new System.Drawing.Point(106, 132);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 42;
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(762, 319);
+            this.dataGridView1.TabIndex = 49;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "IDVersion";
+            this.Column1.MinimumWidth = 8;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 150;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "IDVehiculo";
+            this.Column2.MinimumWidth = 8;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 150;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Llantas";
+            this.Column3.MinimumWidth = 8;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 150;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "TipoAsientos";
+            this.Column4.MinimumWidth = 8;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 150;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "CamaraTrasera";
+            this.Column5.MinimumWidth = 8;
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 150;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Pantalla";
+            this.Column6.MinimumWidth = 8;
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 150;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "TipoCombustible";
+            this.Column7.MinimumWidth = 8;
+            this.Column7.Name = "Column7";
+            this.Column7.Width = 150;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Version";
+            this.Column8.MinimumWidth = 8;
+            this.Column8.Name = "Column8";
+            this.Column8.Width = 150;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Rines";
+            this.Column9.MinimumWidth = 8;
+            this.Column9.Name = "Column9";
+            this.Column9.Width = 150;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "Cilindraje";
+            this.Column10.MinimumWidth = 8;
+            this.Column10.Name = "Column10";
+            this.Column10.Width = 150;
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "Costo";
+            this.Column11.MinimumWidth = 8;
+            this.Column11.Name = "Column11";
+            this.Column11.Width = 150;
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "CapacidadCajuela";
+            this.Column12.MinimumWidth = 8;
+            this.Column12.Name = "Column12";
+            this.Column12.Width = 150;
+            // 
+            // Column13
+            // 
+            this.Column13.HeaderText = "DistanciaEjes";
+            this.Column13.MinimumWidth = 8;
+            this.Column13.Name = "Column13";
+            this.Column13.Width = 150;
+            // 
+            // Column14
+            // 
+            this.Column14.HeaderText = "Anchura";
+            this.Column14.MinimumWidth = 8;
+            this.Column14.Name = "Column14";
+            this.Column14.Width = 150;
+            // 
+            // Column15
+            // 
+            this.Column15.HeaderText = "Altura";
+            this.Column15.MinimumWidth = 8;
+            this.Column15.Name = "Column15";
+            this.Column15.Width = 150;
+            // 
+            // Column16
+            // 
+            this.Column16.HeaderText = "AudioVelC";
+            this.Column16.MinimumWidth = 8;
+            this.Column16.Name = "Column16";
+            this.Column16.Width = 150;
+            // 
+            // Column17
+            // 
+            this.Column17.HeaderText = "TomaCorriente";
+            this.Column17.MinimumWidth = 8;
+            this.Column17.Name = "Column17";
+            this.Column17.Width = 150;
+            // 
+            // Column18
+            // 
+            this.Column18.HeaderText = "TipoTraccion";
+            this.Column18.MinimumWidth = 8;
+            this.Column18.Name = "Column18";
+            this.Column18.Width = 150;
+            // 
+            // Column19
+            // 
+            this.Column19.HeaderText = "NumPuertas";
+            this.Column19.MinimumWidth = 8;
+            this.Column19.Name = "Column19";
+            this.Column19.Width = 150;
+            // 
+            // Column20
+            // 
+            this.Column20.HeaderText = "Transmision";
+            this.Column20.MinimumWidth = 8;
+            this.Column20.Name = "Column20";
+            this.Column20.Width = 150;
+            // 
+            // Column21
+            // 
+            this.Column21.HeaderText = "FarosHal";
+            this.Column21.MinimumWidth = 8;
+            this.Column21.Name = "Column21";
+            this.Column21.Width = 150;
+            // 
+            // Column22
+            // 
+            this.Column22.HeaderText = "NumEngranajes";
+            this.Column22.MinimumWidth = 8;
+            this.Column22.Name = "Column22";
+            this.Column22.Width = 150;
+            // 
+            // Column23
+            // 
+            this.Column23.HeaderText = "ACAutom";
+            this.Column23.MinimumWidth = 8;
+            this.Column23.Name = "Column23";
+            this.Column23.Width = 150;
+            // 
+            // Column24
+            // 
+            this.Column24.HeaderText = "FarosLED";
+            this.Column24.MinimumWidth = 8;
+            this.Column24.Name = "Column24";
+            this.Column24.Width = 150;
+            // 
+            // Column25
+            // 
+            this.Column25.HeaderText = "RendimientoCombustible";
+            this.Column25.MinimumWidth = 8;
+            this.Column25.Name = "Column25";
+            this.Column25.Width = 150;
+            // 
+            // Column26
+            // 
+            this.Column26.HeaderText = "FrenosTraseros";
+            this.Column26.MinimumWidth = 8;
+            this.Column26.Name = "Column26";
+            this.Column26.Width = 150;
+            // 
+            // Column27
+            // 
+            this.Column27.HeaderText = "FrenosDelanteros";
+            this.Column27.MinimumWidth = 8;
+            this.Column27.Name = "Column27";
+            this.Column27.Width = 150;
+            // 
+            // Column28
+            // 
+            this.Column28.HeaderText = "SuspensionDelantera";
+            this.Column28.MinimumWidth = 8;
+            this.Column28.Name = "Column28";
+            this.Column28.Width = 150;
+            // 
+            // Column29
+            // 
+            this.Column29.HeaderText = "SuspensionTrasera";
+            this.Column29.MinimumWidth = 8;
+            this.Column29.Name = "Column29";
+            this.Column29.Width = 150;
+            // 
+            // Column30
+            // 
+            this.Column30.HeaderText = "EspejosLatDirC";
+            this.Column30.MinimumWidth = 8;
+            this.Column30.Name = "Column30";
+            this.Column30.Width = 150;
+            // 
+            // Column31
+            // 
+            this.Column31.HeaderText = "EspejosLatAE";
+            this.Column31.MinimumWidth = 8;
+            this.Column31.Name = "Column31";
+            this.Column31.Width = 150;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(106, 96);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(38, 31);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 50;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::Pantallas_SIVAA.Properties.Resources.edit_2;
+            this.pictureBox9.Location = new System.Drawing.Point(151, 96);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(38, 31);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 51;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = global::Pantallas_SIVAA.Properties.Resources.x;
+            this.pictureBox11.Location = new System.Drawing.Point(195, 96);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(38, 31);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 52;
+            this.pictureBox11.TabStop = false;
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.label13);
+            this.panel3.Controls.Add(this.txtbusqueda);
+            this.panel3.Controls.Add(this.comboversion);
+            this.panel3.Location = new System.Drawing.Point(375, 79);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(494, 35);
+            this.panel3.TabIndex = 53;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(101)))), ((int)(((byte)(143)))));
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(388, 5);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(104, 29);
+            this.button1.TabIndex = 97;
+            this.button1.Text = "Buscar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label13.Location = new System.Drawing.Point(0, 11);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(75, 18);
+            this.label13.TabIndex = 53;
+            this.label13.Text = "Filtrar por:";
+            // 
+            // txtbusqueda
+            // 
+            this.txtbusqueda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtbusqueda.BackColor = System.Drawing.Color.White;
+            this.txtbusqueda.Enabled = false;
+            this.txtbusqueda.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.txtbusqueda.Location = new System.Drawing.Point(237, 11);
+            this.txtbusqueda.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.txtbusqueda.Name = "txtbusqueda";
+            this.txtbusqueda.PlaceholderText = "Ingrese su busqueda";
+            this.txtbusqueda.Size = new System.Drawing.Size(150, 23);
+            this.txtbusqueda.TabIndex = 96;
+            // 
+            // comboversion
+            // 
+            this.comboversion.FormattingEnabled = true;
+            this.comboversion.Items.AddRange(new object[] {
+            "Todos",
+            "IDVersion",
+            "IDVehiculo",
+            "LLantas",
+            "TipoAsientos",
+            "CamaraTrasera",
+            "Pantalla",
+            "TipoCombustible",
+            "Version",
+            "Rines",
+            "Cilindraje",
+            "Costo",
+            "CapacidadCajuela",
+            "DistanciaEjes",
+            "Anchura",
+            "Altura",
+            "AudioVelC",
+            "TomaCorriente",
+            "TipoTraccion",
+            "NumPuertas",
+            "Transmision",
+            "FarosHal",
+            "NumEngranajes",
+            "ACAutom",
+            "FarosLED",
+            "RendimientoCombustible",
+            "FrenosTraseros",
+            "FrenosDelanteros",
+            "SuspensionDelantera",
+            "SuspensionTrasera",
+            "EspejosLatDirC",
+            "EspejosLatAE"});
+            this.comboversion.Location = new System.Drawing.Point(85, 9);
+            this.comboversion.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.comboversion.Name = "comboversion";
+            this.comboversion.Size = new System.Drawing.Size(145, 23);
+            this.comboversion.TabIndex = 55;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Pantallas_SIVAA.Properties.Resources.printer;
+            this.pictureBox1.Location = new System.Drawing.Point(238, 96);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(38, 31);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 52;
+            this.pictureBox1.TabStop = false;
             // 
             // Versiones
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1292, 772);
-            Controls.Add(panel3);
-            Controls.Add(pictureBox1);
-            Controls.Add(pictureBox11);
-            Controls.Add(pictureBox9);
-            Controls.Add(pictureBox8);
-            Controls.Add(dataGridView1);
-            Controls.Add(panel1);
-            Controls.Add(panel7);
-            Margin = new Padding(4, 5, 4, 5);
-            Name = "Versiones";
-            Text = "Versiones";
-            WindowState = FormWindowState.Maximized;
-            Load += Versiones_Load_1;
-            panel7.ResumeLayout(false);
-            panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
-            panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(904, 463);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBox11);
+            this.Controls.Add(this.pictureBox9);
+            this.Controls.Add(this.pictureBox8);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel7);
+            this.Name = "Versiones";
+            this.Text = "Versiones";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion

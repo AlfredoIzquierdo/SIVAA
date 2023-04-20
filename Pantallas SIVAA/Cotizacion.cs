@@ -77,8 +77,9 @@ namespace Pantallas_SIVAA
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Login.inicio.Show();
+            Inicio inicio = new Inicio(_pqt);
+            this.Close();
+            inicio.Show();
         }
 
         private void Cotizacion_Load(object sender, EventArgs e)

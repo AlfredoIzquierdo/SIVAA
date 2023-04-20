@@ -15,20 +15,10 @@ namespace Pantallas_SIVAA
     public partial class Inicio : Form
     {
         // principal
-        public static Vehiculos Vehiculos = new Vehiculos(null);
-        public static Versiones Versiones = new Versiones(null);
-        public static ProovedoresPrin Proovedores = new ProovedoresPrin(null);
-        public static GestionarEmpleados GestionarEmpleados = new GestionarEmpleados(null);
-        public static Cotizacion Cotizacion = new Cotizacion(null);
-        public static Clientes Clientes = new Clientes(null);
+        
 
         // barra lateral
-        public static GestionarPedidos Pedidos = new GestionarPedidos(null);
-        public static Inventario Stock = new Inventario(null);
-        public static CalendarioCitas CalendarioCitas = new CalendarioCitas(null);
-        public static Ventas Ventas = new Ventas(null);
-        public static AbrirCaja Caja = new AbrirCaja(null);
-        public static Reportes Reportes = new Reportes(null);
+       
 
         private Empleado _pqt;
         public Inicio(Empleado pqt)
@@ -45,7 +35,7 @@ namespace Pantallas_SIVAA
 
         private void btnVehículos_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             Vehiculos vehiculos1 = new Vehiculos(_pqt);
             vehiculos1.Show();
         }
@@ -73,7 +63,7 @@ namespace Pantallas_SIVAA
 
         private void btnClientes_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             Clientes clientes = new Clientes(_pqt);
             clientes.Show();
         }
@@ -175,7 +165,7 @@ namespace Pantallas_SIVAA
         private void btnCobros_Click(object sender, EventArgs e)
         {
             this.Close();
-            Caja = new AbrirCaja(_pqt);        
+            AbrirCaja Caja = new AbrirCaja(_pqt);        
             Caja.Show();
         }
 

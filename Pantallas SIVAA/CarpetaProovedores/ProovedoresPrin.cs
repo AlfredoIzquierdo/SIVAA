@@ -29,7 +29,7 @@ namespace Pantallas_SIVAA
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-            AgregarProovedor agregarprov = new AgregarProovedor();
+            AgregarProovedor agregarprov = new AgregarProovedor(_pqt);
             this.Hide();
             agregarprov.Show();
         }
@@ -47,7 +47,7 @@ namespace Pantallas_SIVAA
             if (dataGridView1.SelectedRows.Count == 1)
             {
                 id = dataGridView1[0, dataGridView1.SelectedRows[0].Index].Value.ToString();
-                EditarProovedores modificarEmpleado = new EditarProovedores(id);
+                EditarProovedores modificarEmpleado = new EditarProovedores(id,_pqt);
                 this.Hide();
                 modificarEmpleado.Show();
             }
@@ -107,8 +107,9 @@ namespace Pantallas_SIVAA
 
         private void pictureBox13_Click_1(object sender, EventArgs e)
         {
-            this.Hide();
-            Login.inicio.Show();
+            Inicio inicio = new Inicio(_pqt);
+            this.Close();
+            inicio.Show();
         }
         List<Proveedor> listas;
         private void ProovedoresPrin_Load(object sender, EventArgs e)

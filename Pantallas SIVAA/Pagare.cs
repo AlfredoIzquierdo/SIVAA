@@ -146,5 +146,21 @@ namespace Pantallas_SIVAA
             this.DrawToBitmap(bitmap, new Rectangle(0, 0, this.Width, this.Height));
             e.Graphics.DrawImage(bitmap, 0, 0);
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            // Crear un objeto PrintDocument
+            pictureBox1.Hide();
+            //Guardar el estado original de la propiedad "BorderStyle"
+            isFormBorderStyleNone = this.FormBorderStyle == FormBorderStyle.None;
+            isFormBorderStyleChanged = true;
+            if (!isFormBorderStyleNone)
+            {
+                this.FormBorderStyle = FormBorderStyle.None;
+            }
+
+
+            printDocument1.Print();
+        }
     }
 }

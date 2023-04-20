@@ -164,7 +164,7 @@ namespace Pantallas_SIVAA
             log.Registrar(version);
 
             Versiones versiones = new Versiones(_pqt);
-            this.Hide();
+            this.Close();
             versiones.Show();
         }
 
@@ -320,6 +320,6 @@ namespace Pantallas_SIVAA
             return id;
         }
 
-
+       
     }
 }

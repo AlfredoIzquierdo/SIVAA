@@ -85,8 +85,9 @@ namespace Pantallas_SIVAA
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            corteDeCaja.Show();
+            this.Close();
+            CorteDeCaja caja = new CorteDeCaja(_pqt);
+            caja.Show();
 
         }
 
@@ -246,14 +247,7 @@ namespace Pantallas_SIVAA
         {
             List<Empleado> listado = emplog.ListadoAllCajeros();
 
-            //string n = TXTIDCLI.Text;
-            //string a = TXTAPP.Text;
-            //if (TXTAPP.Text == "" || TXTIDCLI.Text == "")
-            //{
-            //    MessageBox.Show("Favor de llenar los campos");
-            //    return;
-            //}
-            //List<Cliente> listado = PqteLog.ListadoPorNA(n, a);
+            
             if (listado.Count > 0)
             {
                 dataGridView1.AutoGenerateColumns = false;
@@ -550,6 +544,9 @@ namespace Pantallas_SIVAA
                 dataGridView2.Rows[e.RowIndex].Selected = true;
             }
         }
+
+        
+
         public void Limpiar()
         {
             textBox2.Text = "";

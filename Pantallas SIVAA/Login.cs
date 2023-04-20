@@ -9,7 +9,6 @@ namespace Pantallas_SIVAA
     {
         private readonly EmpleadoLog PqteLog = new EmpleadoLog();
 
-        public static Inicio inicio = new Inicio(null);
         public Login()
         {
             InitializeComponent();
@@ -32,7 +31,54 @@ namespace Pantallas_SIVAA
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string Cd = "", Con = "";
 
+            try
+            {
+                Con = textBox2.Text;
+                Cd = textBox1.Text;
+                Empleado pqt = PqteLog.LeerPorClave(Cd, Con);
+                if (PqteLog.Mensaje.Length == 0)
+                {
+                    if (pqt.Tipo.Trim() == "Atencion")
+                    {
+                        //MessageBox.Show("Atencion a clientes");
+                        Inicio AteInicio = new Inicio(pqt);
+                        this.Hide();
+                        AteInicio.Show();
+                    }
+                    else if (pqt.Tipo.Trim() == "Vendedor")
+                    {
+                        //MessageBox.Show("Vendedor");
+                        Inicio VenInicio = new Inicio(pqt);
+                        this.Hide();
+                        VenInicio.Show();
+                    }
+                    else if (pqt.Tipo.Trim() == "Cajero")
+                    {
+                        //MessageBox.Show("Cajero");
+                        AbrirCaja CajInicio = new AbrirCaja(pqt);
+                        this.Hide();
+                        CajInicio.Show();
+                    }
+                    else if (pqt.Tipo.Trim() == "Supervisor")
+                    {
+                        //MessageBox.Show("Supervisor");
+                        Inicio SupInicio = new Inicio(pqt);
+                        this.Hide();
+                        SupInicio.Show();
+                    }
+                    //else
+                    //MessageBox.Show("Inicio de sesion erroneo: "+ pqt.Tipo);
+                }
+                else
+                    MessageBox.Show(PqteLog.Mensaje.ToString());
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
 
@@ -99,5 +145,7 @@ namespace Pantallas_SIVAA
             ContraseñaOlvidada contra = new ContraseñaOlvidada();
             contra.Show();
         }
+
+       
     }
 }

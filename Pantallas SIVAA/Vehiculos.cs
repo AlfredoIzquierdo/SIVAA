@@ -21,8 +21,6 @@ namespace Pantallas_SIVAA
 {
     public partial class Vehiculos : Form
     {
-        public static AgregarVehiculos agregarVehiculos = new AgregarVehiculos(null);
-        public static EliminarVehiculo eliminarVehiculo = new EliminarVehiculo();
         readonly VehiculoLog vehiculo = new VehiculoLog();
         String ID;
         Empleado _pqt;
@@ -41,57 +39,76 @@ namespace Pantallas_SIVAA
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
+            AgregarVehiculos agregarVehiculos = new AgregarVehiculos(_pqt);
             agregarVehiculos.Show();
         }
 
         private void pictureBox9_Click(object sender, EventArgs e)
         {
-            ModificarVehiculo modificarVehiculo = new ModificarVehiculo(ID,_pqt);
-            this.Hide();
-            modificarVehiculo.Show();
+            string id = null;
+            if (dataGridView1.SelectedRows.Count == 1)
+            {
+                id = dataGridView1[0, dataGridView1.SelectedRows[0].Index].Value.ToString();
+                ModificarVehiculo modificarVehiculo = new ModificarVehiculo(id, _pqt);
+                this.Close();
+                modificarVehiculo.Show();
+            }
+            else
+            {
+                MessageBox.Show("Favor de seleccionar un vehiculo");
+            }
+            
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Pedidos.Show();
+            this.Close();
+            GestionarPedidos pedidos = new GestionarPedidos(_pqt);
+            pedidos.Show();
         }
 
         private void btnPedidos_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Pedidos.Show();
+            this.Close();
+            GestionarPedidos pedidos = new GestionarPedidos(_pqt);
+            pedidos.Show();
         }
 
         private void btnStock_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Stock.Show();
+            this.Close();
+            Inventario inventario = new Inventario(_pqt);
+            inventario.Show();
         }
 
         private void btnCitas_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.CalendarioCitas.Show();
+            this.Close();
+            CalendarioCitas citas = new CalendarioCitas(_pqt);
+            citas.Show();
         }
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Ventas.Show();
+            this.Close();
+            Ventas ventas = new Ventas(_pqt);
+            ventas.Show();
         }
 
         private void btnCobros_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Caja.Show();
+            this.Close();
+            AbrirCaja Caja = new AbrirCaja(_pqt);
+            Caja.Show();
         }
 
         private void btnReportes_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Reportes.Show();
+            this.Close();
+            Reportes reportes = new Reportes(_pqt);
+            reportes.Show();
+
         }
 
         private void pictureBox11_Click(object sender, EventArgs e)
@@ -161,23 +178,13 @@ namespace Pantallas_SIVAA
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridView1.CurrentCell.RowIndex >= 0)
+            if (e.RowIndex >= 0)
             {
-                int i = dataGridView1.CurrentCell.RowIndex;
-
-                ID = dataGridView1[0, i].Value.ToString();
+                dataGridView1.Rows[e.RowIndex].Selected = true;
             }
         }
 
-        private void dataGridView1_CellClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dataGridView1.CurrentCell.RowIndex >= 0)
-            {
-                int i = dataGridView1.CurrentCell.RowIndex;
-
-                ID = dataGridView1[0, i].Value.ToString();
-            }
-        }
+      
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -270,6 +277,12 @@ namespace Pantallas_SIVAA
             //}
         }
 
-        
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                dataGridView1.Rows[e.RowIndex].Selected = true;
+            }
+        }
     }
 }

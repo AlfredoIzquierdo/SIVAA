@@ -2242,11 +2242,6 @@ namespace Pantallas_SIVAA
             }
         }
 
-        private void Ventas_Load_2(object sender, EventArgs e)
-        {
-
-        }
-
         
     }
 }

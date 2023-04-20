@@ -11,11 +11,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Pantallas_SIVAA
 {
     public partial class Clientes : Form
     {
-        public static NuevoCliente nuevoCliente = new NuevoCliente(null);
         readonly ClienteLog cliente = new ClienteLog();
         Empleado _pqt;
         public Clientes(Empleado pqt)
@@ -33,7 +33,8 @@ namespace Pantallas_SIVAA
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
+            NuevoCliente nuevoCliente = new NuevoCliente(_pqt);
             nuevoCliente.Show();
         }
 

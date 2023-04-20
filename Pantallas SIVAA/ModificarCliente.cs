@@ -1,4 +1,14 @@
-﻿using Entidades;
+﻿using Pantallas_SIVAA.Pedidos;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using Entidades;
 using Logicas;
 
 namespace Pantallas_SIVAA
@@ -35,51 +45,58 @@ namespace Pantallas_SIVAA
 
             log.Modificar(cliente);
 
-            this.Hide();
+            this.Close();
             Clientes clientes = new Clientes(_pqt);
             clientes.Show();
         }
 
         private void pictureBox13_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Login.inicio.Show();
+            Inicio inicio = new Inicio(_pqt);
+            this.Close();
+            inicio.Show();
         }
 
         private void btnPedidos_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Pedidos.Show();
+            this.Close();
+            GestionarPedidos pedidos = new GestionarPedidos(_pqt);
+            pedidos.Show();
         }
 
         private void btnStock_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Stock.Show();
+            this.Close();
+            Inventario inventario = new Inventario(_pqt);
+            inventario.Show();
         }
 
         private void btnCitas_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.CalendarioCitas.Show();
+            this.Close();
+            CalendarioCitas citas = new CalendarioCitas(_pqt);
+            citas.Show();
         }
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Ventas.Show();
+            this.Close();
+            Ventas ventas = new Ventas(_pqt);
+            ventas.Show();
         }
 
         private void btnCobros_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Caja.Show();
+            this.Close();
+            AbrirCaja Caja = new AbrirCaja(_pqt);
+            Caja.Show();
         }
 
         private void btnReportes_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Reportes.Show();
+            this.Close();
+            Reportes reportes = new Reportes(_pqt);
+            reportes.Show();
         }
 
 
@@ -107,6 +124,13 @@ namespace Pantallas_SIVAA
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Clientes clientes = new Clientes(_pqt);
+            clientes.Show();
         }
     }
 }

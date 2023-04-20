@@ -287,6 +287,9 @@ namespace Pantallas_SIVAA
                 MessageBox.Show("Seleccione una cita haciendo click");
         }
 
-        
+        private void pictureBox11_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

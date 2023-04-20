@@ -40,61 +40,52 @@ namespace Pantallas_SIVAA
             cita.IDEmpleado = idEmpleado(cbVendedor.Text);
 
 
-            Inicio.CalendarioCitas.Show();
+            
         }
 
         private void pictureBox10_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Login.inicio.Show();
+           
         }
 
         private void btnPedidos_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Pedidos.Show();
+            
         }
 
         private void btnStock_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Stock.Show();
+            
         }
 
         private void btnCitas_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.CalendarioCitas.Show();
+            
         }
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Ventas.Show();
+            
         }
 
         private void btnCobros_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Caja.Show();
+            
         }
 
         private void btnReportes_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Reportes.Show();
+            
         }
 
         private void pictureBox12_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio.Clientes.Show();
+            
         }
 
         private void pictureBox13_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Clientes.nuevoCliente.Show();
+            
         }
 
         private void NuevaCita_Load(object sender, EventArgs e)
