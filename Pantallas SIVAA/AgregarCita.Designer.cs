@@ -113,6 +113,7 @@
             this.btnReportes.Text = "Reportes";
             this.btnReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnReportes.UseVisualStyleBackColor = false;
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
             // imageList2
             // 
@@ -143,6 +144,7 @@
             this.btnCobros.Text = "Cobros";
             this.btnCobros.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnCobros.UseVisualStyleBackColor = false;
+            this.btnCobros.Click += new System.EventHandler(this.btnCobros_Click);
             // 
             // btnVentas
             // 
@@ -160,6 +162,7 @@
             this.btnVentas.Text = "Ventas";
             this.btnVentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnVentas.UseVisualStyleBackColor = false;
+            this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
             // 
             // btnCitas
             // 
@@ -177,6 +180,7 @@
             this.btnCitas.Text = "Citas";
             this.btnCitas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnCitas.UseVisualStyleBackColor = false;
+            this.btnCitas.Click += new System.EventHandler(this.btnCitas_Click);
             // 
             // btnStock
             // 
@@ -194,6 +198,7 @@
             this.btnStock.Text = "Inventario";
             this.btnStock.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnStock.UseVisualStyleBackColor = false;
+            this.btnStock.Click += new System.EventHandler(this.btnStock_Click);
             // 
             // btnPedidos
             // 
@@ -211,6 +216,7 @@
             this.btnPedidos.Text = "Pedidos";
             this.btnPedidos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnPedidos.UseVisualStyleBackColor = false;
+            this.btnPedidos.Click += new System.EventHandler(this.btnPedidos_Click);
             // 
             // imageList1
             // 

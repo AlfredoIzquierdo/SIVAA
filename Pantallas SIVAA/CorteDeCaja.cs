@@ -909,6 +909,64 @@ namespace Pantallas_SIVAA
             }
         }
 
+        private void pictureBox13_Click_1(object sender, EventArgs e)
+        {
 
+        }
+
+        private void btnPedidos_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnStock_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCitas_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVentas_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage4_Enter_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CorteDeCaja_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

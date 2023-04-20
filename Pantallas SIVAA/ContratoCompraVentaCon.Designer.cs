@@ -29,644 +29,692 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ContratoCompraVentaCon));
-            pictureBox2 = new PictureBox();
-            lblenganche = new Label();
-            label20 = new Label();
-            lblcombus = new Label();
-            lbltrans = new Label();
-            lblengra = new Label();
-            lbldisejes = new Label();
-            lblaltura = new Label();
-            lblanchura = new Label();
-            lbltraccion = new Label();
-            lblcolor = new Label();
-            lblpuertas = new Label();
-            lblrines = new Label();
-            lblllanta = new Label();
-            lblnoserie = new Label();
-            lblversion = new Label();
-            lblnombre = new Label();
-            lblmodelo = new Label();
-            label19 = new Label();
-            label18 = new Label();
-            label13 = new Label();
-            label14 = new Label();
-            label15 = new Label();
-            label16 = new Label();
-            label17 = new Label();
-            label8 = new Label();
-            label9 = new Label();
-            label10 = new Label();
-            label11 = new Label();
-            label12 = new Label();
-            label7 = new Label();
-            label6 = new Label();
-            label5 = new Label();
-            label4 = new Label();
-            label3 = new Label();
-            lblnomclien = new Label();
-            lblnomven = new Label();
-            lbltotalven = new Label();
-            label1 = new Label();
-            label2 = new Label();
-            label21 = new Label();
-            lblano = new Label();
-            label26 = new Label();
-            lblmes = new Label();
-            label23 = new Label();
-            lbldia = new Label();
-            lblnomven3 = new Label();
-            label25 = new Label();
-            lblnomven2 = new Label();
-            lblclien2 = new Label();
-            label22 = new Label();
-            lblclien1 = new Label();
-            pictureBox1 = new PictureBox();
-            printDialog1 = new PrintDialog();
-            printDocument1 = new System.Drawing.Printing.PrintDocument();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            SuspendLayout();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lblenganche = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.lblcombus = new System.Windows.Forms.Label();
+            this.lbltrans = new System.Windows.Forms.Label();
+            this.lblengra = new System.Windows.Forms.Label();
+            this.lbldisejes = new System.Windows.Forms.Label();
+            this.lblaltura = new System.Windows.Forms.Label();
+            this.lblanchura = new System.Windows.Forms.Label();
+            this.lbltraccion = new System.Windows.Forms.Label();
+            this.lblcolor = new System.Windows.Forms.Label();
+            this.lblpuertas = new System.Windows.Forms.Label();
+            this.lblrines = new System.Windows.Forms.Label();
+            this.lblllanta = new System.Windows.Forms.Label();
+            this.lblnoserie = new System.Windows.Forms.Label();
+            this.lblversion = new System.Windows.Forms.Label();
+            this.lblnombre = new System.Windows.Forms.Label();
+            this.lblmodelo = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblnomclien = new System.Windows.Forms.Label();
+            this.lblnomven = new System.Windows.Forms.Label();
+            this.lbltotalven = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.lblano = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.lblmes = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.lbldia = new System.Windows.Forms.Label();
+            this.lblnomven3 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.lblnomven2 = new System.Windows.Forms.Label();
+            this.lblclien2 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.lblclien1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
             // 
             // pictureBox2
             // 
-            pictureBox2.Image = Properties.Resources.Nissan_logo;
-            pictureBox2.Location = new Point(31, 26);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(56, 51);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 171;
-            pictureBox2.TabStop = false;
+            this.pictureBox2.Image = global::Pantallas_SIVAA.Properties.Resources.Nissan_logo;
+            this.pictureBox2.Location = new System.Drawing.Point(39, 32);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(70, 64);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 171;
+            this.pictureBox2.TabStop = false;
             // 
             // lblenganche
             // 
-            lblenganche.AutoSize = true;
-            lblenganche.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            lblenganche.Location = new Point(222, 408);
-            lblenganche.Name = "lblenganche";
-            lblenganche.Size = new Size(33, 20);
-            lblenganche.TabIndex = 170;
-            lblenganche.Text = "----";
+            this.lblenganche.AutoSize = true;
+            this.lblenganche.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblenganche.Location = new System.Drawing.Point(278, 510);
+            this.lblenganche.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblenganche.Name = "lblenganche";
+            this.lblenganche.Size = new System.Drawing.Size(40, 25);
+            this.lblenganche.TabIndex = 170;
+            this.lblenganche.Text = "----";
             // 
             // label20
             // 
-            label20.AutoSize = true;
-            label20.Location = new Point(18, 387);
-            label20.Name = "label20";
-            label20.Size = new Size(1002, 320);
-            label20.TabIndex = 169;
-            label20.Text = resources.GetString("label20.Text");
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(22, 484);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(1202, 400);
+            this.label20.TabIndex = 169;
+            this.label20.Text = resources.GetString("label20.Text");
             // 
             // lblcombus
             // 
-            lblcombus.AutoSize = true;
-            lblcombus.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            lblcombus.Location = new Point(830, 181);
-            lblcombus.Name = "lblcombus";
-            lblcombus.Size = new Size(33, 20);
-            lblcombus.TabIndex = 168;
-            lblcombus.Text = "----";
+            this.lblcombus.AutoSize = true;
+            this.lblcombus.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblcombus.Location = new System.Drawing.Point(1038, 226);
+            this.lblcombus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblcombus.Name = "lblcombus";
+            this.lblcombus.Size = new System.Drawing.Size(40, 25);
+            this.lblcombus.TabIndex = 168;
+            this.lblcombus.Text = "----";
             // 
             // lbltrans
             // 
-            lbltrans.AutoSize = true;
-            lbltrans.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            lbltrans.Location = new Point(675, 336);
-            lbltrans.Name = "lbltrans";
-            lbltrans.Size = new Size(33, 20);
-            lbltrans.TabIndex = 167;
-            lbltrans.Text = "----";
+            this.lbltrans.AutoSize = true;
+            this.lbltrans.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbltrans.Location = new System.Drawing.Point(844, 420);
+            this.lbltrans.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbltrans.Name = "lbltrans";
+            this.lbltrans.Size = new System.Drawing.Size(40, 25);
+            this.lbltrans.TabIndex = 167;
+            this.lbltrans.Text = "----";
             // 
             // lblengra
             // 
-            lblengra.AutoSize = true;
-            lblengra.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            lblengra.Location = new Point(732, 290);
-            lblengra.Name = "lblengra";
-            lblengra.Size = new Size(33, 20);
-            lblengra.TabIndex = 166;
-            lblengra.Text = "----";
+            this.lblengra.AutoSize = true;
+            this.lblengra.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblengra.Location = new System.Drawing.Point(915, 362);
+            this.lblengra.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblengra.Name = "lblengra";
+            this.lblengra.Size = new System.Drawing.Size(40, 25);
+            this.lblengra.TabIndex = 166;
+            this.lblengra.Text = "----";
             // 
             // lbldisejes
             // 
-            lbldisejes.AutoSize = true;
-            lbldisejes.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            lbldisejes.Location = new Point(729, 240);
-            lbldisejes.Name = "lbldisejes";
-            lbldisejes.Size = new Size(33, 20);
-            lbldisejes.TabIndex = 165;
-            lbldisejes.Text = "----";
+            this.lbldisejes.AutoSize = true;
+            this.lbldisejes.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbldisejes.Location = new System.Drawing.Point(911, 300);
+            this.lbldisejes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbldisejes.Name = "lbldisejes";
+            this.lbldisejes.Size = new System.Drawing.Size(40, 25);
+            this.lbldisejes.TabIndex = 165;
+            this.lbldisejes.Text = "----";
             // 
             // lblaltura
             // 
-            lblaltura.AutoSize = true;
-            lblaltura.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            lblaltura.Location = new Point(639, 194);
-            lblaltura.Name = "lblaltura";
-            lblaltura.Size = new Size(33, 20);
-            lblaltura.TabIndex = 164;
-            lblaltura.Text = "----";
+            this.lblaltura.AutoSize = true;
+            this.lblaltura.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblaltura.Location = new System.Drawing.Point(799, 242);
+            this.lblaltura.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblaltura.Name = "lblaltura";
+            this.lblaltura.Size = new System.Drawing.Size(40, 25);
+            this.lblaltura.TabIndex = 164;
+            this.lblaltura.Text = "----";
             // 
             // lblanchura
             // 
-            lblanchura.AutoSize = true;
-            lblanchura.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            lblanchura.Location = new Point(654, 147);
-            lblanchura.Name = "lblanchura";
-            lblanchura.Size = new Size(33, 20);
-            lblanchura.TabIndex = 163;
-            lblanchura.Text = "----";
+            this.lblanchura.AutoSize = true;
+            this.lblanchura.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblanchura.Location = new System.Drawing.Point(818, 184);
+            this.lblanchura.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblanchura.Name = "lblanchura";
+            this.lblanchura.Size = new System.Drawing.Size(40, 25);
+            this.lblanchura.TabIndex = 163;
+            this.lblanchura.Text = "----";
             // 
             // lbltraccion
             // 
-            lbltraccion.AutoSize = true;
-            lbltraccion.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            lbltraccion.Location = new Point(417, 336);
-            lbltraccion.Name = "lbltraccion";
-            lbltraccion.Size = new Size(33, 20);
-            lbltraccion.TabIndex = 162;
-            lbltraccion.Text = "----";
+            this.lbltraccion.AutoSize = true;
+            this.lbltraccion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbltraccion.Location = new System.Drawing.Point(521, 420);
+            this.lbltraccion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbltraccion.Name = "lbltraccion";
+            this.lbltraccion.Size = new System.Drawing.Size(40, 25);
+            this.lbltraccion.TabIndex = 162;
+            this.lbltraccion.Text = "----";
             // 
             // lblcolor
             // 
-            lblcolor.AutoSize = true;
-            lblcolor.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            lblcolor.Location = new Point(342, 290);
-            lblcolor.Name = "lblcolor";
-            lblcolor.Size = new Size(91, 20);
-            lblcolor.TabIndex = 161;
-            lblcolor.Text = "PENDIENTE";
+            this.lblcolor.AutoSize = true;
+            this.lblcolor.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblcolor.Location = new System.Drawing.Point(428, 362);
+            this.lblcolor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblcolor.Name = "lblcolor";
+            this.lblcolor.Size = new System.Drawing.Size(111, 25);
+            this.lblcolor.TabIndex = 161;
+            this.lblcolor.Text = "PENDIENTE";
             // 
             // lblpuertas
             // 
-            lblpuertas.AutoSize = true;
-            lblpuertas.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            lblpuertas.Location = new Point(415, 240);
-            lblpuertas.Name = "lblpuertas";
-            lblpuertas.Size = new Size(33, 20);
-            lblpuertas.TabIndex = 160;
-            lblpuertas.Text = "----";
+            this.lblpuertas.AutoSize = true;
+            this.lblpuertas.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblpuertas.Location = new System.Drawing.Point(519, 300);
+            this.lblpuertas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblpuertas.Name = "lblpuertas";
+            this.lblpuertas.Size = new System.Drawing.Size(40, 25);
+            this.lblpuertas.TabIndex = 160;
+            this.lblpuertas.Text = "----";
             // 
             // lblrines
             // 
-            lblrines.AutoSize = true;
-            lblrines.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            lblrines.Location = new Point(342, 194);
-            lblrines.Name = "lblrines";
-            lblrines.Size = new Size(33, 20);
-            lblrines.TabIndex = 159;
-            lblrines.Text = "----";
+            this.lblrines.AutoSize = true;
+            this.lblrines.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblrines.Location = new System.Drawing.Point(428, 242);
+            this.lblrines.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblrines.Name = "lblrines";
+            this.lblrines.Size = new System.Drawing.Size(40, 25);
+            this.lblrines.TabIndex = 159;
+            this.lblrines.Text = "----";
             // 
             // lblllanta
             // 
-            lblllanta.AutoSize = true;
-            lblllanta.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            lblllanta.Location = new Point(355, 147);
-            lblllanta.Name = "lblllanta";
-            lblllanta.Size = new Size(33, 20);
-            lblllanta.TabIndex = 158;
-            lblllanta.Text = "----";
+            this.lblllanta.AutoSize = true;
+            this.lblllanta.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblllanta.Location = new System.Drawing.Point(444, 184);
+            this.lblllanta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblllanta.Name = "lblllanta";
+            this.lblllanta.Size = new System.Drawing.Size(40, 25);
+            this.lblllanta.TabIndex = 158;
+            this.lblllanta.Text = "----";
             // 
             // lblnoserie
             // 
-            lblnoserie.AutoSize = true;
-            lblnoserie.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            lblnoserie.Location = new Point(94, 336);
-            lblnoserie.Name = "lblnoserie";
-            lblnoserie.Size = new Size(91, 20);
-            lblnoserie.TabIndex = 157;
-            lblnoserie.Text = "PENDIENTE";
+            this.lblnoserie.AutoSize = true;
+            this.lblnoserie.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblnoserie.Location = new System.Drawing.Point(118, 420);
+            this.lblnoserie.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblnoserie.Name = "lblnoserie";
+            this.lblnoserie.Size = new System.Drawing.Size(111, 25);
+            this.lblnoserie.TabIndex = 157;
+            this.lblnoserie.Text = "PENDIENTE";
             // 
             // lblversion
             // 
-            lblversion.AutoSize = true;
-            lblversion.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            lblversion.Location = new Point(86, 290);
-            lblversion.Name = "lblversion";
-            lblversion.Size = new Size(33, 20);
-            lblversion.TabIndex = 156;
-            lblversion.Text = "----";
+            this.lblversion.AutoSize = true;
+            this.lblversion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblversion.Location = new System.Drawing.Point(108, 362);
+            this.lblversion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblversion.Name = "lblversion";
+            this.lblversion.Size = new System.Drawing.Size(40, 25);
+            this.lblversion.TabIndex = 156;
+            this.lblversion.Text = "----";
             // 
             // lblnombre
             // 
-            lblnombre.AutoSize = true;
-            lblnombre.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            lblnombre.Location = new Point(92, 240);
-            lblnombre.Name = "lblnombre";
-            lblnombre.Size = new Size(33, 20);
-            lblnombre.TabIndex = 155;
-            lblnombre.Text = "----";
+            this.lblnombre.AutoSize = true;
+            this.lblnombre.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblnombre.Location = new System.Drawing.Point(115, 300);
+            this.lblnombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblnombre.Name = "lblnombre";
+            this.lblnombre.Size = new System.Drawing.Size(40, 25);
+            this.lblnombre.TabIndex = 155;
+            this.lblnombre.Text = "----";
             // 
             // lblmodelo
             // 
-            lblmodelo.AutoSize = true;
-            lblmodelo.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            lblmodelo.Location = new Point(88, 194);
-            lblmodelo.Name = "lblmodelo";
-            lblmodelo.Size = new Size(33, 20);
-            lblmodelo.TabIndex = 154;
-            lblmodelo.Text = "----";
+            this.lblmodelo.AutoSize = true;
+            this.lblmodelo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblmodelo.Location = new System.Drawing.Point(110, 242);
+            this.lblmodelo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblmodelo.Name = "lblmodelo";
+            this.lblmodelo.Size = new System.Drawing.Size(40, 25);
+            this.lblmodelo.TabIndex = 154;
+            this.lblmodelo.Text = "----";
             // 
             // label19
             // 
-            label19.AutoSize = true;
-            label19.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label19.Location = new Point(78, 147);
-            label19.Name = "label19";
-            label19.Size = new Size(65, 20);
-            label19.TabIndex = 153;
-            label19.Text = "NISSAN";
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label19.Location = new System.Drawing.Point(98, 184);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(79, 25);
+            this.label19.TabIndex = 153;
+            this.label19.Text = "NISSAN";
             // 
             // label18
             // 
-            label18.AutoSize = true;
-            label18.Location = new Point(785, 147);
-            label18.Name = "label18";
-            label18.Size = new Size(149, 20);
-            label18.TabIndex = 152;
-            label18.Text = "Tipo de combustible:";
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(981, 184);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(179, 25);
+            this.label18.TabIndex = 152;
+            this.label18.Text = "Tipo de combustible:";
             // 
             // label13
             // 
-            label13.AutoSize = true;
-            label13.Location = new Point(582, 336);
-            label13.Name = "label13";
-            label13.Size = new Size(90, 20);
-            label13.TabIndex = 151;
-            label13.Text = "Transmision:";
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(728, 420);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(109, 25);
+            this.label13.TabIndex = 151;
+            this.label13.Text = "Transmision:";
             // 
             // label14
             // 
-            label14.AutoSize = true;
-            label14.Location = new Point(582, 290);
-            label14.Name = "label14";
-            label14.Size = new Size(144, 20);
-            label14.TabIndex = 150;
-            label14.Text = "Num. de engranajes:";
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(728, 362);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(174, 25);
+            this.label14.TabIndex = 150;
+            this.label14.Text = "Num. de engranajes:";
             // 
             // label15
             // 
-            label15.AutoSize = true;
-            label15.Location = new Point(582, 240);
-            label15.Name = "label15";
-            label15.Size = new Size(141, 20);
-            label15.TabIndex = 149;
-            label15.Text = "Distancia entre ejes:";
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(728, 300);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(167, 25);
+            this.label15.TabIndex = 149;
+            this.label15.Text = "Distancia entre ejes:";
             // 
             // label16
             // 
-            label16.AutoSize = true;
-            label16.Location = new Point(582, 194);
-            label16.Name = "label16";
-            label16.Size = new Size(52, 20);
-            label16.TabIndex = 148;
-            label16.Text = "Altura:";
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(728, 242);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(63, 25);
+            this.label16.TabIndex = 148;
+            this.label16.Text = "Altura:";
             // 
             // label17
             // 
-            label17.AutoSize = true;
-            label17.Location = new Point(582, 147);
-            label17.Name = "label17";
-            label17.Size = new Size(66, 20);
-            label17.TabIndex = 147;
-            label17.Text = "Anchura:";
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(728, 184);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(81, 25);
+            this.label17.TabIndex = 147;
+            this.label17.Text = "Anchura:";
             // 
             // label8
             // 
-            label8.AutoSize = true;
-            label8.Location = new Point(291, 336);
-            label8.Name = "label8";
-            label8.Size = new Size(120, 20);
-            label8.TabIndex = 146;
-            label8.Text = "Tipo de traccion:";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(364, 420);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(143, 25);
+            this.label8.TabIndex = 146;
+            this.label8.Text = "Tipo de traccion:";
             // 
             // label9
             // 
-            label9.AutoSize = true;
-            label9.Location = new Point(291, 290);
-            label9.Name = "label9";
-            label9.Size = new Size(48, 20);
-            label9.TabIndex = 145;
-            label9.Text = "Color:";
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(364, 362);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(59, 25);
+            this.label9.TabIndex = 145;
+            this.label9.Text = "Color:";
             // 
             // label10
             // 
-            label10.AutoSize = true;
-            label10.Location = new Point(291, 240);
-            label10.Name = "label10";
-            label10.Size = new Size(118, 20);
-            label10.TabIndex = 144;
-            label10.Text = "Num de puertas:";
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(364, 300);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(144, 25);
+            this.label10.TabIndex = 144;
+            this.label10.Text = "Num de puertas:";
             // 
             // label11
             // 
-            label11.AutoSize = true;
-            label11.Location = new Point(290, 194);
-            label11.Name = "label11";
-            label11.Size = new Size(47, 20);
-            label11.TabIndex = 143;
-            label11.Text = "Rines:";
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(362, 242);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(58, 25);
+            this.label11.TabIndex = 143;
+            this.label11.Text = "Rines:";
             // 
             // label12
             // 
-            label12.AutoSize = true;
-            label12.Location = new Point(291, 147);
-            label12.Name = "label12";
-            label12.Size = new Size(58, 20);
-            label12.TabIndex = 142;
-            label12.Text = "Llantas:";
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(364, 184);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(70, 25);
+            this.label12.TabIndex = 142;
+            this.label12.Text = "Llantas:";
             // 
             // label7
             // 
-            label7.AutoSize = true;
-            label7.Location = new Point(19, 336);
-            label7.Name = "label7";
-            label7.Size = new Size(68, 20);
-            label7.TabIndex = 141;
-            label7.Text = "No.Serie:";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(24, 420);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(82, 25);
+            this.label7.TabIndex = 141;
+            this.label7.Text = "No.Serie:";
             // 
             // label6
             // 
-            label6.AutoSize = true;
-            label6.Location = new Point(19, 290);
-            label6.Name = "label6";
-            label6.Size = new Size(60, 20);
-            label6.TabIndex = 140;
-            label6.Text = "Version:";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(24, 362);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(74, 25);
+            this.label6.TabIndex = 140;
+            this.label6.Text = "Version:";
             // 
             // label5
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(19, 240);
-            label5.Name = "label5";
-            label5.Size = new Size(67, 20);
-            label5.TabIndex = 139;
-            label5.Text = "Nombre:";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(24, 300);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(82, 25);
+            this.label5.TabIndex = 139;
+            this.label5.Text = "Nombre:";
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(18, 194);
-            label4.Name = "label4";
-            label4.Size = new Size(64, 20);
-            label4.TabIndex = 138;
-            label4.Text = "Modelo:";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(22, 242);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(78, 25);
+            this.label4.TabIndex = 138;
+            this.label4.Text = "Modelo:";
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(19, 147);
-            label3.Name = "label3";
-            label3.Size = new Size(53, 20);
-            label3.TabIndex = 137;
-            label3.Text = "Marca:";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(24, 184);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(64, 25);
+            this.label3.TabIndex = 137;
+            this.label3.Text = "Marca:";
             // 
             // lblnomclien
             // 
-            lblnomclien.AutoSize = true;
-            lblnomclien.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            lblnomclien.Location = new Point(240, 106);
-            lblnomclien.Name = "lblnomclien";
-            lblnomclien.Size = new Size(33, 20);
-            lblnomclien.TabIndex = 136;
-            lblnomclien.Text = "----";
+            this.lblnomclien.AutoSize = true;
+            this.lblnomclien.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblnomclien.Location = new System.Drawing.Point(300, 132);
+            this.lblnomclien.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblnomclien.Name = "lblnomclien";
+            this.lblnomclien.Size = new System.Drawing.Size(40, 25);
+            this.lblnomclien.TabIndex = 136;
+            this.lblnomclien.Text = "----";
             // 
             // lblnomven
             // 
-            lblnomven.AutoSize = true;
-            lblnomven.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            lblnomven.Location = new Point(842, 86);
-            lblnomven.Name = "lblnomven";
-            lblnomven.Size = new Size(33, 20);
-            lblnomven.TabIndex = 135;
-            lblnomven.Text = "----";
+            this.lblnomven.AutoSize = true;
+            this.lblnomven.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblnomven.Location = new System.Drawing.Point(1052, 108);
+            this.lblnomven.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblnomven.Name = "lblnomven";
+            this.lblnomven.Size = new System.Drawing.Size(40, 25);
+            this.lblnomven.TabIndex = 135;
+            this.lblnomven.Text = "----";
             // 
             // lbltotalven
             // 
-            lbltotalven.AutoSize = true;
-            lbltotalven.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            lbltotalven.Location = new Point(360, 86);
-            lbltotalven.Name = "lbltotalven";
-            lbltotalven.Size = new Size(33, 20);
-            lbltotalven.TabIndex = 134;
-            lbltotalven.Text = "----";
+            this.lbltotalven.AutoSize = true;
+            this.lbltotalven.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbltotalven.Location = new System.Drawing.Point(450, 108);
+            this.lbltotalven.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbltotalven.Name = "lbltotalven";
+            this.lbltotalven.Size = new System.Drawing.Size(40, 25);
+            this.lbltotalven.TabIndex = 134;
+            this.lbltotalven.Text = "----";
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(18, 86);
-            label1.Name = "label1";
-            label1.Size = new Size(973, 40);
-            label1.TabIndex = 133;
-            label1.Text = resources.GetString("label1.Text");
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(22, 108);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(1180, 50);
+            this.label1.TabIndex = 133;
+            this.label1.Text = resources.GetString("label1.Text");
             // 
             // label2
             // 
-            label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(342, 23);
-            label2.Margin = new Padding(1, 0, 1, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(366, 41);
-            label2.TabIndex = 132;
-            label2.Text = "Contrato de compra venta";
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(428, 29);
+            this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(436, 48);
+            this.label2.TabIndex = 132;
+            this.label2.Text = "Contrato de compra venta";
             // 
             // label21
             // 
-            label21.AutoSize = true;
-            label21.Location = new Point(487, 789);
-            label21.Name = "label21";
-            label21.Size = new Size(113, 20);
-            label21.TabIndex = 183;
-            label21.Text = "Fecha de firmas";
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(609, 986);
+            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(136, 25);
+            this.label21.TabIndex = 183;
+            this.label21.Text = "Fecha de firmas";
             // 
             // lblano
             // 
-            lblano.AutoSize = true;
-            lblano.Location = new Point(621, 758);
-            lblano.Name = "lblano";
-            lblano.Size = new Size(21, 20);
-            lblano.TabIndex = 182;
-            lblano.Text = "--";
+            this.lblano.AutoSize = true;
+            this.lblano.Location = new System.Drawing.Point(776, 948);
+            this.lblano.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblano.Name = "lblano";
+            this.lblano.Size = new System.Drawing.Size(26, 25);
+            this.lblano.TabIndex = 182;
+            this.lblano.Text = "--";
             // 
             // label26
             // 
-            label26.AutoSize = true;
-            label26.Location = new Point(585, 758);
-            label26.Name = "label26";
-            label26.Size = new Size(30, 20);
-            label26.TabIndex = 181;
-            label26.Text = "del";
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(731, 948);
+            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(36, 25);
+            this.label26.TabIndex = 181;
+            this.label26.Text = "del";
             // 
             // lblmes
             // 
-            lblmes.AutoSize = true;
-            lblmes.Location = new Point(504, 758);
-            lblmes.Name = "lblmes";
-            lblmes.Size = new Size(75, 20);
-            lblmes.TabIndex = 180;
-            lblmes.Text = "-----------";
+            this.lblmes.AutoSize = true;
+            this.lblmes.Location = new System.Drawing.Point(630, 948);
+            this.lblmes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblmes.Name = "lblmes";
+            this.lblmes.Size = new System.Drawing.Size(89, 25);
+            this.lblmes.TabIndex = 180;
+            this.lblmes.Text = "-----------";
             // 
             // label23
             // 
-            label23.AutoSize = true;
-            label23.Location = new Point(472, 758);
-            label23.Name = "label23";
-            label23.Size = new Size(26, 20);
-            label23.TabIndex = 179;
-            label23.Text = "de";
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(590, 948);
+            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(32, 25);
+            this.label23.TabIndex = 179;
+            this.label23.Text = "de";
             // 
             // lbldia
             // 
-            lbldia.AutoSize = true;
-            lbldia.Location = new Point(443, 758);
-            lbldia.Name = "lbldia";
-            lbldia.Size = new Size(21, 20);
-            lbldia.TabIndex = 178;
-            lbldia.Text = "--";
+            this.lbldia.AutoSize = true;
+            this.lbldia.Location = new System.Drawing.Point(554, 948);
+            this.lbldia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbldia.Name = "lbldia";
+            this.lbldia.Size = new System.Drawing.Size(26, 25);
+            this.lbldia.TabIndex = 178;
+            this.lbldia.Text = "--";
             // 
             // lblnomven3
             // 
-            lblnomven3.AutoSize = true;
-            lblnomven3.Location = new Point(816, 745);
-            lblnomven3.Name = "lblnomven3";
-            lblnomven3.Size = new Size(33, 20);
-            lblnomven3.TabIndex = 177;
-            lblnomven3.Text = "----";
+            this.lblnomven3.AutoSize = true;
+            this.lblnomven3.Location = new System.Drawing.Point(1020, 931);
+            this.lblnomven3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblnomven3.Name = "lblnomven3";
+            this.lblnomven3.Size = new System.Drawing.Size(40, 25);
+            this.lblnomven3.TabIndex = 177;
+            this.lblnomven3.Text = "----";
             // 
             // label25
             // 
-            label25.AutoSize = true;
-            label25.Location = new Point(688, 765);
-            label25.Name = "label25";
-            label25.Size = new Size(285, 20);
-            label25.TabIndex = 176;
-            label25.Text = "----------------------------------------------";
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(860, 956);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(334, 25);
+            this.label25.TabIndex = 176;
+            this.label25.Text = "----------------------------------------------";
             // 
             // lblnomven2
             // 
-            lblnomven2.AutoSize = true;
-            lblnomven2.Location = new Point(739, 789);
-            lblnomven2.Name = "lblnomven2";
-            lblnomven2.Size = new Size(189, 20);
-            lblnomven2.TabIndex = 175;
-            lblnomven2.Text = "Nombre y firma del Cliente";
+            this.lblnomven2.AutoSize = true;
+            this.lblnomven2.Location = new System.Drawing.Point(924, 986);
+            this.lblnomven2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblnomven2.Name = "lblnomven2";
+            this.lblnomven2.Size = new System.Drawing.Size(225, 25);
+            this.lblnomven2.TabIndex = 175;
+            this.lblnomven2.Text = "Nombre y firma del Cliente";
             // 
             // lblclien2
             // 
-            lblclien2.AutoSize = true;
-            lblclien2.Location = new Point(149, 745);
-            lblclien2.Name = "lblclien2";
-            lblclien2.Size = new Size(33, 20);
-            lblclien2.TabIndex = 174;
-            lblclien2.Text = "----";
+            this.lblclien2.AutoSize = true;
+            this.lblclien2.Location = new System.Drawing.Point(186, 931);
+            this.lblclien2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblclien2.Name = "lblclien2";
+            this.lblclien2.Size = new System.Drawing.Size(40, 25);
+            this.lblclien2.TabIndex = 174;
+            this.lblclien2.Text = "----";
             // 
             // label22
             // 
-            label22.AutoSize = true;
-            label22.Location = new Point(21, 765);
-            label22.Name = "label22";
-            label22.Size = new Size(285, 20);
-            label22.TabIndex = 173;
-            label22.Text = "----------------------------------------------";
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(26, 956);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(334, 25);
+            this.label22.TabIndex = 173;
+            this.label22.Text = "----------------------------------------------";
             // 
             // lblclien1
             // 
-            lblclien1.AutoSize = true;
-            lblclien1.Location = new Point(70, 789);
-            lblclien1.Name = "lblclien1";
-            lblclien1.Size = new Size(189, 20);
-            lblclien1.TabIndex = 172;
-            lblclien1.Text = "Nombre y firma del Cliente";
+            this.lblclien1.AutoSize = true;
+            this.lblclien1.Location = new System.Drawing.Point(88, 986);
+            this.lblclien1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblclien1.Name = "lblclien1";
+            this.lblclien1.Size = new System.Drawing.Size(225, 25);
+            this.lblclien1.TabIndex = 172;
+            this.lblclien1.Text = "Nombre y firma del Cliente";
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = Properties.Resources.print_FILL0_wght400_GRAD0_opsz48;
-            pictureBox1.Location = new Point(954, 13);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(56, 51);
-            pictureBox1.TabIndex = 184;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
+            this.pictureBox1.Image = global::Pantallas_SIVAA.Properties.Resources.print_FILL0_wght400_GRAD0_opsz48;
+            this.pictureBox1.Location = new System.Drawing.Point(1192, 16);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(70, 64);
+            this.pictureBox1.TabIndex = 184;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // printDialog1
             // 
-            printDialog1.UseEXDialog = true;
-            // 
-            // printDocument1
-            // 
-            printDocument1.BeginPrint += printDocument1_BeginPrint;
-            printDocument1.EndPrint += printDocument1_EndPrint;
-            printDocument1.PrintPage += printDocument1_PrintPage_1;
+            this.printDialog1.UseEXDialog = true;
             // 
             // ContratoCompraVentaCon
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
-            ClientSize = new Size(1022, 844);
-            Controls.Add(lblenganche);
-            Controls.Add(lblnomclien);
-            Controls.Add(lbltotalven);
-            Controls.Add(lblnomven);
-            Controls.Add(pictureBox1);
-            Controls.Add(label21);
-            Controls.Add(lblano);
-            Controls.Add(label26);
-            Controls.Add(lblmes);
-            Controls.Add(label23);
-            Controls.Add(lbldia);
-            Controls.Add(lblnomven3);
-            Controls.Add(label25);
-            Controls.Add(lblnomven2);
-            Controls.Add(lblclien2);
-            Controls.Add(label22);
-            Controls.Add(lblclien1);
-            Controls.Add(pictureBox2);
-            Controls.Add(label20);
-            Controls.Add(lblcombus);
-            Controls.Add(lbltrans);
-            Controls.Add(lblengra);
-            Controls.Add(lbldisejes);
-            Controls.Add(lblaltura);
-            Controls.Add(lblanchura);
-            Controls.Add(lbltraccion);
-            Controls.Add(lblcolor);
-            Controls.Add(lblpuertas);
-            Controls.Add(lblrines);
-            Controls.Add(lblllanta);
-            Controls.Add(lblnoserie);
-            Controls.Add(lblversion);
-            Controls.Add(lblnombre);
-            Controls.Add(lblmodelo);
-            Controls.Add(label19);
-            Controls.Add(label18);
-            Controls.Add(label13);
-            Controls.Add(label14);
-            Controls.Add(label15);
-            Controls.Add(label16);
-            Controls.Add(label17);
-            Controls.Add(label8);
-            Controls.Add(label9);
-            Controls.Add(label10);
-            Controls.Add(label11);
-            Controls.Add(label12);
-            Controls.Add(label7);
-            Controls.Add(label6);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label1);
-            Controls.Add(label2);
-            Margin = new Padding(2);
-            Name = "ContratoCompraVentaCon";
-            Text = "ContratoCompraVenta";
-            Load += ContratoCompraVentaCon_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1278, 1050);
+            this.Controls.Add(this.lblenganche);
+            this.Controls.Add(this.lblnomclien);
+            this.Controls.Add(this.lbltotalven);
+            this.Controls.Add(this.lblnomven);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this.lblano);
+            this.Controls.Add(this.label26);
+            this.Controls.Add(this.lblmes);
+            this.Controls.Add(this.label23);
+            this.Controls.Add(this.lbldia);
+            this.Controls.Add(this.lblnomven3);
+            this.Controls.Add(this.label25);
+            this.Controls.Add(this.lblnomven2);
+            this.Controls.Add(this.lblclien2);
+            this.Controls.Add(this.label22);
+            this.Controls.Add(this.lblclien1);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.lblcombus);
+            this.Controls.Add(this.lbltrans);
+            this.Controls.Add(this.lblengra);
+            this.Controls.Add(this.lbldisejes);
+            this.Controls.Add(this.lblaltura);
+            this.Controls.Add(this.lblanchura);
+            this.Controls.Add(this.lbltraccion);
+            this.Controls.Add(this.lblcolor);
+            this.Controls.Add(this.lblpuertas);
+            this.Controls.Add(this.lblrines);
+            this.Controls.Add(this.lblllanta);
+            this.Controls.Add(this.lblnoserie);
+            this.Controls.Add(this.lblversion);
+            this.Controls.Add(this.lblnombre);
+            this.Controls.Add(this.lblmodelo);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label2);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "ContratoCompraVentaCon";
+            this.Text = "ContratoCompraVenta";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

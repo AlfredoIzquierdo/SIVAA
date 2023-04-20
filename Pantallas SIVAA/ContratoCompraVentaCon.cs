@@ -173,5 +173,10 @@ namespace Pantallas_SIVAA
             this.DrawToBitmap(bitmap, new Rectangle(0, 0, this.Width, this.Height));
             e.Graphics.DrawImage(bitmap, 0, 0);
         }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

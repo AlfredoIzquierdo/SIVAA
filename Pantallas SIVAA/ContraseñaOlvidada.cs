@@ -71,5 +71,10 @@ namespace Pantallas_SIVAA
             this.Hide();
             login.Show();
         }
+
+        private void ContraseñaOlvidada_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

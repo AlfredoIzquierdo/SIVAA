@@ -236,6 +236,7 @@
             this.Name = "ContraseñaOlvidada";
             this.Text = "ContraseñaOlvidada";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.ContraseñaOlvidada_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
