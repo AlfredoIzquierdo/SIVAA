@@ -45,27 +45,27 @@
             btnStock = new Button();
             btnPedidos = new Button();
             pictureBox4 = new PictureBox();
-            textBox7 = new TextBox();
-            button1 = new Button();
-            label6 = new Label();
-            label8 = new Label();
-            textBox4 = new TextBox();
-            pictureBox2 = new PictureBox();
-            dateTimePicker1 = new DateTimePicker();
-            textBox1 = new TextBox();
-            pictureBox1 = new PictureBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            pictureBox3 = new PictureBox();
-            label9 = new Label();
-            textBox6 = new TextBox();
-            textBox5 = new TextBox();
+            //textBox7 = new TextBox();
+            //button1 = new Button();
+            //label6 = new Label();
+            //label8 = new Label();
+            //textBox4 = new TextBox();
+            //pictureBox2 = new PictureBox();
+            //dateTimePicker1 = new DateTimePicker();
+            //textBox1 = new TextBox();
+            //pictureBox1 = new PictureBox();
+            //textBox2 = new TextBox();
+            //textBox3 = new TextBox();
+            //pictureBox3 = new PictureBox();
+            //label9 = new Label();
+            //textBox6 = new TextBox();
+            //textBox5 = new TextBox();
             panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
@@ -289,23 +289,23 @@
             // 
             // textBox7
             // 
-            textBox7.Location = new Point(237, 480);
-            textBox7.Margin = new Padding(4, 5, 4, 5);
-            textBox7.Name = "textBox7";
-            textBox7.PlaceholderText = "Proveedor";
-            textBox7.Size = new Size(321, 31);
-            textBox7.TabIndex = 108;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(491, 645);
-            button1.Margin = new Padding(4, 5, 4, 5);
-            button1.Name = "button1";
-            button1.Size = new Size(221, 38);
-            button1.TabIndex = 107;
-            button1.Text = "Agregar";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            //textBox7.Location = new Point(237, 480);
+            //textBox7.Margin = new Padding(4, 5, 4, 5);
+            //textBox7.Name = "textBox7";
+            //textBox7.PlaceholderText = "Proveedor";
+            //textBox7.Size = new Size(321, 31);
+            //textBox7.TabIndex = 108;
+            //// 
+            //// button1
+            //// 
+            //button1.Location = new Point(491, 645);
+            //button1.Margin = new Padding(4, 5, 4, 5);
+            //button1.Name = "button1";
+            //button1.Size = new Size(221, 38);
+            //button1.TabIndex = 107;
+            //button1.Text = "Agregar";
+            //button1.UseVisualStyleBackColor = true;
+            //button1.Click += button1_Click;
             // 
             // btnfinal
             // 
@@ -337,12 +337,12 @@
             // 
             // pictureBox2
             // 
-            textBox4.Location = new Point(886, 338);
-            textBox4.Margin = new Padding(4, 5, 4, 5);
-            textBox4.Name = "textBox4";
-            textBox4.PlaceholderText = "Costo Total";
-            textBox4.Size = new Size(217, 31);
-            textBox4.TabIndex = 104;
+            //textBox4.Location = new Point(886, 338);
+            //textBox4.Margin = new Padding(4, 5, 4, 5);
+            //textBox4.Name = "textBox4";
+            //textBox4.PlaceholderText = "Costo Total";
+            //textBox4.Size = new Size(217, 31);
+            //textBox4.TabIndex = 104;
             // 
             // pictureBox3
             // 
@@ -365,11 +365,11 @@
             // 
             // txtcost
             // 
-            dateTimePicker1.Location = new Point(780, 480);
-            dateTimePicker1.Margin = new Padding(4, 5, 4, 5);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(325, 31);
-            dateTimePicker1.TabIndex = 103;
+            //dateTimePicker1.Location = new Point(780, 480);
+            //dateTimePicker1.Margin = new Padding(4, 5, 4, 5);
+            //dateTimePicker1.Name = "dateTimePicker1";
+            //dateTimePicker1.Size = new Size(325, 31);
+            //dateTimePicker1.TabIndex = 103;
             txtcost.Location = new Point(250, 350);
             txtcost.Margin = new Padding(3, 4, 3, 4);
             txtcost.Name = "txtcost";
@@ -380,12 +380,12 @@
             // 
             // numDiaP
             // 
-            textBox1.Location = new Point(237, 232);
-            textBox1.Margin = new Padding(4, 5, 4, 5);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Vehiculo";
-            textBox1.Size = new Size(323, 31);
-            textBox1.TabIndex = 98;
+            //textBox1.Location = new Point(237, 232);
+            //textBox1.Margin = new Padding(4, 5, 4, 5);
+            //textBox1.Name = "textBox1";
+            //textBox1.PlaceholderText = "Vehiculo";
+            //textBox1.Size = new Size(323, 31);
+            //textBox1.TabIndex = 98;
             numDiaP.Location = new Point(179, 284);
             numDiaP.Maximum = new decimal(new int[] { 31, 0, 0, 0 });
             numDiaP.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
@@ -396,14 +396,14 @@
             // 
             // numMesPed
             // 
-            pictureBox1.Image = Properties.Resources.Car;
-            pictureBox1.Location = new Point(159, 213);
-            pictureBox1.Margin = new Padding(4, 5, 4, 5);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(61, 57);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 101;
-            pictureBox1.TabStop = false;
+            //pictureBox1.Image = Properties.Resources.Car;
+            //pictureBox1.Location = new Point(159, 213);
+            //pictureBox1.Margin = new Padding(4, 5, 4, 5);
+            //pictureBox1.Name = "pictureBox1";
+            //pictureBox1.Size = new Size(61, 57);
+            //pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            //pictureBox1.TabIndex = 101;
+            //pictureBox1.TabStop = false;
             numMesPed.Location = new Point(252, 284);
             numMesPed.Maximum = new decimal(new int[] { 12, 0, 0, 0 });
             numMesPed.Minimum = new decimal(new int[] { 1, 0, 0, 0 });

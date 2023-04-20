@@ -18,6 +18,7 @@ namespace Pantallas_SIVAA.Pedidos
         public static EditarPedidos editarPedidos = new EditarPedidos();
         public static AgregarPedidos agregarPedidos = new AgregarPedidos(null);
         readonly PedidoD Producto = new PedidoD();
+        readonly PedidoLOG pedlog = new PedidoLOG();
         Empleado _pqt;
         public GestionarPedidos(Empleado pqt)
         {

@@ -17,7 +17,9 @@ namespace Pantallas_SIVAA
 {
     public partial class AgregarPedidos : Form
     {
-        public AgregarPedidos()
+        Empleado _pqt;
+        readonly PedidoLOG pedidoLog = new PedidoLOG();
+        public AgregarPedidos(Empleado pqt)
         {
             InitializeComponent();
             _pqt = pqt;
@@ -122,20 +124,20 @@ namespace Pantallas_SIVAA
 
         private void button1_Click(object sender, EventArgs e)
         {
-            List<Pedido> x = pedidoLog.ListadoAll();
-            string i = "PD" + (x.Count + 1).ToString();
-            pedido.IDPedido = i;
-            pedido.IDProveedor = pedidoLog.IdentProveed(cbProov.Text);
-            pedido.IDEmpleado = "E4";
-            pedido.Dia = Convert.ToInt32(numDiaP.Value);
-            pedido.Mes = Convert.ToInt32(numMesPed.Value);
-            pedido.Año = Convert.ToInt32(numAnoPed.Value);
-            pedido.Importe = Convert.ToDouble(txtcost.Text);
-            pedido.EstadoPedido = "Activo";
-            pedidoLog.Registrar(pedido);
-            this.Close();
-            GestionarPedidos gestionarPedidos = new GestionarPedidos();
-            gestionarPedidos.Show();
+            //List<Pedido> x = pedidoLog.ListadoAll();
+            //string i = "PD" + (x.Count + 1).ToString();
+            //pedido.IDPedido = i;
+            //pedido.IDProveedor = pedidoLog.IdentProveed(cbProov.Text);
+            //pedido.IDEmpleado = "E4";
+            //pedido.Dia = Convert.ToInt32(numDiaP.Value);
+            //pedido.Mes = Convert.ToInt32(numMesPed.Value);
+            //pedido.Año = Convert.ToInt32(numAnoPed.Value);
+            //pedido.Importe = Convert.ToDouble(txtcost.Text);
+            //pedido.EstadoPedido = "Activo";
+            //pedidoLog.Registrar(pedido);
+            //this.Close();
+            //GestionarPedidos gestionarPedidos = new GestionarPedidos(null);
+            //gestionarPedidos.Show();
         }
 
         private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
