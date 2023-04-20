@@ -593,6 +593,7 @@
             tabControl2.SelectedIndex = 0;
             tabControl2.Size = new Size(485, 392);
             tabControl2.TabIndex = 112;
+            tabControl2.Click += tabControl2_Click;
             // 
             // tabPage3
             // 
@@ -725,6 +726,7 @@
             dataGridView4.RowTemplate.Height = 29;
             dataGridView4.Size = new Size(465, 287);
             dataGridView4.TabIndex = 2;
+            dataGridView4.CellClick += dataGridView4_CellClick;
             // 
             // Column25
             // 
@@ -770,6 +772,7 @@
             button3.TabIndex = 29;
             button3.Text = "Buscar Cliente";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // TXTAPP
             // 
@@ -802,6 +805,7 @@
             tabPage5.TabIndex = 2;
             tabPage5.Text = "Cotizaciones";
             tabPage5.UseVisualStyleBackColor = true;
+            tabPage5.Click += tabPage5_Click;
             // 
             // dataGridView5
             // 
@@ -817,6 +821,8 @@
             dataGridView5.RowTemplate.Height = 29;
             dataGridView5.Size = new Size(465, 321);
             dataGridView5.TabIndex = 3;
+            dataGridView5.CellClick += dataGridView5_CellClick;
+            dataGridView5.CellContentDoubleClick += dataGridView5_CellContentDoubleClick;
             // 
             // Column30
             // 
@@ -974,6 +980,7 @@
             // btnFactura
             // 
             btnFactura.BackColor = Color.FromArgb(51, 58, 86);
+            btnFactura.Enabled = false;
             btnFactura.ForeColor = Color.White;
             btnFactura.Location = new Point(1051, 167);
             btnFactura.Margin = new Padding(3, 1, 3, 1);

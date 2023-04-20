@@ -2172,5 +2172,52 @@ namespace Pantallas_SIVAA
             FichaDePago ficha = new FichaDePago(txtSerie.Text, txtVehiculo.Text, txtVersion.Text, txtAño.Text, concepto, monto, idficha, TXTIDCLI.Text);
             ficha.Show();
         }
+
+        private void dataGridView5_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView5.CurrentCell.RowIndex >= 0)
+            {
+                if (radioButton2.Checked)
+                {
+                    int i = dataGridView5.CurrentCell.RowIndex;
+                    //MessageBox.Show("Columna " + i);
+                    TXTCOT.Text = dataGridView5[0, i].Value.ToString();
+                    TXTPRECIO.Text = dataGridView5[5, i].Value.ToString();
+                    codv = dataGridView5[2, i].Value.ToString();
+                }
+                if (radioButton1.Checked)
+                {
+                    int i = dataGridView5.CurrentCell.RowIndex;
+                    //MessageBox.Show("Columna " + i);
+                    TXTCOT.Text = dataGridView5[0, i].Value.ToString();
+                    TXTPRECIO.Text = dataGridView5[5, i].Value.ToString();
+                    codv = dataGridView5[2, i].Value.ToString();
+                    //Busca los datos de la cotizacion de credito
+                    //string cod=TXTCOT.Text;
+                    CotizacionCredito pqt = PqteLog6.LeerPorClave(TXTCOT.Text);
+                    numericUpDown1.Value = pqt.Plazo;
+                    txtanualidad.Text = pqt.Anualidad.ToString();
+                    txtenganche.Text = pqt.Enganche.ToString();
+                    txtmensualidad.Text = pqt.Mensualidad.ToString();
+                }
+            }
+        }
+
+        private void tabControl2_Click(object sender, EventArgs e)
+        {
+            if(tabControl2.SelectedIndex == 2)
+            {
+                if (radioButton2.Checked)
+                {
+                    mostrarcotizaciones();
+                }
+                if (radioButton1.Checked)
+                {
+                    mostrarcotizacionescredito();
+                }
+            }
+        }
+
+        
     }
 }
