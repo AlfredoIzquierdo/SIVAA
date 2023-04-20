@@ -184,7 +184,38 @@ namespace Datos
             }
             return unidades;
         }
+        public List<UnidadNoUsar> Cotizar()
+        {
+            List<UnidadNoUsar> unidades = new List<UnidadNoUsar>();
+            using (SqlConnection Cnx = new SqlConnection(CdCnx))
+            {
+                Cnx.Open();
+                // Crear el query
+                string cdSql = "(select v.Nombre, ve.[Version],m.Año from vehiculo v\r\ninner join [Version] ve on ve.IDVehiculo = v.IDVehiculo\r\ninner join ModeloVersion vm on ve.IDVersion = vm.IDVersion\r\ninner join Modelo m on m.IDModelo = vm.IDModelo ) except \r\n(select v.Nombre, ve.[Version],m.Año from vehiculo v\r\ninner join [Version] ve on ve.IDVehiculo = v.IDVehiculo\r\ninner join ModeloVersion vm on ve.IDVersion = vm.IDVersion\r\ninner join Modelo m on m.IDModelo = vm.IDModelo\r\ninner join Unidad u on u.IDVersion = ve.IDVersion\r\nwhere u.Estatus = 'Vendido')";
+                using (SqlCommand Cmd = new SqlCommand(cdSql, Cnx))
+                {
+                    SqlDataReader Dr = Cmd.ExecuteReader();
+                    //Leo registro por registro que tiene la tabla 
+                    while (Dr.Read())
+                    {
+                        //Cada vez que lo lea se crea un nuevo objeto
+                        UnidadNoUsar Pqte = new UnidadNoUsar
+                        {
+                            NoSerie = Convert.ToString(Dr["NoSerie"]),
+                            Vehiculo = Convert.ToString(Dr["Nombre"]),
+                            Version = Convert.ToString(Dr["Version"]),
+                            Color = Convert.ToString(Dr["Color"]),
+                            Modelo = Convert.ToString(Dr["Año"]),
+                            Estatus = Convert.ToString(Dr["Estatus"])
 
+                        };
+                        unidades.Add(Pqte);
+                    }
+                }
+                Cnx.Close();
+            }
+            return unidades;
+        }
         public List<UnidadNoUsar> InventarioFiltro(string nom,string buscar)
         {
             List<UnidadNoUsar> productos = new List<UnidadNoUsar>();

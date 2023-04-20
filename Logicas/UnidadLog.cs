@@ -43,6 +43,11 @@ namespace Logicas
             //Método que obtiene la lista dinámica de todos los registro que tiene mi tabla
             return Pdto.InventarioFiltro(disp,buscar);
         }
+        public List<UnidadNoUsar> Cotizar()
+        {
+            //Método que obtiene la lista dinámica de todos los registro que tiene mi tabla
+            return Pdto.Cotizar();
+        }
         public List<UnidadNoUsar>InventarioVehiculo(string disp)
         {
             //Método que obtiene la lista dinámica de todos los registro que tiene mi tabla

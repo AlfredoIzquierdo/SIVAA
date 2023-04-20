@@ -39,7 +39,6 @@
             this.btnStock = new System.Windows.Forms.Button();
             this.btnPedidos = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -54,7 +53,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmVehiculo = new System.Windows.Forms.ComboBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
@@ -88,9 +87,9 @@
             this.label13 = new System.Windows.Forms.Label();
             this.comboBusqueda = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -253,7 +252,7 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.numericUpDown1);
+            this.groupBox1.Controls.Add(this.comboBox3);
             this.groupBox1.Controls.Add(this.textBox7);
             this.groupBox1.Controls.Add(this.textBox6);
             this.groupBox1.Controls.Add(this.textBox5);
@@ -269,24 +268,6 @@
             this.groupBox1.TabIndex = 101;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pago a credito";
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(241, 38);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.numericUpDown1.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(179, 31);
-            this.numericUpDown1.TabIndex = 28;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             // 
             // textBox7
             // 
@@ -353,9 +334,9 @@
             this.label12.Location = new System.Drawing.Point(34, 48);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(58, 25);
+            this.label12.Size = new System.Drawing.Size(123, 25);
             this.label12.TabIndex = 29;
-            this.label12.Text = "Plazo:";
+            this.label12.Text = "Plazo (meses):";
             // 
             // button1
             // 
@@ -455,18 +436,30 @@
             this.comboBox2.TabIndex = 94;
             this.comboBox2.Text = "Modelo";
             // 
-            // comboBox1
+            // cmVehiculo
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.cmVehiculo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(289, 258);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(583, 33);
-            this.comboBox1.TabIndex = 93;
-            this.comboBox1.Text = "Vehiculo";
+            this.cmVehiculo.FormattingEnabled = true;
+            this.cmVehiculo.Items.AddRange(new object[] {
+            "Sentra",
+            "X-Trail",
+            "Versa",
+            "March",
+            "Altima",
+            "Mazima",
+            "Murano",
+            "Pathfinder",
+            "Rogue",
+            "Titan"});
+            this.cmVehiculo.Location = new System.Drawing.Point(289, 258);
+            this.cmVehiculo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.cmVehiculo.Name = "cmVehiculo";
+            this.cmVehiculo.Size = new System.Drawing.Size(583, 33);
+            this.cmVehiculo.TabIndex = 93;
+            this.cmVehiculo.Text = "Vehiculo";
+            this.cmVehiculo.SelectedIndexChanged += new System.EventHandler(this.cmVehiculo_SelectedIndexChanged);
             // 
             // textBox4
             // 
@@ -786,7 +779,7 @@
             this.panel3.Location = new System.Drawing.Point(114, 513);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(749, 59);
+            this.panel3.Size = new System.Drawing.Size(730, 59);
             this.panel3.TabIndex = 108;
             // 
             // button3
@@ -795,7 +788,7 @@
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(101)))), ((int)(((byte)(143)))));
             this.button3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(589, 6);
+            this.button3.Location = new System.Drawing.Point(535, 6);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(148, 46);
@@ -810,7 +803,7 @@
             this.txtBusqueda.BackColor = System.Drawing.Color.White;
             this.txtBusqueda.Enabled = false;
             this.txtBusqueda.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtBusqueda.Location = new System.Drawing.Point(353, 15);
+            this.txtBusqueda.Location = new System.Drawing.Point(320, 15);
             this.txtBusqueda.Margin = new System.Windows.Forms.Padding(4);
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.PlaceholderText = "Ingrese su busqueda";
@@ -821,7 +814,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(22, 15);
+            this.label13.Location = new System.Drawing.Point(10, 15);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(93, 25);
@@ -844,7 +837,7 @@
             "Colonia",
             "Ciudad",
             "Estado"});
-            this.comboBusqueda.Location = new System.Drawing.Point(123, 15);
+            this.comboBusqueda.Location = new System.Drawing.Point(111, 15);
             this.comboBusqueda.Margin = new System.Windows.Forms.Padding(4);
             this.comboBusqueda.Name = "comboBusqueda";
             this.comboBusqueda.Size = new System.Drawing.Size(206, 33);
@@ -861,6 +854,22 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(85, 359);
             this.panel2.TabIndex = 109;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "12",
+            "24",
+            "36",
+            "48",
+            "60",
+            "72",
+            "84"});
+            this.comboBox3.Location = new System.Drawing.Point(241, 40);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(179, 33);
+            this.comboBox3.TabIndex = 30;
             // 
             // Cotizacion
             // 
@@ -883,7 +892,7 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmVehiculo);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.panel7);
             this.Name = "Cotizacion";
@@ -893,7 +902,6 @@
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
@@ -921,7 +929,6 @@
         private Button btnStock;
         private Button btnPedidos;
         private GroupBox groupBox1;
-        private NumericUpDown numericUpDown1;
         private TextBox textBox7;
         private TextBox textBox6;
         private TextBox textBox5;
@@ -936,7 +943,7 @@
         private Label label9;
         private Label label8;
         private ComboBox comboBox2;
-        private ComboBox comboBox1;
+        private ComboBox cmVehiculo;
         private TextBox textBox4;
         private PictureBox pictureBox14;
         private PictureBox pictureBox11;
@@ -971,5 +978,6 @@
         private TextBox txtBusqueda;
         private Button button3;
         private Panel panel2;
+        private ComboBox comboBox3;
     }
 }

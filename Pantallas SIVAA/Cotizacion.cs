@@ -160,8 +160,8 @@ namespace Pantallas_SIVAA
         {
             lblIDCliente.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString().Trim();
             string nombreCompleto = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString().Trim();
-            nombreCompleto+= dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString().Trim();
-            nombreCompleto += dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString().Trim();
+            nombreCompleto+=" "+ dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString().Trim();
+            nombreCompleto +=" "+ dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString().Trim();
             lblNomreCompleto.Text = nombreCompleto;
 
         }
@@ -178,6 +178,24 @@ namespace Pantallas_SIVAA
                 {
                     dataGridView1.Rows.Add(x.IDCliente, x.Nombre, x.ApellidoPat, x.ApellidoMat, x.RFC, x.Correo, x.Telefono, x.NoExterior, x.Colonia, x.Ciudad, x.Estado);
                 }
+            }
+        }
+
+        private void cmVehiculo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string vehiculoSelec = cmVehiculo.SelectedItem.ToString();
+            cmVersion.Items.Clear();
+            if (vehiculoSelec == "Pathfinder")
+            {
+                cmVersion.Items.Add("Advance");
+                cmVersion.Items.Add("Exclusive");
+                cmVersion.Items.Add("Platinum");
+            }
+           else
+            {
+                cmVersion.Items.Add("Sense");
+                cmVersion.Items.Add("Advance");
+                cmVersion.Items.Add("SR");
             }
         }
     }
