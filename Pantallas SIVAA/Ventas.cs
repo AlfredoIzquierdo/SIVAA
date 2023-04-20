@@ -877,10 +877,15 @@ namespace Pantallas_SIVAA
 
         private void btncompraven_Click(object sender, EventArgs e)
         {
+            if (txtap.Text == "")
+            {
+                return;
+            }
             Venta pqt = new Venta
             {
                 IDVenta = Convert.ToString("V" + k),
-                IDEmpleado = Convert.ToString(TXTIDEMPCOT.Text),
+                //IDEmpleado = Convert.ToString(TXTIDEMPCOT.Text),
+                IDEmpleado = Convert.ToString(_pqt.IDEmpleado),
                 NoSerie = "",
                 Dia = Convert.ToInt32(numericUpDown2.Value),
                 Mes = Convert.ToInt32(numericUpDown3.Value),
@@ -997,7 +1002,7 @@ namespace Pantallas_SIVAA
                         }
                         else
                         {
-                            MessageBox.Show("Cambio de estatus exitoso en la B.D \r\n\r\n Estatus = " + est);
+                            //MessageBox.Show("Cambio de estatus exitoso en la B.D \r\n\r\n Estatus = " + est);
 
                             k++;
                             btncompraven.Enabled = true;
@@ -1026,7 +1031,7 @@ namespace Pantallas_SIVAA
                     id2 = serie;
                     //id2 = textBox3.Text;
                     PqteLog5.ModificarEstatus(id2, est2);
-                    MessageBox.Show("serie= " + serie + "\r\nEstatus auto cambio= " + est2);
+                    //MessageBox.Show("serie= " + serie + "\r\nEstatus auto cambio= " + est2);
                     if (PqteLog5.Mensaje.Length != 0)
                     {
                         //Hubo un error
@@ -1060,7 +1065,7 @@ namespace Pantallas_SIVAA
                         }
                         else
                         {
-                            MessageBox.Show("Cambio de estatus exitoso en la B.D \r\n\r\n Estatus = " + est);
+                            //MessageBox.Show("Cambio de estatus exitoso en la B.D \r\n\r\n Estatus = " + est);
                             k++;
 
                             btncompraven.Enabled = true;

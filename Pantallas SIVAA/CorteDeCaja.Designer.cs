@@ -552,7 +552,7 @@
             tabPage1.Controls.Add(panel9);
             tabPage1.Location = new Point(4, 29);
             tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new Padding(3, 3, 3, 3);
+            tabPage1.Padding = new Padding(3);
             tabPage1.Size = new Size(1250, 637);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Pagos";
@@ -572,7 +572,7 @@
             tabPage5.Controls.Add(panel5);
             tabPage5.Location = new Point(4, 29);
             tabPage5.Name = "tabPage5";
-            tabPage5.Padding = new Padding(3, 3, 3, 3);
+            tabPage5.Padding = new Padding(3);
             tabPage5.Size = new Size(513, 251);
             tabPage5.TabIndex = 0;
             tabPage5.Text = "Voucher de pago";
@@ -617,7 +617,7 @@
             textBox5.Name = "textBox5";
             textBox5.PlaceholderText = "$ 0.00";
             textBox5.ReadOnly = true;
-            textBox5.Size = new Size(81, 37);
+            textBox5.Size = new Size(218, 37);
             textBox5.TabIndex = 1;
             // 
             // textBox6
@@ -949,7 +949,7 @@
             tabPage2.Controls.Add(panel4);
             tabPage2.Location = new Point(4, 29);
             tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(3, 3, 3, 3);
+            tabPage2.Padding = new Padding(3);
             tabPage2.Size = new Size(1250, 637);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Abonos";
@@ -970,7 +970,7 @@
             tabPage3.Controls.Add(panel2);
             tabPage3.Location = new Point(4, 29);
             tabPage3.Name = "tabPage3";
-            tabPage3.Padding = new Padding(3, 3, 3, 3);
+            tabPage3.Padding = new Padding(3);
             tabPage3.Size = new Size(860, 251);
             tabPage3.TabIndex = 0;
             tabPage3.Text = "Info de abono";
@@ -993,12 +993,12 @@
             // textBox1
             // 
             textBox1.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(404, 101);
+            textBox1.Location = new Point(313, 101);
             textBox1.Margin = new Padding(3, 4, 3, 4);
             textBox1.Name = "textBox1";
             textBox1.PlaceholderText = "$ 0.00";
             textBox1.ReadOnly = true;
-            textBox1.Size = new Size(81, 37);
+            textBox1.Size = new Size(198, 37);
             textBox1.TabIndex = 1;
             // 
             // label12
@@ -1029,7 +1029,7 @@
             tabPage4.Controls.Add(textBox14);
             tabPage4.Location = new Point(4, 29);
             tabPage4.Name = "tabPage4";
-            tabPage4.Padding = new Padding(3, 3, 3, 3);
+            tabPage4.Padding = new Padding(3);
             tabPage4.Size = new Size(860, 251);
             tabPage4.TabIndex = 1;
             tabPage4.Text = "Cuenta";

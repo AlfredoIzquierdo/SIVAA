@@ -43,6 +43,12 @@ namespace Pantallas_SIVAA
             label57.Text = subtotal.ToString();
             label56.Text = iva.ToString();
             label55.Text = (subtotal + iva).ToString();
+            //*****
+            label10.Text = pdqV.NoSerie.ToString();
+            UnidadLog uni = new UnidadLog();
+            Unidad un;
+            un = uni.LeerPorClave(pdqV.NoSerie.ToString());
+            lblcolor.Text = un.Color.ToString();
             lbldia.Text = pdqV.Dia.ToString();
             lblmes.Text = pdqV.Mes.ToString();
             lblano.Text = pdqV.Año.ToString();
