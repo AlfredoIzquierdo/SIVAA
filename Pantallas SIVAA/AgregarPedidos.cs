@@ -178,5 +178,47 @@ namespace Pantallas_SIVAA
             GestionarPedidos pedidos = new GestionarPedidos(_pqt);
             pedidos.Show();
         }
+
+        private void pictureBox13_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Inicio inicio = new Inicio(_pqt);
+            inicio.Show();
+        }
+
+        private void btnVentas_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnStock_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCitas_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPedidos_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCobros_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AgregarPedidos_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

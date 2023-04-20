@@ -116,5 +116,42 @@ namespace Pantallas_SIVAA
             Reportes reportes = new Reportes(_pqt);
             reportes.Show();
         }
+
+        private void pictureBox13_Click(object sender, EventArgs e)
+        {
+            Inicio inicio = new Inicio(_pqt);
+            inicio.Show();
+            this.Close();
+        }
+
+        private void btnPedidos_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnStock_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCobros_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVentas_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCitas_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnReportes_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

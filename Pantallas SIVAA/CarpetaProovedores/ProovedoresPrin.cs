@@ -245,6 +245,50 @@ namespace Pantallas_SIVAA
             pr.Show();
         }
 
-       
+        
+        private void btnPedidos_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVentas_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCobros_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnReportes_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox8_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox9_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

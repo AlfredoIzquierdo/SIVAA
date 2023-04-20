@@ -677,11 +677,6 @@ namespace Pantallas_SIVAA
 
         }
 
-        private void dataGridView5_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void btnCliente_Click_1(object sender, EventArgs e)
         {
 
@@ -2383,6 +2378,158 @@ namespace Pantallas_SIVAA
         private void btnNuevaEntrega_Click(object sender, EventArgs e)
         {
             LimpiarEntregas();
+        }
+
+        private void btnGuardar_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFichaPago_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btncompraven_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnpagare_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFactura_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox13_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPedidos_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnStock_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCitas_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVentas_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCobros_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnReportes_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGuardarEntrega_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFacturaEntrega_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNuevaEntrega_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnContratoCompraVenta_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNuevaventa_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage4_Enter_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage5_Enter_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage7_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvElegirVenta_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnBuscarClienteCot_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboVehiculo_SelectedValueChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ComboVersion1_SelectedValueChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboColor_SelectedValueChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+     
+
+        private void rbtnConCot_CheckedChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupCotCred_EnabledChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericplazos_ValueChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericporengan_ValueChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
