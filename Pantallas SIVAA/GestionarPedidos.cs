@@ -96,13 +96,27 @@ namespace Pantallas_SIVAA.Pedidos
 
         private void GestionarPedidos_Load(object sender, EventArgs e)
         {
-            /*
-            dataGridView1.Rows.Clear();
-            List<Pedido> p = Producto.ListadoTotal();
-            foreach (Pedido x in p) { 
-                dataGridView1.Rows.Add(x.IDProveedor, x.);
+            dataGridView1.ClearSelection();
+            List<Pedido> clie = pedlog.ListadoAll();
+            foreach (Pedido x in clie)
+            {
+                if (x.EstadoPedido == "Activo")
+                {
+
+                    dataGridView1.Rows.Add(x.IDPedido, x.IDProveedor, x.Dia, x.Mes, x.Año, x.Importe);
+
+                }
+
+
             }
-            */
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                dataGridView1.Rows[e.RowIndex].Selected = true;
+            }
         }
     }
 }

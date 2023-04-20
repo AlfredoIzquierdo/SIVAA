@@ -18,7 +18,7 @@ namespace Datos
             {
                 //Abrir la conexión y crear el Query
                 Cnx.Open();
-                string CdSql = "INSERT INTO Pedido (IDPedido,IDProovedor,IDEmpleado,NoSerie,Dia,Mes,Año,Importe) VALUES (@Cl,@Nm,@App,@Apm,@Rfc,@Cr,@I)";
+                string CdSql = "INSERT INTO Pedido (IDPedido,IDProovedor,IDEmpleado,Dia,Mes,Año,Importe,EstadoPedido) VALUES (@Cl,@Nm,@App,@Apm,@Rfc,@Cr,@I,@EsP)";
                 using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))//SolicitA: la cadena de SQL y la conexeión
                 {
                     //Añadir los parámetros
@@ -29,7 +29,7 @@ namespace Datos
                     Cmd.Parameters.AddWithValue("@Rfc", Pqte.Mes);
                     Cmd.Parameters.AddWithValue("@Cr", Pqte.Año);
                     Cmd.Parameters.AddWithValue("@I", Pqte.Importe);
-
+                    Cmd.Parameters.AddWithValue("@EsP", Pqte.EstadoPedido);
                     Cmd.ExecuteNonQuery();
                     //Borrar variable cmd de la memoria
                     Cmd.Dispose();
@@ -64,7 +64,8 @@ namespace Datos
                             Dia = Convert.ToInt32(Dr["Dia"]),
                             Mes = Convert.ToInt32(Dr["Mes"]),
                             Año = Convert.ToInt32(Dr["Año"]),
-                            Importe = Convert.ToDouble(Dr["Importe"])
+                            Importe = Convert.ToDouble(Dr["Importe"]),
+                            EstadoPedido = Convert.ToString(Dr["EstadoPedido"])
                         };
                         productos.Add(Pqte);
                     }
@@ -100,6 +101,7 @@ namespace Datos
                             Mes = Convert.ToInt32(Dr["Mes"]),
                             Año = Convert.ToInt32(Dr["Año"]),
                             Importe = Convert.ToDouble(Dr["Importe"]),
+                            EstadoPedido = Convert.ToString(Dr["EstadoPedido"])
                         };
                         return Pqte;
                     }
@@ -114,7 +116,7 @@ namespace Datos
             using (SqlConnection Cnx = new SqlConnection(CdCnx))
             {
                 Cnx.Open();
-                string CdSql = "DELETE FROM Pedido WHERE IDPedido=@Cl";
+                string CdSql = "Update Pedido Set EstadoPedido='Inactivo' WHERE IDPedido=@Cl";
                 using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
                 {
                     Cmd.Parameters.AddWithValue("@Cl", CodPqt);
@@ -130,7 +132,7 @@ namespace Datos
             using (SqlConnection Cnx = new SqlConnection(CdCnx))
             {
                 Cnx.Open();
-                string CdSql = "UPDATE Pedido SET IDProovedor=@Nm,IDEmpleado=@App, Dia=@Apm,Mes=@Rfc,Año=@Cr,Importe=@Tl WHERE IDPedido=@Cl";
+                string CdSql = "UPDATE Pedido SET IDProovedor=@Nm,IDEmpleado=@App, Dia=@Apm,Mes=@Rfc,Año=@Cr,Importe=@Tl,EstadoPedido=@EsP WHERE IDPedido=@Cl";
                 using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
                 {
                     //Añadir los parámetros
@@ -141,6 +143,7 @@ namespace Datos
                     Cmd.Parameters.AddWithValue("@Rfc", Pqte.Mes);
                     Cmd.Parameters.AddWithValue("@Cr", Pqte.Año);
                     Cmd.Parameters.AddWithValue("@Tl", Pqte.Importe);
+                    Cmd.Parameters.AddWithValue("@EsP", Pqte.Importe);
                     Cmd.ExecuteNonQuery();
                     //Borrar variable cmd de la memoria
                     Cmd.Dispose();

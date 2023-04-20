@@ -1,4 +1,6 @@
-﻿using Entidades;
+﻿using Datos;
+using Entidades;
+using Logicas;
 using Pantallas_SIVAA.Pedidos;
 using System;
 using System.Collections.Generic;
@@ -9,13 +11,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Logicas;
 
 namespace Pantallas_SIVAA
 {
     public partial class AgregarPedidos : Form
     {
-        Empleado _pqt;
-        public AgregarPedidos(Empleado pqt)
+        public AgregarPedidos()
         {
             InitializeComponent();
             _pqt = pqt;
@@ -23,6 +25,7 @@ namespace Pantallas_SIVAA
 
         private void AgregarPedidos_Load(object sender, EventArgs e)
         {
+            cbProov.SelectedIndex = 0;
             switch (_pqt.Tipo.Trim())
             {
                 case "Atencion":
@@ -119,7 +122,28 @@ namespace Pantallas_SIVAA
 
         private void button1_Click(object sender, EventArgs e)
         {
+            List<Pedido> x = pedidoLog.ListadoAll();
+            string i = "PD" + (x.Count + 1).ToString();
+            pedido.IDPedido = i;
+            pedido.IDProveedor = pedidoLog.IdentProveed(cbProov.Text);
+            pedido.IDEmpleado = "E4";
+            pedido.Dia = Convert.ToInt32(numDiaP.Value);
+            pedido.Mes = Convert.ToInt32(numMesPed.Value);
+            pedido.Año = Convert.ToInt32(numAnoPed.Value);
+            pedido.Importe = Convert.ToDouble(txtcost.Text);
+            pedido.EstadoPedido = "Activo";
+            pedidoLog.Registrar(pedido);
+            this.Close();
+            GestionarPedidos gestionarPedidos = new GestionarPedidos();
+            gestionarPedidos.Show();
+        }
 
+        private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

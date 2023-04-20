@@ -59,6 +59,7 @@
     <Compile Include="FacturaLOG.cs" />
     <Compile Include="PagareLog.cs" />
     <Compile Include="PagoLog.cs" />
+    <Compile Include="PedidoLOG.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProveedorLog.cs" />
     <Compile Include="UnidadLog.cs" />

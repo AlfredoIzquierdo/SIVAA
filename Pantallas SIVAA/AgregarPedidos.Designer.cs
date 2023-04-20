@@ -307,7 +307,7 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // label6
+            // btnfinal
             // 
             label6.AutoSize = true;
             label6.Location = new Point(780, 343);
@@ -316,6 +316,14 @@
             label6.Size = new Size(104, 25);
             label6.TabIndex = 106;
             label6.Text = "Costo total:";
+            btnfinal.Location = new Point(393, 516);
+            btnfinal.Margin = new Padding(3, 4, 3, 4);
+            btnfinal.Name = "btnfinal";
+            btnfinal.Size = new Size(177, 30);
+            btnfinal.TabIndex = 107;
+            btnfinal.Text = "Finalizar Pedido";
+            btnfinal.UseVisualStyleBackColor = true;
+            btnfinal.Click += button1_Click;
             // 
             // label8
             // 
@@ -327,7 +335,7 @@
             label8.TabIndex = 105;
             label8.Text = "Costo Unitario:";
             // 
-            // textBox4
+            // pictureBox2
             // 
             textBox4.Location = new Point(886, 338);
             textBox4.Margin = new Padding(4, 5, 4, 5);
@@ -336,7 +344,7 @@
             textBox4.Size = new Size(217, 31);
             textBox4.TabIndex = 104;
             // 
-            // pictureBox2
+            // pictureBox3
             // 
             pictureBox2.Image = Properties.Resources.calendar;
             pictureBox2.Location = new Point(684, 455);
@@ -346,16 +354,31 @@
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 102;
             pictureBox2.TabStop = false;
+            pictureBox3.Image = Properties.Resources.billete;
+            pictureBox3.Location = new Point(106, 337);
+            pictureBox3.Margin = new Padding(3, 4, 3, 4);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(49, 46);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 97;
+            pictureBox3.TabStop = false;
             // 
-            // dateTimePicker1
+            // txtcost
             // 
             dateTimePicker1.Location = new Point(780, 480);
             dateTimePicker1.Margin = new Padding(4, 5, 4, 5);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(325, 31);
             dateTimePicker1.TabIndex = 103;
+            txtcost.Location = new Point(250, 350);
+            txtcost.Margin = new Padding(3, 4, 3, 4);
+            txtcost.Name = "txtcost";
+            txtcost.PlaceholderText = "Costo";
+            txtcost.Size = new Size(220, 27);
+            txtcost.TabIndex = 94;
+            txtcost.KeyPress += textBox5_KeyPress;
             // 
-            // textBox1
+            // numDiaP
             // 
             textBox1.Location = new Point(237, 232);
             textBox1.Margin = new Padding(4, 5, 4, 5);
@@ -363,8 +386,15 @@
             textBox1.PlaceholderText = "Vehiculo";
             textBox1.Size = new Size(323, 31);
             textBox1.TabIndex = 98;
+            numDiaP.Location = new Point(179, 284);
+            numDiaP.Maximum = new decimal(new int[] { 31, 0, 0, 0 });
+            numDiaP.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            numDiaP.Name = "numDiaP";
+            numDiaP.Size = new Size(35, 27);
+            numDiaP.TabIndex = 110;
+            numDiaP.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
-            // pictureBox1
+            // numMesPed
             // 
             pictureBox1.Image = Properties.Resources.Car;
             pictureBox1.Location = new Point(159, 213);
@@ -374,89 +404,92 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 101;
             pictureBox1.TabStop = false;
+            numMesPed.Location = new Point(252, 284);
+            numMesPed.Maximum = new decimal(new int[] { 12, 0, 0, 0 });
+            numMesPed.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            numMesPed.Name = "numMesPed";
+            numMesPed.Size = new Size(39, 27);
+            numMesPed.TabIndex = 111;
+            numMesPed.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
-            // textBox2
+            // numAnoPed
             // 
-            textBox2.Location = new Point(367, 280);
-            textBox2.Margin = new Padding(4, 5, 4, 5);
-            textBox2.Name = "textBox2";
-            textBox2.PlaceholderText = "Modelo";
-            textBox2.Size = new Size(191, 31);
-            textBox2.TabIndex = 99;
+            numAnoPed.Location = new Point(315, 284);
+            numAnoPed.Maximum = new decimal(new int[] { 2023, 0, 0, 0 });
+            numAnoPed.Minimum = new decimal(new int[] { 2023, 0, 0, 0 });
+            numAnoPed.Name = "numAnoPed";
+            numAnoPed.Size = new Size(57, 27);
+            numAnoPed.TabIndex = 112;
+            numAnoPed.Value = new decimal(new int[] { 2023, 0, 0, 0 });
             // 
-            // textBox3
+            // label3
             // 
-            textBox3.Location = new Point(387, 328);
-            textBox3.Margin = new Padding(4, 5, 4, 5);
-            textBox3.Name = "textBox3";
-            textBox3.PlaceholderText = "Version";
-            textBox3.Size = new Size(171, 31);
-            textBox3.TabIndex = 100;
+            label3.AutoSize = true;
+            label3.Location = new Point(179, 257);
+            label3.Name = "label3";
+            label3.Size = new Size(35, 20);
+            label3.TabIndex = 113;
+            label3.Text = "Dia:";
             // 
-            // pictureBox3
+            // label5
             // 
-            pictureBox3.Image = Properties.Resources.billete;
-            pictureBox3.Location = new Point(684, 213);
-            pictureBox3.Margin = new Padding(4, 5, 4, 5);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(61, 57);
-            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox3.TabIndex = 97;
-            pictureBox3.TabStop = false;
+            label5.AutoSize = true;
+            label5.Location = new Point(252, 257);
+            label5.Name = "label5";
+            label5.Size = new Size(39, 20);
+            label5.TabIndex = 114;
+            label5.Text = "Mes:";
             // 
-            // label9
+            // label10
             // 
-            label9.AutoSize = true;
-            label9.Location = new Point(387, 175);
-            label9.Margin = new Padding(4, 0, 4, 0);
-            label9.Name = "label9";
-            label9.Size = new Size(87, 25);
-            label9.TabIndex = 96;
-            label9.Text = "Cantidad:";
+            label10.AutoSize = true;
+            label10.Location = new Point(314, 257);
+            label10.Name = "label10";
+            label10.Size = new Size(39, 20);
+            label10.TabIndex = 115;
+            label10.Text = "Año:";
             // 
-            // textBox6
+            // cbProov
             // 
-            textBox6.Location = new Point(491, 172);
-            textBox6.Margin = new Padding(4, 5, 4, 5);
-            textBox6.Name = "textBox6";
-            textBox6.PlaceholderText = "0";
-            textBox6.Size = new Size(70, 31);
-            textBox6.TabIndex = 95;
-            textBox6.TextAlign = HorizontalAlignment.Center;
+            cbProov.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbProov.FormattingEnabled = true;
+            cbProov.Items.AddRange(new object[] { "AutoSur", "NissCar", "AutoT", "NisAuto", "AutoYa", "AutoG", "NissMX", "AutosP" });
+            cbProov.Location = new Point(266, 187);
+            cbProov.Name = "cbProov";
+            cbProov.Size = new Size(204, 28);
+            cbProov.TabIndex = 116;
             // 
-            // textBox5
+            // label6
             // 
-            textBox5.Location = new Point(886, 243);
-            textBox5.Margin = new Padding(4, 5, 4, 5);
-            textBox5.Name = "textBox5";
-            textBox5.PlaceholderText = "Costo";
-            textBox5.Size = new Size(217, 31);
-            textBox5.TabIndex = 94;
+            label6.AutoSize = true;
+            label6.Location = new Point(179, 190);
+            label6.Name = "label6";
+            label6.Size = new Size(81, 20);
+            label6.TabIndex = 121;
+            label6.Text = "Proovedor:";
             // 
             // AgregarPedidos
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1191, 710);
-            Controls.Add(pictureBox4);
-            Controls.Add(textBox7);
-            Controls.Add(button1);
+            ClientSize = new Size(953, 568);
             Controls.Add(label6);
+            Controls.Add(cbProov);
+            Controls.Add(label10);
+            Controls.Add(label5);
+            Controls.Add(label3);
+            Controls.Add(numAnoPed);
+            Controls.Add(numMesPed);
+            Controls.Add(numDiaP);
+            Controls.Add(pictureBox4);
+            Controls.Add(btnfinal);
             Controls.Add(label8);
-            Controls.Add(textBox4);
             Controls.Add(pictureBox2);
-            Controls.Add(dateTimePicker1);
-            Controls.Add(textBox1);
-            Controls.Add(pictureBox1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox3);
             Controls.Add(pictureBox3);
-            Controls.Add(label9);
-            Controls.Add(textBox6);
-            Controls.Add(textBox5);
+            Controls.Add(txtcost);
             Controls.Add(panel1);
             Controls.Add(panel7);
-            Margin = new Padding(4, 5, 4, 5);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "AgregarPedidos";
             Text = "Agregar";
             Load += AgregarPedidos_Load;
@@ -466,8 +499,10 @@
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numDiaP).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numMesPed).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numAnoPed).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -489,20 +524,18 @@
         private ImageList imageList2;
         private PictureBox pictureBox13;
         private PictureBox pictureBox4;
-        private TextBox textBox7;
-        private Button button1;
-        private Label label6;
+        private Button btnfinal;
         private Label label8;
-        private TextBox textBox4;
         private PictureBox pictureBox2;
-        private DateTimePicker dateTimePicker1;
-        private TextBox textBox1;
-        private PictureBox pictureBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
         private PictureBox pictureBox3;
-        private Label label9;
-        private TextBox textBox6;
-        private TextBox textBox5;
+        private TextBox txtcost;
+        private NumericUpDown numDiaP;
+        private NumericUpDown numMesPed;
+        private NumericUpDown numAnoPed;
+        private Label label3;
+        private Label label5;
+        private Label label10;
+        private ComboBox cbProov;
+        private Label label6;
     }
 }
