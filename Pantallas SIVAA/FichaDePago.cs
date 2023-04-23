@@ -18,6 +18,7 @@ namespace Pantallas_SIVAA
         {
             InitializeComponent();
             lblConcepto.Text = concepto;
+            lblImporte.Text = monto;
             lblNoSerie.Text = noSerie;
             lblVehiculo.Text = Vehiculo;
             lblVersion.Text = Version;
