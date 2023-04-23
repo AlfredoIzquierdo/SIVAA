@@ -2513,7 +2513,7 @@ namespace Pantallas_SIVAA
 
         }
 
-     
+
 
         private void rbtnConCot_CheckedChanged_1(object sender, EventArgs e)
         {
