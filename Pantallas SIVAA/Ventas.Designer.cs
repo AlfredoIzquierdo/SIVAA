@@ -1158,7 +1158,7 @@
             // TXTCOT
             // 
             TXTCOT.ForeColor = SystemColors.WindowFrame;
-            TXTCOT.Location = new Point(496, 37);
+            TXTCOT.Location = new Point(524, 27);
             TXTCOT.Margin = new Padding(3, 1, 3, 1);
             TXTCOT.Name = "TXTCOT";
             TXTCOT.PlaceholderText = "IDCotizacion";
