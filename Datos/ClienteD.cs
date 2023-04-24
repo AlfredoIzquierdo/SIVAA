@@ -142,6 +142,42 @@ namespace Datos
             }
             return productos;
         }
+        public List<EstadoDeCuenta> EdoCuenta()
+        {
+            List<EstadoDeCuenta> productos = new List<EstadoDeCuenta>();
+
+            //Vuelvo a crear la conexión
+            using (SqlConnection Cnx = new SqlConnection(CdCnx))
+            {
+                Cnx.Open();
+                //Creo el Query (todos los registros de la tabla cliente
+                string CdSql = "SELECT C.IDCliente,c.Nombre,C.ApellidoPaterno,c.ApellidoMaterno,vh.Nombre,ve.[version],v.IDVenta,VC.Estatus\r\nFROM CLIENTE C\r\nINNER JOIN COTIZACION Co on C.IDCliente = Co.IDCliente\r\ninner join CotizacionCredito CR on CR.IDCotizacion = Co.IDCotizacion\r\ninner join VentaCredito VC on VC.IDCotizacion = CR.IDCotizacion\r\ninner join Venta V on V.IDVenta = VC.IDVenta\r\ninner join Unidad U on U.NoSerie = V.NoSerie\r\ninner join [Version] Ve on ve.IDVersion = U.IDVersion\r\ninner join Vehiculo Vh on Vh.IDVehiculo = Ve.IDVehiculo\r\nwhere VC.Estatus = 'Activo'";
+                using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
+                {
+                    SqlDataReader Dr = Cmd.ExecuteReader();
+                    //Leo registro por registro que tiene la tabla 
+                    while (Dr.Read())
+                    {
+                        //Cada vez que lo lea se crea un nuevo objeto
+                        EstadoDeCuenta Pqte = new EstadoDeCuenta
+                        {
+                            IDCliente = Convert.ToString(Dr["C.IDCliente"]),
+                            Nombre = Convert.ToString(Dr["C.Nombre"]),
+                            ApellidoPaterno = Convert.ToString(Dr["C.ApellidoPaterno"]),
+                            ApellidoMaterno = Convert.ToString(Dr["C.ApellidoMaterno"]),
+                            NombreV = Convert.ToString(Dr["vh.Nombre"]),
+                            Versions = Convert.ToString(Dr["ve.[version]"]),
+                            IDVenta = Convert.ToString(Dr["v.IDVenta"]),
+                            Estatus = Convert.ToString(Dr["VC.Estatus"])
+
+                        };
+                        productos.Add(Pqte);
+                    }
+                }
+                Cnx.Close();
+            }
+            return productos;
+        }
         public List<Cliente> ListadoTotalESP(string nom, string app)
         {
             List<Cliente> productos = new List<Cliente>();

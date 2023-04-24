@@ -67,7 +67,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnEstadosCuenta = new System.Windows.Forms.Button();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -185,6 +184,7 @@
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(1190, 465);
             this.dataGridView1.TabIndex = 59;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // Column1
             // 
@@ -552,19 +552,6 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // btnEstadosCuenta
-            // 
-            this.btnEstadosCuenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(101)))), ((int)(((byte)(143)))));
-            this.btnEstadosCuenta.ForeColor = System.Drawing.Color.White;
-            this.btnEstadosCuenta.Location = new System.Drawing.Point(391, 121);
-            this.btnEstadosCuenta.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.btnEstadosCuenta.Name = "btnEstadosCuenta";
-            this.btnEstadosCuenta.Size = new System.Drawing.Size(179, 51);
-            this.btnEstadosCuenta.TabIndex = 63;
-            this.btnEstadosCuenta.Text = "Estados de cuenta";
-            this.btnEstadosCuenta.UseVisualStyleBackColor = false;
-            this.btnEstadosCuenta.Click += new System.EventHandler(this.btnEstadosCuenta_Click);
-            // 
             // printDocument1
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
@@ -574,7 +561,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1370, 699);
-            this.Controls.Add(this.btnEstadosCuenta);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.dataGridView1);
@@ -625,7 +611,6 @@
         private PictureBox pictureBox13;
         private ImageList imageList2;
         private PictureBox pictureBox1;
-        private Button btnEstadosCuenta;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column4;

@@ -115,8 +115,6 @@ namespace Pantallas_SIVAA
                     dataGridView1.Rows.Add(x.IDCliente, x.Nombre, x.ApellidoPat, x.ApellidoMat, x.RFC, x.Correo, x.Telefono, x.NoExterior, x.Colonia, x.Ciudad, x.Estado);
 
                 }
-
-
             }
 
             switch (_pqt.Tipo.Trim())
@@ -224,10 +222,6 @@ namespace Pantallas_SIVAA
             }
         }
 
-        private void btnEstadosCuenta_Click(object sender, EventArgs e)
-        {
-
-        }
         private bool isFormBorderStyleNone = false;
         private bool isFormBorderStyleChanged = false;
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
@@ -235,71 +229,6 @@ namespace Pantallas_SIVAA
             Bitmap bitmap = new Bitmap(this.Width, this.Height);
             this.DrawToBitmap(bitmap, new Rectangle(0, 0, this.Width, this.Height));
             e.Graphics.DrawImage(bitmap, 0, 0);
-
-        }
-
-        private void pictureBox8_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox9_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox11_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnEstadosCuenta_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Clientes_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnReportes_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnCobros_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnVentas_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnCitas_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnStock_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnPedidos_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox13_Click_1(object sender, EventArgs e)
-        {
 
         }
     }

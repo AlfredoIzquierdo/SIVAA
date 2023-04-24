@@ -2,6 +2,7 @@
 using Logicas;
 using Pantallas_SIVAA.Pedidos;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -927,65 +928,36 @@ namespace Pantallas_SIVAA
                 textBox12.Text = te;
             }
         }
-
-        private void pictureBox13_Click_1(object sender, EventArgs e)
+        readonly ClienteLog PqteLog5 = new ClienteLog();
+        List<EstadoDeCuenta> lista;
+        private void EstadoCuenta_Click(object sender, EventArgs e)
         {
-
+            List<EstadoDeCuenta> clie = PqteLog5.Cuenta();
+            lista = clie;
+            foreach (EstadoDeCuenta x in clie)
+            {
+                dataGridView1.Rows.Add(x.IDCliente,x.Nombre,x.ApellidoPaterno,x.ApellidoMaterno,x.NombreV,x.Versions);
+            }
+        }
+        string nombre, apellidoP, apellidoM, vehiculo, versions, id;
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                dataGridView1.Rows[e.RowIndex].Selected = true;
+            }
+            nombre = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString().Trim();
+            apellidoP = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString().Trim();
+             apellidoM = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString().Trim();
+             vehiculo = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString().Trim();
+             versions = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString().Trim();
+             id = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString().Trim();
         }
 
-        private void btnPedidos_Click_1(object sender, EventArgs e)
+        private void btnEdoCuenta_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnStock_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnCitas_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnVentas_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage4_Enter_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button5_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CorteDeCaja_Load_1(object sender, EventArgs e)
-        {
-
+            EstadoCuenta estadoCuenta = new EstadoCuenta(nombre, apellidoP, apellidoM, vehiculo, versions, id);
+            estadoCuenta.Show();
         }
     }
 }

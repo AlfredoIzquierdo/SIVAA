@@ -22,6 +22,7 @@ namespace Pantallas_SIVAA
         Empleado _pqt;
         EmpleadoLog emplog = new EmpleadoLog();
         CorteCajaLog PqteLog2 = new CorteCajaLog();
+
         public AbrirCaja(Empleado pqt)
         {
             InitializeComponent();
@@ -561,58 +562,23 @@ namespace Pantallas_SIVAA
                 dataGridView2.Rows[e.RowIndex].Selected = true;
             }
         }
-
-        private void btnStock_Click_1(object sender, EventArgs e)
+        readonly ClienteLog cliente = new ClienteLog();
+        private void tabPage7_Click(object sender, EventArgs e)
         {
+            dataGridView1.ClearSelection();
+            List<Cliente> clie = cliente.ListadoAll();
+            foreach (Cliente x in clie)
+            {
+                if (x.EstadoCliente == "Activo")
+                {
 
+                    dataGridView1.Rows.Add(x.IDCliente, x.Nombre, x.ApellidoPat, x.ApellidoMat, x.RFC, x.Correo, x.Telefono, x.NoExterior, x.Colonia, x.Ciudad, x.Estado);
+
+                }
+            }
         }
 
-        private void btnCobros_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnVentas_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnCitas_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnReportes_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox13_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnPedidos_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnAbrir_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnIrCaja_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnIngresarMonto_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnCerrar_Click_1(object sender, EventArgs e)
+        private void dataGridView3_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

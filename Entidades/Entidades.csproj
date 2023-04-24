@@ -54,6 +54,7 @@
     <Compile Include="CotizacionNoUsar.cs" />
     <Compile Include="Empleado.cs" />
     <Compile Include="GananciasCliente.cs" />
+    <Compile Include="EstadoDeCuenta.cs" />
     <Compile Include="Modelo.cs" />
     <Compile Include="ModeloVersion.cs" />
     <Compile Include="Pago.cs" />
