@@ -67,9 +67,8 @@ namespace Pantallas_SIVAA
 
         private void btnVersiones_Click(object sender, EventArgs e)
         {
-            this.Close();
-            ReporteVentas reporteVentas = new ReporteVentas();
-            reporteVentas.Show();
+            PeriodoVentas periodoVentas = new PeriodoVentas(_pqt);
+            periodoVentas.Show();
         }
 
         private void btnCobros_Click(object sender, EventArgs e)

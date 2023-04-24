@@ -710,6 +710,116 @@ namespace Datos
             return productos;
         }
 
+        public List<Venta> ListadoVentasPorDia(int DiaI, int MesI, int AnoI, int DiaF, int MesF, int AnoF)
+        {
+            List<Venta> productos = new List<Venta>();
+
+            //Vuelvo a crear la conexión
+            using (SqlConnection Cnx = new SqlConnection(CdCnx))
+            {
+                Cnx.Open();
+                //Creo el Query (todos los registros de la tabla Venta
+                string CdSql = "Select * from Venta " +
+                    "where Dia Between "+DiaI.ToString()+" and "+DiaF.ToString()+" AND Mes="+MesF.ToString()+" and Año="+AnoF.ToString()+"";
+                using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
+                {
+                    SqlDataReader Dr = Cmd.ExecuteReader();
+                    //Leo registro por registro que tiene la tabla 
+                    while (Dr.Read())
+                    {
+                        //Cada vez que lo lea se crea un nuevo objeto
+                        Venta Pqte = new Venta
+                        {
+                            IDVenta = Convert.ToString(Dr["IDVenta"]),
+                            IDEmpleado = Convert.ToString(Dr["IDEmpleado"]),
+                            NoSerie = Convert.ToString(Dr["NoSerie"]),
+                            Dia = Convert.ToInt32(Dr["Dia"]),
+                            Mes = Convert.ToInt32(Dr["Mes"]),
+                            Año = Convert.ToInt32(Dr["Año"]),
+                            Hora = Convert.ToString(Dr["Hora"]),
+                            Subtotal = Convert.ToDouble(Dr["SubTotal"]),
+                            TipoVenta = Convert.ToString(Dr["TipoVenta"])
+                        };
+                        productos.Add(Pqte);
+                    }
+                }
+                Cnx.Close();
+            }
+            return productos;
+        }
+
+        public List<Venta> ListadoVentasPorMes(int DiaI, int MesI, int AnoI, int DiaF, int MesF, int AnoF)
+        {
+            List<Venta> productos = new List<Venta>();
+
+            //Vuelvo a crear la conexión
+            using (SqlConnection Cnx = new SqlConnection(CdCnx))
+            {
+                Cnx.Open();
+                //Creo el Query (todos los registros de la tabla Venta
+                string CdSql = "Select * \r\nfrom Venta \r\nwhere Mes BETWEEN "+MesI.ToString()+" and "+MesF.ToString()+" and Año=2023 ";
+                using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
+                {
+                    SqlDataReader Dr = Cmd.ExecuteReader();
+                    //Leo registro por registro que tiene la tabla 
+                    while (Dr.Read())
+                    {
+                        //Cada vez que lo lea se crea un nuevo objeto
+                        Venta Pqte = new Venta
+                        {
+                            IDVenta = Convert.ToString(Dr["IDVenta"]),
+                            IDEmpleado = Convert.ToString(Dr["IDEmpleado"]),
+                            NoSerie = Convert.ToString(Dr["NoSerie"]),
+                            Dia = Convert.ToInt32(Dr["Dia"]),
+                            Mes = Convert.ToInt32(Dr["Mes"]),
+                            Año = Convert.ToInt32(Dr["Año"]),
+                            Hora = Convert.ToString(Dr["Hora"]),
+                            Subtotal = Convert.ToDouble(Dr["SubTotal"]),
+                            TipoVenta = Convert.ToString(Dr["TipoVenta"])
+                        };
+                        productos.Add(Pqte);
+                    }
+                }
+                Cnx.Close();
+            }
+            return productos;
+        }
+        public List<Venta> ListadoVentasPorAno(int DiaI, int MesI, int AnoI, int DiaF, int MesF, int AnoF)
+        {
+            List<Venta> productos = new List<Venta>();
+
+            //Vuelvo a crear la conexión
+            using (SqlConnection Cnx = new SqlConnection(CdCnx))
+            {
+                Cnx.Open();
+                //Creo el Query (todos los registros de la tabla Venta
+                string CdSql = "Select * \r\nfrom Venta \r\nwhere Año between "+AnoI.ToString()+" and "+AnoF.ToString()+"";
+                using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
+                {
+                    SqlDataReader Dr = Cmd.ExecuteReader();
+                    //Leo registro por registro que tiene la tabla 
+                    while (Dr.Read())
+                    {
+                        //Cada vez que lo lea se crea un nuevo objeto
+                        Venta Pqte = new Venta
+                        {
+                            IDVenta = Convert.ToString(Dr["IDVenta"]),
+                            IDEmpleado = Convert.ToString(Dr["IDEmpleado"]),
+                            NoSerie = Convert.ToString(Dr["NoSerie"]),
+                            Dia = Convert.ToInt32(Dr["Dia"]),
+                            Mes = Convert.ToInt32(Dr["Mes"]),
+                            Año = Convert.ToInt32(Dr["Año"]),
+                            Hora = Convert.ToString(Dr["Hora"]),
+                            Subtotal = Convert.ToDouble(Dr["SubTotal"]),
+                            TipoVenta = Convert.ToString(Dr["TipoVenta"])
+                        };
+                        productos.Add(Pqte);
+                    }
+                }
+                Cnx.Close();
+            }
+            return productos;
+        }
 
 
     }

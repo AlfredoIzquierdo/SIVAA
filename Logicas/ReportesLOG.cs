@@ -158,7 +158,25 @@ namespace Logicas
             datosmodelo = pqtMod.ObtenerPdto(idmodelo);
             return datosmodelo;
         }
+        public List<Venta> ListadoVentas(int DiaI, int MesI, int AnoI, int DiaF, int MesF, int AnoF, string Opcion)
+        {
+            List<Venta> datos = new List<Venta> ();
+            if (Opcion == "Dia")
+            {
 
+                return datos = pqtReport.ListadoVentasPorDia(DiaI, MesI, AnoI, DiaF, MesF, AnoF);
+            }
+            if (Opcion == "Mes")
+            {
+
+                return datos = pqtReport.ListadoVentasPorMes(DiaI, MesI, AnoI, DiaF, MesF, AnoF);
+            }
+            if (Opcion == "Año")
+            {
+                return datos = pqtReport.ListadoVentasPorAno(DiaI, MesI, AnoI, DiaF, MesF, AnoF);
+            }
+            return datos;
+        }
 
     }
 }

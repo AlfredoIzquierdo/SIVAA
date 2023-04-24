@@ -40,7 +40,7 @@ namespace Pantallas_SIVAA
             }
             else
             {
-                ReporteVentas reporteVentas = new ReporteVentas();
+                ReporteVentas reporteVentas = new ReporteVentas(_pqt, (int)numericDiaI.Value, (int)numericMesI.Value, (int)numericAnoI.Value, (int)numericDiaF.Value, (int)numericMesF.Value, (int)numericAnoF.Value, cbPeriodoVentas.Text);
                 this.Close();
                 reporteVentas.Show();
             }

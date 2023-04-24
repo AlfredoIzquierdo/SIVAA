@@ -103,7 +103,7 @@ namespace Pantallas_SIVAA
 
         private void Versiones_Load(object sender, EventArgs e)
         {
-            Versiones_Load(sender, e);
+            //Versiones_Load(sender, e);
             dataGridView1.Rows.Clear();
             List<Versions> ve = version.ListadoTotal();
             listas = ve;
