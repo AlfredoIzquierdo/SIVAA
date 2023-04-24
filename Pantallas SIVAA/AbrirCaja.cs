@@ -120,49 +120,49 @@ namespace Pantallas_SIVAA
                 btnIrCaja.Enabled = false;
                 btnCerrar.Enabled = false;
             }
-            //switch (_pqt.Tipo.Trim())
-            //{
-            //    case "Atencion":
-            //        // Funciones activas: Citas e inventario
-            //        lblTipoEmpleado.Text = _pqt.Tipo + " a clientes";
-            //        lblNombre.Text = "Bienvenido: " + _pqt.Nombre + " " + _pqt.ApellidoPat;
+            switch (_pqt.Tipo.Trim())
+            {
+                case "Atencion":
+                    // Funciones activas: Citas e inventario
+                    lblTipoEmpleado.Text = _pqt.Tipo + " a clientes";
+                    lblNombre.Text = "Bienvenido: " + _pqt.Nombre + " " + _pqt.ApellidoPat;
 
 
-            //        // Menu lateral
-            //        btnCitas.Enabled = true;
-            //        btnStock.Enabled = true;
-            //        btnReportes.Enabled = false;
-            //        btnPedidos.Enabled = false;
-            //        btnVentas.Enabled = false;
-            //        btnCobros.Enabled = false;
-            //        break;
-            //    case "Vendedor":
-            //        // Funciones activas: ventas, inventario y citas
-            //        lblTipoEmpleado.Text = _pqt.Tipo;
-            //        lblNombre.Text = "Bienvenido: " + _pqt.Nombre + " " + _pqt.ApellidoPat;
+                    // Menu lateral
+                    btnCitas.Enabled = true;
+                    btnStock.Enabled = true;
+                    btnReportes.Enabled = false;
+                    btnPedidos.Enabled = false;
+                    btnVentas.Enabled = false;
+                    btnCobros.Enabled = false;
+                    break;
+                case "Vendedor":
+                    // Funciones activas: ventas, inventario y citas
+                    lblTipoEmpleado.Text = _pqt.Tipo;
+                    lblNombre.Text = "Bienvenido: " + _pqt.Nombre + " " + _pqt.ApellidoPat;
 
 
-            //        //Menu lateral
-            //        btnCitas.Enabled = true;
-            //        btnStock.Enabled = true;
-            //        btnReportes.Enabled = false;
-            //        btnPedidos.Enabled = false;
-            //        btnVentas.Enabled = true;
-            //        btnCobros.Enabled = false;
-            //        break;
-            //    // más casos...
-            //    case "Cajero":
+                    //Menu lateral
+                    btnCitas.Enabled = true;
+                    btnStock.Enabled = true;
+                    btnReportes.Enabled = false;
+                    btnPedidos.Enabled = false;
+                    btnVentas.Enabled = true;
+                    btnCobros.Enabled = false;
+                    break;
+                // más casos...
+                case "Cajero":
 
 
-            //        // El cajero no pasa por aqui, se va directo al apartado de caja
+                    // El cajero no pasa por aqui, se va directo al apartado de caja
 
-            //        break;
-            //    case "Supervisor":
-            //        // Todo esta activado, es la vista de supervisor
-            //        lblTipoEmpleado.Text = _pqt.Tipo;
-            //        lblNombre.Text = "Bienvenido: " + _pqt.Nombre + " " + _pqt.ApellidoPat;
-            //        break;
-            //}
+                    break;
+                case "Supervisor":
+                    // Todo esta activado, es la vista de supervisor
+                    lblTipoEmpleado.Text = _pqt.Tipo;
+                    lblNombre.Text = "Bienvenido: " + _pqt.Nombre + " " + _pqt.ApellidoPat;
+                    break;
+            }
         }
 
         private void btnAbrir_Click(object sender, EventArgs e)
@@ -172,6 +172,12 @@ namespace Pantallas_SIVAA
             CorteCaja pqt; ;
             //VentaContado Deb;
             //VentaCredito Deb2;
+            if (txtid.Text == "")
+            {
+                MessageBox.Show("Seleccione un cajero");
+                return;
+            }
+
             if (label55.Text == "")
             {
                 label55.Text = "0";
@@ -606,6 +612,16 @@ namespace Pantallas_SIVAA
             numericUpDown9.Value = 0;
             numericUpDown11.Value = 0;
 
+
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

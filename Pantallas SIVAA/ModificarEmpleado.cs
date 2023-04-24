@@ -19,12 +19,12 @@ namespace Pantallas_SIVAA
         EmpleadoLog empleadoLog = new EmpleadoLog();
         Empleado _pqt;
         Empleado emp = new Empleado();
-        public ModificarEmpleado(string idEmpleado,Empleado pqt)
+        public ModificarEmpleado(string idEmpleado, Empleado pqt)
         {
             InitializeComponent();
             id = idEmpleado;
             _pqt = pqt;
-           
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -52,7 +52,7 @@ namespace Pantallas_SIVAA
                 empleado.Tipo = cbpuesto.Text;
             }
             empleadoLog.Modificar(empleado);
-            this.Close();           
+            this.Close();
             GestionarEmpleados gestionarEmpleados = new GestionarEmpleados(_pqt);
             gestionarEmpleados.Show();
         }

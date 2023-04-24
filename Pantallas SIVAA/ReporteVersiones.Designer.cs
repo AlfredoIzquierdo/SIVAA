@@ -51,9 +51,9 @@
             label1.AutoSize = true;
             label1.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.ActiveCaptionText;
-            label1.Location = new Point(177, 26);
+            label1.Location = new Point(155, 20);
             label1.Name = "label1";
-            label1.Size = new Size(149, 36);
+            label1.Size = new Size(121, 29);
             label1.TabIndex = 0;
             label1.Text = "Versiones";
             // 
@@ -62,9 +62,9 @@
             label4.AutoSize = true;
             label4.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label4.ForeColor = SystemColors.ActiveCaptionText;
-            label4.Location = new Point(838, 45);
+            label4.Location = new Point(733, 34);
             label4.Name = "label4";
-            label4.Size = new Size(47, 25);
+            label4.Size = new Size(38, 20);
             label4.TabIndex = 3;
             label4.Text = "E21";
             // 
@@ -73,26 +73,28 @@
             label3.AutoSize = true;
             label3.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label3.ForeColor = SystemColors.ActiveCaptionText;
-            label3.Location = new Point(795, 22);
+            label3.Location = new Point(696, 16);
             label3.Name = "label3";
-            label3.Size = new Size(119, 25);
+            label3.Size = new Size(98, 20);
             label3.TabIndex = 2;
             label3.Text = "IDEmpleado";
             // 
             // panel2
             // 
-            panel2.Location = new Point(3, 96);
+            panel2.Location = new Point(3, 72);
+            panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(848, 84);
+            panel2.Size = new Size(742, 63);
             panel2.TabIndex = 6;
             // 
             // panel3
             // 
             panel3.BorderStyle = BorderStyle.FixedSingle;
             panel3.Controls.Add(label1);
-            panel3.Location = new Point(-4, -5);
+            panel3.Location = new Point(-4, -4);
+            panel3.Margin = new Padding(3, 2, 3, 2);
             panel3.Name = "panel3";
-            panel3.Size = new Size(526, 95);
+            panel3.Size = new Size(460, 72);
             panel3.TabIndex = 7;
             // 
             // dataGridView1
@@ -102,30 +104,32 @@
             dataGridView1.BackgroundColor = SystemColors.ButtonHighlight;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Enabled = false;
-            dataGridView1.Location = new Point(8, 360);
+            dataGridView1.Location = new Point(7, 270);
+            dataGridView1.Margin = new Padding(3, 2, 3, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(1117, 411);
+            dataGridView1.Size = new Size(977, 308);
             dataGridView1.TabIndex = 54;
             // 
             // label8
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(226, 303);
+            label8.Location = new Point(198, 227);
             label8.Name = "label8";
-            label8.Size = new Size(112, 25);
+            label8.Size = new Size(89, 20);
             label8.TabIndex = 53;
             label8.Text = "08/03/2023";
             // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.print_FILL0_wght400_GRAD0_opsz48;
-            pictureBox1.Location = new Point(1081, 303);
+            pictureBox1.Location = new Point(946, 227);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(54, 44);
+            pictureBox1.Size = new Size(47, 33);
             pictureBox1.TabIndex = 52;
             pictureBox1.TabStop = false;
             // 
@@ -133,9 +137,9 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(245, 270);
+            label7.Location = new Point(214, 202);
             label7.Name = "label7";
-            label7.Size = new Size(81, 25);
+            label7.Size = new Size(66, 20);
             label7.TabIndex = 50;
             label7.Text = "Fulanito";
             // 
@@ -143,9 +147,9 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(0, 270);
+            label5.Location = new Point(0, 202);
             label5.Name = "label5";
-            label5.Size = new Size(219, 25);
+            label5.Size = new Size(175, 20);
             label5.TabIndex = 49;
             label5.Text = "Nombre del que expide:";
             // 
@@ -159,26 +163,27 @@
             panel1.Controls.Add(panel3);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1137, 91);
+            panel1.Size = new Size(995, 69);
             panel1.TabIndex = 48;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(0, 303);
+            label6.Location = new Point(0, 227);
             label6.Name = "label6";
-            label6.Size = new Size(199, 25);
+            label6.Size = new Size(159, 20);
             label6.TabIndex = 51;
             label6.Text = "Fecha de expedicion:";
             // 
             // ReporteVersiones
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1137, 856);
+            ClientSize = new Size(995, 642);
             Controls.Add(dataGridView1);
             Controls.Add(label8);
             Controls.Add(pictureBox1);
@@ -186,8 +191,10 @@
             Controls.Add(label5);
             Controls.Add(panel1);
             Controls.Add(label6);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "ReporteVersiones";
             Text = "ReporteVersiones";
+            WindowState = FormWindowState.Maximized;
             Load += ReporteVersiones_Load;
             panel3.ResumeLayout(false);
             panel3.PerformLayout();

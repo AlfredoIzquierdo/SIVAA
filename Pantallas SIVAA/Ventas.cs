@@ -270,10 +270,7 @@ namespace Pantallas_SIVAA
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void Ventas_Load(object sender, EventArgs e)
         {
@@ -286,7 +283,7 @@ namespace Pantallas_SIVAA
             numericUpDown3.Value = int.Parse(mes);
             string an = DateTime.Now.ToString("yyyy");
             numericUpDown4.Value = int.Parse(an);
-            /*switch (_pqt.Tipo.Trim())
+            switch (_pqt.Tipo.Trim())
             {
                 case "Atencion":
                     // Funciones activas: Citas e inventario
@@ -328,60 +325,13 @@ namespace Pantallas_SIVAA
                     lblTipoEmpleado.Text = _pqt.Tipo;
                     lblNombre.Text = "Bienvenido: " + _pqt.Nombre + " " + _pqt.ApellidoPat;
                     break;
-            }*/
+            }
         }
 
         private void btnCliente_Click(object sender, EventArgs e)
         {
-            //MOSTRARVENTAS();
+
         }
-        //public void MOSTRARCLIENTES()
-        //{
-        //    //Se usa el metodo LISTADOALL() para que nos devuelva un listado con todos los registros en esa tabla
-        //    List<Cliente> listado = PqteLog.ListadoAll();
-        //    if (listado.Count > 0)
-        //    {
-        //        dataGridView1.AutoGenerateColumns = false;
-        //        dataGridView1.DataSource = listado;
-        //        dataGridView1.Columns["Column1"].DataPropertyName = "IDCliente";
-        //        dataGridView1.Columns["Column2"].DataPropertyName = "Nombre";
-        //        dataGridView1.Columns["Column3"].DataPropertyName = "ApellidoPat";
-        //        dataGridView1.Columns["Column4"].DataPropertyName = "ApellidoMat";
-        //        dataGridView1.Columns["Column5"].DataPropertyName = "RFC";
-        //        dataGridView1.Columns["Column6"].DataPropertyName = "Correo";
-        //        dataGridView1.Columns["Column7"].DataPropertyName = "Telefono";
-        //        dataGridView1.Columns["Column8"].DataPropertyName = "NoExterior";
-        //        dataGridView1.Columns["Column9"].DataPropertyName = "Colonia";
-        //        dataGridView1.Columns["Column10"].DataPropertyName = "Ciudad";
-        //        dataGridView1.Columns["Column11"].DataPropertyName = "Estado";
-        //    }
-        //    else
-        //        MessageBox.Show("No hay registro de Clientes");
-        //    dataGridView1.ClearSelection();
-        //}
-        //public void MOSTRARVENTAS()
-        //{
-        //    dataGridView2.Rows.Clear();
-        //    //Se usa el metodo LISTADOALL() para que nos devuelva un listado con todos los registros en esa tabla
-        //    List<Venta> listado = PqteLog2.ListadoAll();
-        //    if (listado.Count > 0)
-        //    {
-        //        dataGridView2.AutoGenerateColumns = false;
-        //        dataGridView2.DataSource = listado;
-        //        dataGridView2.Columns["Column12"].DataPropertyName = "IDVenta";
-        //        dataGridView2.Columns["Column13"].DataPropertyName = "IDEmpleado";
-        //        dataGridView2.Columns["Column14"].DataPropertyName = "NoSerie";
-        //        dataGridView2.Columns["Column15"].DataPropertyName = "Dia";
-        //        dataGridView2.Columns["Column16"].DataPropertyName = "Mes";
-        //        dataGridView2.Columns["Column17"].DataPropertyName = "Año";
-        //        dataGridView2.Columns["Column18"].DataPropertyName = "Hora";
-        //        dataGridView2.Columns["Column19"].DataPropertyName = "SubTotal";
-        //        dataGridView2.Columns["Column20"].DataPropertyName = "TipoVenta";
-        //    }
-        //    else
-        //        MessageBox.Show("No hay registro de Ventas");
-        //    dataGridView2.ClearSelection();
-        //}
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -1090,13 +1040,7 @@ namespace Pantallas_SIVAA
 
         private void tabPage2_Enter(object sender, EventArgs e)
         {
-            //string n = ;
 
-            //if (txtid.Text == "" || txtid.Text == "IDCli")
-            //{
-            //    MessageBox.Show("Favor de llenar los campos");
-            //    return;
-            //}
             List<VentasEntrega> listado = PqteLog2.ListadoAllVentasEntrega();
             if (listado.Count > 0)
             {
@@ -1116,22 +1060,7 @@ namespace Pantallas_SIVAA
                 dgvElegirVenta.Columns["Column41"].DataPropertyName = "Cilindraje";
                 dgvElegirVenta.Columns["Column42"].DataPropertyName = "Transmision";
                 dgvElegirVenta.Columns["Column1"].DataPropertyName = "Modelo";
-                //dgvElegirVenta.AutoGenerateColumns = false;
-                //dgvElegirVenta.DataSource = listado;
-                //dgvElegirVenta.Columns["dataGridViewTextBoxColumn1"].DataPropertyName = "IDVenta";
-                //dgvElegirVenta.Columns["dataGridViewTextBoxColumn2"].DataPropertyName = "Nombre";
-                //dgvElegirVenta.Columns["dataGridViewTextBoxColumn3"].DataPropertyName = "ApellidoPaterno";
-                //dgvElegirVenta.Columns["dataGridViewTextBoxColumn4"].DataPropertyName = "ApellidoMaterno";
-                //dgvElegirVenta.Columns["dataGridViewTextBoxColumn5"].DataPropertyName = "Dia";
-                //dgvElegirVenta.Columns["dataGridViewTextBoxColumn6"].DataPropertyName = "Mes";
-                //dgvElegirVenta.Columns["Column37"].DataPropertyName = "Año";
-                //dgvElegirVenta.Columns["Column44"].DataPropertyName = "Hora";
-                //dgvElegirVenta.Columns["Column38"].DataPropertyName = "TipoVenta";
-                //dgvElegirVenta.Columns["Column39"].DataPropertyName = "Vehiculo";
-                //dgvElegirVenta.Columns["Column40"].DataPropertyName = "Version";
-                //dgvElegirVenta.Columns["Column41"].DataPropertyName = "Cilindraje";
-                //dgvElegirVenta.Columns["Column42"].DataPropertyName = "Transmision";
-                //dgvElegirVenta.Columns["Column43"].DataPropertyName = "Modelo";
+
             }
             else
                 MessageBox.Show("No hay ventas pendientes de entregar autos");
@@ -1379,33 +1308,10 @@ namespace Pantallas_SIVAA
             VentaLog pqtelog = new VentaLog();
             Venta ven;
             ven = pqtelog.LeerPorClave(idventa);
-            //Venta pqt = new Venta
-            //{
-            //    IDVenta = Convert.ToString("V" + k),
-            //    IDEmpleado = Convert.ToString(TXTIDEMPCOT.Text),
-            //    NoSerie = "",
-            //    Dia = Convert.ToInt32(numericUpDown2.Value),
-            //    Mes = Convert.ToInt32(numericUpDown3.Value),
-            //    Año = Convert.ToInt32(numericUpDown4.Value),
-            //    Hora = Convert.ToString(TXTHORA.Text),
-            //    Subtotal = Convert.ToDouble(TXTPRECIO.Text),
-            //    TipoVenta = Convert.ToString("CREDITO")
-
-            //};
             VentaCreditoLog crelog = new VentaCreditoLog();
             VentaCredito vencre;
             vencre = crelog.LeerPorClave(idventa);
-            //VentaCredito Deb2 = new VentaCredito
-            //{
 
-            //    IDVenta = Convert.ToString("V" + k),
-            //    IDCotizacion = Convert.ToString(TXTCOT.Text),
-            //    TotalFinal = Convert.ToDouble(double.Parse(TXTPRECIO.Text) * 1.10),
-            //    Estatus = Convert.ToString("PENDIENTE"),
-
-            //    //Estatus = Convert.ToString("PENDIENTE")
-
-            //};
             Pagare pagare = new Pagare(ven, vencre, txtnom.Text, txtap.Text);
             pagare.Show();
         }
@@ -1520,6 +1426,7 @@ namespace Pantallas_SIVAA
 
         private void tabPage5_Enter(object sender, EventArgs e)
         {
+
             if (txtid.Text == "")
             {
                 MessageBox.Show("Favor de llenar los campos");
@@ -1574,7 +1481,6 @@ namespace Pantallas_SIVAA
             if (dgvClientCot.CurrentCell.RowIndex >= 0)
             {
                 int i = dgvClientCot.CurrentCell.RowIndex;
-                //MessageBox.Show("Columna " + i);
                 TXTIDCLIENTE.Text = dgvClientCot[0, i].Value.ToString();
                 TXTNOMBRE.Text = dgvClientCot[1, i].Value.ToString();
                 TXTAPELLIDO.Text = dgvClientCot[2, i].Value.ToString();
@@ -1619,7 +1525,6 @@ namespace Pantallas_SIVAA
         private void ComprobarCamposLlenosCot()
         {
             bool vacio = false;
-            //txPrecioCot.Text = "$1000000";
             if (string.IsNullOrEmpty(comboAno.Text) | string.IsNullOrEmpty(comboColor.Text) | string.IsNullOrEmpty(comboVehiculo.Text) | string.IsNullOrEmpty(ComboVersion1.Text))
             {
 
@@ -2012,15 +1917,16 @@ namespace Pantallas_SIVAA
         }
         private void CalcularEnganche()
         {
-            if(txPrecioCot.Text=="")
+            if (txPrecioCot.Text == "")
             {
                 MessageBox.Show("Favor de llenar los campos");
-            }else
+            }
+            else
             {
                 double enganchecantidad = (Convert.ToDouble(numericporengan.Value) * 0.01) * Convert.ToDouble(txPrecioCot.Text);
                 txtengancheCot.Text = enganchecantidad.ToString("0.00");
             }
-            
+
         }
         private void CalcularFinanciamiento()
         {
@@ -2393,154 +2299,12 @@ namespace Pantallas_SIVAA
             LimpiarEntregas();
         }
 
-        private void btnGuardar_Click_1(object sender, EventArgs e)
+        private void groupCotCred_Enter(object sender, EventArgs e)
         {
 
         }
 
-        private void btnFichaPago_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btncompraven_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnpagare_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnFactura_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox13_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnPedidos_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnStock_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnCitas_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnVentas_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnCobros_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnReportes_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnGuardarEntrega_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnFacturaEntrega_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnNuevaEntrega_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnContratoCompraVenta_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnNuevaventa_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage4_Enter_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click_2(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage5_Enter_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage7_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgvElegirVenta_CellClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void btnBuscarClienteCot_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboVehiculo_SelectedValueChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ComboVersion1_SelectedValueChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboColor_SelectedValueChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-        private void rbtnConCot_CheckedChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupCotCred_EnabledChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void numericplazos_ValueChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void numericporengan_ValueChanged_1(object sender, EventArgs e)
+        private void tabPage2_Click(object sender, EventArgs e)
         {
 
         }

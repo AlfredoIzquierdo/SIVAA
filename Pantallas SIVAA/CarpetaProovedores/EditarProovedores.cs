@@ -19,7 +19,7 @@ namespace Pantallas_SIVAA.Proovedores
         ProveedorLog log = new ProveedorLog();
         string id;
         Empleado _pqt;
-        public EditarProovedores(string idProveedor,Empleado pqt)
+        public EditarProovedores(string idProveedor, Empleado pqt)
         {
             InitializeComponent();
             id = idProveedor;
@@ -113,5 +113,19 @@ namespace Pantallas_SIVAA.Proovedores
             this.proveedor.Show();
         }
 
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            ProovedoresPrin proovedoresPrin = new ProovedoresPrin(_pqt);
+            proovedoresPrin.Show();
+        }
+
+        private void txtNoExterior_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

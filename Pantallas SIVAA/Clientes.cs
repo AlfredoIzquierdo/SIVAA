@@ -18,6 +18,8 @@ namespace Pantallas_SIVAA
     {
         readonly ClienteLog cliente = new ClienteLog();
         Empleado _pqt;
+        List<Cliente> listas = new List<Cliente>();
+
         public Clientes(Empleado pqt)
         {
             InitializeComponent();
@@ -112,7 +114,7 @@ namespace Pantallas_SIVAA
             {
                 if (x.EstadoCliente == "Activo")
                 {
-
+                    listas = clie;
                     dataGridView1.Rows.Add(x.IDCliente, x.Nombre, x.ApellidoPat, x.ApellidoMat, x.RFC, x.Correo, x.Telefono, x.NoExterior, x.Colonia, x.Ciudad, x.Estado);
 
                 }
@@ -170,7 +172,6 @@ namespace Pantallas_SIVAA
                 dataGridView1.Rows[e.RowIndex].Selected = true;
             }
         }
-        List<Cliente> listas;
         private void button1_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtbusqueda.Text))
@@ -182,21 +183,22 @@ namespace Pantallas_SIVAA
                 List<Cliente> datos = new List<Cliente>();
 
                 datos = cliente.ListadoEspecifico(txtbusqueda.Text, comboBusqueda.Text);
-                listas = datos;
+                listas.Clear();
                 dataGridView1.Rows.Clear();
                 foreach (Cliente x in datos)
                 {
-                    if(x.EstadoCliente=="Activo")
+                    if (x.EstadoCliente == "Activo")
                     {
+                        listas.Add(x);
                         dataGridView1.Rows.Add(x.IDCliente, x.Nombre, x.ApellidoPat, x.ApellidoMat, x.RFC, x.Correo, x.Telefono, x.NoExterior, x.Colonia, x.Ciudad, x.Estado);
                     }
-                    
+
                 }
 
             }
         }
 
-        
+
 
         private void pictureBox11_Click(object sender, EventArgs e)
         {
@@ -226,6 +228,10 @@ namespace Pantallas_SIVAA
 
         private void comboBusqueda_SelectedValueChanged(object sender, EventArgs e)
         {
+            if (txtbusqueda.Text != "")
+            {
+                txtbusqueda.ResetText();
+            }
             txtbusqueda.Enabled = true;
             if (comboBusqueda.Text == "Todos")
             {

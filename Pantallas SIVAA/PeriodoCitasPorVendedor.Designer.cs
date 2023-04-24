@@ -30,7 +30,7 @@
         {
             button1 = new Button();
             label1 = new Label();
-            comboBox1 = new ComboBox();
+            cbPeriodo = new ComboBox();
             label12 = new Label();
             label13 = new Label();
             label14 = new Label();
@@ -84,15 +84,17 @@
             label1.TabIndex = 7;
             label1.Text = "Selecciona el periodo que abarcara:";
             // 
-            // comboBox1
+            // cbPeriodo
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Dia", "Semana", "Mes ", "Anual" });
-            comboBox1.Location = new Point(301, 38);
-            comboBox1.Margin = new Padding(3, 2, 3, 2);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(133, 23);
-            comboBox1.TabIndex = 6;
+            cbPeriodo.FormattingEnabled = true;
+            cbPeriodo.Items.AddRange(new object[] { "Dia", "Semana", "Mes ", "Anual" });
+            cbPeriodo.Location = new Point(301, 38);
+            cbPeriodo.Margin = new Padding(3, 2, 3, 2);
+            cbPeriodo.Name = "cbPeriodo";
+            cbPeriodo.Size = new Size(133, 23);
+            cbPeriodo.TabIndex = 6;
+            cbPeriodo.SelectedIndexChanged += cbPeriodo_SelectedIndexChanged;
+            cbPeriodo.SelectedValueChanged += comboBox1_SelectedValueChanged;
             // 
             // label12
             // 
@@ -329,7 +331,7 @@
             Controls.Add(numericDiaI);
             Controls.Add(button1);
             Controls.Add(label1);
-            Controls.Add(comboBox1);
+            Controls.Add(cbPeriodo);
             Margin = new Padding(3, 2, 3, 2);
             Name = "PeriodoCitasPorVendedor";
             Text = "PeriodoCitasPorVendedor";
@@ -348,7 +350,7 @@
 
         private Button button1;
         private Label label1;
-        private ComboBox comboBox1;
+        private ComboBox cbPeriodo;
         private Label label12;
         private Label label13;
         private Label label14;

@@ -28,530 +28,513 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inventario));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnReportes = new System.Windows.Forms.Button();
-            this.imageList2 = new System.Windows.Forms.ImageList(this.components);
-            this.btnCobros = new System.Windows.Forms.Button();
-            this.btnVentas = new System.Windows.Forms.Button();
-            this.btnCitas = new System.Windows.Forms.Button();
-            this.btnStock = new System.Windows.Forms.Button();
-            this.btnPedidos = new System.Windows.Forms.Button();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.lblTipoEmpleado = new System.Windows.Forms.Label();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.cmbOpcionBusqueda = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.txtValorBusqueda = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.btnConsultar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.printDialog1 = new System.Windows.Forms.PrintDialog();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            this.panel7.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.SuspendLayout();
+            panel1 = new Panel();
+            btnReportes = new Button();
+            imageList2 = new ImageList(components);
+            btnCobros = new Button();
+            btnVentas = new Button();
+            btnCitas = new Button();
+            btnStock = new Button();
+            btnPedidos = new Button();
+            pictureBox13 = new PictureBox();
+            label7 = new Label();
+            label1 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            panel6 = new Panel();
+            pictureBox8 = new PictureBox();
+            label2 = new Label();
+            label5 = new Label();
+            panel7 = new Panel();
+            lblTipoEmpleado = new Label();
+            lblNombre = new Label();
+            label11 = new Label();
+            panel3 = new Panel();
+            panel2 = new Panel();
+            cmbOpcionBusqueda = new ComboBox();
+            button1 = new Button();
+            txtValorBusqueda = new TextBox();
+            label6 = new Label();
+            btnConsultar = new Button();
+            pictureBox1 = new PictureBox();
+            printDialog1 = new PrintDialog();
+            dataGridView1 = new DataGridView();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
+            panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
+            panel7.SuspendLayout();
+            panel3.SuspendLayout();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(101)))), ((int)(((byte)(143)))));
-            this.panel1.Controls.Add(this.btnReportes);
-            this.panel1.Controls.Add(this.btnCobros);
-            this.panel1.Controls.Add(this.btnVentas);
-            this.panel1.Controls.Add(this.btnCitas);
-            this.panel1.Controls.Add(this.btnStock);
-            this.panel1.Controls.Add(this.btnPedidos);
-            this.panel1.Location = new System.Drawing.Point(0, 95);
-            this.panel1.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(94, 998);
-            this.panel1.TabIndex = 56;
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            panel1.BackColor = Color.FromArgb(82, 101, 143);
+            panel1.Controls.Add(btnReportes);
+            panel1.Controls.Add(btnCobros);
+            panel1.Controls.Add(btnVentas);
+            panel1.Controls.Add(btnCitas);
+            panel1.Controls.Add(btnStock);
+            panel1.Controls.Add(btnPedidos);
+            panel1.Location = new Point(0, 57);
+            panel1.Margin = new Padding(1, 1, 1, 1);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(66, 599);
+            panel1.TabIndex = 56;
             // 
             // btnReportes
             // 
-            this.btnReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(101)))), ((int)(((byte)(143)))));
-            this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportes.ForeColor = System.Drawing.Color.White;
-            this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnReportes.ImageKey = "bar-chart.png";
-            this.btnReportes.ImageList = this.imageList2;
-            this.btnReportes.Location = new System.Drawing.Point(0, 485);
-            this.btnReportes.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
-            this.btnReportes.Name = "btnReportes";
-            this.btnReportes.Size = new System.Drawing.Size(101, 95);
-            this.btnReportes.TabIndex = 10;
-            this.btnReportes.Text = "Reportes";
-            this.btnReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnReportes.UseVisualStyleBackColor = false;
-            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
+            btnReportes.BackColor = Color.FromArgb(82, 101, 143);
+            btnReportes.FlatStyle = FlatStyle.Flat;
+            btnReportes.ForeColor = Color.White;
+            btnReportes.ImageAlign = ContentAlignment.TopCenter;
+            btnReportes.ImageKey = "bar-chart.png";
+            btnReportes.ImageList = imageList2;
+            btnReportes.Location = new Point(0, 291);
+            btnReportes.Margin = new Padding(1, 1, 1, 1);
+            btnReportes.Name = "btnReportes";
+            btnReportes.Size = new Size(71, 57);
+            btnReportes.TabIndex = 10;
+            btnReportes.Text = "Reportes";
+            btnReportes.TextImageRelation = TextImageRelation.ImageAboveText;
+            btnReportes.UseVisualStyleBackColor = false;
+            btnReportes.Click += btnReportes_Click;
             // 
             // imageList2
             // 
-            this.imageList2.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList2.ImageStream")));
-            this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList2.Images.SetKeyName(0, "archive.png");
-            this.imageList2.Images.SetKeyName(1, "bar-chart.png");
-            this.imageList2.Images.SetKeyName(2, "book-open.png");
-            this.imageList2.Images.SetKeyName(3, "calendar.png");
-            this.imageList2.Images.SetKeyName(4, "dollar-sign.png");
-            this.imageList2.Images.SetKeyName(5, "package.png");
-            this.imageList2.Images.SetKeyName(6, "shopping-cart.png");
+            imageList2.ColorDepth = ColorDepth.Depth8Bit;
+            imageList2.ImageStream = (ImageListStreamer)resources.GetObject("imageList2.ImageStream");
+            imageList2.TransparentColor = Color.Transparent;
+            imageList2.Images.SetKeyName(0, "archive.png");
+            imageList2.Images.SetKeyName(1, "bar-chart.png");
+            imageList2.Images.SetKeyName(2, "book-open.png");
+            imageList2.Images.SetKeyName(3, "calendar.png");
+            imageList2.Images.SetKeyName(4, "dollar-sign.png");
+            imageList2.Images.SetKeyName(5, "package.png");
+            imageList2.Images.SetKeyName(6, "shopping-cart.png");
             // 
             // btnCobros
             // 
-            this.btnCobros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(101)))), ((int)(((byte)(143)))));
-            this.btnCobros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCobros.ForeColor = System.Drawing.Color.White;
-            this.btnCobros.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCobros.ImageKey = "dollar-sign.png";
-            this.btnCobros.ImageList = this.imageList2;
-            this.btnCobros.Location = new System.Drawing.Point(0, 382);
-            this.btnCobros.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
-            this.btnCobros.Name = "btnCobros";
-            this.btnCobros.Size = new System.Drawing.Size(101, 95);
-            this.btnCobros.TabIndex = 9;
-            this.btnCobros.Text = "Cobros";
-            this.btnCobros.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnCobros.UseVisualStyleBackColor = false;
-            this.btnCobros.Click += new System.EventHandler(this.btnCobros_Click);
+            btnCobros.BackColor = Color.FromArgb(82, 101, 143);
+            btnCobros.FlatStyle = FlatStyle.Flat;
+            btnCobros.ForeColor = Color.White;
+            btnCobros.ImageAlign = ContentAlignment.TopCenter;
+            btnCobros.ImageKey = "dollar-sign.png";
+            btnCobros.ImageList = imageList2;
+            btnCobros.Location = new Point(0, 229);
+            btnCobros.Margin = new Padding(1, 1, 1, 1);
+            btnCobros.Name = "btnCobros";
+            btnCobros.Size = new Size(71, 57);
+            btnCobros.TabIndex = 9;
+            btnCobros.Text = "Cobros";
+            btnCobros.TextImageRelation = TextImageRelation.ImageAboveText;
+            btnCobros.UseVisualStyleBackColor = false;
+            btnCobros.Click += btnCobros_Click;
             // 
             // btnVentas
             // 
-            this.btnVentas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(101)))), ((int)(((byte)(143)))));
-            this.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVentas.ForeColor = System.Drawing.Color.White;
-            this.btnVentas.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnVentas.ImageKey = "shopping-cart.png";
-            this.btnVentas.ImageList = this.imageList2;
-            this.btnVentas.Location = new System.Drawing.Point(0, 288);
-            this.btnVentas.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
-            this.btnVentas.Name = "btnVentas";
-            this.btnVentas.Size = new System.Drawing.Size(101, 95);
-            this.btnVentas.TabIndex = 8;
-            this.btnVentas.Text = "Ventas";
-            this.btnVentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnVentas.UseVisualStyleBackColor = false;
-            this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
+            btnVentas.BackColor = Color.FromArgb(82, 101, 143);
+            btnVentas.FlatStyle = FlatStyle.Flat;
+            btnVentas.ForeColor = Color.White;
+            btnVentas.ImageAlign = ContentAlignment.TopCenter;
+            btnVentas.ImageKey = "shopping-cart.png";
+            btnVentas.ImageList = imageList2;
+            btnVentas.Location = new Point(0, 173);
+            btnVentas.Margin = new Padding(1, 1, 1, 1);
+            btnVentas.Name = "btnVentas";
+            btnVentas.Size = new Size(71, 57);
+            btnVentas.TabIndex = 8;
+            btnVentas.Text = "Ventas";
+            btnVentas.TextImageRelation = TextImageRelation.ImageAboveText;
+            btnVentas.UseVisualStyleBackColor = false;
+            btnVentas.Click += btnVentas_Click;
             // 
             // btnCitas
             // 
-            this.btnCitas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(101)))), ((int)(((byte)(143)))));
-            this.btnCitas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCitas.ForeColor = System.Drawing.Color.White;
-            this.btnCitas.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCitas.ImageKey = "calendar.png";
-            this.btnCitas.ImageList = this.imageList2;
-            this.btnCitas.Location = new System.Drawing.Point(0, 192);
-            this.btnCitas.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
-            this.btnCitas.Name = "btnCitas";
-            this.btnCitas.Size = new System.Drawing.Size(101, 95);
-            this.btnCitas.TabIndex = 7;
-            this.btnCitas.Text = "Citas";
-            this.btnCitas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnCitas.UseVisualStyleBackColor = false;
-            this.btnCitas.Click += new System.EventHandler(this.btnCitas_Click);
+            btnCitas.BackColor = Color.FromArgb(82, 101, 143);
+            btnCitas.FlatStyle = FlatStyle.Flat;
+            btnCitas.ForeColor = Color.White;
+            btnCitas.ImageAlign = ContentAlignment.TopCenter;
+            btnCitas.ImageKey = "calendar.png";
+            btnCitas.ImageList = imageList2;
+            btnCitas.Location = new Point(0, 115);
+            btnCitas.Margin = new Padding(1, 1, 1, 1);
+            btnCitas.Name = "btnCitas";
+            btnCitas.Size = new Size(71, 57);
+            btnCitas.TabIndex = 7;
+            btnCitas.Text = "Citas";
+            btnCitas.TextImageRelation = TextImageRelation.ImageAboveText;
+            btnCitas.UseVisualStyleBackColor = false;
+            btnCitas.Click += btnCitas_Click;
             // 
             // btnStock
             // 
-            this.btnStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(101)))), ((int)(((byte)(143)))));
-            this.btnStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStock.ForeColor = System.Drawing.Color.White;
-            this.btnStock.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnStock.ImageKey = "book-open.png";
-            this.btnStock.ImageList = this.imageList2;
-            this.btnStock.Location = new System.Drawing.Point(-9, 92);
-            this.btnStock.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
-            this.btnStock.Name = "btnStock";
-            this.btnStock.Size = new System.Drawing.Size(111, 108);
-            this.btnStock.TabIndex = 6;
-            this.btnStock.Text = "Inventario";
-            this.btnStock.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnStock.UseVisualStyleBackColor = false;
-            this.btnStock.Click += new System.EventHandler(this.btnStock_Click);
+            btnStock.BackColor = Color.FromArgb(82, 101, 143);
+            btnStock.FlatStyle = FlatStyle.Flat;
+            btnStock.ForeColor = Color.White;
+            btnStock.ImageAlign = ContentAlignment.TopCenter;
+            btnStock.ImageKey = "book-open.png";
+            btnStock.ImageList = imageList2;
+            btnStock.Location = new Point(-6, 55);
+            btnStock.Margin = new Padding(1, 1, 1, 1);
+            btnStock.Name = "btnStock";
+            btnStock.Size = new Size(78, 65);
+            btnStock.TabIndex = 6;
+            btnStock.Text = "Inventario";
+            btnStock.TextImageRelation = TextImageRelation.ImageAboveText;
+            btnStock.UseVisualStyleBackColor = false;
+            btnStock.Click += btnStock_Click;
             // 
             // btnPedidos
             // 
-            this.btnPedidos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(101)))), ((int)(((byte)(143)))));
-            this.btnPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPedidos.ForeColor = System.Drawing.Color.White;
-            this.btnPedidos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnPedidos.ImageKey = "package.png";
-            this.btnPedidos.ImageList = this.imageList2;
-            this.btnPedidos.Location = new System.Drawing.Point(0, 2);
-            this.btnPedidos.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
-            this.btnPedidos.Name = "btnPedidos";
-            this.btnPedidos.Size = new System.Drawing.Size(101, 95);
-            this.btnPedidos.TabIndex = 5;
-            this.btnPedidos.Text = "Pedidos";
-            this.btnPedidos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnPedidos.UseVisualStyleBackColor = false;
-            this.btnPedidos.Click += new System.EventHandler(this.btnPedidos_Click);
+            btnPedidos.BackColor = Color.FromArgb(82, 101, 143);
+            btnPedidos.FlatStyle = FlatStyle.Flat;
+            btnPedidos.ForeColor = Color.White;
+            btnPedidos.ImageAlign = ContentAlignment.TopCenter;
+            btnPedidos.ImageKey = "package.png";
+            btnPedidos.ImageList = imageList2;
+            btnPedidos.Location = new Point(0, 1);
+            btnPedidos.Margin = new Padding(1, 1, 1, 1);
+            btnPedidos.Name = "btnPedidos";
+            btnPedidos.Size = new Size(71, 57);
+            btnPedidos.TabIndex = 5;
+            btnPedidos.Text = "Pedidos";
+            btnPedidos.TextImageRelation = TextImageRelation.ImageAboveText;
+            btnPedidos.UseVisualStyleBackColor = false;
+            btnPedidos.Click += btnPedidos_Click;
             // 
             // pictureBox13
             // 
-            this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
-            this.pictureBox13.Location = new System.Drawing.Point(21, 0);
-            this.pictureBox13.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(66, 95);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox13.TabIndex = 2;
-            this.pictureBox13.TabStop = false;
-            this.pictureBox13.Click += new System.EventHandler(this.pictureBox13_Click);
+            pictureBox13.Image = (Image)resources.GetObject("pictureBox13.Image");
+            pictureBox13.Location = new Point(15, 0);
+            pictureBox13.Margin = new Padding(1, 1, 1, 1);
+            pictureBox13.Name = "pictureBox13";
+            pictureBox13.Size = new Size(46, 57);
+            pictureBox13.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox13.TabIndex = 2;
+            pictureBox13.TabStop = false;
+            pictureBox13.Click += pictureBox13_Click;
             // 
             // label7
             // 
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(151, 25);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(136, 45);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "SIVAA";
+            label7.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.Location = new Point(106, 15);
+            label7.Name = "label7";
+            label7.Size = new Size(95, 27);
+            label7.TabIndex = 16;
+            label7.Text = "SIVAA";
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(4571, 18);
-            this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 32);
-            this.label1.TabIndex = 18;
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(3200, 11);
+            label1.Margin = new Padding(1, 0, 1, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(0, 21);
+            label1.TabIndex = 18;
+            label1.TextAlign = ContentAlignment.TopCenter;
             // 
             // label4
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(4571, 52);
-            this.label4.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(0, 25);
-            this.label4.TabIndex = 17;
+            label4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(3200, 31);
+            label4.Margin = new Padding(1, 0, 1, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(0, 15);
+            label4.TabIndex = 17;
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(4040, 18);
-            this.label3.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 48);
-            this.label3.TabIndex = 19;
+            label3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(2828, 11);
+            label3.Margin = new Padding(1, 0, 1, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(0, 32);
+            label3.TabIndex = 19;
             // 
             // panel6
             // 
-            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel6.BackColor = System.Drawing.Color.Transparent;
-            this.panel6.Controls.Add(this.pictureBox8);
-            this.panel6.Controls.Add(this.label2);
-            this.panel6.Controls.Add(this.label5);
-            this.panel6.Location = new System.Drawing.Point(1829, 2);
-            this.panel6.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(259, 112);
-            this.panel6.TabIndex = 21;
+            panel6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            panel6.BackColor = Color.Transparent;
+            panel6.Controls.Add(pictureBox8);
+            panel6.Controls.Add(label2);
+            panel6.Controls.Add(label5);
+            panel6.Location = new Point(1280, 1);
+            panel6.Margin = new Padding(1, 1, 1, 1);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(181, 67);
+            panel6.TabIndex = 21;
             // 
             // pictureBox8
             // 
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(0, 25);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(61, 68);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 2;
-            this.pictureBox8.TabStop = false;
+            pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
+            pictureBox8.Location = new Point(0, 15);
+            pictureBox8.Margin = new Padding(1, 1, 1, 1);
+            pictureBox8.Name = "pictureBox8";
+            pictureBox8.Size = new Size(43, 41);
+            pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox8.TabIndex = 2;
+            pictureBox8.TabStop = false;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(61, 32);
-            this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(183, 28);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Bienvenido: Alfredo";
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(43, 19);
+            label2.Margin = new Padding(1, 0, 1, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(127, 19);
+            label2.TabIndex = 1;
+            label2.Text = "Bienvenido: Alfredo";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(64, 62);
-            this.label5.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 23);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Supervisor";
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(45, 37);
+            label5.Margin = new Padding(1, 0, 1, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(61, 13);
+            label5.TabIndex = 1;
+            label5.Text = "Supervisor";
             // 
             // panel7
             // 
-            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(58)))), ((int)(((byte)(86)))));
-            this.panel7.Controls.Add(this.lblTipoEmpleado);
-            this.panel7.Controls.Add(this.lblNombre);
-            this.panel7.Controls.Add(this.label11);
-            this.panel7.Controls.Add(this.panel6);
-            this.panel7.Controls.Add(this.label3);
-            this.panel7.Controls.Add(this.label4);
-            this.panel7.Controls.Add(this.label1);
-            this.panel7.Controls.Add(this.label7);
-            this.panel7.Controls.Add(this.pictureBox13);
-            this.panel7.ForeColor = System.Drawing.Color.White;
-            this.panel7.Location = new System.Drawing.Point(0, 0);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1499, 95);
-            this.panel7.TabIndex = 55;
+            panel7.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            panel7.BackColor = Color.FromArgb(51, 58, 86);
+            panel7.Controls.Add(lblTipoEmpleado);
+            panel7.Controls.Add(lblNombre);
+            panel7.Controls.Add(label11);
+            panel7.Controls.Add(panel6);
+            panel7.Controls.Add(label3);
+            panel7.Controls.Add(label4);
+            panel7.Controls.Add(label1);
+            panel7.Controls.Add(label7);
+            panel7.Controls.Add(pictureBox13);
+            panel7.ForeColor = Color.White;
+            panel7.Location = new Point(0, 0);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(1049, 57);
+            panel7.TabIndex = 55;
             // 
             // lblTipoEmpleado
             // 
-            this.lblTipoEmpleado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTipoEmpleado.AutoSize = true;
-            this.lblTipoEmpleado.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTipoEmpleado.Location = new System.Drawing.Point(1296, 63);
-            this.lblTipoEmpleado.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.lblTipoEmpleado.Name = "lblTipoEmpleado";
-            this.lblTipoEmpleado.Size = new System.Drawing.Size(96, 25);
-            this.lblTipoEmpleado.TabIndex = 25;
-            this.lblTipoEmpleado.Text = "Supervisor";
+            lblTipoEmpleado.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblTipoEmpleado.AutoSize = true;
+            lblTipoEmpleado.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTipoEmpleado.Location = new Point(749, 36);
+            lblTipoEmpleado.Margin = new Padding(1, 0, 1, 0);
+            lblTipoEmpleado.Name = "lblTipoEmpleado";
+            lblTipoEmpleado.Size = new Size(62, 15);
+            lblTipoEmpleado.TabIndex = 25;
+            lblTipoEmpleado.Text = "Supervisor";
             // 
             // lblNombre
             // 
-            this.lblNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblNombre.Location = new System.Drawing.Point(1214, 22);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(255, 32);
-            this.lblNombre.TabIndex = 26;
-            this.lblNombre.Text = "Bienvenido: Fulanito";
-            this.lblNombre.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            lblNombre.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblNombre.AutoSize = true;
+            lblNombre.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblNombre.Location = new Point(692, 11);
+            lblNombre.Margin = new Padding(1, 0, 1, 0);
+            lblNombre.Name = "lblNombre";
+            lblNombre.Size = new Size(172, 21);
+            lblNombre.TabIndex = 26;
+            lblNombre.Text = "Bienvenido: Fulanito";
+            lblNombre.TextAlign = ContentAlignment.TopCenter;
             // 
             // label11
             // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(769, 22);
-            this.label11.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(179, 48);
-            this.label11.TabIndex = 24;
-            this.label11.Text = "Inventario";
+            label11.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            label11.Location = new Point(538, 13);
+            label11.Margin = new Padding(1, 0, 1, 0);
+            label11.Name = "label11";
+            label11.Size = new Size(121, 32);
+            label11.TabIndex = 24;
+            label11.Text = "Inventario";
             // 
             // panel3
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.Controls.Add(this.panel2);
-            this.panel3.Controls.Add(this.btnConsultar);
-            this.panel3.Location = new System.Drawing.Point(366, 112);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1106, 58);
-            this.panel3.TabIndex = 52;
+            panel3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            panel3.Controls.Add(panel2);
+            panel3.Controls.Add(btnConsultar);
+            panel3.Location = new Point(256, 67);
+            panel3.Margin = new Padding(3, 1, 3, 1);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(774, 35);
+            panel3.TabIndex = 52;
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.cmbOpcionBusqueda);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.txtValorBusqueda);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Location = new System.Drawing.Point(3, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(629, 55);
-            this.panel2.TabIndex = 102;
+            panel2.Controls.Add(cmbOpcionBusqueda);
+            panel2.Controls.Add(button1);
+            panel2.Controls.Add(txtValorBusqueda);
+            panel2.Controls.Add(label6);
+            panel2.Location = new Point(2, 0);
+            panel2.Margin = new Padding(2, 2, 2, 2);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(440, 33);
+            panel2.TabIndex = 102;
             // 
             // cmbOpcionBusqueda
             // 
-            this.cmbOpcionBusqueda.FormattingEnabled = true;
-            this.cmbOpcionBusqueda.Items.AddRange(new object[] {
-            "Todos",
-            "NoSerie",
-            "Vehiculo",
-            "Versión",
-            "Color"});
-            this.cmbOpcionBusqueda.Location = new System.Drawing.Point(144, 12);
-            this.cmbOpcionBusqueda.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.cmbOpcionBusqueda.Name = "cmbOpcionBusqueda";
-            this.cmbOpcionBusqueda.Size = new System.Drawing.Size(177, 33);
-            this.cmbOpcionBusqueda.TabIndex = 100;
+            cmbOpcionBusqueda.FormattingEnabled = true;
+            cmbOpcionBusqueda.Items.AddRange(new object[] { "Todos", "NoSerie", "Vehiculo", "Versión", "Color" });
+            cmbOpcionBusqueda.Location = new Point(101, 7);
+            cmbOpcionBusqueda.Margin = new Padding(3, 2, 3, 2);
+            cmbOpcionBusqueda.Name = "cmbOpcionBusqueda";
+            cmbOpcionBusqueda.Size = new Size(125, 23);
+            cmbOpcionBusqueda.TabIndex = 100;
             // 
             // button1
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(101)))), ((int)(((byte)(143)))));
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(491, 2);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 47);
-            this.button1.TabIndex = 99;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button1.BackColor = Color.FromArgb(82, 101, 143);
+            button1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.ForeColor = SystemColors.ButtonHighlight;
+            button1.Location = new Point(344, 1);
+            button1.Margin = new Padding(3, 2, 3, 2);
+            button1.Name = "button1";
+            button1.Size = new Size(60, 28);
+            button1.TabIndex = 99;
+            button1.Text = "Buscar";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // txtValorBusqueda
             // 
-            this.txtValorBusqueda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtValorBusqueda.BackColor = System.Drawing.Color.White;
-            this.txtValorBusqueda.ForeColor = System.Drawing.Color.Black;
-            this.txtValorBusqueda.Location = new System.Drawing.Point(333, 12);
-            this.txtValorBusqueda.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtValorBusqueda.Name = "txtValorBusqueda";
-            this.txtValorBusqueda.PlaceholderText = "Ingrese su busqueda";
-            this.txtValorBusqueda.Size = new System.Drawing.Size(151, 31);
-            this.txtValorBusqueda.TabIndex = 98;
+            txtValorBusqueda.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            txtValorBusqueda.BackColor = Color.White;
+            txtValorBusqueda.ForeColor = Color.Black;
+            txtValorBusqueda.Location = new Point(233, 7);
+            txtValorBusqueda.Margin = new Padding(3, 2, 3, 2);
+            txtValorBusqueda.Name = "txtValorBusqueda";
+            txtValorBusqueda.PlaceholderText = "Ingrese su busqueda";
+            txtValorBusqueda.Size = new Size(107, 23);
+            txtValorBusqueda.TabIndex = 98;
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(13, 13);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(123, 26);
-            this.label6.TabIndex = 101;
-            this.label6.Text = "Buscar por:";
+            label6.AutoSize = true;
+            label6.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.Location = new Point(9, 8);
+            label6.Name = "label6";
+            label6.Size = new Size(85, 18);
+            label6.TabIndex = 101;
+            label6.Text = "Buscar por:";
             // 
             // btnConsultar
             // 
-            this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(101)))), ((int)(((byte)(143)))));
-            this.btnConsultar.ForeColor = System.Drawing.Color.White;
-            this.btnConsultar.Location = new System.Drawing.Point(929, 2);
-            this.btnConsultar.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
-            this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(174, 52);
-            this.btnConsultar.TabIndex = 60;
-            this.btnConsultar.Text = "Consultar";
-            this.btnConsultar.UseVisualStyleBackColor = false;
-            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
+            btnConsultar.BackColor = Color.FromArgb(82, 101, 143);
+            btnConsultar.ForeColor = Color.White;
+            btnConsultar.Location = new Point(650, 1);
+            btnConsultar.Margin = new Padding(1, 1, 1, 1);
+            btnConsultar.Name = "btnConsultar";
+            btnConsultar.Size = new Size(122, 31);
+            btnConsultar.TabIndex = 60;
+            btnConsultar.Text = "Consultar";
+            btnConsultar.UseVisualStyleBackColor = false;
+            btnConsultar.Click += btnConsultar_Click;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Pantallas_SIVAA.Properties.Resources.print_FILL0_wght400_GRAD0_opsz48;
-            this.pictureBox1.Location = new System.Drawing.Point(109, 112);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(67, 68);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 58;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            pictureBox1.Image = Properties.Resources.print_FILL0_wght400_GRAD0_opsz48;
+            pictureBox1.Location = new Point(76, 67);
+            pictureBox1.Margin = new Padding(3, 1, 3, 1);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(47, 41);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 58;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // printDialog1
             // 
-            this.printDialog1.UseEXDialog = true;
+            printDialog1.UseEXDialog = true;
             // 
             // dataGridView1
             // 
-            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4});
-            this.dataGridView1.Location = new System.Drawing.Point(109, 188);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(1361, 738);
-            this.dataGridView1.TabIndex = 59;
+            dataGridView1.Anchor = AnchorStyles.None;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4 });
+            dataGridView1.Location = new Point(76, 113);
+            dataGridView1.Margin = new Padding(1, 1, 1, 1);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 62;
+            dataGridView1.RowTemplate.Height = 33;
+            dataGridView1.Size = new Size(953, 443);
+            dataGridView1.TabIndex = 59;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // Column1
             // 
-            this.Column1.HeaderText = "NoSerie";
-            this.Column1.MinimumWidth = 8;
-            this.Column1.Name = "Column1";
+            Column1.HeaderText = "NoSerie";
+            Column1.MinimumWidth = 8;
+            Column1.Name = "Column1";
             // 
             // Column2
             // 
-            this.Column2.HeaderText = "Vehiculo";
-            this.Column2.MinimumWidth = 8;
-            this.Column2.Name = "Column2";
+            Column2.HeaderText = "Vehiculo";
+            Column2.MinimumWidth = 8;
+            Column2.Name = "Column2";
             // 
             // Column3
             // 
-            this.Column3.HeaderText = "Versión";
-            this.Column3.MinimumWidth = 8;
-            this.Column3.Name = "Column3";
+            Column3.HeaderText = "Versión";
+            Column3.MinimumWidth = 8;
+            Column3.Name = "Column3";
             // 
             // Column4
             // 
-            this.Column4.HeaderText = "Color";
-            this.Column4.MinimumWidth = 8;
-            this.Column4.Name = "Column4";
+            Column4.HeaderText = "Color";
+            Column4.MinimumWidth = 8;
+            Column4.Name = "Column4";
             // 
             // Inventario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1500, 938);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel7);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "Inventario";
-            this.Text = "Inventario";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Inventario_Load);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1050, 563);
+            Controls.Add(dataGridView1);
+            Controls.Add(panel3);
+            Controls.Add(pictureBox1);
+            Controls.Add(panel1);
+            Controls.Add(panel7);
+            Name = "Inventario";
+            Text = "Inventario";
+            WindowState = FormWindowState.Maximized;
+            Load += Inventario_Load;
+            panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
+            panel6.ResumeLayout(false);
+            panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
+            panel7.ResumeLayout(false);
+            panel7.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion

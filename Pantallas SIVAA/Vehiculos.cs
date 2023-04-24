@@ -22,7 +22,7 @@ namespace Pantallas_SIVAA
     public partial class Vehiculos : Form
     {
         readonly VehiculoLog vehiculo = new VehiculoLog();
-        String ID;
+        string id = null;
         Empleado _pqt;
         public Vehiculos(Empleado pqt)
         {
@@ -58,7 +58,7 @@ namespace Pantallas_SIVAA
             {
                 MessageBox.Show("Favor de seleccionar un vehiculo");
             }
-            
+
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -113,24 +113,32 @@ namespace Pantallas_SIVAA
 
         private void pictureBox11_Click(object sender, EventArgs e)
         {
-            vehiculo.Eliminar(ID);
-            MessageBox.Show("Vehiculo eliminado correctamente");
-            List<Vehiculo> vhe = vehiculo.ListadoAll();
-            dataGridView1.DataSource = vhe;
+
+
+            if (dataGridView1.SelectedRows.Count == 1 && id != null)
+            {
+                id = dataGridView1[0, dataGridView1.SelectedRows[0].Index].Value.ToString();
+                vehiculo.Eliminar(id);
+                MessageBox.Show("Vehiculo eliminado correctamente");
+                List<Vehiculo> vhe = vehiculo.ListadoAll();
+                dataGridView1.DataSource = vhe;
+            }
+            else
+            {
+                MessageBox.Show("Favor de seleccionar un vehiculo");
+            }
 
         }
-        List<Vehiculo> listas; 
+        List<Vehiculo> listas;
         private void Vehiculos_Load(object sender, EventArgs e)
         {
 
             dataGridView1.ClearSelection();
             List<Vehiculo> pro = vehiculo.ListadoAll();
             listas = pro;
-            dataGridView1.Rows.Clear();
-            foreach (Vehiculo x in pro)
-            {
-                dataGridView1.Rows.Add(x.IDVehiculo,x.Nombre);
-            }
+            dataGridView1.DataSource = "";
+            dataGridView1.DataSource = pro;
+
             switch (_pqt.Tipo.Trim())
             {
                 case "Atencion":
@@ -138,7 +146,7 @@ namespace Pantallas_SIVAA
                     lblTipoEmpleado.Text = _pqt.Tipo + " a clientes";
                     lblNombre.Text = "Bienvenido: " + _pqt.Nombre + " " + _pqt.ApellidoPat;
 
-                    
+
                     // Menu lateral
                     btnCitas.Enabled = true;
                     btnStock.Enabled = true;
@@ -152,7 +160,7 @@ namespace Pantallas_SIVAA
                     lblTipoEmpleado.Text = _pqt.Tipo;
                     lblNombre.Text = "Bienvenido: " + _pqt.Nombre + " " + _pqt.ApellidoPat;
 
-                   
+
                     //Menu lateral
                     btnCitas.Enabled = true;
                     btnStock.Enabled = true;
@@ -181,16 +189,18 @@ namespace Pantallas_SIVAA
             if (e.RowIndex >= 0)
             {
                 dataGridView1.Rows[e.RowIndex].Selected = true;
+                id = dataGridView1[0, dataGridView1.SelectedRows[0].Index].Value.ToString();
+
             }
         }
 
-      
+
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBox1.SelectedIndex == 0)
             {
-                List<Vehiculo>carros = vehiculo.OrdenarID();
+                List<Vehiculo> carros = vehiculo.OrdenarID();
                 dataGridView1.DataSource = carros;
             }
             if (comboBox1.SelectedIndex == 1)
@@ -229,9 +239,9 @@ namespace Pantallas_SIVAA
                         //Cada vez que lo lea se crea un nuevo objeto
                         Vehiculo Pqte = new Vehiculo
                         {
-                             IDVehiculo= Convert.ToString(Dr["IDVehiculo"]),
+                            IDVehiculo = Convert.ToString(Dr["IDVehiculo"]),
                             Nombre = Convert.ToString(Dr["Nombre"]),
-                            
+
                         };
                         productos.Add(Pqte);
                     }
@@ -242,16 +252,28 @@ namespace Pantallas_SIVAA
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            List<Vehiculo> pro;
-            int opcion = cmbOpcionBusqueda.SelectedIndex;
-            dataGridView1.ClearSelection();
-            pro = ListadoEspecifico(txtValorBusqueda.Text, cmbOpcionBusqueda.Text);
-            dataGridView1.Rows.Clear();
-            listas = pro;
-            foreach (Vehiculo x in pro)
+            if (cmbOpcionBusqueda.SelectedIndex == 0)
             {
-                dataGridView1.Rows.Add(x.IDVehiculo, x.Nombre);
+                dataGridView1.ClearSelection();
+                List<Vehiculo> pro = vehiculo.ListadoAll();
+                listas = pro;
+                dataGridView1.DataSource = "";
+                dataGridView1.DataSource = pro;
+                txtValorBusqueda.ResetText();
             }
+            else
+            {
+                List<Vehiculo> pro;
+                int opcion = cmbOpcionBusqueda.SelectedIndex;
+                dataGridView1.ClearSelection();
+                pro = ListadoEspecifico(txtValorBusqueda.Text, cmbOpcionBusqueda.Text);
+                listas = pro;
+                dataGridView1.DataSource = "";
+                dataGridView1.DataSource = pro;
+            }
+
+
+
 
             //if (comboBox2.SelectedIndex == 0)
             //{
@@ -282,7 +304,18 @@ namespace Pantallas_SIVAA
             if (e.RowIndex >= 0)
             {
                 dataGridView1.Rows[e.RowIndex].Selected = true;
+                id = dataGridView1[0, dataGridView1.SelectedRows[0].Index].Value.ToString();
+
             }
+        }
+
+        private void cmbOpcionBusqueda_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (txtValorBusqueda.Text != "")
+            {
+                txtValorBusqueda.ResetText();
+            }
+
         }
     }
 }

@@ -14,13 +14,15 @@ namespace Pantallas_SIVAA
 {
     public partial class ReporteInventario : Form
     {
-        public ReporteInventario(Empleado _pqt)
+        List<UnidadNoUsar> lista = new();
+        public ReporteInventario(Empleado _pqt, List<UnidadNoUsar> lista)
         {
             InitializeComponent();
+            this.lista = lista;
             UnidadLog uni = new UnidadLog();
-            List<Entidades.ReporteInventario> repuni;
-            repuni = uni.ReportInventario();
-            dataGridView1.DataSource = repuni;
+            //List<Entidades.ReporteInventario> repuni;
+            //repuni = uni.ReportInventario();
+            dataGridView1.DataSource = lista;
             //Fecha
             lblFecha.Text = DateTime.Now.ToString("dd/MM/yyyy");
             //datos de quien genera el reporte

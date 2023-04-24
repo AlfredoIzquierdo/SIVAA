@@ -96,9 +96,31 @@ namespace Pantallas_SIVAA
 
         private void pictureBox11_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Reportes reportes = new Reportes(_pqt);
-            reportes.Show();
+            string id = null;
+            if (dataGridView1.SelectedRows.Count == 1)
+            {
+                id = dataGridView1[0, dataGridView1.SelectedRows[0].Index].Value.ToString();
+                version.Eliminar(id);
+                MessageBox.Show("Version Eliminada");
+                dataGridView1.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
+                dataGridView1.Rows.Clear();
+                List<Versions> ve = version.ListadoTotal();
+                listas = ve;
+                foreach (Versions x in ve)
+                {
+                    if (x.EstadoVersion == "Activo")
+                    {
+                        dataGridView1.Rows.Add(x.IDVersion, x.IDVehiculo, x.Llantas, x.TipoAsientos, x.CamaraTrasera, x.Pantalla, x.TipoCombustible, x.Version, x.Rines, x.Cilindraje,
+                   x.Costo, x.CapacidadCajuela, x.DistanciaEjes, x.Anchura, x.Altura, x.AudioVelC, x.TomaCorriente, x.TipoTraccion, x.NumPuertas, x.Transmision, x.FarosHal, x.NumEngranajes,
+                   x.ACAutom, x.FarosLED, x.RendimientoCombustible, x.FrenosTraseros, x.FrenosDelanteros, x.SuspensionDelantera, x.SuspensionTrasera, x.EspejosLatDirC, x.EspejosLatAE);
+
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Favor de seleccionar una version");
+            }
         }
 
         private void Versiones_Load(object sender, EventArgs e)
@@ -262,6 +284,10 @@ namespace Pantallas_SIVAA
 
         private void comboversion_SelectedValueChanged(object sender, EventArgs e)
         {
+            if (txtbusqueda.Text !="")
+            {
+                txtbusqueda.ResetText();
+            }
             txtbusqueda.Enabled = true;
             if (comboversion.Text == "Todos")
             {
@@ -298,21 +324,7 @@ namespace Pantallas_SIVAA
             }
         }
 
-        private void pictureBox11_Click_1(object sender, EventArgs e)
-        {
-            string id = null;
-            if (dataGridView1.SelectedRows.Count == 1)
-            {
-                id = dataGridView1[0, dataGridView1.SelectedRows[0].Index].Value.ToString();
-                version.Eliminar(id);
-                MessageBox.Show("Version Eliminada");
-                dataGridView1.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
-            }
-            else
-            {
-                MessageBox.Show("Favor de seleccionar una version");
-            }
-        }
+        
 
         private void btnInicio_Click(object sender, EventArgs e)
         {

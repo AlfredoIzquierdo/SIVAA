@@ -56,6 +56,83 @@ namespace Logicas
 
         }
 
+        // Cliente Log
+
+        public List<EstadoDeCuenta> CuentaCliente(string ClPdto, string parametro)
+        {
+            List<EstadoDeCuenta> Pd = new List<EstadoDeCuenta>();
+            Mensaje.Clear();
+            if (ClPdto == "0")
+                Mensaje.Append("Por favor proporcionar una clave valida");
+            if (Mensaje.Length == 0)
+            {
+                Pd = Pdto.EdoCuentaCliente(parametro, ClPdto);
+                if (Pd == null)
+                    Mensaje.Append(ClPdto + " no existe en la B.D.");
+                return Pd;
+            }
+            return null;
+        }
+
+
+
+
+
+        public List<EstadoDeCuenta> CuentaVehiculo(string ClPdto)
+        {
+            List<EstadoDeCuenta> Pd = new List<EstadoDeCuenta>();
+            Mensaje.Clear();
+            if (ClPdto == "0")
+                Mensaje.Append("Por favor proporcionar una clave valida");
+            if (Mensaje.Length == 0)
+            {
+                Pd = Pdto.EdoCuentaVehiculo(ClPdto);
+                if (Pd == null)
+                    Mensaje.Append(ClPdto + " no existe en la B.D.");
+                return Pd;
+            }
+            return null;
+        }
+
+
+
+        public List<EstadoDeCuenta> CuentaVersion(string ClPdto)
+        {
+            List<EstadoDeCuenta> Pd = new List<EstadoDeCuenta>();
+            Mensaje.Clear();
+            if (ClPdto == "0")
+                Mensaje.Append("Por favor proporcionar una clave valida");
+            if (Mensaje.Length == 0)
+            {
+                Pd = Pdto.EdoCuentaVersion(ClPdto);
+                if (Pd == null)
+                    Mensaje.Append(ClPdto + " no existe en la B.D.");
+                return Pd;
+            }
+            return null;
+        }
+
+
+
+
+        public List<EstadoDeCuenta> CuentaVenta(string ClPdto)
+        {
+            List<EstadoDeCuenta> Pd = new List<EstadoDeCuenta>();
+            Mensaje.Clear();
+            if (ClPdto == "0")
+                Mensaje.Append("Por favor proporcionar una clave valida");
+            if (Mensaje.Length == 0)
+            {
+                Pd = Pdto.EdoCuentaVenta(ClPdto);
+                if (Pd == null)
+                    Mensaje.Append(ClPdto + " no existe en la B.D.");
+                return Pd;
+            }
+            return null;
+        }
+
+
+
         public List<Cliente> ListadoAll()
         {
             //Método que obtiene la lista dinámica de todos los registro que tiene mi tabla

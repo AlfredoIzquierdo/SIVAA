@@ -17,6 +17,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace Pantallas_SIVAA
 {
+
     public partial class CorteDeCaja : Form
     {
         public static CorteCajaLog PqteLog = new CorteCajaLog();
@@ -45,6 +46,9 @@ namespace Pantallas_SIVAA
         Cliente cli;
         CorteCaja corte;
         Empleado _pqt;
+        readonly ClienteLog PqteLog5 = new ClienteLog();
+        List<EstadoDeCuenta> lista;
+        string nombre, apellidoP, apellidoM, vehiculo, versions, id;
         public CorteDeCaja(Empleado pqt)
         {
             InitializeComponent();
@@ -132,49 +136,58 @@ namespace Pantallas_SIVAA
             numericUpDown1.Value = int.Parse(an);
             panel9.Enabled = false;
             //CorteDeCaja_Load(sender, e);
-            //switch (_pqt.Tipo.Trim())
-            //{
-            //    case "Atencion":
-            //        // Funciones activas: Citas e inventario
-            //        lblTipoEmpleado.Text = _pqt.Tipo + " a clientes";
-            //        lblNombre.Text = "Bienvenido: " + _pqt.Nombre + " " + _pqt.ApellidoPat;
+            switch (_pqt.Tipo.Trim())
+            {
+                case "Atencion":
+                    // Funciones activas: Citas e inventario
+                    lblTipoEmpleado.Text = _pqt.Tipo + " a clientes";
+                    lblNombre.Text = "Bienvenido: " + _pqt.Nombre + " " + _pqt.ApellidoPat;
 
 
-            //        // Menu lateral
-            //        btnCitas.Enabled = true;
-            //        btnStock.Enabled = true;
-            //        btnReportes.Enabled = false;
-            //        btnPedidos.Enabled = false;
-            //        btnVentas.Enabled = false;
-            //        btnCobros.Enabled = false;
-            //        break;
-            //    case "Vendedor":
-            //        // Funciones activas: ventas, inventario y citas
-            //        lblTipoEmpleado.Text = _pqt.Tipo;
-            //        lblNombre.Text = "Bienvenido: " + _pqt.Nombre + " " + _pqt.ApellidoPat;
+                    // Menu lateral
+                    btnCitas.Enabled = true;
+                    btnStock.Enabled = true;
+                    btnReportes.Enabled = false;
+                    btnPedidos.Enabled = false;
+                    btnVentas.Enabled = false;
+                    btnCobros.Enabled = false;
+                    break;
+                case "Vendedor":
+                    // Funciones activas: ventas, inventario y citas
+                    lblTipoEmpleado.Text = _pqt.Tipo;
+                    lblNombre.Text = "Bienvenido: " + _pqt.Nombre + " " + _pqt.ApellidoPat;
 
 
-            //        //Menu lateral
-            //        btnCitas.Enabled = true;
-            //        btnStock.Enabled = true;
-            //        btnReportes.Enabled = false;
-            //        btnPedidos.Enabled = false;
-            //        btnVentas.Enabled = true;
-            //        btnCobros.Enabled = false;
-            //        break;
-            //    // más casos...
-            //    case "Cajero":
+                    //Menu lateral
+                    btnCitas.Enabled = true;
+                    btnStock.Enabled = true;
+                    btnReportes.Enabled = false;
+                    btnPedidos.Enabled = false;
+                    btnVentas.Enabled = true;
+                    btnCobros.Enabled = false;
+                    break;
+                // más casos...
+                case "Cajero":
 
 
-            //        // El cajero no pasa por aqui, se va directo al apartado de caja
+                    // El cajero no pasa por aqui, se va directo al apartado de caja
 
-            //        break;
-            //    case "Supervisor":
-            //        // Todo esta activado, es la vista de supervisor
-            //        lblTipoEmpleado.Text = _pqt.Tipo;
-            //        lblNombre.Text = "Bienvenido: " + _pqt.Nombre + " " + _pqt.ApellidoPat;
-            //        break;
-            //}
+                    break;
+                case "Supervisor":
+                    // Todo esta activado, es la vista de supervisor
+                    lblTipoEmpleado.Text = _pqt.Tipo;
+                    lblNombre.Text = "Bienvenido: " + _pqt.Nombre + " " + _pqt.ApellidoPat;
+                    break;
+            }
+
+            List<EstadoDeCuenta> clie = PqteLog5.Cuenta();
+            lista = clie;
+            foreach (EstadoDeCuenta x in clie)
+            {
+                dataGridView1.Rows.Add(x.IDCliente, x.Nombre, x.ApellidoPaterno, x.ApellidoMaterno, x.NombreV, x.Versions, x.IDVenta);
+            }
+
+
         }
 
 
@@ -928,18 +941,13 @@ namespace Pantallas_SIVAA
                 textBox12.Text = te;
             }
         }
-        readonly ClienteLog PqteLog5 = new ClienteLog();
-        List<EstadoDeCuenta> lista;
+
+
         private void EstadoCuenta_Click(object sender, EventArgs e)
         {
-            List<EstadoDeCuenta> clie = PqteLog5.Cuenta();
-            lista = clie;
-            foreach (EstadoDeCuenta x in clie)
-            {
-                dataGridView1.Rows.Add(x.IDCliente,x.Nombre,x.ApellidoPaterno,x.ApellidoMaterno,x.NombreV,x.Versions);
-            }
+
         }
-        string nombre, apellidoP, apellidoM, vehiculo, versions, id;
+
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -948,16 +956,89 @@ namespace Pantallas_SIVAA
             }
             nombre = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString().Trim();
             apellidoP = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString().Trim();
-             apellidoM = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString().Trim();
-             vehiculo = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString().Trim();
-             versions = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString().Trim();
-             id = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString().Trim();
+            apellidoM = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString().Trim();
+            vehiculo = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString().Trim();
+            versions = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString().Trim();
+            id = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString().Trim();
         }
 
         private void btnEdoCuenta_Click(object sender, EventArgs e)
         {
-            EstadoCuenta estadoCuenta = new EstadoCuenta(nombre, apellidoP, apellidoM, vehiculo, versions, id);
-            estadoCuenta.Show();
+            if (dataGridView1.SelectedRows.Count == 1)
+            {
+                EstadoCuenta estadoCuenta = new EstadoCuenta(nombre, apellidoP, apellidoM, vehiculo, versions, id);
+                estadoCuenta.Show();
+            }
+            else
+                MessageBox.Show("Seleccione un cliente");
+            
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            int opcion = comboBusqueda.SelectedIndex;
+            string busqueda = comboBusqueda.Text;
+            string texto = txtbusqueda.Text;
+            if (opcion == 0)
+            {
+                dataGridView1.Rows.Clear();
+                List<EstadoDeCuenta> clie = PqteLog5.Cuenta();
+                lista = clie;
+                foreach (EstadoDeCuenta x in clie)
+                {
+                    dataGridView1.Rows.Add(x.IDCliente, x.Nombre, x.ApellidoPaterno, x.ApellidoMaterno, x.NombreV, x.Versions, x.IDVenta);
+                }
+            }
+            if (opcion == 1 || opcion == 2 || opcion == 3 || opcion == 4)
+            {
+                dataGridView1.Rows.Clear();
+                List<EstadoDeCuenta> clie = PqteLog5.CuentaCliente(texto, busqueda);
+                lista = clie;
+                foreach (EstadoDeCuenta x in clie)
+                {
+                    dataGridView1.Rows.Add(x.IDCliente, x.Nombre, x.ApellidoPaterno, x.ApellidoMaterno, x.NombreV, x.Versions, x.IDVenta);
+                }
+            }
+            if (opcion == 5)
+            {
+                dataGridView1.Rows.Clear();
+                List<EstadoDeCuenta> clie = PqteLog5.CuentaVehiculo(texto);
+                lista = clie;
+                foreach (EstadoDeCuenta x in clie)
+                {
+                    dataGridView1.Rows.Add(x.IDCliente, x.Nombre, x.ApellidoPaterno, x.ApellidoMaterno, x.NombreV, x.Versions, x.IDVenta);
+                }
+            }
+            if (opcion == 6)
+            {
+                dataGridView1.Rows.Clear();
+                List<EstadoDeCuenta> clie = PqteLog5.CuentaVersion(texto);
+                lista = clie;
+                foreach (EstadoDeCuenta x in clie)
+                {
+                    dataGridView1.Rows.Add(x.IDCliente, x.Nombre, x.ApellidoPaterno, x.ApellidoMaterno, x.NombreV, x.Versions, x.IDVenta);
+                }
+            }
+            if (opcion == 7)
+            {
+                dataGridView1.Rows.Clear();
+                List<EstadoDeCuenta> clie = PqteLog5.CuentaVenta(texto);
+                lista = clie;
+                foreach (EstadoDeCuenta x in clie)
+                {
+                    dataGridView1.Rows.Add(x.IDCliente, x.Nombre, x.ApellidoPaterno, x.ApellidoMaterno, x.NombreV, x.Versions, x.IDVenta);
+                }
+            }
+        }
+
+        private void comboBusqueda_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtbusqueda.Text = "";
+            if (comboBusqueda.SelectedIndex == 0)
+                txtbusqueda.Enabled = false;
+            else
+                txtbusqueda.Enabled = true;
         }
     }
 }
+

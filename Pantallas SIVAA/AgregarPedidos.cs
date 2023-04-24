@@ -220,5 +220,13 @@ namespace Pantallas_SIVAA
         {
 
         }
+
+        private void txtImporte_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

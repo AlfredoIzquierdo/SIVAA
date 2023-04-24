@@ -161,7 +161,7 @@ namespace Pantallas_SIVAA
             version.EspejosLatAE = verificacion(rbEspejosASi, rbEspejosANo);
             version.CamaraTrasera = verificacion(rbCamaraSi, rbCamaraNo);
 
-            log.Registrar(version);
+            log.Modificar(version);
 
             Versiones versiones = new Versiones(_pqt);
             this.Close();
@@ -363,6 +363,27 @@ namespace Pantallas_SIVAA
         }
 
         private void ModificarVersion_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCapacidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtDistancia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void cbTipo_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

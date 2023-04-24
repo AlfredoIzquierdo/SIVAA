@@ -58,7 +58,7 @@ namespace Pantallas_SIVAA
             if (dataGridView1.SelectedRows.Count == 1)
             {
                 id = dataGridView1[0, dataGridView1.SelectedRows[0].Index].Value.ToString();
-                ModificarEmpleado modificarEmpleado = new ModificarEmpleado(id,_pqt);
+                ModificarEmpleado modificarEmpleado = new ModificarEmpleado(id, _pqt);
                 this.Close();
                 modificarEmpleado.Show();
             }
@@ -76,7 +76,7 @@ namespace Pantallas_SIVAA
             lista = clie;
             foreach (Empleado x in clie)
             {
-                if (x.EstadoEmpleado == "Activo")
+                if (x.EstadoEmpleado.Trim() == "Activo")
                 {
 
                     dataGridView1.Rows.Add(x.IDEmpleado, x.Nombre, x.ApellidoPat, x.ApellidoMat, x.Correo, x.Telefono, x.RFC, x.Contraseña, x.Tipo);
@@ -211,7 +211,7 @@ namespace Pantallas_SIVAA
                 lista = em;
                 foreach (Empleado x in em)
                 {
-                    if (x.EstadoEmpleado == "Activo")
+                    if (x.EstadoEmpleado.Trim() == "Activo")
                     {
                         dataGridView1.Rows.Add(x.IDEmpleado, x.Nombre, x.ApellidoPat, x.ApellidoMat, x.Correo, x.Telefono, x.RFC, x.Contraseña, x.Tipo);
                     }
@@ -228,7 +228,11 @@ namespace Pantallas_SIVAA
                 dataGridView1.Rows.Clear();
                 foreach (Empleado x in pro)
                 {
-                    dataGridView1.Rows.Add(x.IDEmpleado, x.Nombre, x.ApellidoPat, x.ApellidoMat, x.Correo, x.Telefono, x.RFC, x.Contraseña, x.Tipo);
+                    if (x.EstadoEmpleado.Trim() == "Activo")
+                    {
+                        dataGridView1.Rows.Add(x.IDEmpleado, x.Nombre, x.ApellidoPat, x.ApellidoMat, x.Correo, x.Telefono, x.RFC, x.Contraseña, x.Tipo);
+
+                    }
                 }
             }
 
@@ -244,7 +248,7 @@ namespace Pantallas_SIVAA
                 Cnx.Open();
                 //Creo el Query (todos los registros de la tabla Proveedor
 
-                string CdSql = "SELECT * FROM Empleado WHERE " + opcion + "=@Cl";
+                string CdSql = "SELECT * FROM Empleado WHERE " + opcion + "=@Cl and EstadoEmpleado = 'Activo'";
                 using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
                 {
                     Cmd.Parameters.AddWithValue("@Cl", CodPqt);
@@ -263,7 +267,8 @@ namespace Pantallas_SIVAA
                             Correo = Convert.ToString(Dr["Correo"]),
                             Telefono = Convert.ToString(Dr["Telefono"]),
                             Contraseña = Convert.ToString(Dr["Contraseña"]),
-                            Tipo = Convert.ToString(Dr["Tipo"])
+                            Tipo = Convert.ToString(Dr["Tipo"]),
+                            EstadoEmpleado = Convert.ToString(Dr["EstadoEmpleado"])
                         };
                         productos.Add(Pqte);
                     }
@@ -296,9 +301,12 @@ namespace Pantallas_SIVAA
 
         }
 
-        private void pictureBox13_Click_1(object sender, EventArgs e)
+        private void comboempleado_SelectedValueChanged(object sender, EventArgs e)
         {
-
+            if (txtbusqueda.Text != "")
+            {
+                txtbusqueda.ResetText();
+            }
         }
     }
 }

@@ -35,7 +35,7 @@ namespace Pantallas_SIVAA
             cliente.Nombre = txtNombre.Text;
             cliente.ApellidoPat = txtApellidoP.Text;
             cliente.ApellidoMat = txtApellidoM.Text;
-            cliente.Correo = txtCorreo.Text;
+            cliente.Correo = txtAgregarCorreo.Text;
             cliente.Telefono = txtTelefono.Text;
             cliente.RFC = txtRFC.Text;
             cliente.NoExterior = txtNoExterior.Text;
@@ -113,7 +113,7 @@ namespace Pantallas_SIVAA
                     txtApellidoM.Text = x.ApellidoMat;
                     txtNoExterior.Text = x.NoExterior;
                     txtCiudad.Text = x.Ciudad;
-                    txtCorreo.Text = x.Correo;
+                    txtAgregarCorreo.Text = x.Correo;
                     txtEstado.Text = x.Estado;
                     txtColonia.Text = x.Colonia;
                     txtTelefono.Text = x.Telefono;
@@ -171,6 +171,14 @@ namespace Pantallas_SIVAA
         private void ModificarCliente_Load_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

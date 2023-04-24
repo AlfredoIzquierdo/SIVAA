@@ -72,7 +72,8 @@ namespace Datos
                             Dia = Convert.ToInt32(Dr["Dia"]),
                             Mes = Convert.ToInt32(Dr["Mes"]),
                             Año = Convert.ToInt32(Dr["Año"]),
-                            Tipo = Convert.ToString(Dr["Tipo"])
+                            Tipo = Convert.ToString(Dr["Tipo"]),
+                            FormaPago = Convert.ToString(Dr["FormaPago"])
                         };
                         productos.Add(Pqte);
                     }
@@ -110,7 +111,8 @@ namespace Datos
                             Dia = Convert.ToInt32(Dr["Dia"]),
                             Mes = Convert.ToInt32(Dr["Mes"]),
                             Año = Convert.ToInt32(Dr["Año"]),
-                            Tipo = Convert.ToString(Dr["Tipo"])
+                            Tipo = Convert.ToString(Dr["Tipo"]),
+                            FormaPago = Convert.ToString(Dr["FormaPago"])
                         };
                         productos.Add(Pqte);
                     }
@@ -148,7 +150,8 @@ namespace Datos
                             Dia = Convert.ToInt32(Dr["Dia"]),
                             Mes = Convert.ToInt32(Dr["Mes"]),
                             Año = Convert.ToInt32(Dr["Año"]),
-                            Tipo = Convert.ToString(Dr["Tipo"])
+                            Tipo = Convert.ToString(Dr["Tipo"]),
+                            FormaPago = Convert.ToString(Dr["FormaPago"])
                         };
                         return Pqte;
                     }
@@ -249,46 +252,6 @@ namespace Datos
             }
             return null;
         }
-        //public void Eliminar(string CodPqt)
-        //{
-        //    using (SqlConnection Cnx = new SqlConnection(CdCnx))
-        //    {
-        //        Cnx.Open();
-        //        string CdSql = "DELETE FROM Cliente WHERE IDEmpleado=@Cl";
-        //        using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
-        //        {
-        //            Cmd.Parameters.AddWithValue("@Cl", CodPqt);
-        //            Cmd.ExecuteNonQuery();
-        //            Cmd.Dispose();
-        //        }
-        //        Cnx.Close();
-        //    }
-        //}
-
-        //public void Actualizar(Empleado Pqte)
-        //{
-        //    using (SqlConnection Cnx = new SqlConnection(CdCnx))
-        //    {
-        //        Cnx.Open();
-        //        string CdSql = "UPDATE Empleado SET Nombre=@Nm,ApellidoPaterno=@App, ApellidoMaterno=@Apm,RFC=@Rfc,Correo=@Cr,Telefono=@Tl,Contraseña=@Co, Tipo=@Ti WHERE IDEmpleado=@Cl";
-        //        using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
-        //        {
-        //            //Añadir los parámetros
-        //            Cmd.Parameters.AddWithValue("@Cl", Pqte.IDEmpleado);//Get y set de la capa entidad
-        //            Cmd.Parameters.AddWithValue("@Nm", Pqte.Nombre);
-        //            Cmd.Parameters.AddWithValue("@App", Pqte.ApellidoPat);
-        //            Cmd.Parameters.AddWithValue("@Apm", Pqte.ApellidoMat);
-        //            Cmd.Parameters.AddWithValue("@Cr", Pqte.Correo);
-        //            Cmd.Parameters.AddWithValue("@Tl", Pqte.Telefono);
-        //            Cmd.Parameters.AddWithValue("@Rfc", Pqte.RFC);
-        //            Cmd.Parameters.AddWithValue("@Co", Pqte.Contraseña);
-        //            Cmd.Parameters.AddWithValue("@Ti", Pqte.Tipo);
-        //            Cmd.ExecuteNonQuery();
-        //            //Borrar variable cmd de la memoria
-        //            Cmd.Dispose();
-        //        }
-        //        Cnx.Close();
-        //    }
-        //}
+        
     }
 }

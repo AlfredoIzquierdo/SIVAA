@@ -88,7 +88,7 @@ namespace Datos
             {
                 Cnx.Open();
                 //Creo el Query (todos los registros de la tabla cliente
-                string CdSql = "Select * from Empleado";
+                string CdSql = "Select * from Empleado where EstadoEmpleado = 'Activo'";
                 using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
                 {
                     SqlDataReader Dr = Cmd.ExecuteReader();

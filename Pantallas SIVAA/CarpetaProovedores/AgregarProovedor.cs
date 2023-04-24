@@ -146,7 +146,7 @@ namespace Pantallas_SIVAA
             this.Close();
             GestionarPedidos pedidos = new GestionarPedidos(_pqt);
             pedidos.Show();
-            
+
         }
 
         private void pictureBox13_Click(object sender, EventArgs e)
@@ -156,6 +156,19 @@ namespace Pantallas_SIVAA
             inicio.Show();
         }
 
-        
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            ProovedoresPrin proovedoresPrin = new ProovedoresPrin(_pqt);
+            proovedoresPrin.Show();
+        }
+
+        private void txtNoExterior_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

@@ -65,7 +65,8 @@ namespace Datos
                             Dia = Convert.ToInt32(Dr["Dia"]),
                             Mes = Convert.ToInt32(Dr["Mes"]),
                             Año = Convert.ToInt32(Dr["Año"]),
-                            Importe = Convert.ToDouble(Dr["Importe"])
+                            Importe = Convert.ToDouble(Dr["Importe"]),
+                            EstadoPedido = Convert.ToString(Dr["EstadoPedido"])
                         };
                         productos.Add(Pqte);
                     }

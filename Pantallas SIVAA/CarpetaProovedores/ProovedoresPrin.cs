@@ -48,7 +48,7 @@ namespace Pantallas_SIVAA
             if (dataGridView1.SelectedRows.Count == 1)
             {
                 id = dataGridView1[0, dataGridView1.SelectedRows[0].Index].Value.ToString();
-                EditarProovedores modificarEmpleado = new EditarProovedores(id,_pqt);
+                EditarProovedores modificarEmpleado = new EditarProovedores(id, _pqt);
                 this.Close();
                 modificarEmpleado.Show();
             }
@@ -120,7 +120,11 @@ namespace Pantallas_SIVAA
             listas = pro;
             foreach (Proveedor x in pro)
             {
-                dataGridView1.Rows.Add(x.IDProveedor, x.Nombre, x.RFC, x.NoExterior, x.Colonia, x.Ciudad, x.Estado);
+                if (x.EstadoProovedor =="Activo")
+                {
+                    dataGridView1.Rows.Add(x.IDProveedor, x.Nombre, x.RFC, x.NoExterior, x.Colonia, x.Ciudad, x.Estado);
+
+                }
             }
             switch (_pqt.Tipo.Trim())
             {
@@ -176,16 +180,38 @@ namespace Pantallas_SIVAA
 
         private void button1_Click(object sender, EventArgs e)
         {
-            List<Proveedor> pro;
-            int opcion = comboversion.SelectedIndex;
-            dataGridView1.ClearSelection();
-            pro = ListadoEspecifico(txtbusqueda.Text, comboversion.Text);
-            dataGridView1.Rows.Clear();
-            listas = pro;
-            foreach (Proveedor x in pro)
+            if (comboversion.SelectedIndex != 0)
             {
-                dataGridView1.Rows.Add(x.IDProveedor, x.Nombre, x.RFC, x.NoExterior, x.Colonia, x.Ciudad, x.Estado);
+                List<Proveedor> pro;
+                int opcion = comboversion.SelectedIndex;
+                dataGridView1.ClearSelection();
+                pro = ListadoEspecifico(txtbusqueda.Text, comboversion.Text);
+                dataGridView1.Rows.Clear();
+                listas = pro;
+                foreach (Proveedor x in pro)
+                {
+                    if (x.EstadoProovedor == "Activo")
+                    {
+                        dataGridView1.Rows.Add(x.IDProveedor, x.Nombre, x.RFC, x.NoExterior, x.Colonia, x.Ciudad, x.Estado);
+
+                    }
+                }
             }
+            else
+            {
+                dataGridView1.ClearSelection();
+                List<Proveedor> pro = proveedor.ListadoAll();
+                listas = pro;
+                foreach (Proveedor x in pro)
+                {
+                    if (x.EstadoProovedor == "Activo")
+                    {
+                        dataGridView1.Rows.Add(x.IDProveedor, x.Nombre, x.RFC, x.NoExterior, x.Colonia, x.Ciudad, x.Estado);
+
+                    }
+                }
+            }
+
         }
         public List<Proveedor> ListadoEspecifico(string CodPqt, string opcion)
         {
@@ -229,6 +255,30 @@ namespace Pantallas_SIVAA
         {
             ReporteProveedores pr = new ReporteProveedores(listas);
             pr.Show();
+        }
+
+        private void pictureBox11_Click(object sender, EventArgs e)
+        {
+            string id = null;
+            if (dataGridView1.SelectedRows.Count == 1)
+            {
+                id = dataGridView1[0, dataGridView1.SelectedRows[0].Index].Value.ToString();
+                proveedor.Eliminar(id);
+                MessageBox.Show("Proovedor Eliminado");
+                dataGridView1.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
+            }
+            else
+            {
+                MessageBox.Show("Favor de seleccionar un proovedor");
+            }
+        }
+
+        private void comboversion_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (txtbusqueda.Text != "")
+            {
+                txtbusqueda.ResetText();
+            }
         }
     }
 }

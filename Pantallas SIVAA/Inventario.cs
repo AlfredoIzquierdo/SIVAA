@@ -80,7 +80,7 @@ namespace Pantallas_SIVAA
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            ReporteCrudInventario reporteInventario = new ReporteCrudInventario();
+            ReporteInventario reporteInventario = new ReporteInventario(_pqt,lista);
             reporteInventario.Show();
         }
 
@@ -137,7 +137,7 @@ namespace Pantallas_SIVAA
             lista = clie;
             foreach (UnidadNoUsar x in clie)
             {
-                dataGridView1.Rows.Add(x.NoSerie, x.Vehiculo, x.Version, x.Color,x.Estatus);
+                dataGridView1.Rows.Add(x.NoSerie, x.Vehiculo, x.Version, x.Color, x.Estatus);
             }
             switch (_pqt.Tipo.Trim())
             {
@@ -200,10 +200,10 @@ namespace Pantallas_SIVAA
                 }
                 return;
             }
-            if(opcion==1 ||opcion == 4)
+            if (opcion == 1 || opcion == 4)
             {
                 dataGridView1.Rows.Clear();
-                List<UnidadNoUsar> em = PqteLog5.InventarioFiltro(txtValorBusqueda.Text,cmbOpcionBusqueda.Text);
+                List<UnidadNoUsar> em = PqteLog5.InventarioFiltro(txtValorBusqueda.Text, cmbOpcionBusqueda.Text);
                 lista = em;
                 foreach (UnidadNoUsar x in em)
                 {
@@ -234,25 +234,38 @@ namespace Pantallas_SIVAA
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex >= 0)
+            {
+                dataGridView1.Rows[e.RowIndex].Selected = true;
+                
+            }
+
             if (dataGridView1.CurrentCell.RowIndex >= 0)
             {
                 int i = dataGridView1.CurrentCell.RowIndex;
                 Noserie = dataGridView1[0, i].Value.ToString();
                 vehiculostr = dataGridView1[1, i].Value.ToString();
                 versionstr = dataGridView1[2, i].Value.ToString();
-                colorstr = dataGridView1[4, i].Value.ToString();
-                disponibilidadstr = dataGridView1[5, i].Value.ToString();
-                model = dataGridView1[3, i].Value.ToString();
+                //model = dataGridView1[3, i].Value.ToString();
+                colorstr = dataGridView1[3, i].Value.ToString();
+                //disponibilidadstr = dataGridView1[5, i].Value.ToString();
+
                 //MessageBox.Show("Serie= " + Noserie + "\r\nvehiculo = " + vehiculostr + "\r\nVersion = " + versionstr + "\r\nmodel = " + model);
             }
         }
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            FichaTecnica ficha = new FichaTecnica(Noserie, vehiculostr, versionstr, model, colorstr, disponibilidadstr);
-            ficha.Show();
+            if (dataGridView1.SelectedRows.Count == 1)
+            {
+                FichaTecnica ficha = new FichaTecnica(Noserie, vehiculostr, versionstr, model, colorstr, disponibilidadstr);
+                ficha.Show();
+            }
+            else
+                MessageBox.Show("Seleccione un vehiculo a consultar");
+
         }
 
-        
+
     }
 }

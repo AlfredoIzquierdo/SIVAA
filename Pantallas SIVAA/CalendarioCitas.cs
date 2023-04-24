@@ -360,9 +360,9 @@ namespace Pantallas_SIVAA
                     break;
             }
             dataGridView1.ClearSelection();
-            List<Cita> pro = citaLog.ListadoAll();
+            List<Cita> listas = citaLog.ListadoAll();
             dataGridView1.Rows.Clear();
-            foreach (Cita x in pro)
+            foreach (Cita x in listas)
             {
                 dataGridView1.Rows.Add(x.IDCita, x.IDEmpleado, x.IDCliente, x.Dia, x.Mes, x.Año, x.Hora);
             }

@@ -71,8 +71,8 @@ namespace Pantallas_SIVAA
         private void btnCotizacion_Click(object sender, EventArgs e)
         {
             this.Close();
-            Cotizacion cotizacion = new Cotizacion(_pqt);
-            cotizacion.Show();
+            Ventas ventas = new Ventas(_pqt);
+            ventas.Show();
         }
 
         private void Inicio_Load(object sender, EventArgs e)
@@ -185,6 +185,6 @@ namespace Pantallas_SIVAA
 
         }
 
-      
+
     }
 }

@@ -187,8 +187,9 @@ namespace Pantallas_SIVAA
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ReporteInventario repinv = new ReporteInventario(_pqt);
-            repinv.Show();
+            this.Close();
+            Inventario inventario = new Inventario(_pqt);
+            inventario.Show();
         }
 
         private void btnReporteCredito_Click(object sender, EventArgs e)

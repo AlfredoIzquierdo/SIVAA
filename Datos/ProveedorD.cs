@@ -18,7 +18,7 @@ namespace Datos
             {
                 //Abrir la conexión y crear el Query
                 Cnx.Open();
-                string CdSql = "INSERT INTO Proovedor (IDProovedor,Nombre,RFC,NoExterior,Colonia,Ciudad,Estado) VALUES (@Cl,@Nm,@App,@Apm,@Rfc,@Cr,@Tl)";
+                string CdSql = "INSERT INTO Proovedor (IDProovedor,Nombre,RFC,NoExterior,Colonia,Ciudad,Estado,EstadoProovedor) VALUES (@Cl,@Nm,@App,@Apm,@Rfc,@Cr,@Tl,'Activo')";
                 using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))//SolicitA: la cadena de SQL y la conexeión
                 {
                     //Añadir los parámetros
@@ -29,6 +29,8 @@ namespace Datos
                     Cmd.Parameters.AddWithValue("@Rfc", Pqte.Colonia);
                     Cmd.Parameters.AddWithValue("@Cr", Pqte.Ciudad);
                     Cmd.Parameters.AddWithValue("@Tl", Pqte.Estado);
+                    //Cmd.Parameters.AddWithValue("@Tp", Pqte.EstadoProovedor);
+
                     Cmd.ExecuteNonQuery();
                     //Borrar variable cmd de la memoria
                     Cmd.Dispose();
@@ -63,8 +65,10 @@ namespace Datos
                             NoExterior = Convert.ToString(Dr["NoExterior"]),
                             Colonia = Convert.ToString(Dr["Colonia"]),
                             Ciudad = Convert.ToString(Dr["Ciudad"]),
-                            Estado = Convert.ToString(Dr["Estado"])
+                            Estado = Convert.ToString(Dr["Estado"]),
+                            EstadoProovedor = Convert.ToString(Dr["EstadoProovedor"])
                         };
+
                         productos.Add(Pqte);
                     }
                 }
@@ -86,6 +90,8 @@ namespace Datos
                 {
                     //Asignar el valor a @Cl
                     Cmd.Parameters.AddWithValue("@Cl", CodPqt);
+                    Cmd.ExecuteNonQuery();
+
                     SqlDataReader Dr = Cmd.ExecuteReader();
                     if (Dr.Read())
                     {
@@ -113,7 +119,7 @@ namespace Datos
             using (SqlConnection Cnx = new SqlConnection(CdCnx))
             {
                 Cnx.Open();
-                string CdSql = "DELETE FROM Proovedor WHERE IDProovedor=@Cl";
+                string CdSql = "Update Proovedor Set EstadoProovedor = 'Inactivo' WHERE IDProovedor = @Cl";
                 using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
                 {
                     Cmd.Parameters.AddWithValue("@Cl", CodPqt);

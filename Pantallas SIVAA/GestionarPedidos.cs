@@ -129,7 +129,7 @@ namespace Pantallas_SIVAA.Pedidos
             List<Pedido> clie = pedlog.ListadoAll();
             foreach (Pedido x in clie)
             {
-                if (x.EstadoPedido == "Activo")
+                if (x.EstadoPedido.Trim() == "Activo")
                 {
 
                     dataGridView1.Rows.Add(x.IDPedido, x.IDProveedor, x.Dia, pedlog.MesALetra(Convert.ToString(x.Mes)), x.Año, x.Importe);
@@ -177,8 +177,9 @@ namespace Pantallas_SIVAA.Pedidos
                 {
                     dataGridView1.Rows.Add(x.IDPedido, x.IDProveedor, x.Dia, pedlog.MesALetra(Convert.ToString(x.Mes)), x.Año, x.Importe);
                 }
-            }else 
-            
+            }
+            else
+
             {
                 List<Pedido> datos = new List<Pedido>();
 
@@ -196,13 +197,18 @@ namespace Pantallas_SIVAA.Pedidos
 
         private void comboBox2_SelectedValueChanged(object sender, EventArgs e)
         {
+            if (txtbusqueda.Text!="")
+            {
+                txtbusqueda.ResetText();
+            }
             if (comboBox2.Text != "Todos")
             {
                 txtbusqueda.Enabled = true;
                 button1.Enabled = true;
 
 
-            }else
+            }
+            else
             {
                 txtbusqueda.Enabled = false;
                 button1.Enabled = false;
@@ -211,7 +217,7 @@ namespace Pantallas_SIVAA.Pedidos
                 List<Pedido> clie = pedlog.ListadoAll();
                 foreach (Pedido x in clie)
                 {
-                    if (x.EstadoPedido == "Activo")
+                    if (x.EstadoPedido.Trim() == "Activo")
                     {
 
                         dataGridView1.Rows.Add(x.IDPedido, x.IDProveedor, x.Dia, pedlog.MesALetra(Convert.ToString(x.Mes)), x.Año, x.Importe);

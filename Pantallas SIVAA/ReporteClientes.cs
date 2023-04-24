@@ -25,6 +25,7 @@ namespace Pantallas_SIVAA
         {
             label7.Text = "Alfredo Izquierdo";
             label8.Text = DateTime.Now.ToString();
+            dataGridView1.DataSource = "";
             dataGridView1.DataSource = lista;
         }
     }
