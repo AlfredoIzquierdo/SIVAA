@@ -1717,6 +1717,8 @@ namespace Pantallas_SIVAA
                             else
                             {
                                 MessageBox.Show("Cotizacion guardada exitosamente en la B.D \r\n\r\n Folio de pago = " + Deb.IDCotizacion.ToString());
+                                TablaAmortizacionCon tablaAmortizacionCon = new TablaAmortizacionCon("CO" + k);
+                                tablaAmortizacionCon.Show();
                                 k++;
 
                                 //Limpiar();
@@ -2010,8 +2012,15 @@ namespace Pantallas_SIVAA
         }
         private void CalcularEnganche()
         {
-            double enganchecantidad = (Convert.ToDouble(numericporengan.Value) * 0.01) * Convert.ToDouble(txPrecioCot.Text);
-            txtengancheCot.Text = enganchecantidad.ToString("0.00");
+            if(txPrecioCot.Text==null)
+            {
+                MessageBox.Show("Favor de llenar los campos");
+            }else
+            {
+                double enganchecantidad = (Convert.ToDouble(numericporengan.Value) * 0.01) * Convert.ToDouble(txPrecioCot.Text);
+                txtengancheCot.Text = enganchecantidad.ToString("0.00");
+            }
+            
         }
         private void CalcularFinanciamiento()
         {

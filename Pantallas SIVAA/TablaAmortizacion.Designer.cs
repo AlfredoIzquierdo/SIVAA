@@ -854,6 +854,7 @@
             Controls.Add(panel6);
             Name = "TablaAmortizacion";
             Text = "TablaAmortizacion";
+            Load += TablaAmortizacion_Load_2;
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             panel2.ResumeLayout(false);

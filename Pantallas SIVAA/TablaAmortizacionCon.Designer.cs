@@ -29,26 +29,18 @@
         private void InitializeComponent()
         {
             c = new Panel();
-            pictureBox1 = new PictureBox();
-            lblporengan = new Label();
-            lblfinanciamiento = new Label();
-            lblanualidad = new Label();
-            lblmensualidad = new Label();
-            label22 = new Label();
-            lblenganche = new Label();
-            lblplazo = new Label();
-            lblinteres = new Label();
-            lblprecioini = new Label();
+            lblpreciomasiva = new Label();
             label10 = new Label();
-            label13 = new Label();
-            label16 = new Label();
-            label17 = new Label();
+            lblempleado = new Label();
             label2 = new Label();
+            label23 = new Label();
+            label16 = new Label();
+            lbliva = new Label();
+            lblprecioini = new Label();
+            label13 = new Label();
             label3 = new Label();
             panel7 = new Panel();
             label44 = new Label();
-            label6 = new Label();
-            label7 = new Label();
             panel1 = new Panel();
             panel8 = new Panel();
             label43 = new Label();
@@ -80,23 +72,18 @@
             label11 = new Label();
             label9 = new Label();
             panel6 = new Panel();
-            lblmensualidadtotal = new Label();
-            lblsaldoant = new Label();
-            lblcapitalrestante = new Label();
-            lblanoF = new Label();
-            label30 = new Label();
-            lblMesF = new Label();
-            label28 = new Label();
-            lbldiaF = new Label();
-            lblpruebass = new Label();
-            panel9 = new Panel();
-            label20 = new Label();
-            label19 = new Label();
-            label18 = new Label();
-            label53 = new Label();
-            label52 = new Label();
+            lblcostover = new Label();
+            label50 = new Label();
+            lblidversion = new Label();
+            label49 = new Label();
+            panel4 = new Panel();
+            label48 = new Label();
+            label47 = new Label();
+            label46 = new Label();
+            label45 = new Label();
+            label6 = new Label();
+            lblarticulo = new Label();
             c.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel7.SuspendLayout();
             panel1.SuspendLayout();
             panel8.SuspendLayout();
@@ -104,186 +91,120 @@
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             panel6.SuspendLayout();
-            panel9.SuspendLayout();
+            panel4.SuspendLayout();
             SuspendLayout();
             // 
             // c
             // 
             c.BorderStyle = BorderStyle.Fixed3D;
-            c.Controls.Add(pictureBox1);
-            c.Controls.Add(lblporengan);
-            c.Controls.Add(lblfinanciamiento);
-            c.Controls.Add(lblanualidad);
-            c.Controls.Add(lblmensualidad);
-            c.Controls.Add(label22);
-            c.Controls.Add(lblenganche);
-            c.Controls.Add(lblplazo);
-            c.Controls.Add(lblinteres);
-            c.Controls.Add(lblprecioini);
+            c.Controls.Add(lblpreciomasiva);
             c.Controls.Add(label10);
-            c.Controls.Add(label13);
-            c.Controls.Add(label16);
-            c.Controls.Add(label17);
+            c.Controls.Add(lblempleado);
             c.Controls.Add(label2);
+            c.Controls.Add(label23);
+            c.Controls.Add(label16);
+            c.Controls.Add(lbliva);
+            c.Controls.Add(lblprecioini);
+            c.Controls.Add(label13);
             c.Controls.Add(label3);
             c.Controls.Add(panel7);
-            c.Controls.Add(label6);
-            c.Controls.Add(label7);
-            c.Location = new Point(12, 357);
+            c.Location = new Point(3, 357);
             c.Margin = new Padding(3, 4, 3, 4);
             c.Name = "c";
-            c.Size = new Size(1006, 228);
+            c.Size = new Size(1015, 207);
             c.TabIndex = 56;
             // 
-            // pictureBox1
+            // lblpreciomasiva
             // 
-            pictureBox1.Image = Properties.Resources.print_FILL0_wght400_GRAD0_opsz48;
-            pictureBox1.Location = new Point(891, 175);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(55, 46);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 51;
-            pictureBox1.TabStop = false;
-            // 
-            // lblporengan
-            // 
-            lblporengan.AutoSize = true;
-            lblporengan.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblporengan.Location = new Point(506, 175);
-            lblporengan.Name = "lblporengan";
-            lblporengan.Size = new Size(20, 28);
-            lblporengan.TabIndex = 50;
-            lblporengan.Text = "-";
-            // 
-            // lblfinanciamiento
-            // 
-            lblfinanciamiento.AutoSize = true;
-            lblfinanciamiento.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblfinanciamiento.Location = new Point(435, 127);
-            lblfinanciamiento.Name = "lblfinanciamiento";
-            lblfinanciamiento.Size = new Size(20, 28);
-            lblfinanciamiento.TabIndex = 49;
-            lblfinanciamiento.Text = "-";
-            // 
-            // lblanualidad
-            // 
-            lblanualidad.AutoSize = true;
-            lblanualidad.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblanualidad.Location = new Point(395, 80);
-            lblanualidad.Name = "lblanualidad";
-            lblanualidad.Size = new Size(20, 28);
-            lblanualidad.TabIndex = 48;
-            lblanualidad.Text = "-";
-            // 
-            // lblmensualidad
-            // 
-            lblmensualidad.AutoSize = true;
-            lblmensualidad.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblmensualidad.Location = new Point(414, 39);
-            lblmensualidad.Name = "lblmensualidad";
-            lblmensualidad.Size = new Size(20, 28);
-            lblmensualidad.TabIndex = 47;
-            lblmensualidad.Text = "-";
-            // 
-            // label22
-            // 
-            label22.AutoSize = true;
-            label22.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label22.Location = new Point(110, 127);
-            label22.Name = "label22";
-            label22.Size = new Size(65, 28);
-            label22.TabIndex = 46;
-            label22.Text = "meses";
-            // 
-            // lblenganche
-            // 
-            lblenganche.AutoSize = true;
-            lblenganche.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblenganche.Location = new Point(110, 175);
-            lblenganche.Name = "lblenganche";
-            lblenganche.Size = new Size(20, 28);
-            lblenganche.TabIndex = 45;
-            lblenganche.Text = "-";
-            // 
-            // lblplazo
-            // 
-            lblplazo.AutoSize = true;
-            lblplazo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblplazo.Location = new Point(71, 127);
-            lblplazo.Name = "lblplazo";
-            lblplazo.Size = new Size(28, 28);
-            lblplazo.TabIndex = 44;
-            lblplazo.Text = "--";
-            // 
-            // lblinteres
-            // 
-            lblinteres.AutoSize = true;
-            lblinteres.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblinteres.Location = new Point(77, 80);
-            lblinteres.Name = "lblinteres";
-            lblinteres.Size = new Size(20, 28);
-            lblinteres.TabIndex = 43;
-            lblinteres.Text = "-";
-            // 
-            // lblprecioini
-            // 
-            lblprecioini.AutoSize = true;
-            lblprecioini.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblprecioini.Location = new Point(136, 39);
-            lblprecioini.Name = "lblprecioini";
-            lblprecioini.Size = new Size(20, 28);
-            lblprecioini.TabIndex = 35;
-            lblprecioini.Text = "-";
+            lblpreciomasiva.Anchor = AnchorStyles.None;
+            lblpreciomasiva.AutoSize = true;
+            lblpreciomasiva.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblpreciomasiva.Location = new Point(379, 39);
+            lblpreciomasiva.Name = "lblpreciomasiva";
+            lblpreciomasiva.Size = new Size(104, 28);
+            lblpreciomasiva.TabIndex = 218;
+            lblpreciomasiva.Text = "$$$$$$.00";
             // 
             // label10
             // 
+            label10.Anchor = AnchorStyles.None;
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label10.Location = new Point(280, 80);
+            label10.Location = new Point(256, 39);
             label10.Name = "label10";
-            label10.Size = new Size(105, 28);
-            label10.TabIndex = 42;
-            label10.Text = "Anualidad:";
+            label10.Size = new Size(128, 28);
+            label10.TabIndex = 217;
+            label10.Text = "Total general:";
             // 
-            // label13
+            // lblempleado
             // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label13.Location = new Point(280, 39);
-            label13.Name = "label13";
-            label13.Size = new Size(128, 28);
-            label13.TabIndex = 39;
-            label13.Text = "Mensualidad:";
-            // 
-            // label16
-            // 
-            label16.AutoSize = true;
-            label16.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label16.Location = new Point(280, 175);
-            label16.Name = "label16";
-            label16.Size = new Size(223, 28);
-            label16.TabIndex = 40;
-            label16.Text = "Porcentaje de Enganche:";
-            // 
-            // label17
-            // 
-            label17.AutoSize = true;
-            label17.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label17.Location = new Point(280, 127);
-            label17.Name = "label17";
-            label17.Size = new Size(149, 28);
-            label17.TabIndex = 41;
-            label17.Text = "Financiamiento:";
+            lblempleado.AutoSize = true;
+            lblempleado.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblempleado.Location = new Point(225, 163);
+            lblempleado.Name = "lblempleado";
+            lblempleado.Size = new Size(280, 28);
+            lblempleado.TabIndex = 55;
+            lblempleado.Text = "Jose Alfredo Izquierdo Heredia";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(6, 80);
+            label2.Location = new Point(142, 122);
             label2.Name = "label2";
-            label2.Size = new Size(74, 28);
-            label2.TabIndex = 38;
-            label2.Text = "Interes:";
+            label2.Size = new Size(88, 28);
+            label2.TabIndex = 54;
+            label2.Text = "Contado";
+            // 
+            // label23
+            // 
+            label23.AutoSize = true;
+            label23.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label23.Location = new Point(9, 163);
+            label23.Name = "label23";
+            label23.Size = new Size(210, 28);
+            label23.TabIndex = 52;
+            label23.Text = "Nombre del vendedor:";
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label16.Location = new Point(9, 122);
+            label16.Name = "label16";
+            label16.Size = new Size(133, 28);
+            label16.TabIndex = 53;
+            label16.Text = "Tipo de pago:";
+            // 
+            // lbliva
+            // 
+            lbliva.AutoSize = true;
+            lbliva.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lbliva.Location = new Point(55, 77);
+            lbliva.Name = "lbliva";
+            lbliva.Size = new Size(20, 28);
+            lbliva.TabIndex = 47;
+            lbliva.Text = "-";
+            // 
+            // lblprecioini
+            // 
+            lblprecioini.AutoSize = true;
+            lblprecioini.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblprecioini.Location = new Point(81, 39);
+            lblprecioini.Name = "lblprecioini";
+            lblprecioini.Size = new Size(20, 28);
+            lblprecioini.TabIndex = 35;
+            lblprecioini.Text = "-";
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label13.Location = new Point(9, 77);
+            label13.Name = "label13";
+            label13.Size = new Size(45, 28);
+            label13.TabIndex = 39;
+            label13.Text = "IVA:";
             // 
             // label3
             // 
@@ -291,9 +212,9 @@
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label3.Location = new Point(5, 39);
             label3.Name = "label3";
-            label3.Size = new Size(125, 28);
+            label3.Size = new Size(70, 28);
             label3.TabIndex = 35;
-            label3.Text = "Precio Inicial:";
+            label3.Text = "Precio:";
             // 
             // panel7
             // 
@@ -302,7 +223,7 @@
             panel7.Location = new Point(0, 0);
             panel7.Margin = new Padding(3, 4, 3, 4);
             panel7.Name = "panel7";
-            panel7.Size = new Size(999, 29);
+            panel7.Size = new Size(1026, 29);
             panel7.TabIndex = 34;
             // 
             // label44
@@ -316,26 +237,6 @@
             label44.TabIndex = 1;
             label44.Text = "FINANCIAMIENTO";
             // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(9, 175);
-            label6.Name = "label6";
-            label6.Size = new Size(100, 28);
-            label6.TabIndex = 36;
-            label6.Text = "Enganche:";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(10, 127);
-            label7.Name = "label7";
-            label7.Size = new Size(63, 28);
-            label7.TabIndex = 37;
-            label7.Text = "Plazo:";
-            // 
             // panel1
             // 
             panel1.BorderStyle = BorderStyle.Fixed3D;
@@ -348,10 +249,10 @@
             panel1.Controls.Add(label4);
             panel1.Controls.Add(label5);
             panel1.Controls.Add(label51);
-            panel1.Location = new Point(12, 151);
+            panel1.Location = new Point(-6, 151);
             panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1006, 204);
+            panel1.Size = new Size(1024, 204);
             panel1.TabIndex = 55;
             // 
             // panel8
@@ -361,7 +262,7 @@
             panel8.Location = new Point(0, 3);
             panel8.Margin = new Padding(3, 4, 3, 4);
             panel8.Name = "panel8";
-            panel8.Size = new Size(1004, 29);
+            panel8.Size = new Size(1035, 29);
             panel8.TabIndex = 34;
             // 
             // label43
@@ -564,10 +465,10 @@
             panel2.Controls.Add(label12);
             panel2.Controls.Add(label11);
             panel2.Controls.Add(label9);
-            panel2.Location = new Point(12, 1);
+            panel2.Location = new Point(-6, 1);
             panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(789, 150);
+            panel2.Size = new Size(824, 150);
             panel2.TabIndex = 53;
             // 
             // label1
@@ -665,183 +566,142 @@
             // 
             panel6.AutoScroll = true;
             panel6.BorderStyle = BorderStyle.Fixed3D;
-            panel6.Controls.Add(lblmensualidadtotal);
-            panel6.Controls.Add(lblsaldoant);
-            panel6.Controls.Add(lblcapitalrestante);
-            panel6.Controls.Add(lblanoF);
-            panel6.Controls.Add(label30);
-            panel6.Controls.Add(lblMesF);
-            panel6.Controls.Add(label28);
-            panel6.Controls.Add(lbldiaF);
-            panel6.Controls.Add(lblpruebass);
-            panel6.Controls.Add(panel9);
-            panel6.Location = new Point(12, 593);
+            panel6.Controls.Add(lblcostover);
+            panel6.Controls.Add(label50);
+            panel6.Controls.Add(lblidversion);
+            panel6.Controls.Add(label49);
+            panel6.Controls.Add(panel4);
+            panel6.Controls.Add(lblarticulo);
+            panel6.Location = new Point(-8, 572);
             panel6.Margin = new Padding(3, 4, 3, 4);
             panel6.Name = "panel6";
-            panel6.Size = new Size(1019, 447);
+            panel6.Size = new Size(1039, 468);
             panel6.TabIndex = 57;
             // 
-            // lblmensualidadtotal
+            // lblcostover
             // 
-            lblmensualidadtotal.AutoSize = true;
-            lblmensualidadtotal.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lblmensualidadtotal.Location = new Point(609, 33);
-            lblmensualidadtotal.Name = "lblmensualidadtotal";
-            lblmensualidadtotal.Size = new Size(33, 20);
-            lblmensualidadtotal.TabIndex = 44;
-            lblmensualidadtotal.Text = "----";
+            lblcostover.AutoSize = true;
+            lblcostover.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblcostover.Location = new Point(773, 37);
+            lblcostover.Name = "lblcostover";
+            lblcostover.Size = new Size(127, 28);
+            lblcostover.TabIndex = 209;
+            lblcostover.Text = "CostoVersion";
             // 
-            // lblsaldoant
+            // label50
             // 
-            lblsaldoant.AutoSize = true;
-            lblsaldoant.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lblsaldoant.Location = new Point(452, 33);
-            lblsaldoant.Name = "lblsaldoant";
-            lblsaldoant.Size = new Size(33, 20);
-            lblsaldoant.TabIndex = 43;
-            lblsaldoant.Text = "----";
+            label50.AutoSize = true;
+            label50.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label50.Location = new Point(283, 37);
+            label50.Name = "label50";
+            label50.Size = new Size(57, 28);
+            label50.TabIndex = 208;
+            label50.Text = "Pieza";
             // 
-            // lblcapitalrestante
+            // lblidversion
             // 
-            lblcapitalrestante.AutoSize = true;
-            lblcapitalrestante.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lblcapitalrestante.Location = new Point(295, 33);
-            lblcapitalrestante.Name = "lblcapitalrestante";
-            lblcapitalrestante.Size = new Size(33, 20);
-            lblcapitalrestante.TabIndex = 42;
-            lblcapitalrestante.Text = "----";
+            lblidversion.AutoSize = true;
+            lblidversion.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblidversion.Location = new Point(95, 37);
+            lblidversion.Name = "lblidversion";
+            lblidversion.Size = new Size(95, 28);
+            lblidversion.TabIndex = 207;
+            lblidversion.Text = "IDVersion";
             // 
-            // lblanoF
+            // label49
             // 
-            lblanoF.AutoSize = true;
-            lblanoF.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lblanoF.Location = new Point(202, 33);
-            lblanoF.Name = "lblanoF";
-            lblanoF.Size = new Size(33, 20);
-            lblanoF.TabIndex = 41;
-            lblanoF.Text = "----";
+            label49.AutoSize = true;
+            label49.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label49.Location = new Point(25, 37);
+            label49.Name = "label49";
+            label49.Size = new Size(23, 28);
+            label49.TabIndex = 206;
+            label49.Text = "1";
             // 
-            // label30
+            // panel4
             // 
-            label30.AutoSize = true;
-            label30.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label30.Location = new Point(181, 33);
-            label30.Name = "label30";
-            label30.Size = new Size(15, 20);
-            label30.TabIndex = 40;
-            label30.Text = "/";
+            panel4.BackColor = Color.FromArgb(51, 58, 86);
+            panel4.Controls.Add(label48);
+            panel4.Controls.Add(label47);
+            panel4.Controls.Add(label46);
+            panel4.Controls.Add(label45);
+            panel4.Controls.Add(label6);
+            panel4.Location = new Point(0, 4);
+            panel4.Margin = new Padding(3, 4, 3, 4);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(1017, 29);
+            panel4.TabIndex = 205;
             // 
-            // lblMesF
+            // label48
             // 
-            lblMesF.AutoSize = true;
-            lblMesF.Location = new Point(154, 33);
-            lblMesF.Name = "lblMesF";
-            lblMesF.Size = new Size(21, 20);
-            lblMesF.TabIndex = 39;
-            lblMesF.Text = "--";
+            label48.AutoSize = true;
+            label48.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            label48.ForeColor = SystemColors.ButtonHighlight;
+            label48.Location = new Point(773, 0);
+            label48.Name = "label48";
+            label48.Size = new Size(123, 23);
+            label48.TabIndex = 202;
+            label48.Text = "Precio Unitario";
             // 
-            // label28
+            // label47
             // 
-            label28.AutoSize = true;
-            label28.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label28.Location = new Point(136, 33);
-            label28.Name = "label28";
-            label28.Size = new Size(15, 20);
-            label28.TabIndex = 38;
-            label28.Text = "/";
+            label47.AutoSize = true;
+            label47.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            label47.ForeColor = SystemColors.ButtonHighlight;
+            label47.Location = new Point(470, 0);
+            label47.Name = "label47";
+            label47.Size = new Size(69, 23);
+            label47.TabIndex = 201;
+            label47.Text = "Articulo";
             // 
-            // lbldiaF
+            // label46
             // 
-            lbldiaF.AutoSize = true;
-            lbldiaF.Location = new Point(113, 33);
-            lbldiaF.Name = "lbldiaF";
-            lbldiaF.Size = new Size(21, 20);
-            lbldiaF.TabIndex = 37;
-            lbldiaF.Text = "--";
+            label46.AutoSize = true;
+            label46.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            label46.ForeColor = SystemColors.ButtonHighlight;
+            label46.Location = new Point(229, 0);
+            label46.Name = "label46";
+            label46.Size = new Size(151, 23);
+            label46.TabIndex = 3;
+            label46.Text = "Unidad de medida";
             // 
-            // lblpruebass
+            // label45
             // 
-            lblpruebass.AutoSize = true;
-            lblpruebass.Location = new Point(32, 33);
-            lblpruebass.Name = "lblpruebass";
-            lblpruebass.Size = new Size(17, 20);
-            lblpruebass.TabIndex = 36;
-            lblpruebass.Text = "0";
+            label45.AutoSize = true;
+            label45.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            label45.ForeColor = SystemColors.ButtonHighlight;
+            label45.Location = new Point(95, 0);
+            label45.Name = "label45";
+            label45.Size = new Size(109, 23);
+            label45.TabIndex = 2;
+            label45.Text = "Clave unidad";
             // 
-            // panel9
+            // label6
             // 
-            panel9.BackColor = Color.FromArgb(51, 58, 86);
-            panel9.Controls.Add(label20);
-            panel9.Controls.Add(label19);
-            panel9.Controls.Add(label18);
-            panel9.Controls.Add(label53);
-            panel9.Controls.Add(label52);
-            panel9.Location = new Point(0, 0);
-            panel9.Margin = new Padding(3, 4, 3, 4);
-            panel9.Name = "panel9";
-            panel9.Size = new Size(1017, 29);
-            panel9.TabIndex = 34;
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.ForeColor = SystemColors.ButtonHighlight;
+            label6.Location = new Point(9, 0);
+            label6.Name = "label6";
+            label6.Size = new Size(58, 23);
+            label6.TabIndex = 1;
+            label6.Text = "CANT.";
             // 
-            // label20
+            // lblarticulo
             // 
-            label20.AutoSize = true;
-            label20.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label20.ForeColor = SystemColors.ButtonHighlight;
-            label20.Location = new Point(609, 0);
-            label20.Name = "label20";
-            label20.Size = new Size(147, 23);
-            label20.TabIndex = 6;
-            label20.Text = "Mensualidad total";
-            // 
-            // label19
-            // 
-            label19.AutoSize = true;
-            label19.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label19.ForeColor = SystemColors.ButtonHighlight;
-            label19.Location = new Point(452, 0);
-            label19.Name = "label19";
-            label19.Size = new Size(117, 23);
-            label19.TabIndex = 5;
-            label19.Text = "Saldo anterior";
-            // 
-            // label18
-            // 
-            label18.AutoSize = true;
-            label18.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label18.ForeColor = SystemColors.ButtonHighlight;
-            label18.Location = new Point(286, 0);
-            label18.Name = "label18";
-            label18.Size = new Size(130, 23);
-            label18.TabIndex = 4;
-            label18.Text = "Capital restante";
-            // 
-            // label53
-            // 
-            label53.AutoSize = true;
-            label53.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label53.ForeColor = SystemColors.ButtonHighlight;
-            label53.Location = new Point(110, 0);
-            label53.Name = "label53";
-            label53.Size = new Size(122, 23);
-            label53.TabIndex = 3;
-            label53.Text = "Fecha de pago";
-            // 
-            // label52
-            // 
-            label52.AutoSize = true;
-            label52.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label52.ForeColor = SystemColors.ButtonHighlight;
-            label52.Location = new Point(8, 0);
-            label52.Name = "label52";
-            label52.Size = new Size(75, 23);
-            label52.TabIndex = 2;
-            label52.Text = "No.Pago";
+            lblarticulo.AutoSize = true;
+            lblarticulo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblarticulo.Location = new Point(391, 37);
+            lblarticulo.Name = "lblarticulo";
+            lblarticulo.Size = new Size(82, 28);
+            lblarticulo.TabIndex = 204;
+            lblarticulo.Text = "NISSAN";
             // 
             // TablaAmortizacionCon
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1017, 963);
+            ClientSize = new Size(1017, 805);
             Controls.Add(c);
             Controls.Add(panel1);
             Controls.Add(panel3);
@@ -849,9 +709,9 @@
             Controls.Add(panel6);
             Name = "TablaAmortizacionCon";
             Text = "TablaAmortizacionCon";
+            Load += TablaAmortizacionCon_Load;
             c.ResumeLayout(false);
             c.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel7.ResumeLayout(false);
             panel7.PerformLayout();
             panel1.ResumeLayout(false);
@@ -865,34 +725,20 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
-            panel9.ResumeLayout(false);
-            panel9.PerformLayout();
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Panel c;
-        private PictureBox pictureBox1;
-        private Label lblporengan;
-        private Label lblfinanciamiento;
-        private Label lblanualidad;
-        private Label lblmensualidad;
-        private Label label22;
-        private Label lblenganche;
-        private Label lblplazo;
-        private Label lblinteres;
+        private Label lbliva;
         private Label lblprecioini;
-        private Label label10;
         private Label label13;
-        private Label label16;
-        private Label label17;
-        private Label label2;
         private Label label3;
         private Panel panel7;
         private Label label44;
-        private Label label6;
-        private Label label7;
         private Panel panel1;
         private Panel panel8;
         private Label label43;
@@ -924,20 +770,22 @@
         private Label label11;
         private Label label9;
         private Panel panel6;
-        private Label lblmensualidadtotal;
-        private Label lblsaldoant;
-        private Label lblcapitalrestante;
-        private Label lblanoF;
-        private Label label30;
-        private Label lblMesF;
-        private Label label28;
-        private Label lbldiaF;
-        private Label lblpruebass;
-        private Panel panel9;
-        private Label label20;
-        private Label label19;
-        private Label label18;
-        private Label label53;
-        private Label label52;
+        private Label lblempleado;
+        private Label label2;
+        private Label label23;
+        private Label label16;
+        private Label lblcostover;
+        private Label label50;
+        private Label lblidversion;
+        private Label label49;
+        private Panel panel4;
+        private Label label48;
+        private Label label47;
+        private Label label46;
+        private Label label45;
+        private Label label6;
+        private Label lblarticulo;
+        private Label lblpreciomasiva;
+        private Label label10;
     }
 }

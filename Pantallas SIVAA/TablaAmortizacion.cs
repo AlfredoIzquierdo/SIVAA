@@ -238,5 +238,10 @@ namespace Pantallas_SIVAA
         {
 
         }
+
+        private void TablaAmortizacion_Load_2(object sender, EventArgs e)
+        {
+
+        }
     }
 }

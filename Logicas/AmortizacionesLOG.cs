@@ -34,6 +34,7 @@ namespace Logicas
             CotizacionCredito datos = pdcotcred.ObtenerPdto(idcotizacion);
             return datos;
         }
+       
         public VentaCredito ObtenerVentaCredito(string idventa)
         {
             VentaCredito datos = pdtoventacred.ObtenerPdto(idventa);
