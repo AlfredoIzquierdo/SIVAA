@@ -320,5 +320,7 @@ namespace Pantallas_SIVAA
             this.Close();
             inicio.Show();
         }
+
+
     }
 }

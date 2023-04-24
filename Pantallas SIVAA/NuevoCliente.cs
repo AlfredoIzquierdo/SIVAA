@@ -53,7 +53,7 @@ namespace Pantallas_SIVAA
 
                 clienteLog.Registrar(cliente);
 
-                this.Hide();
+                this.Close();
                 Clientes clientes = new Clientes(_pqt);
                 clientes.Show();
 

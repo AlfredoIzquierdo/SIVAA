@@ -2012,7 +2012,7 @@ namespace Pantallas_SIVAA
         }
         private void CalcularEnganche()
         {
-            if(txPrecioCot.Text==null)
+            if(txPrecioCot.Text=="")
             {
                 MessageBox.Show("Favor de llenar los campos");
             }else

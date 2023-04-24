@@ -22,6 +22,7 @@ namespace Pantallas_SIVAA
         {
             InitializeComponent();
             _pqt = pqt;
+            comboBusqueda.SelectedIndex = 0;
         }
 
         private void pictureBox13_Click(object sender, EventArgs e)
@@ -185,26 +186,17 @@ namespace Pantallas_SIVAA
                 dataGridView1.Rows.Clear();
                 foreach (Cliente x in datos)
                 {
-                    dataGridView1.Rows.Add(x.IDCliente, x.Nombre, x.ApellidoPat, x.ApellidoMat, x.RFC, x.Correo, x.Telefono, x.NoExterior, x.Colonia, x.Ciudad, x.Estado);
+                    if(x.EstadoCliente=="Activo")
+                    {
+                        dataGridView1.Rows.Add(x.IDCliente, x.Nombre, x.ApellidoPat, x.ApellidoMat, x.RFC, x.Correo, x.Telefono, x.NoExterior, x.Colonia, x.Ciudad, x.Estado);
+                    }
+                    
                 }
 
             }
         }
 
-        private void comboversion_SelectedValueChanged(object sender, EventArgs e)
-        {
-            txtbusqueda.Enabled = true;
-            if (comboBusqueda.Text == "Todos")
-            {
-                txtbusqueda.Enabled = false;
-                dataGridView1.ClearSelection();
-                List<Cliente> clie = cliente.ListadoAll();
-                foreach (Cliente x in clie)
-                {
-                    dataGridView1.Rows.Add(x.IDCliente, x.Nombre, x.ApellidoPat, x.ApellidoMat, x.RFC, x.Correo, x.Telefono, x.NoExterior, x.Colonia, x.Ciudad, x.Estado);
-                }
-            }
-        }
+        
 
         private void pictureBox11_Click(object sender, EventArgs e)
         {
@@ -230,6 +222,23 @@ namespace Pantallas_SIVAA
             this.DrawToBitmap(bitmap, new Rectangle(0, 0, this.Width, this.Height));
             e.Graphics.DrawImage(bitmap, 0, 0);
 
+        }
+
+        private void comboBusqueda_SelectedValueChanged(object sender, EventArgs e)
+        {
+            txtbusqueda.Enabled = true;
+            if (comboBusqueda.Text == "Todos")
+            {
+                txtbusqueda.Enabled = false;
+                dataGridView1.ClearSelection();
+                List<Cliente> clie = cliente.ListadoAll();
+                foreach (Cliente x in clie)
+                {
+
+                    if (x.EstadoCliente.Trim() == "Activo")
+                        dataGridView1.Rows.Add(x.IDCliente, x.Nombre, x.ApellidoPat, x.ApellidoMat, x.RFC, x.Correo, x.Telefono, x.NoExterior, x.Colonia, x.Ciudad, x.Estado);
+                }
+            }
         }
     }
 }
