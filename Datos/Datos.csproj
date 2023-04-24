@@ -66,5 +66,11 @@
     <Compile Include="VentaD.cs" />
     <Compile Include="VersionD.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{11d15068-3d9c-4670-afb1-d059f6848e7d}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
