@@ -159,9 +159,8 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(6787, 15);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(255, 32);
+            this.label2.Size = new System.Drawing.Size(0, 32);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Bienvenido: Fulanito";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label7
