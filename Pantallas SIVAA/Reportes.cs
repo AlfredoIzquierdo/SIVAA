@@ -132,12 +132,7 @@ namespace Pantallas_SIVAA
             }
         }
 
-        private void pictureBox13_Click_1(object sender, EventArgs e)
-        {
-            Inicio inicio = new Inicio(_pqt);
-            this.Close();
-            inicio.Show();
-        }
+        
 
         private void btnEmpleados_Click(object sender, EventArgs e)
         {
@@ -172,11 +167,7 @@ namespace Pantallas_SIVAA
             periodoventas.Show();
         }
 
-        private void btnCorteCaja_Click_1(object sender, EventArgs e)
-        {
-            Corte C = new Corte(_pqt);
-            C.Show();
-        }
+        
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -192,40 +183,7 @@ namespace Pantallas_SIVAA
             per.Show();
         }
 
-        private void btnStock_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnCobros_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnVentas_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnCitas_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnReportes_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnPedidos_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox13_Click_2(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void button1_Click(object sender, EventArgs e)
         {
