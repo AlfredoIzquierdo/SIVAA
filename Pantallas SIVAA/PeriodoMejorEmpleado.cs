@@ -18,13 +18,75 @@ namespace Pantallas_SIVAA
         {
             InitializeComponent();
             _pqt = pqt;
+            DateTime today = DateTime.Today;
+            int diaAct = today.Day;
+            int mesAct = today.Month;
+            int anoAct = today.Year;
+            numericDiaI.Value = (decimal)diaAct;
+            numericMesI.Value = (decimal)mesAct;
+            numericAnoI.Value = (decimal)anoAct;
+            numericDiaF.Value = (decimal)diaAct;
+            numericMesF.Value = (decimal)mesAct;
+            numericAnoF.Value = (decimal)anoAct;
+
+            cbPeriodoEmpleado.SelectedIndex = 0;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ReporteMejoresEmpleados mejorem = new ReporteMejoresEmpleados(_pqt);
-            this.Close();
-            mejorem.Show();
+            if (numericDiaF.Value < numericDiaI.Value | numericMesF.Value < numericMesI.Value | numericAnoF.Value < numericAnoI.Value)
+            {
+                MessageBox.Show("La fecha final debe ser menor a la fecha final");
+            }
+            else
+            {
+                ReporteMejoresEmpleados mejorem = new ReporteMejoresEmpleados(_pqt, (int)numericDiaI.Value, (int)numericMesI.Value, (int)numericAnoI.Value, (int)numericDiaF.Value, (int)numericMesF.Value, (int)numericAnoF.Value, cbPeriodoEmpleado.Text);
+                this.Close();
+                mejorem.Show();
+            }
+
+        }
+
+        private void PeriodoMejorEmpleado_Load(object sender, EventArgs e)
+        {
+            if (cbPeriodoEmpleado.Text == "Dia")
+            {
+                numericMesF.Enabled = false;
+                numericMesI.Enabled = false;
+                numericAnoF.Enabled = false;
+                numericAnoI.Enabled = false;
+            }
+        }
+
+        private void cbPeriodoClien_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (cbPeriodoEmpleado.Text == "Dia")
+            {
+                numericDiaI.Enabled = true;
+                numericDiaF.Enabled = true;
+                numericMesF.Enabled = false;
+                numericMesI.Enabled = false;
+                numericAnoF.Enabled = false;
+                numericAnoI.Enabled = false;
+            }
+            if (cbPeriodoEmpleado.Text == "Mes")
+            {
+                numericMesF.Enabled = true;
+                numericMesI.Enabled = true;
+                numericAnoF.Enabled = false;
+                numericAnoI.Enabled = false;
+                numericDiaI.Enabled = false;
+                numericDiaF.Enabled = false;
+            }
+            if (cbPeriodoEmpleado.Text == "Año")
+            {
+                numericMesF.Enabled = false;
+                numericMesI.Enabled = false;
+                numericAnoF.Enabled = true;
+                numericAnoI.Enabled = true;
+                numericDiaI.Enabled = false;
+                numericDiaF.Enabled = false;
+            }
         }
     }
 }

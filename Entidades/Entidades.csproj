@@ -53,6 +53,7 @@
     <Compile Include="CotizacionCredito.cs" />
     <Compile Include="CotizacionNoUsar.cs" />
     <Compile Include="Empleado.cs" />
+    <Compile Include="GananciasCliente.cs" />
     <Compile Include="Modelo.cs" />
     <Compile Include="ModeloVersion.cs" />
     <Compile Include="Pago.cs" />
@@ -63,6 +64,9 @@
     <Compile Include="ReporteInventario.cs" />
     <Compile Include="ReporteVentasContado.cs" />
     <Compile Include="ReporteVentasCredito.cs" />
+    <Compile Include="ReporteEmpleadoVenta.cs" />
+    <Compile Include="ReportesEntidad.cs" />
+    <Compile Include="ReporteVehiculoMasVendido.cs" />
     <Compile Include="Unidad.cs" />
     <Compile Include="UnidadNoUsar.cs" />
     <Compile Include="Vehiculo.cs" />

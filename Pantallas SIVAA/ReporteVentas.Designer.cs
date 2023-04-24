@@ -42,18 +42,10 @@
             Column2 = new DataGridViewTextBoxColumn();
             Column1 = new DataGridViewTextBoxColumn();
             panel6 = new Panel();
-            label10 = new Label();
-            label11 = new Label();
             panel5 = new Panel();
             panel4 = new Panel();
             dataGridView1 = new DataGridView();
-            panel3 = new Panel();
             pictureBox1 = new PictureBox();
-            label15 = new Label();
-            label14 = new Label();
-            label13 = new Label();
-            label12 = new Label();
-            Mensaje = new Label();
             label2 = new Label();
             label9 = new Label();
             label7 = new Label();
@@ -63,16 +55,24 @@
             label1 = new Label();
             panel2 = new Panel();
             label8 = new Label();
-            button1 = new Button();
             label5 = new Label();
             panel1 = new Panel();
+            button1 = new Button();
+            panel3 = new Panel();
+            label10 = new Label();
+            label11 = new Label();
+            Mensaje = new Label();
+            label12 = new Label();
+            label15 = new Label();
+            label14 = new Label();
+            label13 = new Label();
             panel6.SuspendLayout();
             panel5.SuspendLayout();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
+            panel3.SuspendLayout();
             SuspendLayout();
             // 
             // label18
@@ -171,26 +171,6 @@
             panel6.Size = new Size(245, 55);
             panel6.TabIndex = 75;
             // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label10.Location = new Point(101, 13);
-            label10.Name = "label10";
-            label10.Size = new Size(110, 25);
-            label10.TabIndex = 19;
-            label10.Text = "$0,000,000";
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label11.Location = new Point(14, 11);
-            label11.Name = "label11";
-            label11.Size = new Size(80, 29);
-            label11.TabIndex = 20;
-            label11.Text = "Total:";
-            // 
             // panel5
             // 
             panel5.Anchor = AnchorStyles.Top;
@@ -234,17 +214,6 @@
             dataGridView1.Size = new Size(1265, 347);
             dataGridView1.TabIndex = 72;
             // 
-            // panel3
-            // 
-            panel3.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            panel3.BackColor = Color.WhiteSmoke;
-            panel3.Controls.Add(label10);
-            panel3.Controls.Add(label11);
-            panel3.Location = new Point(982, 567);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(295, 55);
-            panel3.TabIndex = 71;
-            // 
             // pictureBox1
             // 
             pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
@@ -254,61 +223,6 @@
             pictureBox1.Size = new Size(54, 44);
             pictureBox1.TabIndex = 70;
             pictureBox1.TabStop = false;
-            // 
-            // label15
-            // 
-            label15.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            label15.AutoSize = true;
-            label15.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label15.Location = new Point(248, 633);
-            label15.Name = "label15";
-            label15.Size = new Size(86, 22);
-            label15.TabIndex = 67;
-            label15.Text = "Unidades";
-            // 
-            // label14
-            // 
-            label14.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            label14.AutoSize = true;
-            label14.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label14.Location = new Point(171, 633);
-            label14.Name = "label14";
-            label14.Size = new Size(70, 22);
-            label14.TabIndex = 66;
-            label14.Text = "______";
-            // 
-            // label13
-            // 
-            label13.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            label13.AutoSize = true;
-            label13.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label13.Location = new Point(11, 633);
-            label13.Name = "label13";
-            label13.Size = new Size(157, 22);
-            label13.TabIndex = 68;
-            label13.Text = "Con una venta de:";
-            // 
-            // label12
-            // 
-            label12.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            label12.AutoSize = true;
-            label12.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label12.Location = new Point(243, 605);
-            label12.Name = "label12";
-            label12.Size = new Size(150, 22);
-            label12.TabIndex = 65;
-            label12.Text = "______________";
-            // 
-            // Mensaje
-            // 
-            Mensaje.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            Mensaje.AutoSize = true;
-            Mensaje.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            Mensaje.Location = new Point(11, 605);
-            Mensaje.Name = "Mensaje";
-            Mensaje.Size = new Size(230, 22);
-            Mensaje.TabIndex = 64;
-            Mensaje.Text = "El modelo mas vendido fue:";
             // 
             // label2
             // 
@@ -403,20 +317,6 @@
             label8.TabIndex = 60;
             label8.Text = "01/02/2023 - 01/03/2023";
             // 
-            // button1
-            // 
-            button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            button1.BackColor = Color.FromArgb(82, 101, 143);
-            button1.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.ForeColor = SystemColors.ButtonHighlight;
-            button1.Location = new Point(1042, 655);
-            button1.Name = "button1";
-            button1.Size = new Size(234, 55);
-            button1.TabIndex = 69;
-            button1.Text = "Regresar";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
-            // 
             // label5
             // 
             label5.AutoSize = true;
@@ -439,6 +339,106 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1289, 75);
             panel1.TabIndex = 58;
+            // 
+            // button1
+            // 
+            button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            button1.BackColor = Color.FromArgb(82, 101, 143);
+            button1.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.ForeColor = SystemColors.ButtonHighlight;
+            button1.Location = new Point(1042, 655);
+            button1.Name = "button1";
+            button1.Size = new Size(234, 55);
+            button1.TabIndex = 69;
+            button1.Text = "Regresar";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
+            // panel3
+            // 
+            panel3.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            panel3.BackColor = Color.WhiteSmoke;
+            panel3.Controls.Add(label10);
+            panel3.Controls.Add(label11);
+            panel3.Location = new Point(982, 567);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(295, 55);
+            panel3.TabIndex = 71;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label10.Location = new Point(101, 13);
+            label10.Name = "label10";
+            label10.Size = new Size(110, 25);
+            label10.TabIndex = 19;
+            label10.Text = "$0,000,000";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label11.Location = new Point(14, 11);
+            label11.Name = "label11";
+            label11.Size = new Size(80, 29);
+            label11.TabIndex = 20;
+            label11.Text = "Total:";
+            // 
+            // Mensaje
+            // 
+            Mensaje.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            Mensaje.AutoSize = true;
+            Mensaje.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            Mensaje.Location = new Point(11, 605);
+            Mensaje.Name = "Mensaje";
+            Mensaje.Size = new Size(230, 22);
+            Mensaje.TabIndex = 64;
+            Mensaje.Text = "El modelo mas vendido fue:";
+            // 
+            // label12
+            // 
+            label12.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            label12.AutoSize = true;
+            label12.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label12.Location = new Point(243, 605);
+            label12.Name = "label12";
+            label12.Size = new Size(150, 22);
+            label12.TabIndex = 65;
+            label12.Text = "______________";
+            // 
+            // label15
+            // 
+            label15.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            label15.AutoSize = true;
+            label15.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label15.Location = new Point(248, 633);
+            label15.Name = "label15";
+            label15.Size = new Size(86, 22);
+            label15.TabIndex = 67;
+            label15.Text = "Unidades";
+            // 
+            // label14
+            // 
+            label14.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            label14.AutoSize = true;
+            label14.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label14.Location = new Point(171, 633);
+            label14.Name = "label14";
+            label14.Size = new Size(70, 22);
+            label14.TabIndex = 66;
+            label14.Text = "______";
+            // 
+            // label13
+            // 
+            label13.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            label13.AutoSize = true;
+            label13.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label13.Location = new Point(11, 633);
+            label13.Name = "label13";
+            label13.Size = new Size(157, 22);
+            label13.TabIndex = 68;
+            label13.Text = "Con una venta de:";
             // 
             // ReporteVentas
             // 
@@ -477,11 +477,11 @@
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -501,18 +501,10 @@
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column1;
         private Panel panel6;
-        private Label label10;
-        private Label label11;
         private Panel panel5;
         private Panel panel4;
         private DataGridView dataGridView1;
-        private Panel panel3;
         private PictureBox pictureBox1;
-        private Label label15;
-        private Label label14;
-        private Label label13;
-        private Label label12;
-        private Label Mensaje;
         private Label label2;
         private Label label9;
         private Label label7;
@@ -522,8 +514,16 @@
         private Label label1;
         private Panel panel2;
         private Label label8;
-        private Button button1;
         private Label label5;
         private Panel panel1;
+        private Button button1;
+        private Panel panel3;
+        private Label label10;
+        private Label label11;
+        private Label Mensaje;
+        private Label label12;
+        private Label label15;
+        private Label label14;
+        private Label label13;
     }
 }

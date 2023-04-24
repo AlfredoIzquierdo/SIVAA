@@ -139,12 +139,12 @@
             button3.ImageAlign = ContentAlignment.TopCenter;
             button3.ImageIndex = 6;
             button3.ImageList = IconosReportes;
-            button3.Location = new Point(16, 346);
+            button3.Location = new Point(0, 334);
             button3.Margin = new Padding(3, 2, 3, 2);
             button3.Name = "button3";
-            button3.Size = new Size(197, 126);
+            button3.Size = new Size(234, 138);
             button3.TabIndex = 55;
-            button3.Text = "Vehiculos vendidos";
+            button3.Text = "Vehiculos mas vendidos";
             button3.TextAlign = ContentAlignment.BottomCenter;
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
@@ -181,6 +181,7 @@
             btnClientefrecuente.Text = "Clientes frecuentes";
             btnClientefrecuente.TextAlign = ContentAlignment.BottomCenter;
             btnClientefrecuente.UseVisualStyleBackColor = false;
+            btnClientefrecuente.Click += btnClientefrecuente_Click;
             // 
             // btnCitasxvendedor
             // 
@@ -239,14 +240,15 @@
             btnProveedor.ImageAlign = ContentAlignment.TopCenter;
             btnProveedor.ImageKey = "productivity_FILL0_wght400_GRAD0_opsz48.png";
             btnProveedor.ImageList = IconosReportes;
-            btnProveedor.Location = new Point(16, 182);
+            btnProveedor.Location = new Point(3, 180);
             btnProveedor.Margin = new Padding(3, 2, 3, 2);
             btnProveedor.Name = "btnProveedor";
-            btnProveedor.Size = new Size(197, 126);
+            btnProveedor.Size = new Size(231, 129);
             btnProveedor.TabIndex = 52;
-            btnProveedor.Text = "Mejores empleados";
+            btnProveedor.Text = "Ventas por empleado";
             btnProveedor.TextAlign = ContentAlignment.BottomCenter;
             btnProveedor.UseVisualStyleBackColor = false;
+            btnProveedor.Click += btnProveedor_Click;
             // 
             // btnrepventas
             // 
@@ -263,6 +265,7 @@
             btnrepventas.Text = "Ventas";
             btnrepventas.TextAlign = ContentAlignment.BottomCenter;
             btnrepventas.UseVisualStyleBackColor = false;
+            btnrepventas.Click += btnrepventas_Click;
             // 
             // panel7
             // 

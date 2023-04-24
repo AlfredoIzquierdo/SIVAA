@@ -17,11 +17,11 @@ namespace Pantallas_SIVAA
             InitializeComponent();
         }
 
-        
+
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void label17_Click(object sender, EventArgs e)
@@ -47,7 +47,7 @@ namespace Pantallas_SIVAA
             //paneles superiores al data
             int w = 0, h = 0;
             w = Column1.Width + Column2.Width + Column3.Width;
-            panel4.Location = new Point(w + 18, dataGridView1.Location.Y-panel4.Height);
+            panel4.Location = new Point(w + 18, dataGridView1.Location.Y - panel4.Height);
             h = Column4.Width + Column5.Width;
             panel4.Size = new Size(h - 5, panel4.Size.Height);
             int t = panel4.Size.Width / 3;

@@ -1,4 +1,5 @@
 ﻿using Entidades;
+using Logicas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,10 +15,73 @@ namespace Pantallas_SIVAA
     public partial class ReporteMejoresEmpleados : Form
     {
         Empleado _pqt;
-        public ReporteMejoresEmpleados(Empleado pqt)
+        readonly ReportesLOG reportesLOG = new ReportesLOG();
+        readonly EmpleadoLog empleadoLog = new EmpleadoLog();
+
+        public ReporteMejoresEmpleados(Empleado pqt, int diaI, int mesI, int AnoI, int diaF, int mesF, int AnoF, string opcion)
         {
             InitializeComponent();
             _pqt = pqt;
+
+            DateTime today = DateTime.Today;
+            string diaAct = today.Day.ToString();
+            string mesAct = today.Month.ToString();
+            string anoAct = today.Year.ToString();
+            Random rnd = new Random();
+            int numeroAleatorio = rnd.Next(210000, 219001);
+
+            lbldia.Text = diaAct;
+            lblmes.Text = mesAct;
+            lblano.Text = anoAct;
+            lblnombrec.Text = pqt.Nombre.Trim() + " " + pqt.ApellidoPat.Trim() + " " + pqt.ApellidoMat.Trim();
+            lblidempleado.Text = pqt.IDEmpleado.Trim();
+            lblperiodo.Text = diaI.ToString() + "/" + mesI.ToString() + "/" + AnoI.ToString() + " --- " + diaF.ToString() + "/" + mesF.ToString() + "/" + AnoF.ToString();
+            lblidcot.Text = numeroAleatorio.ToString();
+
+            //Parte de abajo
+            List<ReporteEmpleadoVenta> EmpleadosContado = new List<ReporteEmpleadoVenta>();
+            List<ReporteEmpleadoVenta> EmpleadosCredito = new List<ReporteEmpleadoVenta>();
+            //List<string> valoresusados= new List<string>();
+            EmpleadosContado = reportesLOG.listadoEmpleadoVentasContado(diaI, mesI, AnoI, diaF, mesF, AnoF, opcion);
+            EmpleadosCredito = reportesLOG.listadoEmpleadoVentasCredito(diaI, mesI, AnoI, diaF, mesF, AnoF, opcion);
+            foreach (ReporteEmpleadoVenta x in EmpleadosContado)
+            {
+                int totalVecesVendido = Convert.ToInt32(x.VentasRealizadas);
+                bool bandera=false;
+                foreach (ReporteEmpleadoVenta z in EmpleadosCredito)
+                {
+                    
+                    if (x.IDEmpleado == z.IDEmpleado)
+                    {
+                        bandera = true;
+                        
+                        totalVecesVendido = Convert.ToInt32(x.VentasRealizadas);
+                        totalVecesVendido += Convert.ToInt32(z.VentasRealizadas);
+                        Empleado empleadoActual = new Empleado();
+                        empleadoActual = empleadoLog.LeerPorClave(x.IDEmpleado);
+                        string nombrecompleto1 = empleadoActual.Nombre.Trim() + " " + empleadoActual.ApellidoPat.Trim() + " " + empleadoActual.ApellidoMat.Trim();
+                        dgvEmpleadosV.Rows.Add(x.IDEmpleado, nombrecompleto1, z.VentasRealizadas, x.VentasRealizadas, totalVecesVendido.ToString(), reportesLOG.gananciasEmpleado(x.IDEmpleado));
+                        //int indice= EmpleadosCredito.IndexOf(z);
+                        //EmpleadosCredito.RemoveAt(indice);
+                        break;
+
+                    } 
+
+                    
+
+                }
+                if (bandera ==false)
+                {
+                    Empleado empleadoAct = new Empleado();
+                    empleadoAct = empleadoLog.LeerPorClave(x.IDEmpleado);
+                    string nombrecompleto = empleadoAct.Nombre.Trim() + " " + empleadoAct.ApellidoPat.Trim() + " " + empleadoAct.ApellidoMat.Trim();
+                    dgvEmpleadosV.Rows.Add(x.IDEmpleado, nombrecompleto, x.VentasRealizadas, 0, totalVecesVendido.ToString(), reportesLOG.gananciasEmpleado(x.IDEmpleado));
+                }
+                
+
+
+
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -29,6 +93,11 @@ namespace Pantallas_SIVAA
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ReporteMejoresEmpleados_Load(object sender, EventArgs e)
         {
 
         }

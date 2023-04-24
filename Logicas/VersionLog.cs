@@ -54,7 +54,21 @@ namespace Logicas
             }
             return null;
         }
-        
+        public Versions ObtenerPdtoPorID(string ClPdto)
+        {
+            Versions Pd = null;
+            Mensaje.Clear();
+            if (ClPdto == "")
+                Mensaje.Append("Por favor proporcionar una versión");
+            if (Mensaje.Length == 0)
+            {
+                Pd = Pdto.ObtenerPdto(ClPdto);
+                if (Pd == null)
+                    Mensaje.Append("La versión no existe en la B.D.");
+                return Pd;
+            }
+            return null;
+        }
         public void Eliminar(string CodPqte)
         {
             Mensaje.Clear();
