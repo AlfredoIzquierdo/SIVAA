@@ -44,28 +44,28 @@ namespace Pantallas_SIVAA
                     {
                         //MessageBox.Show("Atencion a clientes");
                         Inicio AteInicio = new Inicio(pqt);
-                        this.Close();
+                        this.Hide();
                         AteInicio.Show();
                     }
                     else if (pqt.Tipo.Trim() == "Vendedor")
                     {
                         //MessageBox.Show("Vendedor");
                         Inicio VenInicio = new Inicio(pqt);
-                        this.Close();
+                        this.Hide();
                         VenInicio.Show();
                     }
                     else if (pqt.Tipo.Trim() == "Cajero")
                     {
                         //MessageBox.Show("Cajero");
                         AbrirCaja CajInicio = new AbrirCaja(pqt);
-                        this.Close();
+                        this.Hide();
                         CajInicio.Show();
                     }
                     else if (pqt.Tipo.Trim() == "Supervisor")
                     {
                         //MessageBox.Show("Supervisor");
                         Inicio SupInicio = new Inicio(pqt);
-                        this.Close();
+                        this.Hide();
                         SupInicio.Show();
                     }
                     //else

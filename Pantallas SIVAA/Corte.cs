@@ -70,9 +70,9 @@ namespace Pantallas_SIVAA
 
         private void dataGridView1_Click(object sender, EventArgs e)
         {
-            ReporteBuenoCaja reporteBuenoCaja = new ReporteBuenoCaja();
-            this.Close();
-            reporteBuenoCaja.Show();
+            //ReporteBuenoCaja reporteBuenoCaja = new ReporteBuenoCaja();
+            //this.Close();
+            //reporteBuenoCaja.Show();
         }
 
         private void btnPedidos_Click(object sender, EventArgs e)

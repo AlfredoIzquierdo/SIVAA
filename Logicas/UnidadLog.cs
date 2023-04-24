@@ -38,6 +38,11 @@ namespace Logicas
             //Método que obtiene la lista dinámica de todos los registro que tiene mi tabla
             return Pdto.InventarioGral();
         }
+        public List<ReporteInventario> ReportInventario()
+        {
+            //Método que obtiene la lista dinámica de todos los registro que tiene mi tabla
+            return Pdto.ReporteInventario();
+        }
         public List<UnidadNoUsar> InventarioFiltro(string disp,string buscar)
         {
             //Método que obtiene la lista dinámica de todos los registro que tiene mi tabla

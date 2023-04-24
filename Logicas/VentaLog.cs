@@ -3,6 +3,7 @@ using Entidades;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -141,7 +142,157 @@ namespace Logicas
             }
             return null;
         }
+        public List<ReporteVentasContado> ListaVentasContadoPorDia(int dia, int mes, int an)
+        {
+            List<ReporteVentasContado> Pd = null;
+            Mensaje.Clear();
+            if (dia == 0 || mes==0 || an==0)
+                Mensaje.Append("Por favor proporcionar una fecha valida");
+            if (Mensaje.Length == 0)
+            {
+                Pd = Pdto.VentasPorDiaespecifico(dia,mes,an);
+                if (Pd == null)
+                    Mensaje.Append("Ventas no encontradas de acuerdo a la fecha");
+                return Pd;
+            }
+            return null;
+        }
+        //public List<ReporteVentasContado> ListaVentasContadoPorMes(int dia, int mes, int an)
+        //{
+        //    List<ReporteVentasContado> Pd = null;
+        //    Mensaje.Clear();
+        //    if (dia == 0 || mes == 0 || an == 0)
+        //        Mensaje.Append("Por favor proporcionar una fecha valida");
+        //    if (Mensaje.Length == 0)
+        //    {
+        //        Pd = Pdto.VentasPorDiaespecifico(dia, mes, an);
+        //        if (Pd == null)
+        //            Mensaje.Append("Ventas no encontradas de acuerdo a la fecha");
+        //        return Pd;
+        //    }
+        //    return null;
+        //}
+        //public List<ReporteVentasContado> ListaVentasContadoAnual(int dia, int mes, int an)
+        //{
+        //    List<ReporteVentasContado> Pd = null;
+        //    Mensaje.Clear();
+        //    if (dia == 0 || mes == 0 || an == 0)
+        //        Mensaje.Append("Por favor proporcionar una fecha valida");
+        //    if (Mensaje.Length == 0)
+        //    {
+        //        Pd = Pdto.VentasPorDiaespecifico(dia, mes, an);
+        //        if (Pd == null)
+        //            Mensaje.Append("Ventas no encontradas de acuerdo a la fecha");
+        //        return Pd;
+        //    }
+        //    return null;
+        //}
+        public List<ReporteVentasContado> ListaVentasContadoSemanal(int dia,int fin, int mes, int an)
+        {
+            List<ReporteVentasContado> Pd = null;
+            Mensaje.Clear();
+            if (dia == 0 || mes == 0 || an == 0 || fin==0)
+                Mensaje.Append("Por favor proporcionar una fecha valida");
+            if (Mensaje.Length == 0)
+            {
+                Pd = Pdto.VentasPorSemanaespecifico(dia,fin, mes, an);
+                if (Pd == null)
+                    Mensaje.Append("Ventas no encontradas de acuerdo a la fecha");
+                return Pd;
+            }
+            return null;
+        }
+        public List<ReporteVentasContado> ListaVentasContadoMes(int mes, int an)
+        {
+            List<ReporteVentasContado> Pd = null;
+            Mensaje.Clear();
+            if (mes == 0 || an == 0)
+                Mensaje.Append("Por favor proporcionar una fecha valida");
+            if (Mensaje.Length == 0)
+            {
+                Pd = Pdto.VentasPorMesespecifico(mes, an);
+                if (Pd == null)
+                    Mensaje.Append("Ventas no encontradas de acuerdo a la fecha");
+                return Pd;
+            }
+            return null;
+        }
+        public List<ReporteVentasContado> ListaVentasContadoAnual(int an)
+        {
+            List<ReporteVentasContado> Pd = null;
+            Mensaje.Clear();
+            if (an == 0)
+                Mensaje.Append("Por favor proporcionar una fecha valida");
+            if (Mensaje.Length == 0)
+            {
+                Pd = Pdto.VentasAnualesespecificas(an);
+                if (Pd == null)
+                    Mensaje.Append("Ventas no encontradas de acuerdo a la fecha");
+                return Pd;
+            }
+            return null;
+        }
 
+        public List<ReporteVentasCredito> ListaVentasCreditoPorDia(int dia, int mes, int an)
+        {
+            List<ReporteVentasCredito> Pd = null;
+            Mensaje.Clear();
+            if (dia == 0 || mes == 0 || an == 0)
+                Mensaje.Append("Por favor proporcionar una fecha valida");
+            if (Mensaje.Length == 0)
+            {
+                Pd = Pdto.ReporteVentasACreditoPorDia(dia, mes, an);
+                if (Pd == null)
+                    Mensaje.Append("Ventas no encontradas de acuerdo a la fecha");
+                return Pd;
+            }
+            return null;
+        }
+        public List<ReporteVentasCredito> ListaVentasCreditoSemanal(int dia,int fin ,int mes, int an)
+        {
+            List<ReporteVentasCredito> Pd = null;
+            Mensaje.Clear();
+            if (dia == 0 || fin==0 || mes == 0 || an == 0)
+                Mensaje.Append("Por favor proporcionar una fecha valida");
+            if (Mensaje.Length == 0)
+            {
+                Pd = Pdto.ReporteVentasACreditoPorSemana(dia,fin, mes, an);
+                if (Pd == null)
+                    Mensaje.Append("Ventas no encontradas de acuerdo a la fecha");
+                return Pd;
+            }
+            return null;
+        }
+        public List<ReporteVentasCredito> ListaVentasCreditoPorMes(int mes, int an)
+        {
+            List<ReporteVentasCredito> Pd = null;
+            Mensaje.Clear();
+            if (mes == 0 || an == 0)
+                Mensaje.Append("Por favor proporcionar una fecha valida");
+            if (Mensaje.Length == 0)
+            {
+                Pd = Pdto.ReporteVentasACreditoPorMes(mes, an);
+                if (Pd == null)
+                    Mensaje.Append("Ventas no encontradas de acuerdo a la fecha");
+                return Pd;
+            }
+            return null;
+        }
+        public List<ReporteVentasCredito> ListaVentasCreditoAnual(int an)
+        {
+            List<ReporteVentasCredito> Pd = null;
+            Mensaje.Clear();
+            if (an == 0)
+                Mensaje.Append("Por favor proporcionar una fecha valida");
+            if (Mensaje.Length == 0)
+            {
+                Pd = Pdto.ReporteVentasACreditoAnual(an);
+                if (Pd == null)
+                    Mensaje.Append("Ventas no encontradas de acuerdo a la fecha");
+                return Pd;
+            }
+            return null;
+        }
         public Venta LeerPorClave(string ClPdto)
         {
             Venta Pd = null;

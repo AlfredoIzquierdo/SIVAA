@@ -48,6 +48,13 @@
             LBLCONCEPTO = new Label();
             LBLCANTIDAD = new Label();
             LBLIDCLIENTE = new Label();
+            lbltextosalac = new Label();
+            lblsaldoactual = new Label();
+            lbltexttosalant = new Label();
+            lblsalant = new Label();
+            label8 = new Label();
+            LBLFORMAPAGO = new Label();
+            label9 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -144,7 +151,7 @@
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI", 8.816326F, FontStyle.Bold, GraphicsUnit.Point);
-            label10.Location = new Point(29, 230);
+            label10.Location = new Point(29, 287);
             label10.Name = "label10";
             label10.Size = new Size(86, 20);
             label10.TabIndex = 9;
@@ -154,7 +161,7 @@
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI", 8.816326F, FontStyle.Bold, GraphicsUnit.Point);
-            label11.Location = new Point(221, 230);
+            label11.Location = new Point(221, 287);
             label11.Name = "label11";
             label11.Size = new Size(92, 20);
             label11.TabIndex = 10;
@@ -164,7 +171,7 @@
             // 
             label13.AutoSize = true;
             label13.Font = new Font("Segoe UI", 8.816326F, FontStyle.Bold, GraphicsUnit.Point);
-            label13.Location = new Point(428, 230);
+            label13.Location = new Point(428, 287);
             label13.Name = "label13";
             label13.Size = new Size(75, 20);
             label13.TabIndex = 12;
@@ -214,7 +221,7 @@
             // 
             LBLIMPORTE.AutoSize = true;
             LBLIMPORTE.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            LBLIMPORTE.Location = new Point(428, 293);
+            LBLIMPORTE.Location = new Point(428, 350);
             LBLIMPORTE.Name = "LBLIMPORTE";
             LBLIMPORTE.Size = new Size(41, 20);
             LBLIMPORTE.TabIndex = 14;
@@ -224,7 +231,7 @@
             // 
             LBLCONCEPTO.AutoSize = true;
             LBLCONCEPTO.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            LBLCONCEPTO.Location = new Point(29, 293);
+            LBLCONCEPTO.Location = new Point(29, 350);
             LBLCONCEPTO.Name = "LBLCONCEPTO";
             LBLCONCEPTO.Size = new Size(73, 20);
             LBLCONCEPTO.TabIndex = 14;
@@ -234,7 +241,7 @@
             // 
             LBLCANTIDAD.AutoSize = true;
             LBLCANTIDAD.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            LBLCANTIDAD.Location = new Point(248, 293);
+            LBLCANTIDAD.Location = new Point(248, 350);
             LBLCANTIDAD.Name = "LBLCANTIDAD";
             LBLCANTIDAD.Size = new Size(17, 20);
             LBLCANTIDAD.TabIndex = 14;
@@ -250,21 +257,93 @@
             LBLIDCLIENTE.TabIndex = 4;
             LBLIDCLIENTE.Text = "C1";
             // 
+            // lbltextosalac
+            // 
+            lbltextosalac.AutoSize = true;
+            lbltextosalac.Font = new Font("Segoe UI", 8.816326F, FontStyle.Bold, GraphicsUnit.Point);
+            lbltextosalac.Location = new Point(23, 240);
+            lbltextosalac.Name = "lbltextosalac";
+            lbltextosalac.Size = new Size(0, 20);
+            lbltextosalac.TabIndex = 9;
+            // 
+            // lblsaldoactual
+            // 
+            lblsaldoactual.AutoSize = true;
+            lblsaldoactual.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            lblsaldoactual.Location = new Point(153, 240);
+            lblsaldoactual.Name = "lblsaldoactual";
+            lblsaldoactual.Size = new Size(0, 20);
+            lblsaldoactual.TabIndex = 14;
+            // 
+            // lbltexttosalant
+            // 
+            lbltexttosalant.AutoSize = true;
+            lbltexttosalant.Font = new Font("Segoe UI", 8.816326F, FontStyle.Bold, GraphicsUnit.Point);
+            lbltexttosalant.Location = new Point(287, 240);
+            lbltexttosalant.Name = "lbltexttosalant";
+            lbltexttosalant.Size = new Size(0, 20);
+            lbltexttosalant.TabIndex = 9;
+            // 
+            // lblsalant
+            // 
+            lblsalant.AutoSize = true;
+            lblsalant.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            lblsalant.Location = new Point(426, 240);
+            lblsalant.Name = "lblsalant";
+            lblsalant.Size = new Size(0, 20);
+            lblsalant.TabIndex = 14;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 8.816326F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.Location = new Point(29, 521);
+            label8.Name = "label8";
+            label8.Size = new Size(112, 20);
+            label8.TabIndex = 13;
+            label8.Text = "FORMA PAGO:";
+            // 
+            // LBLFORMAPAGO
+            // 
+            LBLFORMAPAGO.AutoSize = true;
+            LBLFORMAPAGO.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            LBLFORMAPAGO.Location = new Point(153, 521);
+            LBLFORMAPAGO.Name = "LBLFORMAPAGO";
+            LBLFORMAPAGO.Size = new Size(88, 20);
+            LBLFORMAPAGO.TabIndex = 14;
+            LBLFORMAPAGO.Text = "Forma Pago";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(-10, 265);
+            label9.Name = "label9";
+            label9.Size = new Size(621, 20);
+            label9.TabIndex = 17;
+            label9.Text = "______________________________________________________________________________________________________";
+            // 
             // Ticket
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(600, 672);
+            Controls.Add(label9);
             Controls.Add(pictureBox1);
             Controls.Add(label16);
             Controls.Add(LBLCANTIDAD);
+            Controls.Add(lblsalant);
+            Controls.Add(lblsaldoactual);
+            Controls.Add(LBLFORMAPAGO);
             Controls.Add(LBLCONCEPTO);
             Controls.Add(LBLIMPORTE);
             Controls.Add(LBLTOTAL);
+            Controls.Add(label8);
             Controls.Add(label14);
             Controls.Add(label13);
             Controls.Add(label11);
+            Controls.Add(lbltexttosalant);
+            Controls.Add(lbltextosalac);
             Controls.Add(label10);
             Controls.Add(LBLHORA);
             Controls.Add(LBLFECHA);
@@ -307,5 +386,12 @@
         private Label LBLCONCEPTO;
         private Label LBLCANTIDAD;
         private Label LBLIDCLIENTE;
+        private Label lbltextosalac;
+        private Label lblsaldoactual;
+        private Label lbltexttosalant;
+        private Label lblsalant;
+        private Label label8;
+        private Label LBLFORMAPAGO;
+        private Label label9;
     }
 }

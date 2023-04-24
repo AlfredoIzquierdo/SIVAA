@@ -36,14 +36,14 @@
             label42 = new Label();
             label40 = new Label();
             label37 = new Label();
-            label41 = new Label();
-            label39 = new Label();
-            label36 = new Label();
+            lbltotaldeclarado = new Label();
+            lblsobrante = new Label();
+            lblfaltante = new Label();
             label28 = new Label();
             label38 = new Label();
-            label29 = new Label();
-            label30 = new Label();
-            label31 = new Label();
+            lblfondoinicial2 = new Label();
+            lblefectivodeclarado = new Label();
+            lbltarjetadeclarado = new Label();
             panel4 = new Panel();
             panel15 = new Panel();
             label15 = new Label();
@@ -51,12 +51,12 @@
             label17 = new Label();
             label20 = new Label();
             label19 = new Label();
-            label25 = new Label();
-            label24 = new Label();
+            lbltotal = new Label();
+            lblefectivo2 = new Label();
             label26 = new Label();
-            label23 = new Label();
-            label22 = new Label();
-            label21 = new Label();
+            lbltarjeta3 = new Label();
+            lblefectivo3 = new Label();
+            lblfondoinicial = new Label();
             label16 = new Label();
             panel9 = new Panel();
             label56 = new Label();
@@ -78,36 +78,36 @@
             label62 = new Label();
             panel12 = new Panel();
             label46 = new Label();
-            label45 = new Label();
+            lbltarjeta = new Label();
             panel13 = new Panel();
             label49 = new Label();
             label50 = new Label();
             panel11 = new Panel();
-            label43 = new Label();
+            lblefectivo = new Label();
             label44 = new Label();
             panel3 = new Panel();
-            label14 = new Label();
+            lbltotal1 = new Label();
             label12 = new Label();
             pictureBox1 = new PictureBox();
             panel1 = new Panel();
             label1 = new Label();
             panel2 = new Panel();
             panel6 = new Panel();
-            label4 = new Label();
+            lblidempleado = new Label();
             label3 = new Label();
-            label2 = new Label();
+            lblfecha = new Label();
             label9 = new Label();
-            label10 = new Label();
+            lblnombreempleado = new Label();
             label11 = new Label();
             panel7 = new Panel();
-            panel10 = new Panel();
-            label5 = new Label();
             dataGridView1 = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
             Column4 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
             Column5 = new DataGridViewTextBoxColumn();
+            panel10 = new Panel();
+            label5 = new Label();
             panel5.SuspendLayout();
             panel16.SuspendLayout();
             panel4.SuspendLayout();
@@ -123,8 +123,8 @@
             panel1.SuspendLayout();
             panel6.SuspendLayout();
             panel7.SuspendLayout();
-            panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            panel10.SuspendLayout();
             SuspendLayout();
             // 
             // panel5
@@ -137,18 +137,18 @@
             panel5.Controls.Add(label42);
             panel5.Controls.Add(label40);
             panel5.Controls.Add(label37);
-            panel5.Controls.Add(label41);
-            panel5.Controls.Add(label39);
-            panel5.Controls.Add(label36);
+            panel5.Controls.Add(lbltotaldeclarado);
+            panel5.Controls.Add(lblsobrante);
+            panel5.Controls.Add(lblfaltante);
             panel5.Controls.Add(label28);
             panel5.Controls.Add(label38);
-            panel5.Controls.Add(label29);
-            panel5.Controls.Add(label30);
-            panel5.Controls.Add(label31);
-            panel5.Location = new Point(281, 283);
+            panel5.Controls.Add(lblfondoinicial2);
+            panel5.Controls.Add(lblefectivodeclarado);
+            panel5.Controls.Add(lbltarjetadeclarado);
+            panel5.Location = new Point(368, 285);
             panel5.Margin = new Padding(3, 4, 3, 4);
             panel5.Name = "panel5";
-            panel5.Size = new Size(263, 367);
+            panel5.Size = new Size(366, 367);
             panel5.TabIndex = 71;
             // 
             // panel16
@@ -158,7 +158,7 @@
             panel16.Location = new Point(0, 0);
             panel16.Margin = new Padding(3, 4, 3, 4);
             panel16.Name = "panel16";
-            panel16.Size = new Size(262, 31);
+            panel16.Size = new Size(361, 31);
             panel16.TabIndex = 69;
             // 
             // label27
@@ -167,7 +167,7 @@
             label27.AutoSize = true;
             label27.BackColor = Color.White;
             label27.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label27.Location = new Point(1, 4);
+            label27.Location = new Point(50, 4);
             label27.Margin = new Padding(1, 0, 1, 0);
             label27.Name = "label27";
             label27.Size = new Size(226, 25);
@@ -179,7 +179,7 @@
             label35.Anchor = AnchorStyles.Top;
             label35.AutoSize = true;
             label35.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label35.Location = new Point(1, 96);
+            label35.Location = new Point(22, 96);
             label35.Margin = new Padding(1, 0, 1, 0);
             label35.Name = "label35";
             label35.Size = new Size(87, 25);
@@ -191,7 +191,7 @@
             label32.Anchor = AnchorStyles.Top;
             label32.AutoSize = true;
             label32.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label32.Location = new Point(1, 67);
+            label32.Location = new Point(22, 67);
             label32.Margin = new Padding(1, 0, 1, 0);
             label32.Name = "label32";
             label32.Size = new Size(96, 25);
@@ -203,7 +203,7 @@
             label42.Anchor = AnchorStyles.Top;
             label42.AutoSize = true;
             label42.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label42.Location = new Point(2, 219);
+            label42.Location = new Point(23, 219);
             label42.Margin = new Padding(1, 0, 1, 0);
             label42.Name = "label42";
             label42.Size = new Size(68, 25);
@@ -215,7 +215,7 @@
             label40.Anchor = AnchorStyles.Top;
             label40.AutoSize = true;
             label40.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label40.Location = new Point(1, 283);
+            label40.Location = new Point(22, 283);
             label40.Margin = new Padding(1, 0, 1, 0);
             label40.Name = "label40";
             label40.Size = new Size(148, 25);
@@ -227,55 +227,55 @@
             label37.Anchor = AnchorStyles.Top;
             label37.AutoSize = true;
             label37.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label37.Location = new Point(1, 328);
+            label37.Location = new Point(22, 328);
             label37.Margin = new Padding(1, 0, 1, 0);
             label37.Name = "label37";
             label37.Size = new Size(133, 25);
             label37.TabIndex = 67;
             label37.Text = "Faltante (-) :";
             // 
-            // label41
+            // lbltotaldeclarado
             // 
-            label41.Anchor = AnchorStyles.Top;
-            label41.AutoSize = true;
-            label41.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label41.Location = new Point(149, 219);
-            label41.Margin = new Padding(1, 0, 1, 0);
-            label41.Name = "label41";
-            label41.Size = new Size(99, 25);
-            label41.TabIndex = 67;
-            label41.Text = "$ 000,000";
+            lbltotaldeclarado.Anchor = AnchorStyles.Top;
+            lbltotaldeclarado.AutoSize = true;
+            lbltotaldeclarado.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lbltotaldeclarado.Location = new Point(201, 219);
+            lbltotaldeclarado.Margin = new Padding(1, 0, 1, 0);
+            lbltotaldeclarado.Name = "lbltotaldeclarado";
+            lbltotaldeclarado.Size = new Size(99, 25);
+            lbltotaldeclarado.TabIndex = 67;
+            lbltotaldeclarado.Text = "$ 000,000";
             // 
-            // label39
+            // lblsobrante
             // 
-            label39.Anchor = AnchorStyles.Top;
-            label39.AutoSize = true;
-            label39.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label39.Location = new Point(147, 283);
-            label39.Margin = new Padding(1, 0, 1, 0);
-            label39.Name = "label39";
-            label39.Size = new Size(99, 25);
-            label39.TabIndex = 67;
-            label39.Text = "$ 000,000";
+            lblsobrante.Anchor = AnchorStyles.Top;
+            lblsobrante.AutoSize = true;
+            lblsobrante.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblsobrante.Location = new Point(199, 283);
+            lblsobrante.Margin = new Padding(1, 0, 1, 0);
+            lblsobrante.Name = "lblsobrante";
+            lblsobrante.Size = new Size(99, 25);
+            lblsobrante.TabIndex = 67;
+            lblsobrante.Text = "$ 000,000";
             // 
-            // label36
+            // lblfaltante
             // 
-            label36.Anchor = AnchorStyles.Top;
-            label36.AutoSize = true;
-            label36.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label36.Location = new Point(147, 328);
-            label36.Margin = new Padding(1, 0, 1, 0);
-            label36.Name = "label36";
-            label36.Size = new Size(99, 25);
-            label36.TabIndex = 67;
-            label36.Text = "$ 000,000";
+            lblfaltante.Anchor = AnchorStyles.Top;
+            lblfaltante.AutoSize = true;
+            lblfaltante.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblfaltante.Location = new Point(199, 328);
+            lblfaltante.Margin = new Padding(1, 0, 1, 0);
+            lblfaltante.Name = "lblfaltante";
+            lblfaltante.Size = new Size(99, 25);
+            lblfaltante.TabIndex = 67;
+            lblfaltante.Text = "$ 000,000";
             // 
             // label28
             // 
             label28.Anchor = AnchorStyles.Top;
             label28.AutoSize = true;
             label28.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label28.Location = new Point(1, 35);
+            label28.Location = new Point(22, 35);
             label28.Margin = new Padding(1, 0, 1, 0);
             label28.Name = "label28";
             label28.Size = new Size(141, 25);
@@ -287,48 +287,48 @@
             label38.Anchor = AnchorStyles.Top;
             label38.AutoSize = true;
             label38.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label38.Location = new Point(143, 185);
+            label38.Location = new Point(195, 185);
             label38.Margin = new Padding(1, 0, 1, 0);
             label38.Name = "label38";
             label38.Size = new Size(124, 25);
             label38.TabIndex = 67;
             label38.Text = "----------------";
             // 
-            // label29
+            // lblfondoinicial2
             // 
-            label29.Anchor = AnchorStyles.Top;
-            label29.AutoSize = true;
-            label29.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label29.Location = new Point(147, 35);
-            label29.Margin = new Padding(1, 0, 1, 0);
-            label29.Name = "label29";
-            label29.Size = new Size(99, 25);
-            label29.TabIndex = 67;
-            label29.Text = "$ 000,000";
+            lblfondoinicial2.Anchor = AnchorStyles.Top;
+            lblfondoinicial2.AutoSize = true;
+            lblfondoinicial2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblfondoinicial2.Location = new Point(199, 35);
+            lblfondoinicial2.Margin = new Padding(1, 0, 1, 0);
+            lblfondoinicial2.Name = "lblfondoinicial2";
+            lblfondoinicial2.Size = new Size(99, 25);
+            lblfondoinicial2.TabIndex = 67;
+            lblfondoinicial2.Text = "$ 000,000";
             // 
-            // label30
+            // lblefectivodeclarado
             // 
-            label30.Anchor = AnchorStyles.Top;
-            label30.AutoSize = true;
-            label30.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label30.Location = new Point(147, 67);
-            label30.Margin = new Padding(1, 0, 1, 0);
-            label30.Name = "label30";
-            label30.Size = new Size(99, 25);
-            label30.TabIndex = 67;
-            label30.Text = "$ 000,000";
+            lblefectivodeclarado.Anchor = AnchorStyles.Top;
+            lblefectivodeclarado.AutoSize = true;
+            lblefectivodeclarado.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblefectivodeclarado.Location = new Point(199, 67);
+            lblefectivodeclarado.Margin = new Padding(1, 0, 1, 0);
+            lblefectivodeclarado.Name = "lblefectivodeclarado";
+            lblefectivodeclarado.Size = new Size(99, 25);
+            lblefectivodeclarado.TabIndex = 67;
+            lblefectivodeclarado.Text = "$ 000,000";
             // 
-            // label31
+            // lbltarjetadeclarado
             // 
-            label31.Anchor = AnchorStyles.Top;
-            label31.AutoSize = true;
-            label31.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label31.Location = new Point(147, 96);
-            label31.Margin = new Padding(1, 0, 1, 0);
-            label31.Name = "label31";
-            label31.Size = new Size(99, 25);
-            label31.TabIndex = 67;
-            label31.Text = "$ 000,000";
+            lbltarjetadeclarado.Anchor = AnchorStyles.Top;
+            lbltarjetadeclarado.AutoSize = true;
+            lbltarjetadeclarado.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lbltarjetadeclarado.Location = new Point(199, 96);
+            lbltarjetadeclarado.Margin = new Padding(1, 0, 1, 0);
+            lbltarjetadeclarado.Name = "lbltarjetadeclarado";
+            lbltarjetadeclarado.Size = new Size(99, 25);
+            lbltarjetadeclarado.TabIndex = 67;
+            lbltarjetadeclarado.Text = "$ 000,000";
             // 
             // panel4
             // 
@@ -339,17 +339,17 @@
             panel4.Controls.Add(label17);
             panel4.Controls.Add(label20);
             panel4.Controls.Add(label19);
-            panel4.Controls.Add(label25);
-            panel4.Controls.Add(label24);
+            panel4.Controls.Add(lbltotal);
+            panel4.Controls.Add(lblefectivo2);
             panel4.Controls.Add(label26);
-            panel4.Controls.Add(label23);
-            panel4.Controls.Add(label22);
-            panel4.Controls.Add(label21);
+            panel4.Controls.Add(lbltarjeta3);
+            panel4.Controls.Add(lblefectivo3);
+            panel4.Controls.Add(lblfondoinicial);
             panel4.Controls.Add(label16);
             panel4.Location = new Point(11, 283);
             panel4.Margin = new Padding(3, 4, 3, 4);
             panel4.Name = "panel4";
-            panel4.Size = new Size(263, 367);
+            panel4.Size = new Size(352, 367);
             panel4.TabIndex = 72;
             // 
             // panel15
@@ -359,7 +359,7 @@
             panel15.Location = new Point(-1, -1);
             panel15.Margin = new Padding(3, 4, 3, 4);
             panel15.Name = "panel15";
-            panel15.Size = new Size(262, 31);
+            panel15.Size = new Size(348, 31);
             panel15.TabIndex = 69;
             // 
             // label15
@@ -367,7 +367,7 @@
             label15.Anchor = AnchorStyles.Top;
             label15.AutoSize = true;
             label15.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label15.Location = new Point(105, 5);
+            label15.Location = new Point(148, 5);
             label15.Margin = new Padding(1, 0, 1, 0);
             label15.Name = "label15";
             label15.Size = new Size(57, 25);
@@ -379,7 +379,7 @@
             label18.Anchor = AnchorStyles.Top;
             label18.AutoSize = true;
             label18.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label18.Location = new Point(2, 93);
+            label18.Location = new Point(16, 93);
             label18.Margin = new Padding(1, 0, 1, 0);
             label18.Name = "label18";
             label18.Size = new Size(87, 25);
@@ -391,7 +391,7 @@
             label17.Anchor = AnchorStyles.Top;
             label17.AutoSize = true;
             label17.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label17.Location = new Point(2, 64);
+            label17.Location = new Point(16, 64);
             label17.Margin = new Padding(1, 0, 1, 0);
             label17.Name = "label17";
             label17.Size = new Size(96, 25);
@@ -403,7 +403,7 @@
             label20.Anchor = AnchorStyles.Top;
             label20.AutoSize = true;
             label20.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label20.Location = new Point(0, 259);
+            label20.Location = new Point(14, 259);
             label20.Margin = new Padding(1, 0, 1, 0);
             label20.Name = "label20";
             label20.Size = new Size(142, 25);
@@ -415,91 +415,91 @@
             label19.Anchor = AnchorStyles.Top;
             label19.AutoSize = true;
             label19.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label19.Location = new Point(2, 329);
+            label19.Location = new Point(16, 329);
             label19.Margin = new Padding(1, 0, 1, 0);
             label19.Name = "label19";
             label19.Size = new Size(121, 25);
             label19.TabIndex = 67;
             label19.Text = "Saldo final:";
             // 
-            // label25
+            // lbltotal
             // 
-            label25.Anchor = AnchorStyles.Top;
-            label25.AutoSize = true;
-            label25.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label25.Location = new Point(149, 329);
-            label25.Margin = new Padding(1, 0, 1, 0);
-            label25.Name = "label25";
-            label25.Size = new Size(99, 25);
-            label25.TabIndex = 67;
-            label25.Text = "$ 000,000";
+            lbltotal.Anchor = AnchorStyles.Top;
+            lbltotal.AutoSize = true;
+            lbltotal.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lbltotal.Location = new Point(194, 329);
+            lbltotal.Margin = new Padding(1, 0, 1, 0);
+            lbltotal.Name = "lbltotal";
+            lbltotal.Size = new Size(99, 25);
+            lbltotal.TabIndex = 67;
+            lbltotal.Text = "$ 000,000";
             // 
-            // label24
+            // lblefectivo2
             // 
-            label24.Anchor = AnchorStyles.Top;
-            label24.AutoSize = true;
-            label24.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label24.Location = new Point(149, 259);
-            label24.Margin = new Padding(1, 0, 1, 0);
-            label24.Name = "label24";
-            label24.Size = new Size(99, 25);
-            label24.TabIndex = 67;
-            label24.Text = "$ 000,000";
+            lblefectivo2.Anchor = AnchorStyles.Top;
+            lblefectivo2.AutoSize = true;
+            lblefectivo2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblefectivo2.Location = new Point(194, 259);
+            lblefectivo2.Margin = new Padding(1, 0, 1, 0);
+            lblefectivo2.Name = "lblefectivo2";
+            lblefectivo2.Size = new Size(99, 25);
+            lblefectivo2.TabIndex = 67;
+            lblefectivo2.Text = "$ 000,000";
             // 
             // label26
             // 
             label26.Anchor = AnchorStyles.Top;
             label26.AutoSize = true;
             label26.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label26.Location = new Point(144, 187);
+            label26.Location = new Point(189, 187);
             label26.Margin = new Padding(1, 0, 1, 0);
             label26.Name = "label26";
             label26.Size = new Size(124, 25);
             label26.TabIndex = 67;
             label26.Text = "----------------";
             // 
-            // label23
+            // lbltarjeta3
             // 
-            label23.Anchor = AnchorStyles.Top;
-            label23.AutoSize = true;
-            label23.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label23.Location = new Point(149, 93);
-            label23.Margin = new Padding(1, 0, 1, 0);
-            label23.Name = "label23";
-            label23.Size = new Size(99, 25);
-            label23.TabIndex = 67;
-            label23.Text = "$ 000,000";
+            lbltarjeta3.Anchor = AnchorStyles.Top;
+            lbltarjeta3.AutoSize = true;
+            lbltarjeta3.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lbltarjeta3.Location = new Point(194, 93);
+            lbltarjeta3.Margin = new Padding(1, 0, 1, 0);
+            lbltarjeta3.Name = "lbltarjeta3";
+            lbltarjeta3.Size = new Size(99, 25);
+            lbltarjeta3.TabIndex = 67;
+            lbltarjeta3.Text = "$ 000,000";
             // 
-            // label22
+            // lblefectivo3
             // 
-            label22.Anchor = AnchorStyles.Top;
-            label22.AutoSize = true;
-            label22.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label22.Location = new Point(149, 64);
-            label22.Margin = new Padding(1, 0, 1, 0);
-            label22.Name = "label22";
-            label22.Size = new Size(99, 25);
-            label22.TabIndex = 67;
-            label22.Text = "$ 000,000";
+            lblefectivo3.Anchor = AnchorStyles.Top;
+            lblefectivo3.AutoSize = true;
+            lblefectivo3.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblefectivo3.Location = new Point(194, 64);
+            lblefectivo3.Margin = new Padding(1, 0, 1, 0);
+            lblefectivo3.Name = "lblefectivo3";
+            lblefectivo3.Size = new Size(99, 25);
+            lblefectivo3.TabIndex = 67;
+            lblefectivo3.Text = "$ 000,000";
             // 
-            // label21
+            // lblfondoinicial
             // 
-            label21.Anchor = AnchorStyles.Top;
-            label21.AutoSize = true;
-            label21.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label21.Location = new Point(149, 32);
-            label21.Margin = new Padding(1, 0, 1, 0);
-            label21.Name = "label21";
-            label21.Size = new Size(99, 25);
-            label21.TabIndex = 67;
-            label21.Text = "$ 000,000";
+            lblfondoinicial.Anchor = AnchorStyles.Top;
+            lblfondoinicial.AutoSize = true;
+            lblfondoinicial.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblfondoinicial.Location = new Point(194, 32);
+            lblfondoinicial.Margin = new Padding(1, 0, 1, 0);
+            lblfondoinicial.Name = "lblfondoinicial";
+            lblfondoinicial.Size = new Size(99, 25);
+            lblfondoinicial.TabIndex = 67;
+            lblfondoinicial.Text = "$ 000,000";
             // 
             // label16
             // 
             label16.Anchor = AnchorStyles.Top;
             label16.AutoSize = true;
             label16.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label16.Location = new Point(2, 32);
+            label16.Location = new Point(16, 32);
             label16.Margin = new Padding(1, 0, 1, 0);
             label16.Name = "label16";
             label16.Size = new Size(141, 25);
@@ -518,18 +518,19 @@
             panel9.Controls.Add(label52);
             panel9.Controls.Add(label51);
             panel9.Controls.Add(label58);
-            panel9.Location = new Point(550, 471);
+            panel9.Location = new Point(742, 471);
             panel9.Margin = new Padding(3, 4, 3, 4);
             panel9.Name = "panel9";
-            panel9.Size = new Size(281, 181);
+            panel9.Size = new Size(192, 181);
             panel9.TabIndex = 73;
+            panel9.Visible = false;
             // 
             // label56
             // 
             label56.Anchor = AnchorStyles.Top;
             label56.AutoSize = true;
             label56.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label56.Location = new Point(39, 87);
+            label56.Location = new Point(-5, 87);
             label56.Margin = new Padding(1, 0, 1, 0);
             label56.Name = "label56";
             label56.Size = new Size(50, 25);
@@ -541,7 +542,7 @@
             label55.Anchor = AnchorStyles.Top;
             label55.AutoSize = true;
             label55.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label55.Location = new Point(39, 51);
+            label55.Location = new Point(-5, 51);
             label55.Margin = new Padding(1, 0, 1, 0);
             label55.Name = "label55";
             label55.Size = new Size(51, 25);
@@ -553,7 +554,7 @@
             label54.Anchor = AnchorStyles.Top;
             label54.AutoSize = true;
             label54.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label54.Location = new Point(104, 139);
+            label54.Location = new Point(60, 139);
             label54.Margin = new Padding(1, 0, 1, 0);
             label54.Name = "label54";
             label54.Size = new Size(126, 25);
@@ -565,7 +566,7 @@
             label57.Anchor = AnchorStyles.Top;
             label57.AutoSize = true;
             label57.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label57.Location = new Point(39, 139);
+            label57.Location = new Point(-5, 139);
             label57.Margin = new Padding(1, 0, 1, 0);
             label57.Name = "label57";
             label57.Size = new Size(62, 25);
@@ -577,7 +578,7 @@
             label53.Anchor = AnchorStyles.Top;
             label53.AutoSize = true;
             label53.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label53.Location = new Point(104, 87);
+            label53.Location = new Point(60, 87);
             label53.Margin = new Padding(1, 0, 1, 0);
             label53.Name = "label53";
             label53.Size = new Size(126, 25);
@@ -589,7 +590,7 @@
             label52.Anchor = AnchorStyles.Top;
             label52.AutoSize = true;
             label52.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label52.Location = new Point(104, 51);
+            label52.Location = new Point(60, 51);
             label52.Margin = new Padding(1, 0, 1, 0);
             label52.Name = "label52";
             label52.Size = new Size(126, 25);
@@ -601,7 +602,7 @@
             label51.Anchor = AnchorStyles.Top;
             label51.AutoSize = true;
             label51.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label51.Location = new Point(88, 11);
+            label51.Location = new Point(44, 11);
             label51.Margin = new Padding(1, 0, 1, 0);
             label51.Name = "label51";
             label51.Size = new Size(102, 25);
@@ -613,7 +614,7 @@
             label58.Anchor = AnchorStyles.Top;
             label58.AutoSize = true;
             label58.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label58.Location = new Point(104, 115);
+            label58.Location = new Point(60, 115);
             label58.Margin = new Padding(1, 0, 1, 0);
             label58.Name = "label58";
             label58.Size = new Size(138, 25);
@@ -631,11 +632,12 @@
             panel8.Controls.Add(label64);
             panel8.Controls.Add(label63);
             panel8.Controls.Add(label62);
-            panel8.Location = new Point(550, 283);
+            panel8.Location = new Point(742, 283);
             panel8.Margin = new Padding(3, 4, 3, 4);
             panel8.Name = "panel8";
-            panel8.Size = new Size(281, 181);
+            panel8.Size = new Size(192, 181);
             panel8.TabIndex = 74;
+            panel8.Visible = false;
             // 
             // panel17
             // 
@@ -646,6 +648,7 @@
             panel17.Name = "panel17";
             panel17.Size = new Size(281, 31);
             panel17.TabIndex = 69;
+            panel17.Visible = false;
             // 
             // label48
             // 
@@ -664,7 +667,7 @@
             label61.Anchor = AnchorStyles.Top;
             label61.AutoSize = true;
             label61.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label61.Location = new Point(40, 132);
+            label61.Location = new Point(-4, 132);
             label61.Margin = new Padding(1, 0, 1, 0);
             label61.Name = "label61";
             label61.Size = new Size(76, 25);
@@ -676,7 +679,7 @@
             label60.Anchor = AnchorStyles.Top;
             label60.AutoSize = true;
             label60.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label60.Location = new Point(40, 96);
+            label60.Location = new Point(-4, 96);
             label60.Margin = new Padding(1, 0, 1, 0);
             label60.Name = "label60";
             label60.Size = new Size(92, 25);
@@ -688,7 +691,7 @@
             label59.Anchor = AnchorStyles.Top;
             label59.AutoSize = true;
             label59.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label59.Location = new Point(40, 60);
+            label59.Location = new Point(-4, 60);
             label59.Margin = new Padding(1, 0, 1, 0);
             label59.Name = "label59";
             label59.Size = new Size(84, 25);
@@ -700,7 +703,7 @@
             label64.Anchor = AnchorStyles.Top;
             label64.AutoSize = true;
             label64.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label64.Location = new Point(134, 132);
+            label64.Location = new Point(90, 132);
             label64.Margin = new Padding(1, 0, 1, 0);
             label64.Name = "label64";
             label64.Size = new Size(88, 25);
@@ -712,7 +715,7 @@
             label63.Anchor = AnchorStyles.Top;
             label63.AutoSize = true;
             label63.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label63.Location = new Point(134, 96);
+            label63.Location = new Point(90, 96);
             label63.Margin = new Padding(1, 0, 1, 0);
             label63.Name = "label63";
             label63.Size = new Size(88, 25);
@@ -724,7 +727,7 @@
             label62.Anchor = AnchorStyles.Top;
             label62.AutoSize = true;
             label62.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label62.Location = new Point(134, 60);
+            label62.Location = new Point(90, 60);
             label62.Margin = new Padding(1, 0, 1, 0);
             label62.Name = "label62";
             label62.Size = new Size(88, 25);
@@ -736,11 +739,11 @@
             panel12.BackColor = Color.White;
             panel12.BorderStyle = BorderStyle.FixedSingle;
             panel12.Controls.Add(label46);
-            panel12.Controls.Add(label45);
+            panel12.Controls.Add(lbltarjeta);
             panel12.Location = new Point(225, 224);
             panel12.Margin = new Padding(3, 4, 3, 4);
             panel12.Name = "panel12";
-            panel12.Size = new Size(196, 45);
+            panel12.Size = new Size(324, 45);
             panel12.TabIndex = 75;
             // 
             // label46
@@ -748,25 +751,25 @@
             label46.Anchor = AnchorStyles.Top;
             label46.AutoSize = true;
             label46.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label46.Location = new Point(-5, 5);
+            label46.Location = new Point(12, 5);
             label46.Margin = new Padding(1, 0, 1, 0);
             label46.Name = "label46";
             label46.Size = new Size(87, 25);
             label46.TabIndex = 67;
             label46.Text = "Tarjeta:";
             // 
-            // label45
+            // lbltarjeta
             // 
-            label45.Anchor = AnchorStyles.Top;
-            label45.AutoSize = true;
-            label45.BackColor = Color.White;
-            label45.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label45.Location = new Point(88, 5);
-            label45.Margin = new Padding(1, 0, 1, 0);
-            label45.Name = "label45";
-            label45.Size = new Size(99, 25);
-            label45.TabIndex = 67;
-            label45.Text = "$ 000,000";
+            lbltarjeta.Anchor = AnchorStyles.Top;
+            lbltarjeta.AutoSize = true;
+            lbltarjeta.BackColor = Color.White;
+            lbltarjeta.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lbltarjeta.Location = new Point(152, 5);
+            lbltarjeta.Margin = new Padding(1, 0, 1, 0);
+            lbltarjeta.Name = "lbltarjeta";
+            lbltarjeta.Size = new Size(99, 25);
+            lbltarjeta.TabIndex = 67;
+            lbltarjeta.Text = "$ 000,000";
             // 
             // panel13
             // 
@@ -774,11 +777,12 @@
             panel13.BorderStyle = BorderStyle.FixedSingle;
             panel13.Controls.Add(label49);
             panel13.Controls.Add(label50);
-            panel13.Location = new Point(434, 172);
+            panel13.Location = new Point(392, 98);
             panel13.Margin = new Padding(3, 4, 3, 4);
             panel13.Name = "panel13";
             panel13.Size = new Size(412, 45);
             panel13.TabIndex = 76;
+            panel13.Visible = false;
             // 
             // label49
             // 
@@ -808,32 +812,32 @@
             // 
             panel11.BackColor = Color.White;
             panel11.BorderStyle = BorderStyle.FixedSingle;
-            panel11.Controls.Add(label43);
+            panel11.Controls.Add(lblefectivo);
             panel11.Controls.Add(label44);
             panel11.Location = new Point(225, 171);
             panel11.Margin = new Padding(3, 4, 3, 4);
             panel11.Name = "panel11";
-            panel11.Size = new Size(196, 45);
+            panel11.Size = new Size(324, 45);
             panel11.TabIndex = 77;
             // 
-            // label43
+            // lblefectivo
             // 
-            label43.Anchor = AnchorStyles.Top;
-            label43.AutoSize = true;
-            label43.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label43.Location = new Point(86, 0);
-            label43.Margin = new Padding(1, 0, 1, 0);
-            label43.Name = "label43";
-            label43.Size = new Size(99, 25);
-            label43.TabIndex = 67;
-            label43.Text = "$ 000,000";
+            lblefectivo.Anchor = AnchorStyles.Top;
+            lblefectivo.AutoSize = true;
+            lblefectivo.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblefectivo.Location = new Point(150, 0);
+            lblefectivo.Margin = new Padding(1, 0, 1, 0);
+            lblefectivo.Name = "lblefectivo";
+            lblefectivo.Size = new Size(99, 25);
+            lblefectivo.TabIndex = 67;
+            lblefectivo.Text = "$ 000,000";
             // 
             // label44
             // 
             label44.Anchor = AnchorStyles.Top;
             label44.AutoSize = true;
             label44.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label44.Location = new Point(-2, 0);
+            label44.Location = new Point(12, 0);
             label44.Margin = new Padding(1, 0, 1, 0);
             label44.Name = "label44";
             label44.Size = new Size(96, 25);
@@ -844,7 +848,7 @@
             // 
             panel3.BackColor = Color.White;
             panel3.BorderStyle = BorderStyle.FixedSingle;
-            panel3.Controls.Add(label14);
+            panel3.Controls.Add(lbltotal1);
             panel3.Controls.Add(label12);
             panel3.Location = new Point(11, 171);
             panel3.Margin = new Padding(3, 4, 3, 4);
@@ -852,17 +856,17 @@
             panel3.Size = new Size(196, 102);
             panel3.TabIndex = 78;
             // 
-            // label14
+            // lbltotal1
             // 
-            label14.Anchor = AnchorStyles.Top;
-            label14.AutoSize = true;
-            label14.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label14.Location = new Point(37, 48);
-            label14.Margin = new Padding(1, 0, 1, 0);
-            label14.Name = "label14";
-            label14.Size = new Size(126, 25);
-            label14.TabIndex = 67;
-            label14.Text = "$ 00,000,000";
+            lbltotal1.Anchor = AnchorStyles.Top;
+            lbltotal1.AutoSize = true;
+            lbltotal1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lbltotal1.Location = new Point(37, 48);
+            lbltotal1.Margin = new Padding(1, 0, 1, 0);
+            lbltotal1.Name = "lbltotal1";
+            lbltotal1.Size = new Size(126, 25);
+            lbltotal1.TabIndex = 67;
+            lbltotal1.Text = "$ 00,000,000";
             // 
             // label12
             // 
@@ -879,7 +883,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.print_FILL0_wght400_GRAD0_opsz48;
-            pictureBox1.Location = new Point(1127, 165);
+            pictureBox1.Location = new Point(750, 153);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(54, 44);
             pictureBox1.TabIndex = 83;
@@ -919,23 +923,23 @@
             // panel6
             // 
             panel6.BorderStyle = BorderStyle.FixedSingle;
-            panel6.Controls.Add(label4);
+            panel6.Controls.Add(lblidempleado);
             panel6.Controls.Add(label3);
             panel6.Location = new Point(493, -1);
             panel6.Name = "panel6";
             panel6.Size = new Size(611, 91);
             panel6.TabIndex = 8;
             // 
-            // label4
+            // lblidempleado
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.ForeColor = SystemColors.ActiveCaptionText;
-            label4.Location = new Point(485, 40);
-            label4.Name = "label4";
-            label4.Size = new Size(49, 25);
-            label4.TabIndex = 3;
-            label4.Text = "C21";
+            lblidempleado.AutoSize = true;
+            lblidempleado.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblidempleado.ForeColor = SystemColors.ActiveCaptionText;
+            lblidempleado.Location = new Point(485, 40);
+            lblidempleado.Name = "lblidempleado";
+            lblidempleado.Size = new Size(49, 25);
+            lblidempleado.TabIndex = 3;
+            lblidempleado.Text = "C21";
             // 
             // label3
             // 
@@ -948,15 +952,15 @@
             label3.TabIndex = 2;
             label3.Text = "IDEmpleado";
             // 
-            // label2
+            // lblfecha
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(238, 131);
-            label2.Name = "label2";
-            label2.Size = new Size(112, 25);
-            label2.TabIndex = 89;
-            label2.Text = "08/03/2023";
+            lblfecha.AutoSize = true;
+            lblfecha.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblfecha.Location = new Point(238, 131);
+            lblfecha.Name = "lblfecha";
+            lblfecha.Size = new Size(112, 25);
+            lblfecha.TabIndex = 89;
+            lblfecha.Text = "08/03/2023";
             // 
             // label9
             // 
@@ -968,15 +972,15 @@
             label9.TabIndex = 88;
             label9.Text = "Fecha de expedicion:";
             // 
-            // label10
+            // lblnombreempleado
             // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label10.Location = new Point(257, 97);
-            label10.Name = "label10";
-            label10.Size = new Size(81, 25);
-            label10.TabIndex = 87;
-            label10.Text = "Fulanito";
+            lblnombreempleado.AutoSize = true;
+            lblnombreempleado.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblnombreempleado.Location = new Point(257, 97);
+            lblnombreempleado.Name = "lblnombreempleado";
+            lblnombreempleado.Size = new Size(81, 25);
+            lblnombreempleado.TabIndex = 87;
+            lblnombreempleado.Text = "Fulanito";
             // 
             // label11
             // 
@@ -994,33 +998,12 @@
             panel7.BorderStyle = BorderStyle.FixedSingle;
             panel7.Controls.Add(dataGridView1);
             panel7.Controls.Add(panel10);
-            panel7.Location = new Point(837, 283);
+            panel7.Location = new Point(936, 283);
             panel7.Margin = new Padding(3, 4, 3, 4);
             panel7.Name = "panel7";
-            panel7.Size = new Size(348, 369);
+            panel7.Size = new Size(249, 369);
             panel7.TabIndex = 90;
-            // 
-            // panel10
-            // 
-            panel10.BackColor = Color.White;
-            panel10.Controls.Add(label5);
-            panel10.Location = new Point(-1, 0);
-            panel10.Margin = new Padding(3, 4, 3, 4);
-            panel10.Name = "panel10";
-            panel10.Size = new Size(344, 31);
-            panel10.TabIndex = 69;
-            // 
-            // label5
-            // 
-            label5.Anchor = AnchorStyles.Top;
-            label5.AutoSize = true;
-            label5.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(131, 4);
-            label5.Margin = new Padding(1, 0, 1, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(80, 25);
-            label5.TabIndex = 67;
-            label5.Text = "Ventas";
+            panel7.Visible = false;
             // 
             // dataGridView1
             // 
@@ -1029,12 +1012,12 @@
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column4, Column2, Column3, Column5 });
             dataGridView1.Enabled = false;
-            dataGridView1.Location = new Point(3, 36);
+            dataGridView1.Location = new Point(3, 35);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(340, 330);
+            dataGridView1.Size = new Size(340, 331);
             dataGridView1.TabIndex = 70;
             // 
             // Column1
@@ -1067,6 +1050,28 @@
             Column5.MinimumWidth = 6;
             Column5.Name = "Column5";
             // 
+            // panel10
+            // 
+            panel10.BackColor = Color.White;
+            panel10.Controls.Add(label5);
+            panel10.Location = new Point(-1, 0);
+            panel10.Margin = new Padding(3, 4, 3, 4);
+            panel10.Name = "panel10";
+            panel10.Size = new Size(344, 31);
+            panel10.TabIndex = 69;
+            // 
+            // label5
+            // 
+            label5.Anchor = AnchorStyles.Top;
+            label5.AutoSize = true;
+            label5.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.Location = new Point(131, 4);
+            label5.Margin = new Padding(1, 0, 1, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(80, 25);
+            label5.TabIndex = 67;
+            label5.Text = "Ventas";
+            // 
             // ReporteBuenoCaja
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -1074,9 +1079,9 @@
             BackColor = Color.White;
             ClientSize = new Size(1197, 660);
             Controls.Add(panel7);
-            Controls.Add(label2);
+            Controls.Add(lblfecha);
             Controls.Add(label9);
-            Controls.Add(label10);
+            Controls.Add(lblnombreempleado);
             Controls.Add(label11);
             Controls.Add(pictureBox1);
             Controls.Add(panel1);
@@ -1090,6 +1095,7 @@
             Controls.Add(panel3);
             Name = "ReporteBuenoCaja";
             Text = "ReporteBuenoCaja";
+            Load += ReporteBuenoCaja_Load;
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
             panel16.ResumeLayout(false);
@@ -1118,9 +1124,9 @@
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
             panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel10.ResumeLayout(false);
             panel10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1134,14 +1140,14 @@
         private Label label42;
         private Label label40;
         private Label label37;
-        private Label label41;
-        private Label label39;
-        private Label label36;
+        private Label lbltotaldeclarado;
+        private Label lblsobrante;
+        private Label lblfaltante;
         private Label label28;
         private Label label38;
-        private Label label29;
-        private Label label30;
-        private Label label31;
+        private Label lblfondoinicial2;
+        private Label lblefectivodeclarado;
+        private Label lbltarjetadeclarado;
         private Panel panel4;
         private Panel panel15;
         private Label label15;
@@ -1149,12 +1155,12 @@
         private Label label17;
         private Label label20;
         private Label label19;
-        private Label label25;
-        private Label label24;
+        private Label lbltotal;
+        private Label lblefectivo2;
         private Label label26;
-        private Label label23;
-        private Label label22;
-        private Label label21;
+        private Label lbltarjeta3;
+        private Label lblefectivo3;
+        private Label lblfondoinicial;
         private Label label16;
         private Panel panel9;
         private Label label56;
@@ -1176,26 +1182,26 @@
         private Label label62;
         private Panel panel12;
         private Label label46;
-        private Label label45;
+        private Label lbltarjeta;
         private Panel panel13;
         private Label label49;
         private Label label50;
         private Panel panel11;
-        private Label label43;
+        private Label lblefectivo;
         private Label label44;
         private Panel panel3;
-        private Label label14;
+        private Label lbltotal1;
         private Label label12;
         private PictureBox pictureBox1;
         private Panel panel1;
         private Label label1;
         private Panel panel2;
         private Panel panel6;
-        private Label label4;
+        private Label lblidempleado;
         private Label label3;
-        private Label label2;
+        private Label lblfecha;
         private Label label9;
-        private Label label10;
+        private Label lblnombreempleado;
         private Label label11;
         private Panel panel7;
         private Panel panel10;

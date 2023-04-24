@@ -142,8 +142,10 @@ namespace Pantallas_SIVAA
 
         private void btnEmpleados_Click(object sender, EventArgs e)
         {
-            PeriodoMejorServicio periodoMejorServicio = new PeriodoMejorServicio();
-            periodoMejorServicio.Show();
+            //PeriodoMejorServicio periodoMejorServicio = new PeriodoMejorServicio();
+            //periodoMejorServicio.Show();
+            PeriodoVentasContado per = new PeriodoVentasContado(_pqt);
+            per.Show();
         }
 
         private void btnProveedor_Click(object sender, EventArgs e)
@@ -222,6 +224,18 @@ namespace Pantallas_SIVAA
         private void pictureBox13_Click_2(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ReporteInventario repinv = new ReporteInventario(_pqt);
+            repinv.Show();
+        }
+
+        private void btnReporteCredito_Click(object sender, EventArgs e)
+        {
+            PeriodoVentasCredito per = new PeriodoVentasCredito(_pqt);
+            per.Show();
         }
     }
 }

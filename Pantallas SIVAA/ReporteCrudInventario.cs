@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace Pantallas_SIVAA
 {
-    public partial class PeriodoCorteCaja : Form
+    public partial class ReporteCrudInventario : Form
     {
-        public PeriodoCorteCaja()
+        public ReporteCrudInventario()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //ReporteBuenoCaja reporteBuenoCaja = new ReporteBuenoCaja();
-            //this.Close();
-            //reporteBuenoCaja.Show();
         }
     }
 }

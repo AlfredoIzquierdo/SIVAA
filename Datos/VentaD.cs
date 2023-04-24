@@ -483,6 +483,387 @@ namespace Datos
             }
             return productos;
         }
+
+        public List<ReporteVentasContado> VentasPorDiaespecifico(int dia, int mes, int an)
+        {
+            List<ReporteVentasContado> productos = new List<ReporteVentasContado>();
+
+            //Vuelvo a crear la conexión
+            using (SqlConnection Cnx = new SqlConnection(CdCnx))
+            {
+                Cnx.Open();
+                //Creo el Query (todos los registros de la tabla Venta
+                string CdSql = "Select vc.IDVenta, v.Dia,v.Mes,v.Año,v.Hora,v.Subtotal,v.Subtotal as Total,v.NoSerie,c.IDCliente, c.Nombre as NombreCliente,c.ApellidoPaterno as ApellidoPaCliente, c.ApellidoMaterno as ApellidoMaCliente, e.Nombre as NombreEmpleado, e.ApellidoPaterno as ApellidoPaEmpleado, e.ApellidoMaterno as ApellidoMaEmpleado\r\nfrom Cliente c\r\ninner join Cotizacion co on c.IDCliente = co.IDCliente\r\ninner join CotizacionContado con on co.IDCotizacion = con.IDCotizacion\r\ninner join VentaContado vc on vc.IDCotizacion = con.IDCotizacion\r\ninner join Venta v on v.IDVenta = vc.IDVenta\r\ninner join Empleado e on v.IDEmpleado = e.IDEmpleado\r\nwhere v.Dia = @di and v.Mes=@me and v.Año=@an";
+                using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
+                {
+                    Cmd.Parameters.AddWithValue("@di", dia);
+                    Cmd.Parameters.AddWithValue("@me", mes);
+                    Cmd.Parameters.AddWithValue("@an", an);
+                    SqlDataReader Dr = Cmd.ExecuteReader();
+                    //Leo registro por registro que tiene la tabla 
+                    while (Dr.Read())
+                    {
+                        //Cada vez que lo lea se crea un nuevo objeto
+                        ReporteVentasContado Pqte = new ReporteVentasContado
+                        {
+                            IDVenta = Convert.ToString(Dr["IDVenta"]),
+                            Dia = Convert.ToInt32(Dr["Dia"]),
+                            Mes = Convert.ToInt32(Dr["Mes"]),
+                            Año = Convert.ToInt32(Dr["Año"]),
+                            Subtotal = Convert.ToDouble(Dr["Subtotal"]),
+                            Total = Convert.ToDouble(Dr["Total"]),
+                            NoSerie = Convert.ToString(Dr["NoSerie"]),
+                            IDCliente = Convert.ToString(Dr["IDCliente"]),
+                            NombreCli = Convert.ToString(Dr["NombreCliente"]),
+                            ApellidoPaternoCli = Convert.ToString(Dr["ApellidoPaCliente"]),
+                            ApellidoMaternoCli = Convert.ToString(Dr["ApellidoMaCliente"]),
+                            //IDEmpleado = Convert.ToString(Dr["IDEmpleado"]),
+                            NombreEmp = Convert.ToString(Dr["NombreEmpleado"]),
+                            ApellidoPaternoEmp = Convert.ToString(Dr["ApellidoPaEmpleado"]),
+                            ApellidoMaternoEmp = Convert.ToString(Dr["ApellidoMaEmpleado"])
+                        };
+                        productos.Add(Pqte);
+                    }
+                }
+                Cnx.Close();
+            }
+            return productos;
+        }
+        public List<ReporteVentasCredito> ReporteVentasACreditoPorDia(int dia, int mes, int an)
+        {
+            List<ReporteVentasCredito> productos = new List<ReporteVentasCredito>();
+
+            //Vuelvo a crear la conexión
+            using (SqlConnection Cnx = new SqlConnection(CdCnx))
+            {
+                Cnx.Open();
+                //Creo el Query (todos los registros de la tabla Venta
+                string CdSql = "Select vc.IDVenta, v.Dia,v.Mes,v.Año,v.Subtotal,v.NoSerie,c.IDCliente, c.Nombre as NombreCliente,c.ApellidoPaterno as ApellidoPaCliente, c.ApellidoMaterno as ApellidoMaCliente, e.Nombre as NombreEmpleado, e.ApellidoPaterno as ApellidoPaEmpleado, e.ApellidoMaterno as ApellidoMaEmpleado, con.Plazo,con.Enganche,con.Mensualidad,con.Anualidad,con.Interes,vc.TotalFinal\r\nfrom Cliente c\r\ninner join Cotizacion co on c.IDCliente = co.IDCliente\r\ninner join CotizacionCredito con on co.IDCotizacion = con.IDCotizacion\r\ninner join VentaCredito vc on vc.IDCotizacion = con.IDCotizacion\r\ninner join Venta v on v.IDVenta = vc.IDVenta\r\ninner join Empleado e on v.IDEmpleado = e.IDEmpleado\r\nwhere v.Dia = @di and v.Mes=@me and v.Año=@an";
+                using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
+                {
+                    Cmd.Parameters.AddWithValue("@di", dia);
+                    Cmd.Parameters.AddWithValue("@me", mes);
+                    Cmd.Parameters.AddWithValue("@an", an);
+                    SqlDataReader Dr = Cmd.ExecuteReader();
+                    //Leo registro por registro que tiene la tabla 
+                    while (Dr.Read())
+                    {
+                        //Cada vez que lo lea se crea un nuevo objeto
+                        ReporteVentasCredito Pqte = new ReporteVentasCredito
+                        {
+                            IDVenta = Convert.ToString(Dr["IDVenta"]),
+                            Dia = Convert.ToInt32(Dr["Dia"]),
+                            Mes = Convert.ToInt32(Dr["Mes"]),
+                            Año = Convert.ToInt32(Dr["Año"]),
+                            Subtotal = Convert.ToDouble(Dr["Subtotal"]),
+                            NoSerie = Convert.ToString(Dr["NoSerie"]),
+                            IDCliente = Convert.ToString(Dr["IDCliente"]),
+                            NombreCli = Convert.ToString(Dr["NombreCliente"]),
+                            ApellidoPaternoCli = Convert.ToString(Dr["ApellidoPaCliente"]),
+                            ApellidoMaternoCli = Convert.ToString(Dr["ApellidoMaCliente"]),
+                            //IDEmpleado = Convert.ToString(Dr["IDEmpleado"]),
+                            NombreEmp = Convert.ToString(Dr["NombreEmpleado"]),
+                            ApellidoPaternoEmp = Convert.ToString(Dr["ApellidoPaEmpleado"]),
+                            ApellidoMaternoEmp = Convert.ToString(Dr["ApellidoMaEmpleado"]),
+                            Plazo = Convert.ToInt32(Dr["Plazo"]),
+                            Enganche = Convert.ToDouble(Dr["Enganche"]),
+                            Mensualidad = Convert.ToDouble(Dr["Mensualidad"]),
+                            Anualidad = Convert.ToDouble(Dr["Anualidad"]),
+                            Intereses = Convert.ToInt32(Dr["Interes"]),
+                            TotalFinal = Convert.ToDouble(Dr["TotalFinal"]),
+
+                        };
+                        productos.Add(Pqte);
+                    }
+                }
+                Cnx.Close();
+            }
+            return productos;
+        }
+        public List<ReporteVentasCredito> ReporteVentasACreditoPorSemana(int dia,int fin, int mes, int an)
+        {
+            List<ReporteVentasCredito> productos = new List<ReporteVentasCredito>();
+
+            //Vuelvo a crear la conexión
+            using (SqlConnection Cnx = new SqlConnection(CdCnx))
+            {
+                Cnx.Open();
+                //Creo el Query (todos los registros de la tabla Venta
+                string CdSql = "Select vc.IDVenta, v.Dia,v.Mes,v.Año,v.Subtotal,v.NoSerie,c.IDCliente, c.Nombre as NombreCliente,c.ApellidoPaterno as ApellidoPaCliente, c.ApellidoMaterno as ApellidoMaCliente, e.Nombre as NombreEmpleado, e.ApellidoPaterno as ApellidoPaEmpleado, e.ApellidoMaterno as ApellidoMaEmpleado, con.Plazo,con.Enganche,con.Mensualidad,con.Anualidad,con.Interes,vc.TotalFinal\r\nfrom Cliente c\r\ninner join Cotizacion co on c.IDCliente = co.IDCliente\r\ninner join CotizacionCredito con on co.IDCotizacion = con.IDCotizacion\r\ninner join VentaCredito vc on vc.IDCotizacion = con.IDCotizacion\r\ninner join Venta v on v.IDVenta = vc.IDVenta\r\ninner join Empleado e on v.IDEmpleado = e.IDEmpleado\r\nwhere v.Dia >= @di and v.Dia < @fi and v.Mes=@me and v.Año=@an";
+                using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
+                {
+                    Cmd.Parameters.AddWithValue("@di", dia);
+                    Cmd.Parameters.AddWithValue("@fi", fin);
+                    Cmd.Parameters.AddWithValue("@me", mes);
+                    Cmd.Parameters.AddWithValue("@an", an);
+                    SqlDataReader Dr = Cmd.ExecuteReader();
+                    //Leo registro por registro que tiene la tabla 
+                    while (Dr.Read())
+                    {
+                        //Cada vez que lo lea se crea un nuevo objeto
+                        ReporteVentasCredito Pqte = new ReporteVentasCredito
+                        {
+                            IDVenta = Convert.ToString(Dr["IDVenta"]),
+                            Dia = Convert.ToInt32(Dr["Dia"]),
+                            Mes = Convert.ToInt32(Dr["Mes"]),
+                            Año = Convert.ToInt32(Dr["Año"]),
+                            Subtotal = Convert.ToDouble(Dr["Subtotal"]),
+                            NoSerie = Convert.ToString(Dr["NoSerie"]),
+                            IDCliente = Convert.ToString(Dr["IDCliente"]),
+                            NombreCli = Convert.ToString(Dr["NombreCliente"]),
+                            ApellidoPaternoCli = Convert.ToString(Dr["ApellidoPaCliente"]),
+                            ApellidoMaternoCli = Convert.ToString(Dr["ApellidoMaCliente"]),
+                            //IDEmpleado = Convert.ToString(Dr["IDEmpleado"]),
+                            NombreEmp = Convert.ToString(Dr["NombreEmpleado"]),
+                            ApellidoPaternoEmp = Convert.ToString(Dr["ApellidoPaEmpleado"]),
+                            ApellidoMaternoEmp = Convert.ToString(Dr["ApellidoMaEmpleado"]),
+                            Plazo = Convert.ToInt32(Dr["Plazo"]),
+                            Enganche = Convert.ToDouble(Dr["Enganche"]),
+                            Mensualidad = Convert.ToDouble(Dr["Mensualidad"]),
+                            Anualidad = Convert.ToDouble(Dr["Anualidad"]),
+                            Intereses = Convert.ToInt32(Dr["Interes"]),
+                            TotalFinal = Convert.ToDouble(Dr["TotalFinal"]),
+
+                        };
+                        productos.Add(Pqte);
+                    }
+                }
+                Cnx.Close();
+            }
+            return productos;
+        }
+        public List<ReporteVentasCredito> ReporteVentasACreditoPorMes(int mes, int an)
+        {
+            List<ReporteVentasCredito> productos = new List<ReporteVentasCredito>();
+
+            //Vuelvo a crear la conexión
+            using (SqlConnection Cnx = new SqlConnection(CdCnx))
+            {
+                Cnx.Open();
+                //Creo el Query (todos los registros de la tabla Venta
+                string CdSql = "Select vc.IDVenta, v.Dia,v.Mes,v.Año,v.Subtotal,v.NoSerie,c.IDCliente, c.Nombre as NombreCliente,c.ApellidoPaterno as ApellidoPaCliente, c.ApellidoMaterno as ApellidoMaCliente, e.Nombre as NombreEmpleado, e.ApellidoPaterno as ApellidoPaEmpleado, e.ApellidoMaterno as ApellidoMaEmpleado, con.Plazo,con.Enganche,con.Mensualidad,con.Anualidad,con.Interes,vc.TotalFinal\r\nfrom Cliente c\r\ninner join Cotizacion co on c.IDCliente = co.IDCliente\r\ninner join CotizacionCredito con on co.IDCotizacion = con.IDCotizacion\r\ninner join VentaCredito vc on vc.IDCotizacion = con.IDCotizacion\r\ninner join Venta v on v.IDVenta = vc.IDVenta\r\ninner join Empleado e on v.IDEmpleado = e.IDEmpleado\r\nwhere v.Mes=@me and v.Año=@an";
+                using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
+                {
+                    Cmd.Parameters.AddWithValue("@me", mes);
+                    Cmd.Parameters.AddWithValue("@an", an);
+                    SqlDataReader Dr = Cmd.ExecuteReader();
+                    //Leo registro por registro que tiene la tabla 
+                    while (Dr.Read())
+                    {
+                        //Cada vez que lo lea se crea un nuevo objeto
+                        ReporteVentasCredito Pqte = new ReporteVentasCredito
+                        {
+                            IDVenta = Convert.ToString(Dr["IDVenta"]),
+                            Dia = Convert.ToInt32(Dr["Dia"]),
+                            Mes = Convert.ToInt32(Dr["Mes"]),
+                            Año = Convert.ToInt32(Dr["Año"]),
+                            Subtotal = Convert.ToDouble(Dr["Subtotal"]),
+                            NoSerie = Convert.ToString(Dr["NoSerie"]),
+                            IDCliente = Convert.ToString(Dr["IDCliente"]),
+                            NombreCli = Convert.ToString(Dr["NombreCliente"]),
+                            ApellidoPaternoCli = Convert.ToString(Dr["ApellidoPaCliente"]),
+                            ApellidoMaternoCli = Convert.ToString(Dr["ApellidoMaCliente"]),
+                            //IDEmpleado = Convert.ToString(Dr["IDEmpleado"]),
+                            NombreEmp = Convert.ToString(Dr["NombreEmpleado"]),
+                            ApellidoPaternoEmp = Convert.ToString(Dr["ApellidoPaEmpleado"]),
+                            ApellidoMaternoEmp = Convert.ToString(Dr["ApellidoMaEmpleado"]),
+                            Plazo = Convert.ToInt32(Dr["Plazo"]),
+                            Enganche = Convert.ToDouble(Dr["Enganche"]),
+                            Mensualidad = Convert.ToDouble(Dr["Mensualidad"]),
+                            Anualidad = Convert.ToDouble(Dr["Anualidad"]),
+                            Intereses = Convert.ToInt32(Dr["Interes"]),
+                            TotalFinal = Convert.ToDouble(Dr["TotalFinal"]),
+
+                        };
+                        productos.Add(Pqte);
+                    }
+                }
+                Cnx.Close();
+            }
+            return productos;
+        }
+        public List<ReporteVentasCredito> ReporteVentasACreditoAnual(int an)
+        {
+            List<ReporteVentasCredito> productos = new List<ReporteVentasCredito>();
+
+            //Vuelvo a crear la conexión
+            using (SqlConnection Cnx = new SqlConnection(CdCnx))
+            {
+                Cnx.Open();
+                //Creo el Query (todos los registros de la tabla Venta
+                string CdSql = "Select vc.IDVenta, v.Dia,v.Mes,v.Año,v.Subtotal,v.NoSerie,c.IDCliente, c.Nombre as NombreCliente,c.ApellidoPaterno as ApellidoPaCliente, c.ApellidoMaterno as ApellidoMaCliente, e.Nombre as NombreEmpleado, e.ApellidoPaterno as ApellidoPaEmpleado, e.ApellidoMaterno as ApellidoMaEmpleado, con.Plazo,con.Enganche,con.Mensualidad,con.Anualidad,con.Interes,vc.TotalFinal\r\nfrom Cliente c\r\ninner join Cotizacion co on c.IDCliente = co.IDCliente\r\ninner join CotizacionCredito con on co.IDCotizacion = con.IDCotizacion\r\ninner join VentaCredito vc on vc.IDCotizacion = con.IDCotizacion\r\ninner join Venta v on v.IDVenta = vc.IDVenta\r\ninner join Empleado e on v.IDEmpleado = e.IDEmpleado\r\nwhere v.Año=@an";
+                using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
+                {
+                    Cmd.Parameters.AddWithValue("@an", an);
+                    SqlDataReader Dr = Cmd.ExecuteReader();
+                    //Leo registro por registro que tiene la tabla 
+                    while (Dr.Read())
+                    {
+                        //Cada vez que lo lea se crea un nuevo objeto
+                        ReporteVentasCredito Pqte = new ReporteVentasCredito
+                        {
+                            IDVenta = Convert.ToString(Dr["IDVenta"]),
+                            Dia = Convert.ToInt32(Dr["Dia"]),
+                            Mes = Convert.ToInt32(Dr["Mes"]),
+                            Año = Convert.ToInt32(Dr["Año"]),
+                            Subtotal = Convert.ToDouble(Dr["Subtotal"]),
+                            NoSerie = Convert.ToString(Dr["NoSerie"]),
+                            IDCliente = Convert.ToString(Dr["IDCliente"]),
+                            NombreCli = Convert.ToString(Dr["NombreCliente"]),
+                            ApellidoPaternoCli = Convert.ToString(Dr["ApellidoPaCliente"]),
+                            ApellidoMaternoCli = Convert.ToString(Dr["ApellidoMaCliente"]),
+                            //IDEmpleado = Convert.ToString(Dr["IDEmpleado"]),
+                            NombreEmp = Convert.ToString(Dr["NombreEmpleado"]),
+                            ApellidoPaternoEmp = Convert.ToString(Dr["ApellidoPaEmpleado"]),
+                            ApellidoMaternoEmp = Convert.ToString(Dr["ApellidoMaEmpleado"]),
+                            Plazo = Convert.ToInt32(Dr["Plazo"]),
+                            Enganche = Convert.ToDouble(Dr["Enganche"]),
+                            Mensualidad = Convert.ToDouble(Dr["Mensualidad"]),
+                            Anualidad = Convert.ToDouble(Dr["Anualidad"]),
+                            Intereses = Convert.ToInt32(Dr["Interes"]),
+                            TotalFinal = Convert.ToDouble(Dr["TotalFinal"]),
+
+                        };
+                        productos.Add(Pqte);
+                    }
+                }
+                Cnx.Close();
+            }
+            return productos;
+        }
+        public List<ReporteVentasContado> VentasPorSemanaespecifico(int dia,int fin, int mes, int an)
+        {
+            List<ReporteVentasContado> productos = new List<ReporteVentasContado>();
+
+            //Vuelvo a crear la conexión
+            using (SqlConnection Cnx = new SqlConnection(CdCnx))
+            {
+                Cnx.Open();
+                //Creo el Query (todos los registros de la tabla Venta
+                string CdSql = "Select vc.IDVenta, v.Dia,v.Mes,v.Año,v.Hora,v.Subtotal,v.Subtotal as Total,v.NoSerie,c.IDCliente, c.Nombre as NombreCliente,c.ApellidoPaterno as ApellidoPaCliente, c.ApellidoMaterno as ApellidoMaCliente, e.Nombre as NombreEmpleado, e.ApellidoPaterno as ApellidoPaEmpleado, e.ApellidoMaterno as ApellidoMaEmpleado\r\nfrom Cliente c\r\ninner join Cotizacion co on c.IDCliente = co.IDCliente\r\ninner join CotizacionContado con on co.IDCotizacion = con.IDCotizacion\r\ninner join VentaContado vc on vc.IDCotizacion = con.IDCotizacion\r\ninner join Venta v on v.IDVenta = vc.IDVenta\r\ninner join Empleado e on v.IDEmpleado = e.IDEmpleado\r\nwhere v.Dia >= @di and v.Dia < @fi and v.Mes=@me and v.Año=@an";
+                using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
+                {
+                    Cmd.Parameters.AddWithValue("@di", dia);
+                    Cmd.Parameters.AddWithValue("@fi", fin);
+                    Cmd.Parameters.AddWithValue("@me", mes);
+                    Cmd.Parameters.AddWithValue("@an", an);
+                    SqlDataReader Dr = Cmd.ExecuteReader();
+                    //Leo registro por registro que tiene la tabla 
+                    while (Dr.Read())
+                    {
+                        //Cada vez que lo lea se crea un nuevo objeto
+                        ReporteVentasContado Pqte = new ReporteVentasContado
+                        {
+                            IDVenta = Convert.ToString(Dr["IDVenta"]),
+                            Dia = Convert.ToInt32(Dr["Dia"]),
+                            Mes = Convert.ToInt32(Dr["Mes"]),
+                            Año = Convert.ToInt32(Dr["Año"]),
+                            Subtotal = Convert.ToDouble(Dr["Subtotal"]),
+                            Total = Convert.ToDouble(Dr["Total"]),
+                            NoSerie = Convert.ToString(Dr["NoSerie"]),
+                            IDCliente = Convert.ToString(Dr["IDCliente"]),
+                            NombreCli = Convert.ToString(Dr["NombreCliente"]),
+                            ApellidoPaternoCli = Convert.ToString(Dr["ApellidoPaCliente"]),
+                            ApellidoMaternoCli = Convert.ToString(Dr["ApellidoMaCliente"]),
+                            //IDEmpleado = Convert.ToString(Dr["IDEmpleado"]),
+                            NombreEmp = Convert.ToString(Dr["NombreEmpleado"]),
+                            ApellidoPaternoEmp = Convert.ToString(Dr["ApellidoPaEmpleado"]),
+                            ApellidoMaternoEmp = Convert.ToString(Dr["ApellidoMaEmpleado"])
+                        };
+                        productos.Add(Pqte);
+                    }
+                }
+                Cnx.Close();
+            }
+            return productos;
+        }
+        public List<ReporteVentasContado> VentasPorMesespecifico(int mes, int an)
+        {
+            List<ReporteVentasContado> productos = new List<ReporteVentasContado>();
+
+            //Vuelvo a crear la conexión
+            using (SqlConnection Cnx = new SqlConnection(CdCnx))
+            {
+                Cnx.Open();
+                //Creo el Query (todos los registros de la tabla Venta
+                string CdSql = "Select vc.IDVenta, v.Dia,v.Mes,v.Año,v.Hora,v.Subtotal,v.Subtotal as Total,v.NoSerie,c.IDCliente, c.Nombre as NombreCliente,c.ApellidoPaterno as ApellidoPaCliente, c.ApellidoMaterno as ApellidoMaCliente, e.Nombre as NombreEmpleado, e.ApellidoPaterno as ApellidoPaEmpleado, e.ApellidoMaterno as ApellidoMaEmpleado\r\nfrom Cliente c\r\ninner join Cotizacion co on c.IDCliente = co.IDCliente\r\ninner join CotizacionContado con on co.IDCotizacion = con.IDCotizacion\r\ninner join VentaContado vc on vc.IDCotizacion = con.IDCotizacion\r\ninner join Venta v on v.IDVenta = vc.IDVenta\r\ninner join Empleado e on v.IDEmpleado = e.IDEmpleado\r\nwhere v.Mes=@me and v.Año=@an";
+                using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
+                {
+                    Cmd.Parameters.AddWithValue("@me", mes);
+                    Cmd.Parameters.AddWithValue("@an", an);
+                    SqlDataReader Dr = Cmd.ExecuteReader();
+                    //Leo registro por registro que tiene la tabla 
+                    while (Dr.Read())
+                    {
+                        //Cada vez que lo lea se crea un nuevo objeto
+                        ReporteVentasContado Pqte = new ReporteVentasContado
+                        {
+                            IDVenta = Convert.ToString(Dr["IDVenta"]),
+                            Dia = Convert.ToInt32(Dr["Dia"]),
+                            Mes = Convert.ToInt32(Dr["Mes"]),
+                            Año = Convert.ToInt32(Dr["Año"]),
+                            Subtotal = Convert.ToDouble(Dr["Subtotal"]),
+                            Total = Convert.ToDouble(Dr["Total"]),
+                            NoSerie = Convert.ToString(Dr["NoSerie"]),
+                            IDCliente = Convert.ToString(Dr["IDCliente"]),
+                            NombreCli = Convert.ToString(Dr["NombreCliente"]),
+                            ApellidoPaternoCli = Convert.ToString(Dr["ApellidoPaCliente"]),
+                            ApellidoMaternoCli = Convert.ToString(Dr["ApellidoMaCliente"]),
+                            //IDEmpleado = Convert.ToString(Dr["IDEmpleado"]),
+                            NombreEmp = Convert.ToString(Dr["NombreEmpleado"]),
+                            ApellidoPaternoEmp = Convert.ToString(Dr["ApellidoPaEmpleado"]),
+                            ApellidoMaternoEmp = Convert.ToString(Dr["ApellidoMaEmpleado"])
+                        };
+                        productos.Add(Pqte);
+                    }
+                }
+                Cnx.Close();
+            }
+            return productos;
+        }
+        public List<ReporteVentasContado> VentasAnualesespecificas(int an)
+        {
+            List<ReporteVentasContado> productos = new List<ReporteVentasContado>();
+
+            //Vuelvo a crear la conexión
+            using (SqlConnection Cnx = new SqlConnection(CdCnx))
+            {
+                Cnx.Open();
+                //Creo el Query (todos los registros de la tabla Venta
+                string CdSql = "Select vc.IDVenta, v.Dia,v.Mes,v.Año,v.Hora,v.Subtotal,v.Subtotal as Total,v.NoSerie,c.IDCliente, c.Nombre as NombreCliente,c.ApellidoPaterno as ApellidoPaCliente, c.ApellidoMaterno as ApellidoMaCliente, e.Nombre as NombreEmpleado, e.ApellidoPaterno as ApellidoPaEmpleado, e.ApellidoMaterno as ApellidoMaEmpleado\r\nfrom Cliente c\r\ninner join Cotizacion co on c.IDCliente = co.IDCliente\r\ninner join CotizacionContado con on co.IDCotizacion = con.IDCotizacion\r\ninner join VentaContado vc on vc.IDCotizacion = con.IDCotizacion\r\ninner join Venta v on v.IDVenta = vc.IDVenta\r\ninner join Empleado e on v.IDEmpleado = e.IDEmpleado\r\nwhere v.Año=@an";
+                using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
+                {
+                    Cmd.Parameters.AddWithValue("@an", an);
+                    SqlDataReader Dr = Cmd.ExecuteReader();
+                    //Leo registro por registro que tiene la tabla 
+                    while (Dr.Read())
+                    {
+                        //Cada vez que lo lea se crea un nuevo objeto
+                        ReporteVentasContado Pqte = new ReporteVentasContado
+                        {
+                            IDVenta = Convert.ToString(Dr["IDVenta"]),
+                            Dia = Convert.ToInt32(Dr["Dia"]),
+                            Mes = Convert.ToInt32(Dr["Mes"]),
+                            Año = Convert.ToInt32(Dr["Año"]),
+                            Subtotal = Convert.ToDouble(Dr["Subtotal"]),
+                            Total = Convert.ToDouble(Dr["Total"]),
+                            NoSerie = Convert.ToString(Dr["NoSerie"]),
+                            IDCliente = Convert.ToString(Dr["IDCliente"]),
+                            NombreCli = Convert.ToString(Dr["NombreCliente"]),
+                            ApellidoPaternoCli = Convert.ToString(Dr["ApellidoPaCliente"]),
+                            ApellidoMaternoCli = Convert.ToString(Dr["ApellidoMaCliente"]),
+                            //IDEmpleado = Convert.ToString(Dr["IDEmpleado"]),
+                            NombreEmp = Convert.ToString(Dr["NombreEmpleado"]),
+                            ApellidoPaternoEmp = Convert.ToString(Dr["ApellidoPaEmpleado"]),
+                            ApellidoMaternoEmp = Convert.ToString(Dr["ApellidoMaEmpleado"])
+                        };
+                        productos.Add(Pqte);
+                    }
+                }
+                Cnx.Close();
+            }
+            return productos;
+        }
         public List<VentasEntrega> ListadoTotalVentasABONOEspecificos(string nom, string app)
         {
             List<VentasEntrega> productos = new List<VentasEntrega>();

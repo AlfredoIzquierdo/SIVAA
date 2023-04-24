@@ -80,7 +80,7 @@ namespace Pantallas_SIVAA
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            ReporteInventario reporteInventario = new ReporteInventario();
+            ReporteCrudInventario reporteInventario = new ReporteCrudInventario();
             reporteInventario.Show();
         }
 

@@ -26,20 +26,20 @@ namespace Pantallas_SIVAA
 
         private void label17_Click(object sender, EventArgs e)
         {
-            ReporteVentaContado reporteVentaContado = new ReporteVentaContado();
-            reporteVentaContado.Show();
+            //ReporteVentaContado reporteVentaContado = new ReporteVentaContado();
+            //reporteVentaContado.Show();
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
         {
-            ReporteVentaContado reporteVentaContado = new ReporteVentaContado();
-            reporteVentaContado.Show();
+            //ReporteVentaContado reporteVentaContado = new ReporteVentaContado();
+            //reporteVentaContado.Show();
         }
 
         private void label16_Click(object sender, EventArgs e)
         {
-            ReporteVentaCredito reporteVentaCredito = new ReporteVentaCredito();
-            reporteVentaCredito.Show();
+            //ReporteVentaCredito reporteVentaCredito = new ReporteVentaCredito();
+            //reporteVentaCredito.Show();
         }
 
         private void ReporteVentas_Load_1(object sender, EventArgs e)

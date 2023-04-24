@@ -398,7 +398,10 @@ namespace Pantallas_SIVAA
                 MessageBox.Show("El pago no puede ser menor que el monto a pagar");
                 return;
             }
-            MessageBox.Show("Pago efectuado");
+            //MessageBox.Show("Pago efectuado");
+            Ticket tic = new Ticket(pqt);
+            tic.Show();
+
             Limpiar();
         }
         public void Limpiar()
@@ -409,6 +412,20 @@ namespace Pantallas_SIVAA
             textBox6.Text = "";
             textBox5.Text = "";
             textBox7.Text = "";
+        }
+        public void Limpiar2()
+        {
+            //datoscliente
+            textBox3.Text = "";
+            textBox10.Text = "Nombre del cliente";
+            textBox4.Text = "Apellido del cliente";
+            //Auto
+            textBox16.Text = "";
+            textBox2.Text = "";
+            textBox15.Text = "";
+            //dinero
+            textBox1.Text = "";
+            textBox12.Text = "";
         }
         public void mostrarventasenganchecredito()
         {
@@ -816,8 +833,10 @@ namespace Pantallas_SIVAA
                 MessageBox.Show("El abono no puede ser menor que el monto a pagar");
                 return;
             }
-            MessageBox.Show("abono efectuado");
-            //Limpiar();
+            //MessageBox.Show("abono efectuado");
+            Ticket tic = new Ticket(pqt3);
+            tic.Show();
+            Limpiar2();
         }
 
         private void dataGridView6_CellClick(object sender, DataGridViewCellEventArgs e)

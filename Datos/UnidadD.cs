@@ -184,6 +184,39 @@ namespace Datos
             }
             return unidades;
         }
+        public List<ReporteInventario> ReporteInventario()
+        {
+            List<ReporteInventario> unidades = new List<ReporteInventario>();
+            using (SqlConnection Cnx = new SqlConnection(CdCnx))
+            {
+                Cnx.Open();
+                // Crear el query
+                string cdSql = "SELECT v.IDVersion, v.Version, m.IDModelo, m.Año, v.IDVehiculo, \r\n       veh.Nombre AS NombreVehiculo,\r\n       COUNT(u.NoSerie) AS NumeroUnidades\r\nFROM Version v\r\nINNER JOIN ModeloVersion mv ON v.IDVersion = mv.IDVersion\r\nINNER JOIN Modelo m ON mv.IDModelo = m.IDModelo\r\nINNER JOIN Vehiculo veh ON v.IDVehiculo = veh.IDVehiculo\r\nLEFT JOIN Unidad u ON v.IDVersion = u.IDVersion\r\nwhere u.Estatus='DISPONIBLE'\r\nGROUP BY v.IDVersion, v.Version, m.IDModelo, m.Año, v.IDVehiculo, veh.Nombre\r\nHAVING COUNT(u.NoSerie) > 0\r\nORDER BY m.Año DESC, m.IDModelo, v.IDVersion";
+                using (SqlCommand Cmd = new SqlCommand(cdSql, Cnx))
+                {
+                    SqlDataReader Dr = Cmd.ExecuteReader();
+                    //Leo registro por registro que tiene la tabla 
+                    while (Dr.Read())
+                    {
+                        //Cada vez que lo lea se crea un nuevo objeto
+                        ReporteInventario Pqte = new ReporteInventario
+                        {
+                            IDVehiculo = Convert.ToString(Dr["IDVehiculo"]),
+                            Vehiculo = Convert.ToString(Dr["NombreVehiculo"]),
+                            IDVersion = Convert.ToString(Dr["IDVersion"]),
+                            Version = Convert.ToString(Dr["Version"]),
+                            IDModelo = Convert.ToString(Dr["IDModelo"]),
+                            Modelo = Convert.ToString(Dr["Año"]),
+                            NumeroUnidades = Convert.ToInt32(Dr["NumeroUnidades"])
+
+                        };
+                        unidades.Add(Pqte);
+                    }
+                }
+                Cnx.Close();
+            }
+            return unidades;
+        }
         public List<UnidadNoUsar> Cotizar()
         {
             List<UnidadNoUsar> unidades = new List<UnidadNoUsar>();

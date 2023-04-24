@@ -293,9 +293,9 @@ namespace Pantallas_SIVAA
 
         private void btnIrCaja_Click(object sender, EventArgs e)
         {
-        CorteDeCaja corteDeCaja = new CorteDeCaja(_pqt);
-        this.Close();
-        corteDeCaja.Show();
+            CorteDeCaja corteDeCaja = new CorteDeCaja(_pqt);
+            this.Close();
+            corteDeCaja.Show();
         }
         public static PagoLog Pqtelog7 = new PagoLog();
         public static AbonoLog Pqtelog8 = new AbonoLog();
@@ -308,8 +308,11 @@ namespace Pantallas_SIVAA
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
+
             if (lbltotaltarjeta.Text == "" || label37.Text == "")
             {
+                //ReporteBuenoCaja repo = new ReporteBuenoCaja();
+                //repo.Show();
                 MessageBox.Show("Favor de llenar los campos requeridos");
                 return;
             }
@@ -351,6 +354,9 @@ namespace Pantallas_SIVAA
             btnCerrar.Enabled = false;
             btnIrCaja.Enabled = false;
             btnAbrir.Enabled = true;
+            ReporteBuenoCaja reporte = new ReporteBuenoCaja(pqt, _pqt);
+            reporte.Show();
+
             Limpiar();
         }
         CorteCaja pqte;
