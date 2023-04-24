@@ -293,6 +293,66 @@ namespace Logicas
             }
             return null;
         }
+        public List<ReporteContadoVsCredito> ListaReporteCreditoVsContadoAnual(int an)
+        {
+            List<ReporteContadoVsCredito> Pd = null;
+            Mensaje.Clear();
+            if (an == 0)
+                Mensaje.Append("Por favor proporcionar una fecha valida");
+            if (Mensaje.Length == 0)
+            {
+                Pd = Pdto.ReporteContadoVsCreditoAnual(an);
+                if (Pd == null)
+                    Mensaje.Append("Ventas no encontradas de acuerdo a la fecha");
+                return Pd;
+            }
+            return null;
+        }
+        public List<ReporteContadoVsCredito> ListaReporteCreditoVsContadoPorSemana(int dia, int fin, int mes, int an)
+        {
+            List<ReporteContadoVsCredito> Pd = null;
+            Mensaje.Clear();
+            if (dia == 0||fin == 0||mes == 0||an == 0)
+                Mensaje.Append("Por favor proporcionar una fecha valida");
+            if (Mensaje.Length == 0)
+            {
+                Pd = Pdto.ReporteContadoVsCreditoPorSemana(dia,fin,mes,an);
+                if (Pd == null)
+                    Mensaje.Append("Ventas no encontradas de acuerdo a la fecha");
+                return Pd;
+            }
+            return null;
+        }
+        public List<ReporteContadoVsCredito> ListaReporteCreditoVsContadoPorMes(int mes, int an)
+        {
+            List<ReporteContadoVsCredito> Pd = null;
+            Mensaje.Clear();
+            if (mes == 0 || an == 0)
+                Mensaje.Append("Por favor proporcionar una fecha valida");
+            if (Mensaje.Length == 0)
+            {
+                Pd = Pdto.ReporteContadoVsCreditoPorMes(mes, an);
+                if (Pd == null)
+                    Mensaje.Append("Ventas no encontradas de acuerdo a la fecha");
+                return Pd;
+            }
+            return null;
+        }
+        public List<ReporteContadoVsCredito> ListaReporteCreditoVsContadoPorDia(int dia,int mes, int an)
+        {
+            List<ReporteContadoVsCredito> Pd = null;
+            Mensaje.Clear();
+            if (dia==0||mes == 0 || an == 0)
+                Mensaje.Append("Por favor proporcionar una fecha valida");
+            if (Mensaje.Length == 0)
+            {
+                Pd = Pdto.ReporteContadoVsCreditoPorDia(dia,mes, an);
+                if (Pd == null)
+                    Mensaje.Append("Ventas no encontradas de acuerdo a la fecha");
+                return Pd;
+            }
+            return null;
+        }
         public Venta LeerPorClave(string ClPdto)
         {
             Venta Pd = null;

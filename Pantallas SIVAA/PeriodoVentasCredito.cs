@@ -27,6 +27,10 @@ namespace Pantallas_SIVAA
         private void button1_Click(object sender, EventArgs e)
         {
             //ReporteVentaContado rep = new ReporteVentaContado(pqt, comboBox1.SelectedItem.ToString());
+            if (comboBox1.SelectedIndex < 0)
+            {
+                return;
+            }
             if (comboBox1.SelectedItem.ToString() == "Dia")
             {
                 ReporteVentaCredito rep = new ReporteVentaCredito(pqt, "Dia", (int)(nddia.Value), (int)(ndmes.Value), (int)(ndan.Value));

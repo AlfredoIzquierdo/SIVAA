@@ -864,6 +864,148 @@ namespace Datos
             }
             return productos;
         }
+        public List<ReporteContadoVsCredito> ReporteContadoVsCreditoPorDia(int dia, int mes, int an)
+        {
+            List<ReporteContadoVsCredito> productos = new List<ReporteContadoVsCredito>();
+
+            //Vuelvo a crear la conexión
+            using (SqlConnection Cnx = new SqlConnection(CdCnx))
+            {
+                Cnx.Open();
+                //Creo el Query (todos los registros de la tabla Venta
+                string CdSql = "Select v.Dia,v.Mes,v.Año, COUNT(vc.IDVenta) TOTALVENTAS, v.TipoVenta as TIPOVENTA, SUM(vc.TotalFinal) as TOTAL\r\nfrom Cliente c\r\ninner join Cotizacion co on c.IDCliente = co.IDCliente\r\ninner join CotizacionCredito con on co.IDCotizacion = con.IDCotizacion\r\ninner join VentaCredito vc on vc.IDCotizacion = con.IDCotizacion\r\ninner join Venta v on v.IDVenta = vc.IDVenta\r\ninner join Empleado e on v.IDEmpleado = e.IDEmpleado\r\nwhere v.Dia=@di and v.Mes=@me and v.Año =@an \r\ngroup by v.Dia,v.Mes,v.Año, v.TipoVenta\r\nUNION\r\nSelect v.Dia,v.Mes,v.Año, COUNT(vc.IDVenta) TOTALVENTAS, v.TipoVenta as TIPOVENTA, SUM(v.Subtotal) TOTAL\r\nfrom Cliente c\r\ninner join Cotizacion co on c.IDCliente = co.IDCliente\r\ninner join CotizacionContado con on co.IDCotizacion = con.IDCotizacion\r\ninner join VentaContado vc on vc.IDCotizacion = con.IDCotizacion\r\ninner join Venta v on v.IDVenta = vc.IDVenta\r\ninner join Empleado e on v.IDEmpleado = e.IDEmpleado\r\nwhere v.Dia=@di and v.Mes=@me and v.Año = @an \r\ngroup by v.Dia,v.Mes,v.Año, v.TipoVenta";
+                using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
+                {
+                    Cmd.Parameters.AddWithValue("@di", dia);
+                    Cmd.Parameters.AddWithValue("@me", mes);
+                    Cmd.Parameters.AddWithValue("@an", an);
+                    SqlDataReader Dr = Cmd.ExecuteReader();
+                    //Leo registro por registro que tiene la tabla 
+                    while (Dr.Read())
+                    {
+                        //Cada vez que lo lea se crea un nuevo objeto
+                        ReporteContadoVsCredito Pqte = new ReporteContadoVsCredito
+                        {
+                            Dia = Convert.ToInt32(Dr["Dia"]),
+                            Mes = Convert.ToInt32(Dr["Mes"]),
+                            Año = Convert.ToInt32(Dr["Año"]),
+                            TotalVentas = Convert.ToInt32(Dr["TotalVentas"]),
+                            TipoVenta = Convert.ToString(Dr["TipoVenta"]),
+                            Total= Convert.ToDouble(Dr["Total"])
+                        };
+                        productos.Add(Pqte);
+                    }
+                }
+                Cnx.Close();
+            }
+            return productos;
+        }
+        public List<ReporteContadoVsCredito> ReporteContadoVsCreditoPorSemana(int dia,int fin, int mes, int an)
+        {
+            List<ReporteContadoVsCredito> productos = new List<ReporteContadoVsCredito>();
+
+            //Vuelvo a crear la conexión
+            using (SqlConnection Cnx = new SqlConnection(CdCnx))
+            {
+                Cnx.Open();
+                //Creo el Query (todos los registros de la tabla Venta
+                string CdSql = "Select v.Dia,v.Mes,v.Año, COUNT(vc.IDVenta) TOTALVENTAS, v.TipoVenta as TIPOVENTA, SUM(vc.TotalFinal) as TOTAL\r\nfrom Cliente c\r\ninner join Cotizacion co on c.IDCliente = co.IDCliente\r\ninner join CotizacionCredito con on co.IDCotizacion = con.IDCotizacion\r\ninner join VentaCredito vc on vc.IDCotizacion = con.IDCotizacion\r\ninner join Venta v on v.IDVenta = vc.IDVenta\r\ninner join Empleado e on v.IDEmpleado = e.IDEmpleado\r\nwhere v.Dia>=@di and v.Dia<@fi and v.Mes=@me and v.Año =@an \r\ngroup by v.Dia,v.Mes,v.Año, v.TipoVenta\r\nUNION\r\nSelect v.Dia,v.Mes,v.Año, COUNT(vc.IDVenta) TOTALVENTAS, v.TipoVenta as TIPOVENTA, SUM(v.Subtotal) TOTAL\r\nfrom Cliente c\r\ninner join Cotizacion co on c.IDCliente = co.IDCliente\r\ninner join CotizacionContado con on co.IDCotizacion = con.IDCotizacion\r\ninner join VentaContado vc on vc.IDCotizacion = con.IDCotizacion\r\ninner join Venta v on v.IDVenta = vc.IDVenta\r\ninner join Empleado e on v.IDEmpleado = e.IDEmpleado\r\nwhere v.Dia>=@di and v.Dia<@fi and v.Mes=@me and v.Año = @an \r\ngroup by v.Dia,v.Mes,v.Año, v.TipoVenta";
+                using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
+                {
+                    Cmd.Parameters.AddWithValue("@di", dia);
+                    Cmd.Parameters.AddWithValue("@fi", fin);
+                    Cmd.Parameters.AddWithValue("@me", mes);
+                    Cmd.Parameters.AddWithValue("@an", an);
+                    SqlDataReader Dr = Cmd.ExecuteReader();
+                    //Leo registro por registro que tiene la tabla 
+                    while (Dr.Read())
+                    {
+                        //Cada vez que lo lea se crea un nuevo objeto
+                        ReporteContadoVsCredito Pqte = new ReporteContadoVsCredito
+                        {
+                            Dia = Convert.ToInt32(Dr["Dia"]),
+                            Mes = Convert.ToInt32(Dr["Mes"]),
+                            Año = Convert.ToInt32(Dr["Año"]),
+                            TotalVentas = Convert.ToInt32(Dr["TotalVentas"]),
+                            TipoVenta = Convert.ToString(Dr["TipoVenta"]),
+                            Total = Convert.ToDouble(Dr["Total"])
+                        };
+                        productos.Add(Pqte);
+                    }
+                }
+                Cnx.Close();
+            }
+            return productos;
+        }
+        public List<ReporteContadoVsCredito> ReporteContadoVsCreditoPorMes(int mes, int an)
+        {
+            List<ReporteContadoVsCredito> productos = new List<ReporteContadoVsCredito>();
+
+            //Vuelvo a crear la conexión
+            using (SqlConnection Cnx = new SqlConnection(CdCnx))
+            {
+                Cnx.Open();
+                //Creo el Query (todos los registros de la tabla Venta
+                string CdSql = "Select v.Mes,v.Año, COUNT(vc.IDVenta) TOTALVENTAS, v.TipoVenta as TIPOVENTA, SUM(vc.TotalFinal) as TOTAL\r\nfrom Cliente c\r\ninner join Cotizacion co on c.IDCliente = co.IDCliente\r\ninner join CotizacionCredito con on co.IDCotizacion = con.IDCotizacion\r\ninner join VentaCredito vc on vc.IDCotizacion = con.IDCotizacion\r\ninner join Venta v on v.IDVenta = vc.IDVenta\r\ninner join Empleado e on v.IDEmpleado = e.IDEmpleado\r\nwhere v.Mes=@me and v.Año =@an \r\ngroup by v.Mes,v.Año, v.TipoVenta\r\nUNION\r\nSelect v.Mes,v.Año, COUNT(vc.IDVenta) TOTALVENTAS, v.TipoVenta as TIPOVENTA, SUM(v.Subtotal) TOTAL\r\nfrom Cliente c\r\ninner join Cotizacion co on c.IDCliente = co.IDCliente\r\ninner join CotizacionContado con on co.IDCotizacion = con.IDCotizacion\r\ninner join VentaContado vc on vc.IDCotizacion = con.IDCotizacion\r\ninner join Venta v on v.IDVenta = vc.IDVenta\r\ninner join Empleado e on v.IDEmpleado = e.IDEmpleado\r\nwhere v.Mes=@me and v.Año = @an \r\ngroup by v.Mes,v.Año, v.TipoVenta";
+                using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
+                {
+                    Cmd.Parameters.AddWithValue("@me", mes);
+                    Cmd.Parameters.AddWithValue("@an", an);
+                    SqlDataReader Dr = Cmd.ExecuteReader();
+                    //Leo registro por registro que tiene la tabla 
+                    while (Dr.Read())
+                    {
+                        //Cada vez que lo lea se crea un nuevo objeto
+                        ReporteContadoVsCredito Pqte = new ReporteContadoVsCredito
+                        {
+                            //Dia = Convert.ToInt32(Dr["Dia"]),
+                            Mes = Convert.ToInt32(Dr["Mes"]),
+                            Año = Convert.ToInt32(Dr["Año"]),
+                            TotalVentas = Convert.ToInt32(Dr["TotalVentas"]),
+                            TipoVenta = Convert.ToString(Dr["TipoVenta"]),
+                            Total = Convert.ToDouble(Dr["Total"])
+                        };
+                        productos.Add(Pqte);
+                    }
+                }
+                Cnx.Close();
+            }
+            return productos;
+        }
+        public List<ReporteContadoVsCredito> ReporteContadoVsCreditoAnual(int an)
+        {
+            List<ReporteContadoVsCredito> productos = new List<ReporteContadoVsCredito>();
+
+            //Vuelvo a crear la conexión
+            using (SqlConnection Cnx = new SqlConnection(CdCnx))
+            {
+                Cnx.Open();
+                //Creo el Query (todos los registros de la tabla Venta
+                string CdSql = "Select v.Año, COUNT(vc.IDVenta) TOTALVENTAS, v.TipoVenta as TIPOVENTA, SUM(vc.TotalFinal) as TOTAL\r\nfrom Cliente c\r\ninner join Cotizacion co on c.IDCliente = co.IDCliente\r\ninner join CotizacionCredito con on co.IDCotizacion = con.IDCotizacion\r\ninner join VentaCredito vc on vc.IDCotizacion = con.IDCotizacion\r\ninner join Venta v on v.IDVenta = vc.IDVenta\r\ninner join Empleado e on v.IDEmpleado = e.IDEmpleado\r\nwhere v.Año =@an \r\ngroup by v.Año, v.TipoVenta\r\nUNION\r\nSelect v.Año, COUNT(vc.IDVenta) TOTALVENTAS, v.TipoVenta as TIPOVENTA, SUM(v.Subtotal) TOTAL\r\nfrom Cliente c\r\ninner join Cotizacion co on c.IDCliente = co.IDCliente\r\ninner join CotizacionContado con on co.IDCotizacion = con.IDCotizacion\r\ninner join VentaContado vc on vc.IDCotizacion = con.IDCotizacion\r\ninner join Venta v on v.IDVenta = vc.IDVenta\r\ninner join Empleado e on v.IDEmpleado = e.IDEmpleado\r\nwhere v.Año = @an \r\ngroup by v.Año, v.TipoVenta";
+                using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
+                {
+                    Cmd.Parameters.AddWithValue("@an", an);
+                    SqlDataReader Dr = Cmd.ExecuteReader();
+                    //Leo registro por registro que tiene la tabla 
+                    while (Dr.Read())
+                    {
+                        //Cada vez que lo lea se crea un nuevo objeto
+                        ReporteContadoVsCredito Pqte = new ReporteContadoVsCredito
+                        {
+                            //Dia = Convert.ToInt32(Dr["Dia"]),
+                            //Mes = Convert.ToInt32(Dr["Mes"]),
+                            Año = Convert.ToInt32(Dr["Año"]),
+                            TotalVentas = Convert.ToInt32(Dr["TotalVentas"]),
+                            TipoVenta = Convert.ToString(Dr["TipoVenta"]),
+                            Total = Convert.ToDouble(Dr["Total"])
+                        };
+                        productos.Add(Pqte);
+                    }
+                }
+                Cnx.Close();
+            }
+            return productos;
+        }
         public List<VentasEntrega> ListadoTotalVentasABONOEspecificos(string nom, string app)
         {
             List<VentasEntrega> productos = new List<VentasEntrega>();

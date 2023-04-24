@@ -38,6 +38,7 @@
             btnCorteCaja = new Button();
             btnClientefrecuente = new Button();
             btnCitasxvendedor = new Button();
+            btnReporteCredito = new Button();
             btnEmpleados = new Button();
             btnProveedor = new Button();
             btnrepventas = new Button();
@@ -56,7 +57,6 @@
             btnCitas = new Button();
             btnStock = new Button();
             btnPedidos = new Button();
-            btnReporteCredito = new Button();
             panel2.SuspendLayout();
             panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
@@ -130,6 +130,7 @@
             button2.Text = "Comparacion ventas";
             button2.TextAlign = ContentAlignment.BottomCenter;
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
@@ -196,6 +197,23 @@
             btnCitasxvendedor.Text = "Citas por vendedor";
             btnCitasxvendedor.TextAlign = ContentAlignment.BottomCenter;
             btnCitasxvendedor.UseVisualStyleBackColor = false;
+            // 
+            // btnReporteCredito
+            // 
+            btnReporteCredito.BackColor = Color.FromArgb(232, 232, 232);
+            btnReporteCredito.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnReporteCredito.ImageAlign = ContentAlignment.TopCenter;
+            btnReporteCredito.ImageKey = "storefront_FILL0_wght400_GRAD0_opsz48.png";
+            btnReporteCredito.ImageList = IconosReportes;
+            btnReporteCredito.Location = new Point(781, 26);
+            btnReporteCredito.Margin = new Padding(3, 2, 3, 2);
+            btnReporteCredito.Name = "btnReporteCredito";
+            btnReporteCredito.Size = new Size(211, 130);
+            btnReporteCredito.TabIndex = 52;
+            btnReporteCredito.Text = "Ventas al credito";
+            btnReporteCredito.TextAlign = ContentAlignment.BottomCenter;
+            btnReporteCredito.UseVisualStyleBackColor = false;
+            btnReporteCredito.Click += btnReporteCredito_Click;
             // 
             // btnEmpleados
             // 
@@ -471,23 +489,6 @@
             btnPedidos.TextImageRelation = TextImageRelation.ImageAboveText;
             btnPedidos.UseVisualStyleBackColor = false;
             btnPedidos.Click += btnPedidos_Click;
-            // 
-            // btnReporteCredito
-            // 
-            btnReporteCredito.BackColor = Color.FromArgb(232, 232, 232);
-            btnReporteCredito.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnReporteCredito.ImageAlign = ContentAlignment.TopCenter;
-            btnReporteCredito.ImageKey = "storefront_FILL0_wght400_GRAD0_opsz48.png";
-            btnReporteCredito.ImageList = IconosReportes;
-            btnReporteCredito.Location = new Point(781, 26);
-            btnReporteCredito.Margin = new Padding(3, 2, 3, 2);
-            btnReporteCredito.Name = "btnReporteCredito";
-            btnReporteCredito.Size = new Size(211, 130);
-            btnReporteCredito.TabIndex = 52;
-            btnReporteCredito.Text = "Ventas al credito";
-            btnReporteCredito.TextAlign = ContentAlignment.BottomCenter;
-            btnReporteCredito.UseVisualStyleBackColor = false;
-            btnReporteCredito.Click += btnReporteCredito_Click;
             // 
             // Reportes
             // 

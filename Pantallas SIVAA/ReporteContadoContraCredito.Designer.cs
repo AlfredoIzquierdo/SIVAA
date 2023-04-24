@@ -29,21 +29,18 @@
         private void InitializeComponent()
         {
             dataGridView1 = new DataGridView();
-            label8 = new Label();
+            lblfecha = new Label();
             pictureBox1 = new PictureBox();
-            label7 = new Label();
+            lblnombreempleado = new Label();
             label5 = new Label();
             label6 = new Label();
-            label4 = new Label();
+            lblidempleado = new Label();
             label3 = new Label();
             label1 = new Label();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
             panel1 = new Panel();
             panel2 = new Panel();
+            label2 = new Label();
+            lblPeriodo = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
@@ -51,28 +48,28 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.BackgroundColor = SystemColors.ButtonHighlight;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5 });
             dataGridView1.Enabled = false;
-            dataGridView1.Location = new Point(12, 189);
+            dataGridView1.Location = new Point(12, 230);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(1020, 417);
+            dataGridView1.Size = new Size(1020, 376);
             dataGridView1.TabIndex = 49;
             // 
-            // label8
+            // lblfecha
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(238, 144);
-            label8.Name = "label8";
-            label8.Size = new Size(112, 25);
-            label8.TabIndex = 48;
-            label8.Text = "08/03/2023";
+            lblfecha.AutoSize = true;
+            lblfecha.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblfecha.Location = new Point(238, 144);
+            lblfecha.Name = "lblfecha";
+            lblfecha.Size = new Size(112, 25);
+            lblfecha.TabIndex = 48;
+            lblfecha.Text = "08/03/2023";
             // 
             // pictureBox1
             // 
@@ -83,15 +80,15 @@
             pictureBox1.TabIndex = 47;
             pictureBox1.TabStop = false;
             // 
-            // label7
+            // lblnombreempleado
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(257, 111);
-            label7.Name = "label7";
-            label7.Size = new Size(81, 25);
-            label7.TabIndex = 45;
-            label7.Text = "Fulanito";
+            lblnombreempleado.AutoSize = true;
+            lblnombreempleado.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblnombreempleado.Location = new Point(257, 111);
+            lblnombreempleado.Name = "lblnombreempleado";
+            lblnombreempleado.Size = new Size(81, 25);
+            lblnombreempleado.TabIndex = 45;
+            lblnombreempleado.Text = "Fulanito";
             // 
             // label5
             // 
@@ -113,16 +110,16 @@
             label6.TabIndex = 46;
             label6.Text = "Fecha de expedicion:";
             // 
-            // label4
+            // lblidempleado
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.ForeColor = SystemColors.ActiveCaptionText;
-            label4.Location = new Point(793, 35);
-            label4.Name = "label4";
-            label4.Size = new Size(47, 25);
-            label4.TabIndex = 43;
-            label4.Text = "E21";
+            lblidempleado.AutoSize = true;
+            lblidempleado.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblidempleado.ForeColor = SystemColors.ActiveCaptionText;
+            lblidempleado.Location = new Point(793, 35);
+            lblidempleado.Name = "lblidempleado";
+            lblidempleado.Size = new Size(47, 25);
+            lblidempleado.TabIndex = 43;
+            lblidempleado.Text = "E21";
             // 
             // label3
             // 
@@ -146,36 +143,6 @@
             label1.TabIndex = 41;
             label1.Text = "Empleados";
             // 
-            // Column1
-            // 
-            Column1.HeaderText = "IDReporte";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Periodo Abarcado";
-            Column2.MinimumWidth = 6;
-            Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Ventas al contado";
-            Column3.MinimumWidth = 6;
-            Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Ventas a credito";
-            Column4.MinimumWidth = 6;
-            Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            Column5.HeaderText = "Mayor tipo de pago";
-            Column5.MinimumWidth = 6;
-            Column5.Name = "Column5";
-            // 
             // panel1
             // 
             panel1.BorderStyle = BorderStyle.FixedSingle;
@@ -193,6 +160,26 @@
             panel2.Size = new Size(562, 76);
             panel2.TabIndex = 51;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(12, 183);
+            label2.Name = "label2";
+            label2.Size = new Size(192, 25);
+            label2.TabIndex = 46;
+            label2.Text = "Fecha de busqueda:";
+            // 
+            // lblPeriodo
+            // 
+            lblPeriodo.AutoSize = true;
+            lblPeriodo.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPeriodo.Location = new Point(238, 183);
+            lblPeriodo.Name = "lblPeriodo";
+            lblPeriodo.Size = new Size(112, 25);
+            lblPeriodo.TabIndex = 48;
+            lblPeriodo.Text = "08/03/2023";
+            // 
             // ReporteContadoContraCredito
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -200,17 +187,20 @@
             BackColor = Color.White;
             ClientSize = new Size(1044, 618);
             Controls.Add(dataGridView1);
-            Controls.Add(label8);
+            Controls.Add(lblPeriodo);
+            Controls.Add(lblfecha);
             Controls.Add(pictureBox1);
-            Controls.Add(label7);
+            Controls.Add(lblnombreempleado);
+            Controls.Add(label2);
             Controls.Add(label5);
             Controls.Add(label6);
-            Controls.Add(label4);
+            Controls.Add(lblidempleado);
             Controls.Add(label3);
             Controls.Add(label1);
             Controls.Add(panel1);
             Name = "ReporteContadoContraCredito";
             Text = "ReporteContadoContraCredito";
+            Load += ReporteContadoContraCredito_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
@@ -221,20 +211,17 @@
         #endregion
 
         private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column5;
-        private Label label8;
+        private Label lblfecha;
         private PictureBox pictureBox1;
-        private Label label7;
+        private Label lblnombreempleado;
         private Label label5;
         private Label label6;
-        private Label label4;
+        private Label lblidempleado;
         private Label label3;
         private Label label1;
         private Panel panel1;
         private Panel panel2;
+        private Label label2;
+        private Label lblPeriodo;
     }
 }

@@ -187,8 +187,10 @@ namespace Pantallas_SIVAA
 
         private void button2_Click(object sender, EventArgs e)
         {
-            PeriodoContadoContraCredito periodoContadoContraCredito = new PeriodoContadoContraCredito();
-            periodoContadoContraCredito.Show();
+            //PeriodoContadoContraCredito periodoContadoContraCredito = new PeriodoContadoContraCredito();
+            //periodoContadoContraCredito.Show();
+            PeriodoContadoContraCredito per = new PeriodoContadoContraCredito(_pqt);
+            per.Show();
         }
 
         private void btnStock_Click_1(object sender, EventArgs e)

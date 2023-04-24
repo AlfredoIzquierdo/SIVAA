@@ -25,7 +25,7 @@ namespace Pantallas_SIVAA
             lblnombreempleado.Text = _pqt.Nombre.Trim() + " " + _pqt.ApellidoPat.Trim() + " " + _pqt.ApellidoMat;
             VentaLog ven = new VentaLog();
             List<ReporteVentasCredito> con;
-            MessageBox.Show("Tipo= " + tipo);
+            //MessageBox.Show("Tipo= " + tipo);
             if (tipo == "Dia")
             {
                 lblPeriodo.Text = dia + "/" + mes + "/" + año;
