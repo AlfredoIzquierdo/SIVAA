@@ -102,6 +102,12 @@ namespace Pantallas_SIVAA
             txtnom.Text = "";
             TXTPRECIO.Text = "0";
 
+            //cosas venta credito
+            textBox5.Text = "";
+            textBox6.Text = "";
+            textBox7.Text = "";
+            numericUpDown5.Value = 12;
+
             //datas
             //dataGridView1.DataSource = "";
             //dataGridView2.DataSource = "";
@@ -109,6 +115,13 @@ namespace Pantallas_SIVAA
             dataGridView4.DataSource = "";
             dataGridView5.DataSource = "";
             dgvElegirVenta.DataSource = "";
+            dataGridView1.DataSource = "";
+
+            //deshabilitar botones
+            btnFactura.Enabled = false;
+            btncompraven.Enabled = false;
+            btnpagare.Enabled = false;
+            btnFichaPago.Enabled = false;
         }
         Random rn = new Random();
 
@@ -484,6 +497,8 @@ namespace Pantallas_SIVAA
                     else
                     {
                         MessageBox.Show("Por el momento no contamos con unidades de esa version de auto");
+                        dataGridView1.DataSource = "";
+                        TXTCOT.Text = "";
                         return;
                     }
 
@@ -493,7 +508,7 @@ namespace Pantallas_SIVAA
                     int i = dataGridView5.CurrentCell.RowIndex;
                     //MessageBox.Show("Columna " + i);
                     TXTCOT.Text = dataGridView5[0, i].Value.ToString();
-                    TXTPRECIO.Text = dataGridView5[5, i].Value.ToString();
+                    //TXTPRECIO.Text = dataGridView5[5, i].Value.ToString();
                     codv = dataGridView5[2, i].Value.ToString();
                     //Busca los datos de la cotizacion de credito
                     //string cod=TXTCOT.Text;
@@ -502,7 +517,7 @@ namespace Pantallas_SIVAA
                     textBox6.Text = pqt.Anualidad.ToString();
                     textBox7.Text = pqt.Enganche.ToString();
                     textBox5.Text = pqt.Mensualidad.ToString();
-
+                    TXTPRECIO.Text = pqt.Precio.ToString();
                     //Busca los datos de la cotizacion
                     Entidades.Cotizacion cot = PqteLog4.LeerPorClave(TXTCOT.Text);
                     string vers = cot.IDVersion.ToString();
@@ -522,11 +537,37 @@ namespace Pantallas_SIVAA
                     else
                     {
                         MessageBox.Show("Por el momento no contamos con unidades de esa version de auto");
+                        dataGridView1.DataSource = "";
                         TXTCOT.Text = "";
                         return;
                     }
                 }
+                UNIDADES();
             }
+        }
+        public void UNIDADES()
+        {
+            string n = codv;
+
+            if (txtid.Text == "")
+            {
+                MessageBox.Show("Favor de llenar los campos");
+                return;
+            }
+            List<UnidadNoUsar> listado = PqteLog5.ListadoESPECIFICO(n);
+            if (listado.Count > 0)
+            {
+                dataGridView1.AutoGenerateColumns = false;
+                dataGridView1.DataSource = listado;
+                dataGridView1.Columns["dataGridViewTextBoxColumn12"].DataPropertyName = "NoSerie";
+                dataGridView1.Columns["dataGridViewTextBoxColumn13"].DataPropertyName = "Vehiculo";
+                dataGridView1.Columns["dataGridViewTextBoxColumn14"].DataPropertyName = "Version";
+                dataGridView1.Columns["dataGridViewTextBoxColumn15"].DataPropertyName = "Modelo";
+                dataGridView1.Columns["dataGridViewTextBoxColumn16"].DataPropertyName = "Color";
+            }
+            else
+                MessageBox.Show("No hay unidades de esa version disponibles");
+            dataGridView1.ClearSelection();
         }
         public void mostrarUnidades(string idventa, string tipoven)
         {
@@ -656,7 +697,7 @@ namespace Pantallas_SIVAA
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (txtid.Text == "" || TXTCOT.Text == "" || txtVehiculo.Text == "")
+            if (txtid.Text == "" || TXTCOT.Text == "" || txtVehiculo.Text == "" || txtSerie.Text == "")
             {
                 MessageBox.Show("Favor de llenar los campos");
                 return;
@@ -679,7 +720,7 @@ namespace Pantallas_SIVAA
                     {
                         IDVenta = Convert.ToString("V" + k),
                         IDEmpleado = Convert.ToString(TXTIDEMPCOT.Text),
-                        NoSerie = "",
+                        NoSerie = Convert.ToString(txtSerie.Text),
                         Dia = Convert.ToInt32(numericUpDown2.Value),
                         Mes = Convert.ToInt32(numericUpDown3.Value),
                         Año = Convert.ToInt32(numericUpDown4.Value),
@@ -689,7 +730,8 @@ namespace Pantallas_SIVAA
 
                     };
                     PqteLog2.Registrar(pqt);
-
+                    PqteLog5.ModificarEstatus(pqt.NoSerie, "Vendido");
+                    idv = pqt.IDVenta.ToString();
                     if (PqteLog2.Mensaje.Length != 0)
                     {
                         //Hubo un error
@@ -731,7 +773,7 @@ namespace Pantallas_SIVAA
                         {
                             //MessageBox.Show("Venta guardada exitosamente en la B.D \r\n\r\n Folio de pago = " + Deb.IDVenta.ToString());
                             k++;
-                            btncompraven.Enabled = true;
+                            //btncompraven.Enabled = true;
                             btnFactura.Enabled = true;
                             btnFichaPago.Enabled = true;
                             //Limpiar();
@@ -752,7 +794,7 @@ namespace Pantallas_SIVAA
                     {
                         IDVenta = Convert.ToString("V" + k),
                         IDEmpleado = Convert.ToString(TXTIDEMPCOT.Text),
-                        NoSerie = "",
+                        NoSerie = Convert.ToString(txtSerie.Text),
                         Dia = Convert.ToInt32(numericUpDown2.Value),
                         Mes = Convert.ToInt32(numericUpDown3.Value),
                         Año = Convert.ToInt32(numericUpDown4.Value),
@@ -762,7 +804,8 @@ namespace Pantallas_SIVAA
 
                     };
                     PqteLog2.Registrar(pqt);
-
+                    PqteLog5.ModificarEstatus(pqt.NoSerie, "Vendido");
+                    idv = pqt.IDVenta.ToString();
                     if (PqteLog2.Mensaje.Length != 0)
                     {
                         //Hubo un error
@@ -811,7 +854,7 @@ namespace Pantallas_SIVAA
                             btnpagare.Enabled = true;
                             btnFactura.Enabled = true;
                             btncompraven.Enabled = true;
-                            Limpiar();
+                            //Limpiar();
                         }
                     }
 
@@ -831,10 +874,10 @@ namespace Pantallas_SIVAA
             }
             Venta pqt = new Venta
             {
-                IDVenta = Convert.ToString("V" + k),
+                IDVenta = Convert.ToString(idventa),
                 //IDEmpleado = Convert.ToString(TXTIDEMPCOT.Text),
                 IDEmpleado = Convert.ToString(_pqt.IDEmpleado),
-                NoSerie = "",
+                NoSerie = Convert.ToString(txtSerie.Text),
                 Dia = Convert.ToInt32(numericUpDown2.Value),
                 Mes = Convert.ToInt32(numericUpDown3.Value),
                 Año = Convert.ToInt32(numericUpDown4.Value),
@@ -845,14 +888,14 @@ namespace Pantallas_SIVAA
             };
             VentaContado Deb = new VentaContado
             {
-                IDVenta = Convert.ToString("V" + k),
+                IDVenta = Convert.ToString(idventa),
                 IDCotizacion = Convert.ToString(TXTCOT.Text),
                 Estatus = Convert.ToString("PENDIENTE"),
             };
             VentaCredito Deb2 = new VentaCredito
             {
 
-                IDVenta = Convert.ToString("V" + k),
+                IDVenta = Convert.ToString(idventa),
                 IDCotizacion = Convert.ToString(TXTCOT.Text),
                 TotalFinal = Convert.ToDouble(double.Parse(TXTPRECIO.Text) * 1.10),
                 Estatus = Convert.ToString("PENDIENTE"),
@@ -1255,7 +1298,7 @@ namespace Pantallas_SIVAA
                 MessageBox.Show("favor de elegir una venta primero");
             }
         }
-
+        string idv = "";
         private void btnFactura_Click(object sender, EventArgs e)
         {
             if (TXTCOT.Text == "")
@@ -1264,9 +1307,9 @@ namespace Pantallas_SIVAA
             }
             Venta pqt = new Venta
             {
-                IDVenta = Convert.ToString("V" + k),
+                IDVenta = Convert.ToString(idventa),
                 IDEmpleado = Convert.ToString(TXTIDEMPCOT.Text),
-                NoSerie = "",
+                NoSerie = Convert.ToString(txtSerie.Text),
                 Dia = Convert.ToInt32(numericUpDown2.Value),
                 Mes = Convert.ToInt32(numericUpDown3.Value),
                 Año = Convert.ToInt32(numericUpDown4.Value),
@@ -1277,14 +1320,14 @@ namespace Pantallas_SIVAA
             };
             VentaContado Deb = new VentaContado
             {
-                IDVenta = Convert.ToString("V" + k),
+                IDVenta = Convert.ToString(idventa),
                 IDCotizacion = Convert.ToString(TXTCOT.Text),
                 Estatus = Convert.ToString("PENDIENTE"),
             };
             VentaCredito Deb2 = new VentaCredito
             {
 
-                IDVenta = Convert.ToString("V" + k),
+                IDVenta = Convert.ToString(idventa),
                 IDCotizacion = Convert.ToString(TXTCOT.Text),
                 TotalFinal = Convert.ToDouble(double.Parse(TXTPRECIO.Text) * 1.10),
                 Estatus = Convert.ToString("PENDIENTE"),
@@ -2300,6 +2343,20 @@ namespace Pantallas_SIVAA
         private void tabPage2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.CurrentCell.RowIndex >= 0)
+            {
+                int i = dataGridView1.CurrentCell.RowIndex;
+                //MessageBox.Show("Columna " + i);
+                txtColor.Text = dataGridView1[4, i].Value.ToString();
+                txtSerie.Text = dataGridView1[0, i].Value.ToString();
+                txtVehiculo.Text = dataGridView1[1, i].Value.ToString();
+                txtVersion.Text = dataGridView1[2, i].Value.ToString();
+                txtAño.Text = dataGridView1[3, i].Value.ToString();
+            }
         }
     }
 }

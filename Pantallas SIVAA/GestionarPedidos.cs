@@ -197,7 +197,7 @@ namespace Pantallas_SIVAA.Pedidos
 
         private void comboBox2_SelectedValueChanged(object sender, EventArgs e)
         {
-            if (txtbusqueda.Text!="")
+            if (txtbusqueda.Text != "")
             {
                 txtbusqueda.ResetText();
             }

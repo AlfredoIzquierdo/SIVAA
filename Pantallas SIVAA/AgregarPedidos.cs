@@ -11,7 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Logicas;
+//using Logicas;
 
 namespace Pantallas_SIVAA
 {
@@ -20,6 +20,10 @@ namespace Pantallas_SIVAA
         Empleado _pqt;
         readonly PedidoLOG pedidoLog = new PedidoLOG();
         Pedido pedido = new Pedido();
+        VehiculoLog pqte = new VehiculoLog();
+        VersionLog pqte2 = new VersionLog();
+        UnidadLog PqteLog2 = new UnidadLog();
+
         public AgregarPedidos(Empleado pqt)
         {
             InitializeComponent();
@@ -71,6 +75,12 @@ namespace Pantallas_SIVAA
                     lblTipoEmpleado.Text = _pqt.Tipo;
                     lblNombre.Text = "Bienvenido: " + _pqt.Nombre + " " + _pqt.ApellidoPat;
                     break;
+            }
+            List<Vehiculo> veh;
+            veh = pqte.ListadoAll();
+            foreach (Vehiculo x in veh)
+            {
+                cmbVehiculo.Items.Add(x.Nombre);
             }
         }
 
@@ -125,6 +135,12 @@ namespace Pantallas_SIVAA
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (dataGridView1.Rows.Count == 0)
+            {
+                MessageBox.Show("Favor de ingresar al menos una unidad para guardar el pedido");
+                return;
+            }
+
             List<Pedido> x = pedidoLog.ListadoAll();
             string i = "PD" + (x.Count + 1).ToString();
             pedido.IDPedido = i;
@@ -134,10 +150,37 @@ namespace Pantallas_SIVAA
             pedido.Mes = Convert.ToInt32(numericUpDownMes.Value);
             pedido.Año = Convert.ToInt32(numericUpDownAno.Value);
             pedido.Importe = Convert.ToDouble(txtImporte.Text);
-            pedido.EstadoPedido = "Activo";
+            pedido.EstadoPedido = "Disponible";
             pedidoLog.Registrar(pedido);
+            //Agrega Unidad por unidad
+            Versions ver;
+            for (int j = 0; j < dataGridView1.Rows.Count; j++)
+            {
+                string serie, color;
+                serie = dataGridView1[0, j].Value.ToString();
+                color = dataGridView1[4, j].Value.ToString();
+                string ve, vers, mod;
+                ve = dataGridView1[1, j].Value.ToString();
+                vers = dataGridView1[2, j].Value.ToString();
+                mod = dataGridView1[3, j].Value.ToString();
+                ver = pqte2.ObtenerVersionPorDatos(ve, vers, mod);
+                Unidad uni;
+                //Unidades
+                uni = new Unidad
+                {
+                    NoSerie = Convert.ToString(serie),
+                    IDVersion = Convert.ToString(ver.IDVersion),
+                    IDPedido = pedido.IDPedido.ToString(),
+                    Color = Convert.ToString(color),
+                    Estatus = Convert.ToString("Disponible")
+
+                };
+                PqteLog2.Registrar(uni);
+            }
+
+            MessageBox.Show("Pedido Agregado con exito");
             this.Close();
-            GestionarPedidos gestionarPedidos = new GestionarPedidos(null);
+            GestionarPedidos gestionarPedidos = new GestionarPedidos(_pqt);
             gestionarPedidos.Show();
         }
 
@@ -227,6 +270,106 @@ namespace Pantallas_SIVAA
             {
                 e.Handled = true;
             }
+        }
+
+        private void btnIngresarUnidad_Click(object sender, EventArgs e)
+        {
+            if (txtSerie.Text == "")
+            {
+                MessageBox.Show("Favor de llenar todos los campos");
+                return;
+            }
+            if (cmbVehiculo.SelectedIndex < 0 || cmbVersion.SelectedIndex < 0 || cmbModelo.SelectedIndex < 0 || cmbColor.SelectedIndex < 0)
+            {
+                MessageBox.Show("Favor de seleccionar todos los campos");
+                return;
+            }
+            string idversion, idpedido;
+            string serie, color;
+            string vehiculo, version, modelo;
+            serie = txtSerie.Text;
+            vehiculo = cmbVehiculo.SelectedItem.ToString();
+            version = cmbVersion.SelectedItem.ToString();
+            modelo = cmbModelo.SelectedItem.ToString();
+            color = cmbColor.SelectedItem.ToString();
+
+            dataGridView1.Rows.Add(serie, vehiculo, version, modelo, color);
+            actualizar();
+            Limpiar();
+        }
+        public void Limpiar()
+        {
+            txtSerie.Text = "";
+            cmbVersion.Items.Clear();
+            cmbModelo.Items.Clear();
+            //cmbVersion.SelectedItem=-1;
+            //cmbModelo.SelectedItem=-1;
+            //cmbColor.SelectedItem=-1;
+            //cmbVehiculo.SelectedItem=-1;
+
+        }
+        Vehiculo v = new Vehiculo();
+
+        private void cmbVehiculo_SelectedValueChanged(object sender, EventArgs e)
+        {
+            cmbVersion.Items.Clear();
+            List<Versions> ver;
+            ver = pqte2.ListadoVersionesPorVehiculo(cmbVehiculo.SelectedItem.ToString());
+            foreach (Versions x in ver)
+            {
+                cmbVersion.Items.Add(x.Version);
+            }
+        }
+
+        private void cmbVersion_SelectedValueChanged(object sender, EventArgs e)
+        {
+            cmbModelo.Items.Clear();
+            List<Modelo> mo;
+            mo = pqte2.ListaAnPorVersion(cmbVehiculo.SelectedItem.ToString(), cmbVersion.SelectedItem.ToString());
+            foreach (Modelo x in mo)
+            {
+                cmbModelo.Items.Add(x.Año);
+            }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                dataGridView1.Rows[e.RowIndex].Selected = true;
+            }
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            string id = null;
+            if (dataGridView1.SelectedRows.Count == 1)
+            {
+                //id = dataGridView2[0, dataGridView2.SelectedRows[0].Index].Value.ToString();
+                //MessageBox.Show("Empleado eliminado");
+                dataGridView1.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
+                actualizar();
+            }
+            else
+            {
+                MessageBox.Show("Favor de seleccionar una unidad para eliminar");
+            }
+        }
+        public void actualizar()
+        {
+            Versions ver;
+            double total = 0;
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                string ve, vers, mod;
+                ve = dataGridView1[1, i].Value.ToString();
+                vers = dataGridView1[2, i].Value.ToString();
+                mod = dataGridView1[3, i].Value.ToString();
+                ver = pqte2.ObtenerVersionPorDatos(ve, vers, mod);
+                total += ver.Costo;
+            }
+            txtCant.Text = (dataGridView1.Rows.Count).ToString();
+            txtImporte.Text = total.ToString();
         }
     }
 }

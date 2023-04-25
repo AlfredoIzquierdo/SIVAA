@@ -33,6 +33,21 @@ namespace Logicas
             //Método que obtiene la lista dinámica de todos los registro que tiene mi tabla
             return Pdto.ListadoTotal();
         }
+        public List<Modelo> ListaAnPorVersion(string cod, string nom)
+        {
+            //Método que obtiene la lista dinámica de todos los registro que tiene mi tabla
+            return Pdto.Listadomodeloporversion(cod, nom);
+        }
+        public List<Versions> ListadoVersionesPorVehiculo(string cod)
+        {
+            //Método que obtiene la lista dinámica de todos los registro que tiene mi tabla
+            return Pdto.ListadoVersionPorVehiculo(cod);
+        }
+        public Versions ObtenerVersionPorDatos(string veh, string ver, string mod)
+        {
+            Versions datos = Pdto.ObtpqtPorDatos(veh, ver, mod);
+            return datos;
+        }
         public Versions ObtenerFicha(string id,string nombre )
         {
             Versions datos = Pdto.ObtenerPdtoPorNombreModelo(id, nombre);

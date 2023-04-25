@@ -98,6 +98,7 @@ namespace Logicas
             }
             return null;
         }
+        //cambio
         public List<Cotizacion> ListadoAllEspCred(string ClPdto)
         {
             List<Cotizacion> Pd = new List<Cotizacion>();
@@ -106,7 +107,7 @@ namespace Logicas
                 Mensaje.Append("Por favor proporcionar una clave valida");
             if (Mensaje.Length == 0)
             {
-                Pd = Pdto.ListadoTotalESPCred(ClPdto);
+                Pd = Pdto.ListadoTotalESPCred2(ClPdto);
                 if (Pd == null)
                     Mensaje.Append("el cliente no tiene cotizaciones existentes en la B.D.");
                 return Pd;

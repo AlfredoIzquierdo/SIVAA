@@ -385,7 +385,8 @@ namespace Pantallas_SIVAA
                     //    IDPago = Convert.ToString(pqt.IDPago.ToString()),
                     //    IDCorteCaja = Convert.ToString(txtid.Text),
                     //};
-                    string est = "PAGADO";
+                    //string est = "PAGADO";
+                    string est = "FINALIZADO";
                     PqteLog2.ModificarEstatus(con.IDVenta, est);
                     //MessageBox.Show("paso estatus");
                     if (PqteLog2.Mensaje.Length != 0)
@@ -741,7 +742,7 @@ namespace Pantallas_SIVAA
                     if (Pqtelog8.Mensaje.Length != 0)
                     {
                         //Hubo un error
-                        MessageBox.Show(Pqtelog7.Mensaje.ToString(), "Mensaje de Error");
+                        MessageBox.Show(Pqtelog8.Mensaje.ToString(), "Mensaje de Error4");
                     }
                     else
                     {
@@ -775,7 +776,7 @@ namespace Pantallas_SIVAA
                     if (Pqtelog10.Mensaje.Length != 0)
                     {
                         //Hubo un error
-                        MessageBox.Show(Pqtelog9.Mensaje.ToString(), "Mensaje de Error");
+                        MessageBox.Show(Pqtelog9.Mensaje.ToString(), "Mensaje de Error3");
                     }
                     else
                     {
@@ -804,18 +805,20 @@ namespace Pantallas_SIVAA
                     string est = "";
                     if (radioButton5.Checked)
                     {
-                        est = "PAGADO";
+                        //est = "PAGADO";
+                        est = "Activo";
+
                     }
                     if (radioButton6.Checked || radioButton7.Checked)
                     {
                         cre = Pqtelog3.LeerPorClave(textBox3.Text);
                         ven = PqteLog1.LeerPorClave(cre.IDVenta);
-                        if (ven.NoSerie != null)
-                        {
+                        //if (ven.NoSerie != null)
+                        //{
                             est = "Activo";
-                        }
-                        else
-                            est = "PENDIENTE";
+                        //}
+                        //else
+                        //    est = "PENDIENTE";
                     }
                     if (sac == 0 || sac < 1)
                     {
@@ -826,7 +829,7 @@ namespace Pantallas_SIVAA
                     if (Pqtelog3.Mensaje.Length != 0)
                     {
                         //Hubo un error
-                        MessageBox.Show(Pqtelog3.Mensaje.ToString(), "Mensaje de Error");
+                        MessageBox.Show(Pqtelog3.Mensaje.ToString(), "Mensaje de Error2");
                     }
                     else
                     {

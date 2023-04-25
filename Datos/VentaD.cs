@@ -18,7 +18,8 @@ namespace Datos
             {
                 //Abrir la conexión y crear el Query
                 Cnx.Open();
-                string CdSql = "INSERT INTO Venta (IDVenta,IDEmpleado,NoSerie,Dia,Mes,Año,Hora,SubTotal,TipoVenta) VALUES (@Cl,@Nm,null,@Apm,@Rfc,@Cr,@Tl,@No,@Col)";
+                //string CdSql = "INSERT INTO Venta (IDVenta,IDEmpleado,NoSerie,Dia,Mes,Año,Hora,SubTotal,TipoVenta) VALUES (@Cl,@Nm,null,@Apm,@Rfc,@Cr,@Tl,@No,@Col)";
+                string CdSql = "INSERT INTO Venta (IDVenta,IDEmpleado,NoSerie,Dia,Mes,Año,Hora,SubTotal,TipoVenta) VALUES (@Cl,@Nm,@App,@Apm,@Rfc,@Cr,@Tl,@No,@Col)";
                 using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))//SolicitA: la cadena de SQL y la conexeión
                 {
                     //Añadir los parámetros

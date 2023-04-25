@@ -78,6 +78,13 @@
             Column33 = new DataGridViewTextBoxColumn();
             Column34 = new DataGridViewTextBoxColumn();
             Column35 = new DataGridViewTextBoxColumn();
+            tabPage10 = new TabPage();
+            dataGridView1 = new DataGridView();
+            dataGridViewTextBoxColumn12 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn13 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn14 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn15 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn16 = new DataGridViewTextBoxColumn();
             txtap = new TextBox();
             txtnom = new TextBox();
             numericUpDown4 = new NumericUpDown();
@@ -231,6 +238,8 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView4).BeginInit();
             tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView5).BeginInit();
+            tabPage10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
@@ -568,20 +577,20 @@
             btncompraven.BackColor = Color.FromArgb(51, 58, 86);
             btncompraven.Enabled = false;
             btncompraven.ForeColor = Color.White;
-            btncompraven.Location = new Point(1051, 279);
+            btncompraven.Location = new Point(1051, 228);
             btncompraven.Name = "btncompraven";
             btncompraven.Size = new Size(185, 48);
             btncompraven.TabIndex = 125;
             btncompraven.Text = "Generar contrato compra - venta";
             btncompraven.UseVisualStyleBackColor = false;
-            btncompraven.Visible = false;
+            btncompraven.Click += btncompraven_Click;
             // 
             // btnpagare
             // 
             btnpagare.BackColor = Color.FromArgb(51, 58, 86);
             btnpagare.Enabled = false;
             btnpagare.ForeColor = Color.White;
-            btnpagare.Location = new Point(1051, 223);
+            btnpagare.Location = new Point(1051, 165);
             btnpagare.Name = "btnpagare";
             btnpagare.Size = new Size(185, 48);
             btnpagare.TabIndex = 124;
@@ -594,6 +603,7 @@
             tabControl2.Controls.Add(tabPage3);
             tabControl2.Controls.Add(tabPage4);
             tabControl2.Controls.Add(tabPage5);
+            tabControl2.Controls.Add(tabPage10);
             tabControl2.Location = new Point(487, 87);
             tabControl2.Margin = new Padding(3, 1, 3, 1);
             tabControl2.Name = "tabControl2";
@@ -872,6 +882,68 @@
             Column35.Name = "Column35";
             Column35.ReadOnly = true;
             // 
+            // tabPage10
+            // 
+            tabPage10.Controls.Add(dataGridView1);
+            tabPage10.Location = new Point(4, 29);
+            tabPage10.Name = "tabPage10";
+            tabPage10.Padding = new Padding(3);
+            tabPage10.Size = new Size(477, 359);
+            tabPage10.TabIndex = 3;
+            tabPage10.Text = "Unidades";
+            tabPage10.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn12, dataGridViewTextBoxColumn13, dataGridViewTextBoxColumn14, dataGridViewTextBoxColumn15, dataGridViewTextBoxColumn16 });
+            dataGridView1.Location = new Point(3, 18);
+            dataGridView1.Margin = new Padding(3, 1, 3, 1);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowTemplate.Height = 29;
+            dataGridView1.Size = new Size(468, 334);
+            dataGridView1.TabIndex = 3;
+            dataGridView1.CellClick += dataGridView1_CellClick;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            dataGridViewTextBoxColumn12.HeaderText = "NoSerie";
+            dataGridViewTextBoxColumn12.MinimumWidth = 6;
+            dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            dataGridViewTextBoxColumn12.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            dataGridViewTextBoxColumn13.HeaderText = "Vehiculo";
+            dataGridViewTextBoxColumn13.MinimumWidth = 6;
+            dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            dataGridViewTextBoxColumn13.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            dataGridViewTextBoxColumn14.HeaderText = "Version";
+            dataGridViewTextBoxColumn14.MinimumWidth = 6;
+            dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            dataGridViewTextBoxColumn14.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            dataGridViewTextBoxColumn15.HeaderText = "Modelo";
+            dataGridViewTextBoxColumn15.MinimumWidth = 6;
+            dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            dataGridViewTextBoxColumn15.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            dataGridViewTextBoxColumn16.HeaderText = "Color";
+            dataGridViewTextBoxColumn16.MinimumWidth = 6;
+            dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            dataGridViewTextBoxColumn16.ReadOnly = true;
+            // 
             // txtap
             // 
             txtap.ForeColor = SystemColors.WindowFrame;
@@ -896,6 +968,7 @@
             // 
             // numericUpDown4
             // 
+            numericUpDown4.Enabled = false;
             numericUpDown4.Location = new Point(311, 113);
             numericUpDown4.Margin = new Padding(3, 1, 3, 1);
             numericUpDown4.Maximum = new decimal(new int[] { 2024, 0, 0, 0 });
@@ -908,6 +981,7 @@
             // 
             // numericUpDown3
             // 
+            numericUpDown3.Enabled = false;
             numericUpDown3.Location = new Point(216, 113);
             numericUpDown3.Margin = new Padding(3, 1, 3, 1);
             numericUpDown3.Maximum = new decimal(new int[] { 12, 0, 0, 0 });
@@ -920,6 +994,7 @@
             // 
             // numericUpDown2
             // 
+            numericUpDown2.Enabled = false;
             numericUpDown2.Location = new Point(127, 113);
             numericUpDown2.Margin = new Padding(3, 1, 3, 1);
             numericUpDown2.Maximum = new decimal(new int[] { 31, 0, 0, 0 });
@@ -947,11 +1022,10 @@
             txtSerie.Location = new Point(81, 329);
             txtSerie.Margin = new Padding(3, 1, 3, 1);
             txtSerie.Name = "txtSerie";
+            txtSerie.PlaceholderText = "Serie";
             txtSerie.ReadOnly = true;
             txtSerie.Size = new Size(397, 27);
             txtSerie.TabIndex = 118;
-            txtSerie.Text = "Serie";
-            txtSerie.Visible = false;
             // 
             // txtVehiculo
             // 
@@ -991,20 +1065,20 @@
             btnFactura.BackColor = Color.FromArgb(51, 58, 86);
             btnFactura.Enabled = false;
             btnFactura.ForeColor = Color.White;
-            btnFactura.Location = new Point(1051, 167);
+            btnFactura.Location = new Point(1051, 297);
             btnFactura.Margin = new Padding(3, 1, 3, 1);
             btnFactura.Name = "btnFactura";
             btnFactura.Size = new Size(185, 48);
             btnFactura.TabIndex = 114;
             btnFactura.Text = "Generar Factura";
             btnFactura.UseVisualStyleBackColor = false;
-            btnFactura.Visible = false;
+            btnFactura.Click += btnFactura_Click;
             // 
             // btnNuevaventa
             // 
             btnNuevaventa.BackColor = Color.FromArgb(51, 58, 86);
             btnNuevaventa.ForeColor = Color.White;
-            btnNuevaventa.Location = new Point(1051, 377);
+            btnNuevaventa.Location = new Point(1052, 364);
             btnNuevaventa.Margin = new Padding(3, 1, 3, 1);
             btnNuevaventa.Name = "btnNuevaventa";
             btnNuevaventa.Size = new Size(185, 48);
@@ -1134,10 +1208,10 @@
             txtColor.Size = new Size(211, 27);
             txtColor.TabIndex = 100;
             txtColor.Text = "Color";
-            txtColor.Visible = false;
             // 
             // TXTHORA
             // 
+            TXTHORA.Enabled = false;
             TXTHORA.ForeColor = SystemColors.WindowFrame;
             TXTHORA.Location = new Point(377, 113);
             TXTHORA.Margin = new Padding(3, 1, 3, 1);
@@ -1150,7 +1224,7 @@
             // TXTCOT
             // 
             TXTCOT.ForeColor = SystemColors.WindowFrame;
-            TXTCOT.Location = new Point(599, 36);
+            TXTCOT.Location = new Point(550, 39);
             TXTCOT.Margin = new Padding(3, 1, 3, 1);
             TXTCOT.Name = "TXTCOT";
             TXTCOT.PlaceholderText = "IDCotizacion";
@@ -1190,12 +1264,11 @@
             pictureBox12.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox12.TabIndex = 90;
             pictureBox12.TabStop = false;
-            pictureBox12.Visible = false;
             // 
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(497, 39);
+            pictureBox2.Location = new Point(487, 39);
             pictureBox2.Margin = new Padding(3, 1, 3, 1);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(43, 41);
@@ -1261,7 +1334,7 @@
             tabPage2.Padding = new Padding(3, 1, 3, 1);
             tabPage2.Size = new Size(1311, 499);
             tabPage2.TabIndex = 1;
-            tabPage2.Text = "Entrega Auto";
+            tabPage2.Text = "________";
             tabPage2.UseVisualStyleBackColor = true;
             tabPage2.Click += tabPage2_Click;
             tabPage2.Enter += tabPage2_Enter;
@@ -1298,7 +1371,7 @@
             btnFacturaEntrega.Name = "btnFacturaEntrega";
             btnFacturaEntrega.Size = new Size(151, 48);
             btnFacturaEntrega.TabIndex = 140;
-            btnFacturaEntrega.Text = "Generar Factura";
+            btnFacturaEntrega.Text = "Generar pre Factura";
             btnFacturaEntrega.UseVisualStyleBackColor = false;
             btnFacturaEntrega.Click += btnFacturaEntrega_Click;
             // 
@@ -1715,7 +1788,7 @@
             tabCotizacion.Controls.Add(pictureBox17);
             tabCotizacion.Location = new Point(4, 29);
             tabCotizacion.Name = "tabCotizacion";
-            tabCotizacion.Padding = new Padding(3, 3, 3, 3);
+            tabCotizacion.Padding = new Padding(3);
             tabCotizacion.Size = new Size(1311, 499);
             tabCotizacion.TabIndex = 2;
             tabCotizacion.Text = "Cotizacion";
@@ -1740,7 +1813,7 @@
             tabPage6.Controls.Add(dgvClientCot);
             tabPage6.Location = new Point(4, 29);
             tabPage6.Name = "tabPage6";
-            tabPage6.Padding = new Padding(3, 3, 3, 3);
+            tabPage6.Padding = new Padding(3);
             tabPage6.Size = new Size(479, 406);
             tabPage6.TabIndex = 0;
             tabPage6.Text = "Cliente";
@@ -1833,7 +1906,7 @@
             tabPage9.Controls.Add(groupCotCred);
             tabPage9.Location = new Point(4, 29);
             tabPage9.Name = "tabPage9";
-            tabPage9.Padding = new Padding(3, 3, 3, 3);
+            tabPage9.Padding = new Padding(3);
             tabPage9.Size = new Size(479, 406);
             tabPage9.TabIndex = 1;
             tabPage9.Text = "Pagos";
@@ -2365,6 +2438,8 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView4).EndInit();
             tabPage5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView5).EndInit();
+            tabPage10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown4).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown3).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
@@ -2600,5 +2675,12 @@
         private Button btnFacturaEntrega;
         private Button btnNuevaventa;
         private Button btnNuevaEntrega;
+        private TabPage tabPage10;
+        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
     }
 }
