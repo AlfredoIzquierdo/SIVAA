@@ -444,6 +444,7 @@
             // 
             // panel2
             // 
+            panel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel2.Controls.Add(txtCant);
             panel2.Controls.Add(tabControl1);
             panel2.Controls.Add(txtImporte);
@@ -676,6 +677,7 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "AgregarPedidos";
             Text = "Agregar";
+            WindowState = FormWindowState.Maximized;
             Load += AgregarPedidos_Load;
             panel7.ResumeLayout(false);
             panel7.PerformLayout();
