@@ -81,7 +81,7 @@ namespace Pantallas_SIVAA
             }
             else
             {
-                List<Empleado> x = empleadolog.ListadoAll();
+                List<Empleado> x = empleadolog.ListadoAllConInactivos();
                 string i = "E" + (x.Count + 1).ToString();
                 empleado.IDEmpleado = i;
                 empleado.Nombre = txtNombre.Text;
@@ -91,7 +91,7 @@ namespace Pantallas_SIVAA
                 empleado.Telefono = txtTelefono.Text;
                 empleado.RFC = txtRFC.Text;
                 empleado.Contraseña = txtContraseña.Text;
-                empleado.EstadoEmpleado = "Activa";
+                empleado.EstadoEmpleado = "Activo";
                 //if (cbPuesto.SelectedIndex == 1)
                 //{
                 //    empleado.Tipo = "Atencion";

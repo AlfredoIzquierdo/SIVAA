@@ -464,6 +464,7 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(938, 530);
             panel2.TabIndex = 122;
+            panel2.Paint += panel2_Paint;
             // 
             // txtCant
             // 
@@ -502,6 +503,7 @@
             tabPage1.TabIndex = 0;
             tabPage1.Text = "| Agregar Unidad |";
             tabPage1.UseVisualStyleBackColor = true;
+            tabPage1.Click += tabPage1_Click;
             // 
             // btnIngresarUnidad
             // 

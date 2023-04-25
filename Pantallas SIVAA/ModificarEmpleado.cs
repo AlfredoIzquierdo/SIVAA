@@ -181,17 +181,7 @@ namespace Pantallas_SIVAA
         }
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                e.Handled = true;
-            }
-            if (txtNombre.Text.Length > 34)
-            {
-                e.Handled = true;
-                //MessageBox.Show("Limite de caracteres exedido");
-                string te = txtNombre.Text.Substring(0, 34).ToString();
-                txtNombre.Text = te;
-            }
+           
         }
 
         private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)

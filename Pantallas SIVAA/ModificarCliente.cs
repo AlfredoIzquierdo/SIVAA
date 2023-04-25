@@ -107,16 +107,16 @@ namespace Pantallas_SIVAA
             {
                 if (x.IDCliente == id)
                 {
-                    txtNombre.Text = x.Nombre;
-                    txtRFC.Text = x.RFC;
-                    txtApellidoP.Text = x.ApellidoPat;
-                    txtApellidoM.Text = x.ApellidoMat;
-                    txtNoExterior.Text = x.NoExterior;
-                    txtCiudad.Text = x.Ciudad;
-                    txtAgregarCorreo.Text = x.Correo;
-                    txtEstado.Text = x.Estado;
-                    txtColonia.Text = x.Colonia;
-                    txtTelefono.Text = x.Telefono;
+                    txtNombre.Text = x.Nombre.Trim();
+                    txtRFC.Text = x.RFC.Trim();
+                    txtApellidoP.Text = x.ApellidoPat.Trim();
+                    txtApellidoM.Text = x.ApellidoMat.Trim();
+                    txtNoExterior.Text = x.NoExterior.Trim();
+                    txtCiudad.Text = x.Ciudad.Trim();
+                    txtAgregarCorreo.Text = x.Correo.Trim();
+                    txtEstado.Text = x.Estado.Trim();
+                    txtColonia.Text = x.Colonia.Trim();
+                    txtTelefono.Text = x.Telefono.Trim();
                 }
             }
         }
@@ -175,10 +175,7 @@ namespace Pantallas_SIVAA
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+
         }
     }
 }
