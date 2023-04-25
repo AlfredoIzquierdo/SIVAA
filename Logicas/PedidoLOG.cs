@@ -171,6 +171,62 @@ namespace Logicas
                 return num;
             }
         }
+        public int LetraAnumero(string num)
+        {
+            if (num == "ENERO")
+            {
+                return 1;
+            }
+            if (num == "FEBRERO")
+            {
+                return 2;
+            }
+            if (num == "MARZO")
+            {
+                return 3;
+            }
+            if (num == "ABRIL")
+            {
+                return 4;
+            }
+            if (num == "MAYO")
+            {
+                return 5;
+            }
+            if (num == "JUNIO")
+            {
+                return 6;
+
+            }
+            if (num == "JULIO")
+            {
+                return 7;
+            }
+            if (num == "AGOSTO")
+            {
+                return 8;
+            }
+            if (num == "SEPTIEMBRE")
+            {
+                return 9;
+            }
+            if (num == "OCTUBRE")
+            {
+                return 10;
+            }
+            if (num == "NOVIEMBRE")
+            {
+                return 11;
+            }
+            if (num == "DICIEMBRE")
+            {
+                return 12;
+            }
+            else
+            {
+                return 1;
+            }
+        }
         public void Registrar(Pedido Pd)
         {
             Mensaje.Clear();
@@ -192,6 +248,21 @@ namespace Logicas
             if (Mensaje.Length == 0)
             {
                 Pd = pqtPed.ListadoTotalEspecifico(ClPdto, parametro);
+                if (Pd == null)
+                    Mensaje.Append(ClPdto + " no existe en la B.D.");
+                return Pd;
+            }
+            return null;
+        }
+        public List<Pedido> ListadoEspecificoFechas(int ClPdto, string parametro)
+        {
+            List<Pedido> Pd = new List<Pedido>();
+            Mensaje.Clear();
+            if (ClPdto < 0)
+                Mensaje.Append("Por favor proporcionar una clave valida");
+            if (Mensaje.Length == 0)
+            {
+                Pd = pqtPed.ListadoTotalEspecificoFechas(ClPdto, parametro);
                 if (Pd == null)
                     Mensaje.Append(ClPdto + " no existe en la B.D.");
                 return Pd;

@@ -183,7 +183,7 @@ namespace Pantallas_SIVAA.Pedidos
             {
                 List<Pedido> datos = new List<Pedido>();
 
-                datos = pedlog.ListadoEspecifico(txtbusqueda.Text, comboBox2.Text);
+                datos = pedlog.ListadoEspecificoFechas(pedlog.LetraAnumero(txtbusqueda.Text.ToUpper()), comboBox2.Text);
                 //listas = datos;
                 dataGridView1.Rows.Clear();
                 foreach (Pedido x in datos)

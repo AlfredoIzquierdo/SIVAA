@@ -24,7 +24,7 @@ namespace Logicas
                     //No se encuentra el dato (El código no existe)
                     Pdto.Insertar(Pd);
                 else
-                    Mensaje.Append("El Codigo del Cliente ya se encuentra en la B.D.");
+                    Mensaje.Append("El Codigo de la unidad ya se encuentra en la B.D.");
             }
         }
 

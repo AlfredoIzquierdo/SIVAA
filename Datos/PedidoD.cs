@@ -113,6 +113,44 @@ namespace Datos
             }
             return productos;
         }
+        public List<Pedido> ListadoTotalEspecificoFechas(int nom, string parametro)
+        {
+            List<Pedido> productos = new List<Pedido>();
+
+            //Vuelvo a crear la conexiÃ³n
+            using (SqlConnection Cnx = new SqlConnection(CdCnx))
+            {
+                Cnx.Open();
+                //Creo el Query (todos los registros de la tabla Pedido
+                string CdSql = "SELECT * FROM Pedido WHERE " + parametro + "=@Cl";
+                using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
+                {
+                    //Cmd.Parameters.AddWithValue("@Lc", parametro);
+                    Cmd.Parameters.AddWithValue("@Cl", nom);
+
+                    SqlDataReader Dr = Cmd.ExecuteReader();
+                    //Leo registro por registro que tiene la tabla 
+                    while (Dr.Read())
+                    {
+                        //Cada vez que lo lea se crea un nuevo objeto
+                        Pedido Pqte = new Pedido
+                        {
+                            IDPedido = Convert.ToString(Dr["IDPedido"]),
+                            IDProveedor = Convert.ToString(Dr["IDProovedor"]),
+                            IDEmpleado = Convert.ToString(Dr["IDEmpleado"]),
+                            Dia = Convert.ToInt32(Dr["Dia"]),
+                            Mes = Convert.ToInt32(Dr["Mes"]),
+                            Año = Convert.ToInt32(Dr["Año"]),
+                            Importe = Convert.ToDouble(Dr["Importe"]),
+                            EstadoPedido = Convert.ToString(Dr["EstadoPedido"])
+                        };
+                        productos.Add(Pqte);
+                    }
+                }
+                Cnx.Close();
+            }
+            return productos;
+        }
         public List<Pedido> ListadoMayorA(double nom)
         {
             List<Pedido> productos = new List<Pedido>();

@@ -301,7 +301,11 @@ namespace Pantallas_SIVAA
         {
             txtSerie.Text = "";
             cmbVersion.Items.Clear();
+            cmbVersion.Text = "";
             cmbModelo.Items.Clear();
+            cmbModelo.Text = "";
+            cmbVehiculo.Text = "";
+            
             //cmbVersion.SelectedItem=-1;
             //cmbModelo.SelectedItem=-1;
             //cmbColor.SelectedItem=-1;
@@ -317,6 +321,7 @@ namespace Pantallas_SIVAA
             ver = pqte2.ListadoVersionesPorVehiculo(cmbVehiculo.SelectedItem.ToString());
             foreach (Versions x in ver)
             {
+                if(x.EstadoVersion=="Activo")
                 cmbVersion.Items.Add(x.Version);
             }
         }
