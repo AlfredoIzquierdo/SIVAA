@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using System.Configuration;
 using System.Data.SqlClient;
 using Pantallas_SIVAA.Pedidos;
+using System.Collections;
 
 namespace Pantallas_SIVAA
 {
@@ -19,6 +20,7 @@ namespace Pantallas_SIVAA
     public partial class AgregarCita : Form
     {
         readonly ClienteLog cliente = new ClienteLog();
+        readonly EmpleadoLog empleado = new EmpleadoLog();
         CitaLog log = new CitaLog();
         Cita cita = new Cita();
         Empleado _pqt;
@@ -28,24 +30,19 @@ namespace Pantallas_SIVAA
             _pqt = pqt;
         }
 
-        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
-        {
-            int dia = monthCalendar1.SelectionRange.Start.Day;
-            int mes = monthCalendar1.SelectionRange.Start.Month;
-            int año = monthCalendar1.SelectionRange.Start.Year;
-        }
 
         private void AgregarCita_Load(object sender, EventArgs e)
         {
-            lblDia.Text = monthCalendar1.SelectionRange.Start.Day.ToString();
-            lblMes.Text = monthCalendar1.SelectionRange.Start.Month.ToString();
-            lblAño.Text = monthCalendar1.SelectionRange.Start.Year.ToString();
             dataGridView1.ClearSelection();
-            cmbVendedor.Items.AddRange(ListadoTotal().ToArray());
             List<Cliente> clie = cliente.ListadoAll();
             foreach (Cliente x in clie)
             {
-                dataGridView1.Rows.Add(x.IDCliente, x.Nombre, x.ApellidoPat, x.ApellidoMat, x.RFC, x.Correo, x.Telefono, x.NoExterior, x.Colonia, x.Ciudad, x.Estado);
+                dataGridView1.Rows.Add(x.IDCliente, x.Nombre, x.ApellidoPat, x.ApellidoMat);
+            }
+            List<Empleado> emp = empleado.ListadoAll();
+            foreach (Empleado x in emp)
+            {
+                dataGridView2.Rows.Add(x.IDEmpleado, x.Nombre, x.ApellidoPat, x.ApellidoMat);
             }
 
             switch (_pqt.Tipo.Trim())
@@ -92,48 +89,11 @@ namespace Pantallas_SIVAA
                     break;
             }
         }
-        public List<String> ListadoTotal()
-        {
-            string CdCnx = ConfigurationManager.ConnectionStrings["CnxSQL"].ToString();
-            List<string> productos = new List<string>();
-
-            //Vuelvo a crear la conexión
-            using (SqlConnection Cnx = new SqlConnection(CdCnx))
-            {
-                Cnx.Open();
-                //Creo el Query (todos los registros de la tabla cliente
-                string CdSql = "Select * from Empleado WHERE Tipo = 'Vendedor'";
-                using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
-                {
-                    SqlDataReader Dr = Cmd.ExecuteReader();
-                    //Leo registro por registro que tiene la tabla 
-                    while (Dr.Read())
-                    {
-                        //Cada vez que lo lea se crea un nuevo objeto
-                        Empleado Pqte = new Empleado
-                        {
-                            IDEmpleado = Convert.ToString(Dr["IDEmpleado"]),
-                            Nombre = Convert.ToString(Dr["Nombre"]),
-                            ApellidoPat = Convert.ToString(Dr["ApellidoPaterno"]),
-                            ApellidoMat = Convert.ToString(Dr["ApellidoMaterno"]),
-                            RFC = Convert.ToString(Dr["RFC"]),
-                            Correo = Convert.ToString(Dr["Correo"]),
-                            Telefono = Convert.ToString(Dr["Telefono"]),
-                            Contraseña = Convert.ToString(Dr["Contraseña"]),
-                            Tipo = Convert.ToString(Dr["Tipo"])
-                        };
-                        productos.Add(Pqte.IDEmpleado.ToString());
-                    }
-                }
-                Cnx.Close();
-            }
-            return productos;
-        }
 
         private void btnAgregarCita_Click(object sender, EventArgs e)
         {
 
-            if (txtHora.Text != "" && cmbVendedor.Text != "" && lblIDCliente.Text != "Seleccione un cliente")
+            if (lblHora.Text != "-" && lblEmpleado.Text != "Seleccione un empleado" && lblIDCliente.Text != "Seleccione un cliente")
             {
                 List<Cita> x = log.ListadoAll();
                 string i = "CT" + (x.Count + 1).ToString();
@@ -142,8 +102,8 @@ namespace Pantallas_SIVAA
                 cita.Dia = Convert.ToInt32(lblDia.Text);
                 cita.Mes = Convert.ToInt32(lblMes.Text);
                 cita.Año = Convert.ToInt32(lblAño.Text);
-                cita.Hora = txtHora.Text;
-                cita.IDEmpleado = cmbVendedor.Text;
+                cita.Hora = lblHora.Text;
+                cita.IDEmpleado = lblEmpleado.Text;
                 cita.IDCliente = lblIDCliente.Text;
                 log.Registrar(cita);
                 CalendarioCitas citas = new CalendarioCitas(_pqt);
@@ -159,17 +119,6 @@ namespace Pantallas_SIVAA
             lblIDCliente.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
 
         }
-
-        private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
-        {
-            int dia = monthCalendar1.SelectionRange.Start.Day;
-            int mes = monthCalendar1.SelectionRange.Start.Month;
-            int año = monthCalendar1.SelectionRange.Start.Year;
-            lblDia.Text = monthCalendar1.SelectionRange.Start.Day.ToString();
-            lblMes.Text = monthCalendar1.SelectionRange.Start.Month.ToString();
-            lblAño.Text = monthCalendar1.SelectionRange.Start.Year.ToString();
-        }
-
         private void pictureBox13_Click(object sender, EventArgs e)
         {
             Inicio inicio = new Inicio(_pqt);
@@ -234,34 +183,167 @@ namespace Pantallas_SIVAA
             citas.Show();
         }
 
-        private void btnStock_Click_1(object sender, EventArgs e)
-        {
 
+        private void comboBusqueda_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (txtbusqueda.Text != "")
+            {
+                txtbusqueda.ResetText();
+            }
+            txtbusqueda.Enabled = true;
+            if (comboBusqueda.Text == "Todos")
+            {
+                txtbusqueda.Enabled = false;
+                dataGridView1.ClearSelection();
+                List<Cliente> clie = cliente.ListadoAll();
+                foreach (Cliente x in clie)
+                {
+
+                    if (x.EstadoCliente.Trim() == "Activo")
+                        dataGridView1.Rows.Add(x.IDCliente, x.Nombre, x.ApellidoPat, x.ApellidoMat, x.RFC, x.Correo, x.Telefono, x.NoExterior, x.Colonia, x.Ciudad, x.Estado);
+                }
+            }
+        }
+        List<Cliente> listas = new List<Cliente>();
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtbusqueda.Text))
+            {
+                MessageBox.Show("Llene el campo busqueda");
+            }
+            else
+            {
+                List<Cliente> datos = new List<Cliente>();
+
+                datos = cliente.ListadoEspecifico(txtbusqueda.Text, comboBusqueda.Text);
+                listas.Clear();
+                dataGridView1.Rows.Clear();
+                foreach (Cliente x in datos)
+                {
+                    if (x.EstadoCliente == "Activo")
+                    {
+                        listas.Add(x);
+                        dataGridView1.Rows.Add(x.IDCliente, x.Nombre, x.ApellidoPat, x.ApellidoMat, x.RFC, x.Correo, x.Telefono, x.NoExterior, x.Colonia, x.Ciudad, x.Estado);
+                    }
+
+                }
+            }
         }
 
-        private void btnCobros_Click_1(object sender, EventArgs e)
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-
+            DateTime fechaHoraSeleccionada = dateTimePicker1.Value;
+            string fecha = fechaHoraSeleccionada.ToString("dd/MM/yyyy");
+            lblAño.Text = fechaHoraSeleccionada.ToString("yyyy");
+            lblMes.Text = fechaHoraSeleccionada.ToString("MM");
+            lblDia.Text = fechaHoraSeleccionada.ToString("dd");
+            lblHora.Text = fechaHoraSeleccionada.ToString("HH:mm");
         }
 
-        private void btnVentas_Click_1(object sender, EventArgs e)
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            lblEmpleado.Text = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
         }
 
-        private void btnCitas_Click_1(object sender, EventArgs e)
+        private void cmbEmpleado_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (txtBuscarEmpleado.Text != "")
+            {
+                txtBuscarEmpleado.ResetText();
+            }
+            txtBuscarEmpleado.Enabled = true;
+            if (cmbEmpleado.Text == "Todos")
+            {
+                txtBuscarEmpleado.Enabled = false;
+                dataGridView2.ClearSelection();
+                List<Empleado> emp = empleado.ListadoAll();
+                foreach (Empleado x in emp)
+                {
+                    if (x.EstadoEmpleado.Trim() == "Activo")
+                        dataGridView2.Rows.Add(x.IDEmpleado, x.Nombre, x.ApellidoPat, x.ApellidoMat);
+                }
+            }
         }
 
-        private void btnReportes_Click_1(object sender, EventArgs e)
+        List<Empleado> Vendedores = new List<Empleado>();
+        private void btnBuscarEmpleado_Click(object sender, EventArgs e)
         {
+            List<Empleado> pro;
+            int opcion = cmbEmpleado.SelectedIndex;
+            if (opcion == 0)
+            {
+                //txtbusqueda.Enabled = false;
+                dataGridView2.Rows.Clear();
+                List<Empleado> em = empleado.ListadoAll();
+                Vendedores = em;
+                foreach (Empleado x in em)
+                {
+                    if (x.EstadoEmpleado.Trim() == "Activo")
+                    {
+                        dataGridView2.Rows.Add(x.IDEmpleado, x.Nombre, x.ApellidoPat, x.ApellidoMat);
+                    }
 
+                }
+                return;
+            }
+            else
+            {
+                if (txtBuscarEmpleado.Text == "")
+                    MessageBox.Show("Llene el campo de búsqueda");
+                if (txtBuscarEmpleado.Text != "")
+                    dataGridView2.ClearSelection();
+                pro = ListadoEspecifico(txtBuscarEmpleado.Text, cmbEmpleado.Text);
+                Vendedores = pro;
+                dataGridView2.Rows.Clear();
+                foreach (Empleado x in pro)
+                {
+                    if (x.EstadoEmpleado.Trim() == "Activo")
+                    {
+                        dataGridView2.Rows.Add(x.IDEmpleado, x.Nombre, x.ApellidoPat);
+                    }
+                }
+            }
+        }
+        public List<Empleado> ListadoEspecifico(string CodPqt, string opcion)
+        {
+            string CdCnx = ConfigurationManager.ConnectionStrings["CnxSQL"].ToString();
+            List<Empleado> productos = new List<Empleado>();
+
+            //Vuelvo a crear la conexión
+            using (SqlConnection Cnx = new SqlConnection(CdCnx))
+            {
+                Cnx.Open();
+                //Creo el Query (todos los registros de la tabla Proveedor
+
+                string CdSql = "SELECT * FROM Empleado WHERE " + opcion + "=@Cl and EstadoEmpleado = 'Activo'";
+                using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
+                {
+                    Cmd.Parameters.AddWithValue("@Cl", CodPqt);
+                    SqlDataReader Dr = Cmd.ExecuteReader();
+                    //Leo registro por registro que tiene la tabla 
+                    while (Dr.Read())
+                    {
+                        //Cada vez que lo lea se crea un nuevo objeto
+                        Empleado Pqte = new Empleado
+                        {
+                            IDEmpleado = Convert.ToString(Dr["IDEmpleado"]),
+                            Nombre = Convert.ToString(Dr["Nombre"]),
+                            ApellidoPat = Convert.ToString(Dr["ApellidoPaterno"]),
+                            ApellidoMat = Convert.ToString(Dr["ApellidoMaterno"]),
+                            RFC = Convert.ToString(Dr["RFC"]),
+                            Correo = Convert.ToString(Dr["Correo"]),
+                            Telefono = Convert.ToString(Dr["Telefono"]),
+                            Contraseña = Convert.ToString(Dr["Contraseña"]),
+                            Tipo = Convert.ToString(Dr["Tipo"]),
+                            EstadoEmpleado = Convert.ToString(Dr["EstadoEmpleado"])
+                        };
+                        productos.Add(Pqte);
+                    }
+                }
+                Cnx.Close();
+            }
+            return productos;
         }
 
-        private void btnPedidos_Click_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }
