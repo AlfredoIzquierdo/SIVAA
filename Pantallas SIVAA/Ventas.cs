@@ -25,6 +25,8 @@ namespace Pantallas_SIVAA
         readonly CotizacionCreditoLog PqteLog6 = new CotizacionCreditoLog();
         readonly CotizacionLog PqteLog4 = new CotizacionLog();
         readonly UnidadLog PqteLog5 = new UnidadLog();
+        readonly VehiculoLog pqtLog6 = new VehiculoLog();
+        readonly VersionLog pqtLog9 = new VersionLog();
         readonly CotizacionContadoLog PqteLog7 = new CotizacionContadoLog();
         string[] vehiculosD = { "", "", "" };
         int activarPagare = 0;
@@ -1495,25 +1497,41 @@ namespace Pantallas_SIVAA
         private void tabCotizacion_Enter(object sender, EventArgs e)
         {
             TXTIDEMPCOT.Text = _pqt.IDEmpleado;
-            comboVehiculo.SelectedItem = "March";
-            ComboVersion1.SelectedItem = "SR";
-            List<Unidad> Colores = new List<Unidad>();
-            List<Modelo> Modelos = new List<Modelo>();
-            Colores = PqteLog4.BuscarColores("SR", "March");
-            Modelos = PqteLog4.ObtenerModeloPorNombre("SR", "March");
-            foreach (Unidad color in Colores)
+            List<Vehiculo> vehiculosdisponibles = new List<Vehiculo>();
+            List<Versions> versionsdisponibles = new List<Versions>();
+            vehiculosdisponibles = pqtLog6.ListadoAll();
+            foreach (Vehiculo v in vehiculosdisponibles)
             {
-                if (color.Estatus.Trim() == "Disponible")
-                {
-                    comboColor.Items.Add(color.Color);
-                }
-
+                comboVehiculo.Items.Add(v.Nombre);
             }
-            foreach (Modelo modelo in Modelos)
+
+            comboVehiculo.SelectedIndex = 0;
+
+            versionsdisponibles = pqtLog9.ObtenerVersionesVehiculo(comboVehiculo.Text);
+            foreach (Versions ver in versionsdisponibles)
             {
-                comboAno.Items.Add(modelo.Año);
-
+                ComboVersion1.Items.Add(ver.Version);
             }
+            ComboVersion1.SelectedIndex = 0;
+            //comboVehiculo.SelectedItem = "March";
+            //ComboVersion1.SelectedItem = "SR";
+            //List<Unidad> Colores = new List<Unidad>();
+            //List<Modelo> Modelos = new List<Modelo>();
+            //Colores = PqteLog4.BuscarColores(ComboVersion1.Text, comboVehiculo.Text);
+            //Modelos = PqteLog4.ObtenerModeloPorNombre(ComboVersion1.Text, comboVehiculo.Text);
+            //foreach (Unidad color in Colores)
+            //{
+            //    if (color.Estatus.Trim() == "Disponible")
+            //    {
+            //        comboColor.Items.Add(color.Color);
+            //    }
+
+            //}
+            //foreach (Modelo modelo in Modelos)
+            //{
+            //    comboAno.Items.Add(modelo.Año);
+
+            //}
 
 
         }
@@ -1947,32 +1965,7 @@ namespace Pantallas_SIVAA
             txtanualidadCot.Text = mensualidad.ToString("0.00");
         }
 
-        private void tabCotizacion_Enter_1(object sender, EventArgs e)
-        {
-            comboVehiculo.SelectedItem = "March";
-            ComboVersion1.SelectedItem = "SR";
-            List<Unidad> Colores = new List<Unidad>();
-            List<Modelo> Modelos = new List<Modelo>();
-            Colores = PqteLog4.BuscarColores("SR", "March");
-            Modelos = PqteLog4.ObtenerModeloPorNombre("SR", "March");
-            foreach (Unidad color in Colores)
-            {
-                if (color.Estatus.Trim() == "Disponible")
-                {
-                    {
-                        comboColor.Items.Add(color.Color);
-                    }
 
-                }
-                foreach (Modelo modelo in Modelos)
-                {
-                    comboAno.Items.Add(modelo.Año);
-
-                }
-
-
-            }
-        }
 
         private void comboVehiculo_SelectedValueChanged(object sender, EventArgs e)
         {

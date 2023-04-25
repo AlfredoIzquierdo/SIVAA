@@ -63,67 +63,7 @@ namespace Datos
             }
         }
 
-        public List<Versions> ListadoTotal()
-        {
-            List<Versions> productos = new List<Versions>();
-
-            //Vuelvo a crear la conexión
-            using (SqlConnection Cnx = new SqlConnection(CdCnx))
-            {
-                Cnx.Open();
-                //Creo el Query (todos los registros de la tabla Versions
-                string CdSql = "Select * from Version";
-                using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
-                {
-                    SqlDataReader Dr = Cmd.ExecuteReader();
-                    //Leo registro por registro que tiene la tabla 
-                    while (Dr.Read())
-                    {
-                        //Cada vez que lo lea se crea un nuevo objeto
-                        Versions Pqte = new Versions
-                        {
-                            IDVersion = Convert.ToString(Dr["IDVersion"]),
-                            IDVehiculo = Convert.ToString(Dr["IDvehiculo"]),
-                            Llantas = Convert.ToString(Dr["LLantas"]),
-                            TipoAsientos = Convert.ToString(Dr["TipoAsientos"]),
-                            CamaraTrasera = Convert.ToString(Dr["CamaraTrasera"]),
-                            Pantalla = Convert.ToString(Dr["Pantalla"]),
-                            TipoCombustible = Convert.ToString(Dr["tipoCombustible"]),
-
-                            Version = Convert.ToString(Dr["Version"]),
-                            Rines = Convert.ToString(Dr["Rines"]),
-
-                            Cilindraje = Convert.ToString(Dr["Cilindraje"]),
-                            Costo = Convert.ToDouble(Dr["Costo"]),
-                            CapacidadCajuela = Convert.ToString(Dr["Capacidadcajuela"]),
-                            DistanciaEjes = Convert.ToString(Dr["DistanciaEjes"]),
-                            Anchura = Convert.ToString(Dr["Anchura"]),
-                            Altura = Convert.ToString(Dr["Altura"]),
-                            AudioVelC = Convert.ToString(Dr["AudioVelC"]),
-                            TomaCorriente = Convert.ToString(Dr["TomaCorriente"]),
-                            TipoTraccion = Convert.ToString(Dr["TipoTraccion"]),
-                            NumPuertas = Convert.ToString(Dr["NumPuertas"]),
-                            Transmision = Convert.ToString(Dr["Transmision"]),
-                            FarosHal = Convert.ToString(Dr["FarosHal"]),
-                            NumEngranajes = Convert.ToString(Dr["NumEngranajes"]),
-                            ACAutom = Convert.ToString(Dr["ACAutom"]),
-                            FarosLED = Convert.ToString(Dr["FarosLED"]),
-                            RendimientoCombustible = Convert.ToString(Dr["RendimientoCombustible"]),
-                            FrenosTraseros = Convert.ToString(Dr["FrenosTraseros"]),
-                            FrenosDelanteros = Convert.ToString(Dr["FrenosDelanteros"]),
-                            SuspensionDelantera = Convert.ToString(Dr["SuspensionDelantera"]),
-                            SuspensionTrasera = Convert.ToString(Dr["SuspensionTrasera"]),
-                            EspejosLatDirC = Convert.ToString(Dr["EspejosLatDirC"]),
-                            EspejosLatAE = Convert.ToString(Dr["EspejosLatAE"]),
-                            EstadoVersion = Convert.ToString(Dr["EstadoVersion"])
-                        };
-                        productos.Add(Pqte);
-                    }
-                }
-                Cnx.Close();
-            }
-            return productos;
-        }
+       
 
         public Versions ObtenerPdto(string CodPqt)
         {
@@ -246,6 +186,135 @@ namespace Datos
             }
             return null;
         }
+
+        public List<Versions> ObtenerVersionesDeVehiculo(string Nombre)
+        {
+            List<Versions> productos = new List<Versions>();
+            //Using que crea la conexión
+            using (SqlConnection Cnx = new SqlConnection(CdCnx))
+            {
+                //Abro la conexión y creo el Query insertar, eliminar, consultar, elminar, actualizar, consulta individaul, general, orrar todo
+                Cnx.Open();
+                string CdSql = "Select * " +
+                    "from \r\nVersion v inner Join Vehiculo Veh on v.IDVehiculo=Veh.IDVehiculo \r\n" +
+                    "where veh.Nombre=@Cl";
+                //Using que crea el comando que voy a ejecutar con relación al query que planeteo
+                using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
+                {
+                    //Asignar el valor a @Cl
+                    Cmd.Parameters.AddWithValue("@Cl", Nombre);
+                    
+                    SqlDataReader Dr = Cmd.ExecuteReader();
+                    //Leo registro por registro que tiene la tabla 
+                    while (Dr.Read())
+                    {
+                        //Cada vez que lo lea se crea un nuevo objeto
+                        Versions Pqte = new Versions
+                        {
+                            IDVersion = Convert.ToString(Dr["IDVersion"]),
+                            IDVehiculo = Convert.ToString(Dr["IDvehiculo"]),
+                            Llantas = Convert.ToString(Dr["LLantas"]),
+                            TipoAsientos = Convert.ToString(Dr["TipoAsientos"]),
+                            CamaraTrasera = Convert.ToString(Dr["CamaraTrasera"]),
+                            Pantalla = Convert.ToString(Dr["Pantalla"]),
+                            TipoCombustible = Convert.ToString(Dr["tipoCombustible"]),
+
+                            Version = Convert.ToString(Dr["Version"]),
+                            Rines = Convert.ToString(Dr["Rines"]),
+
+                            Cilindraje = Convert.ToString(Dr["Cilindraje"]),
+                            Costo = Convert.ToDouble(Dr["Costo"]),
+                            CapacidadCajuela = Convert.ToString(Dr["Capacidadcajuela"]),
+                            DistanciaEjes = Convert.ToString(Dr["DistanciaEjes"]),
+                            Anchura = Convert.ToString(Dr["Anchura"]),
+                            Altura = Convert.ToString(Dr["Altura"]),
+                            AudioVelC = Convert.ToString(Dr["AudioVelC"]),
+                            TomaCorriente = Convert.ToString(Dr["TomaCorriente"]),
+                            TipoTraccion = Convert.ToString(Dr["TipoTraccion"]),
+                            NumPuertas = Convert.ToString(Dr["NumPuertas"]),
+                            Transmision = Convert.ToString(Dr["Transmision"]),
+                            FarosHal = Convert.ToString(Dr["FarosHal"]),
+                            NumEngranajes = Convert.ToString(Dr["NumEngranajes"]),
+                            ACAutom = Convert.ToString(Dr["ACAutom"]),
+                            FarosLED = Convert.ToString(Dr["FarosLED"]),
+                            RendimientoCombustible = Convert.ToString(Dr["RendimientoCombustible"]),
+                            FrenosTraseros = Convert.ToString(Dr["FrenosTraseros"]),
+                            FrenosDelanteros = Convert.ToString(Dr["FrenosDelanteros"]),
+                            SuspensionDelantera = Convert.ToString(Dr["SuspensionDelantera"]),
+                            SuspensionTrasera = Convert.ToString(Dr["SuspensionTrasera"]),
+                            EspejosLatDirC = Convert.ToString(Dr["EspejosLatDirC"]),
+                            EspejosLatAE = Convert.ToString(Dr["EspejosLatAE"]),
+                            EstadoVersion = Convert.ToString(Dr["EstadoVersion"])
+                        };
+                        productos.Add(Pqte);
+                    }
+                }
+                Cnx.Close();
+            }
+            return productos;
+        }
+        public List<Versions> ListadoTotal()
+        {
+            List<Versions> productos = new List<Versions>();
+
+            //Vuelvo a crear la conexión
+            using (SqlConnection Cnx = new SqlConnection(CdCnx))
+            {
+                Cnx.Open();
+                //Creo el Query (todos los registros de la tabla Versions
+                string CdSql = "Select * from Version";
+                using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
+                {
+                    SqlDataReader Dr = Cmd.ExecuteReader();
+                    //Leo registro por registro que tiene la tabla 
+                    while (Dr.Read())
+                    {
+                        //Cada vez que lo lea se crea un nuevo objeto
+                        Versions Pqte = new Versions
+                        {
+                            IDVersion = Convert.ToString(Dr["IDVersion"]),
+                            IDVehiculo = Convert.ToString(Dr["IDvehiculo"]),
+                            Llantas = Convert.ToString(Dr["LLantas"]),
+                            TipoAsientos = Convert.ToString(Dr["TipoAsientos"]),
+                            CamaraTrasera = Convert.ToString(Dr["CamaraTrasera"]),
+                            Pantalla = Convert.ToString(Dr["Pantalla"]),
+                            TipoCombustible = Convert.ToString(Dr["tipoCombustible"]),
+
+                            Version = Convert.ToString(Dr["Version"]),
+                            Rines = Convert.ToString(Dr["Rines"]),
+
+                            Cilindraje = Convert.ToString(Dr["Cilindraje"]),
+                            Costo = Convert.ToDouble(Dr["Costo"]),
+                            CapacidadCajuela = Convert.ToString(Dr["Capacidadcajuela"]),
+                            DistanciaEjes = Convert.ToString(Dr["DistanciaEjes"]),
+                            Anchura = Convert.ToString(Dr["Anchura"]),
+                            Altura = Convert.ToString(Dr["Altura"]),
+                            AudioVelC = Convert.ToString(Dr["AudioVelC"]),
+                            TomaCorriente = Convert.ToString(Dr["TomaCorriente"]),
+                            TipoTraccion = Convert.ToString(Dr["TipoTraccion"]),
+                            NumPuertas = Convert.ToString(Dr["NumPuertas"]),
+                            Transmision = Convert.ToString(Dr["Transmision"]),
+                            FarosHal = Convert.ToString(Dr["FarosHal"]),
+                            NumEngranajes = Convert.ToString(Dr["NumEngranajes"]),
+                            ACAutom = Convert.ToString(Dr["ACAutom"]),
+                            FarosLED = Convert.ToString(Dr["FarosLED"]),
+                            RendimientoCombustible = Convert.ToString(Dr["RendimientoCombustible"]),
+                            FrenosTraseros = Convert.ToString(Dr["FrenosTraseros"]),
+                            FrenosDelanteros = Convert.ToString(Dr["FrenosDelanteros"]),
+                            SuspensionDelantera = Convert.ToString(Dr["SuspensionDelantera"]),
+                            SuspensionTrasera = Convert.ToString(Dr["SuspensionTrasera"]),
+                            EspejosLatDirC = Convert.ToString(Dr["EspejosLatDirC"]),
+                            EspejosLatAE = Convert.ToString(Dr["EspejosLatAE"]),
+                            EstadoVersion = Convert.ToString(Dr["EstadoVersion"])
+                        };
+                        productos.Add(Pqte);
+                    }
+                }
+                Cnx.Close();
+            }
+            return productos;
+        }
+
         public void EliminarDesaparecer(string CodPqt)
         {
             using (SqlConnection Cnx = new SqlConnection(CdCnx))
