@@ -224,7 +224,7 @@ namespace Pantallas_SIVAA
                 string.IsNullOrEmpty(cbLlantas.Text) | string.IsNullOrEmpty(cbAsientos.Text) | string.IsNullOrEmpty(cbCombustible.Text) | string.IsNullOrEmpty(cbEngranajes.Text) |
                 string.IsNullOrEmpty(txtCapacidad.Text) | string.IsNullOrEmpty(txtDistancia.Text) | string.IsNullOrEmpty(txtAltura.Text) | string.IsNullOrEmpty(txtAnchura.Text) |
                 string.IsNullOrEmpty(cbTransmision.Text) | string.IsNullOrEmpty(cbTipo.Text) | string.IsNullOrEmpty(cbFrenosD.Text) | string.IsNullOrEmpty(cbFrenosT.Text) |
-                string.IsNullOrEmpty(cbSuspensionD.Text) | string.IsNullOrEmpty(cbSuspensionT.Text) | string.IsNullOrEmpty(txtRendimiento.Text))
+                string.IsNullOrEmpty(cbSuspensionD.Text) | string.IsNullOrEmpty(cbSuspensionT.Text) | string.IsNullOrEmpty(txtRendimiento.Text) | string.IsNullOrEmpty(txtAnio.Text))
             {
                 vacio = true;
                 return vacio;
