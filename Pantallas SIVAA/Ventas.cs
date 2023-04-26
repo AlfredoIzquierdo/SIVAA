@@ -87,6 +87,13 @@ namespace Pantallas_SIVAA
         }
         public void Limpiar()
         {
+            //AUTO
+            txtVehiculo.Text = "";
+            txtVersion.Text = "";
+            txtAño.Text = "";
+            txtColor.Text = "";
+            txtSerie.Text = "";
+
             //Cosas de credito
             txtmensualidad.Text = "0";
             txtanualidad.Text = "0";

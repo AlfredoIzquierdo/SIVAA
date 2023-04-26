@@ -38,8 +38,10 @@ namespace Pantallas_SIVAA
             Vehiculo datosvehiculo = facturaLOG.ObtenerDatosVehiculo(datosversion.IDVehiculo);
             datosModVer = facturaLOG.ObtenerModeloVersion(datosversion.IDVersion);
             Modelo datosmodelo = facturaLOG.ObtenerDatosModelo(datosModVer.IDModelo);
-            double subtotal = (pdqV.Subtotal * 0.84);
-            double iva = (pdqV.Subtotal * .16);
+            //double subtotal = (pdqV.Subtotal * 0.84);
+            //double iva = (pdqV.Subtotal * .16);
+            double subtotal = Math.Round(pdqV.Subtotal / 1.16);
+            double iva = Math.Round(subtotal * .16);
             label57.Text = subtotal.ToString();
             label56.Text = iva.ToString();
             label55.Text = (subtotal + iva).ToString();
@@ -66,6 +68,7 @@ namespace Pantallas_SIVAA
             lbltotalgen.Text = (subtotal + iva).ToString();
             lblidversion.Text = datoscot.IDVersion.ToString();
             lblcostover.Text = datosversion.Costo.ToString();
+            //lblcostover.Text = Math.Round(datosversion.Costo / 1.16).ToString();
             lblarticulo.Text += " " + datosvehiculo.Nombre + " " + datosversion.Version;
             lblmodelo.Text = datosmodelo.Año;
             lblnombre.Text = datosvehiculo.Nombre;

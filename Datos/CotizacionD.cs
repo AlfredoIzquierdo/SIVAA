@@ -232,6 +232,44 @@ namespace Datos
             }
             return productos;
         }
+        public List<Cotizacion> ListadoTotalESPCred3(string nom)
+        {
+            List<Cotizacion> productos = new List<Cotizacion>();
+
+            //Vuelvo a crear la conexión
+            using (SqlConnection Cnx = new SqlConnection(CdCnx))
+            {
+                Cnx.Open();
+                //Creo el Query (todos los registros de la tabla cliente
+                string CdSql = "select *, (Cotizacion.PrecioInicial+CotizacionCredito.Financiamiento) as TOTAL from Cotizacion, CotizacionCredito \r\nWHERE Cotizacion.IDCotizacion=CotizacionCredito.IDCotizacion and Cotizacion.IDCliente=@Cl";
+                using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
+                {
+                    Cmd.Parameters.AddWithValue("@Cl", nom);
+                    //Cmd.Parameters.AddWithValue("@Ap", app);
+                    SqlDataReader Dr = Cmd.ExecuteReader();
+                    //Leo registro por registro que tiene la tabla 
+                    while (Dr.Read())
+                    {
+                        //Cada vez que lo lea se crea un nuevo objeto
+                        Cotizacion Pqte = new Cotizacion
+                        {
+                            IDCotizacion = Convert.ToString(Dr["IDCotizacion"]),
+                            IDVersion = Convert.ToString(Dr["IDVersion"]),
+                            IDCliente = Convert.ToString(Dr["IDCliente"]),
+                            IDEmpleado = Convert.ToString(Dr["IDEmpleado"]),
+                            Dia = Convert.ToInt32(Dr["Dia"]),
+                            Mes = Convert.ToInt32(Dr["Mes"]),
+                            Año = Convert.ToInt32(Dr["Año"]),
+                            PrecioInicial = Convert.ToDouble(Dr["TOTAL"]),
+                            TipoPago = Convert.ToString(Dr["TipoPago"])
+                        };
+                        productos.Add(Pqte);
+                    }
+                }
+                Cnx.Close();
+            }
+            return productos;
+        }
         public void Eliminar(string CodPqt)
         {
             using (SqlConnection Cnx = new SqlConnection(CdCnx))

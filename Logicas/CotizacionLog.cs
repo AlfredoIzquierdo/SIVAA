@@ -108,7 +108,7 @@ namespace Logicas
                 Mensaje.Append("Por favor proporcionar una clave valida");
             if (Mensaje.Length == 0)
             {
-                Pd = Pdto.ListadoTotalESPCred2(ClPdto);
+                Pd = Pdto.ListadoTotalESPCred3(ClPdto);
                 if (Pd == null)
                     Mensaje.Append("el cliente no tiene cotizaciones existentes en la B.D.");
                 return Pd;
