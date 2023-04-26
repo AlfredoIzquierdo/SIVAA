@@ -241,7 +241,7 @@ namespace Datos
             {
                 Cnx.Open();
                 //Creo el Query (todos los registros de la tabla cliente
-                string CdSql = "select *, (Cotizacion.PrecioInicial+CotizacionCredito.Financiamiento) as TOTAL from Cotizacion, CotizacionCredito \r\nWHERE Cotizacion.IDCotizacion=CotizacionCredito.IDCotizacion and Cotizacion.IDCliente=@Cl";
+                string CdSql = "select *, (CotizacionCredito.Enganche+CotizacionCredito.Financiamiento) as TOTAL from Cotizacion, CotizacionCredito \r\nWHERE Cotizacion.IDCotizacion=CotizacionCredito.IDCotizacion and Cotizacion.IDCliente=@Cl";
                 using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
                 {
                     Cmd.Parameters.AddWithValue("@Cl", nom);

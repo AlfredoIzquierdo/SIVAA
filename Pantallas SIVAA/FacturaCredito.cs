@@ -34,7 +34,7 @@ namespace Pantallas_SIVAA
             Modelo datosmodelo = facturaLOG.ObtenerDatosModelo(datosModVer.IDModelo);
 
             //double subtotal = (pqtVC.TotalFinal * 0.84);
-            double subtotal = Math.Round((datoscot.PrecioInicial+datoscotcredito.Financiamiento)/1.16);
+            double subtotal = Math.Round((datoscotcredito.Enganche+datoscotcredito.Financiamiento)/1.16);
             double iva = Math.Round(subtotal * .16);
             //MessageBox.Show("precio total= "+pqtVC.TotalFinal+"subtotal = "+subtotal+" \r\niva = "+iva+"\r\ntotal = "+(iva+subtotal));
             //double iva = (pqtVC.TotalFinal * .16);

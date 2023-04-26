@@ -515,7 +515,7 @@ namespace Pantallas_SIVAA
                     int i = dataGridView5.CurrentCell.RowIndex;
                     //MessageBox.Show("Columna " + i);
                     TXTCOT.Text = dataGridView5[0, i].Value.ToString();
-                    //TXTPRECIO.Text = dataGridView5[5, i].Value.ToString();
+                    TXTPRECIO.Text = dataGridView5[5, i].Value.ToString();
                     codv = dataGridView5[2, i].Value.ToString();
                     //Busca los datos de la cotizacion de credito
                     //string cod=TXTCOT.Text;
@@ -524,7 +524,7 @@ namespace Pantallas_SIVAA
                     textBox6.Text = pqt.Anualidad.ToString();
                     textBox7.Text = pqt.Enganche.ToString();
                     textBox5.Text = pqt.Mensualidad.ToString();
-                    TXTPRECIO.Text = pqt.Precio.ToString();
+                    //TXTPRECIO.Text = pqt.Precio.ToString();
                     //Busca los datos de la cotizacion
                     Entidades.Cotizacion cot = PqteLog4.LeerPorClave(TXTCOT.Text);
                     string vers = cot.IDVersion.ToString();
