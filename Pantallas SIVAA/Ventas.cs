@@ -2019,6 +2019,8 @@ namespace Pantallas_SIVAA
 
         private void comboVehiculo_SelectedValueChanged(object sender, EventArgs e)
         {
+            List<Versions> versionsdisponibles = new List<Versions>();
+
             if (string.IsNullOrEmpty(ComboVersion1.Text))
             {
 
@@ -2027,6 +2029,16 @@ namespace Pantallas_SIVAA
             {
                 comboColor.Items.Clear();
                 comboAno.Items.Clear();
+                // aqui empieza la prueba * se necesita recargar el combo de version cada que se selecciona un vehiculo*
+                ComboVersion1.Items.Clear();              
+                versionsdisponibles = pqtLog9.ObtenerVersionesVehiculo(comboVehiculo.Text);
+                foreach (Versions ver in versionsdisponibles)
+                {
+                    ComboVersion1.Items.Add(ver.Version);
+                }
+                ComboVersion1.SelectedIndex = 0;
+
+                // aqui termina
                 List<Unidad> Colores = new List<Unidad>();
                 List<Modelo> Modelos = new List<Modelo>();
                 Colores = PqteLog4.BuscarColores(ComboVersion1.Text, comboVehiculo.Text);

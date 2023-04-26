@@ -127,6 +127,8 @@
             panel11 = new Panel();
             panel12 = new Panel();
             btnRegresar = new Button();
+            label34 = new Label();
+            txtAnio = new ComboBox();
             panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
             panel1.SuspendLayout();
@@ -404,7 +406,7 @@
             // 
             // label29
             // 
-            label29.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label29.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label29.AutoSize = true;
             label29.Location = new Point(902, 337);
             label29.Name = "label29";
@@ -438,7 +440,7 @@
             // 
             // label28
             // 
-            label28.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label28.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label28.AutoSize = true;
             label28.Location = new Point(896, 310);
             label28.Name = "label28";
@@ -472,7 +474,7 @@
             // 
             // label27
             // 
-            label27.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label27.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label27.AutoSize = true;
             label27.Location = new Point(896, 283);
             label27.Name = "label27";
@@ -600,7 +602,7 @@
             // 
             // label18
             // 
-            label18.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label18.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label18.AutoSize = true;
             label18.Location = new Point(896, 258);
             label18.Name = "label18";
@@ -634,7 +636,7 @@
             // 
             // label17
             // 
-            label17.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label17.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label17.AutoSize = true;
             label17.Location = new Point(918, 233);
             label17.Name = "label17";
@@ -729,7 +731,7 @@
             // 
             // label13
             // 
-            label13.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label13.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label13.AutoSize = true;
             label13.Location = new Point(932, 203);
             label13.Name = "label13";
@@ -763,7 +765,7 @@
             // 
             // label12
             // 
-            label12.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label12.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label12.AutoSize = true;
             label12.Location = new Point(932, 176);
             label12.Name = "label12";
@@ -909,7 +911,7 @@
             // 
             // label8
             // 
-            label8.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label8.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label8.AutoSize = true;
             label8.Location = new Point(932, 149);
             label8.Name = "label8";
@@ -919,7 +921,7 @@
             // 
             // label24
             // 
-            label24.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label24.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label24.AutoSize = true;
             label24.Location = new Point(904, 122);
             label24.Name = "label24";
@@ -996,15 +998,15 @@
             label20.AutoSize = true;
             label20.Location = new Point(218, 148);
             label20.Name = "label20";
-            label20.Size = new Size(48, 15);
+            label20.Size = new Size(54, 15);
             label20.TabIndex = 151;
-            label20.Text = "Version:";
+            label20.Text = "Nombre:";
             // 
             // label10
             // 
             label10.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             label10.AutoSize = true;
-            label10.Location = new Point(223, 414);
+            label10.Location = new Point(573, 420);
             label10.Name = "label10";
             label10.Size = new Size(55, 15);
             label10.TabIndex = 148;
@@ -1113,7 +1115,7 @@
             // 
             // txtRendimiento
             // 
-            txtRendimiento.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            txtRendimiento.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             txtRendimiento.Location = new Point(640, 380);
             txtRendimiento.MaxLength = 25;
             txtRendimiento.Name = "txtRendimiento";
@@ -1123,7 +1125,7 @@
             // 
             // label36
             // 
-            label36.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            label36.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             label36.AutoSize = true;
             label36.Location = new Point(431, 386);
             label36.Name = "label36";
@@ -1134,7 +1136,7 @@
             // txtCosto
             // 
             txtCosto.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            txtCosto.Location = new Point(294, 411);
+            txtCosto.Location = new Point(644, 417);
             txtCosto.MaxLength = 25;
             txtCosto.Name = "txtCosto";
             txtCosto.Size = new Size(124, 23);
@@ -1143,7 +1145,7 @@
             // 
             // panel3
             // 
-            panel3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            panel3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel3.Location = new Point(1023, 143);
             panel3.Margin = new Padding(3, 2, 3, 2);
             panel3.Name = "panel3";
@@ -1176,7 +1178,7 @@
             // 
             // panel2
             // 
-            panel2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            panel2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel2.Controls.Add(rbCamaraSi);
             panel2.Controls.Add(rbCamaraNo);
             panel2.Location = new Point(1023, 119);
@@ -1187,7 +1189,7 @@
             // 
             // panel4
             // 
-            panel4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            panel4.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel4.Controls.Add(rbPantallaSi);
             panel4.Controls.Add(rbPantallaNo);
             panel4.Location = new Point(1023, 144);
@@ -1198,7 +1200,7 @@
             // 
             // panel5
             // 
-            panel5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            panel5.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel5.Controls.Add(rbFarosHalSi);
             panel5.Controls.Add(rbFarosHalNo);
             panel5.Location = new Point(1023, 168);
@@ -1209,7 +1211,7 @@
             // 
             // panel6
             // 
-            panel6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            panel6.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel6.Controls.Add(rbLEDSi);
             panel6.Controls.Add(rbLEDNo);
             panel6.Location = new Point(1023, 195);
@@ -1220,7 +1222,7 @@
             // 
             // panel8
             // 
-            panel8.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            panel8.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel8.Controls.Add(rbAudioSi);
             panel8.Controls.Add(rbAudioNo);
             panel8.Location = new Point(1023, 224);
@@ -1231,7 +1233,7 @@
             // 
             // panel9
             // 
-            panel9.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            panel9.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel9.Controls.Add(rbTomaSi);
             panel9.Controls.Add(rbTomaNo);
             panel9.Location = new Point(1023, 251);
@@ -1242,7 +1244,7 @@
             // 
             // panel10
             // 
-            panel10.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            panel10.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel10.Controls.Add(rbAcAutSi);
             panel10.Controls.Add(rbAcAutNo);
             panel10.Location = new Point(1023, 277);
@@ -1253,7 +1255,7 @@
             // 
             // panel11
             // 
-            panel11.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            panel11.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel11.Controls.Add(rbEspejosDirSi);
             panel11.Controls.Add(rbEspejosDirNo);
             panel11.Location = new Point(1023, 301);
@@ -1264,7 +1266,7 @@
             // 
             // panel12
             // 
-            panel12.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            panel12.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel12.Controls.Add(rbEspejosASi);
             panel12.Controls.Add(rbEspejosANo);
             panel12.Location = new Point(1023, 325);
@@ -1287,11 +1289,31 @@
             btnRegresar.UseVisualStyleBackColor = false;
             btnRegresar.Click += btnRegresar_Click;
             // 
+            // label34
+            // 
+            label34.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            label34.AutoSize = true;
+            label34.Location = new Point(230, 411);
+            label34.Name = "label34";
+            label34.Size = new Size(32, 15);
+            label34.TabIndex = 219;
+            label34.Text = "Año:";
+            // 
+            // txtAnio
+            // 
+            txtAnio.FormattingEnabled = true;
+            txtAnio.Location = new Point(293, 412);
+            txtAnio.Name = "txtAnio";
+            txtAnio.Size = new Size(121, 23);
+            txtAnio.TabIndex = 220;
+            // 
             // AgregarVersion
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1301, 630);
+            Controls.Add(txtAnio);
+            Controls.Add(label34);
             Controls.Add(btnRegresar);
             Controls.Add(panel5);
             Controls.Add(panel6);
@@ -1485,5 +1507,7 @@
         private Label lblTipoEmpleado;
         private Label lblNombre;
         private Button btnRegresar;
+        private Label label34;
+        private ComboBox txtAnio;
     }
 }

@@ -139,6 +139,8 @@
             rbPantallaNo = new RadioButton();
             rbPantallaSi = new RadioButton();
             button1 = new Button();
+            label25 = new Label();
+            txtAnio = new TextBox();
             panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
             panel1.SuspendLayout();
@@ -577,7 +579,7 @@
             cbSuspensionD.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             cbSuspensionD.FormattingEnabled = true;
             cbSuspensionD.Items.AddRange(new object[] { "Manual", "Automatico" });
-            cbSuspensionD.Location = new Point(522, 324);
+            cbSuspensionD.Location = new Point(521, 297);
             cbSuspensionD.Margin = new Padding(3, 2, 3, 2);
             cbSuspensionD.Name = "cbSuspensionD";
             cbSuspensionD.Size = new Size(124, 23);
@@ -608,7 +610,7 @@
             // 
             label33.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             label33.AutoSize = true;
-            label33.Location = new Point(379, 327);
+            label33.Location = new Point(378, 300);
             label33.Name = "label33";
             label33.Size = new Size(123, 15);
             label33.TabIndex = 262;
@@ -619,7 +621,7 @@
             cbFrenosD.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             cbFrenosD.FormattingEnabled = true;
             cbFrenosD.Items.AddRange(new object[] { "Tambor", "Disco", "ABS" });
-            cbFrenosD.Location = new Point(522, 260);
+            cbFrenosD.Location = new Point(521, 233);
             cbFrenosD.Margin = new Padding(3, 2, 3, 2);
             cbFrenosD.Name = "cbFrenosD";
             cbFrenosD.Size = new Size(124, 23);
@@ -630,7 +632,7 @@
             cbFrenosT.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             cbFrenosT.FormattingEnabled = true;
             cbFrenosT.Items.AddRange(new object[] { "Tambor", "Disco", "ABS" });
-            cbFrenosT.Location = new Point(522, 292);
+            cbFrenosT.Location = new Point(521, 265);
             cbFrenosT.Margin = new Padding(3, 2, 3, 2);
             cbFrenosT.Name = "cbFrenosT";
             cbFrenosT.Size = new Size(124, 23);
@@ -640,7 +642,7 @@
             // 
             label30.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             label30.AutoSize = true;
-            label30.Location = new Point(410, 295);
+            label30.Location = new Point(409, 268);
             label30.Name = "label30";
             label30.Size = new Size(90, 15);
             label30.TabIndex = 259;
@@ -650,7 +652,7 @@
             // 
             label31.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             label31.AutoSize = true;
-            label31.Location = new Point(396, 264);
+            label31.Location = new Point(395, 237);
             label31.Name = "label31";
             label31.Size = new Size(104, 15);
             label31.TabIndex = 258;
@@ -840,7 +842,7 @@
             cbTransmision.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             cbTransmision.FormattingEnabled = true;
             cbTransmision.Items.AddRange(new object[] { "Manual", "Automatico" });
-            cbTransmision.Location = new Point(522, 200);
+            cbTransmision.Location = new Point(521, 173);
             cbTransmision.Margin = new Padding(3, 2, 3, 2);
             cbTransmision.Name = "cbTransmision";
             cbTransmision.Size = new Size(124, 23);
@@ -851,7 +853,7 @@
             cbTipo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             cbTipo.FormattingEnabled = true;
             cbTipo.Items.AddRange(new object[] { "Sencilla", "Doble" });
-            cbTipo.Location = new Point(522, 228);
+            cbTipo.Location = new Point(521, 201);
             cbTipo.Margin = new Padding(3, 2, 3, 2);
             cbTipo.Name = "cbTipo";
             cbTipo.Size = new Size(124, 23);
@@ -862,7 +864,7 @@
             // 
             label23.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             label23.AutoSize = true;
-            label23.Location = new Point(402, 231);
+            label23.Location = new Point(401, 204);
             label23.Name = "label23";
             label23.Size = new Size(99, 15);
             label23.TabIndex = 251;
@@ -872,7 +874,7 @@
             // 
             label20.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             label20.AutoSize = true;
-            label20.Location = new Point(424, 203);
+            label20.Location = new Point(423, 176);
             label20.Name = "label20";
             label20.Size = new Size(73, 15);
             label20.TabIndex = 248;
@@ -971,7 +973,7 @@
             // txtAltura
             // 
             txtAltura.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            txtAltura.Location = new Point(522, 171);
+            txtAltura.Location = new Point(521, 144);
             txtAltura.Name = "txtAltura";
             txtAltura.Size = new Size(124, 23);
             txtAltura.TabIndex = 246;
@@ -981,7 +983,7 @@
             // 
             label24.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             label24.AutoSize = true;
-            label24.Location = new Point(458, 174);
+            label24.Location = new Point(457, 147);
             label24.Name = "label24";
             label24.Size = new Size(42, 15);
             label24.TabIndex = 244;
@@ -990,7 +992,7 @@
             // txtAnchura
             // 
             txtAnchura.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            txtAnchura.Location = new Point(522, 142);
+            txtAnchura.Location = new Point(521, 115);
             txtAnchura.Name = "txtAnchura";
             txtAnchura.Size = new Size(124, 23);
             txtAnchura.TabIndex = 243;
@@ -1000,7 +1002,7 @@
             // 
             label34.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             label34.AutoSize = true;
-            label34.Location = new Point(445, 145);
+            label34.Location = new Point(444, 118);
             label34.Name = "label34";
             label34.Size = new Size(55, 15);
             label34.TabIndex = 240;
@@ -1009,7 +1011,7 @@
             // txtDistancia
             // 
             txtDistancia.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            txtDistancia.Location = new Point(522, 113);
+            txtDistancia.Location = new Point(521, 86);
             txtDistancia.Name = "txtDistancia";
             txtDistancia.Size = new Size(124, 23);
             txtDistancia.TabIndex = 239;
@@ -1019,7 +1021,7 @@
             // 
             label35.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             label35.AutoSize = true;
-            label35.Location = new Point(421, 116);
+            label35.Location = new Point(420, 89);
             label35.Name = "label35";
             label35.Size = new Size(81, 15);
             label35.TabIndex = 234;
@@ -1153,7 +1155,7 @@
             // txtCapacidad
             // 
             txtCapacidad.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            txtCapacidad.Location = new Point(522, 84);
+            txtCapacidad.Location = new Point(205, 339);
             txtCapacidad.Name = "txtCapacidad";
             txtCapacidad.Size = new Size(123, 23);
             txtCapacidad.TabIndex = 228;
@@ -1163,7 +1165,7 @@
             // 
             label38.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             label38.AutoSize = true;
-            label38.Location = new Point(381, 87);
+            label38.Location = new Point(77, 342);
             label38.Name = "label38";
             label38.Size = new Size(122, 15);
             label38.TabIndex = 227;
@@ -1241,7 +1243,7 @@
             btnAgregarVersion.BackColor = Color.FromArgb(51, 58, 86);
             btnAgregarVersion.FlatStyle = FlatStyle.Popup;
             btnAgregarVersion.ForeColor = Color.White;
-            btnAgregarVersion.Location = new Point(748, 357);
+            btnAgregarVersion.Location = new Point(510, 496);
             btnAgregarVersion.Name = "btnAgregarVersion";
             btnAgregarVersion.Size = new Size(155, 23);
             btnAgregarVersion.TabIndex = 219;
@@ -1346,7 +1348,7 @@
             // 
             label48.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             label48.AutoSize = true;
-            label48.Location = new Point(437, 392);
+            label48.Location = new Point(437, 364);
             label48.Name = "label48";
             label48.Size = new Size(55, 15);
             label48.TabIndex = 208;
@@ -1363,7 +1365,7 @@
             // txtRendimiento
             // 
             txtRendimiento.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            txtRendimiento.Location = new Point(521, 353);
+            txtRendimiento.Location = new Point(520, 326);
             txtRendimiento.Name = "txtRendimiento";
             txtRendimiento.Size = new Size(124, 23);
             txtRendimiento.TabIndex = 268;
@@ -1373,7 +1375,7 @@
             // 
             label49.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             label49.AutoSize = true;
-            label49.Location = new Point(356, 361);
+            label49.Location = new Point(355, 334);
             label49.Name = "label49";
             label49.Size = new Size(149, 15);
             label49.TabIndex = 267;
@@ -1382,7 +1384,7 @@
             // txtCosto
             // 
             txtCosto.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            txtCosto.Location = new Point(521, 389);
+            txtCosto.Location = new Point(521, 361);
             txtCosto.Name = "txtCosto";
             txtCosto.Size = new Size(124, 23);
             txtCosto.TabIndex = 269;
@@ -1429,7 +1431,7 @@
             button1.BackColor = Color.FromArgb(51, 58, 86);
             button1.FlatStyle = FlatStyle.Popup;
             button1.ForeColor = Color.White;
-            button1.Location = new Point(118, 361);
+            button1.Location = new Point(300, 496);
             button1.Name = "button1";
             button1.Size = new Size(155, 23);
             button1.TabIndex = 270;
@@ -1437,11 +1439,32 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
+            // label25
+            // 
+            label25.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            label25.AutoSize = true;
+            label25.Location = new Point(142, 371);
+            label25.Name = "label25";
+            label25.Size = new Size(32, 15);
+            label25.TabIndex = 272;
+            label25.Text = "Año:";
+            // 
+            // txtAnio
+            // 
+            txtAnio.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            txtAnio.Location = new Point(205, 368);
+            txtAnio.MaxLength = 4;
+            txtAnio.Name = "txtAnio";
+            txtAnio.Size = new Size(124, 23);
+            txtAnio.TabIndex = 271;
+            // 
             // ModificarVersion
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(967, 630);
+            Controls.Add(label25);
+            Controls.Add(txtAnio);
             Controls.Add(button1);
             Controls.Add(panel6);
             Controls.Add(panel8);
@@ -1647,5 +1670,7 @@
         private RadioButton rbPantallaNo;
         private RadioButton rbPantallaSi;
         private Button button1;
+        private Label label25;
+        private TextBox txtAnio;
     }
 }

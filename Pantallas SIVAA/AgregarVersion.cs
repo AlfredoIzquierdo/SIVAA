@@ -18,7 +18,11 @@ namespace Pantallas_SIVAA
     public partial class AgregarVersion : Form
     {
         Versions version = new Versions();
+        Modelo modelo = new Modelo();
+        ModeloVersion modeloVer = new ModeloVersion();
+        ModeloVersionD modverl = new ModeloVersionD();
         VersionLog log = new VersionLog();
+        ModeloD mods = new ModeloD();
         VehiculoLog veh = new VehiculoLog();
         Empleado _pqt;
         public AgregarVersion(Empleado pqt)
@@ -120,6 +124,18 @@ namespace Pantallas_SIVAA
                 version.EstadoVersion = "Activo";
                 log.Registrar(version);
 
+                //contar modelos
+                List<Modelo> y = mods.ListadoTotal();
+                string ii = "M" + (y.Count + 1).ToString();
+                //idmodelo = ii
+                modelo.Año = txtAnio.Text;
+                modelo.IDModelo = ii;
+                mods.Insertar(modelo);
+
+                modeloVer.IDVersion = i;
+                modeloVer.IDModelo = ii;
+                modverl.Insertar(modeloVer);
+
 
                 this.Close();
                 Versiones versiones = new Versiones(_pqt);
@@ -134,6 +150,8 @@ namespace Pantallas_SIVAA
 
         private void AgregarVersion_Load(object sender, EventArgs e)
         {
+            DateTime fechaActual = DateTime.Now;
+            txtAnio.Items.Add(fechaActual.Year.ToString());
             List<Vehiculo> vh = veh.ListadoAll();
             foreach (Vehiculo x in vh)
             {
@@ -326,6 +344,14 @@ namespace Pantallas_SIVAA
         }
 
         private void txtCapacidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {

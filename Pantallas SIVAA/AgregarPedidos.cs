@@ -32,6 +32,14 @@ namespace Pantallas_SIVAA
 
         private void AgregarPedidos_Load(object sender, EventArgs e)
         {
+            DateTime fechaActual = DateTime.Now;
+            int dia = fechaActual.Day;
+            int mes = fechaActual.Month;
+            int anio = fechaActual.Year;
+            numericUpDownDia.Value = dia;
+            numericUpDownMes.Value = mes;
+            numericUpDownAno.Value = anio;
+
             cbProov.SelectedIndex = 0;
             switch (_pqt.Tipo.Trim())
             {

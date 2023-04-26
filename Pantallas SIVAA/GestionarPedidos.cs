@@ -124,6 +124,8 @@ namespace Pantallas_SIVAA.Pedidos
 
         private void GestionarPedidos_Load(object sender, EventArgs e)
         {
+           
+            
             dataGridView1.ClearSelection();
             comboBox2.SelectedIndex = 0;
             List<Pedido> clie = pedlog.ListadoAll();

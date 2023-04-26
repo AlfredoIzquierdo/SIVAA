@@ -9,6 +9,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,6 +21,10 @@ namespace Pantallas_SIVAA
         Versions version = new Versions();
         VersionLog log = new VersionLog();
         VehiculoLog veh = new VehiculoLog();
+        ModeloVersion modeloVer = new ModeloVersion();
+        ModeloVersionD modverl = new ModeloVersionD();
+        ModeloD mods = new ModeloD();
+        Modelo modelo = new Modelo();
         string id;
 
         Empleado _pqt;
@@ -162,6 +167,17 @@ namespace Pantallas_SIVAA
             version.CamaraTrasera = verificacion(rbCamaraSi, rbCamaraNo);
 
             log.Modificar(version);
+
+            //List<Modelo> y = mods.ListadoTotal();
+            //string ii = "M" + (y.Count + 1).ToString();
+            ////idmodelo = ii
+            //modelo.Año = txtAnio.Text;
+            //modelo.IDModelo = ii;
+            //mods.Actualizar(modelo);
+
+            //modeloVer.IDVersion = id;
+            //modeloVer.IDModelo = ii;
+            //modverl.Actualizar(modeloVer);
 
             Versiones versiones = new Versiones(_pqt);
             this.Close();
