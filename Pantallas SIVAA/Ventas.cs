@@ -1757,7 +1757,7 @@ namespace Pantallas_SIVAA
                                 Plazo = Convert.ToInt32(numericplazos.Value),
                                 Enganche = Convert.ToDouble(txtengancheCot.Text),
                                 Anualidad = Convert.ToDouble(txtanualidadCot.Text),
-                                Precio = Convert.ToDouble(txtFinanciamiento.Text) + Convert.ToDouble(txPrecioCot.Text),
+                                Precio = Convert.ToDouble(txPrecioCot.Text),
                                 Interes = "10%",
                                 Mensualidad = Convert.ToDouble(txtmensualidadCot.Text),
                                 PorcentajeEnganche = Convert.ToString(numericporengan.Value),
