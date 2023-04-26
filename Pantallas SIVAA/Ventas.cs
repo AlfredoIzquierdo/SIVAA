@@ -2089,6 +2089,20 @@ namespace Pantallas_SIVAA
             else
             {
                 ArrojarPrecioCot();
+                List<Unidad> Colores = new List<Unidad>();
+                List<Modelo> Modelos = new List<Modelo>();
+                Colores = PqteLog4.BuscarColores(ComboVersion1.Text, comboVehiculo.Text);
+                Modelos = PqteLog4.ObtenerModeloPorNombre(ComboVersion1.Text, comboVehiculo.Text);
+                foreach (Unidad x in Colores)
+                {
+                    if (x.Estatus == "Disponible")
+                    {
+                        //if ()
+                        //{
+
+                        //}
+                    }
+                }
             }
         }
 

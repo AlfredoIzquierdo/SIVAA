@@ -42,6 +42,7 @@ namespace Logicas
 
             return datos;
         }
+        
         public Versions ObtenerVersionPrecio(string NombreVersion,string NombreVehiculo)
         {
             Vehiculo vehiculoDeseado = datosVehiculo.ObtenerPdtoPorNombre(NombreVehiculo);
