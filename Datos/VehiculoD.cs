@@ -18,12 +18,13 @@ namespace Datos
             {
                 //Abrir la conexión y crear el Query
                 Cnx.Open();
-                string CdSql = "INSERT INTO Vehiculo (IDVehiculo,Nombre) VALUES (@Cl,@Nm)";
+                string CdSql = "INSERT INTO Vehiculo (IDVehiculo,Nombre,EstadoVehiculo) VALUES (@Cl,@Nm,@AC)";
                 using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))//SolicitA: la cadena de SQL y la conexeión
                 {
                     //Añadir los parámetros
                     Cmd.Parameters.AddWithValue("@Cl", Pqte.IDVehiculo);//Get y set de la capa entidad
-                    Cmd.Parameters.AddWithValue("@Nm", Pqte.Nombre);
+                    Cmd.Parameters.AddWithValue("@Nm", Pqte.Nombre); 
+                    Cmd.Parameters.AddWithValue("@AC", Pqte.EstadoVehiculo);
                     Cmd.ExecuteNonQuery();
                     //Borrar variable cmd de la memoria
                     Cmd.Dispose();
@@ -53,7 +54,8 @@ namespace Datos
                         Vehiculo Pqte = new Vehiculo
                         {
                             IDVehiculo = Convert.ToString(Dr["IDVehiculo"]),
-                            Nombre = Convert.ToString(Dr["Nombre"])
+                            Nombre = Convert.ToString(Dr["Nombre"]),
+                            EstadoVehiculo = Convert.ToString(Dr["EstadoVehiculo"])
                         };
                         productos.Add(Pqte);
                     }
@@ -83,7 +85,8 @@ namespace Datos
                         Vehiculo Pqte = new Vehiculo
                         {
                             IDVehiculo = Convert.ToString(Dr["IDVehiculo"]),
-                            Nombre = Convert.ToString(Dr["Nombre"])
+                            Nombre = Convert.ToString(Dr["Nombre"]),
+                            EstadoVehiculo = Convert.ToString(Dr["EstadoVehiculo"])
                         };
                         return Pqte;
                     }
@@ -109,11 +112,11 @@ namespace Datos
                     SqlDataReader Dr = Cmd.ExecuteReader();
                     if (Dr.Read())
                     {
-
                         Vehiculo Pqte = new Vehiculo
                         {
                             IDVehiculo = Convert.ToString(Dr["IDVehiculo"]),
-                            Nombre = Convert.ToString(Dr["Nombre"])
+                            Nombre = Convert.ToString(Dr["Nombre"]),
+                            EstadoVehiculo = Convert.ToString(Dr["EstadoVehiculo"])
                         };
                         return Pqte;
                     }
@@ -127,7 +130,7 @@ namespace Datos
             using (SqlConnection Cnx = new SqlConnection(CdCnx))
             {
                 Cnx.Open();
-                string CdSql = "DELETE FROM Vehiculo WHERE IDVehiculo=@Cl";
+                string CdSql = "update Vehiculo set estadoVehiculo = 'Inactivo' where IDVehiculo=@Cl";
                 using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
                 {
                     Cmd.Parameters.AddWithValue("@Cl", CodPqt);

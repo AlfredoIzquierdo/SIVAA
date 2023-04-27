@@ -3,6 +3,7 @@ using Entidades;
 using Logicas;
 using Pantallas_SIVAA.Pedidos;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -113,8 +114,6 @@ namespace Pantallas_SIVAA
 
         private void pictureBox11_Click(object sender, EventArgs e)
         {
-
-
             if (dataGridView1.SelectedRows.Count == 1 && id != null)
             {
                 id = dataGridView1[0, dataGridView1.SelectedRows[0].Index].Value.ToString();
@@ -132,13 +131,18 @@ namespace Pantallas_SIVAA
         List<Vehiculo> listas;
         private void Vehiculos_Load(object sender, EventArgs e)
         {
-
             dataGridView1.ClearSelection();
-            List<Vehiculo> pro = vehiculo.ListadoAll();
-            listas = pro;
-            dataGridView1.DataSource = "";
-            dataGridView1.DataSource = pro;
+            List<Vehiculo> veh = vehiculo.ListadoAll();
+            listas = veh;
+            foreach (Vehiculo x in veh)
+            {
+                if (x.EstadoVehiculo.Trim() == "Activo")
+                {
 
+                    dataGridView1.Rows.Add(x.IDVehiculo, x.Nombre);
+
+                }
+            }
             switch (_pqt.Tipo.Trim())
             {
                 case "Atencion":
@@ -204,13 +208,18 @@ namespace Pantallas_SIVAA
         {
             if (cmbOpcionBusqueda.SelectedIndex != 0)
             {
-                List<Vehiculo> pro;
-                int opcion = cmbOpcionBusqueda.SelectedIndex;
                 dataGridView1.ClearSelection();
-                pro = vehiculo.ListadoEspecifico(txtValorBusqueda.Text, cmbOpcionBusqueda.Text);
-                listas = pro;
-                dataGridView1.DataSource = "";
-                dataGridView1.DataSource = pro;
+                List<Vehiculo> veh = vehiculo.ListadoEspecifico(txtValorBusqueda.Text, cmbOpcionBusqueda.Text);
+                listas = veh;
+                foreach (Vehiculo x in veh)
+                {
+                    if (x.EstadoVehiculo.Trim() == "Activo")
+                    {
+
+                        dataGridView1.Rows.Add(x.IDVehiculo, x.Nombre);
+
+                    }
+                }
             }
         }
 
@@ -230,10 +239,17 @@ namespace Pantallas_SIVAA
             if (cmbOpcionBusqueda.SelectedIndex == 0)
             {
                 dataGridView1.ClearSelection();
-                List<Vehiculo> pro = vehiculo.ListadoAll();
-                listas = pro;
-                dataGridView1.DataSource = "";
-                dataGridView1.DataSource = pro;
+                List<Vehiculo> veh = vehiculo.ListadoAll();
+                listas = veh;
+                foreach (Vehiculo x in veh)
+                {
+                    if (x.EstadoVehiculo.Trim() == "Activo")
+                    {
+
+                        dataGridView1.Rows.Add(x.IDVehiculo, x.Nombre);
+
+                    }
+                }
             }
         }
     }

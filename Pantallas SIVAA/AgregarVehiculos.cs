@@ -82,6 +82,7 @@ namespace Pantallas_SIVAA
             string i = "VH" + (x.Count + 1).ToString();
             vehiculo.IDVehiculo = i;
             vehiculo.Nombre = txtNombre.Text;
+            vehiculo.EstadoVehiculo = "Activo";
             vehiculoLog.Registrar(vehiculo);
             MessageBox.Show("Agregado" + i.ToString());
             this.Close();
@@ -141,56 +142,6 @@ namespace Pantallas_SIVAA
                     lblNombre.Text = "Bienvenido: " + _pqt.Nombre + " " + _pqt.ApellidoPat;
                     break;
             }
-        }
-
-        private void btnRegresar_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnAgregarVehiculo_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AgregarVehiculos_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnCitas_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnReportes_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnCobros_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnVentas_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnStock_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnPedidos_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox13_Click_1(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -10,5 +10,6 @@ namespace Entidades
     {
         public string IDVehiculo { get; set; }
         public string Nombre { get; set; }
+        public string EstadoVehiculo { get; set; }
     }
 }
