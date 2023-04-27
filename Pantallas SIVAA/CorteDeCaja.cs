@@ -47,7 +47,8 @@ namespace Pantallas_SIVAA
         CorteCaja corte;
         Empleado _pqt;
         readonly ClienteLog PqteLog5 = new ClienteLog();
-        List<EstadoDeCuenta> lista;
+        List<EstadoDeCuenta> lista; 
+
         string nombre, apellidoP, apellidoM, vehiculo, versions, id;
         public CorteDeCaja(Empleado pqt)
         {
@@ -186,6 +187,7 @@ namespace Pantallas_SIVAA
             {
                 dataGridView1.Rows.Add(x.IDCliente, x.Nombre, x.ApellidoPaterno, x.ApellidoMaterno, x.NombreV, x.Versions, x.IDVenta);
             }
+
 
 
         }

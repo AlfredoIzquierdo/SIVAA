@@ -104,7 +104,7 @@
             // 
             this.pictureBox2.Image = global::Pantallas_SIVAA.Properties.Resources.Nissan_logo;
             this.pictureBox2.Location = new System.Drawing.Point(35, 34);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(70, 64);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -115,7 +115,7 @@
             // 
             this.pictureBox1.Image = global::Pantallas_SIVAA.Properties.Resources.print_FILL0_wght400_GRAD0_opsz48;
             this.pictureBox1.Location = new System.Drawing.Point(1171, 30);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(70, 64);
             this.pictureBox1.TabIndex = 225;
@@ -723,6 +723,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ContratoCompraVentaCredito";
             this.Text = "ContratoCompraVentaCredito";
+            this.Load += new System.EventHandler(this.ContratoCompraVentaCredito_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
