@@ -80,7 +80,7 @@ namespace Pantallas_SIVAA
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            ReporteInventario reporteInventario = new ReporteInventario(_pqt,lista);
+            ReporteInventario reporteInventario = new ReporteInventario(_pqt, lista);
             reporteInventario.Show();
         }
 
@@ -95,11 +95,6 @@ namespace Pantallas_SIVAA
         }
 
         private void btnPedidos_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnStock_Click_1(object sender, EventArgs e)
         {
 
         }
@@ -196,7 +191,7 @@ namespace Pantallas_SIVAA
                 lista = em;
                 foreach (UnidadNoUsar x in em)
                 {
-                    if(x.Estatus == "Activo")
+                    if (x.Estatus == "Activo")
                     {
                         dataGridView1.Rows.Add(x.NoSerie, x.Vehiculo, x.Version, x.Color, x.Estatus);
                     }
@@ -249,7 +244,7 @@ namespace Pantallas_SIVAA
             if (e.RowIndex >= 0)
             {
                 dataGridView1.Rows[e.RowIndex].Selected = true;
-                
+
             }
 
             if (dataGridView1.CurrentCell.RowIndex >= 0)
