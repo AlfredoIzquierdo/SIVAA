@@ -25,7 +25,10 @@ namespace Logicas
                     Mensaje.Append("El Codigo del Cliente ya se encuentra en la B.D.");
             }
         }
-
+        public List<Vehiculo>ListadoEspecifico(string texto, string filtro)
+        {
+            return Pdto.ListadoEspecifico(texto, filtro);
+        }
         public List<Vehiculo> ListadoAll()
         {
             //Método que obtiene la lista dinámica de todos los registro que tiene mi tabla
@@ -56,16 +59,6 @@ namespace Logicas
             if (Mensaje.Length == 0)
                 Pdto.Eliminar(CodPqte);
             return;
-        }
-        public List<Vehiculo> OrdenarID()
-        {
-            //Método que obtiene la lista dinámica de todos los registro que tiene mi tabla
-            return Pdto.OrdenarID();
-        }
-        public List<Vehiculo> OrdenarNombre()
-        {
-            //Método que obtiene la lista dinámica de todos los registro que tiene mi tabla
-            return Pdto.OrdenarNombre();
         }
         public Vehiculo LeerPorClave(string ClPdto)
         {

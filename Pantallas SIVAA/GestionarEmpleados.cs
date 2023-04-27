@@ -223,7 +223,7 @@ namespace Pantallas_SIVAA
             {
                 if (txtbusqueda.Text != "")
                     dataGridView1.ClearSelection();
-                pro = ListadoEspecifico(txtbusqueda.Text, comboempleado.Text);
+                pro = empleado.ListadoEspecifico(txtbusqueda.Text, comboempleado.Text);
                 lista = pro;
                 dataGridView1.Rows.Clear();
                 foreach (Empleado x in pro)
@@ -291,14 +291,10 @@ namespace Pantallas_SIVAA
                 foreach (Empleado x in clie)
                 {
                     if (x.EstadoEmpleado == "Activo")
-                    {
-
                         dataGridView1.Rows.Add(x.IDEmpleado, x.Nombre, x.ApellidoPat, x.ApellidoMat, x.Correo, x.Telefono, x.RFC, x.Contraseña, x.Tipo);
 
-                    }
                 }
             }
-
         }
 
         private void comboempleado_SelectedValueChanged(object sender, EventArgs e)

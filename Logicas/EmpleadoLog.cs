@@ -25,7 +25,10 @@ namespace Logicas
                     Mensaje.Append("El Codigo del Cliente ya se encuentra en la B.D.");
             }
         }
-
+        public List<Empleado>ListadoEspecifico(string buscar, string filtro)
+        {
+            return Pdto.ListadoEspecifico(buscar, filtro);
+        }
         public List<Empleado> ListadoAll()
         {
             //Método que obtiene la lista dinámica de todos los registro que tiene mi tabla

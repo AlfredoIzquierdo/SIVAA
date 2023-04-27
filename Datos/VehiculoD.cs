@@ -137,18 +137,22 @@ namespace Datos
                 Cnx.Close();
             }
         }
-        public List<Vehiculo> OrdenarID()
+
+        public List<Vehiculo> ListadoEspecifico(string CodPqt, string opcion)
         {
+            string CdCnx = ConfigurationManager.ConnectionStrings["CnxSQL"].ToString();
             List<Vehiculo> productos = new List<Vehiculo>();
 
             //Vuelvo a crear la conexión
             using (SqlConnection Cnx = new SqlConnection(CdCnx))
             {
                 Cnx.Open();
-                //Creo el Query (todos los registros de la tabla Venta
-                string CdSql = "Select * from Vehiculo Order by IDVehiculo";
+                //Creo el Query (todos los registros de la tabla Proveedor
+
+                string CdSql = "SELECT * FROM Vehiculo WHERE " + opcion + "=@Cl";
                 using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
                 {
+                    Cmd.Parameters.AddWithValue("@Cl", CodPqt);
                     SqlDataReader Dr = Cmd.ExecuteReader();
                     //Leo registro por registro que tiene la tabla 
                     while (Dr.Read())
@@ -157,37 +161,8 @@ namespace Datos
                         Vehiculo Pqte = new Vehiculo
                         {
                             IDVehiculo = Convert.ToString(Dr["IDVehiculo"]),
-                            Nombre = Convert.ToString(Dr["Nombre"])
-                        };
-                        productos.Add(Pqte);
-                    }
-                }
-                Cnx.Close();
-            }
-            return productos;
-        }
+                            Nombre = Convert.ToString(Dr["Nombre"]),
 
-        public List<Vehiculo> OrdenarNombre()
-        {
-            List<Vehiculo> productos = new List<Vehiculo>();
-
-            //Vuelvo a crear la conexión
-            using (SqlConnection Cnx = new SqlConnection(CdCnx))
-            {
-                Cnx.Open();
-                //Creo el Query (todos los registros de la tabla Venta
-                string CdSql = "Select * from Vehiculo Order by Nombre";
-                using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
-                {
-                    SqlDataReader Dr = Cmd.ExecuteReader();
-                    //Leo registro por registro que tiene la tabla 
-                    while (Dr.Read())
-                    {
-                        //Cada vez que lo lea se crea un nuevo objeto
-                        Vehiculo Pqte = new Vehiculo
-                        {
-                            IDVehiculo = Convert.ToString(Dr["IDVehiculo"]),
-                            Nombre = Convert.ToString(Dr["Nombre"])
                         };
                         productos.Add(Pqte);
                     }

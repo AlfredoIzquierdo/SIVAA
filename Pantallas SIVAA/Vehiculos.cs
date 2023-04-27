@@ -144,7 +144,7 @@ namespace Pantallas_SIVAA
                 case "Atencion":
                     // Funciones activas: Citas e inventario
                     lblTipoEmpleado.Text = _pqt.Tipo + " a clientes";
-                    lblNombre.Text = "Bienvenido: " + _pqt.Nombre + " " + _pqt.ApellidoPat;
+                    lblNombre.Text = "Bienvenido: " + _pqt.Nombre.Trim() + " " + _pqt.ApellidoPat;
 
 
                     // Menu lateral
@@ -194,109 +194,24 @@ namespace Pantallas_SIVAA
             }
         }
 
-
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (comboBox1.SelectedIndex == 0)
-            {
-                List<Vehiculo> carros = vehiculo.OrdenarID();
-                dataGridView1.DataSource = carros;
-            }
-            if (comboBox1.SelectedIndex == 1)
-            {
-                List<Vehiculo> carros = vehiculo.OrdenarNombre();
-                dataGridView1.DataSource = carros;
-            }
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             ReporteVehiculos rp = new ReporteVehiculos(listas);
             rp.Show();
         }
 
-
-        public List<Vehiculo> ListadoEspecifico(string CodPqt, string opcion)
-        {
-            string CdCnx = ConfigurationManager.ConnectionStrings["CnxSQL"].ToString();
-            List<Vehiculo> productos = new List<Vehiculo>();
-
-            //Vuelvo a crear la conexión
-            using (SqlConnection Cnx = new SqlConnection(CdCnx))
-            {
-                Cnx.Open();
-                //Creo el Query (todos los registros de la tabla Proveedor
-
-                string CdSql = "SELECT * FROM Vehiculo WHERE " + opcion + "=@Cl";
-                using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
-                {
-                    Cmd.Parameters.AddWithValue("@Cl", CodPqt);
-                    SqlDataReader Dr = Cmd.ExecuteReader();
-                    //Leo registro por registro que tiene la tabla 
-                    while (Dr.Read())
-                    {
-                        //Cada vez que lo lea se crea un nuevo objeto
-                        Vehiculo Pqte = new Vehiculo
-                        {
-                            IDVehiculo = Convert.ToString(Dr["IDVehiculo"]),
-                            Nombre = Convert.ToString(Dr["Nombre"]),
-
-                        };
-                        productos.Add(Pqte);
-                    }
-                }
-                Cnx.Close();
-            }
-            return productos;
-        }
         private void button1_Click(object sender, EventArgs e)
         {
-            if (cmbOpcionBusqueda.SelectedIndex == 0)
-            {
-                dataGridView1.ClearSelection();
-                List<Vehiculo> pro = vehiculo.ListadoAll();
-                listas = pro;
-                dataGridView1.DataSource = "";
-                dataGridView1.DataSource = pro;
-                txtValorBusqueda.ResetText();
-            }
-            else
+            if (cmbOpcionBusqueda.SelectedIndex != 0)
             {
                 List<Vehiculo> pro;
                 int opcion = cmbOpcionBusqueda.SelectedIndex;
                 dataGridView1.ClearSelection();
-                pro = ListadoEspecifico(txtValorBusqueda.Text, cmbOpcionBusqueda.Text);
+                pro = vehiculo.ListadoEspecifico(txtValorBusqueda.Text, cmbOpcionBusqueda.Text);
                 listas = pro;
                 dataGridView1.DataSource = "";
                 dataGridView1.DataSource = pro;
             }
-
-
-
-
-            //if (comboBox2.SelectedIndex == 0)
-            //{
-            //    Vehiculo listado = vehiculo.LeerPorClave(textBox1.Text);
-            //    if (listado != null)
-            //    {
-            //        dataGridView1.AutoGenerateColumns = false;
-            //        dataGridView1.DataSource = listado;
-            //        dataGridView1.Columns["Column25"].DataPropertyName = "IDVehiculo";
-            //        dataGridView1.Columns["Column26"].DataPropertyName = "Nombre";
-            //    }
-            //}
-            //if (comboBox2.SelectedIndex == 1)
-            //{
-            //    Vehiculo listado = vehiculo.LeerPorNombre(textBox1.Text);
-            //    if (listado != null)
-            //    {
-            //        dataGridView1.AutoGenerateColumns = false;
-            //        dataGridView1.DataSource = listado;
-            //        dataGridView1.Columns["Column25"].DataPropertyName = "IDVehiculo";
-            //        dataGridView1.Columns["Column26"].DataPropertyName = "Nombre";
-            //    }
-            //}
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -305,17 +220,21 @@ namespace Pantallas_SIVAA
             {
                 dataGridView1.Rows[e.RowIndex].Selected = true;
                 id = dataGridView1[0, dataGridView1.SelectedRows[0].Index].Value.ToString();
-
             }
         }
 
         private void cmbOpcionBusqueda_SelectedValueChanged(object sender, EventArgs e)
         {
             if (txtValorBusqueda.Text != "")
-            {
                 txtValorBusqueda.ResetText();
+            if (cmbOpcionBusqueda.SelectedIndex == 0)
+            {
+                dataGridView1.ClearSelection();
+                List<Vehiculo> pro = vehiculo.ListadoAll();
+                listas = pro;
+                dataGridView1.DataSource = "";
+                dataGridView1.DataSource = pro;
             }
-
         }
     }
 }

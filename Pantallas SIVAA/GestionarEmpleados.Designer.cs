@@ -542,6 +542,7 @@
             this.comboempleado.Name = "comboempleado";
             this.comboempleado.Size = new System.Drawing.Size(183, 33);
             this.comboempleado.TabIndex = 103;
+            this.comboempleado.SelectedValueChanged += new System.EventHandler(this.comboempleado_SelectedValueChanged);
             // 
             // button1
             // 
@@ -584,6 +585,7 @@
             this.Name = "GestionarEmpleados";
             this.Text = "NuevoEmpleado";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.GestionarEmpleados_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel7.ResumeLayout(false);

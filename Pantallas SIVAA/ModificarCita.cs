@@ -18,6 +18,7 @@ namespace Pantallas_SIVAA
 {
     public partial class ModificarCita : Form
     {
+        readonly EmpleadoLog empleado = new EmpleadoLog();
         string _idCita;
         Cita cita = new Cita();
         Empleado _pqt;
@@ -68,9 +69,6 @@ namespace Pantallas_SIVAA
         {
             CitaD citaD = new CitaD();
             citaD.ObtenerPdto(_idCita);
-            cmbVendedor.Items.AddRange(ListadoTotal().ToArray());
-
-
             CitaLog log = new CitaLog();
             List<Cita> ver = citaD.ListadoTotal();
             foreach (Cita x in ver)
@@ -80,9 +78,23 @@ namespace Pantallas_SIVAA
                     lblAño.Text = x.Año.ToString();
                     lblDia.Text = x.Dia.ToString();
                     lblMes.Text = x.Mes.ToString();
-                    txtHora.Text = x.Hora.ToString();
-                    cmbVendedor.Text = x.IDEmpleado.ToString();
+                    lblHora.Text = x.Hora.ToString();
+                    lblCliente.Text = x.IDCliente.ToString();
+                    lblVendedor.Text = x.IDEmpleado.ToString();
                 }
+            }
+            
+            ClienteD clienteD = new ClienteD();
+            List<Cliente> cli = clienteD.ListadoTotal();
+            foreach(Cliente x in cli)
+            {
+                if(x.IDCliente== lblCliente.Text)
+                    lblNombreCliente.Text=x.Nombre.ToString().Trim()+" "+x.ApellidoPat.ToString().Trim() + " "+x.ApellidoMat.ToString().Trim();
+            }
+            List<Empleado> emp = empleado.ListadoAll();
+            foreach (Empleado x in emp)
+            {
+                dataGridView2.Rows.Add(x.IDEmpleado, x.Nombre, x.ApellidoPat, x.ApellidoMat);
             }
 
             switch (_pqt.Tipo.Trim())
@@ -129,15 +141,6 @@ namespace Pantallas_SIVAA
                     break;
             }
         }
-        private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
-        {
-            int dia = monthCalendar1.SelectionRange.Start.Day;
-            int mes = monthCalendar1.SelectionRange.Start.Month;
-            int año = monthCalendar1.SelectionRange.Start.Year;
-            lblDia.Text = monthCalendar1.SelectionRange.Start.Day.ToString();
-            lblMes.Text = monthCalendar1.SelectionRange.Start.Month.ToString();
-            lblAño.Text = monthCalendar1.SelectionRange.Start.Year.ToString();
-        }
 
         private void btnAgregarCita_Click(object sender, EventArgs e)
         {
@@ -145,9 +148,9 @@ namespace Pantallas_SIVAA
             cita.Año = Convert.ToInt32(lblAño.Text);
             cita.Dia = Convert.ToInt32(lblDia.Text);
             cita.Mes = Convert.ToInt32(lblMes.Text);
-            cita.Hora = txtHora.Text;
-            cita.IDEmpleado = cmbVendedor.Text;
-            cita.IDCita = lblIDCliente.Text;
+            cita.Hora = lblHora.Text;
+            cita.IDEmpleado = lblVendedor.Text;
+            cita.IDCita = lblVendedor.Text;
             log.Modificar(cita);
             CalendarioCitas citaas = new CalendarioCitas(_pqt);
             this.Close();
@@ -210,49 +213,75 @@ namespace Pantallas_SIVAA
             citas.Show();
         }
 
-        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        private void btnBuscarEmpleado_Click(object sender, EventArgs e)
         {
-            int dia = monthCalendar1.SelectionRange.Start.Day;
-            int mes = monthCalendar1.SelectionRange.Start.Month;
-            int año = monthCalendar1.SelectionRange.Start.Year;
-            lblDia.Text = monthCalendar1.SelectionRange.Start.Day.ToString();
-            lblMes.Text = monthCalendar1.SelectionRange.Start.Month.ToString();
-            lblAño.Text = monthCalendar1.SelectionRange.Start.Year.ToString();
+            List<Empleado> pro;
+            int opcion = cmbEmpleado.SelectedIndex;
+            if (opcion == 0)
+            {
+                //txtbusqueda.Enabled = false;
+                dataGridView2.Rows.Clear();
+                List<Empleado> em = empleado.ListadoAll();
+                foreach (Empleado x in em)
+                {
+                    if (x.EstadoEmpleado.Trim() == "Activo")
+                    {
+                        dataGridView2.Rows.Add(x.IDEmpleado, x.Nombre, x.ApellidoPat, x.ApellidoMat);
+                    }
+
+                }
+                return;
+            }
+            else
+            {
+                if (txtBuscarEmpleado.Text == "")
+                    MessageBox.Show("Llene el campo de búsqueda");
+                if (txtBuscarEmpleado.Text != "")
+                    dataGridView2.ClearSelection();
+                pro = empleado.ListadoEspecifico(txtBuscarEmpleado.Text, cmbEmpleado.Text);
+                dataGridView2.Rows.Clear();
+                foreach (Empleado x in pro)
+                {
+                    if (x.EstadoEmpleado.Trim() == "Activo")
+                    {
+                        dataGridView2.Rows.Add(x.IDEmpleado, x.Nombre, x.ApellidoPat, x.ApellidoMat);
+                    }
+                }
+            }
         }
 
-        private void pictureBox13_Click_1(object sender, EventArgs e)
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-
+            DateTime fechaHoraSeleccionada = dateTimePicker1.Value;
+            lblAño.Text = fechaHoraSeleccionada.ToString("yyyy");
+            lblMes.Text = fechaHoraSeleccionada.ToString("MM");
+            lblDia.Text = fechaHoraSeleccionada.ToString("dd");
+            lblHora.Text = fechaHoraSeleccionada.ToString("HH:mm");
         }
 
-        private void button6_Click_1(object sender, EventArgs e)
+        private void cmbEmpleado_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (txtBuscarEmpleado.Text != "")
+            {
+                txtBuscarEmpleado.ResetText();
+            }
+            txtBuscarEmpleado.Enabled = true;
+            if (cmbEmpleado.Text == "Todos")
+            {
+                txtBuscarEmpleado.Enabled = false;
+                dataGridView2.ClearSelection();
+                List<Empleado> emp = empleado.ListadoAll();
+                foreach (Empleado x in emp)
+                {
+                    if (x.EstadoEmpleado.Trim() == "Activo")
+                        dataGridView2.Rows.Add(x.IDEmpleado, x.Nombre, x.ApellidoPat, x.ApellidoMat);
+                }
+            }
         }
 
-        private void button5_Click_1(object sender, EventArgs e)
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
-        }
-
-        private void button4_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-
+            lblVendedor.Text = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
         }
     }
 }
