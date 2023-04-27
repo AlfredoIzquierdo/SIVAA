@@ -188,12 +188,12 @@ namespace Pantallas_SIVAA
                 }
 
                 MessageBox.Show("Pedido Agregado con exito");
-                this.Close();
-                ResumenPedido resumen = new ResumenPedido(pedido.IDPedido,_pqt);
+
+                ResumenPedido resumen = new ResumenPedido(pedido.IDPedido, _pqt);
                 resumen.Show();
             }
 
-            
+
         }
 
         private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
@@ -291,7 +291,7 @@ namespace Pantallas_SIVAA
                 MessageBox.Show("Favor de llenar todos los campos");
                 return;
             }
-            else if(txtSerie.Text.Length < 10)
+            else if (txtSerie.Text.Length < 10)
             {
                 MessageBox.Show("El numero de serie debe contener 10 caracteres");
             }
@@ -299,7 +299,8 @@ namespace Pantallas_SIVAA
             {
                 MessageBox.Show("Favor de seleccionar todos los campos");
                 return;
-            }else
+            }
+            else
             {
                 string idversion, idpedido;
                 string serie, color;
@@ -314,7 +315,7 @@ namespace Pantallas_SIVAA
                 actualizar();
                 Limpiar();
             }
-            
+
         }
         public void Limpiar()
         {
@@ -324,7 +325,7 @@ namespace Pantallas_SIVAA
             cmbModelo.Items.Clear();
             cmbModelo.Text = "";
             cmbVehiculo.Text = "";
-            
+
             //cmbVersion.SelectedItem=-1;
             //cmbModelo.SelectedItem=-1;
             //cmbColor.SelectedItem=-1;
@@ -340,8 +341,8 @@ namespace Pantallas_SIVAA
             ver = pqte2.ListadoVersionesPorVehiculo(cmbVehiculo.SelectedItem.ToString());
             foreach (Versions x in ver)
             {
-                if(x.EstadoVersion=="Activo")
-                cmbVersion.Items.Add(x.Version);
+                if (x.EstadoVersion == "Activo")
+                    cmbVersion.Items.Add(x.Version);
             }
         }
 
@@ -402,6 +403,11 @@ namespace Pantallas_SIVAA
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tabControl1_Enter(object sender, EventArgs e)
         {
 
         }

@@ -241,7 +241,12 @@ namespace Pantallas_SIVAA
                 {
 
                     if (x.EstadoCliente.Trim() == "Activo")
+                    {
+                        listas.Add(x);
                         dataGridView1.Rows.Add(x.IDCliente, x.Nombre, x.ApellidoPat, x.ApellidoMat, x.RFC, x.Correo, x.Telefono, x.NoExterior, x.Colonia, x.Ciudad, x.Estado);
+
+                    }
+
                 }
             }
         }

@@ -31,6 +31,7 @@ namespace Pantallas_SIVAA
         string[] vehiculosD = { "", "", "" };
         int activarPagare = 0;
         Empleado _pqt;
+       
         public Ventas(Empleado pqt)
         {
             InitializeComponent();
@@ -647,6 +648,18 @@ namespace Pantallas_SIVAA
         private void tabPage4_Enter(object sender, EventArgs e)
         {
             //mostrarUnidades();
+            List<Cliente> listas;
+            dgvClientCot.ClearSelection();
+            List<Cliente> clie = PqteLog.ListadoAll();
+            foreach (Cliente x in clie)
+            {
+                if (x.EstadoCliente == "Activo")
+                {
+                    listas = clie;
+                    dataGridView4.Rows.Add(x.IDCliente, x.Nombre, x.ApellidoPat, x.ApellidoMat, x.RFC, x.Correo, x.Telefono, x.NoExterior, x.Colonia, x.Ciudad, x.Estado);
+
+                }
+            }
         }
 
         private void dataGridView4_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -1564,6 +1577,20 @@ namespace Pantallas_SIVAA
                 ComboVersion1.Items.Add(ver.Version);
             }
             ComboVersion1.SelectedIndex = 0;
+
+            //mostrarUnidades();
+            List<Cliente> listas;
+            dgvClientCot.ClearSelection();
+            List<Cliente> clie = PqteLog.ListadoAll();
+            foreach (Cliente x in clie)
+            {
+                if (x.EstadoCliente == "Activo")
+                {
+                    listas = clie;
+                    dgvClientCot.Rows.Add(x.IDCliente, x.Nombre, x.ApellidoPat, x.ApellidoMat, x.RFC, x.Correo, x.Telefono, x.NoExterior, x.Colonia, x.Ciudad, x.Estado);
+
+                }
+            }
             //comboVehiculo.SelectedItem = "March";
             //ComboVersion1.SelectedItem = "SR";
             //List<Unidad> Colores = new List<Unidad>();

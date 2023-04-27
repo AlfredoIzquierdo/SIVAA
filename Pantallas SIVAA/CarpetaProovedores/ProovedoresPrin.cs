@@ -117,13 +117,13 @@ namespace Pantallas_SIVAA
         {
             dataGridView1.ClearSelection();
             List<Proveedor> pro = proveedor.ListadoAll();
-            listas = pro;
+            
             foreach (Proveedor x in pro)
             {
-                if (x.EstadoProovedor =="Activo")
+                if (x.EstadoProovedor.Trim() == "Activo")
                 {
                     dataGridView1.Rows.Add(x.IDProveedor, x.Nombre, x.RFC, x.NoExterior, x.Colonia, x.Ciudad, x.Estado);
-
+                    listas = pro;
                 }
             }
             switch (_pqt.Tipo.Trim())

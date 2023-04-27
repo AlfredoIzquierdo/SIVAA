@@ -15,7 +15,6 @@ namespace Pantallas_SIVAA.Proovedores
 {
     public partial class EditarProovedores : Form
     {
-        ProovedoresPrin proveedor = new ProovedoresPrin(null);
         ProveedorLog log = new ProveedorLog();
         string id;
         Empleado _pqt;
@@ -107,10 +106,10 @@ namespace Pantallas_SIVAA.Proovedores
 
             log.Modificar(proveedor);
 
-            MessageBox.Show("Vas a modificar los datos de un empleado ¿estas seguro de esto?", "Modificacion de empleado", MessageBoxButtons.OKCancel);
 
             this.Close();
-            this.proveedor.Show();
+            ProovedoresPrin proovedores = new ProovedoresPrin(_pqt);
+            proovedores.Show();
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
