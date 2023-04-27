@@ -34,7 +34,7 @@ namespace Pantallas_SIVAA
             lblnombrec.Text = pqt.Nombre.Trim() + " " + pqt.ApellidoPat.Trim() + " " + pqt.ApellidoMat.Trim();
             lblidempleado.Text = pqt.IDEmpleado.Trim();
             lblperiodo.Text = diaI.ToString() + "/" + mesI.ToString() + "/" + AnoI.ToString() + " --- " + diaF.ToString() + "/" + mesF.ToString() + "/" + AnoF.ToString();
-            lblidcot.Text = numeroAleatorio.ToString();
+
             //parte de abajo
             //Coordenadas
             int desplazamiento = 20;
