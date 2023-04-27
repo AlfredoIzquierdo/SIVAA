@@ -22,16 +22,14 @@ namespace Pantallas_SIVAA
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-
             if (numericDiaF.Value < numericDiaI.Value | numericMesF.Value < numericMesI.Value | numericAnoF.Value < numericAnoI.Value)
             {
                 MessageBox.Show("La fecha final debe ser menor a la fecha final");
             }
             else
             {
-                CitasPorVendedor citasPorVendedor = new CitasPorVendedor();
-                this.Close();
+                CitasPorVendedor citasPorVendedor = new CitasPorVendedor(cmbVendedor.Text,numericDiaI.Value.ToString(),numericMesI.Value.ToString(),numericAnoI.Value.ToString(),numericDiaF.Value.ToString(),numericMesF.Value.ToString(),numericAnoF.Value.ToString());
+                
                 citasPorVendedor.Show();
             }
 
@@ -40,6 +38,16 @@ namespace Pantallas_SIVAA
         private void PeriodoCitasPorVendedor_Load(object sender, EventArgs e)
         {
             cmbVendedor.Items.AddRange(ListadoTotal().ToArray());
+            if (cbPeriodo.Text == "Dia")
+            {
+                numericMesF.Enabled = false;
+                numericMesI.Enabled = false;
+                numericAnoF.Enabled = false;
+                numericAnoI.Enabled = false;
+            }
+
+
+           
 
         }
 
@@ -114,7 +122,37 @@ namespace Pantallas_SIVAA
 
         private void cbPeriodo_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (cbPeriodo.Text == "Dia")
+            {
+                numericDiaI.Enabled = true;
+                numericDiaF.Enabled = true;
+                numericMesF.Enabled = false;
+                numericMesI.Enabled = false;
+                numericAnoF.Enabled = false;
+                numericAnoI.Enabled = false;
+            }
+            if (cbPeriodo.Text == "Mes")
+            {
+                numericMesF.Enabled = true;
+                numericMesI.Enabled = true;
+                numericAnoF.Enabled = false;
+                numericAnoI.Enabled = false;
+                numericDiaI.Enabled = false;
+                numericDiaF.Enabled = false;
+            }
+            if (cbPeriodo.Text == "Año")
+            {
+                numericMesF.Enabled = false;
+                numericMesI.Enabled = false;
+                numericAnoF.Enabled = true;
+                numericAnoI.Enabled = true;
+                numericDiaI.Enabled = false;
+                numericDiaF.Enabled = false;
+            }
         }
+
+        //dia
+       
+
     }
 }
