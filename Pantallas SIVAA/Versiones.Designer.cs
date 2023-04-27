@@ -107,8 +107,9 @@
             panel7.Controls.Add(btnInicio);
             panel7.ForeColor = Color.White;
             panel7.Location = new Point(0, 0);
+            panel7.Margin = new Padding(3, 4, 3, 4);
             panel7.Name = "panel7";
-            panel7.Size = new Size(904, 57);
+            panel7.Size = new Size(1033, 76);
             panel7.TabIndex = 46;
             // 
             // lblTipoEmpleado
@@ -116,10 +117,10 @@
             lblTipoEmpleado.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblTipoEmpleado.AutoSize = true;
             lblTipoEmpleado.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lblTipoEmpleado.Location = new Point(748, 38);
+            lblTipoEmpleado.Location = new Point(855, 51);
             lblTipoEmpleado.Margin = new Padding(1, 0, 1, 0);
             lblTipoEmpleado.Name = "lblTipoEmpleado";
-            lblTipoEmpleado.Size = new Size(62, 15);
+            lblTipoEmpleado.Size = new Size(78, 20);
             lblTipoEmpleado.TabIndex = 53;
             lblTipoEmpleado.Text = "Supervisor";
             // 
@@ -128,10 +129,10 @@
             lblNombre.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblNombre.AutoSize = true;
             lblNombre.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblNombre.Location = new Point(691, 13);
+            lblNombre.Location = new Point(790, 17);
             lblNombre.Margin = new Padding(1, 0, 1, 0);
             lblNombre.Name = "lblNombre";
-            lblNombre.Size = new Size(172, 21);
+            lblNombre.Size = new Size(217, 28);
             lblNombre.TabIndex = 54;
             lblNombre.Text = "Bienvenido: Fulanito";
             lblNombre.TextAlign = ContentAlignment.TopCenter;
@@ -141,32 +142,33 @@
             label2.Anchor = AnchorStyles.Top;
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(335, 13);
+            label2.Location = new Point(383, 17);
             label2.Margin = new Padding(1, 0, 1, 0);
             label2.Name = "label2";
-            label2.Size = new Size(236, 32);
+            label2.Size = new Size(294, 41);
             label2.TabIndex = 49;
             label2.Text = "Gestión de versiones";
             // 
             // label7
             // 
             label7.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(76, 15);
+            label7.Location = new Point(87, 20);
             label7.Name = "label7";
-            label7.Size = new Size(80, 27);
+            label7.Size = new Size(91, 36);
             label7.TabIndex = 16;
             label7.Text = "SIIVA";
             // 
             // btnInicio
             // 
             btnInicio.Image = (Image)resources.GetObject("btnInicio.Image");
-            btnInicio.Location = new Point(15, 0);
-            btnInicio.Margin = new Padding(1, 1, 1, 1);
+            btnInicio.Location = new Point(17, 0);
+            btnInicio.Margin = new Padding(1);
             btnInicio.Name = "btnInicio";
-            btnInicio.Size = new Size(46, 57);
+            btnInicio.Size = new Size(53, 76);
             btnInicio.SizeMode = PictureBoxSizeMode.Zoom;
             btnInicio.TabIndex = 2;
             btnInicio.TabStop = false;
+            btnInicio.Click += btnInicio_Click;
             // 
             // panel1
             // 
@@ -178,10 +180,10 @@
             panel1.Controls.Add(btnCitas);
             panel1.Controls.Add(btnStock);
             panel1.Controls.Add(btnPedidos);
-            panel1.Location = new Point(0, 57);
-            panel1.Margin = new Padding(1, 1, 1, 1);
+            panel1.Location = new Point(0, 76);
+            panel1.Margin = new Padding(1);
             panel1.Name = "panel1";
-            panel1.Size = new Size(66, 407);
+            panel1.Size = new Size(75, 543);
             panel1.TabIndex = 48;
             // 
             // btnReportes
@@ -192,15 +194,16 @@
             btnReportes.ImageAlign = ContentAlignment.TopCenter;
             btnReportes.ImageKey = "bar-chart.png";
             btnReportes.ImageList = imageList2;
-            btnReportes.Location = new Point(-1, 305);
-            btnReportes.Margin = new Padding(1, 1, 1, 1);
+            btnReportes.Location = new Point(-1, 407);
+            btnReportes.Margin = new Padding(1);
             btnReportes.Name = "btnReportes";
-            btnReportes.Size = new Size(66, 57);
+            btnReportes.Size = new Size(75, 76);
             btnReportes.TabIndex = 11;
             btnReportes.Text = "Reportes";
             btnReportes.TextAlign = ContentAlignment.BottomCenter;
             btnReportes.TextImageRelation = TextImageRelation.ImageAboveText;
             btnReportes.UseVisualStyleBackColor = false;
+            btnReportes.Click += btnReportes_Click;
             // 
             // imageList2
             // 
@@ -223,15 +226,16 @@
             btnCobros.ImageAlign = ContentAlignment.TopCenter;
             btnCobros.ImageKey = "dollar-sign.png";
             btnCobros.ImageList = imageList2;
-            btnCobros.Location = new Point(-1, 247);
-            btnCobros.Margin = new Padding(1, 1, 1, 1);
+            btnCobros.Location = new Point(-1, 329);
+            btnCobros.Margin = new Padding(1);
             btnCobros.Name = "btnCobros";
-            btnCobros.Size = new Size(66, 57);
+            btnCobros.Size = new Size(75, 76);
             btnCobros.TabIndex = 10;
             btnCobros.Text = "Cobros";
             btnCobros.TextAlign = ContentAlignment.BottomCenter;
             btnCobros.TextImageRelation = TextImageRelation.ImageAboveText;
             btnCobros.UseVisualStyleBackColor = false;
+            btnCobros.Click += btnCobros_Click;
             // 
             // btnVentas
             // 
@@ -241,15 +245,16 @@
             btnVentas.ImageAlign = ContentAlignment.TopCenter;
             btnVentas.ImageKey = "shopping-cart.png";
             btnVentas.ImageList = imageList2;
-            btnVentas.Location = new Point(-1, 191);
-            btnVentas.Margin = new Padding(1, 1, 1, 1);
+            btnVentas.Location = new Point(-1, 255);
+            btnVentas.Margin = new Padding(1);
             btnVentas.Name = "btnVentas";
-            btnVentas.Size = new Size(66, 57);
+            btnVentas.Size = new Size(75, 76);
             btnVentas.TabIndex = 9;
             btnVentas.Text = "Ventas";
             btnVentas.TextAlign = ContentAlignment.BottomCenter;
             btnVentas.TextImageRelation = TextImageRelation.ImageAboveText;
             btnVentas.UseVisualStyleBackColor = false;
+            btnVentas.Click += btnVentas_Click;
             // 
             // btnCitas
             // 
@@ -259,15 +264,16 @@
             btnCitas.ImageAlign = ContentAlignment.TopCenter;
             btnCitas.ImageKey = "calendar.png";
             btnCitas.ImageList = imageList2;
-            btnCitas.Location = new Point(-1, 133);
-            btnCitas.Margin = new Padding(1, 1, 1, 1);
+            btnCitas.Location = new Point(-1, 177);
+            btnCitas.Margin = new Padding(1);
             btnCitas.Name = "btnCitas";
-            btnCitas.Size = new Size(66, 57);
+            btnCitas.Size = new Size(75, 76);
             btnCitas.TabIndex = 8;
             btnCitas.Text = "Citas";
             btnCitas.TextAlign = ContentAlignment.BottomCenter;
             btnCitas.TextImageRelation = TextImageRelation.ImageAboveText;
             btnCitas.UseVisualStyleBackColor = false;
+            btnCitas.Click += btnCitas_Click;
             // 
             // btnStock
             // 
@@ -278,15 +284,16 @@
             btnStock.ImageAlign = ContentAlignment.TopCenter;
             btnStock.ImageKey = "book-open.png";
             btnStock.ImageList = imageList2;
-            btnStock.Location = new Point(-1, 77);
-            btnStock.Margin = new Padding(1, 1, 1, 1);
+            btnStock.Location = new Point(-1, 103);
+            btnStock.Margin = new Padding(1);
             btnStock.Name = "btnStock";
-            btnStock.Size = new Size(66, 57);
+            btnStock.Size = new Size(75, 76);
             btnStock.TabIndex = 7;
             btnStock.Text = "Inventario";
             btnStock.TextAlign = ContentAlignment.BottomCenter;
             btnStock.TextImageRelation = TextImageRelation.ImageAboveText;
             btnStock.UseVisualStyleBackColor = false;
+            btnStock.Click += btnStock_Click;
             // 
             // btnPedidos
             // 
@@ -296,29 +303,32 @@
             btnPedidos.ImageAlign = ContentAlignment.TopCenter;
             btnPedidos.ImageKey = "package.png";
             btnPedidos.ImageList = imageList2;
-            btnPedidos.Location = new Point(-1, 23);
-            btnPedidos.Margin = new Padding(1, 1, 1, 1);
+            btnPedidos.Location = new Point(-1, 31);
+            btnPedidos.Margin = new Padding(1);
             btnPedidos.Name = "btnPedidos";
-            btnPedidos.Size = new Size(66, 57);
+            btnPedidos.Size = new Size(75, 76);
             btnPedidos.TabIndex = 6;
             btnPedidos.Text = "Pedidos";
             btnPedidos.TextAlign = ContentAlignment.BottomCenter;
             btnPedidos.TextImageRelation = TextImageRelation.ImageAboveText;
             btnPedidos.UseVisualStyleBackColor = false;
+            btnPedidos.Click += btnPedidos_Click;
             // 
             // dataGridView1
             // 
             dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7, Column8, Column9, Column10, Column11, Column12, Column13, Column14, Column15, Column16, Column17, Column18, Column19, Column20, Column21, Column22, Column23, Column24, Column25, Column26, Column27, Column28, Column29, Column30, Column31 });
-            dataGridView1.Location = new Point(106, 132);
+            dataGridView1.Location = new Point(121, 176);
+            dataGridView1.Margin = new Padding(3, 4, 3, 4);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowHeadersWidth = 42;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(762, 319);
+            dataGridView1.Size = new Size(871, 425);
             dataGridView1.TabIndex = 49;
             dataGridView1.CellClick += dataGridView1_CellClick;
+            dataGridView1.CellDoubleClick += dataGridView1_CellDoubleClick;
             // 
             // Column1
             // 
@@ -540,10 +550,10 @@
             // pictureBox8
             // 
             pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
-            pictureBox8.Location = new Point(106, 96);
+            pictureBox8.Location = new Point(121, 128);
             pictureBox8.Margin = new Padding(3, 1, 3, 1);
             pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(38, 31);
+            pictureBox8.Size = new Size(43, 41);
             pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox8.TabIndex = 50;
             pictureBox8.TabStop = false;
@@ -552,10 +562,10 @@
             // pictureBox9
             // 
             pictureBox9.Image = Properties.Resources.edit_2;
-            pictureBox9.Location = new Point(151, 96);
+            pictureBox9.Location = new Point(173, 128);
             pictureBox9.Margin = new Padding(3, 1, 3, 1);
             pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(38, 31);
+            pictureBox9.Size = new Size(43, 41);
             pictureBox9.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox9.TabIndex = 51;
             pictureBox9.TabStop = false;
@@ -564,10 +574,10 @@
             // pictureBox11
             // 
             pictureBox11.Image = Properties.Resources.x;
-            pictureBox11.Location = new Point(195, 96);
+            pictureBox11.Location = new Point(223, 128);
             pictureBox11.Margin = new Padding(3, 1, 3, 1);
             pictureBox11.Name = "pictureBox11";
-            pictureBox11.Size = new Size(38, 31);
+            pictureBox11.Size = new Size(43, 41);
             pictureBox11.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox11.TabIndex = 52;
             pictureBox11.TabStop = false;
@@ -580,10 +590,10 @@
             panel3.Controls.Add(label13);
             panel3.Controls.Add(txtbusqueda);
             panel3.Controls.Add(comboversion);
-            panel3.Location = new Point(375, 79);
+            panel3.Location = new Point(429, 105);
             panel3.Margin = new Padding(3, 1, 3, 1);
             panel3.Name = "panel3";
-            panel3.Size = new Size(494, 35);
+            panel3.Size = new Size(565, 47);
             panel3.TabIndex = 53;
             // 
             // btnBuscar
@@ -592,10 +602,10 @@
             btnBuscar.BackColor = Color.FromArgb(82, 101, 143);
             btnBuscar.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             btnBuscar.ForeColor = SystemColors.ButtonHighlight;
-            btnBuscar.Location = new Point(388, 5);
+            btnBuscar.Location = new Point(443, 7);
             btnBuscar.Margin = new Padding(3, 1, 3, 1);
             btnBuscar.Name = "btnBuscar";
-            btnBuscar.Size = new Size(104, 29);
+            btnBuscar.Size = new Size(119, 39);
             btnBuscar.TabIndex = 97;
             btnBuscar.Text = "Buscar";
             btnBuscar.UseVisualStyleBackColor = false;
@@ -605,9 +615,9 @@
             // 
             label13.AutoSize = true;
             label13.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label13.Location = new Point(0, 11);
+            label13.Location = new Point(0, 15);
             label13.Name = "label13";
-            label13.Size = new Size(75, 18);
+            label13.Size = new Size(92, 22);
             label13.TabIndex = 53;
             label13.Text = "Filtrar por:";
             // 
@@ -617,30 +627,31 @@
             txtbusqueda.BackColor = Color.White;
             txtbusqueda.Enabled = false;
             txtbusqueda.ForeColor = SystemColors.ControlDark;
-            txtbusqueda.Location = new Point(237, 11);
+            txtbusqueda.Location = new Point(271, 15);
             txtbusqueda.Margin = new Padding(3, 1, 3, 1);
             txtbusqueda.Name = "txtbusqueda";
             txtbusqueda.PlaceholderText = "Ingrese su busqueda";
-            txtbusqueda.Size = new Size(150, 23);
+            txtbusqueda.Size = new Size(171, 27);
             txtbusqueda.TabIndex = 96;
             // 
             // comboversion
             // 
             comboversion.FormattingEnabled = true;
             comboversion.Items.AddRange(new object[] { "Todos", "IDVersion", "IDVehiculo", "LLantas", "TipoAsientos", "CamaraTrasera", "Pantalla", "TipoCombustible", "Version", "Rines", "Cilindraje", "Costo", "CapacidadCajuela", "DistanciaEjes", "Anchura", "Altura", "AudioVelC", "TomaCorriente", "TipoTraccion", "NumPuertas", "Transmision", "FarosHal", "NumEngranajes", "ACAutom", "FarosLED", "RendimientoCombustible", "FrenosTraseros", "FrenosDelanteros", "SuspensionDelantera", "SuspensionTrasera", "EspejosLatDirC", "EspejosLatAE" });
-            comboversion.Location = new Point(86, 10);
+            comboversion.Location = new Point(98, 13);
             comboversion.Margin = new Padding(3, 1, 3, 1);
             comboversion.Name = "comboversion";
-            comboversion.Size = new Size(145, 23);
+            comboversion.Size = new Size(165, 28);
             comboversion.TabIndex = 55;
+            comboversion.SelectedValueChanged += comboversion_SelectedValueChanged;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.printer;
-            pictureBox1.Location = new Point(238, 96);
+            pictureBox1.Location = new Point(272, 128);
             pictureBox1.Margin = new Padding(3, 1, 3, 1);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(38, 31);
+            pictureBox1.Size = new Size(43, 41);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 52;
             pictureBox1.TabStop = false;
@@ -648,9 +659,9 @@
             // 
             // Versiones
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(904, 463);
+            ClientSize = new Size(1033, 617);
             Controls.Add(panel3);
             Controls.Add(pictureBox1);
             Controls.Add(pictureBox11);
@@ -659,6 +670,7 @@
             Controls.Add(dataGridView1);
             Controls.Add(panel1);
             Controls.Add(panel7);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Versiones";
             Text = "Versiones";
             WindowState = FormWindowState.Maximized;
