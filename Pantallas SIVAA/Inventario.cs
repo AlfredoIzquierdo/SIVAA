@@ -196,7 +196,10 @@ namespace Pantallas_SIVAA
                 lista = em;
                 foreach (UnidadNoUsar x in em)
                 {
-                    dataGridView1.Rows.Add(x.NoSerie, x.Vehiculo, x.Version, x.Color, x.Estatus);
+                    if(x.Estatus == "Activo")
+                    {
+                        dataGridView1.Rows.Add(x.NoSerie, x.Vehiculo, x.Version, x.Color, x.Estatus);
+                    }
                 }
                 return;
             }
@@ -207,7 +210,10 @@ namespace Pantallas_SIVAA
                 lista = em;
                 foreach (UnidadNoUsar x in em)
                 {
-                    dataGridView1.Rows.Add(x.NoSerie, x.Vehiculo, x.Version, x.Color, x.Estatus);
+                    if (x.Estatus == "Activo")
+                    {
+                        dataGridView1.Rows.Add(x.NoSerie, x.Vehiculo, x.Version, x.Color, x.Estatus);
+                    }
                 }
             }
             if (opcion == 2)
@@ -217,7 +223,10 @@ namespace Pantallas_SIVAA
                 lista = em;
                 foreach (UnidadNoUsar x in em)
                 {
-                    dataGridView1.Rows.Add(x.NoSerie, x.Vehiculo, x.Version, x.Color, x.Estatus);
+                    if (x.Estatus == "Activo")
+                    {
+                        dataGridView1.Rows.Add(x.NoSerie, x.Vehiculo, x.Version, x.Color, x.Estatus);
+                    }
                 }
             }
             if (opcion == 3)
@@ -227,7 +236,10 @@ namespace Pantallas_SIVAA
                 lista = em;
                 foreach (UnidadNoUsar x in em)
                 {
-                    dataGridView1.Rows.Add(x.NoSerie, x.Vehiculo, x.Version, x.Color, x.Estatus);
+                    if (x.Estatus == "Activo")
+                    {
+                        dataGridView1.Rows.Add(x.NoSerie, x.Vehiculo, x.Version, x.Color, x.Estatus);
+                    }
                 }
             }
         }
