@@ -39,6 +39,7 @@
             this.btnStock = new System.Windows.Forms.Button();
             this.btnPedidos = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -52,7 +53,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.cmVehiculo = new System.Windows.Forms.ComboBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
@@ -87,7 +87,11 @@
             this.label13 = new System.Windows.Forms.Label();
             this.comboBusqueda = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.TXTIDEMPCOT = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
@@ -100,6 +104,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -252,6 +257,7 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.comboBox3);
             this.groupBox1.Controls.Add(this.textBox7);
             this.groupBox1.Controls.Add(this.textBox6);
@@ -260,7 +266,7 @@
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Location = new System.Drawing.Point(1159, 142);
+            this.groupBox1.Location = new System.Drawing.Point(1047, 184);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -268,6 +274,22 @@
             this.groupBox1.TabIndex = 101;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pago a credito";
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "12",
+            "24",
+            "36",
+            "48",
+            "60",
+            "72",
+            "84"});
+            this.comboBox3.Location = new System.Drawing.Point(241, 40);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(179, 33);
+            this.comboBox3.TabIndex = 30;
             // 
             // textBox7
             // 
@@ -292,7 +314,7 @@
             // textBox5
             // 
             this.textBox5.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBox5.Location = new System.Drawing.Point(241, 110);
+            this.textBox5.Location = new System.Drawing.Point(245, 92);
             this.textBox5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(175, 31);
@@ -301,7 +323,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(34, 255);
+            this.label16.Location = new System.Drawing.Point(38, 252);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(142, 25);
@@ -311,7 +333,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(34, 186);
+            this.label15.Location = new System.Drawing.Point(38, 201);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(121, 25);
@@ -321,7 +343,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(34, 117);
+            this.label14.Location = new System.Drawing.Point(38, 99);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(117, 25);
@@ -331,7 +353,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(34, 48);
+            this.label12.Location = new System.Drawing.Point(38, 48);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(123, 25);
@@ -345,7 +367,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(58)))), ((int)(((byte)(86)))));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(1238, 473);
+            this.button1.Location = new System.Drawing.Point(1235, 510);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(176, 61);
@@ -390,7 +412,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(289, 205);
+            this.label11.Location = new System.Drawing.Point(289, 184);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(61, 25);
@@ -403,7 +425,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(289, 397);
+            this.label9.Location = new System.Drawing.Point(289, 396);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(64, 25);
@@ -423,19 +445,6 @@
             this.label8.TabIndex = 95;
             this.label8.Text = "Tipo de pago";
             // 
-            // comboBox2
-            // 
-            this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(288, 340);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(583, 33);
-            this.comboBox2.TabIndex = 94;
-            this.comboBox2.Text = "Modelo";
-            // 
             // cmVehiculo
             // 
             this.cmVehiculo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -453,7 +462,7 @@
             "Pathfinder",
             "Rogue",
             "Titan"});
-            this.cmVehiculo.Location = new System.Drawing.Point(289, 258);
+            this.cmVehiculo.Location = new System.Drawing.Point(289, 233);
             this.cmVehiculo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cmVehiculo.Name = "cmVehiculo";
             this.cmVehiculo.Size = new System.Drawing.Size(583, 33);
@@ -613,7 +622,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::Pantallas_SIVAA.Properties.Resources.print_FILL0_wght400_GRAD0_opsz48;
-            this.pictureBox1.Location = new System.Drawing.Point(1507, 473);
+            this.pictureBox1.Location = new System.Drawing.Point(1507, 510);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(63, 61);
@@ -626,7 +635,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmVersion.FormattingEnabled = true;
-            this.cmVersion.Location = new System.Drawing.Point(289, 301);
+            this.cmVersion.Location = new System.Drawing.Point(289, 290);
             this.cmVersion.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cmVersion.Name = "cmVersion";
             this.cmVersion.Size = new System.Drawing.Size(583, 33);
@@ -855,27 +864,75 @@
             this.panel2.Size = new System.Drawing.Size(85, 359);
             this.panel2.TabIndex = 109;
             // 
-            // comboBox3
+            // label1
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "12",
-            "24",
-            "36",
-            "48",
-            "60",
-            "72",
-            "84"});
-            this.comboBox3.Location = new System.Drawing.Point(241, 40);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(179, 33);
-            this.comboBox3.TabIndex = 30;
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(374, 347);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(52, 25);
+            this.label1.TabIndex = 111;
+            this.label1.Text = "2023";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(289, 347);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(78, 25);
+            this.label3.TabIndex = 110;
+            this.label3.Text = "Modelo:";
+            // 
+            // TXTIDEMPCOT
+            // 
+            this.TXTIDEMPCOT.Enabled = false;
+            this.TXTIDEMPCOT.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.TXTIDEMPCOT.Location = new System.Drawing.Point(1231, 121);
+            this.TXTIDEMPCOT.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
+            this.TXTIDEMPCOT.Name = "TXTIDEMPCOT";
+            this.TXTIDEMPCOT.PlaceholderText = "IdEmpleado";
+            this.TXTIDEMPCOT.Size = new System.Drawing.Size(160, 31);
+            this.TXTIDEMPCOT.TabIndex = 163;
+            this.TXTIDEMPCOT.Text = "E19";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(1159, 103);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(54, 51);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 162;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(38, 150);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(117, 25);
+            this.label4.TabIndex = 31;
+            this.label4.Text = "Enganche ($):";
             // 
             // Cotizacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1653, 963);
+            this.Controls.Add(this.TXTIDEMPCOT);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.dataGridView1);
@@ -891,7 +948,6 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.cmVehiculo);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.panel7);
@@ -914,6 +970,7 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -942,7 +999,6 @@
         private Label label11;
         private Label label9;
         private Label label8;
-        private ComboBox comboBox2;
         private ComboBox cmVehiculo;
         private TextBox textBox4;
         private PictureBox pictureBox14;
@@ -979,5 +1035,10 @@
         private Button button3;
         private Panel panel2;
         private ComboBox comboBox3;
+        private Label label1;
+        private Label label3;
+        private Label label4;
+        private TextBox TXTIDEMPCOT;
+        private PictureBox pictureBox2;
     }
 }

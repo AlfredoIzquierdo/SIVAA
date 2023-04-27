@@ -73,9 +73,45 @@ namespace Datos
             }
             return productos;
         }
+        public List<CitaNoUsar> MostrarCitas()
+        {
+            List<CitaNoUsar> productos = new List<CitaNoUsar>();
 
+            //Vuelvo a crear la conexión
+            using (SqlConnection Cnx = new SqlConnection(CdCnx))
+            {
+                Cnx.Open();
+                //Creo el Query (todos los registros de la tabla Venta
+                string CdSql = "Select C.IDCita, C.Dia,C.Mes,C.Año,C.Hora,C.IDEmpleado,Cli.Nombre,Cli.ApellidoPaterno,Cli.ApellidoMaterno from Cita C inner join Cliente Cli on C.IDCliente = Cli.IDCliente where C.EstadoCita = 'Activa' or C.EstadoCita = 'Activo'";
+                using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
+                {
+                    SqlDataReader Dr = Cmd.ExecuteReader();
+                    //Leo registro por registro que tiene la tabla 
+                    while (Dr.Read())
+                    {
+                        //Cada vez que lo lea se crea un nuevo objeto
+                        CitaNoUsar Pqte = new CitaNoUsar
+                        {
+                            IDCita = Convert.ToString(Dr["IDCita"]),
+                            IDEmpleado = Convert.ToString(Dr["IDEmpleado"]),
+                            Dia = Convert.ToInt32(Dr["Dia"]),
+                            Mes = Convert.ToInt32(Dr["Mes"]),
+                            Año = Convert.ToInt32(Dr["Año"]),
+                            Hora = Convert.ToString(Dr["Hora"]),
+                            Nombre = Convert.ToString(Dr["Nombre"]),
+                            ApellidoPaterno = Convert.ToString(Dr["ApellidoPaterno"]),
+                            ApellidoMaterno = Convert.ToString(Dr["ApellidoMaterno"])
+                        };
+                        productos.Add(Pqte);
+                    }
+                }
+                Cnx.Close();
+            }
+            return productos;
+        }
         public void EliminarDesaparecer(string CodPqt)
         {
+
             using (SqlConnection Cnx = new SqlConnection(CdCnx))
             {
                 Cnx.Open();
@@ -88,6 +124,122 @@ namespace Datos
                 }
                 Cnx.Close();
             }
+        }
+        public List<CitaNoUsar> MostrarFiltroCita(string opcion, string CodPqt)
+        {
+            List<CitaNoUsar> productos = new List<CitaNoUsar>();
+
+            //Vuelvo a crear la conexión
+            using (SqlConnection Cnx = new SqlConnection(CdCnx))
+            {
+                Cnx.Open();
+                //Creo el Query (todos los registros de la tabla Venta
+                string CdSql = "Select C.IDCita, C.Dia,C.Mes,C.Año,C.Hora,C.IDEmpleado,Cli.Nombre,Cli.ApellidoPaterno,Cli.ApellidoMaterno from Cita C inner join Cliente Cli on C.IDCliente = Cli.IDCliente where (C.EstadoCita = 'Activa' or C.EstadoCita = 'Activo') and C." + opcion+"=@Cl";
+                using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
+                {
+                    //Asignar el valor a @Cl
+                    Cmd.Parameters.AddWithValue("@Cl", CodPqt);
+                    SqlDataReader Dr = Cmd.ExecuteReader();
+                    //Leo registro por registro que tiene la tabla 
+                    while (Dr.Read())
+                    {
+                        //Cada vez que lo lea se crea un nuevo objeto
+                        CitaNoUsar Pqte = new CitaNoUsar
+                        {
+                            IDCita = Convert.ToString(Dr["IDCita"]),
+                            IDEmpleado = Convert.ToString(Dr["IDEmpleado"]),
+                            Dia = Convert.ToInt32(Dr["Dia"]),
+                            Mes = Convert.ToInt32(Dr["Mes"]),
+                            Año = Convert.ToInt32(Dr["Año"]),
+                            Hora = Convert.ToString(Dr["Hora"]),
+                            Nombre = Convert.ToString(Dr["Nombre"]),
+                            ApellidoPaterno = Convert.ToString(Dr["ApellidoPaterno"]),
+                            ApellidoMaterno = Convert.ToString(Dr["ApellidoMaterno"])
+                        };
+                        productos.Add(Pqte);
+                    }
+                }
+                Cnx.Close();
+            }
+            return productos;
+        }
+        public List<CitaNoUsar> FiltradoCliente(string opcion, string CodPqt)
+        {
+            List<CitaNoUsar> productos = new List<CitaNoUsar>();
+
+            //Vuelvo a crear la conexión
+            using (SqlConnection Cnx = new SqlConnection(CdCnx))
+            {
+                Cnx.Open();
+                //Creo el Query (todos los registros de la tabla Venta
+                string CdSql = "Select C.IDCita, C.Dia,C.Mes,C.Año,C.Hora,C.IDEmpleado,Cli.Nombre,Cli.ApellidoPaterno,Cli.ApellidoMaterno from Cita C inner join Cliente Cli on C.IDCliente = Cli.IDCliente where (C.EstadoCita = 'Activa' or C.EstadoCita = 'Activo') and Cli." + opcion + "=@Cl";
+                using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
+                {
+                    //Asignar el valor a @Cl
+                    Cmd.Parameters.AddWithValue("@Cl", CodPqt);
+                    SqlDataReader Dr = Cmd.ExecuteReader();
+                    //Leo registro por registro que tiene la tabla 
+                    while (Dr.Read())
+                    {
+                        //Cada vez que lo lea se crea un nuevo objeto
+                        CitaNoUsar Pqte = new CitaNoUsar
+                        {
+                            IDCita = Convert.ToString(Dr["IDCita"]),
+                            IDEmpleado = Convert.ToString(Dr["IDEmpleado"]),
+                            Dia = Convert.ToInt32(Dr["Dia"]),
+                            Mes = Convert.ToInt32(Dr["Mes"]),
+                            Año = Convert.ToInt32(Dr["Año"]),
+                            Hora = Convert.ToString(Dr["Hora"]),
+                            Nombre = Convert.ToString(Dr["Nombre"]),
+                            ApellidoPaterno = Convert.ToString(Dr["ApellidoPaterno"]),
+                            ApellidoMaterno = Convert.ToString(Dr["ApellidoMaterno"])
+                        };
+                        productos.Add(Pqte);
+                    }
+                }
+                Cnx.Close();
+            }
+            return productos;
+        }
+        public List<CitaNoUsar> MostrarFecha(string dia,string mes, string año)
+        {
+            List<CitaNoUsar> productos = new List<CitaNoUsar>();
+
+            //Vuelvo a crear la conexión
+            using (SqlConnection Cnx = new SqlConnection(CdCnx))
+            {
+                Cnx.Open();
+                //Creo el Query (todos los registros de la tabla Venta
+                string CdSql = "Select C.IDCita, C.Dia,C.Mes,C.Año,C.Hora,C.IDEmpleado,Cli.Nombre,Cli.ApellidoPaterno,Cli.ApellidoMaterno from Cita C inner join Cliente Cli on C.IDCliente = Cli.IDCliente where (C.EstadoCita = 'Activa' or C.EstadoCita = 'Activo') and C.Dia=@Cl and C.Mes=@m and C.Año = @a";
+                using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
+                {
+                    //Asignar el valor a @Cl
+                    Cmd.Parameters.AddWithValue("@Cl", dia);
+                    Cmd.Parameters.AddWithValue("@m", mes);
+                    Cmd.Parameters.AddWithValue("@a", año);
+                    SqlDataReader Dr = Cmd.ExecuteReader();
+                    //Leo registro por registro que tiene la tabla 
+                    while (Dr.Read())
+                    {
+                        //Cada vez que lo lea se crea un nuevo objeto
+                        CitaNoUsar Pqte = new CitaNoUsar
+                        {
+                            IDCita = Convert.ToString(Dr["IDCita"]),
+                            IDEmpleado = Convert.ToString(Dr["IDEmpleado"]),
+                            Dia = Convert.ToInt32(Dr["Dia"]),
+                            Mes = Convert.ToInt32(Dr["Mes"]),
+                            Año = Convert.ToInt32(Dr["Año"]),
+                            Hora = Convert.ToString(Dr["Hora"]),
+                            Nombre = Convert.ToString(Dr["Nombre"]),
+                            ApellidoPaterno = Convert.ToString(Dr["ApellidoPaterno"]),
+                            ApellidoMaterno = Convert.ToString(Dr["ApellidoMaterno"])
+                        };
+                        productos.Add(Pqte);
+                    }
+                }
+                Cnx.Close();
+            }
+            return productos;
         }
         public Cita ObtenerPdto(string CodPqt)
         {

@@ -31,8 +31,23 @@ namespace Logicas
             //Método que obtiene la lista dinámica de todos los registro que tiene mi tabla
             return Pdto.ListadoTotal();
         }
-
-
+        public List<CitaNoUsar>CitaFiltradaCita(string filtro, string texto)
+        {
+            return Pdto.MostrarFiltroCita(filtro, texto);
+        }
+        public List<CitaNoUsar> CitaFiltradaCliente(string filtro, string texto)
+        {
+            return Pdto.FiltradoCliente(filtro, texto);
+        }
+        public List<CitaNoUsar> CitaPorFecha(string dia, string mes, string año)
+        {
+            return Pdto.MostrarFecha(dia,mes,año);
+        }
+        public List<CitaNoUsar> ShowAll()
+        {
+            //Método que obtiene la lista dinámica de todos los registro que tiene mi tabla
+            return Pdto.MostrarCitas();
+        }
         public void Modificar(Cita Pqte)
         {
             if (ValidarProducto(Pqte))

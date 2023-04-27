@@ -14,6 +14,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.Design.AxImporter;
 
 namespace Pantallas_SIVAA
 {
@@ -26,83 +27,13 @@ namespace Pantallas_SIVAA
         readonly CitaLog citaLog = new CitaLog();
         String ID;
         string idCita = null;
-        List<Cita> listas;
+        List<CitaNoUsar> listas;
+        List<Cita> filtros;
+
         public CalendarioCitas(Empleado _pqt)
         {
             InitializeComponent();
             this._pqt = _pqt;
-        }
-
-        private void Nueva_Cita_Load(object sender, EventArgs e)
-        {
-            switch (_pqt.Tipo.Trim())
-            {
-                case "Atencion":
-                    // Funciones activas: Citas e inventario
-                    lblTipoEmpleado.Text = _pqt.Tipo + " a clientes";
-                    lblNombre.Text = "Bienvenido: " + _pqt.Nombre + " " + _pqt.ApellidoPat;
-
-
-                    // Menu lateral
-                    btnCitas.Enabled = true;
-                    btnStock.Enabled = true;
-                    btnReportes.Enabled = false;
-                    btnPedidos.Enabled = false;
-                    btnVentas.Enabled = false;
-                    btnCobros.Enabled = false;
-                    break;
-                case "Vendedor":
-                    // Funciones activas: ventas, inventario y citas
-                    lblTipoEmpleado.Text = _pqt.Tipo;
-                    lblNombre.Text = "Bienvenido: " + _pqt.Nombre + " " + _pqt.ApellidoPat;
-
-
-                    //Menu lateral
-                    btnCitas.Enabled = true;
-                    btnStock.Enabled = true;
-                    btnReportes.Enabled = false;
-                    btnPedidos.Enabled = false;
-                    btnVentas.Enabled = true;
-                    btnCobros.Enabled = false;
-                    break;
-                // más casos...
-                case "Cajero":
-
-
-                    // El cajero no pasa por aqui, se va directo al apartado de caja
-
-                    break;
-                case "Supervisor":
-                    // Todo esta activado, es la vista de supervisor
-                    lblTipoEmpleado.Text = _pqt.Tipo;
-                    lblNombre.Text = "Bienvenido: " + _pqt.Nombre + " " + _pqt.ApellidoPat;
-                    break;
-            }
-
-            //// Define la hora de inicio (8:00 AM)
-            //DateTime hora = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 8, 0, 0);
-
-            //// Agrega filas para cada hora, con un espaciado de 30 minutos
-            //for (int i = 0; i < 24; i++)
-            //{
-            //    // Agrega una fila con el número de hora y el sufijo AM o PM
-            //    dataGridView1.Rows.Add(hora.ToString("h:mm tt"));
-
-            //    // Establece la altura de la fila
-            //    dataGridView1.Rows[i].Height = 30;
-
-            //    // Agrega un intervalo de 30 minutos a la hora
-            //    hora = hora.AddMinutes(30);
-            //}
-
-            dataGridView1.ClearSelection();
-            List<Cita> pro = citaLog.ListadoAll();
-            dataGridView1.Rows.Clear();
-            foreach (Cita x in pro)
-            {
-                dataGridView1.Rows.Add(x.IDCita, x.IDEmpleado, x.IDCliente, x.Dia, x.Mes, x.Año, x.Hora);
-            }
-
         }
 
         private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -116,8 +47,6 @@ namespace Pantallas_SIVAA
             {
                 e.CellStyle.BackColor = Color.White;
             }
-
-
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -212,66 +141,48 @@ namespace Pantallas_SIVAA
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            List<Cita> pro;
+            DateTime fechaHoraSeleccionada = dateTimePicker1.Value;
+            string fecha = fechaHoraSeleccionada.ToString("dd/MM/yyyy");
+            string año = fechaHoraSeleccionada.ToString("yyyy");
+            string mes = fechaHoraSeleccionada.ToString("MM");
+            string dia = fechaHoraSeleccionada.ToString("dd");
+            string hora = fechaHoraSeleccionada.ToString("HH:mm");
+
+            string dias = Convert.ToInt32(dia).ToString();
+            string meses = Convert.ToInt32(mes).ToString();
+            string años = Convert.ToInt32(año).ToString();
             dataGridView1.ClearSelection();
-            pro = ListadoEspecifico(numericUpDown1.Value.ToString(), numericUpDown2.Value.ToString(), numericUpDown3.Value.ToString());
-            listas = pro;
+            int opcion = comboBox1.SelectedIndex;
+            string busqueda;
+
             dataGridView1.Rows.Clear();
-            foreach (Cita x in pro)
+            if (opcion == 1 || opcion == 2||opcion==7)
             {
-                dataGridView1.Rows.Add(x.IDCita, x.IDEmpleado, x.IDCliente, x.Dia, x.Mes, x.Año, x.Hora);
-            }
-        }
-        public List<Cita> ListadoEspecifico(string dia, string mes, string año)
-        {
-            string CdCnx = ConfigurationManager.ConnectionStrings["CnxSQL"].ToString();
-            List<Cita> productos = new List<Cita>();
-
-            //Vuelvo a crear la conexión
-            using (SqlConnection Cnx = new SqlConnection(CdCnx))
-            {
-                Cnx.Open();
-                //Creo el Query (todos los registros de la tabla Proveedor
-
-                string CdSql = "SELECT * FROM Cita WHERE Dia=@Cl and Mes =@M and Año=@A";
-                using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
+                if (opcion == 7)
+                    busqueda = hora;
+                else busqueda = textBox1.Text;
+                listas = citaLog.CitaFiltradaCita(comboBox1.Text,busqueda);
+                foreach (CitaNoUsar x in listas)
                 {
-                    Cmd.Parameters.AddWithValue("@Cl", dia);
-                    Cmd.Parameters.AddWithValue("@M", mes);
-                    Cmd.Parameters.AddWithValue("@A", año);
-                    SqlDataReader Dr = Cmd.ExecuteReader();
-                    //Leo registro por registro que tiene la tabla 
-                    while (Dr.Read())
-                    {
-                        //Cada vez que lo lea se crea un nuevo objeto
-                        Cita Pqte = new Cita
-                        {
-                            IDCita = Convert.ToString(Dr["IDCita"]),
-                            IDEmpleado = Convert.ToString(Dr["IDEmpleado"]),
-                            IDCliente = Convert.ToString(Dr["IDCliente"]),
-                            Dia = Convert.ToInt32(Dr["Dia"]),
-                            Mes = Convert.ToInt32(Dr["Mes"]),
-                            Año = Convert.ToInt32(Dr["Año"]),
-                            Hora = Convert.ToString(Dr["Hora"])
-
-                        };
-                        productos.Add(Pqte);
-                    }
+                    dataGridView1.Rows.Add(x.IDCita, x.IDEmpleado, x.Nombre, x.ApellidoPaterno, x.ApellidoMaterno, x.Dia, x.Mes, x.Año, x.Hora);
                 }
-                Cnx.Close();
             }
-            return productos;
-        }
-
-        private void btnTodo_Click(object sender, EventArgs e)
-        {
-            dataGridView1.ClearSelection();
-            List<Cita> pro = citaLog.ListadoAll();
-            listas = pro;
-            dataGridView1.Rows.Clear();
-            foreach (Cita x in pro)
+            if (opcion == 3 || opcion == 4 || opcion == 5)
             {
-                dataGridView1.Rows.Add(x.IDCita, x.IDEmpleado, x.IDCliente, x.Dia, x.Mes, x.Año, x.Hora);
+                busqueda = textBox1.Text;
+                listas = citaLog.CitaFiltradaCliente(comboBox1.Text, busqueda);
+                foreach (CitaNoUsar x in listas)
+                {
+                    dataGridView1.Rows.Add(x.IDCita, x.IDEmpleado, x.Nombre, x.ApellidoPaterno, x.ApellidoMaterno, x.Dia, x.Mes, x.Año, x.Hora);
+                }
+            }
+            if(opcion == 6)
+            {
+                listas = citaLog.CitaPorFecha(dias, meses, años);
+                foreach (CitaNoUsar x in listas)
+                {
+                    dataGridView1.Rows.Add(x.IDCita, x.IDEmpleado, x.Nombre, x.ApellidoPaterno, x.ApellidoMaterno, x.Dia, x.Mes, x.Año, x.Hora);
+                }
             }
         }
 
@@ -360,11 +271,11 @@ namespace Pantallas_SIVAA
                     break;
             }
             dataGridView1.ClearSelection();
-            List<Cita> listas = citaLog.ListadoAll();
+            List<CitaNoUsar> listas = citaLog.ShowAll();
             dataGridView1.Rows.Clear();
-            foreach (Cita x in listas)
+            foreach (CitaNoUsar x in listas)
             {
-                dataGridView1.Rows.Add(x.IDCita, x.IDEmpleado, x.IDCliente, x.Dia, x.Mes, x.Año, x.Hora);
+                dataGridView1.Rows.Add(x.IDCita, x.IDEmpleado,x.Nombre,x.ApellidoPaterno,x.ApellidoMaterno, x.Dia, x.Mes, x.Año, x.Hora);
             }
         }
 
@@ -374,5 +285,22 @@ namespace Pantallas_SIVAA
             r.Show();
         }
 
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.Text == "Fecha")
+                dateTimePicker1.Format = DateTimePickerFormat.Short;
+            if (comboBox1.Text == "Hora")
+                dateTimePicker1.Format = DateTimePickerFormat.Time;
+            textBox1.Text = "";
+            if (comboBox1.SelectedIndex == 0)
+            {
+                listas = citaLog.ShowAll();
+                dataGridView1.Rows.Clear();
+                foreach (CitaNoUsar x in listas)
+                {
+                    dataGridView1.Rows.Add(x.IDCita, x.IDEmpleado, x.Nombre, x.ApellidoPaterno, x.ApellidoMaterno, x.Dia, x.Mes, x.Año, x.Hora);
+                }
+            }
+        }
     }
 }

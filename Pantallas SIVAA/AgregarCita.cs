@@ -233,7 +233,6 @@ namespace Pantallas_SIVAA
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
             DateTime fechaHoraSeleccionada = dateTimePicker1.Value;
-            string fecha = fechaHoraSeleccionada.ToString("dd/MM/yyyy");
             lblAño.Text = fechaHoraSeleccionada.ToString("yyyy");
             lblMes.Text = fechaHoraSeleccionada.ToString("MM");
             lblDia.Text = fechaHoraSeleccionada.ToString("dd");

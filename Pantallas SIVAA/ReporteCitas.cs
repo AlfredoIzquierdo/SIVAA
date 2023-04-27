@@ -14,8 +14,8 @@ namespace Pantallas_SIVAA
 {
     public partial class ReporteCitas : Form
     {
-        List<Cita> lista;
-        public ReporteCitas(List<Cita> list)
+        List<CitaNoUsar> lista;
+        public ReporteCitas(List<CitaNoUsar> list)
         {
             lista = list;
             InitializeComponent();

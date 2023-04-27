@@ -44,6 +44,7 @@
     <Compile Include="Abono.cs" />
     <Compile Include="AutoNoUsar.cs" />
     <Compile Include="Cita.cs" />
+    <Compile Include="CitaNoUsar.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="CorteAbono.cs" />
     <Compile Include="CorteCaja.cs" />
