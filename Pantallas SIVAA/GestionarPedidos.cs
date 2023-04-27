@@ -20,6 +20,7 @@ namespace Pantallas_SIVAA.Pedidos
         readonly PedidoD Producto = new PedidoD();
         readonly PedidoLOG pedlog = new PedidoLOG();
         Empleado _pqt;
+        string id = null;
         public GestionarPedidos(Empleado pqt)
         {
             InitializeComponent();
@@ -124,8 +125,8 @@ namespace Pantallas_SIVAA.Pedidos
 
         private void GestionarPedidos_Load(object sender, EventArgs e)
         {
-           
-            
+
+
             dataGridView1.ClearSelection();
             comboBox2.SelectedIndex = 0;
             List<Pedido> clie = pedlog.ListadoAll();
@@ -148,6 +149,19 @@ namespace Pantallas_SIVAA.Pedidos
             {
                 dataGridView1.Rows[e.RowIndex].Selected = true;
             }
+            if (dataGridView1.SelectedRows.Count == 1)
+            {
+                id = dataGridView1[0, dataGridView1.SelectedRows[0].Index].Value.ToString();
+                ResumenPedido resumen = new ResumenPedido(id);
+                
+                resumen.Show();
+            }
+            else
+            {
+                MessageBox.Show("Favor de seleccionar un pedido");
+            }
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -229,6 +243,11 @@ namespace Pantallas_SIVAA.Pedidos
 
                 }
             }
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
