@@ -2021,23 +2021,24 @@ namespace Pantallas_SIVAA
         {
             List<Versions> versionsdisponibles = new List<Versions>();
 
-            if (string.IsNullOrEmpty(ComboVersion1.Text))
-            {
-
-            }
-            else
-            {
+           
                 comboColor.Items.Clear();
                 comboAno.Items.Clear();
                 // aqui empieza la prueba * se necesita recargar el combo de version cada que se selecciona un vehiculo*
                 ComboVersion1.Items.Clear();
+                
                 versionsdisponibles = pqtLog9.ObtenerVersionesVehiculo(comboVehiculo.Text);
                 foreach (Versions ver in versionsdisponibles)
                 {
                     if(ver.EstadoVersion=="Activo")
-                    ComboVersion1.Items.Add(ver.Version);
-                }
-                ComboVersion1.SelectedIndex = 0;
+                    {
+                        ComboVersion1.Items.Add(ver.Version);                  
+                        ComboVersion1.SelectedIndex = 0;
+                        ArrojarPrecioCot();
+                    }
+                    
+                
+               
 
                 //// aqui termina
                 //List<Unidad> Colores = new List<Unidad>();
@@ -2057,7 +2058,7 @@ namespace Pantallas_SIVAA
                 //    comboAno.Items.Add(modelo.Año);
 
                 //}
-                ArrojarPrecioCot();
+                
             }
         }
 
@@ -2088,6 +2089,7 @@ namespace Pantallas_SIVAA
                     if (color.Estatus.Trim() == "Disponible")
                     {
                         comboColor.Items.Add(color.Color);
+                        ArrojarPrecioCot();
                     }
                     if(string.IsNullOrEmpty(color.Color))
                     {
@@ -2099,7 +2101,7 @@ namespace Pantallas_SIVAA
                     comboAno.Items.Add(modelo.Año);
 
                 }
-                ArrojarPrecioCot();
+                
             }
         }
 
@@ -2113,9 +2115,7 @@ namespace Pantallas_SIVAA
             {
                
                     ArrojarPrecioCot();
-                
-                
-                
+              
             }
         }
 
