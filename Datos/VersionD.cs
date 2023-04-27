@@ -18,7 +18,7 @@ namespace Datos
             {
                 //Abrir la conexión y crear el Query
                 Cnx.Open();
-                string CdSql = "INSERT INTO Version (IDVersion,IDVehiculo,Llantas,TipoAsientos,CamaraTrasera,Pantalla,TipoCombustible,Version,Rines,Cilindraje,Costo,CapacidadCajuela,DistanciaEjes,Anchura,Altura,AudioVelC,TomaCorriente,TipoTraccion,NumPuertas,Transmision,FarosHal,NumEngranajes,ACAutom,FarosLED,RendimientoCombustible,FrenosTraseros,FrenosDelanteros,SuspensionDelantera,SuspensionTrasera,EspejosLatDirC,EspejosLatAE,EstadoVersion) VALUES (@IV,@Ve,@L,@TA,@CT,@P,@TC,@V,@R,@Ci,@Co,@CC,@DE,@At,@Al,@AVC,@TCO,@TT,@NP,@Trans,@FH,@NumEng,@ACA,@FLED,@RCom,@FTr,@FDl,@SD,@ST,@ELDC,@ELAE,@EsV)";
+                string CdSql = "INSERT INTO Version (IDVersion,IDVehiculo,Llantas,TipoAsientos,CamaraTrasera,Pantalla,TipoCombustible,Version,Rines,Cilindraje,Costo,CapacidadCajuela,DistanciaEjes,Anchura,Altura,AudioVelC,TomaCorriente,TipoTraccion,NumPuertas,Transmision,FarosHal,NumEngranajes,ACAutom,FarosLED,RendimientoCombustible,FrenosTraseros,FrenosDelanteros,SuspensionDelantera,SuspensionTrasera,EspejosLatDirC,EspejosLatAE,EstadoVersion,Año) VALUES (@IV,@Ve,@L,@TA,@CT,@P,@TC,@V,@R,@Ci,@Co,@CC,@DE,@At,@Al,@AVC,@TCO,@TT,@NP,@Trans,@FH,@NumEng,@ACA,@FLED,@RCom,@FTr,@FDl,@SD,@ST,@ELDC,@ELAE,@EsV,@An)";
                 using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))//SolicitA: la cadena de SQL y la conexeión
                 {
                     //Añadir los parámetros
@@ -54,6 +54,7 @@ namespace Datos
                     Cmd.Parameters.AddWithValue("@ELDC", Pqte.EspejosLatDirC);
                     Cmd.Parameters.AddWithValue("@ELAE", Pqte.EspejosLatAE);
                     Cmd.Parameters.AddWithValue("@EsV", Pqte.EstadoVersion);
+                    Cmd.Parameters.AddWithValue("@An", Pqte.Año);
                     Cmd.ExecuteNonQuery();
 
                     Cmd.Dispose();
@@ -115,7 +116,8 @@ namespace Datos
                             SuspensionTrasera = Convert.ToString(Dr["SuspensionTrasera"]),
                             EspejosLatDirC = Convert.ToString(Dr["EspejosLatDirC"]),
                             EspejosLatAE = Convert.ToString(Dr["EspejosLatAE"]),
-                            EstadoVersion = Convert.ToString(Dr["EstadoVersion"])
+                            EstadoVersion = Convert.ToString(Dr["EstadoVersion"]),
+                            Año= Convert.ToString(Dr["Año"])
 
 
                         };
@@ -178,7 +180,8 @@ namespace Datos
                             SuspensionTrasera = Convert.ToString(Dr["SuspensionTrasera"]),
                             EspejosLatDirC = Convert.ToString(Dr["EspejosLatDirC"]),
                             EspejosLatAE = Convert.ToString(Dr["EspejosLatAE"]),
-                            EstadoVersion = Convert.ToString(Dr["EstadoVersion"])
+                            EstadoVersion = Convert.ToString(Dr["EstadoVersion"]),
+                            Año = Convert.ToString(Dr["Año"])
                         };
                         return Pqte;
                     }
@@ -196,7 +199,8 @@ namespace Datos
             {
                 Cnx.Open();
                 //Creo el Query (todos los registros de la tabla Versions
-                string CdSql = "select Modelo.* from modelo, ModeloVersion,version, Vehiculo\r\nwhere modelo.IDModelo=ModeloVersion.IDModelo and ModeloVersion.IDVersion=Version.IDVersion\r\nand Version.IDVehiculo=Vehiculo.IDVehiculo and Vehiculo.Nombre=@Cl and Version.Version=@C";
+                string CdSql = "select Modelo.* from modelo, ModeloVersion,version, Vehiculo\r\n" +
+                    "where modelo.IDModelo=ModeloVersion.IDModelo and ModeloVersion.IDVersion=Version.IDVersion\r\nand Version.IDVehiculo=Vehiculo.IDVehiculo and Vehiculo.Nombre=@Cl and Version.Version=@C";
                 using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
                 {
                     Cmd.Parameters.AddWithValue("@Cl", cod);
@@ -331,7 +335,8 @@ namespace Datos
                             SuspensionTrasera = Convert.ToString(Dr["SuspensionTrasera"]),
                             EspejosLatDirC = Convert.ToString(Dr["EspejosLatDirC"]),
                             EspejosLatAE = Convert.ToString(Dr["EspejosLatAE"]),
-                            EstadoVersion = Convert.ToString(Dr["EstadoVersion"])
+                            EstadoVersion = Convert.ToString(Dr["EstadoVersion"]),
+                            Año = Convert.ToString(Dr["Año"])
                         };
                         return Pqte;
                     }
@@ -398,7 +403,8 @@ namespace Datos
                             SuspensionTrasera = Convert.ToString(Dr["SuspensionTrasera"]),
                             EspejosLatDirC = Convert.ToString(Dr["EspejosLatDirC"]),
                             EspejosLatAE = Convert.ToString(Dr["EspejosLatAE"]),
-                            EstadoVersion = Convert.ToString(Dr["EstadoVersion"])
+                            EstadoVersion = Convert.ToString(Dr["EstadoVersion"]),
+                            Año = Convert.ToString(Dr["Año"])
                         };
                         productos.Add(Pqte);
                     }
@@ -459,7 +465,8 @@ namespace Datos
                             SuspensionTrasera = Convert.ToString(Dr["SuspensionTrasera"]),
                             EspejosLatDirC = Convert.ToString(Dr["EspejosLatDirC"]),
                             EspejosLatAE = Convert.ToString(Dr["EspejosLatAE"]),
-                            EstadoVersion = Convert.ToString(Dr["EstadoVersion"])
+                            EstadoVersion = Convert.ToString(Dr["EstadoVersion"]),
+                            Año = Convert.ToString(Dr["Año"])
                         };
                         productos.Add(Pqte);
                     }
@@ -493,7 +500,7 @@ namespace Datos
             using (SqlConnection Cnx = new SqlConnection(CdCnx))
             {
                 Cnx.Open();
-                string CdSql = "UPDATE Version SET IDVehiculo=@Ve ,Llantas=@L ,TipoAsientos=@TA,CamaraTrasera =@CT,Pantalla=@P,TipoCombustible=@TC,Version=@V,Rines=@R,Cilindraje=@Ci,Costo=@Co,CapacidadCajuela=@CC,DistanciaEjes=@DE,Anchura=@At,Altura=@Al,AudioVelC=@AVC,TomaCorriente=@TCO,TipoTraccion=@TT,NumPuertas=@NP,Transmision=@Trans,FarosHal=@FH,NumEngranajes=@NumEng,ACAutom=@ACA,FarosLED=@FLED,RendimientoCombustible=@RCom,FrenosTraseros=@FTr,FrenosDelanteros=@FDl,SuspensionDelantera=@SD,SuspensionTrasera=@ST,EspejosLatDirC=@ELDC,EspejosLatAE=@ELAE,EstadoVersion=@EsV WHERE IDVersion=@Cl";
+                string CdSql = "UPDATE Version SET IDVehiculo=@Ve ,Llantas=@L ,TipoAsientos=@TA,CamaraTrasera =@CT,Pantalla=@P,TipoCombustible=@TC,Version=@V,Rines=@R,Cilindraje=@Ci,Costo=@Co,CapacidadCajuela=@CC,DistanciaEjes=@DE,Anchura=@At,Altura=@Al,AudioVelC=@AVC,TomaCorriente=@TCO,TipoTraccion=@TT,NumPuertas=@NP,Transmision=@Trans,FarosHal=@FH,NumEngranajes=@NumEng,ACAutom=@ACA,FarosLED=@FLED,RendimientoCombustible=@RCom,FrenosTraseros=@FTr,FrenosDelanteros=@FDl,SuspensionDelantera=@SD,SuspensionTrasera=@ST,EspejosLatDirC=@ELDC,EspejosLatAE=@ELAE,EstadoVersion=@EsV,Año=@An WHERE IDVersion=@Cl";
                 using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
                 {
                     //Añadir los parámetros
@@ -529,6 +536,7 @@ namespace Datos
                     Cmd.Parameters.AddWithValue("@ELDC", Pqte.EspejosLatDirC);
                     Cmd.Parameters.AddWithValue("@ELAE", Pqte.EspejosLatAE);
                     Cmd.Parameters.AddWithValue("@EsV", "Activo");
+                    Cmd.Parameters.AddWithValue("@An", Pqte.Año);
                     Cmd.ExecuteNonQuery();
                     Cmd.Dispose();
                 }

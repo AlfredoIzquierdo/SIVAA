@@ -41,5 +41,6 @@ namespace Entidades
         public string EspejosLatAE { get; set; }
 
         public string EstadoVersion { get; set; }
+        public string Año { get; set;  }
     }
 }

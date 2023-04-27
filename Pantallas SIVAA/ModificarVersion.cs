@@ -165,19 +165,17 @@ namespace Pantallas_SIVAA
             version.EspejosLatDirC = verificacion(rbEspejosDirSi, rbEspejosDirNo);
             version.EspejosLatAE = verificacion(rbEspejosASi, rbEspejosANo);
             version.CamaraTrasera = verificacion(rbCamaraSi, rbCamaraNo);
-
+            version.Año = txtAnio.Text;
             log.Modificar(version);
 
-            //List<Modelo> y = mods.ListadoTotal();
-            //string ii = "M" + (y.Count + 1).ToString();
-            ////idmodelo = ii
-            //modelo.Año = txtAnio.Text;
-            //modelo.IDModelo = ii;
-            //mods.Actualizar(modelo);
-
-            //modeloVer.IDVersion = id;
-            //modeloVer.IDModelo = ii;
-            //modverl.Actualizar(modeloVer);
+            List<Modelo> y = mods.ListadoTotal();
+            foreach(Modelo m in y)
+            {
+                if (m.Año == version.Año)
+                {
+                    modverl.ActualizarModeloVersion(m.IDModelo,version.IDVersion);
+                }
+            }
 
             Versiones versiones = new Versiones(_pqt);
             this.Close();
@@ -218,6 +216,7 @@ namespace Pantallas_SIVAA
                     cbTipo.Text = x.TipoTraccion.ToString();
                     cbTransmision.Text = x.Transmision.ToString();
                     cbVehiculo.Text = nombre(x.IDVehiculo);
+                    txtAnio.Text = x.Año;
                     asignar(rbAcAutSi, rbAcAutNo, x.ACAutom);
                     asignar(rbAudioSi, rbAudioNo, x.AudioVelC);
                     asignar(rbCamaraSi, rbCamaraNo, x.CamaraTrasera);

@@ -225,8 +225,6 @@
             txtanualidad = new TextBox();
             txtmensualidad = new TextBox();
             numericUpDown1 = new NumericUpDown();
-            textBox15 = new TextBox();
-            pictureBox7 = new PictureBox();
             panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
             panel1.SuspendLayout();
@@ -277,7 +275,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox16).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox17).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             SuspendLayout();
             // 
             // label7
@@ -1761,8 +1758,6 @@
             // 
             // tabCotizacion
             // 
-            tabCotizacion.Controls.Add(pictureBox7);
-            tabCotizacion.Controls.Add(textBox15);
             tabCotizacion.Controls.Add(tabControl4);
             tabCotizacion.Controls.Add(TXTIDEMPCOT);
             tabCotizacion.Controls.Add(pictureBox1);
@@ -2187,7 +2182,7 @@
             // 
             rbtnConCot.AutoSize = true;
             rbtnConCot.Checked = true;
-            rbtnConCot.Location = new Point(336, 421);
+            rbtnConCot.Location = new Point(335, 379);
             rbtnConCot.Margin = new Padding(3, 1, 3, 1);
             rbtnConCot.Name = "rbtnConCot";
             rbtnConCot.Size = new Size(87, 24);
@@ -2200,7 +2195,7 @@
             // rbtnCredCot
             // 
             rbtnCredCot.AutoSize = true;
-            rbtnCredCot.Location = new Point(228, 421);
+            rbtnCredCot.Location = new Point(227, 379);
             rbtnCredCot.Margin = new Padding(3, 1, 3, 1);
             rbtnCredCot.Name = "rbtnCredCot";
             rbtnCredCot.Size = new Size(79, 24);
@@ -2248,7 +2243,7 @@
             // label22
             // 
             label22.AutoSize = true;
-            label22.Location = new Point(93, 373);
+            label22.Location = new Point(92, 331);
             label22.Name = "label22";
             label22.Size = new Size(53, 20);
             label22.TabIndex = 136;
@@ -2257,7 +2252,7 @@
             // label23
             // 
             label23.AutoSize = true;
-            label23.Location = new Point(96, 421);
+            label23.Location = new Point(95, 379);
             label23.Name = "label23";
             label23.Size = new Size(99, 20);
             label23.TabIndex = 135;
@@ -2267,7 +2262,7 @@
             // 
             txPrecioCot.Enabled = false;
             txPrecioCot.ForeColor = SystemColors.WindowFrame;
-            txPrecioCot.Location = new Point(162, 370);
+            txPrecioCot.Location = new Point(161, 328);
             txPrecioCot.Margin = new Padding(3, 1, 3, 1);
             txPrecioCot.Name = "txPrecioCot";
             txPrecioCot.ReadOnly = true;
@@ -2298,7 +2293,7 @@
             // pictureBox6
             // 
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(32, 359);
+            pictureBox6.Location = new Point(31, 317);
             pictureBox6.Margin = new Padding(3, 1, 3, 1);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(43, 41);
@@ -2412,25 +2407,6 @@
             numericUpDown1.TabIndex = 28;
             numericUpDown1.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
-            // textBox15
-            // 
-            textBox15.Enabled = false;
-            textBox15.Location = new Point(87, 317);
-            textBox15.Name = "textBox15";
-            textBox15.Size = new Size(402, 27);
-            textBox15.TabIndex = 163;
-            // 
-            // pictureBox7
-            // 
-            pictureBox7.Image = Properties.Resources.article_FILL0_wght400_GRAD0_opsz48;
-            pictureBox7.Location = new Point(32, 303);
-            pictureBox7.Margin = new Padding(3, 1, 3, 1);
-            pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(43, 41);
-            pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox7.TabIndex = 164;
-            pictureBox7.TabStop = false;
-            // 
             // Ventas
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -2504,7 +2480,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox16).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox17).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ResumeLayout(false);
         }
 
@@ -2655,7 +2630,6 @@
         private TextBox txthoracot;
         private TextBox TXTIDCLIENTE;
         private PictureBox pictureBox6;
-        private PictureBox pictureBox7;
         private PictureBox pictureBox15;
         private PictureBox pictureBox16;
         private PictureBox pictureBox17;
@@ -2707,6 +2681,5 @@
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
-        private TextBox textBox15;
     }
 }

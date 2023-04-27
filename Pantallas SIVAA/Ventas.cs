@@ -2030,32 +2030,33 @@ namespace Pantallas_SIVAA
                 comboColor.Items.Clear();
                 comboAno.Items.Clear();
                 // aqui empieza la prueba * se necesita recargar el combo de version cada que se selecciona un vehiculo*
-                ComboVersion1.Items.Clear();              
+                ComboVersion1.Items.Clear();
                 versionsdisponibles = pqtLog9.ObtenerVersionesVehiculo(comboVehiculo.Text);
                 foreach (Versions ver in versionsdisponibles)
                 {
+                    if(ver.EstadoVersion=="Activo")
                     ComboVersion1.Items.Add(ver.Version);
                 }
                 ComboVersion1.SelectedIndex = 0;
 
-                // aqui termina
-                List<Unidad> Colores = new List<Unidad>();
-                List<Modelo> Modelos = new List<Modelo>();
-                Colores = PqteLog4.BuscarColores(ComboVersion1.Text, comboVehiculo.Text);
-                Modelos = PqteLog4.ObtenerModeloPorNombre(ComboVersion1.Text, comboVehiculo.Text);
-                foreach (Unidad color in Colores)
-                {
-                    if (color.Estatus.Trim() == "Disponible")
-                    {
-                        comboColor.Items.Add(color.Color);
-                    }
+                //// aqui termina
+                //List<Unidad> Colores = new List<Unidad>();
+                //List<Modelo> Modelos = new List<Modelo>();
+                //Colores = PqteLog4.BuscarColores(ComboVersion1.Text, comboVehiculo.Text);
+                //Modelos = PqteLog4.ObtenerModeloPorNombre(ComboVersion1.Text, comboVehiculo.Text);
+                //foreach (Unidad color in Colores)
+                //{
+                //    if (color.Estatus.Trim() == "Disponible")
+                //    {
+                //        comboColor.Items.Add(color.Color);
+                //    }
 
-                }
-                foreach (Modelo modelo in Modelos)
-                {
-                    comboAno.Items.Add(modelo.Año);
+                //}
+                //foreach (Modelo modelo in Modelos)
+                //{
+                //    comboAno.Items.Add(modelo.Año);
 
-                }
+                //}
                 ArrojarPrecioCot();
             }
         }
@@ -2088,7 +2089,10 @@ namespace Pantallas_SIVAA
                     {
                         comboColor.Items.Add(color.Color);
                     }
-
+                    if(string.IsNullOrEmpty(color.Color))
+                    {
+                        MessageBox.Show("No existen unidades disponibles para esta version");
+                    }
                 }
                 foreach (Modelo modelo in Modelos)
                 {
@@ -2107,21 +2111,11 @@ namespace Pantallas_SIVAA
             }
             else
             {
-                ArrojarPrecioCot();
-                List<Unidad> Colores = new List<Unidad>();
-                List<Modelo> Modelos = new List<Modelo>();
-                Colores = PqteLog4.BuscarColores(ComboVersion1.Text, comboVehiculo.Text);
-                Modelos = PqteLog4.ObtenerModeloPorNombre(ComboVersion1.Text, comboVehiculo.Text);
-                foreach (Unidad x in Colores)
-                {
-                    if (x.Estatus == "Disponible")
-                    {
-                        //if ()
-                        //{
-
-                        //}
-                    }
-                }
+               
+                    ArrojarPrecioCot();
+                
+                
+                
             }
         }
 

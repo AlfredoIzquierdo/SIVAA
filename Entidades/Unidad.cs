@@ -14,5 +14,6 @@ namespace Entidades
         public string Color { get; set; }
         public string Estatus { get; set; }
 
+
     }
 }

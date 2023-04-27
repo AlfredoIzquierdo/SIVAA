@@ -287,23 +287,30 @@ namespace Pantallas_SIVAA
                 MessageBox.Show("Favor de llenar todos los campos");
                 return;
             }
-            if (cmbVehiculo.SelectedIndex < 0 || cmbVersion.SelectedIndex < 0 || cmbModelo.SelectedIndex < 0 || cmbColor.SelectedIndex < 0)
+            else if(txtSerie.Text.Length < 10)
+            {
+                MessageBox.Show("El numero de serie debe contener 10 caracteres");
+            }
+            else if (cmbVehiculo.SelectedIndex < 0 || cmbVersion.SelectedIndex < 0 || cmbModelo.SelectedIndex < 0 || cmbColor.SelectedIndex < 0)
             {
                 MessageBox.Show("Favor de seleccionar todos los campos");
                 return;
-            }
-            string idversion, idpedido;
-            string serie, color;
-            string vehiculo, version, modelo;
-            serie = txtSerie.Text;
-            vehiculo = cmbVehiculo.SelectedItem.ToString();
-            version = cmbVersion.SelectedItem.ToString();
-            modelo = cmbModelo.SelectedItem.ToString();
-            color = cmbColor.SelectedItem.ToString();
+            }else
+            {
+                string idversion, idpedido;
+                string serie, color;
+                string vehiculo, version, modelo;
+                serie = txtSerie.Text;
+                vehiculo = cmbVehiculo.SelectedItem.ToString();
+                version = cmbVersion.SelectedItem.ToString();
+                modelo = cmbModelo.SelectedItem.ToString();
+                color = cmbColor.SelectedItem.ToString();
 
-            dataGridView1.Rows.Add(serie, vehiculo, version, modelo, color);
-            actualizar();
-            Limpiar();
+                dataGridView1.Rows.Add(serie, vehiculo, version, modelo, color);
+                actualizar();
+                Limpiar();
+            }
+            
         }
         public void Limpiar()
         {

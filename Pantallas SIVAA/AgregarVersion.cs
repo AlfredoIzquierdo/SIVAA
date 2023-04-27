@@ -122,19 +122,23 @@ namespace Pantallas_SIVAA
                 version.EspejosLatAE = verificacion(rbEspejosASi, rbEspejosANo);
                 version.CamaraTrasera = verificacion(rbCamaraSi, rbCamaraNo);
                 version.EstadoVersion = "Activo";
+                version.Año = txtAnio.Text;
                 log.Registrar(version);
 
                 //contar modelos
                 List<Modelo> y = mods.ListadoTotal();
-                string ii = "M" + (y.Count + 1).ToString();
-                //idmodelo = ii
-                modelo.Año = txtAnio.Text;
-                modelo.IDModelo = ii;
-                mods.Insertar(modelo);
+               foreach (Modelo m in y )
+                {
+                    if (m.Año.Trim() == txtAnio.Text)
+                    {
+                        modeloVer.IDVersion = i;
+                        modeloVer.IDModelo = m.IDModelo;
+                        modverl.Insertar(modeloVer);
+                        break;
+                    }
+                }
 
-                modeloVer.IDVersion = i;
-                modeloVer.IDModelo = ii;
-                modverl.Insertar(modeloVer);
+                
 
 
                 this.Close();

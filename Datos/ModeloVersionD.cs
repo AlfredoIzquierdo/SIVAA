@@ -113,7 +113,7 @@ namespace Datos
             using (SqlConnection Cnx = new SqlConnection(CdCnx))
             {
                 Cnx.Open();
-                string CdSql = "UPDATE ModeloVersion SET Año=@App WHERE IDModelo=@Cl";
+                string CdSql = "UPDATE ModeloVersion SET IDModelo=@App WHERE IDModelo=@Cl";
                 using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
                 {
                     //Añadir los parámetros
@@ -128,6 +128,25 @@ namespace Datos
         }
 
 
+        public void ActualizarModeloVersion(string IDModelo, string IDVersion)
+        {
+            using (SqlConnection Cnx = new SqlConnection(CdCnx))
+            {
+                Cnx.Open();
+                string CdSql = "Update ModeloVersion\r\n" +
+                    "SET IDModelo = @Nm\r\nWHERE IDVersion=@Cl\r\n";
+                using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
+                {
+                    //Añadir los parámetros
+                    Cmd.Parameters.AddWithValue("@Cl", IDVersion);//Get y set de la capa entidad
+                    Cmd.Parameters.AddWithValue("@Nm", IDModelo);
+                    Cmd.ExecuteNonQuery();
+                    //Borrar variable cmd de la memoria
+                    Cmd.Dispose();
+                }
+                Cnx.Close();
+            }
+        }
 
     }
 }
