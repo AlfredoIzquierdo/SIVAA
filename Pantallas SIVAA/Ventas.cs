@@ -1552,6 +1552,7 @@ namespace Pantallas_SIVAA
             vehiculosdisponibles = pqtLog6.ListadoAll();
             foreach (Vehiculo v in vehiculosdisponibles)
             {
+                if(v.EstadoVehiculo.Trim ()== "Activo")
                 comboVehiculo.Items.Add(v.Nombre);
             }
 
