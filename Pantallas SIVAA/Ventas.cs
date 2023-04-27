@@ -31,7 +31,7 @@ namespace Pantallas_SIVAA
         string[] vehiculosD = { "", "", "" };
         int activarPagare = 0;
         Empleado _pqt;
-       
+
         public Ventas(Empleado pqt)
         {
             InitializeComponent();
@@ -349,6 +349,18 @@ namespace Pantallas_SIVAA
                     lblNombre.Text = "Bienvenido: " + _pqt.Nombre + " " + _pqt.ApellidoPat;
                     break;
             }
+            dataGridView4.DataSource = "";
+            List<Cliente> listado = PqteLog.ListadoAll();
+            if (listado.Count > 0)
+            {
+                dataGridView4.AutoGenerateColumns = false;
+                dataGridView4.DataSource = listado;
+                dataGridView4.Columns["Column25"].DataPropertyName = "IDCliente";
+                dataGridView4.Columns["Column26"].DataPropertyName = "Nombre";
+                dataGridView4.Columns["Column27"].DataPropertyName = "ApellidoPat";
+                dataGridView4.Columns["Column28"].DataPropertyName = "ApellidoMat";
+                dataGridView4.Columns["Column29"].DataPropertyName = "RFC";
+            }
         }
 
         private void btnCliente_Click(object sender, EventArgs e)
@@ -364,6 +376,18 @@ namespace Pantallas_SIVAA
             {
                 MessageBox.Show("Favor de llenar los campos");
                 return;
+                dataGridView4.DataSource = "";
+                List<Cliente> clientela = PqteLog.ListadoAll();
+                if (clientela.Count > 0)
+                {
+                    dataGridView4.AutoGenerateColumns = false;
+                    dataGridView4.DataSource = clientela;
+                    dataGridView4.Columns["Column25"].DataPropertyName = "IDCliente";
+                    dataGridView4.Columns["Column26"].DataPropertyName = "Nombre";
+                    dataGridView4.Columns["Column27"].DataPropertyName = "ApellidoPat";
+                    dataGridView4.Columns["Column28"].DataPropertyName = "ApellidoMat";
+                    dataGridView4.Columns["Column29"].DataPropertyName = "RFC";
+                }
             }
 
             List<Cliente> listado = PqteLog.ListadoPorNA(n, a);
@@ -647,18 +671,20 @@ namespace Pantallas_SIVAA
 
         private void tabPage4_Enter(object sender, EventArgs e)
         {
+            txtNomClien.Text = "";
+            txtApClien.Text = "";
             //mostrarUnidades();
-            List<Cliente> listas;
-            dgvClientCot.ClearSelection();
-            List<Cliente> clie = PqteLog.ListadoAll();
-            foreach (Cliente x in clie)
+            dgvClientCot.DataSource = "";
+            List<Cliente> listado = PqteLog.ListadoAll();
+            if (listado.Count > 0)
             {
-                if (x.EstadoCliente == "Activo")
-                {
-                    listas = clie;
-                    dataGridView4.Rows.Add(x.IDCliente, x.Nombre, x.ApellidoPat, x.ApellidoMat, x.RFC, x.Correo, x.Telefono, x.NoExterior, x.Colonia, x.Ciudad, x.Estado);
-
-                }
+                dgvClientCot.AutoGenerateColumns = false;
+                dgvClientCot.DataSource = listado;
+                dgvClientCot.Columns["dataGridViewTextBoxColumn7"].DataPropertyName = "IDCliente";
+                dgvClientCot.Columns["dataGridViewTextBoxColumn8"].DataPropertyName = "Nombre";
+                dgvClientCot.Columns["dataGridViewTextBoxColumn9"].DataPropertyName = "ApellidoPat";
+                dgvClientCot.Columns["dataGridViewTextBoxColumn10"].DataPropertyName = "ApellidoMat";
+                dgvClientCot.Columns["dataGridViewTextBoxColumn11"].DataPropertyName = "RFC";
             }
         }
 
@@ -1396,6 +1422,7 @@ namespace Pantallas_SIVAA
                 MessageBox.Show("Favor de llenar los campos");
                 return;
             }
+            dataGridView4.DataSource = "";
             List<Cliente> listado = PqteLog.ListadoPorNA(n, a);
             if (listado.Count > 0)
             {
@@ -1472,6 +1499,7 @@ namespace Pantallas_SIVAA
                 MessageBox.Show("Favor de llenar los campos");
                 return;
             }
+            dataGridView4.DataSource = "";
             List<Entidades.Cotizacion> listado = PqteLog4.ListadoAllEsp(n);
             if (listado.Count > 0)
             {
@@ -1565,8 +1593,8 @@ namespace Pantallas_SIVAA
             vehiculosdisponibles = pqtLog6.ListadoAll();
             foreach (Vehiculo v in vehiculosdisponibles)
             {
-                if(v.EstadoVehiculo.Trim ()== "Activo")
-                comboVehiculo.Items.Add(v.Nombre);
+                if (v.EstadoVehiculo.Trim() == "Activo")
+                    comboVehiculo.Items.Add(v.Nombre);
             }
 
             comboVehiculo.SelectedIndex = 0;
@@ -1579,17 +1607,18 @@ namespace Pantallas_SIVAA
             ComboVersion1.SelectedIndex = 0;
 
             //mostrarUnidades();
-            List<Cliente> listas;
             dgvClientCot.ClearSelection();
-            List<Cliente> clie = PqteLog.ListadoAll();
-            foreach (Cliente x in clie)
+            dgvClientCot.DataSource = "";
+            List<Cliente> listado = PqteLog.ListadoAll();
+            if (listado.Count > 0)
             {
-                if (x.EstadoCliente == "Activo")
-                {
-                    listas = clie;
-                    dgvClientCot.Rows.Add(x.IDCliente, x.Nombre, x.ApellidoPat, x.ApellidoMat, x.RFC, x.Correo, x.Telefono, x.NoExterior, x.Colonia, x.Ciudad, x.Estado);
-
-                }
+                dgvClientCot.AutoGenerateColumns = false;
+                dgvClientCot.DataSource = listado;
+                dgvClientCot.Columns["dataGridViewTextBoxColumn7"].DataPropertyName = "IDCliente";
+                dgvClientCot.Columns["dataGridViewTextBoxColumn8"].DataPropertyName = "Nombre";
+                dgvClientCot.Columns["dataGridViewTextBoxColumn9"].DataPropertyName = "ApellidoPat";
+                dgvClientCot.Columns["dataGridViewTextBoxColumn10"].DataPropertyName = "ApellidoMat";
+                dgvClientCot.Columns["dataGridViewTextBoxColumn11"].DataPropertyName = "RFC";
             }
             //comboVehiculo.SelectedItem = "March";
             //ComboVersion1.SelectedItem = "SR";
@@ -2049,24 +2078,24 @@ namespace Pantallas_SIVAA
         {
             List<Versions> versionsdisponibles = new List<Versions>();
 
-           
-                comboColor.Items.Clear();
-                comboAno.Items.Clear();
-                // aqui empieza la prueba * se necesita recargar el combo de version cada que se selecciona un vehiculo*
-                ComboVersion1.Items.Clear();
-                
-                versionsdisponibles = pqtLog9.ObtenerVersionesVehiculo(comboVehiculo.Text);
-                foreach (Versions ver in versionsdisponibles)
+
+            comboColor.Items.Clear();
+            comboAno.Items.Clear();
+            // aqui empieza la prueba * se necesita recargar el combo de version cada que se selecciona un vehiculo*
+            ComboVersion1.Items.Clear();
+
+            versionsdisponibles = pqtLog9.ObtenerVersionesVehiculo(comboVehiculo.Text);
+            foreach (Versions ver in versionsdisponibles)
+            {
+                if (ver.EstadoVersion == "Activo")
                 {
-                    if(ver.EstadoVersion=="Activo")
-                    {
-                        ComboVersion1.Items.Add(ver.Version);                  
-                        ComboVersion1.SelectedIndex = 0;
-                        ArrojarPrecioCot();
-                    }
-                    
-                
-               
+                    ComboVersion1.Items.Add(ver.Version);
+                    ComboVersion1.SelectedIndex = 0;
+                    ArrojarPrecioCot();
+                }
+
+
+
 
                 //// aqui termina
                 //List<Unidad> Colores = new List<Unidad>();
@@ -2086,7 +2115,7 @@ namespace Pantallas_SIVAA
                 //    comboAno.Items.Add(modelo.Año);
 
                 //}
-                
+
             }
         }
 
@@ -2119,7 +2148,7 @@ namespace Pantallas_SIVAA
                         comboColor.Items.Add(color.Color);
                         ArrojarPrecioCot();
                     }
-                    if(string.IsNullOrEmpty(color.Color))
+                    if (string.IsNullOrEmpty(color.Color))
                     {
                         MessageBox.Show("No existen unidades disponibles para esta version");
                     }
@@ -2129,7 +2158,7 @@ namespace Pantallas_SIVAA
                     comboAno.Items.Add(modelo.Año);
 
                 }
-                
+
             }
         }
 
@@ -2141,9 +2170,9 @@ namespace Pantallas_SIVAA
             }
             else
             {
-               
-                    ArrojarPrecioCot();
-              
+
+                ArrojarPrecioCot();
+
             }
         }
 
@@ -2411,6 +2440,25 @@ namespace Pantallas_SIVAA
                 txtVehiculo.Text = dataGridView1[1, i].Value.ToString();
                 txtVersion.Text = dataGridView1[2, i].Value.ToString();
                 txtAño.Text = dataGridView1[3, i].Value.ToString();
+            }
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+            TXTIDCLI.Text = "";
+            TXTAPP.Text = ""; 
+            dataGridView4.ClearSelection();
+            dgvClientCot.DataSource = "";
+            List<Cliente> listado = PqteLog.ListadoAll();
+            if (listado.Count > 0)
+            {
+                dataGridView4.AutoGenerateColumns = false;
+                dataGridView4.DataSource = listado;
+                dataGridView4.Columns["Column25"].DataPropertyName = "IDCliente";
+                dataGridView4.Columns["Column26"].DataPropertyName = "Nombre";
+                dataGridView4.Columns["Column27"].DataPropertyName = "ApellidoPat";
+                dataGridView4.Columns["Column28"].DataPropertyName = "ApellidoMat";
+                dataGridView4.Columns["Column29"].DataPropertyName = "RFC";
             }
         }
     }
