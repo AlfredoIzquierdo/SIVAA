@@ -43,7 +43,7 @@ namespace Pantallas_SIVAA
             }
             else
                 MessageBox.Show("Seleccione un vehiculo a modificar");
-            
+
         }
 
         private void pictureBox13_Click(object sender, EventArgs e)
@@ -95,7 +95,7 @@ namespace Pantallas_SIVAA
             reportes.Show();
         }
 
-        
+
 
         private void ModificarVehiculo_Load(object sender, EventArgs e)
         {
@@ -107,9 +107,9 @@ namespace Pantallas_SIVAA
             //        txtNombre.Text = x.Nombre;
             //    }
             //}
-            
+
             Vehiculo vh = log.LeerPorClave(id);
-            txtNombre.Text = vh.Nombre;
+            txtNombre.Text = vh.Nombre.Trim();
             switch (_pqt.Tipo.Trim())
             {
                 case "Atencion":
@@ -157,11 +157,7 @@ namespace Pantallas_SIVAA
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(txtNombre.Text.Length>10)
-            {
-                MessageBox.Show("No no no");
-                txtNombre.Text = "";
-            }
+
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

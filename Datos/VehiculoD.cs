@@ -165,7 +165,7 @@ namespace Datos
                         {
                             IDVehiculo = Convert.ToString(Dr["IDVehiculo"]),
                             Nombre = Convert.ToString(Dr["Nombre"]),
-
+                            EstadoVehiculo= Convert.ToString(Dr["EstadoVehiculo"])
                         };
                         productos.Add(Pqte);
                     }
@@ -180,7 +180,7 @@ namespace Datos
             using (SqlConnection Cnx = new SqlConnection(CdCnx))
             {
                 Cnx.Open();
-                string CdSql = "UPDATE Vehiculo SET Nombre=@Nm WHERE IDVehiculo=@Cl";
+                string CdSql = "UPDATE Vehiculo SET Nombre=@Nm,EstadoVehiculo='Activo' WHERE IDVehiculo=@Cl";
                 using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
                 {
                     //Añadir los parámetros

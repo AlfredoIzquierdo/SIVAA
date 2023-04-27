@@ -119,8 +119,7 @@ namespace Pantallas_SIVAA
                 id = dataGridView1[0, dataGridView1.SelectedRows[0].Index].Value.ToString();
                 vehiculo.Eliminar(id);
                 MessageBox.Show("Vehiculo eliminado correctamente");
-                List<Vehiculo> vhe = vehiculo.ListadoAll();
-                dataGridView1.DataSource = vhe;
+                dataGridView1.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
             }
             else
             {
@@ -131,7 +130,7 @@ namespace Pantallas_SIVAA
         List<Vehiculo> listas;
         private void Vehiculos_Load(object sender, EventArgs e)
         {
-            dataGridView1.ClearSelection();
+            dataGridView1.Rows.Clear();
             List<Vehiculo> veh = vehiculo.ListadoAll();
             listas = veh;
             foreach (Vehiculo x in veh)
@@ -208,7 +207,7 @@ namespace Pantallas_SIVAA
         {
             if (cmbOpcionBusqueda.SelectedIndex != 0)
             {
-                dataGridView1.ClearSelection();
+                dataGridView1.Rows.Clear();
                 List<Vehiculo> veh = vehiculo.ListadoEspecifico(txtValorBusqueda.Text, cmbOpcionBusqueda.Text);
                 listas = veh;
                 foreach (Vehiculo x in veh)
