@@ -297,16 +297,18 @@ namespace Datos
             using (SqlConnection Cnx = new SqlConnection(CdCnx))
             {
                 Cnx.Open();
-                string CdSql = "UPDATE Cita SET IDEmpleado=@Nm,IDCliente=@App, Dia=@Apm,Mes=@Rfc,Año=@Cr,Hora=@Tl WHERE IDCita=@Cl";
+                string CdSql = "UPDATE Cita SET IDEmpleado=@Nm,IDCliente=@App, Dia=@Apm,Mes=@Rfc,Año=@Cr,Hora=@Tl,EstadoCita=@Cit WHERE IDCita=@Cl";
                 using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
                 {
                     //Añadir los parámetros
                     Cmd.Parameters.AddWithValue("@Cl", Pqte.IDCita);//Get y set de la capa entidad
                     Cmd.Parameters.AddWithValue("@Nm", Pqte.IDEmpleado);
                     Cmd.Parameters.AddWithValue("@App", Pqte.IDCliente);
+                    Cmd.Parameters.AddWithValue("@Tl", Pqte.Hora);
                     Cmd.Parameters.AddWithValue("@Apm", Pqte.Dia);
                     Cmd.Parameters.AddWithValue("@Rfc", Pqte.Mes);
-                    Cmd.Parameters.AddWithValue("@Cr", Pqte.Año); 
+                    Cmd.Parameters.AddWithValue("@Cr", Pqte.Año);
+                    Cmd.Parameters.AddWithValue("@Cit", Pqte.EstadoCita);
                     Cmd.ExecuteNonQuery();
                     //Borrar variable cmd de la memoria
                     Cmd.Dispose();

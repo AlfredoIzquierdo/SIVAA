@@ -21,6 +21,7 @@ namespace Pantallas_SIVAA
         readonly EmpleadoLog empleado = new EmpleadoLog();
         string _idCita;
         Cita cita = new Cita();
+        CitaD citaD = new CitaD();
         Empleado _pqt;
         public ModificarCita(string idCita, Empleado pqt)
         {
@@ -83,13 +84,13 @@ namespace Pantallas_SIVAA
                     lblVendedor.Text = x.IDEmpleado.ToString();
                 }
             }
-            
+
             ClienteD clienteD = new ClienteD();
             List<Cliente> cli = clienteD.ListadoTotal();
-            foreach(Cliente x in cli)
+            foreach (Cliente x in cli)
             {
-                if(x.IDCliente== lblCliente.Text)
-                    lblNombreCliente.Text=x.Nombre.ToString().Trim()+" "+x.ApellidoPat.ToString().Trim() + " "+x.ApellidoMat.ToString().Trim();
+                if (x.IDCliente == lblCliente.Text)
+                    lblNombreCliente.Text = x.Nombre.ToString().Trim() + " " + x.ApellidoPat.ToString().Trim() + " " + x.ApellidoMat.ToString().Trim();
             }
             List<Empleado> emp = empleado.ListadoAll();
             foreach (Empleado x in emp)
@@ -148,9 +149,11 @@ namespace Pantallas_SIVAA
             cita.Año = Convert.ToInt32(lblAño.Text);
             cita.Dia = Convert.ToInt32(lblDia.Text);
             cita.Mes = Convert.ToInt32(lblMes.Text);
+            cita.IDCliente = citaD.ObtenerPdto(_idCita).IDCliente;
             cita.Hora = lblHora.Text;
             cita.IDEmpleado = lblVendedor.Text;
-            cita.IDCita = lblVendedor.Text;
+            cita.IDCita = _idCita;
+            cita.EstadoCita = "Activo";
             log.Modificar(cita);
             CalendarioCitas citaas = new CalendarioCitas(_pqt);
             this.Close();
