@@ -325,7 +325,7 @@
             // 
             lblNoExtProv.AutoSize = true;
             lblNoExtProv.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblNoExtProv.Location = new Point(106, 171);
+            lblNoExtProv.Location = new Point(113, 171);
             lblNoExtProv.Name = "lblNoExtProv";
             lblNoExtProv.Size = new Size(61, 21);
             lblNoExtProv.TabIndex = 57;
@@ -629,7 +629,7 @@
             // 
             label43.AutoSize = true;
             label43.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label43.Location = new Point(513, 171);
+            label43.Location = new Point(516, 171);
             label43.Name = "label43";
             label43.Size = new Size(37, 21);
             label43.TabIndex = 57;
