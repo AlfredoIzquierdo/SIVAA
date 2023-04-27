@@ -284,7 +284,7 @@ namespace Pantallas_SIVAA
 
         private void comboversion_SelectedValueChanged(object sender, EventArgs e)
         {
-            if (txtbusqueda.Text !="")
+            if (txtbusqueda.Text != "")
             {
                 txtbusqueda.ResetText();
             }
@@ -324,7 +324,7 @@ namespace Pantallas_SIVAA
             }
         }
 
-        
+
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
@@ -333,6 +333,9 @@ namespace Pantallas_SIVAA
             inicio.Show();
         }
 
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
 
+        }
     }
 }

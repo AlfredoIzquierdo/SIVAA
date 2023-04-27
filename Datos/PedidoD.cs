@@ -246,7 +246,7 @@ namespace Datos
 
                         Pedido Pqte = new Pedido
                         {
-                            IDPedido = Convert.ToString(Dr["IDVenta"]),
+                            IDPedido = Convert.ToString(Dr["IDPedido"]),
                             IDEmpleado = Convert.ToString(Dr["IDEmpleado"]),
                             IDProveedor = Convert.ToString(Dr["IDProovedor"]),
                             Dia = Convert.ToInt32(Dr["Dia"]),
