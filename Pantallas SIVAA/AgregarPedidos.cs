@@ -148,48 +148,52 @@ namespace Pantallas_SIVAA
                 MessageBox.Show("Favor de ingresar al menos una unidad para guardar el pedido");
                 return;
             }
-
-            List<Pedido> x = pedidoLog.ListadoAll();
-            string i = "PD" + (x.Count + 1).ToString();
-            pedido.IDPedido = i;
-            pedido.IDProveedor = pedidoLog.IdentProveed(cbProov.Text);
-            pedido.IDEmpleado = _pqt.IDEmpleado;
-            pedido.Dia = Convert.ToInt32(numericUpDownDia.Value);
-            pedido.Mes = Convert.ToInt32(numericUpDownMes.Value);
-            pedido.Año = Convert.ToInt32(numericUpDownAno.Value);
-            pedido.Importe = Convert.ToDouble(txtImporte.Text);
-            pedido.EstadoPedido = "Disponible";
-            pedidoLog.Registrar(pedido);
-            //Agrega Unidad por unidad
-            Versions ver;
-            for (int j = 0; j < dataGridView1.Rows.Count; j++)
+            else
             {
-                string serie, color;
-                serie = dataGridView1[0, j].Value.ToString();
-                color = dataGridView1[4, j].Value.ToString();
-                string ve, vers, mod;
-                ve = dataGridView1[1, j].Value.ToString();
-                vers = dataGridView1[2, j].Value.ToString();
-                mod = dataGridView1[3, j].Value.ToString();
-                ver = pqte2.ObtenerVersionPorDatos(ve, vers, mod);
-                Unidad uni;
-                //Unidades
-                uni = new Unidad
+                List<Pedido> x = pedidoLog.ListadoAll();
+                string i = "PD" + (x.Count + 1).ToString();
+                pedido.IDPedido = i;
+                pedido.IDProveedor = pedidoLog.IdentProveed(cbProov.Text);
+                pedido.IDEmpleado = _pqt.IDEmpleado;
+                pedido.Dia = Convert.ToInt32(numericUpDownDia.Value);
+                pedido.Mes = Convert.ToInt32(numericUpDownMes.Value);
+                pedido.Año = Convert.ToInt32(numericUpDownAno.Value);
+                pedido.Importe = Convert.ToDouble(txtImporte.Text);
+                pedido.EstadoPedido = "Disponible";
+                pedidoLog.Registrar(pedido);
+                //Agrega Unidad por unidad
+                Versions ver;
+                for (int j = 0; j < dataGridView1.Rows.Count; j++)
                 {
-                    NoSerie = Convert.ToString(serie),
-                    IDVersion = Convert.ToString(ver.IDVersion),
-                    IDPedido = pedido.IDPedido.ToString(),
-                    Color = Convert.ToString(color),
-                    Estatus = Convert.ToString("Disponible")
+                    string serie, color;
+                    serie = dataGridView1[0, j].Value.ToString();
+                    color = dataGridView1[4, j].Value.ToString();
+                    string ve, vers, mod;
+                    ve = dataGridView1[1, j].Value.ToString();
+                    vers = dataGridView1[2, j].Value.ToString();
+                    mod = dataGridView1[3, j].Value.ToString();
+                    ver = pqte2.ObtenerVersionPorDatos(ve, vers, mod);
+                    Unidad uni;
+                    //Unidades
+                    uni = new Unidad
+                    {
+                        NoSerie = Convert.ToString(serie),
+                        IDVersion = Convert.ToString(ver.IDVersion),
+                        IDPedido = pedido.IDPedido.ToString(),
+                        Color = Convert.ToString(color),
+                        Estatus = Convert.ToString("Disponible")
 
-                };
-                PqteLog2.Registrar(uni);
+                    };
+                    PqteLog2.Registrar(uni);
+                }
+
+                MessageBox.Show("Pedido Agregado con exito");
+                this.Close();
+                ResumenPedido resumen = new ResumenPedido(pedido.IDPedido,_pqt);
+                resumen.Show();
             }
 
-            MessageBox.Show("Pedido Agregado con exito");
-            this.Close();
-            GestionarPedidos gestionarPedidos = new GestionarPedidos(_pqt);
-            gestionarPedidos.Show();
+            
         }
 
         private void textBox5_KeyPress(object sender, KeyPressEventArgs e)

@@ -1,6 +1,7 @@
 ﻿using Datos;
 using Entidades;
 using Logicas;
+using Pantallas_SIVAA.Pedidos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,11 +27,13 @@ namespace Pantallas_SIVAA
         Proveedor Proveedor = new Proveedor();
         ProveedorD ProveedorD = new ProveedorD();
         string _id;
+        Empleado _pqt;
 
-        public ResumenPedido(string id)
+        public ResumenPedido(string id, Empleado pqt)
         {
             InitializeComponent();
             _id = id;
+            _pqt = pqt;
         }
 
         private void ResumenPedido_Load(object sender, EventArgs e)
@@ -92,5 +95,11 @@ namespace Pantallas_SIVAA
             return productos;
         }
 
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+
+
+
+        }
     }
 }

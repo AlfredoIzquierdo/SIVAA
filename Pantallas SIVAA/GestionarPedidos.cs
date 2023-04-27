@@ -152,7 +152,7 @@ namespace Pantallas_SIVAA.Pedidos
             if (dataGridView1.SelectedRows.Count == 1)
             {
                 id = dataGridView1[0, dataGridView1.SelectedRows[0].Index].Value.ToString();
-                ResumenPedido resumen = new ResumenPedido(id);
+                ResumenPedido resumen = new ResumenPedido(id,_pqt);
                 
                 resumen.Show();
             }
