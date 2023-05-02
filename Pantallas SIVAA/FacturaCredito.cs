@@ -34,18 +34,18 @@ namespace Pantallas_SIVAA
             Modelo datosmodelo = facturaLOG.ObtenerDatosModelo(datosModVer.IDModelo);
 
             //double subtotal = (pqtVC.TotalFinal * 0.84);
-            double subtotal = Math.Round((datoscotcredito.Enganche+datoscotcredito.Financiamiento)/1.16);
+            double subtotal = Math.Round((datoscotcredito.Enganche +datoscotcredito.Financiamiento) / 1.16);
             double iva = Math.Round(subtotal * .16);
             //MessageBox.Show("precio total= "+pqtVC.TotalFinal+"subtotal = "+subtotal+" \r\niva = "+iva+"\r\ntotal = "+(iva+subtotal));
             //double iva = (pqtVC.TotalFinal * .16);
-            label74.Text=subtotal.ToString();
-            label73.Text=iva.ToString();
+            label74.Text = subtotal.ToString();
+            label73.Text = iva.ToString();
             label72.Text = (subtotal + iva).ToString();
-            label10.Text=pdqV.NoSerie.ToString();
-            UnidadLog uni=new UnidadLog();
+            label10.Text = pdqV.NoSerie.ToString();
+            UnidadLog uni = new UnidadLog();
             Unidad un;
             un = uni.LeerPorClave(pdqV.NoSerie.ToString());
-            lblcolor.Text=un.Color.ToString();
+            lblcolor.Text = un.Color.ToString();
             lbldia.Text = pdqV.Dia.ToString();
             lblmes.Text = pdqV.Mes.ToString();
             lblano.Text = pdqV.Año.ToString();
@@ -132,6 +132,11 @@ namespace Pantallas_SIVAA
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void FacturaCredito_Load_1(object sender, EventArgs e)
         {
 
         }

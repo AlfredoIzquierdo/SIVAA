@@ -88,7 +88,11 @@ namespace Pantallas_SIVAA
             veh = pqte.ListadoAll();
             foreach (Vehiculo x in veh)
             {
-                cmbVehiculo.Items.Add(x.Nombre);
+                if (x.EstadoVehiculo.Trim() == "Activo")
+                {
+                    cmbVehiculo.Items.Add(x.Nombre);
+                }
+
             }
         }
 

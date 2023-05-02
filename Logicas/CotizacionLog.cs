@@ -27,10 +27,22 @@ namespace Logicas
         //}
         public List<Unidad> BuscarColores(string NombreVersion,string NombreVehiculo)
         {
-            List<Unidad> unidadesDisponibles = new List<Unidad>();
+            List<Unidad> datos = new List<Unidad>();
+            List<Versions> VersionesDisponibles = new List<Versions>();
+            Versions Versiondeseada;
             Vehiculo vehiculoDeseado = datosVehiculo.ObtenerPdtoPorNombre(NombreVehiculo);
-            Versions versionDeseada = datosVersion.ObtenerPdtoPorNombreModelo(NombreVersion,vehiculoDeseado.Nombre.Trim());
-            List<Unidad> datos = datosUnidad.ObtenerPdtoPorVersion(versionDeseada.IDVersion);
+            VersionesDisponibles = datosVersion.ObtenerPdtoPorNombreModeloListado(NombreVersion,vehiculoDeseado.Nombre.Trim());
+            Versiondeseada = datosVersion.ObtenerPdtoPorNombreModelo(NombreVersion, vehiculoDeseado.Nombre);
+            //foreach(Versions v in VersionesDisponibles)
+            // {
+            //     if(v.EstadoVersion.Trim() == "Activo")
+            //     {
+            //         datos = datosUnidad.ObtenerPdtoPorVersion(v.IDVersion);
+            //     }
+            // }
+            datos = datosUnidad.ObtenerPdtoPorVersion(Versiondeseada.IDVersion);
+            
+           
             return datos;
         }
         public List<Modelo> ObtenerModeloPorNombre(string NombreVersion,string NombreVehiculo)

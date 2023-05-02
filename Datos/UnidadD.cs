@@ -433,11 +433,11 @@ namespace Datos
                 using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
                 {
                     //Asignar el valor a @Cl
-                    Cmd.Parameters.AddWithValue("@Cl", CodPqt);
+                    Cmd.Parameters.AddWithValue("@Cl", CodPqt.Trim());
                     SqlDataReader Dr = Cmd.ExecuteReader();
-                    if (Dr.Read())
+                    while (Dr.Read())
                     {
-
+                        //Cada vez que lo lea se crea un nuevo objeto
                         Unidad Pqte = new Unidad
                         {
                             NoSerie = Convert.ToString(Dr["NoSerie"]),
