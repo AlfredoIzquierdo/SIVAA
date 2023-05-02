@@ -12,7 +12,7 @@ namespace Datos
     public class VersionD
     {
         string CdCnx = ConfigurationManager.ConnectionStrings["CnxSQL"].ToString();
-        public void Insertar(Versions Pqte)
+        public void Insertar(VersionEntidad Pqte)
         {
             using (SqlConnection Cnx = new SqlConnection(CdCnx))
             {
@@ -66,7 +66,7 @@ namespace Datos
 
        
 
-        public Versions ObtenerPdto(string CodPqt)
+        public VersionEntidad ObtenerPdto(string CodPqt)
         {
             //Using que crea la conexión
             using (SqlConnection Cnx = new SqlConnection(CdCnx))
@@ -83,7 +83,7 @@ namespace Datos
                     if (Dr.Read())
                     {
 
-                        Versions Pqte = new Versions
+                        VersionEntidad Pqte = new VersionEntidad
                         {
                             IDVersion = Convert.ToString(Dr["IDVersion"]),
                             IDVehiculo = Convert.ToString(Dr["IDVehiculo"]),
@@ -128,7 +128,7 @@ namespace Datos
             }
             return null;
         }
-        public Versions ObtpqtPorDatos(string CodPqt, string ver, string mode)
+        public VersionEntidad ObtpqtPorDatos(string CodPqt, string ver, string mode)
         {
             //Using que crea la conexión
             using (SqlConnection Cnx = new SqlConnection(CdCnx))
@@ -147,7 +147,7 @@ namespace Datos
                     if (Dr.Read())
                     {
 
-                        Versions Pqte = new Versions
+                        VersionEntidad Pqte = new VersionEntidad 
                         {
                             IDVersion = Convert.ToString(Dr["IDVersion"]),
                             IDVehiculo = Convert.ToString(Dr["IDVehiculo"]),
@@ -198,7 +198,7 @@ namespace Datos
             using (SqlConnection Cnx = new SqlConnection(CdCnx))
             {
                 Cnx.Open();
-                //Creo el Query (todos los registros de la tabla Versions
+                //Creo el Query (todos los registros de la tabla VersionEntidad 
                 string CdSql = "select Modelo.* from modelo, ModeloVersion,version, Vehiculo\r\n" +
                     "where modelo.IDModelo=ModeloVersion.IDModelo and ModeloVersion.IDVersion=Version.IDVersion\r\nand Version.IDVehiculo=Vehiculo.IDVehiculo and Vehiculo.Nombre=@Cl and Version.Version=@C";
                 using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
@@ -222,15 +222,15 @@ namespace Datos
             }
             return productos;
         }
-        public List<Versions> ListadoVersionPorVehiculo(string cod)
+        public List<VersionEntidad > ListadoVersionPorVehiculo(string cod)
         {
-            List<Versions> productos = new List<Versions>();
+            List<VersionEntidad > productos = new List<VersionEntidad >();
 
             //Vuelvo a crear la conexión
             using (SqlConnection Cnx = new SqlConnection(CdCnx))
             {
                 Cnx.Open();
-                //Creo el Query (todos los registros de la tabla Versions
+                //Creo el Query (todos los registros de la tabla VersionEntidad 
                 string CdSql = "select * from Version,Vehiculo where Version.IDVehiculo=Vehiculo.IDVehiculo and Vehiculo.Nombre=@Cl";
                 using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
                 {
@@ -240,7 +240,7 @@ namespace Datos
                     while (Dr.Read())
                     {
                         //Cada vez que lo lea se crea un nuevo objeto
-                        Versions Pqte = new Versions
+                        VersionEntidad Pqte = new VersionEntidad 
                         {
                             IDVersion = Convert.ToString(Dr["IDVersion"]),
                             IDVehiculo = Convert.ToString(Dr["IDvehiculo"]),
@@ -284,7 +284,7 @@ namespace Datos
             }
             return productos;
         }
-        public Versions ObtenerPdtoPorNombreModelo(string CodPqt,string IDVehiculo)
+        public VersionEntidad ObtenerPdtoPorNombreModelo(string CodPqt,string IDVehiculo)
         {
             //Using que crea la conexión
             using (SqlConnection Cnx = new SqlConnection(CdCnx))
@@ -302,7 +302,7 @@ namespace Datos
                     if (Dr.Read())
                     {
 
-                        Versions Pqte = new Versions
+                        VersionEntidad Pqte = new VersionEntidad 
                         {
                             IDVersion = Convert.ToString(Dr["IDVersion"]),
                             IDVehiculo = Convert.ToString(Dr["IDVehiculo"]),
@@ -345,9 +345,9 @@ namespace Datos
             }
             return null;
         }
-        public List <Versions> ObtenerPdtoPorNombreModeloListado(string CodPqt, string IDVehiculo)
+        public List <VersionEntidad > ObtenerPdtoPorNombreModeloListado(string CodPqt, string IDVehiculo)
         {
-            List<Versions> productos = new List<Versions>();
+            List<VersionEntidad > productos = new List<VersionEntidad >();
             //Using que crea la conexión
             using (SqlConnection Cnx = new SqlConnection(CdCnx))
             {
@@ -365,7 +365,7 @@ namespace Datos
                     while (Dr.Read())
                     {
                         //Cada vez que lo lea se crea un nuevo objeto
-                        Versions Pqte = new Versions
+                        VersionEntidad Pqte = new VersionEntidad 
                         {
                             IDVersion = Convert.ToString(Dr["IDVersion"]),
                             IDVehiculo = Convert.ToString(Dr["IDvehiculo"]),
@@ -411,9 +411,9 @@ namespace Datos
             return productos;
         }
 
-        public List<Versions> ObtenerVersionesDeVehiculo(string Nombre)
+        public List<VersionEntidad > ObtenerVersionesDeVehiculo(string Nombre)
         {
-            List<Versions> productos = new List<Versions>();
+            List<VersionEntidad > productos = new List<VersionEntidad >();
             //Using que crea la conexión
             using (SqlConnection Cnx = new SqlConnection(CdCnx))
             {
@@ -433,7 +433,7 @@ namespace Datos
                     while (Dr.Read())
                     {
                         //Cada vez que lo lea se crea un nuevo objeto
-                        Versions Pqte = new Versions
+                        VersionEntidad Pqte = new VersionEntidad 
                         {
                             IDVersion = Convert.ToString(Dr["IDVersion"]),
                             IDVehiculo = Convert.ToString(Dr["IDvehiculo"]),
@@ -478,15 +478,15 @@ namespace Datos
             }
             return productos;
         }
-        public List<Versions> ListadoTotal()
+        public List<VersionEntidad > ListadoTotal()
         {
-            List<Versions> productos = new List<Versions>();
+            List<VersionEntidad > productos = new List<VersionEntidad >();
 
             //Vuelvo a crear la conexión
             using (SqlConnection Cnx = new SqlConnection(CdCnx))
             {
                 Cnx.Open();
-                //Creo el Query (todos los registros de la tabla Versions
+                //Creo el Query (todos los registros de la tabla VersionEntidad 
                 string CdSql = "Select * from Version";
                 using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
                 {
@@ -495,7 +495,7 @@ namespace Datos
                     while (Dr.Read())
                     {
                         //Cada vez que lo lea se crea un nuevo objeto
-                        Versions Pqte = new Versions
+                        VersionEntidad Pqte = new VersionEntidad 
                         {
                             IDVersion = Convert.ToString(Dr["IDVersion"]),
                             IDVehiculo = Convert.ToString(Dr["IDvehiculo"]),
@@ -560,7 +560,7 @@ namespace Datos
 
         }
 
-        public void Actualizar(Versions Pqte)
+        public void Actualizar(VersionEntidad Pqte)
         {
             using (SqlConnection Cnx = new SqlConnection(CdCnx))
             {

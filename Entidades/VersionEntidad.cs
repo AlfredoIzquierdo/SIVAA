@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class Versions
+    public class VersionEntidad
     {
         public string IDVersion { get; set; }
         public string IDVehiculo { get; set; }

@@ -18,7 +18,7 @@ namespace Pantallas_SIVAA
 {
     public partial class ModificarVersion : Form
     {
-        Versions version = new Versions();
+        VersionEntidad version = new VersionEntidad();
         VersionLog log = new VersionLog();
         VehiculoLog veh = new VehiculoLog();
         ModeloVersion modeloVer = new ModeloVersion();
@@ -37,7 +37,7 @@ namespace Pantallas_SIVAA
 
         private void btnModifcarVersion_Click(object sender, EventArgs e)
         {
-            Versions version = new Versions();
+            VersionEntidad version = new VersionEntidad();
             version.IDVersion = id;
             version.Costo = Convert.ToDouble(txtCosto.Text);
             version.DistanciaEjes = txtDistancia.Text;
@@ -190,8 +190,8 @@ namespace Pantallas_SIVAA
                 cbVehiculo.Items.Add(x.Nombre);
             }
 
-            List<Versions> ver = log.ListadoTotal();
-            foreach (Versions x in ver)
+            List<VersionEntidad> ver = log.ListadoTotal();
+            foreach (VersionEntidad x in ver)
             {
                 if (x.IDVersion == id)
                 {

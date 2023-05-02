@@ -19,7 +19,7 @@ namespace Pantallas_SIVAA
         public FichaTecnica(string NoSeriest, string Vehiculost, string Versionst, string Modelost, string Colorst, string Disponibilidadst )
         {
             InitializeComponent();
-            Versions info = versionLog.ObtenerFicha(Versionst, Vehiculost);
+            VersionEntidad info = versionLog.ObtenerFicha(Versionst, Vehiculost);
             lblNoSerie.Text = NoSeriest;
             lblVehiculo.Text = Vehiculost;
             lblVersion.Text = Versionst;

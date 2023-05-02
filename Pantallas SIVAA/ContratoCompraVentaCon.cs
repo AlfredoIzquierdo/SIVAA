@@ -30,7 +30,7 @@ namespace Pantallas_SIVAA
         {
             Entidades.Cotizacion cotizacion1 = comvenLOG.datoscotizacion(pqtventC.IDCotizacion);
             Empleado empleado = empleadoLog.LeerPorClave(cotizacion1.IDEmpleado.ToString());
-            Versions versiondoc = comvenLOG.datosversion(cotizacion1.IDVersion);
+            VersionEntidad versiondoc = comvenLOG.datosversion(cotizacion1.IDVersion);
             datosModVer = comvenLOG.ObtenerModeloVersion(cotizacion1.IDVersion);
             Modelo modelo = comvenLOG.datosmodelo(datosModVer.IDModelo);
             Vehiculo vehiculo = comvenLOG.datosvehiculo(versiondoc.IDVehiculo);

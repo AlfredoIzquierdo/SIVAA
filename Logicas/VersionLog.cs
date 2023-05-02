@@ -15,7 +15,7 @@ namespace Logicas
         public readonly StringBuilder Mensaje = new StringBuilder();
         public readonly StringBuilder Mensaje2 = new StringBuilder();
 
-        public void Registrar(Versions Pd)
+        public void Registrar(VersionEntidad Pd)
         {
             Mensaje.Clear();
             if (ValidarProducto(Pd))
@@ -28,7 +28,7 @@ namespace Logicas
             }
         }
 
-        public List<Versions> ListadoTotal()
+        public List<VersionEntidad> ListadoTotal()
         {
             //Método que obtiene la lista dinámica de todos los registro que tiene mi tabla
             return Pdto.ListadoTotal();
@@ -38,25 +38,25 @@ namespace Logicas
             //Método que obtiene la lista dinámica de todos los registro que tiene mi tabla
             return Pdto.Listadomodeloporversion(cod, nom);
         }
-        public List<Versions> ListadoVersionesPorVehiculo(string cod)
+        public List<VersionEntidad> ListadoVersionesPorVehiculo(string cod)
         {
             //Método que obtiene la lista dinámica de todos los registro que tiene mi tabla
             return Pdto.ListadoVersionPorVehiculo(cod);
         }
-        public Versions ObtenerVersionPorDatos(string veh, string ver, string mod)
+        public VersionEntidad ObtenerVersionPorDatos(string veh, string ver, string mod)
         {
-            Versions datos = Pdto.ObtpqtPorDatos(veh, ver, mod);
+            VersionEntidad datos = Pdto.ObtpqtPorDatos(veh, ver, mod);
             return datos;
         }
-        public Versions ObtenerFicha(string id,string nombre )
+        public VersionEntidad ObtenerFicha(string id,string nombre )
         {
-            Versions datos = Pdto.ObtenerPdtoPorNombreModelo(id, nombre);
+            VersionEntidad datos = Pdto.ObtenerPdtoPorNombreModelo(id, nombre);
             return datos;
         }
 
-        public Versions ObtenerPdto(string ClPdto, string idVeh)
+        public VersionEntidad ObtenerPdto(string ClPdto, string idVeh)
         {
-            Versions Pd = null;
+            VersionEntidad Pd = null;
             Mensaje.Clear();
             if (ClPdto == "")
                 Mensaje.Append("Por favor proporcionar una versión");
@@ -69,9 +69,9 @@ namespace Logicas
             }
             return null;
         }
-        public List <Versions> ObtenerVersionesVehiculo(string nombre)
+        public List <VersionEntidad> ObtenerVersionesVehiculo(string nombre)
         {
-            List<Versions> Pd = null;
+            List<VersionEntidad> Pd = null;
             Mensaje.Clear();
             if (nombre == "")
                 Mensaje.Append("Por favor proporcionar una versión");
@@ -84,9 +84,9 @@ namespace Logicas
             }
             return null;
         }
-        public Versions ObtenerPdtoPorID(string ClPdto)
+        public VersionEntidad ObtenerPdtoPorID(string ClPdto)
         {
-            Versions Pd = null;
+            VersionEntidad Pd = null;
             Mensaje.Clear();
             if (ClPdto == "")
                 Mensaje.Append("Por favor proporcionar una versión");
@@ -108,14 +108,14 @@ namespace Logicas
                 Pdto.EliminarDesaparecer(CodPqte);
         }
 
-        public void Modificar(Versions Pqte)
+        public void Modificar(VersionEntidad Pqte)
         {
             if (ValidarProducto(Pqte))
                 Pdto.Actualizar(Pqte);
         }
 
 
-        private bool ValidarProducto(Versions Pq)
+        private bool ValidarProducto(VersionEntidad Pq)
         {
             Mensaje.Clear();
             if (string.IsNullOrEmpty(Pq.IDVersion))

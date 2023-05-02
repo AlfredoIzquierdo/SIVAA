@@ -21,7 +21,7 @@ namespace Pantallas_SIVAA
         Entidades.Cotizacion datoscotizacion;
         CotizacionCredito datoscotcredito;
         Cliente datoscliente;
-        Versions datosversion;
+        VersionEntidad datosversion;
         Vehiculo datosvehiculo;
         Modelo datosmodelo;
         ModeloVersion modeloVersion;

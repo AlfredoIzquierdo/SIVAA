@@ -166,7 +166,7 @@ namespace Pantallas_SIVAA
                 pedido.EstadoPedido = "Disponible";
                 pedidoLog.Registrar(pedido);
                 //Agrega Unidad por unidad
-                Versions ver;
+                VersionEntidad ver;
                 for (int j = 0; j < dataGridView1.Rows.Count; j++)
                 {
                     string serie, color;
@@ -341,9 +341,9 @@ namespace Pantallas_SIVAA
         private void cmbVehiculo_SelectedValueChanged(object sender, EventArgs e)
         {
             cmbVersion.Items.Clear();
-            List<Versions> ver;
+            List<VersionEntidad> ver;
             ver = pqte2.ListadoVersionesPorVehiculo(cmbVehiculo.SelectedItem.ToString());
-            foreach (Versions x in ver)
+            foreach (VersionEntidad x in ver)
             {
                 if (x.EstadoVersion == "Activo")
                     cmbVersion.Items.Add(x.Version);
@@ -386,7 +386,7 @@ namespace Pantallas_SIVAA
         }
         public void actualizar()
         {
-            Versions ver;
+            VersionEntidad ver;
             double total = 0;
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {

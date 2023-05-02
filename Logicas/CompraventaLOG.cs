@@ -34,9 +34,9 @@ namespace Logicas
             datos = pdcotcred.ObtenerPdto(idcotizacion);
             return datos;
         }
-        public Entidades.Versions datosversion(string idversion)
+        public Entidades.VersionEntidad datosversion(string idversion)
         {
-            Versions datosversion;
+            VersionEntidad datosversion;
             datosversion = pdtover.ObtenerPdto(idversion);
             return datosversion;
         }

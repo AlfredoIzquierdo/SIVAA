@@ -23,7 +23,7 @@ namespace Pantallas_SIVAA
         Entidades.Cotizacion datoscotizacion;
         CotizacionContado datoscotcontado;
         Cliente datoscliente;
-        Versions datosversion;
+        VersionEntidad datosversion;
         Vehiculo datosvehiculo;
         Modelo datosmodelo;
         Empleado empleado = new Empleado();

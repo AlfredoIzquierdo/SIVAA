@@ -104,9 +104,9 @@ namespace Pantallas_SIVAA
                 MessageBox.Show("Version Eliminada");
                 dataGridView1.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
                 dataGridView1.Rows.Clear();
-                List<Versions> ve = version.ListadoTotal();
+                List<VersionEntidad> ve = version.ListadoTotal();
                 listas = ve;
-                foreach (Versions x in ve)
+                foreach (VersionEntidad x in ve)
                 {
                     if (x.EstadoVersion == "Activo")
                     {
@@ -127,9 +127,9 @@ namespace Pantallas_SIVAA
         {
             //Versiones_Load(sender, e);
             dataGridView1.Rows.Clear();
-            List<Versions> ve = version.ListadoTotal();
+            List<VersionEntidad> ve = version.ListadoTotal();
             listas = ve;
-            foreach (Versions x in ve)
+            foreach (VersionEntidad x in ve)
             {
                 if (x.EstadoVersion == "Activo")
                 {
@@ -195,16 +195,16 @@ namespace Pantallas_SIVAA
             }
         }
         //METODO LISTADO ESPECIFICO    
-        public List<Versions> ListadoTotalEspecifico(string nom, string parametro)
+        public List<VersionEntidad> ListadoTotalEspecifico(string nom, string parametro)
         {
             string CdCnx = ConfigurationManager.ConnectionStrings["CnxSQL"].ToString();
-            List<Versions> productos = new List<Versions>();
+            List<VersionEntidad> productos = new List<VersionEntidad>();
 
             //Vuelvo a crear la conexiÃ³n
             using (SqlConnection Cnx = new SqlConnection(CdCnx))
             {
                 Cnx.Open();
-                //Creo el Query (todos los registros de la tabla Versions
+                //Creo el Query (todos los registros de la tabla VersionEntidad
                 string CdSql = "SELECT * FROM Version WHERE " + parametro + "=@Cl";
                 using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
                 {
@@ -216,7 +216,7 @@ namespace Pantallas_SIVAA
                     while (Dr.Read())
                     {
                         //Cada vez que lo lea se crea un nuevo objeto
-                        Versions Pqte = new Versions
+                        VersionEntidad Pqte = new VersionEntidad
                         {
                             IDVersion = Convert.ToString(Dr["IDVersion"]),
                             IDVehiculo = Convert.ToString(Dr["IDvehiculo"]),
@@ -257,7 +257,7 @@ namespace Pantallas_SIVAA
             }
             return productos;
         }
-        List<Versions> listas;
+        List<VersionEntidad> listas;
         private void button1_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtbusqueda.Text))
@@ -266,11 +266,11 @@ namespace Pantallas_SIVAA
             }
             else
             {
-                List<Versions> datos = new List<Versions>();
+                List<VersionEntidad> datos = new List<VersionEntidad>();
                 datos = ListadoTotalEspecifico(txtbusqueda.Text, comboversion.Text);
                 listas = datos;
                 dataGridView1.Rows.Clear();
-                foreach (Versions x in datos)
+                foreach (VersionEntidad x in datos)
                 {
 
                     dataGridView1.Rows.Add(x.IDVersion, x.IDVehiculo, x.Llantas, x.TipoAsientos, x.CamaraTrasera, x.Pantalla, x.TipoCombustible, x.Version, x.Rines, x.Cilindraje,
@@ -293,8 +293,8 @@ namespace Pantallas_SIVAA
             {
                 txtbusqueda.Enabled = false;
                 dataGridView1.Rows.Clear();
-                List<Versions> ve = version.ListadoTotal();
-                foreach (Versions x in ve)
+                List<VersionEntidad> ve = version.ListadoTotal();
+                foreach (VersionEntidad x in ve)
                 {
                     if (x.EstadoVersion == "Activo")
                     {
@@ -312,7 +312,7 @@ namespace Pantallas_SIVAA
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            ReporteVersiones rp = new ReporteVersiones(listas);
+            ReporteVersiones rp = new ReporteVersiones(listas,_pqt);
             rp.Show();
         }
 

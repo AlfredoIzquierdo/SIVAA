@@ -1589,7 +1589,7 @@ namespace Pantallas_SIVAA
         {
             TXTIDEMPCOT.Text = _pqt.IDEmpleado;
             List<Vehiculo> vehiculosdisponibles = new List<Vehiculo>();
-            List<Versions> versionsdisponibles = new List<Versions>();
+            List<VersionEntidad  > versiondisponibles = new List<VersionEntidad  >();
             vehiculosdisponibles = pqtLog6.ListadoAll();
             foreach (Vehiculo v in vehiculosdisponibles)
             {
@@ -1599,8 +1599,8 @@ namespace Pantallas_SIVAA
 
             comboVehiculo.SelectedIndex = 0;
 
-            versionsdisponibles = pqtLog9.ObtenerVersionesVehiculo(comboVehiculo.Text);
-            foreach (Versions ver in versionsdisponibles)
+            versiondisponibles = pqtLog9.ObtenerVersionesVehiculo(comboVehiculo.Text);
+            foreach (VersionEntidad   ver in versiondisponibles)
             {
                 ComboVersion1.Items.Add(ver.Version);
             }
@@ -1656,7 +1656,7 @@ namespace Pantallas_SIVAA
             }
             else
             {
-                Versions versiondeseada = PqteLog4.ObtenerVersionPrecio(ComboVersion1.Text, comboVehiculo.Text);
+                VersionEntidad   versiondeseada = PqteLog4.ObtenerVersionPrecio(ComboVersion1.Text, comboVehiculo.Text);
                 txPrecioCot.Text = versiondeseada.Costo.ToString();
             }
 
@@ -1688,7 +1688,7 @@ namespace Pantallas_SIVAA
                 }
                 if (rbtnConCot.Checked)
                 {
-                    Versions versionSeleccionada = PqteLog4.ObtenerVersionPrecio(ComboVersion1.Text, comboVehiculo.Text);
+                    VersionEntidad   versionSeleccionada = PqteLog4.ObtenerVersionPrecio(ComboVersion1.Text, comboVehiculo.Text);
                     int pruebadia = (int)numericdiacot.Value;
                     try
                     {
@@ -1763,7 +1763,7 @@ namespace Pantallas_SIVAA
                 }
                 if (rbtnCredCot.Checked)
                 {
-                    Versions versionseleccionada = PqteLog4.ObtenerVersionPrecio(ComboVersion1.Text, comboVehiculo.Text);
+                    VersionEntidad   versionseleccionada = PqteLog4.ObtenerVersionPrecio(ComboVersion1.Text, comboVehiculo.Text);
                     try
                     {
                         pqt = new Entidades.Cotizacion
@@ -1877,7 +1877,7 @@ namespace Pantallas_SIVAA
                 }
                 if (rbtnConCot.Checked)
                 {
-                    Versions versionSeleccionada = PqteLog4.ObtenerVersionPrecio(ComboVersion1.Text, comboVehiculo.Text);
+                    VersionEntidad   versionSeleccionada = PqteLog4.ObtenerVersionPrecio(ComboVersion1.Text, comboVehiculo.Text);
                     int pruebadia = (int)numericdiacot.Value;
                     try
                     {
@@ -1950,7 +1950,7 @@ namespace Pantallas_SIVAA
                 }
                 if (rbtnCredCot.Checked)
                 {
-                    Versions versionseleccionada = PqteLog4.ObtenerVersionPrecio(ComboVersion1.Text, comboVehiculo.Text);
+                    VersionEntidad   versionseleccionada = PqteLog4.ObtenerVersionPrecio(ComboVersion1.Text, comboVehiculo.Text);
                     try
                     {
                         pqt = new Entidades.Cotizacion
@@ -2037,7 +2037,7 @@ namespace Pantallas_SIVAA
         }
         private void ArrojarPrecioCot()
         {
-            Versions versiondeseada = PqteLog4.ObtenerVersionPrecio(ComboVersion1.Text, comboVehiculo.Text);
+            VersionEntidad   versiondeseada = PqteLog4.ObtenerVersionPrecio(ComboVersion1.Text, comboVehiculo.Text);
             txPrecioCot.Text = versiondeseada.Costo.ToString("0.00");
         }
         private void CalcularEnganche()
@@ -2076,7 +2076,7 @@ namespace Pantallas_SIVAA
 
         private void comboVehiculo_SelectedValueChanged(object sender, EventArgs e)
         {
-            List<Versions> versionsdisponibles = new List<Versions>();
+            List<VersionEntidad  > versionsdisponibles = new List<VersionEntidad  >();
 
 
             comboColor.Items.Clear();
@@ -2085,7 +2085,7 @@ namespace Pantallas_SIVAA
             ComboVersion1.Items.Clear();
 
             versionsdisponibles = pqtLog9.ObtenerVersionesVehiculo(comboVehiculo.Text);
-            foreach (Versions ver in versionsdisponibles)
+            foreach (VersionEntidad   ver in versionsdisponibles)
             {
                 if (ver.EstadoVersion == "Activo")
                 {

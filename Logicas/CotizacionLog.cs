@@ -28,8 +28,8 @@ namespace Logicas
         public List<Unidad> BuscarColores(string NombreVersion,string NombreVehiculo)
         {
             List<Unidad> datos = new List<Unidad>();
-            List<Versions> VersionesDisponibles = new List<Versions>();
-            Versions Versiondeseada;
+            List<VersionEntidad> VersionesDisponibles = new List<VersionEntidad>();
+            VersionEntidad Versiondeseada;
             Vehiculo vehiculoDeseado = datosVehiculo.ObtenerPdtoPorNombre(NombreVehiculo);
             VersionesDisponibles = datosVersion.ObtenerPdtoPorNombreModeloListado(NombreVersion,vehiculoDeseado.Nombre.Trim());
             Versiondeseada = datosVersion.ObtenerPdtoPorNombreModelo(NombreVersion, vehiculoDeseado.Nombre);
@@ -48,17 +48,17 @@ namespace Logicas
         public List<Modelo> ObtenerModeloPorNombre(string NombreVersion,string NombreVehiculo)
         {
             Vehiculo vehiculoDeseado = datosVehiculo.ObtenerPdtoPorNombre(NombreVehiculo);
-            Versions versionDeseada = datosVersion.ObtenerPdtoPorNombreModelo(NombreVersion, vehiculoDeseado.Nombre);
+            VersionEntidad versionDeseada = datosVersion.ObtenerPdtoPorNombreModelo(NombreVersion, vehiculoDeseado.Nombre);
             ModeloVersion modeloVersion = datosModeloVersion.ObtenerPdto(versionDeseada.IDVersion);
             List<Modelo> datos = datosmodelo.ObtenerPdtoLista(modeloVersion.IDModelo);
 
             return datos;
         }
         
-        public Versions ObtenerVersionPrecio(string NombreVersion,string NombreVehiculo)
+        public VersionEntidad ObtenerVersionPrecio(string NombreVersion,string NombreVehiculo)
         {
             Vehiculo vehiculoDeseado = datosVehiculo.ObtenerPdtoPorNombre(NombreVehiculo);
-            Versions datos = datosVersion.ObtenerPdtoPorNombreModelo(NombreVersion, vehiculoDeseado.Nombre);
+            VersionEntidad datos = datosVersion.ObtenerPdtoPorNombreModelo(NombreVersion, vehiculoDeseado.Nombre);
             return datos;
         }
         public void Registrar(Cotizacion Pd)

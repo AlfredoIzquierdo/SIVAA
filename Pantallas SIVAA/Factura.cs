@@ -34,7 +34,7 @@ namespace Pantallas_SIVAA
             Entidades.Cotizacion datoscot = facturaLOG.ObtenerCotizacion(pqtVC.IDCotizacion);
             Cliente datoscliente = facturaLOG.ObtenerDatosCliente(datoscot.IDCliente);
             Empleado datosempleado = empleadoLog.LeerPorClave(pdqV.IDEmpleado);
-            Versions datosversion = facturaLOG.ObtenerDatosVersions(datoscot.IDVersion);
+            Entidades.VersionEntidad datosversion = facturaLOG.ObtenerDatosVersions(datoscot.IDVersion);
             Vehiculo datosvehiculo = facturaLOG.ObtenerDatosVehiculo(datosversion.IDVehiculo);
             datosModVer = facturaLOG.ObtenerModeloVersion(datosversion.IDVersion);
             Modelo datosmodelo = facturaLOG.ObtenerDatosModelo(datosModVer.IDModelo);

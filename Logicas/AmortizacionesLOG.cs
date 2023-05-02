@@ -56,9 +56,9 @@ namespace Logicas
             return datos;
 
         }
-        public Versions ObtenerDatosVersions(string idVersion)
+        public VersionEntidad ObtenerDatosVersions(string idVersion)
         {
-            Versions datos = pdtover.ObtenerPdto(idVersion);
+            VersionEntidad datos = pdtover.ObtenerPdto(idVersion);
             return datos;
         }
         public Vehiculo ObtenerDatosVehiculo(string Idvehiculo)

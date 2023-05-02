@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Web Page Design</title>
+    <style>
+        table.border {
+            border-collapse: collapse;
+        }
+
+            table.border th {
+                padding: 5px;
+                border: 1px solid black;
+            }
+
+            table.border td {
+                padding: 5px;
+                border: 1px solid black;
+            }
+    </style>
+</head>
+<body>
+    <table style="width:100%">
+
+        <tr>
+            <td style="width:20%"></td>
+            <td style="width:60%" align="center">
+                <table>
+                    <tr><td align="center">@TITULO</td></tr>
+
+                </table>
+            </td>
+            <td style="width:20%">
+                <table class="border" style="width:100%">
+                    <tr><td align="center">Folio:</td></tr>
+                    <tr><td align="center">@NUMEROFOLIO</td></tr>
+                    <tr><td align="center">@FECHA</td></tr>
+                </table>
+            </td>
+        </tr>
+        <tr><td colspan="3" height="20"></td></tr>
+
+        <tr>
+            <td colspan="2">
+                <table style="width:100%">
+                    <tr>
+                        <td colspan="1" style="width:20%">Clave empleado:</td>
+                        <td colspan="3" style="width:80%;border-bottom: 1px solid black">@idempleado</td>
+                    </tr>
+                    <tr>
+                        <td colspan="1" style="width:20%">Nombre Completo:</td>
+                        <td colspan="3" style="width:80%;border-bottom: 1px solid black">@nombreEmpleado</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr><td colspan="3" height="20"></td></tr>
+        <tr>
+            <td colspan="3">
+                <table class="border" style="width:100%">
+                    <thead >
+                        <tr style="background-color:#D8D8D8">
+                            <th> cant</th>
+                            <th> desc</th>
+                            <th> prod</th>
+                            <th> unit </th>
+
+                        </tr> 
+                    </thead>
+                    <tbody>
+                        <tr>
+
+                            <!--<td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>-->
+                            @FILAS
+                        </tr>
+                    
+                    </tbody>
+                </table>
+
+            </td>
+        </tr>
+
+
+    </table>
+</body>
+</html>

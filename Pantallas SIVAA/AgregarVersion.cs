@@ -17,7 +17,7 @@ namespace Pantallas_SIVAA
 {
     public partial class AgregarVersion : Form
     {
-        Versions version = new Versions();
+        VersionEntidad version = new VersionEntidad();
         Modelo modelo = new Modelo();
         ModeloVersion modeloVer = new ModeloVersion();
         ModeloVersionD modverl = new ModeloVersionD();
@@ -84,7 +84,7 @@ namespace Pantallas_SIVAA
         {
             if (ComprobarEspacioVacio() == false)
             {
-                List<Versions> x = log.ListadoTotal();
+                List<VersionEntidad> x = log.ListadoTotal();
                 string i = "VR" + (x.Count + 1).ToString();
                 //  MessageBox.Show("I:" + i);
                 version.IDVersion = i;

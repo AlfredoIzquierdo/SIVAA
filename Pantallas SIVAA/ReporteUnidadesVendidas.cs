@@ -55,7 +55,7 @@ namespace Pantallas_SIVAA
                     }
                 }
 
-                Versions datosversion = new Versions();
+                VersionEntidad datosversion = new VersionEntidad();
                 Vehiculo datosvehiculo = new Vehiculo();
                 ModeloVersion datosmodeloVersion = new ModeloVersion();
                 Modelo datosmodelo = new Modelo();
