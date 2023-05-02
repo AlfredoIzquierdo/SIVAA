@@ -42,6 +42,7 @@
             panel6 = new Panel();
             lblPeriodo = new Label();
             label2 = new Label();
+            printDocument1 = new System.Drawing.Printing.PrintDocument();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
@@ -51,28 +52,30 @@
             // 
             lblfecha.AutoSize = true;
             lblfecha.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblfecha.Location = new Point(238, 153);
+            lblfecha.Location = new Point(208, 115);
             lblfecha.Name = "lblfecha";
-            lblfecha.Size = new Size(112, 25);
+            lblfecha.Size = new Size(89, 20);
             lblfecha.TabIndex = 53;
             lblfecha.Text = "08/03/2023";
             // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.print_FILL0_wght400_GRAD0_opsz48;
-            pictureBox1.Location = new Point(1217, 120);
+            pictureBox1.Location = new Point(676, 101);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(54, 44);
+            pictureBox1.Size = new Size(47, 33);
             pictureBox1.TabIndex = 52;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(11, 153);
+            label6.Location = new Point(10, 115);
             label6.Name = "label6";
-            label6.Size = new Size(199, 25);
+            label6.Size = new Size(159, 20);
             label6.TabIndex = 50;
             label6.Text = "Fecha de expedicion:";
             // 
@@ -83,21 +86,22 @@
             dataGridView1.BackgroundColor = SystemColors.ButtonHighlight;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Enabled = false;
-            dataGridView1.Location = new Point(15, 240);
+            dataGridView1.Location = new Point(13, 180);
+            dataGridView1.Margin = new Padding(3, 2, 3, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(1256, 416);
+            dataGridView1.Size = new Size(857, 444);
             dataGridView1.TabIndex = 49;
             // 
             // lblnombreempleado
             // 
             lblnombreempleado.AutoSize = true;
             lblnombreempleado.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblnombreempleado.Location = new Point(257, 120);
+            lblnombreempleado.Location = new Point(225, 90);
             lblnombreempleado.Name = "lblnombreempleado";
-            lblnombreempleado.Size = new Size(81, 25);
+            lblnombreempleado.Size = new Size(66, 20);
             lblnombreempleado.TabIndex = 48;
             lblnombreempleado.Text = "Fulanito";
             // 
@@ -105,9 +109,9 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(11, 120);
+            label5.Location = new Point(10, 90);
             label5.Name = "label5";
-            label5.Size = new Size(219, 25);
+            label5.Size = new Size(175, 20);
             label5.TabIndex = 47;
             label5.Text = "Nombre del que expide:";
             // 
@@ -122,8 +126,9 @@
             panel1.Controls.Add(panel6);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1298, 82);
+            panel1.Size = new Size(894, 62);
             panel1.TabIndex = 55;
             // 
             // lblidempleado
@@ -131,9 +136,9 @@
             lblidempleado.AutoSize = true;
             lblidempleado.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblidempleado.ForeColor = SystemColors.ActiveCaptionText;
-            lblidempleado.Location = new Point(833, 40);
+            lblidempleado.Location = new Point(729, 30);
             lblidempleado.Name = "lblidempleado";
-            lblidempleado.Size = new Size(49, 25);
+            lblidempleado.Size = new Size(38, 20);
             lblidempleado.TabIndex = 3;
             lblidempleado.Text = "C21";
             // 
@@ -142,9 +147,9 @@
             label3.AutoSize = true;
             label3.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label3.ForeColor = SystemColors.ActiveCaptionText;
-            label3.Location = new Point(790, 17);
+            label3.Location = new Point(691, 13);
             label3.Name = "label3";
-            label3.Size = new Size(119, 25);
+            label3.Size = new Size(98, 20);
             label3.TabIndex = 2;
             label3.Text = "IDEmpleado";
             // 
@@ -153,34 +158,36 @@
             label1.AutoSize = true;
             label1.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.ActiveCaptionText;
-            label1.Location = new Point(11, 27);
+            label1.Location = new Point(10, 20);
             label1.Name = "label1";
-            label1.Size = new Size(320, 29);
+            label1.Size = new Size(251, 24);
             label1.TabIndex = 0;
             label1.Text = "Reporte de venta al contado:";
             // 
             // panel2
             // 
-            panel2.Location = new Point(3, 96);
+            panel2.Location = new Point(3, 72);
+            panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(848, 84);
+            panel2.Size = new Size(742, 63);
             panel2.TabIndex = 6;
             // 
             // panel6
             // 
             panel6.BorderStyle = BorderStyle.FixedSingle;
-            panel6.Location = new Point(493, -1);
+            panel6.Location = new Point(431, -1);
+            panel6.Margin = new Padding(3, 2, 3, 2);
             panel6.Name = "panel6";
-            panel6.Size = new Size(792, 91);
+            panel6.Size = new Size(693, 69);
             panel6.TabIndex = 8;
             // 
             // lblPeriodo
             // 
             lblPeriodo.AutoSize = true;
             lblPeriodo.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblPeriodo.Location = new Point(242, 193);
+            lblPeriodo.Location = new Point(212, 145);
             lblPeriodo.Name = "lblPeriodo";
-            lblPeriodo.Size = new Size(112, 25);
+            lblPeriodo.Size = new Size(89, 20);
             lblPeriodo.TabIndex = 54;
             lblPeriodo.Text = "08/03/2023";
             // 
@@ -188,18 +195,24 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(12, 193);
+            label2.Location = new Point(10, 145);
             label2.Name = "label2";
-            label2.Size = new Size(192, 25);
+            label2.Size = new Size(155, 20);
             label2.TabIndex = 51;
             label2.Text = "Fecha de busqueda:";
             // 
+            // printDocument1
+            // 
+            printDocument1.BeginPrint += printDocument1_BeginPrint;
+            printDocument1.EndPrint += printDocument1_EndPrint;
+            printDocument1.PrintPage += printDocument1_PrintPage;
+            // 
             // ReporteVentaCredito
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1298, 665);
+            ClientSize = new Size(894, 631);
             Controls.Add(lblfecha);
             Controls.Add(pictureBox1);
             Controls.Add(label6);
@@ -209,7 +222,6 @@
             Controls.Add(panel1);
             Controls.Add(lblPeriodo);
             Controls.Add(label2);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "ReporteVentaCredito";
             Text = "ReporteVentaCredito";
             Load += ReporteVentaCredito_Load;
@@ -237,5 +249,6 @@
         private Panel panel6;
         private Label lblPeriodo;
         private Label label2;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }

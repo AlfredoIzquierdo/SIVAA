@@ -40,6 +40,7 @@
             label5 = new Label();
             panel1 = new Panel();
             label6 = new Label();
+            printDocument1 = new System.Drawing.Printing.PrintDocument();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -110,7 +111,7 @@
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(977, 308);
+            dataGridView1.Size = new Size(876, 297);
             dataGridView1.TabIndex = 54;
             // 
             // label8
@@ -126,12 +127,13 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.print_FILL0_wght400_GRAD0_opsz48;
-            pictureBox1.Location = new Point(946, 227);
+            pictureBox1.Location = new Point(812, 189);
             pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(47, 33);
+            pictureBox1.Size = new Size(47, 58);
             pictureBox1.TabIndex = 52;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // label7
             // 
@@ -165,7 +167,7 @@
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(995, 69);
+            panel1.Size = new Size(894, 69);
             panel1.TabIndex = 48;
             // 
             // label6
@@ -178,12 +180,18 @@
             label6.TabIndex = 51;
             label6.Text = "Fecha de expedicion:";
             // 
+            // printDocument1
+            // 
+            printDocument1.BeginPrint += printDocument1_BeginPrint;
+            printDocument1.EndPrint += printDocument1_EndPrint;
+            printDocument1.PrintPage += printDocument1_PrintPage;
+            // 
             // ReporteVersiones
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(995, 642);
+            ClientSize = new Size(894, 631);
             Controls.Add(dataGridView1);
             Controls.Add(label8);
             Controls.Add(pictureBox1);
@@ -220,5 +228,6 @@
         private Label label5;
         private Panel panel1;
         private Label label6;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }

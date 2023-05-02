@@ -28,288 +28,282 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label5 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.Mensaje = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.SuspendLayout();
+            label5 = new Label();
+            dataGridView1 = new DataGridView();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
+            Column5 = new DataGridViewTextBoxColumn();
+            Column6 = new DataGridViewTextBoxColumn();
+            Column7 = new DataGridViewTextBoxColumn();
+            Column8 = new DataGridViewTextBoxColumn();
+            Column9 = new DataGridViewTextBoxColumn();
+            Column10 = new DataGridViewTextBoxColumn();
+            Column11 = new DataGridViewTextBoxColumn();
+            Column12 = new DataGridViewTextBoxColumn();
+            Column13 = new DataGridViewTextBoxColumn();
+            label7 = new Label();
+            label6 = new Label();
+            Mensaje = new Label();
+            button1 = new Button();
+            pictureBox1 = new PictureBox();
+            panel1 = new Panel();
+            label4 = new Label();
+            label3 = new Label();
+            label1 = new Label();
+            panel2 = new Panel();
+            panel6 = new Panel();
+            printDocument1 = new System.Drawing.Printing.PrintDocument();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            panel1.SuspendLayout();
+            SuspendLayout();
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(10, 81);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(145, 18);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Total de adeudo:";
+            label5.AutoSize = true;
+            label5.Font = new Font("Lucida Fax", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(10, 81);
+            label5.Name = "label5";
+            label5.Size = new Size(145, 18);
+            label5.TabIndex = 3;
+            label5.Text = "Total de adeudo:";
             // 
             // dataGridView1
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7,
-            this.Column8,
-            this.Column9,
-            this.Column10,
-            this.Column11,
-            this.Column12,
-            this.Column13});
-            this.dataGridView1.Enabled = false;
-            this.dataGridView1.Location = new System.Drawing.Point(10, 140);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(1127, 269);
-            this.dataGridView1.TabIndex = 6;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(172, 81);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(48, 18);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "$$$$";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(10, 110);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(85, 18);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Desgloce:";
-            // 
-            // Mensaje
-            // 
-            this.Mensaje.AutoSize = true;
-            this.Mensaje.Font = new System.Drawing.Font("Lucida Fax", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Mensaje.Location = new System.Drawing.Point(11, 425);
-            this.Mensaje.Name = "Mensaje";
-            this.Mensaje.Size = new System.Drawing.Size(158, 34);
-            this.Mensaje.TabIndex = 8;
-            this.Mensaje.Text = "Mensaje ejemplo:  \r\nPago tardio mes tal ";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(101)))), ((int)(((byte)(143)))));
-            this.button1.Font = new System.Drawing.Font("Lucida Fax", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(531, 425);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(205, 41);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Regresar";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::Pantallas_SIVAA.Properties.Resources.print_FILL0_wght400_GRAD0_opsz48;
-            this.pictureBox1.Location = new System.Drawing.Point(1078, 95);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(48, 33);
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.BackgroundColor = Color.White;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7, Column8, Column9, Column10, Column11, Column12, Column13 });
+            dataGridView1.Enabled = false;
+            dataGridView1.Location = new Point(10, 140);
+            dataGridView1.Margin = new Padding(3, 2, 3, 2);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowTemplate.Height = 29;
+            dataGridView1.Size = new Size(1127, 269);
+            dataGridView1.TabIndex = 6;
             // 
             // Column1
             // 
-            this.Column1.HeaderText = "IdCliente";
-            this.Column1.Name = "Column1";
+            Column1.HeaderText = "IdCliente";
+            Column1.Name = "Column1";
             // 
             // Column2
             // 
-            this.Column2.HeaderText = "Nombre";
-            this.Column2.Name = "Column2";
+            Column2.HeaderText = "Nombre";
+            Column2.Name = "Column2";
             // 
             // Column3
             // 
-            this.Column3.HeaderText = "ApellidoPaterno";
-            this.Column3.Name = "Column3";
+            Column3.HeaderText = "ApellidoPaterno";
+            Column3.Name = "Column3";
             // 
             // Column4
             // 
-            this.Column4.HeaderText = "ApellidoMaterno";
-            this.Column4.Name = "Column4";
+            Column4.HeaderText = "ApellidoMaterno";
+            Column4.Name = "Column4";
             // 
             // Column5
             // 
-            this.Column5.HeaderText = "IdVenta";
-            this.Column5.Name = "Column5";
+            Column5.HeaderText = "IdVenta";
+            Column5.Name = "Column5";
             // 
             // Column6
             // 
-            this.Column6.HeaderText = "IdCredito";
-            this.Column6.Name = "Column6";
+            Column6.HeaderText = "IdCredito";
+            Column6.Name = "Column6";
             // 
             // Column7
             // 
-            this.Column7.HeaderText = "Plazo";
-            this.Column7.Name = "Column7";
+            Column7.HeaderText = "Plazo";
+            Column7.Name = "Column7";
             // 
             // Column8
             // 
-            this.Column8.HeaderText = "Enganche";
-            this.Column8.Name = "Column8";
+            Column8.HeaderText = "Enganche";
+            Column8.Name = "Column8";
             // 
             // Column9
             // 
-            this.Column9.HeaderText = "Mensualidad";
-            this.Column9.Name = "Column9";
+            Column9.HeaderText = "Mensualidad";
+            Column9.Name = "Column9";
             // 
             // Column10
             // 
-            this.Column10.HeaderText = "Intereses";
-            this.Column10.Name = "Column10";
+            Column10.HeaderText = "Intereses";
+            Column10.Name = "Column10";
             // 
             // Column11
             // 
-            this.Column11.HeaderText = "SaldoAnterior";
-            this.Column11.Name = "Column11";
+            Column11.HeaderText = "SaldoAnterior";
+            Column11.Name = "Column11";
             // 
             // Column12
             // 
-            this.Column12.HeaderText = "SaldoActual";
-            this.Column12.Name = "Column12";
+            Column12.HeaderText = "SaldoActual";
+            Column12.Name = "Column12";
             // 
             // Column13
             // 
-            this.Column13.HeaderText = "DeudaTotal";
-            this.Column13.Name = "Column13";
+            Column13.HeaderText = "DeudaTotal";
+            Column13.Name = "Column13";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Lucida Fax", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label7.Location = new Point(172, 81);
+            label7.Name = "label7";
+            label7.Size = new Size(48, 18);
+            label7.TabIndex = 5;
+            label7.Text = "$$$$";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Lucida Fax", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.Location = new Point(10, 110);
+            label6.Name = "label6";
+            label6.Size = new Size(85, 18);
+            label6.TabIndex = 7;
+            label6.Text = "Desgloce:";
+            // 
+            // Mensaje
+            // 
+            Mensaje.AutoSize = true;
+            Mensaje.Font = new Font("Lucida Fax", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            Mensaje.Location = new Point(11, 425);
+            Mensaje.Name = "Mensaje";
+            Mensaje.Size = new Size(158, 34);
+            Mensaje.TabIndex = 8;
+            Mensaje.Text = "Mensaje ejemplo:  \r\nPago tardio mes tal ";
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(82, 101, 143);
+            button1.Font = new Font("Lucida Fax", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.ForeColor = SystemColors.ButtonHighlight;
+            button1.Location = new Point(531, 425);
+            button1.Margin = new Padding(3, 2, 3, 2);
+            button1.Name = "button1";
+            button1.Size = new Size(205, 41);
+            button1.TabIndex = 9;
+            button1.Text = "Regresar";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            pictureBox1.Image = Properties.Resources.print_FILL0_wght400_GRAD0_opsz48;
+            pictureBox1.Location = new Point(1078, 95);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(48, 33);
+            pictureBox1.TabIndex = 10;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.panel6);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1138, 62);
-            this.panel1.TabIndex = 39;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            panel1.BackColor = Color.White;
+            panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(label4);
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(panel2);
+            panel1.Controls.Add(panel6);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 2, 3, 2);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1138, 62);
+            panel1.TabIndex = 39;
+            panel1.Paint += panel1_Paint;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(729, 30);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(39, 18);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "C21";
+            label4.AutoSize = true;
+            label4.Font = new Font("Lucida Fax", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.ForeColor = SystemColors.ActiveCaptionText;
+            label4.Location = new Point(729, 30);
+            label4.Name = "label4";
+            label4.Size = new Size(39, 18);
+            label4.TabIndex = 3;
+            label4.Text = "C21";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(691, 13);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 18);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "IDCliente";
+            label3.AutoSize = true;
+            label3.Font = new Font("Lucida Fax", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.ForeColor = SystemColors.ActiveCaptionText;
+            label3.Location = new Point(691, 13);
+            label3.Name = "label3";
+            label3.Size = new Size(82, 18);
+            label3.TabIndex = 2;
+            label3.Text = "IDCliente";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lucida Fax", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(10, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(181, 22);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Estado de cuenta:";
+            label1.AutoSize = true;
+            label1.Font = new Font("Lucida Fax", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = SystemColors.ActiveCaptionText;
+            label1.Location = new Point(10, 20);
+            label1.Name = "label1";
+            label1.Size = new Size(181, 22);
+            label1.TabIndex = 0;
+            label1.Text = "Estado de cuenta:";
             // 
             // panel2
             // 
-            this.panel2.Location = new System.Drawing.Point(3, 72);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(742, 63);
-            this.panel2.TabIndex = 6;
+            panel2.Location = new Point(3, 72);
+            panel2.Margin = new Padding(3, 2, 3, 2);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(742, 63);
+            panel2.TabIndex = 6;
             // 
             // panel6
             // 
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Location = new System.Drawing.Point(431, -1);
-            this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(448, 69);
-            this.panel6.TabIndex = 8;
+            panel6.BorderStyle = BorderStyle.FixedSingle;
+            panel6.Location = new Point(431, -1);
+            panel6.Margin = new Padding(3, 2, 3, 2);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(448, 69);
+            panel6.TabIndex = 8;
+            // 
+            // printDocument1
+            // 
+            printDocument1.BeginPrint += printDocument1_BeginPrint;
+            printDocument1.EndPrint += printDocument1_EndPrint;
+            printDocument1.PrintPage += printDocument1_PrintPage;
             // 
             // ReporteEstadoDeCuenta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1138, 476);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.Mensaje);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label5);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "ReporteEstadoDeCuenta";
-            this.Text = "ReporteBalance";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1138, 476);
+            Controls.Add(panel1);
+            Controls.Add(pictureBox1);
+            Controls.Add(button1);
+            Controls.Add(Mensaje);
+            Controls.Add(label6);
+            Controls.Add(dataGridView1);
+            Controls.Add(label7);
+            Controls.Add(label5);
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "ReporteEstadoDeCuenta";
+            Text = "ReporteBalance";
+            Load += ReporteEstadoDeCuenta_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -339,5 +333,6 @@
         private Label label1;
         private Panel panel2;
         private Panel panel6;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }

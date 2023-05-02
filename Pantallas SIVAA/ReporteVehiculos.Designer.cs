@@ -111,7 +111,7 @@
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(1004, 745);
+            dataGridView1.Size = new Size(874, 375);
             dataGridView1.TabIndex = 47;
             // 
             // label8
@@ -127,7 +127,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.print_FILL0_wght400_GRAD0_opsz48;
-            pictureBox1.Location = new Point(946, 163);
+            pictureBox1.Location = new Point(834, 163);
             pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(47, 33);
@@ -167,7 +167,7 @@
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1024, 69);
+            panel1.Size = new Size(894, 69);
             panel1.TabIndex = 41;
             // 
             // label6
@@ -191,7 +191,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1024, 1001);
+            ClientSize = new Size(894, 631);
             Controls.Add(dataGridView1);
             Controls.Add(label8);
             Controls.Add(pictureBox1);

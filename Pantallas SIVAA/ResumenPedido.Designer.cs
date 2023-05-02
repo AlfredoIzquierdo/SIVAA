@@ -82,8 +82,11 @@
             label43 = new Label();
             label12 = new Label();
             label13 = new Label();
+            pictureBox1 = new PictureBox();
+            printDocument1 = new System.Drawing.Printing.PrintDocument();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // dataGridView1
@@ -656,11 +659,29 @@
             label13.TabIndex = 68;
             label13.Text = "__________________________";
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.print_FILL0_wght400_GRAD0_opsz48;
+            pictureBox1.Location = new Point(823, 209);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(47, 58);
+            pictureBox1.TabIndex = 69;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
+            // 
+            // printDocument1
+            // 
+            printDocument1.BeginPrint += printDocument1_BeginPrint;
+            printDocument1.EndPrint += printDocument1_EndPrint;
+            printDocument1.PrintPage += printDocument1_PrintPage;
+            // 
             // ResumenPedido
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(894, 630);
+            Controls.Add(pictureBox1);
             Controls.Add(label43);
             Controls.Add(lblNoExtProv);
             Controls.Add(label42);
@@ -718,6 +739,7 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel7.ResumeLayout(false);
             panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -783,5 +805,7 @@
         private Label label43;
         private Label label12;
         private Label label13;
+        private PictureBox pictureBox1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }
