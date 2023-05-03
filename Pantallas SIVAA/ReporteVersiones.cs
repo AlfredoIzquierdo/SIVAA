@@ -53,7 +53,9 @@ namespace Pantallas_SIVAA
             paginahtml = paginahtml.Replace("@NUMEROFOLIO", numeroAleatorio.ToString());
 
             string filas = string.Empty;
-            
+            //cabecera
+
+            //llenar tabla
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
                 filas += "<tr>";
