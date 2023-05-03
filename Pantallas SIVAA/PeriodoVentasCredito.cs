@@ -95,7 +95,16 @@ namespace Pantallas_SIVAA
         private void nddia_ValueChanged(object sender, EventArgs e)
         {
             if (comboBox1.SelectedItem.ToString() == "Semana")
-                nddia2.Value = nddia.Value + 7;
+            {
+                if (nddia.Value > 24)
+                {
+                    nddia.Value = 24;
+                    nddia2.Value = 31;
+                }
+                else
+                    nddia2.Value = nddia.Value + 7;
+            }
+                //nddia2.Value = nddia.Value + 7;
         }
     }
 }

@@ -52,6 +52,9 @@ namespace Pantallas_SIVAA
                 con = ven.ListaVentasContadoAnual(año);
                 dataGridView1.DataSource = con;
             }
+            Random rnd = new Random();
+            int numeroAleatorio = rnd.Next(210000, 219001);
+            lblidcot.Text = numeroAleatorio.ToString();
         }
 
         private void ReporteVentaContado_Load(object sender, EventArgs e)

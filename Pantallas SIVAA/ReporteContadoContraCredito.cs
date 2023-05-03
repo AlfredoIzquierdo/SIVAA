@@ -53,6 +53,9 @@ namespace Pantallas_SIVAA
                 con = ven.ListaReporteCreditoVsContadoAnual(año);
                 dataGridView1.DataSource = con;
             }
+            Random rnd = new Random();
+            int numeroAleatorio = rnd.Next(210000, 219001);
+            lblidcot.Text = numeroAleatorio.ToString();
         }
 
         private void ReporteContadoContraCredito_Load(object sender, EventArgs e)
