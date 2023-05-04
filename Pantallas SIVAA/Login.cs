@@ -141,9 +141,10 @@ namespace Pantallas_SIVAA
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Close();
+            
             ContraseñaOlvidada contra = new ContraseñaOlvidada();
             contra.Show();
+            this.Hide();
         }
 
         

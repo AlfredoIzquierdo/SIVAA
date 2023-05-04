@@ -22,32 +22,79 @@ namespace Pantallas_SIVAA
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (numericDiaF.Value < numericDiaI.Value | numericMesF.Value < numericMesI.Value | numericAnoF.Value < numericAnoI.Value)
+            if (cbPeriodo.Text == "" || cmbVendedor.Text == "")
             {
-                MessageBox.Show("La fecha final debe ser menor a la fecha final");
+                MessageBox.Show("Verifique el periodo y el vendedor");
             }
             else
             {
-                CitasPorVendedor citasPorVendedor = new CitasPorVendedor(cmbVendedor.Text,numericDiaI.Value.ToString(),numericMesI.Value.ToString(),numericAnoI.Value.ToString(),numericDiaF.Value.ToString(),numericMesF.Value.ToString(),numericAnoF.Value.ToString());
-                
-                citasPorVendedor.Show();
+                if (numericDiaF.Value < numericDiaI.Value | numericMesF.Value < numericMesI.Value | numericAnoF.Value < numericAnoI.Value)
+                {
+                    MessageBox.Show("La fecha final debe ser menor a la fecha final");
+                }
+                else
+                {
+                    string id;
+                    id = cmbVendedor.Text;
+                    CitasPorVendedor citasPorVendedor = new CitasPorVendedor(cmbVendedor.Text, numericDiaI.Value.ToString(), numericMesI.Value.ToString(), numericAnoI.Value.ToString(), numericDiaF.Value.ToString(), numericMesF.Value.ToString(), numericAnoF.Value.ToString(), id);
+
+                    citasPorVendedor.Show();
+                }
             }
+
+
 
         }
 
         private void PeriodoCitasPorVendedor_Load(object sender, EventArgs e)
         {
+            DateTime dateTime = DateTime.Now;
+            numericAnoF.Value = dateTime.Year;
+            numericDiaF.Value = 31;
+            numericMesF.Value = 12;
+
+            numericAnoI.Value = dateTime.Year;
+            numericDiaI.Value = 01;
+            numericMesI.Value = 01;
+
             cmbVendedor.Items.AddRange(ListadoTotal().ToArray());
-            if (cbPeriodo.Text == "Dia")
+            if (cbPeriodo.Text.Trim() == "Dia")
             {
                 numericMesF.Enabled = false;
                 numericMesI.Enabled = false;
                 numericAnoF.Enabled = false;
                 numericAnoI.Enabled = false;
+                numericDiaF.Enabled = true;
+                numericDiaI.Enabled = true;
             }
+            if (cbPeriodo.Text.Trim() == "Año")
+            {
+                numericMesF.Enabled = false;
+                numericMesI.Enabled = false;
+                numericAnoF.Enabled = true;
+                numericAnoI.Enabled = true;
+                numericDiaF.Enabled = false;
+                numericDiaI.Enabled = false;
 
-
-           
+            }
+            if (cbPeriodo.Text.Trim() == "Mes")
+            {
+                numericMesF.Enabled = true;
+                numericMesI.Enabled = true;
+                numericAnoF.Enabled = false;
+                numericAnoI.Enabled = false;
+                numericDiaF.Enabled = false;
+                numericDiaI.Enabled = false;
+            }
+            if (cbPeriodo.Text.Trim() == "Semana")
+            {
+                numericMesF.Enabled = true;
+                numericMesI.Enabled = true;
+                numericAnoF.Enabled = true;
+                numericAnoI.Enabled = true;
+                numericDiaF.Enabled = true;
+                numericDiaI.Enabled = true;
+            }
 
         }
 
@@ -122,7 +169,7 @@ namespace Pantallas_SIVAA
 
         private void cbPeriodo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbPeriodo.Text == "Dia")
+            if (cbPeriodo.Text.Trim() == "Dia")
             {
                 numericDiaI.Enabled = true;
                 numericDiaF.Enabled = true;
@@ -131,7 +178,7 @@ namespace Pantallas_SIVAA
                 numericAnoF.Enabled = false;
                 numericAnoI.Enabled = false;
             }
-            if (cbPeriodo.Text == "Mes")
+            if (cbPeriodo.Text.Trim() == "Mes")
             {
                 numericMesF.Enabled = true;
                 numericMesI.Enabled = true;
@@ -140,7 +187,7 @@ namespace Pantallas_SIVAA
                 numericDiaI.Enabled = false;
                 numericDiaF.Enabled = false;
             }
-            if (cbPeriodo.Text == "Año")
+            if (cbPeriodo.Text.Trim() == "Año")
             {
                 numericMesF.Enabled = false;
                 numericMesI.Enabled = false;
@@ -149,10 +196,24 @@ namespace Pantallas_SIVAA
                 numericDiaI.Enabled = false;
                 numericDiaF.Enabled = false;
             }
+            if (cbPeriodo.Text.Trim() == "Semana")
+            {
+                numericMesF.Enabled = true;
+                numericMesI.Enabled = true;
+                numericAnoF.Enabled = true;
+                numericAnoI.Enabled = true;
+                numericDiaF.Enabled = true;
+                numericDiaI.Enabled = true;
+            }
+        }
+
+        private void cmbVendedor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
         //dia
-       
+
 
     }
 }

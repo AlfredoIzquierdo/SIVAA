@@ -1,4 +1,5 @@
-﻿using Entidades;
+﻿using Datos;
+using Entidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,8 +16,10 @@ namespace Pantallas_SIVAA
 {
     public partial class CitasPorVendedor : Form
     {
-        string IdEmp; string diaI; string mesI; string anioI; string diaF; string mesF; string anioF;
-        public CitasPorVendedor(string IdEmp, string diaI, string mesI, string anioI, string diaF, string mesF, string anioF)
+        string IdEmp; string diaI; string mesI; string anioI; string diaF; string mesF; string anioF; string _id;
+        Empleado empleado = new Empleado();
+        EmpleadoD empleadoD = new EmpleadoD();
+        public CitasPorVendedor(string IdEmp, string diaI, string mesI, string anioI, string diaF, string mesF, string anioF, string id)
         {
             InitializeComponent();
             this.IdEmp = IdEmp;
@@ -27,13 +30,18 @@ namespace Pantallas_SIVAA
             this.diaF = diaF;
             this.mesF = mesF;
             this.anioF = anioF;
-            
+            this._id = id;
+
 
         }
 
         private void CitasPorVendedor_Load(object sender, EventArgs e)
         {
             List<Cita> citas = ObtenerPdtoxFecha(IdEmp, diaI, mesI, anioI, diaF, mesF, anioF);
+            dataGridView1.DataSource = citas;
+            empleado = empleadoD.ObtenerPdto(_id);
+            lblIdEmpleado.Text = empleado.IDEmpleado;
+            lblNombre.Text = empleado.Nombre + " " + empleado.ApellidoPat;
         }
         public List<Cita> ObtenerPdtoxFecha(string IdEmp, string diaI, string mesI, string anioI, string diaF, string mesF, string anioF)
         {
@@ -63,7 +71,7 @@ namespace Pantallas_SIVAA
                     Cmd.Parameters.AddWithValue("@Mf", mesF);
                     Cmd.Parameters.AddWithValue("@Af", anioF);
                     SqlDataReader Dr = Cmd.ExecuteReader();
-                    if (Dr.Read())
+                    while (Dr.Read())
                     {
                         Cita Pqte = new Cita
                         {

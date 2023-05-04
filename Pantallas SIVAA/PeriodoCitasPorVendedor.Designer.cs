@@ -65,7 +65,7 @@
             button1.BackColor = Color.FromArgb(82, 101, 143);
             button1.Font = new Font("Lucida Fax", 9F, FontStyle.Regular, GraphicsUnit.Point);
             button1.ForeColor = SystemColors.Control;
-            button1.Location = new Point(213, 280);
+            button1.Location = new Point(222, 279);
             button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
             button1.Size = new Size(156, 37);
@@ -87,7 +87,7 @@
             // cbPeriodo
             // 
             cbPeriodo.FormattingEnabled = true;
-            cbPeriodo.Items.AddRange(new object[] { "Dia", "Semana", "Mes ", "Anual" });
+            cbPeriodo.Items.AddRange(new object[] { "Dia", "Semana", "Mes", "Año" });
             cbPeriodo.Location = new Point(301, 38);
             cbPeriodo.Margin = new Padding(3, 2, 3, 2);
             cbPeriodo.Name = "cbPeriodo";
@@ -222,6 +222,7 @@
             // 
             // numericAnoF
             // 
+            numericAnoF.Enabled = false;
             numericAnoF.Location = new Point(466, 117);
             numericAnoF.Margin = new Padding(3, 2, 3, 2);
             numericAnoF.Maximum = new decimal(new int[] { 2024, 0, 0, 0 });
@@ -233,6 +234,7 @@
             // 
             // numericMesF
             // 
+            numericMesF.Enabled = false;
             numericMesF.Location = new Point(395, 117);
             numericMesF.Margin = new Padding(3, 2, 3, 2);
             numericMesF.Maximum = new decimal(new int[] { 12, 0, 0, 0 });
@@ -244,6 +246,7 @@
             // 
             // numericDiaF
             // 
+            numericDiaF.Enabled = false;
             numericDiaF.Location = new Point(331, 117);
             numericDiaF.Margin = new Padding(3, 2, 3, 2);
             numericDiaF.Maximum = new decimal(new int[] { 31, 0, 0, 0 });
@@ -255,6 +258,7 @@
             // 
             // numericAnoI
             // 
+            numericAnoI.Enabled = false;
             numericAnoI.Location = new Point(166, 117);
             numericAnoI.Margin = new Padding(3, 2, 3, 2);
             numericAnoI.Maximum = new decimal(new int[] { 2024, 0, 0, 0 });
@@ -266,6 +270,7 @@
             // 
             // numericMesI
             // 
+            numericMesI.Enabled = false;
             numericMesI.Location = new Point(99, 117);
             numericMesI.Margin = new Padding(3, 2, 3, 2);
             numericMesI.Maximum = new decimal(new int[] { 12, 0, 0, 0 });
@@ -277,6 +282,7 @@
             // 
             // numericDiaI
             // 
+            numericDiaI.Enabled = false;
             numericDiaI.Location = new Point(39, 117);
             numericDiaI.Margin = new Padding(3, 2, 3, 2);
             numericDiaI.Maximum = new decimal(new int[] { 31, 0, 0, 0 });
@@ -293,6 +299,7 @@
             cmbVendedor.Name = "cmbVendedor";
             cmbVendedor.Size = new Size(121, 23);
             cmbVendedor.TabIndex = 44;
+            cmbVendedor.SelectedIndexChanged += cmbVendedor_SelectedIndexChanged;
             // 
             // label15
             // 
