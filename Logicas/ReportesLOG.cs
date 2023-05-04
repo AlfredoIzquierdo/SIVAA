@@ -19,11 +19,29 @@ namespace Logicas
             string ganancias;
             return ganancias = pqtReport.GananciasDeUnCliente(idcliente);
         }
-        public string gananciasEmpleado(string idcliente)
+        public string gananciasEmpleado(string idcliente, int DiaI, int MesI, int AnoI, int DiaF, int MesF, int AnoF,string opcion)
         {
-            string ganancias;
-            return ganancias = pqtReport.GananciasDeUnEmpleado(idcliente);
+            string ganancias="";
+            if (opcion == "Dia")
+            {
+                return ganancias = pqtReport.GananciasDeUnEmpleadoDia(idcliente, DiaI, MesI, AnoI, DiaF, MesF, AnoF);
+            }
+            if (opcion == "Mes")
+            {
+                return ganancias = pqtReport.GananciasDeUnEmpleadoMes(idcliente, DiaI, MesI, AnoI, DiaF, MesF, AnoF);
+            }
+            if (opcion == "Año")
+            {
+                return ganancias = pqtReport.GananciasDeUnEmpleadoAno(idcliente, DiaI, MesI, AnoI, DiaF, MesF, AnoF);
+            }
+            if (opcion == "Semana")
+            {
+                return ganancias = pqtReport.GananciasDeUnEmpleadoDia(idcliente, DiaI, MesI, AnoI, DiaF, MesF, AnoF);
+            }
+
+            return ganancias;
         }
+
         public string gananciasVersion(string idversion)
         {
             string ganancias;
@@ -204,21 +222,21 @@ namespace Logicas
             if (Opcion == "Dia")
             {
 
-                return datos = pqtReport.ListadoEmpleadoVentaCreditoAno(DiaI, MesI, AnoI, DiaF, MesF, AnoF);
+                return datos = pqtReport.ListadoEmpleadoVentaTotalDia(DiaI, MesI, AnoI, DiaF, MesF, AnoF);
             }
             if (Opcion == "Semana")
             {
 
-                return datos = pqtReport.ListadoEmpleadoVentaCreditoAno(DiaI, MesI, AnoI, DiaF, MesF, AnoF);
+                return datos = pqtReport.ListadoEmpleadoVentaTotalDia(DiaI, MesI, AnoI, DiaF, MesF, AnoF);
             }
             if (Opcion == "Mes")
             {
 
-                return datos = pqtReport.ListadoEmpleadoVentaCreditoMes(DiaI, MesI, AnoI, DiaF, MesF, AnoF);
+                return datos = pqtReport.ListadoEmpleadoVentaTotalMes(DiaI, MesI, AnoI, DiaF, MesF, AnoF);
             }
             if (Opcion == "Año")
             {
-                return datos = pqtReport.ListadoEmpleadoVentaCreditoAno(DiaI, MesI, AnoI, DiaF, MesF, AnoF);
+                return datos = pqtReport.ListadoEmpleadoVentaTotalAno(DiaI, MesI, AnoI, DiaF, MesF, AnoF);
             }
             return datos;
         }
@@ -238,6 +256,11 @@ namespace Logicas
         {
             List<Venta> datos = new List<Venta> ();
             if (Opcion == "Dia")
+            {
+
+                return datos = pqtReport.ListadoVentasPorDia(DiaI, MesI, AnoI, DiaF, MesF, AnoF);
+            }
+            if (Opcion == "Semana")
             {
 
                 return datos = pqtReport.ListadoVentasPorDia(DiaI, MesI, AnoI, DiaF, MesF, AnoF);

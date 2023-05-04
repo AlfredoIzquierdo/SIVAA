@@ -55,11 +55,14 @@ namespace Datos
             {
                 //Abro la conexión y creo el Query insertar, eliminar, consultar, elminar, actualizar, consulta individaul, general, orrar todo
                 Cnx.Open();
-                string CdSql = "Select SUM(v.Subtotal)+(COALESCE ((Select SUM(v.Subtotal) AS ingresoGenerado\r\n" +
-                    "From ((Empleado e inner join Cotizacion co on e.IDEmpleado=co.IDEmpleado) inner join VentaCredito venC on co.IDCotizacion=venC.IDCotizacion)inner join Venta v on v.IDVenta=venC.IDVenta\r\n" +
-                    "Where e.IDEmpleado=@Cl),0)) AS ingresoGenerado\r\n" +
-                    "From ((Empleado e inner join Cotizacion co on e.IDEmpleado=co.IDEmpleado) inner join VentaContado venC on co.IDCotizacion=venC.IDCotizacion)inner join Venta v on v.IDVenta=venC.IDVenta\r\n" +
-                    "Where e.IDEmpleado=@Cl\r\n";
+                string CdSql = "SELECT COALESCE((\r\n  " +
+                    "SELECT SUM(venC.TotalFinal)\r\n  " +
+                    "FROM ((Empleado c\r\n  INNER JOIN Cotizacion co ON c.IDEmpleado = co.IDEmpleado)\r\n  " +
+                    "INNER JOIN VentaCredito venC ON co.IDCotizacion = venC.IDCotizacion)\r\n  " +
+                    "INNER JOIN Venta v ON v.IDVenta = venC.IDVenta\r\n  WHERE c.IDEmpleado = @Cl\r\n), 0) " +
+                    "+ COALESCE((\r\n  SELECT SUM(vt.Subtotal)\r\n  " +
+                    "FROM ((Empleado c\r\n  INNER JOIN Cotizacion co ON c.IDEmpleado = co.IDEmpleado)\r\n  INNER JOIN VentaContado venCt ON co.IDCotizacion = venCt.IDCotizacion)\r\n  " +
+                    "INNER JOIN Venta vt ON vt.IDVenta = venCt.IDVenta\r\n  WHERE c.IDEmpleado = @Cl\r\n), 0) AS totalgastado";
                 //Using que crea el comando que voy a ejecutar con relación al query que planeteo
                 using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
                 {
@@ -69,7 +72,7 @@ namespace Datos
                     if (Dr.Read())
                     {
 
-                        ganancias = Convert.ToString(Dr["ingresoGenerado"]);
+                        ganancias = Convert.ToString(Dr["totalgastado"]);
                         return ganancias;
                     }
 
@@ -78,7 +81,113 @@ namespace Datos
             }
             return null;
         }
+        public string GananciasDeUnEmpleadoDia(string idempleado,int DiaI, int MesI, int AnoI, int DiaF, int MesF, int AnoF)
+        {
+            string ganancias = "1224569";
+            //Using que crea la conexión
+            using (SqlConnection Cnx = new SqlConnection(CdCnx))
+            {
+                //Abro la conexión y creo el Query insertar, eliminar, consultar, elminar, actualizar, consulta individaul, general, orrar todo
+                Cnx.Open();
+                string CdSql = "SELECT COALESCE((\r\n  " +
+                    "SELECT SUM(venC.TotalFinal)\r\n  " +
+                    "FROM ((Empleado c\r\n  INNER JOIN Cotizacion co ON c.IDEmpleado = co.IDEmpleado)\r\n  " +
+                    "INNER JOIN VentaCredito venC ON co.IDCotizacion = venC.IDCotizacion)\r\n  " +
+                    "INNER JOIN Venta v ON v.IDVenta = venC.IDVenta\r\n  WHERE c.IDEmpleado = @Cl and v.Dia between "+DiaI.ToString()+" and "+DiaF.ToString()+" and v.Mes between "+MesI.ToString()+" and "+MesF.ToString()+" and v.Año between "+AnoI.ToString()+" and "+AnoF.ToString()+" " +
+                    "\r\n), 0) " +
+                    "+ COALESCE((\r\n  SELECT SUM(vt.Subtotal)\r\n  " +
+                    "FROM ((Empleado c\r\n  INNER JOIN Cotizacion co ON c.IDEmpleado = co.IDEmpleado)\r\n  INNER JOIN VentaContado venCt ON co.IDCotizacion = venCt.IDCotizacion)\r\n  " +
+                    "INNER JOIN Venta vt ON vt.IDVenta = venCt.IDVenta\r\n  WHERE c.IDEmpleado = @Cl and vt.Dia between "+DiaI.ToString()+" and "+DiaF.ToString()+" and vt.Mes between "+MesI.ToString()+" and "+MesF.ToString()+" and vt.Año between "+AnoI.ToString()+" and "+AnoF.ToString()+" " +
+                    "\r\n), 0) " +
+                    "AS totalgastado";
+                //Using que crea el comando que voy a ejecutar con relación al query que planeteo
+                using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
+                {
+                    //Asignar el valor a @Cl
+                    Cmd.Parameters.AddWithValue("@Cl", idempleado);
+                    SqlDataReader Dr = Cmd.ExecuteReader();
+                    if (Dr.Read())
+                    {
 
+                        ganancias = Convert.ToString(Dr["totalgastado"]);
+                        return ganancias;
+                    }
+
+                }
+                Cnx.Close();
+            }
+            return null;
+        }
+        public string GananciasDeUnEmpleadoMes(string idempleado, int DiaI, int MesI, int AnoI, int DiaF, int MesF, int AnoF)
+        {
+            string ganancias = "1224569";
+            //Using que crea la conexión
+            using (SqlConnection Cnx = new SqlConnection(CdCnx))
+            {
+                //Abro la conexión y creo el Query insertar, eliminar, consultar, elminar, actualizar, consulta individaul, general, orrar todo
+                Cnx.Open();
+                string CdSql = "SELECT COALESCE((\r\n  " +
+                    "SELECT SUM(venC.TotalFinal)\r\n  " +
+                    "FROM ((Empleado c\r\n  INNER JOIN Cotizacion co ON c.IDEmpleado = co.IDEmpleado)\r\n  " +
+                    "INNER JOIN VentaCredito venC ON co.IDCotizacion = venC.IDCotizacion)\r\n  " +
+                    "INNER JOIN Venta v ON v.IDVenta = venC.IDVenta\r\n  WHERE c.IDEmpleado = @Cl and v.Mes between "+ MesI.ToString() + " and "+ MesF.ToString() + " and v.Año between "+ AnoI.ToString() + " and "+ AnoF.ToString() + "\r\n), 0) " +
+                    "+ COALESCE((\r\n  SELECT SUM(vt.Subtotal)\r\n  " +
+                    "FROM ((Empleado c\r\n  INNER JOIN Cotizacion co ON c.IDEmpleado = co.IDEmpleado)\r\n  INNER JOIN VentaContado venCt ON co.IDCotizacion = venCt.IDCotizacion)\r\n  " +
+                    "INNER JOIN Venta vt ON vt.IDVenta = venCt.IDVenta\r\n  WHERE c.IDEmpleado = @Cl and vt.Mes between "+MesI.ToString()+" and "+MesF.ToString()+" and vt.Año between "+AnoI.ToString()+" and "+AnoF.ToString() +"\r\n), 0) " +
+                    "AS totalgastado";
+                //Using que crea el comando que voy a ejecutar con relación al query que planeteo
+                using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
+                {
+                    //Asignar el valor a @Cl
+                    Cmd.Parameters.AddWithValue("@Cl", idempleado);
+                    SqlDataReader Dr = Cmd.ExecuteReader();
+                    if (Dr.Read())
+                    {
+
+                        ganancias = Convert.ToString(Dr["totalgastado"]);
+                        return ganancias;
+                    }
+
+                }
+                Cnx.Close();
+            }
+            return null;
+        }
+        public string GananciasDeUnEmpleadoAno(string idempleado, int DiaI, int MesI, int AnoI, int DiaF, int MesF, int AnoF)
+        {
+            string ganancias = "1224569";
+            //Using que crea la conexión
+            using (SqlConnection Cnx = new SqlConnection(CdCnx))
+            {
+                //Abro la conexión y creo el Query insertar, eliminar, consultar, elminar, actualizar, consulta individaul, general, orrar todo
+                Cnx.Open();
+                string CdSql = "SELECT COALESCE((\r\n  " +
+                    "SELECT SUM(venC.TotalFinal)\r\n  " +
+                    "FROM ((Empleado c\r\n  INNER JOIN Cotizacion co ON c.IDEmpleado = co.IDEmpleado)\r\n  " +
+                    "INNER JOIN VentaCredito venC ON co.IDCotizacion = venC.IDCotizacion)\r\n  " +
+                    "INNER JOIN Venta v ON v.IDVenta = venC.IDVenta\r\n  WHERE c.IDEmpleado = @Cl and v.Año between "+AnoI.ToString()+" and "+AnoF.ToString()+" \r\n), 0) " +
+                    "+ COALESCE((\r\n  SELECT SUM(vt.Subtotal)\r\n  " +
+                    "FROM ((Empleado c\r\n  INNER JOIN Cotizacion co ON c.IDEmpleado = co.IDEmpleado)\r\n  INNER JOIN VentaContado venCt ON co.IDCotizacion = venCt.IDCotizacion)\r\n  " +
+                    "INNER JOIN Venta vt ON vt.IDVenta = venCt.IDVenta\r\n  WHERE c.IDEmpleado = @Cl and vt.Año between "+AnoI.ToString()+" and "+AnoF.ToString()+" \r\n), 0)" +
+                    " AS totalgastado";
+                //Using que crea el comando que voy a ejecutar con relación al query que planeteo
+                using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
+                {
+                    //Asignar el valor a @Cl
+                    Cmd.Parameters.AddWithValue("@Cl", idempleado);
+                    SqlDataReader Dr = Cmd.ExecuteReader();
+                    if (Dr.Read())
+                    {
+
+                        ganancias = Convert.ToString(Dr["totalgastado"]);
+                        return ganancias;
+                    }
+
+                }
+                Cnx.Close();
+            }
+            return null;
+        }
         public List<ReportesEntidad> ListadoClienteFrecuenteContadoDia(int DiaI,int MesI,int AnoI,int DiaF,int MesF,int AnoF)
         {
             List<ReportesEntidad> productos = new List<ReportesEntidad>();
@@ -968,7 +1077,7 @@ namespace Datos
                         ReporteEmpleadoVenta Pqte = new ReporteEmpleadoVenta
                         {
                             IDEmpleado = Convert.ToString(Dr["IDEmpleado"]),
-                            VentasRealizadas = Convert.ToString(Dr["VentasRealizadas"])
+                            VentasRealizadas = Convert.ToString(Dr["vecesCompro"])
                         };
                         productos.Add(Pqte);
                     }
@@ -977,6 +1086,87 @@ namespace Datos
             }
             return productos;
         }
+        public List<ReporteEmpleadoVenta> ListadoEmpleadoVentaTotalMes(int DiaI, int MesI, int AnoI, int DiaF, int MesF, int AnoF)
+        {
+            List<ReporteEmpleadoVenta> productos = new List<ReporteEmpleadoVenta>();
+
+            //Vuelvo a crear la conexión
+            using (SqlConnection Cnx = new SqlConnection(CdCnx))
+            {
+                Cnx.Open();
+                //Creo el Query 
+                string CdSql = "SELECT IDEmpleado, SUM(vecescompro) AS vecesCompro\r\nFROM (\r\n  " +
+                    "Select c.IDEmpleado, COUNT(*) AS vecescompro\r\n  " +
+                    "from ((Empleado c inner join Cotizacion co on c.IDEmpleado=co.IDEmpleado) inner join VentaContado venC on co.IDCotizacion=venC.IDCotizacion)Inner Join Venta v on v.IDVenta=venC.IDVenta\r\n  " +
+                    "where v.Mes BETWEEN " + MesI.ToString() + " and " + MesF.ToString() + " and v.Año BETWEEN " + AnoI.ToString() + " and " + AnoF.ToString() + " \r\n  " +
+                    "GROUP BY c.IDEmpleado\r\n  " +
+                    "UNION ALL\r\n  " +
+                    "Select c.IDEmpleado, COUNT(*) AS vecescompro\r\n  " +
+                    "from ((Empleado c inner join Cotizacion co on c.IDEmpleado=co.IDEmpleado) inner join VentaCredito venC on co.IDCotizacion=venC.IDCotizacion)Inner Join Venta v on v.IDVenta=venC.IDVenta\r\n  " +
+                    "where v.Mes BETWEEN " + MesI.ToString() + " and " + MesF.ToString() + " and v.Año BETWEEN " + AnoI.ToString() + " and " + AnoF.ToString() + " \r\n  " +
+                    "GROUP BY c.IDEmpleado\r\n) AS ventas\r\nGROUP BY IDEmpleado\r\nORDER BY vecesCompro DESC;\r\n";
+                using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
+                {
+                    //Asignar el valor a @Cl
+                    //Cmd.Parameters.AddWithValue("@Cl", idcliente);
+                    SqlDataReader Dr = Cmd.ExecuteReader();
+                    //Leo registro por registro que tiene la tabla 
+                    while (Dr.Read())
+                    {
+                        //Cada vez que lo lea se crea un nuevo objeto
+                        ReporteEmpleadoVenta Pqte = new ReporteEmpleadoVenta
+                        {
+                            IDEmpleado = Convert.ToString(Dr["IDEmpleado"]),
+                            VentasRealizadas = Convert.ToString(Dr["vecesCompro"])
+                        };
+                        productos.Add(Pqte);
+                    }
+                }
+                Cnx.Close();
+            }
+            return productos;
+        }
+        public List<ReporteEmpleadoVenta> ListadoEmpleadoVentaTotalAno(int DiaI, int MesI, int AnoI, int DiaF, int MesF, int AnoF)
+        {
+            List<ReporteEmpleadoVenta> productos = new List<ReporteEmpleadoVenta>();
+
+            //Vuelvo a crear la conexión
+            using (SqlConnection Cnx = new SqlConnection(CdCnx))
+            {
+                Cnx.Open();
+                //Creo el Query 
+                string CdSql = "SELECT IDEmpleado, SUM(vecescompro) AS vecesCompro\r\nFROM (\r\n  " +
+                    "Select c.IDEmpleado, COUNT(*) AS vecescompro\r\n  " +
+                    "from ((Empleado c inner join Cotizacion co on c.IDEmpleado=co.IDEmpleado) inner join VentaContado venC on co.IDCotizacion=venC.IDCotizacion)Inner Join Venta v on v.IDVenta=venC.IDVenta\r\n  " +
+                    "where  v.Año BETWEEN " + AnoI.ToString() + " and " + AnoF.ToString() + " \r\n  " +
+                    "GROUP BY c.IDEmpleado\r\n  " +
+                    "UNION ALL\r\n  " +
+                    "Select c.IDEmpleado, COUNT(*) AS vecescompro\r\n  " +
+                    "from ((Empleado c inner join Cotizacion co on c.IDEmpleado=co.IDEmpleado) inner join VentaCredito venC on co.IDCotizacion=venC.IDCotizacion)Inner Join Venta v on v.IDVenta=venC.IDVenta\r\n  " +
+                    "where v.Año BETWEEN " + AnoI.ToString() + " and " + AnoF.ToString() + " \r\n  " +
+                    "GROUP BY c.IDEmpleado\r\n) AS ventas\r\nGROUP BY IDEmpleado\r\nORDER BY vecesCompro DESC;\r\n";
+                using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
+                {
+                    //Asignar el valor a @Cl
+                    //Cmd.Parameters.AddWithValue("@Cl", idcliente);
+                    SqlDataReader Dr = Cmd.ExecuteReader();
+                    //Leo registro por registro que tiene la tabla 
+                    while (Dr.Read())
+                    {
+                        //Cada vez que lo lea se crea un nuevo objeto
+                        ReporteEmpleadoVenta Pqte = new ReporteEmpleadoVenta
+                        {
+                            IDEmpleado = Convert.ToString(Dr["IDEmpleado"]),
+                            VentasRealizadas = Convert.ToString(Dr["vecesCompro"])
+                        };
+                        productos.Add(Pqte);
+                    }
+                }
+                Cnx.Close();
+            }
+            return productos;
+        }
+
 
         public List<Venta> ListadoVentasPorDia(int DiaI, int MesI, int AnoI, int DiaF, int MesF, int AnoF)
         {
@@ -988,7 +1178,7 @@ namespace Datos
                 Cnx.Open();
                 //Creo el Query (todos los registros de la tabla Venta
                 string CdSql = "Select * from Venta " +
-                    "where Dia Between "+DiaI.ToString()+" and "+DiaF.ToString()+" AND Mes="+MesF.ToString()+" and Año="+AnoF.ToString()+"";
+                    "where Dia Between "+DiaI.ToString()+" and "+DiaF.ToString()+" AND Mes between "+MesI.ToString()+" and "+MesF.ToString()+" and Año between "+AnoI.ToString()+" and "+AnoF.ToString()+" ";
                 using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
                 {
                     SqlDataReader Dr = Cmd.ExecuteReader();

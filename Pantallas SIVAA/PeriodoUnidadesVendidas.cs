@@ -34,15 +34,15 @@ namespace Pantallas_SIVAA
 
         private void button1_Click(object sender, EventArgs e)
         {
-        //    if (numericDiaF.Value < numericDiaI.Value | numericMesF.Value < numericMesI.Value | numericAnoF.Value < numericAnoI.Value)
-        //    {
-        //        MessageBox.Show("Ingrese una fecha valida");
-        //    }
-        //    else
-           // {
-                ReporteUnidadesVendidas C = new ReporteUnidadesVendidas(_pqt, (int)numericDiaI.Value, (int)numericMesI.Value, (int)numericAnoI.Value, (int)numericDiaF.Value, (int)numericMesF.Value, (int)numericAnoF.Value, cbPeriodoVeh.Text);
-                this.Close();
-                C.Show();
+            //    if (numericDiaF.Value < numericDiaI.Value | numericMesF.Value < numericMesI.Value | numericAnoF.Value < numericAnoI.Value)
+            //    {
+            //        MessageBox.Show("Ingrese una fecha valida");
+            //    }
+            //    else
+            // {
+            ReporteUnidadesVendidas C = new ReporteUnidadesVendidas(_pqt, (int)numericDiaI.Value, (int)numericMesI.Value, (int)numericAnoI.Value, (int)numericDiaF.Value, (int)numericMesF.Value, (int)numericAnoF.Value, cbPeriodoVeh.Text);
+            this.Close();
+            C.Show();
             //}
 
 
@@ -118,6 +118,11 @@ namespace Pantallas_SIVAA
                 numericDiaI.Enabled = false;
                 numericDiaF.Enabled = false;
             }
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

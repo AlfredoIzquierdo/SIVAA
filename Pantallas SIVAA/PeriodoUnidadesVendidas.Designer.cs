@@ -107,6 +107,7 @@
             label14.Size = new Size(32, 20);
             label14.TabIndex = 43;
             label14.Text = "Dia";
+            label14.Click += label14_Click;
             // 
             // label11
             // 

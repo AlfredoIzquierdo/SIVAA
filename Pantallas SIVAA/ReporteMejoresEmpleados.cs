@@ -49,34 +49,38 @@ namespace Pantallas_SIVAA
             EmpleadosContado = reportesLOG.listadoEmpleadoVentasContado(diaI, mesI, AnoI, diaF, mesF, AnoF, opcion);
             EmpleadosCredito = reportesLOG.listadoEmpleadoVentasCredito(diaI, mesI, AnoI, diaF, mesF, AnoF, opcion);
             EmpleadoTotal = reportesLOG.listadoEmpleadoVentasTotal(diaI, mesI, AnoI, diaF, mesF, AnoF, opcion);
+            int i = 0;
             foreach (ReporteEmpleadoVenta x in EmpleadoTotal)
             {
                 Empleado empleadoActual = new Empleado();
                 empleadoActual = empleadoLog.LeerPorClave(x.IDEmpleado);
                 string nombrecompleto1 = empleadoActual.Nombre.Trim() + " " + empleadoActual.ApellidoPat.Trim() + " " + empleadoActual.ApellidoMat.Trim();
                 bool bandera = false;
+                int rowIndex = dgvEmpleadosV.Rows.Add(); // Agregar una nueva fila al DataGridView y obtener su índice
+                dgvEmpleadosV.Rows[rowIndex].Cells["Column1"].Value = x.IDEmpleado;
+                dgvEmpleadosV.Rows[rowIndex].Cells["nombreVendedor"].Value = nombrecompleto1;
+
                 foreach (ReporteEmpleadoVenta z in EmpleadosContado)
                 {
-
                     if (x.IDEmpleado == z.IDEmpleado)
                     {
-
-                        dgvEmpleadosV.Rows.Add(x.IDEmpleado, nombrecompleto1, z.VentasRealizadas, x.VentasRealizadas, x.VentasRealizadas, reportesLOG.gananciasEmpleado(x.IDEmpleado));
+                        dgvEmpleadosV.Rows[rowIndex].Cells["ventasContado"].Value = z.VentasRealizadas;
                     }
-
+                    
                 }
+
                 foreach (ReporteEmpleadoVenta z in EmpleadosCredito)
                 {
-
                     if (x.IDEmpleado == z.IDEmpleado)
                     {
-
-                        dgvEmpleadosV.Rows.Add(x.IDEmpleado, nombrecompleto1, z.VentasRealizadas, x.VentasRealizadas, x.VentasRealizadas, reportesLOG.gananciasEmpleado(x.IDEmpleado));
+                        dgvEmpleadosV.Rows[rowIndex].Cells["ventasCredito"].Value = z.VentasRealizadas;
                     }
-
+                   
                 }
-                //dgvEmpleadosV.Rows.Add(x.IDEmpleado, nombrecompleto1, z.VentasRealizadas, x.VentasRealizadas, x.VentasRealizadas, reportesLOG.gananciasEmpleado(x.IDEmpleado));
 
+                dgvEmpleadosV.Rows[rowIndex].Cells["totalVen"].Value = x.VentasRealizadas;
+                dgvEmpleadosV.Rows[rowIndex].Cells["ganancias"].Value = reportesLOG.gananciasEmpleado(x.IDEmpleado, diaI, mesI, AnoI, diaF, mesF, AnoF,opcion);
+                i++;
             }
         }
 

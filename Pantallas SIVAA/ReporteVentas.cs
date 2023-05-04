@@ -39,6 +39,7 @@ namespace Pantallas_SIVAA
             lblidcot.Text = numeroAleatorio.ToString();
             List<Venta> ventas = new List<Venta>();
             ventas = reportesLOG.ListadoVentas(diaI, mesI, AnoI, diaF, mesF, AnoF, opcion);
+            int i = 0;
             //Parte de abajo
             foreach (Venta x in ventas)
             {
