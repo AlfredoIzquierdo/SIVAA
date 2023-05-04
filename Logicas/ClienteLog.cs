@@ -138,6 +138,11 @@ namespace Logicas
             //Método que obtiene la lista dinámica de todos los registro que tiene mi tabla
             return Pdto.ListadoTotal();
         }
+        public List<Cliente> ListadoAllActivos()
+        {
+            //Método que obtiene la lista dinámica de todos los registro que tiene mi tabla
+            return Pdto.ListadoTotalActivos();
+        }
         public List<EstadoDeCuenta> Cuenta()
         {
             //Método que obtiene la lista dinámica de todos los registro que tiene mi tabla

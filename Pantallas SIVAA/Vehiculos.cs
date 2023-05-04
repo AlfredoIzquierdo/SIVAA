@@ -12,6 +12,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -25,6 +26,7 @@ namespace Pantallas_SIVAA
         readonly VehiculoLog vehiculo = new VehiculoLog();
         string id = null;
         Empleado _pqt;
+        List<Vehiculo> listas= new List<Vehiculo> ();
         public Vehiculos(Empleado pqt)
         {
             InitializeComponent();
@@ -127,19 +129,19 @@ namespace Pantallas_SIVAA
             }
 
         }
-        List<Vehiculo> listas;
+      
         private void Vehiculos_Load(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
             List<Vehiculo> veh = vehiculo.ListadoAll();
-            listas = veh;
+            listas.Clear();
             foreach (Vehiculo x in veh)
             {
                 if (x.EstadoVehiculo.Trim() == "Activo")
                 {
 
                     dataGridView1.Rows.Add(x.IDVehiculo, x.Nombre);
-
+                    listas.Add(x);
                 }
             }
             switch (_pqt.Tipo.Trim())
@@ -199,7 +201,8 @@ namespace Pantallas_SIVAA
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            ReporteVehiculos rp = new ReporteVehiculos(listas);
+
+            ReporteVehiculos rp = new ReporteVehiculos(listas,_pqt);
             rp.Show();
         }
 
@@ -209,14 +212,14 @@ namespace Pantallas_SIVAA
             {
                 dataGridView1.Rows.Clear();
                 List<Vehiculo> veh = vehiculo.ListadoEspecifico(txtValorBusqueda.Text, cmbOpcionBusqueda.Text);
-                listas = veh;
+                listas.Clear();
                 foreach (Vehiculo x in veh)
                 {
                     if (x.EstadoVehiculo.Trim() == "Activo")
                     {
 
                         dataGridView1.Rows.Add(x.IDVehiculo, x.Nombre);
-
+                        listas.Add(x);
                     }
                 }
             }
@@ -251,5 +254,7 @@ namespace Pantallas_SIVAA
                 }
             }
         }
+
+       
     }
 }

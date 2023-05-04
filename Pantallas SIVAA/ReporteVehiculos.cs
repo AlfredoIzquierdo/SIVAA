@@ -16,15 +16,17 @@ namespace Pantallas_SIVAA
         List<Vehiculo> lista;
         private bool isFormBorderStyleNone = false;
         private bool isFormBorderStyleChanged = false;
-        public ReporteVehiculos(List<Vehiculo> lista)
+        Empleado _pqt;
+        public ReporteVehiculos(List<Vehiculo> lista,Empleado pqt)
         {
             InitializeComponent();
             this.lista = lista;
+            _pqt= pqt;
         }
 
         private void ReporteVehiculos_Load(object sender, EventArgs e)
         {
-            label7.Text = "Alfredo Izquierdo";
+            label7.Text = _pqt.Nombre.Trim()+" "+_pqt.ApellidoPat.Trim()+" "+_pqt.ApellidoMat.Trim();
             label8.Text = DateTime.Now.ToString();
             dataGridView1.DataSource = lista;
         }

@@ -329,7 +329,47 @@ namespace Datos
             }
             return productos;
         }
-        
+        public List<Cliente> ListadoTotalActivos()
+        {
+            List<Cliente> productos = new List<Cliente>();
+
+            //Vuelvo a crear la conexión
+            using (SqlConnection Cnx = new SqlConnection(CdCnx))
+            {
+                Cnx.Open();
+                //Creo el Query (todos los registros de la tabla cliente
+                string CdSql = "Select * from Cliente where EstadoCliente='Activo'";
+                using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
+                {
+                    SqlDataReader Dr = Cmd.ExecuteReader();
+                    //Leo registro por registro que tiene la tabla 
+                    while (Dr.Read())
+                    {
+                        //Cada vez que lo lea se crea un nuevo objeto
+                        Cliente Pqte = new Cliente
+                        {
+                            IDCliente = Convert.ToString(Dr["IDCliente"]),
+                            Nombre = Convert.ToString(Dr["Nombre"]),
+                            ApellidoPat = Convert.ToString(Dr["ApellidoPaterno"]),
+                            ApellidoMat = Convert.ToString(Dr["ApellidoMaterno"]),
+                            RFC = Convert.ToString(Dr["RFC"]),
+                            Correo = Convert.ToString(Dr["Correo"]),
+                            Telefono = Convert.ToString(Dr["Telefono"]),
+                            NoExterior = Convert.ToString(Dr["NoExterior"]),
+                            Colonia = Convert.ToString(Dr["Colonia"]),
+                            Ciudad = Convert.ToString(Dr["Ciudad"]),
+                            Estado = Convert.ToString(Dr["Estado"]),
+                            EstadoCliente = Convert.ToString(Dr["EstadoCliente"])
+
+                        };
+                        productos.Add(Pqte);
+                    }
+                }
+                Cnx.Close();
+            }
+            return productos;
+        }
+
         public List<Cliente> ListadoTotalESP(string nom, string app)
         {
             List<Cliente> productos = new List<Cliente>();

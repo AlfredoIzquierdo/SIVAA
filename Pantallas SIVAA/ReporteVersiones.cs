@@ -33,7 +33,7 @@ namespace Pantallas_SIVAA
 
         private void ReporteVersiones_Load(object sender, EventArgs e)
         {
-            label7.Text = _pqt.Nombre.ToString() + " "+_pqt.ApellidoPat.ToString();
+            label7.Text = _pqt.Nombre.ToString() + " " + _pqt.ApellidoPat.ToString();
             label8.Text = DateTime.Now.ToString();
             dataGridView1.DataSource = lista;
         }

@@ -119,10 +119,10 @@ namespace Pantallas_SIVAA
             //datas
             //dataGridView1.DataSource = "";
             //dataGridView2.DataSource = "";
-            dgvElegirAuto.DataSource = "";
+            //dgvElegirAuto.DataSource = "";
             dataGridView4.DataSource = "";
             dataGridView5.DataSource = "";
-            dgvElegirVenta.DataSource = "";
+            //dgvElegirVenta.DataSource = "";
             dataGridView1.DataSource = "";
 
             //deshabilitar botones
@@ -350,7 +350,7 @@ namespace Pantallas_SIVAA
                     break;
             }
             dataGridView4.DataSource = "";
-            List<Cliente> listado = PqteLog.ListadoAll();
+            List<Cliente> listado = PqteLog.ListadoAllActivos();
             if (listado.Count > 0)
             {
                 dataGridView4.AutoGenerateColumns = false;
@@ -431,8 +431,11 @@ namespace Pantallas_SIVAA
                 dataGridView5.Columns["Column35"].DataPropertyName = "PrecioInicial";
             }
             else
+            {
                 MessageBox.Show("No hay registro de cotizacion a contado de ese cliente");
-            dataGridView5.ClearSelection();
+                dataGridView5.ClearSelection();
+            }
+               
         }
         public void mostrarcotizacionescredito()
         {
@@ -456,8 +459,12 @@ namespace Pantallas_SIVAA
                 dataGridView5.Columns["Column35"].DataPropertyName = "PrecioInicial";
             }
             else
-                MessageBox.Show("No hay registro de cotizaciones a credito de ese cliente");
-            dataGridView5.ClearSelection();
+            {
+MessageBox.Show("No hay registro de cotizaciones a credito de ese cliente");
+                dataGridView5.ClearSelection();
+            }
+                
+           
         }
         private void tabPage3_Click(object sender, EventArgs e)
         {
@@ -630,31 +637,31 @@ namespace Pantallas_SIVAA
             List<UnidadNoUsar> listado = PqteLog5.ListadoESPECIFICO(ver);
             if (listado.Count > 0)
             {
-                dgvElegirAuto.AutoGenerateColumns = false;
-                dgvElegirAuto.DataSource = listado;
-                dgvElegirAuto.Columns["Column21"].DataPropertyName = "NoSerie";
-                dgvElegirAuto.Columns["Column22"].DataPropertyName = "Vehiculo";
-                dgvElegirAuto.Columns["Column23"].DataPropertyName = "Version";
-                dgvElegirAuto.Columns["Column24"].DataPropertyName = "Modelo";
-                dgvElegirAuto.Columns["Column36"].DataPropertyName = "Color";
+                //dgvElegirAuto.AutoGenerateColumns = false;
+                //dgvElegirAuto.DataSource = listado;
+                //dgvElegirAuto.Columns["Column21"].DataPropertyName = "NoSerie";
+                //dgvElegirAuto.Columns["Column22"].DataPropertyName = "Vehiculo";
+                //dgvElegirAuto.Columns["Column23"].DataPropertyName = "Version";
+                //dgvElegirAuto.Columns["Column24"].DataPropertyName = "Modelo";
+                //dgvElegirAuto.Columns["Column36"].DataPropertyName = "Color";
             }
             else
                 MessageBox.Show("No hay autos disponibles de esa version por el momento");
-            dgvElegirAuto.ClearSelection();
+            //dgvElegirAuto.ClearSelection();
         }
 
         private void dataGridView3_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgvElegirAuto.CurrentCell.RowIndex >= 0)
-            {
-                int i = dgvElegirAuto.CurrentCell.RowIndex;
-                //MessageBox.Show("Columna " + i);
-                txtColor.Text = dgvElegirAuto[4, i].Value.ToString();
-                txtSerie.Text = dgvElegirAuto[0, i].Value.ToString();
-                txtVehiculo.Text = dgvElegirAuto[1, i].Value.ToString();
-                txtVersion.Text = dgvElegirAuto[2, i].Value.ToString();
-                txtAño.Text = dgvElegirAuto[3, i].Value.ToString();
-            }
+            //if (dgvElegirAuto.CurrentCell.RowIndex >= 0)
+            //{
+            //    int i = dgvElegirAuto.CurrentCell.RowIndex;
+            //    //MessageBox.Show("Columna " + i);
+            //    txtColor.Text = dgvElegirAuto[4, i].Value.ToString();
+            //    txtSerie.Text = dgvElegirAuto[0, i].Value.ToString();
+            //    txtVehiculo.Text = dgvElegirAuto[1, i].Value.ToString();
+            //    txtVersion.Text = dgvElegirAuto[2, i].Value.ToString();
+            //    txtAño.Text = dgvElegirAuto[3, i].Value.ToString();
+            //}
         }
 
         private void tabPage3_Enter(object sender, EventArgs e)
@@ -675,7 +682,7 @@ namespace Pantallas_SIVAA
             txtApClien.Text = "";
             //mostrarUnidades();
             dgvClientCot.DataSource = "";
-            List<Cliente> listado = PqteLog.ListadoAll();
+            List<Cliente> listado = PqteLog.ListadoAllActivos();
             if (listado.Count > 0)
             {
                 dgvClientCot.AutoGenerateColumns = false;
@@ -965,163 +972,163 @@ namespace Pantallas_SIVAA
 
         private void btnGuardarEntrega_Click(object sender, EventArgs e)
         {
-            if (textBox3.Text == "" || textBox8.Text == "")
-            {
-                MessageBox.Show("Favor de escoger una venta para que pueda elegir el auto");
-            }
-            if (textBox4.Text == "")
-            {
-                MessageBox.Show("Favor de escoger un auto");
-            }
-            Venta pqt; ;
+            //if (textBox3.Text == "" || textBox8.Text == "")
+            //{
+            //    MessageBox.Show("Favor de escoger una venta para que pueda elegir el auto");
+            //}
+            //if (textBox4.Text == "")
+            //{
+            //    MessageBox.Show("Favor de escoger un auto");
+            //}
+            //Venta pqt; ;
 
-            k = rn.Next(250, 600);
-            pqt = PqteLog2.LeerPorClave(textBox3.Text.ToString());
+            //k = rn.Next(250, 600);
+            //pqt = PqteLog2.LeerPorClave(textBox3.Text.ToString());
 
-            if (pqt.TipoVenta == "CONTADO   ")
-            {
-                try
-                {
-                    string id = "", serie = "";
-                    id = pqt.IDVenta;
-                    serie = textBox4.Text;
-                    PqteLog2.ModificarAuto(id, serie);
+            //if (pqt.TipoVenta == "CONTADO   ")
+            //{
+            //    try
+            //    {
+            //        string id = "", serie = "";
+            //        id = pqt.IDVenta;
+            //        serie = textBox4.Text;
+            //        PqteLog2.ModificarAuto(id, serie);
 
-                    //Modificar estado de venta
-                    string est = "FINALIZADO";
-                    PqteLog3.ModificarEstatus(id, est);
-                    //auto vendido modificar
-                    string est2 = "Vendido";
-                    string id2 = "";
-                    id2 = serie;
-                    //id2 = textBox3.Text;
-                    PqteLog5.ModificarEstatus(serie, "Vendido");
-                    //MessageBox.Show("serie= " + serie + "\r\nEstatus auto cambio= " + est2);
-                    //MessageBox.Show("Estatus auto cambio= " + est2);
-                    if (PqteLog2.Mensaje.Length != 0)
-                    {
-                        //Hubo un error
-                        MessageBox.Show(PqteLog2.Mensaje.ToString(), "Mensaje de Error");
-                    }
-                    else
-                    {
-                        //MessageBox.Show("Venta guardada exitosamente en la B.D");
-                        //Limpiar();
+            //        //Modificar estado de venta
+            //        string est = "FINALIZADO";
+            //        PqteLog3.ModificarEstatus(id, est);
+            //        //auto vendido modificar
+            //        string est2 = "Vendido";
+            //        string id2 = "";
+            //        id2 = serie;
+            //        //id2 = textBox3.Text;
+            //        PqteLog5.ModificarEstatus(serie, "Vendido");
+            //        //MessageBox.Show("serie= " + serie + "\r\nEstatus auto cambio= " + est2);
+            //        //MessageBox.Show("Estatus auto cambio= " + est2);
+            //        if (PqteLog2.Mensaje.Length != 0)
+            //        {
+            //            //Hubo un error
+            //            MessageBox.Show(PqteLog2.Mensaje.ToString(), "Mensaje de Error");
+            //        }
+            //        else
+            //        {
+            //            //MessageBox.Show("Venta guardada exitosamente en la B.D");
+            //            //Limpiar();
 
-                        //Metodo de factura
-                        //vehiculosD[0] = txtVehiculo.Text;
-                        //vehiculosD[1] = txtVersion.Text;
-                        //vehiculosD[2] = txtAño.Text;
-                        //string id = txtid.Text;
-                        //Factura factura = new Factura(pqt, id, txtid.Text, TXTAPP.Text, TXTIDEMP.Text, vehiculosD);
-                        //factura.Show();
-                    }
-                    //Parte donde se guarda la venta a contado
-                    if (PqteLog2.Mensaje.Length == 0)
-                    {
+            //            //Metodo de factura
+            //            //vehiculosD[0] = txtVehiculo.Text;
+            //            //vehiculosD[1] = txtVersion.Text;
+            //            //vehiculosD[2] = txtAño.Text;
+            //            //string id = txtid.Text;
+            //            //Factura factura = new Factura(pqt, id, txtid.Text, TXTAPP.Text, TXTIDEMP.Text, vehiculosD);
+            //            //factura.Show();
+            //        }
+            //        //Parte donde se guarda la venta a contado
+            //        if (PqteLog2.Mensaje.Length == 0)
+            //        {
 
-                        if (PqteLog5.Mensaje.Length != 0)
-                        {
-                            //Hubo un error
-                            MessageBox.Show(PqteLog3.Mensaje.ToString(), "Mensaje de Error");
-                        }
-                        else
-                        {
-                            //MessageBox.Show("Cambio de estatus exitoso en la B.D \r\n\r\n Estatus = " + est);
-                            k++;
-                            btncompraven.Enabled = true;
-                            //Limpiar();
-                        }
-                        if (PqteLog3.Mensaje.Length != 0)
-                        {
-                            //Hubo un error
-                            MessageBox.Show(PqteLog3.Mensaje.ToString(), "Mensaje de Error");
-                        }
-                        else
-                        {
-                            //MessageBox.Show("Cambio de estatus exitoso en la B.D \r\n\r\n Estatus = " + est);
+            //            if (PqteLog5.Mensaje.Length != 0)
+            //            {
+            //                //Hubo un error
+            //                MessageBox.Show(PqteLog3.Mensaje.ToString(), "Mensaje de Error");
+            //            }
+            //            else
+            //            {
+            //                //MessageBox.Show("Cambio de estatus exitoso en la B.D \r\n\r\n Estatus = " + est);
+            //                k++;
+            //                btncompraven.Enabled = true;
+            //                //Limpiar();
+            //            }
+            //            if (PqteLog3.Mensaje.Length != 0)
+            //            {
+            //                //Hubo un error
+            //                MessageBox.Show(PqteLog3.Mensaje.ToString(), "Mensaje de Error");
+            //            }
+            //            else
+            //            {
+            //                //MessageBox.Show("Cambio de estatus exitoso en la B.D \r\n\r\n Estatus = " + est);
 
-                            k++;
-                            //btncompraven.Enabled = true;
-                            btnContratoCompraVenta.Enabled = true;
-                            //Limpiar();
-                        }
-                    }
+            //                k++;
+            //                //btncompraven.Enabled = true;
+            //                btnContratoCompraVenta.Enabled = true;
+            //                //Limpiar();
+            //            }
+            //        }
 
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(String.Format("Error {0}", ex.Message, "Error inesperado "));
-                }
-            }
-            //*************************************************************
-            if (pqt.TipoVenta == "CREDITO   ")
-            {
-                try
-                {
-                    string id = "", serie = "";
-                    id = pqt.IDVenta;
-                    serie = textBox4.Text;
-                    PqteLog2.ModificarAuto(id, serie);
-                    //modificar auto vendido
-                    string est2 = "Vendido";
-                    string id2 = "";
-                    id2 = serie;
-                    //id2 = textBox3.Text;
-                    PqteLog5.ModificarEstatus(id2, est2);
-                    //MessageBox.Show("serie= " + serie + "\r\nEstatus auto cambio= " + est2);
-                    if (PqteLog5.Mensaje.Length != 0)
-                    {
-                        //Hubo un error
-                        MessageBox.Show(PqteLog3.Mensaje.ToString(), "Mensaje de Error");
-                    }
-                    else
-                    {
-                        //MessageBox.Show("Cambio de estatus exitoso en la B.D \r\n\r\n Estatus = " + est2);
-                        k++;
-                        btncompraven.Enabled = true;
-                        //Limpiar();
-                    }
-                    if (PqteLog2.Mensaje.Length != 0)
-                    {
-                        //Hubo un error
-                        MessageBox.Show(PqteLog2.Mensaje.ToString(), "Mensaje de Error");
-                    }
-                    else
-                    {
-                    }
-                    //Parte donde se guarda la venta a credito
-                    if (PqteLog2.Mensaje.Length == 0)
-                    {
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        MessageBox.Show(String.Format("Error {0}", ex.Message, "Error inesperado "));
+            //    }
+            //}
+            ////*************************************************************
+            //if (pqt.TipoVenta == "CREDITO   ")
+            //{
+            //    try
+            //    {
+            //        string id = "", serie = "";
+            //        id = pqt.IDVenta;
+            //        serie = textBox4.Text;
+            //        PqteLog2.ModificarAuto(id, serie);
+            //        //modificar auto vendido
+            //        string est2 = "Vendido";
+            //        string id2 = "";
+            //        id2 = serie;
+            //        //id2 = textBox3.Text;
+            //        PqteLog5.ModificarEstatus(id2, est2);
+            //        //MessageBox.Show("serie= " + serie + "\r\nEstatus auto cambio= " + est2);
+            //        if (PqteLog5.Mensaje.Length != 0)
+            //        {
+            //            //Hubo un error
+            //            MessageBox.Show(PqteLog3.Mensaje.ToString(), "Mensaje de Error");
+            //        }
+            //        else
+            //        {
+            //            //MessageBox.Show("Cambio de estatus exitoso en la B.D \r\n\r\n Estatus = " + est2);
+            //            k++;
+            //            btncompraven.Enabled = true;
+            //            //Limpiar();
+            //        }
+            //        if (PqteLog2.Mensaje.Length != 0)
+            //        {
+            //            //Hubo un error
+            //            MessageBox.Show(PqteLog2.Mensaje.ToString(), "Mensaje de Error");
+            //        }
+            //        else
+            //        {
+            //        }
+            //        //Parte donde se guarda la venta a credito
+            //        if (PqteLog2.Mensaje.Length == 0)
+            //        {
 
-                        string est = "ACTIVO";
-                        PqteLog33.ModificarEstatus(id, est);
-                        if (PqteLog33.Mensaje.Length != 0)
-                        {
-                            //Hubo un error
-                            MessageBox.Show(PqteLog33.Mensaje.ToString(), "Mensaje de Error");
-                        }
-                        else
-                        {
-                            //MessageBox.Show("Cambio de estatus exitoso en la B.D \r\n\r\n Estatus = " + est);
-                            k++;
+            //            string est = "ACTIVO";
+            //            PqteLog33.ModificarEstatus(id, est);
+            //            if (PqteLog33.Mensaje.Length != 0)
+            //            {
+            //                //Hubo un error
+            //                MessageBox.Show(PqteLog33.Mensaje.ToString(), "Mensaje de Error");
+            //            }
+            //            else
+            //            {
+            //                //MessageBox.Show("Cambio de estatus exitoso en la B.D \r\n\r\n Estatus = " + est);
+            //                k++;
 
-                            btncompraven.Enabled = true;
+            //                btncompraven.Enabled = true;
 
-                            //Limpiar();
-                        }
+            //                //Limpiar();
+            //            }
 
-                    }
+            //        }
 
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(String.Format("Error {0}", ex.Message, "Error inesperado "));
-                }
-            }
-            btnFacturaEntrega.Enabled = true;
-            btnContratoCompraVenta.Enabled = true;
-            //LimpiarEntregas();
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        MessageBox.Show(String.Format("Error {0}", ex.Message, "Error inesperado "));
+            //    }
+            //}
+            //btnFacturaEntrega.Enabled = true;
+            //btnContratoCompraVenta.Enabled = true;
+            ////LimpiarEntregas();
         }
 
         private void btnClienteEntrega_Click(object sender, EventArgs e)
@@ -1132,93 +1139,48 @@ namespace Pantallas_SIVAA
         private void tabPage2_Enter(object sender, EventArgs e)
         {
 
-            List<VentasEntrega> listado = PqteLog2.ListadoAllVentasEntrega();
-            if (listado.Count > 0)
-            {
-                dgvElegirVenta.AutoGenerateColumns = false;
-                dgvElegirVenta.DataSource = listado;
-                dgvElegirVenta.Columns["dataGridViewTextBoxColumn1"].DataPropertyName = "IDVenta";
-                dgvElegirVenta.Columns["dataGridViewTextBoxColumn2"].DataPropertyName = "Nombre";
-                dgvElegirVenta.Columns["dataGridViewTextBoxColumn3"].DataPropertyName = "ApellidoPaterno";
-                dgvElegirVenta.Columns["dataGridViewTextBoxColumn4"].DataPropertyName = "ApellidoMaterno";
-                dgvElegirVenta.Columns["dataGridViewTextBoxColumn5"].DataPropertyName = "Dia";
-                dgvElegirVenta.Columns["dataGridViewTextBoxColumn6"].DataPropertyName = "Mes";
-                dgvElegirVenta.Columns["Column37"].DataPropertyName = "Año";
-                dgvElegirVenta.Columns["Column43"].DataPropertyName = "Hora";
-                dgvElegirVenta.Columns["Column38"].DataPropertyName = "TipoVenta";
-                dgvElegirVenta.Columns["Column39"].DataPropertyName = "Vehiculo";
-                dgvElegirVenta.Columns["Column40"].DataPropertyName = "Version";
-                dgvElegirVenta.Columns["Column41"].DataPropertyName = "Cilindraje";
-                dgvElegirVenta.Columns["Column42"].DataPropertyName = "Transmision";
-                dgvElegirVenta.Columns["Column1"].DataPropertyName = "Modelo";
+            //List<VentasEntrega> listado = PqteLog2.ListadoAllVentasEntrega();
+            //if (listado.Count > 0)
+            //{
+            //    dgvElegirVenta.AutoGenerateColumns = false;
+            //    dgvElegirVenta.DataSource = listado;
+            //    dgvElegirVenta.Columns["dataGridViewTextBoxColumn1"].DataPropertyName = "IDVenta";
+            //    dgvElegirVenta.Columns["dataGridViewTextBoxColumn2"].DataPropertyName = "Nombre";
+            //    dgvElegirVenta.Columns["dataGridViewTextBoxColumn3"].DataPropertyName = "ApellidoPaterno";
+            //    dgvElegirVenta.Columns["dataGridViewTextBoxColumn4"].DataPropertyName = "ApellidoMaterno";
+            //    dgvElegirVenta.Columns["dataGridViewTextBoxColumn5"].DataPropertyName = "Dia";
+            //    dgvElegirVenta.Columns["dataGridViewTextBoxColumn6"].DataPropertyName = "Mes";
+            //    dgvElegirVenta.Columns["Column37"].DataPropertyName = "Año";
+            //    dgvElegirVenta.Columns["Column43"].DataPropertyName = "Hora";
+            //    dgvElegirVenta.Columns["Column38"].DataPropertyName = "TipoVenta";
+            //    dgvElegirVenta.Columns["Column39"].DataPropertyName = "Vehiculo";
+            //    dgvElegirVenta.Columns["Column40"].DataPropertyName = "Version";
+            //    dgvElegirVenta.Columns["Column41"].DataPropertyName = "Cilindraje";
+            //    dgvElegirVenta.Columns["Column42"].DataPropertyName = "Transmision";
+            //    dgvElegirVenta.Columns["Column1"].DataPropertyName = "Modelo";
 
-            }
-            else
-                MessageBox.Show("No hay ventas pendientes de entregar autos");
-            dgvElegirVenta.ClearSelection();
+            //}
+            //else
+            //    MessageBox.Show("No hay ventas pendientes de entregar autos");
+            //dgvElegirVenta.ClearSelection();
         }
 
         private void cbFiltrarVentaEntrega_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbFiltrarVentaEntrega.SelectedIndex == 0)
-            {
-                mostrarventasentregacontado();
-            }
-            if (cbFiltrarVentaEntrega.SelectedIndex == 1)
-            {
-                mostrarventasentregacredito();
-            }
+            //if (cbFiltrarVentaEntrega.SelectedIndex == 0)
+            //{
+            //    mostrarventasentregacontado();
+            //}
+            //if (cbFiltrarVentaEntrega.SelectedIndex == 1)
+            //{
+            //    mostrarventasentregacredito();
+            //}
         }
         public void mostrarventasentregacontado()
         {
             List<VentasEntrega> listado = PqteLog2.ListadoAllVentasEntregaContado();
             if (listado.Count > 0)
             {
-                dgvElegirVenta.AutoGenerateColumns = false;
-                dgvElegirVenta.DataSource = listado;
-                dgvElegirVenta.Columns["dataGridViewTextBoxColumn1"].DataPropertyName = "IDVenta";
-                dgvElegirVenta.Columns["dataGridViewTextBoxColumn2"].DataPropertyName = "Nombre";
-                dgvElegirVenta.Columns["dataGridViewTextBoxColumn3"].DataPropertyName = "ApellidoPaterno";
-                dgvElegirVenta.Columns["dataGridViewTextBoxColumn4"].DataPropertyName = "ApellidoMaterno";
-                dgvElegirVenta.Columns["dataGridViewTextBoxColumn5"].DataPropertyName = "Dia";
-                dgvElegirVenta.Columns["dataGridViewTextBoxColumn6"].DataPropertyName = "Mes";
-                dgvElegirVenta.Columns["Column37"].DataPropertyName = "Año";
-                dgvElegirVenta.Columns["Column43"].DataPropertyName = "Hora";
-                dgvElegirVenta.Columns["Column38"].DataPropertyName = "TipoVenta";
-                dgvElegirVenta.Columns["Column39"].DataPropertyName = "Vehiculo";
-                dgvElegirVenta.Columns["Column40"].DataPropertyName = "Version";
-                dgvElegirVenta.Columns["Column41"].DataPropertyName = "Cilindraje";
-                dgvElegirVenta.Columns["Column42"].DataPropertyName = "Transmision";
-                dgvElegirVenta.Columns["Column1"].DataPropertyName = "Modelo";
-            }
-            else
-            {
-                MessageBox.Show("No hay ventas al contado pendientes de entregar autos");
-                dgvElegirVenta.DataSource = "";
-            }
-            dgvElegirVenta.ClearSelection();
-        }
-        public void mostrarventasentregacredito()
-        {
-            List<VentasEntrega> listado = PqteLog2.ListadoAllVentasEntregaCredito();
-            if (listado.Count > 0)
-            {
-                dgvElegirVenta.AutoGenerateColumns = false;
-                dgvElegirVenta.DataSource = listado;
-                dgvElegirVenta.Columns["dataGridViewTextBoxColumn1"].DataPropertyName = "IDVenta";
-                dgvElegirVenta.Columns["dataGridViewTextBoxColumn2"].DataPropertyName = "Nombre";
-                dgvElegirVenta.Columns["dataGridViewTextBoxColumn3"].DataPropertyName = "ApellidoPaterno";
-                dgvElegirVenta.Columns["dataGridViewTextBoxColumn4"].DataPropertyName = "ApellidoMaterno";
-                dgvElegirVenta.Columns["dataGridViewTextBoxColumn5"].DataPropertyName = "Dia";
-                dgvElegirVenta.Columns["dataGridViewTextBoxColumn6"].DataPropertyName = "Mes";
-                dgvElegirVenta.Columns["Column37"].DataPropertyName = "Año";
-                dgvElegirVenta.Columns["Column43"].DataPropertyName = "Hora";
-                dgvElegirVenta.Columns["Column38"].DataPropertyName = "TipoVenta";
-                dgvElegirVenta.Columns["Column39"].DataPropertyName = "Vehiculo";
-                dgvElegirVenta.Columns["Column40"].DataPropertyName = "Version";
-                dgvElegirVenta.Columns["Column41"].DataPropertyName = "Cilindraje";
-                dgvElegirVenta.Columns["Column42"].DataPropertyName = "Transmision";
-                dgvElegirVenta.Columns["Column1"].DataPropertyName = "Modelo";
                 //dgvElegirVenta.AutoGenerateColumns = false;
                 //dgvElegirVenta.DataSource = listado;
                 //dgvElegirVenta.Columns["dataGridViewTextBoxColumn1"].DataPropertyName = "IDVenta";
@@ -1228,113 +1190,158 @@ namespace Pantallas_SIVAA
                 //dgvElegirVenta.Columns["dataGridViewTextBoxColumn5"].DataPropertyName = "Dia";
                 //dgvElegirVenta.Columns["dataGridViewTextBoxColumn6"].DataPropertyName = "Mes";
                 //dgvElegirVenta.Columns["Column37"].DataPropertyName = "Año";
-                //dgvElegirVenta.Columns["Column44"].DataPropertyName = "Hora";
+                //dgvElegirVenta.Columns["Column43"].DataPropertyName = "Hora";
                 //dgvElegirVenta.Columns["Column38"].DataPropertyName = "TipoVenta";
                 //dgvElegirVenta.Columns["Column39"].DataPropertyName = "Vehiculo";
                 //dgvElegirVenta.Columns["Column40"].DataPropertyName = "Version";
                 //dgvElegirVenta.Columns["Column41"].DataPropertyName = "Cilindraje";
                 //dgvElegirVenta.Columns["Column42"].DataPropertyName = "Transmision";
-                //dgvElegirVenta.Columns["Column43"].DataPropertyName = "Modelo";
+                //dgvElegirVenta.Columns["Column1"].DataPropertyName = "Modelo";
             }
             else
             {
-                MessageBox.Show("No hay ventas a credito pendientes de entregar autos");
-                dgvElegirVenta.DataSource = "";
+                MessageBox.Show("No hay ventas al contado pendientes de entregar autos");
+                //dgvElegirVenta.DataSource = "";
             }
-            dgvElegirVenta.ClearSelection();
+            //dgvElegirVenta.ClearSelection();
+        }
+        public void mostrarventasentregacredito()
+        {
+            //List<VentasEntrega> listado = PqteLog2.ListadoAllVentasEntregaCredito();
+            //if (listado.Count > 0)
+            //{
+            //    dgvElegirVenta.AutoGenerateColumns = false;
+            //    dgvElegirVenta.DataSource = listado;
+            //    dgvElegirVenta.Columns["dataGridViewTextBoxColumn1"].DataPropertyName = "IDVenta";
+            //    dgvElegirVenta.Columns["dataGridViewTextBoxColumn2"].DataPropertyName = "Nombre";
+            //    dgvElegirVenta.Columns["dataGridViewTextBoxColumn3"].DataPropertyName = "ApellidoPaterno";
+            //    dgvElegirVenta.Columns["dataGridViewTextBoxColumn4"].DataPropertyName = "ApellidoMaterno";
+            //    dgvElegirVenta.Columns["dataGridViewTextBoxColumn5"].DataPropertyName = "Dia";
+            //    dgvElegirVenta.Columns["dataGridViewTextBoxColumn6"].DataPropertyName = "Mes";
+            //    dgvElegirVenta.Columns["Column37"].DataPropertyName = "Año";
+            //    dgvElegirVenta.Columns["Column43"].DataPropertyName = "Hora";
+            //    dgvElegirVenta.Columns["Column38"].DataPropertyName = "TipoVenta";
+            //    dgvElegirVenta.Columns["Column39"].DataPropertyName = "Vehiculo";
+            //    dgvElegirVenta.Columns["Column40"].DataPropertyName = "Version";
+            //    dgvElegirVenta.Columns["Column41"].DataPropertyName = "Cilindraje";
+            //    dgvElegirVenta.Columns["Column42"].DataPropertyName = "Transmision";
+            //    dgvElegirVenta.Columns["Column1"].DataPropertyName = "Modelo";
+            //dgvElegirVenta.AutoGenerateColumns = false;
+            //dgvElegirVenta.DataSource = listado;
+            //dgvElegirVenta.Columns["dataGridViewTextBoxColumn1"].DataPropertyName = "IDVenta";
+            //dgvElegirVenta.Columns["dataGridViewTextBoxColumn2"].DataPropertyName = "Nombre";
+            //dgvElegirVenta.Columns["dataGridViewTextBoxColumn3"].DataPropertyName = "ApellidoPaterno";
+            //dgvElegirVenta.Columns["dataGridViewTextBoxColumn4"].DataPropertyName = "ApellidoMaterno";
+            //dgvElegirVenta.Columns["dataGridViewTextBoxColumn5"].DataPropertyName = "Dia";
+            //dgvElegirVenta.Columns["dataGridViewTextBoxColumn6"].DataPropertyName = "Mes";
+            //dgvElegirVenta.Columns["Column37"].DataPropertyName = "Año";
+            //dgvElegirVenta.Columns["Column44"].DataPropertyName = "Hora";
+            //dgvElegirVenta.Columns["Column38"].DataPropertyName = "TipoVenta";
+            //dgvElegirVenta.Columns["Column39"].DataPropertyName = "Vehiculo";
+            //dgvElegirVenta.Columns["Column40"].DataPropertyName = "Version";
+            //dgvElegirVenta.Columns["Column41"].DataPropertyName = "Cilindraje";
+            //dgvElegirVenta.Columns["Column42"].DataPropertyName = "Transmision";
+            //dgvElegirVenta.Columns["Column43"].DataPropertyName = "Modelo";
+            //}
+            //else
+            //{
+            //    MessageBox.Show("No hay ventas a credito pendientes de entregar autos");
+            //    dgvElegirVenta.DataSource = "";
+            //}
+            //dgvElegirVenta.ClearSelection();
         }
         public void mostrarventasentregaporcliente()
         {
-            string nombre = textBox10.Text, apellido = textBox9.Text;
-            if (nombre == "" || apellido == "")
-            {
-                MessageBox.Show("Favor de escribir el nombre y apellido del cliente para la busqueda");
-                return;
-            }
-            List<VentasEntrega> listado = PqteLog2.Listaporcliente(nombre, apellido);
-            if (listado.Count > 0)
-            {
-                dgvElegirVenta.AutoGenerateColumns = false;
-                dgvElegirVenta.DataSource = listado;
-                dgvElegirVenta.Columns["dataGridViewTextBoxColumn1"].DataPropertyName = "IDVenta";
-                dgvElegirVenta.Columns["dataGridViewTextBoxColumn2"].DataPropertyName = "Nombre";
-                dgvElegirVenta.Columns["dataGridViewTextBoxColumn3"].DataPropertyName = "ApellidoPaterno";
-                dgvElegirVenta.Columns["dataGridViewTextBoxColumn4"].DataPropertyName = "ApellidoMaterno";
-                dgvElegirVenta.Columns["dataGridViewTextBoxColumn5"].DataPropertyName = "Dia";
-                dgvElegirVenta.Columns["dataGridViewTextBoxColumn6"].DataPropertyName = "Mes";
-                dgvElegirVenta.Columns["Column37"].DataPropertyName = "Año";
-                dgvElegirVenta.Columns["Column43"].DataPropertyName = "Hora";
-                dgvElegirVenta.Columns["Column38"].DataPropertyName = "TipoVenta";
-                dgvElegirVenta.Columns["Column39"].DataPropertyName = "Vehiculo";
-                dgvElegirVenta.Columns["Column40"].DataPropertyName = "Version";
-                dgvElegirVenta.Columns["Column41"].DataPropertyName = "Cilindraje";
-                dgvElegirVenta.Columns["Column42"].DataPropertyName = "Transmision";
-                dgvElegirVenta.Columns["Column1"].DataPropertyName = "Modelo";
-            }
-            else
-            {
-                MessageBox.Show("No hay ventas por entregar autos para ese cliente");
-                dgvElegirVenta.DataSource = "";
-            }
-            dgvElegirVenta.ClearSelection();
+            ////string nombre = textBox10.Text, apellido = textBox9.Text;
+            //if (nombre == "" || apellido == "")
+            //{
+            //    MessageBox.Show("Favor de escribir el nombre y apellido del cliente para la busqueda");
+            //    return;
+            //}
+            //List<VentasEntrega> listado = PqteLog2.Listaporcliente(nombre, apellido);
+            //if (listado.Count > 0)
+            //{
+            //    //dgvElegirVenta.AutoGenerateColumns = false;
+            //    //dgvElegirVenta.DataSource = listado;
+            //    //dgvElegirVenta.Columns["dataGridViewTextBoxColumn1"].DataPropertyName = "IDVenta";
+            //    //dgvElegirVenta.Columns["dataGridViewTextBoxColumn2"].DataPropertyName = "Nombre";
+            //    //dgvElegirVenta.Columns["dataGridViewTextBoxColumn3"].DataPropertyName = "ApellidoPaterno";
+            //    //dgvElegirVenta.Columns["dataGridViewTextBoxColumn4"].DataPropertyName = "ApellidoMaterno";
+            //    //dgvElegirVenta.Columns["dataGridViewTextBoxColumn5"].DataPropertyName = "Dia";
+            //    //dgvElegirVenta.Columns["dataGridViewTextBoxColumn6"].DataPropertyName = "Mes";
+            //    //dgvElegirVenta.Columns["Column37"].DataPropertyName = "Año";
+            //    //dgvElegirVenta.Columns["Column43"].DataPropertyName = "Hora";
+            //    //dgvElegirVenta.Columns["Column38"].DataPropertyName = "TipoVenta";
+            //    //dgvElegirVenta.Columns["Column39"].DataPropertyName = "Vehiculo";
+            //    //dgvElegirVenta.Columns["Column40"].DataPropertyName = "Version";
+            //    //dgvElegirVenta.Columns["Column41"].DataPropertyName = "Cilindraje";
+            //    //dgvElegirVenta.Columns["Column42"].DataPropertyName = "Transmision";
+            //    //dgvElegirVenta.Columns["Column1"].DataPropertyName = "Modelo";
+            //}
+            //else
+            //{
+            //    MessageBox.Show("No hay ventas por entregar autos para ese cliente");
+            //    //dgvElegirVenta.DataSource = "";
+            //}
+            //dgvElegirVenta.ClearSelection();
         }
 
         private void dgvElegirVenta_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgvElegirVenta.CurrentCell.RowIndex >= 0)
-            {
-                int i = dgvElegirVenta.CurrentCell.RowIndex;
-                //MessageBox.Show("Columna " + i);
-                //Cliente
-                textBox3.Text = dgvElegirVenta[0, i].Value.ToString();
-                textBox2.Text = dgvElegirVenta[1, i].Value.ToString();
-                textBox1.Text = dgvElegirVenta[2, i].Value.ToString();
+            //if (dgvElegirVenta.CurrentCell.RowIndex >= 0)
+            //{
+            //    int i = dgvElegirVenta.CurrentCell.RowIndex;
+            //    //MessageBox.Show("Columna " + i);
+            //    //Cliente
+            //    textBox3.Text = dgvElegirVenta[0, i].Value.ToString();
+            //    textBox2.Text = dgvElegirVenta[1, i].Value.ToString();
+            //    textBox1.Text = dgvElegirVenta[2, i].Value.ToString();
 
-                textBox11.Text = dgvElegirVenta[8, i].Value.ToString();
+            //    textBox11.Text = dgvElegirVenta[8, i].Value.ToString();
 
-                //Auto
-                //textBox2.Text = dgvElegirVenta[9, i].Value.ToString();
-                //textBox3.Text = dgvElegirVenta[13, i].Value.ToString();
-                //textBox4.Text = dgvElegirVenta[10, i].Value.ToString();
-                textBox8.Text = dgvElegirVenta[9, i].Value.ToString();
-                textBox13.Text = dgvElegirVenta[11, i].Value.ToString();
-                textBox12.Text = dgvElegirVenta[10, i].Value.ToString();
+            //    //Auto
+            //    //textBox2.Text = dgvElegirVenta[9, i].Value.ToString();
+            //    //textBox3.Text = dgvElegirVenta[13, i].Value.ToString();
+            //    //textBox4.Text = dgvElegirVenta[10, i].Value.ToString();
+            //    textBox8.Text = dgvElegirVenta[9, i].Value.ToString();
+            //    textBox13.Text = dgvElegirVenta[11, i].Value.ToString();
+            //    textBox12.Text = dgvElegirVenta[10, i].Value.ToString();
 
-                string idventa = textBox3.Text;
-                string tipoven = textBox11.Text;
-                mostrarUnidades(idventa, tipoven);
-            }
+            //    string idventa = textBox3.Text;
+            //    string tipoven = textBox11.Text;
+            //    mostrarUnidades(idventa, tipoven);
+            //}
         }
         public void LimpiarEntregas()
         {
-            //Datos de entrega
-            textBox3.Text = "";
-            textBox2.Text = "";
-            textBox1.Text = "";
-            textBox11.Text = "";
-            textBox8.Text = "";
-            textBox13.Text = "";
-            textBox12.Text = "";
-            textBox4.Text = "";
-            textBox14.Text = "";
-            //Datas de entrega
-            dgvElegirVenta.DataSource = "";
-            dgvElegirAuto.DataSource = "";
+            ////Datos de entrega
+            //textBox3.Text = "";
+            //textBox2.Text = "";
+            //textBox1.Text = "";
+            //textBox11.Text = "";
+            //textBox8.Text = "";
+            //textBox13.Text = "";
+            //textBox12.Text = "";
+            //textBox4.Text = "";
+            //textBox14.Text = "";
+            ////Datas de entrega
+            //dgvElegirVenta.DataSource = "";
+            //dgvElegirAuto.DataSource = "";
 
         }
 
         private void dgvElegirAuto_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgvElegirAuto.CurrentCell.RowIndex >= 0)
-            {
-                int i = dgvElegirAuto.CurrentCell.RowIndex;
-                //MessageBox.Show("Columna " + i);
-                //Auto
-                textBox4.Text = dgvElegirAuto[0, i].Value.ToString();
-                textBox14.Text = dgvElegirAuto[4, i].Value.ToString();
+            //if (dgvElegirAuto.CurrentCell.RowIndex >= 0)
+            //{
+            //    int i = dgvElegirAuto.CurrentCell.RowIndex;
+            //    //MessageBox.Show("Columna " + i);
+            //    //Auto
+            //    textBox4.Text = dgvElegirAuto[0, i].Value.ToString();
+            //    textBox14.Text = dgvElegirAuto[4, i].Value.ToString();
 
-                //mostrarUnidades();
-            }
+            //    //mostrarUnidades();
+            //}
         }
 
         private void tabControl3_Enter(object sender, EventArgs e)
@@ -1587,9 +1594,13 @@ namespace Pantallas_SIVAA
 
         private void tabCotizacion_Enter(object sender, EventArgs e)
         {
+            comboVehiculo.Items.Clear();
+            ComboVersion1.Items.Clear();
+            comboAno.Items.Clear();
+            comboColor.Items.Clear();
             TXTIDEMPCOT.Text = _pqt.IDEmpleado;
             List<Vehiculo> vehiculosdisponibles = new List<Vehiculo>();
-            List<VersionEntidad  > versiondisponibles = new List<VersionEntidad  >();
+            List<VersionEntidad> versiondisponibles = new List<VersionEntidad>();
             vehiculosdisponibles = pqtLog6.ListadoAll();
             foreach (Vehiculo v in vehiculosdisponibles)
             {
@@ -1600,16 +1611,16 @@ namespace Pantallas_SIVAA
             comboVehiculo.SelectedIndex = 0;
 
             versiondisponibles = pqtLog9.ObtenerVersionesVehiculo(comboVehiculo.Text);
-            foreach (VersionEntidad   ver in versiondisponibles)
+            foreach (VersionEntidad ver in versiondisponibles)
             {
                 ComboVersion1.Items.Add(ver.Version);
             }
-            ComboVersion1.SelectedIndex = 0;
+            //ComboVersion1.SelectedIndex = 0;
 
             //mostrarUnidades();
             dgvClientCot.ClearSelection();
             dgvClientCot.DataSource = "";
-            List<Cliente> listado = PqteLog.ListadoAll();
+            List<Cliente> listado = PqteLog.ListadoAllActivos();
             if (listado.Count > 0)
             {
                 dgvClientCot.AutoGenerateColumns = false;
@@ -1656,7 +1667,7 @@ namespace Pantallas_SIVAA
             }
             else
             {
-                VersionEntidad   versiondeseada = PqteLog4.ObtenerVersionPrecio(ComboVersion1.Text, comboVehiculo.Text);
+                VersionEntidad versiondeseada = PqteLog4.ObtenerVersionPrecio(ComboVersion1.Text, comboVehiculo.Text);
                 txPrecioCot.Text = versiondeseada.Costo.ToString();
             }
 
@@ -1688,7 +1699,7 @@ namespace Pantallas_SIVAA
                 }
                 if (rbtnConCot.Checked)
                 {
-                    VersionEntidad   versionSeleccionada = PqteLog4.ObtenerVersionPrecio(ComboVersion1.Text, comboVehiculo.Text);
+                    VersionEntidad versionSeleccionada = PqteLog4.ObtenerVersionPrecio(ComboVersion1.Text, comboVehiculo.Text);
                     int pruebadia = (int)numericdiacot.Value;
                     try
                     {
@@ -1763,7 +1774,7 @@ namespace Pantallas_SIVAA
                 }
                 if (rbtnCredCot.Checked)
                 {
-                    VersionEntidad   versionseleccionada = PqteLog4.ObtenerVersionPrecio(ComboVersion1.Text, comboVehiculo.Text);
+                    VersionEntidad versionseleccionada = PqteLog4.ObtenerVersionPrecio(ComboVersion1.Text, comboVehiculo.Text);
                     try
                     {
                         pqt = new Entidades.Cotizacion
@@ -1877,7 +1888,7 @@ namespace Pantallas_SIVAA
                 }
                 if (rbtnConCot.Checked)
                 {
-                    VersionEntidad   versionSeleccionada = PqteLog4.ObtenerVersionPrecio(ComboVersion1.Text, comboVehiculo.Text);
+                    VersionEntidad versionSeleccionada = PqteLog4.ObtenerVersionPrecio(ComboVersion1.Text, comboVehiculo.Text);
                     int pruebadia = (int)numericdiacot.Value;
                     try
                     {
@@ -1950,7 +1961,7 @@ namespace Pantallas_SIVAA
                 }
                 if (rbtnCredCot.Checked)
                 {
-                    VersionEntidad   versionseleccionada = PqteLog4.ObtenerVersionPrecio(ComboVersion1.Text, comboVehiculo.Text);
+                    VersionEntidad versionseleccionada = PqteLog4.ObtenerVersionPrecio(ComboVersion1.Text, comboVehiculo.Text);
                     try
                     {
                         pqt = new Entidades.Cotizacion
@@ -2037,7 +2048,7 @@ namespace Pantallas_SIVAA
         }
         private void ArrojarPrecioCot()
         {
-            VersionEntidad   versiondeseada = PqteLog4.ObtenerVersionPrecio(ComboVersion1.Text, comboVehiculo.Text);
+            VersionEntidad versiondeseada = PqteLog4.ObtenerVersionPrecio(ComboVersion1.Text, comboVehiculo.Text);
             txPrecioCot.Text = versiondeseada.Costo.ToString("0.00");
         }
         private void CalcularEnganche()
@@ -2076,7 +2087,7 @@ namespace Pantallas_SIVAA
 
         private void comboVehiculo_SelectedValueChanged(object sender, EventArgs e)
         {
-            List<VersionEntidad  > versionsdisponibles = new List<VersionEntidad  >();
+            List<VersionEntidad> versionsdisponibles = new List<VersionEntidad>();
 
 
             comboColor.Items.Clear();
@@ -2085,7 +2096,7 @@ namespace Pantallas_SIVAA
             ComboVersion1.Items.Clear();
 
             versionsdisponibles = pqtLog9.ObtenerVersionesVehiculo(comboVehiculo.Text);
-            foreach (VersionEntidad   ver in versionsdisponibles)
+            foreach (VersionEntidad ver in versionsdisponibles)
             {
                 if (ver.EstadoVersion == "Activo")
                 {
@@ -2293,119 +2304,119 @@ namespace Pantallas_SIVAA
 
         private void btnFacturaEntrega_Click(object sender, EventArgs e)
         {
-            if (textBox3.Text == "" || textBox4.Text == "")
-            {
-                return;
-            }
-            VentaLog pqtelog = new VentaLog();
-            Venta ven;
-            ven = pqtelog.LeerPorClave(textBox3.Text);
-            //Venta pqt = new Venta
+            //if (textBox3.Text == "" || textBox4.Text == "")
             //{
-            //    IDVenta = Convert.ToString("V" + k),
-            //    IDEmpleado = Convert.ToString(TXTIDEMPCOT.Text),
-            //    NoSerie = "",
-            //    Dia = Convert.ToInt32(numericUpDown2.Value),
-            //    Mes = Convert.ToInt32(numericUpDown3.Value),
-            //    Año = Convert.ToInt32(numericUpDown4.Value),
-            //    Hora = Convert.ToString(TXTHORA.Text),
-            //    Subtotal = Convert.ToDouble(TXTPRECIO.Text),
-            //    TipoVenta = Convert.ToString("CREDITO")
+            //    return;
+            //}
+            //VentaLog pqtelog = new VentaLog();
+            //Venta ven;
+            //ven = pqtelog.LeerPorClave(textBox3.Text);
+            ////Venta pqt = new Venta
+            ////{
+            ////    IDVenta = Convert.ToString("V" + k),
+            ////    IDEmpleado = Convert.ToString(TXTIDEMPCOT.Text),
+            ////    NoSerie = "",
+            ////    Dia = Convert.ToInt32(numericUpDown2.Value),
+            ////    Mes = Convert.ToInt32(numericUpDown3.Value),
+            ////    Año = Convert.ToInt32(numericUpDown4.Value),
+            ////    Hora = Convert.ToString(TXTHORA.Text),
+            ////    Subtotal = Convert.ToDouble(TXTPRECIO.Text),
+            ////    TipoVenta = Convert.ToString("CREDITO")
 
-            //};
-            VentaContadoLog contadoLog = new VentaContadoLog();
-            VentaContado vencon;
-            vencon = contadoLog.LeerPorClave(ven.IDVenta);
-            //VentaContado Deb = new VentaContado
+            ////};
+            //VentaContadoLog contadoLog = new VentaContadoLog();
+            //VentaContado vencon;
+            //vencon = contadoLog.LeerPorClave(ven.IDVenta);
+            ////VentaContado Deb = new VentaContado
+            ////{
+            ////    IDVenta = Convert.ToString(ven.IDVenta),
+            ////    IDCotizacion = Convert.ToString(TXTCOT.Text),
+            ////    Estatus = Convert.ToString("PENDIENTE"),
+            ////};
+            //VentaCreditoLog creditoLog = new VentaCreditoLog();
+            //VentaCredito vencre;
+            //vencre = creditoLog.LeerPorClave(ven.IDVenta);
+            ////VentaCredito Deb2 = new VentaCredito
+            ////{
+
+            ////    IDVenta = Convert.ToString("V" + k),
+            ////    IDCotizacion = Convert.ToString(TXTCOT.Text),
+            ////    TotalFinal = Convert.ToDouble(double.Parse(TXTPRECIO.Text) * 1.10),
+            ////    Estatus = Convert.ToString("PENDIENTE"),
+
+            ////    //Estatus = Convert.ToString("PENDIENTE")
+
+            ////};
+
+            //if (textBox11.Text.Trim() == "CONTADO")
             //{
-            //    IDVenta = Convert.ToString(ven.IDVenta),
-            //    IDCotizacion = Convert.ToString(TXTCOT.Text),
-            //    Estatus = Convert.ToString("PENDIENTE"),
-            //};
-            VentaCreditoLog creditoLog = new VentaCreditoLog();
-            VentaCredito vencre;
-            vencre = creditoLog.LeerPorClave(ven.IDVenta);
-            //VentaCredito Deb2 = new VentaCredito
+            //    Factura factura = new Factura(vencon, ven, textBox2.Text, textBox1.Text, TXTIDEMPCOT.Text);
+            //    factura.Show();
+            //}
+            //if (textBox11.Text.Trim() == "CREDITO")
             //{
-
-            //    IDVenta = Convert.ToString("V" + k),
-            //    IDCotizacion = Convert.ToString(TXTCOT.Text),
-            //    TotalFinal = Convert.ToDouble(double.Parse(TXTPRECIO.Text) * 1.10),
-            //    Estatus = Convert.ToString("PENDIENTE"),
-
-            //    //Estatus = Convert.ToString("PENDIENTE")
-
-            //};
-
-            if (textBox11.Text.Trim() == "CONTADO")
-            {
-                Factura factura = new Factura(vencon, ven, textBox2.Text, textBox1.Text, TXTIDEMPCOT.Text);
-                factura.Show();
-            }
-            if (textBox11.Text.Trim() == "CREDITO")
-            {
-                FacturaCredito facturaCredito = new FacturaCredito(vencre, ven, textBox2.Text, textBox1.Text, TXTIDEMPCOT.Text);
-                facturaCredito.Show();
-            }
+            //    FacturaCredito facturaCredito = new FacturaCredito(vencre, ven, textBox2.Text, textBox1.Text, TXTIDEMPCOT.Text);
+            //    facturaCredito.Show();
+            //}
         }
 
         private void btnContratoCompraVenta_Click(object sender, EventArgs e)
         {
-            if (textBox3.Text == "" || textBox4.Text == "")
-            {
-                return;
-            }
-            VentaLog pqtelog = new VentaLog();
-            Venta ven;
-            ven = pqtelog.LeerPorClave(textBox3.Text);
-            //Venta pqt = new Venta
+            //if (textBox3.Text == "" || textBox4.Text == "")
             //{
-            //    IDVenta = Convert.ToString("V" + k),
-            //    IDEmpleado = Convert.ToString(TXTIDEMPCOT.Text),
-            //    NoSerie = "",
-            //    Dia = Convert.ToInt32(numericUpDown2.Value),
-            //    Mes = Convert.ToInt32(numericUpDown3.Value),
-            //    Año = Convert.ToInt32(numericUpDown4.Value),
-            //    Hora = Convert.ToString(TXTHORA.Text),
-            //    Subtotal = Convert.ToDouble(TXTPRECIO.Text),
-            //    TipoVenta = Convert.ToString("CONTADO")
+            //    return;
+            //}
+            //VentaLog pqtelog = new VentaLog();
+            //Venta ven;
+            //ven = pqtelog.LeerPorClave(textBox3.Text);
+            ////Venta pqt = new Venta
+            ////{
+            ////    IDVenta = Convert.ToString("V" + k),
+            ////    IDEmpleado = Convert.ToString(TXTIDEMPCOT.Text),
+            ////    NoSerie = "",
+            ////    Dia = Convert.ToInt32(numericUpDown2.Value),
+            ////    Mes = Convert.ToInt32(numericUpDown3.Value),
+            ////    Año = Convert.ToInt32(numericUpDown4.Value),
+            ////    Hora = Convert.ToString(TXTHORA.Text),
+            ////    Subtotal = Convert.ToDouble(TXTPRECIO.Text),
+            ////    TipoVenta = Convert.ToString("CONTADO")
 
-            //};
-            VentaContadoLog contadoLog = new VentaContadoLog();
-            VentaContado vencon;
-            vencon = contadoLog.LeerPorClave(ven.IDVenta);
-            //VentaContado Deb = new VentaContado
+            ////};
+            //VentaContadoLog contadoLog = new VentaContadoLog();
+            //VentaContado vencon;
+            //vencon = contadoLog.LeerPorClave(ven.IDVenta);
+            ////VentaContado Deb = new VentaContado
+            ////{
+            ////    IDVenta = Convert.ToString("V" + k),
+            ////    IDCotizacion = Convert.ToString(TXTCOT.Text),
+            ////    Estatus = Convert.ToString("PENDIENTE"),
+            ////};
+            //VentaCreditoLog creditoLog = new VentaCreditoLog();
+            //VentaCredito vencre;
+            //vencre = creditoLog.LeerPorClave(ven.IDVenta);
+            ////VentaCredito Deb2 = new VentaCredito
+            ////{
+
+            ////    IDVenta = Convert.ToString("V" + k),
+            ////    IDCotizacion = Convert.ToString(TXTCOT.Text),
+            ////    TotalFinal = Convert.ToDouble(double.Parse(TXTPRECIO.Text) * 1.10),
+            ////    Estatus = Convert.ToString("PENDIENTE"),
+
+            ////    //Estatus = Convert.ToString("PENDIENTE")
+
+            ////};
+            ////contado
+            //if (textBox11.Text.Trim() == "CONTADO")
             //{
-            //    IDVenta = Convert.ToString("V" + k),
-            //    IDCotizacion = Convert.ToString(TXTCOT.Text),
-            //    Estatus = Convert.ToString("PENDIENTE"),
-            //};
-            VentaCreditoLog creditoLog = new VentaCreditoLog();
-            VentaCredito vencre;
-            vencre = creditoLog.LeerPorClave(ven.IDVenta);
-            //VentaCredito Deb2 = new VentaCredito
+            //    ContratoCompraVentaCon contratoCompraVentaCon = new ContratoCompraVentaCon(vencon, ven, txtnom.Text, txtap.Text);
+            //    contratoCompraVentaCon.Show();
+            //}
+            ////credito
+            //if (textBox11.Text.Trim() == "CREDITO")
             //{
-
-            //    IDVenta = Convert.ToString("V" + k),
-            //    IDCotizacion = Convert.ToString(TXTCOT.Text),
-            //    TotalFinal = Convert.ToDouble(double.Parse(TXTPRECIO.Text) * 1.10),
-            //    Estatus = Convert.ToString("PENDIENTE"),
-
-            //    //Estatus = Convert.ToString("PENDIENTE")
-
-            //};
-            //contado
-            if (textBox11.Text.Trim() == "CONTADO")
-            {
-                ContratoCompraVentaCon contratoCompraVentaCon = new ContratoCompraVentaCon(vencon, ven, txtnom.Text, txtap.Text);
-                contratoCompraVentaCon.Show();
-            }
-            //credito
-            if (textBox11.Text.Trim() == "CREDITO")
-            {
-                ContratoCompraVentaCredito contratoCompraVentaCred = new ContratoCompraVentaCredito(vencre, ven, txtnom.Text, txtap.Text);
-                contratoCompraVentaCred.Show();
-            }
+            //    ContratoCompraVentaCredito contratoCompraVentaCred = new ContratoCompraVentaCredito(vencre, ven, txtnom.Text, txtap.Text);
+            //    contratoCompraVentaCred.Show();
+            //}
         }
 
         private void btnNuevaventa_Click(object sender, EventArgs e)
@@ -2446,10 +2457,10 @@ namespace Pantallas_SIVAA
         private void tabPage1_Click(object sender, EventArgs e)
         {
             TXTIDCLI.Text = "";
-            TXTAPP.Text = ""; 
+            TXTAPP.Text = "";
             dataGridView4.ClearSelection();
             dgvClientCot.DataSource = "";
-            List<Cliente> listado = PqteLog.ListadoAll();
+            List<Cliente> listado = PqteLog.ListadoAllActivos();
             if (listado.Count > 0)
             {
                 dataGridView4.AutoGenerateColumns = false;
