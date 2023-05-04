@@ -55,9 +55,14 @@
             panel2 = new Panel();
             panel6 = new Panel();
             printDocument1 = new System.Drawing.Printing.PrintDocument();
+            panel8 = new Panel();
+            panel4 = new Panel();
+            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
+            panel8.SuspendLayout();
+            panel4.SuspendLayout();
             SuspendLayout();
             // 
             // label5
@@ -281,11 +286,42 @@
             printDocument1.EndPrint += printDocument1_EndPrint;
             printDocument1.PrintPage += printDocument1_PrintPage;
             // 
+            // panel8
+            // 
+            panel8.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            panel8.BackColor = Color.FromArgb(51, 58, 86);
+            panel8.Controls.Add(panel4);
+            panel8.Location = new Point(0, 61);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(1138, 22);
+            panel8.TabIndex = 60;
+            // 
+            // panel4
+            // 
+            panel4.BackColor = Color.FromArgb(51, 58, 86);
+            panel4.Controls.Add(label2);
+            panel4.Location = new Point(6, 77);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(888, 22);
+            panel4.TabIndex = 48;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.ForeColor = SystemColors.ButtonHighlight;
+            label2.Location = new Point(85, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(140, 19);
+            label2.TabIndex = 0;
+            label2.Text = "Datos del que expide:";
+            // 
             // ReporteEstadoDeCuenta
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1138, 476);
+            Controls.Add(panel8);
             Controls.Add(panel1);
             Controls.Add(pictureBox1);
             Controls.Add(button1);
@@ -302,6 +338,9 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            panel8.ResumeLayout(false);
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -334,5 +373,8 @@
         private Panel panel2;
         private Panel panel6;
         private System.Drawing.Printing.PrintDocument printDocument1;
+        private Panel panel8;
+        private Panel panel4;
+        private Label label2;
     }
 }

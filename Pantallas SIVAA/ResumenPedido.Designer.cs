@@ -53,23 +53,33 @@
             lblCiudadProv = new Label();
             lblEstadoProv = new Label();
             label32 = new Label();
+            label8 = new Label();
             label33 = new Label();
+            label9 = new Label();
             label34 = new Label();
+            label10 = new Label();
             label35 = new Label();
+            label11 = new Label();
             label36 = new Label();
             label37 = new Label();
+            lblNombreProv = new Label();
+            lblCiudadProv = new Label();
             label38 = new Label();
             label39 = new Label();
+            lblEstadoProv = new Label();
             label40 = new Label();
+            lblRFCProv = new Label();
             label41 = new Label();
+            lblColoniaProv = new Label();
             label42 = new Label();
-            label43 = new Label();
+            lblNoExtProv = new Label();
             label12 = new Label();
             pictureBox1 = new PictureBox();
             printDocument1 = new System.Drawing.Printing.PrintDocument();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            panel8.SuspendLayout();
             SuspendLayout();
             // 
             // dataGridView1
@@ -200,7 +210,7 @@
             lblMonto.TabIndex = 47;
             lblMonto.Text = "label9";
             // 
-            // label5
+            // label13
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
@@ -210,7 +220,7 @@
             label5.TabIndex = 48;
             label5.Text = "Datos del proovedor:";
             // 
-            // label6
+            // pictureBox1
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -220,7 +230,7 @@
             label6.TabIndex = 49;
             label6.Text = "Nombre:";
             // 
-            // label7
+            // printDocument1
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -270,7 +280,14 @@
             label11.TabIndex = 54;
             label11.Text = "Estado:";
             // 
-            // lblNombreProv
+            label2.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(467, 60);
+            label2.Name = "label2";
+            label2.Size = new Size(113, 21);
+            label2.TabIndex = 78;
+            label2.Text = "AS12546SQ94";
             // 
             lblNombreProv.AutoSize = true;
             lblNombreProv.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -280,7 +297,13 @@
             lblNombreProv.TabIndex = 55;
             lblNombreProv.Text = "label12";
             // 
-            // lblRFCProv
+            pictureBox3.Image = Properties.Resources.Nissan_logo;
+            pictureBox3.Location = new Point(1, 2);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(94, 79);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 73;
+            pictureBox3.TabStop = false;
             // 
             lblRFCProv.AutoSize = true;
             lblRFCProv.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -290,7 +313,14 @@
             lblRFCProv.TabIndex = 56;
             lblRFCProv.Text = "label13";
             // 
-            // lblNoExtProv
+            label15.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            label15.AutoSize = true;
+            label15.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label15.Location = new Point(308, 60);
+            label15.Name = "label15";
+            label15.Size = new Size(84, 21);
+            label15.TabIndex = 75;
+            label15.Text = "C.P: 12312";
             // 
             lblNoExtProv.AutoSize = true;
             lblNoExtProv.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -300,7 +330,14 @@
             lblNoExtProv.TabIndex = 57;
             lblNoExtProv.Text = "label14";
             // 
-            // lblColoniaProv
+            label16.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            label16.AutoSize = true;
+            label16.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label16.Location = new Point(339, 18);
+            label16.Name = "label16";
+            label16.Size = new Size(176, 21);
+            label16.TabIndex = 76;
+            label16.Text = "RESUMEN DE PEDIDO";
             // 
             lblColoniaProv.AutoSize = true;
             lblColoniaProv.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -310,7 +347,14 @@
             lblColoniaProv.TabIndex = 58;
             lblColoniaProv.Text = "label15";
             // 
-            // lblCiudadProv
+            label17.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            label17.AutoSize = true;
+            label17.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label17.Location = new Point(308, 39);
+            label17.Name = "label17";
+            label17.Size = new Size(265, 21);
+            label17.TabIndex = 74;
+            label17.Text = "San gregio 126#, Santa fe,BCS,La Paz";
             // 
             lblCiudadProv.AutoSize = true;
             lblCiudadProv.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -320,7 +364,14 @@
             lblCiudadProv.TabIndex = 59;
             lblCiudadProv.Text = "label16";
             // 
-            // lblEstadoProv
+            label44.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            label44.AutoSize = true;
+            label44.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label44.Location = new Point(355, -3);
+            label44.Name = "label44";
+            label44.Size = new Size(150, 21);
+            label44.TabIndex = 70;
+            label44.Text = "Nissan, La Paz,BCS";
             // 
             lblEstadoProv.AutoSize = true;
             lblEstadoProv.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -341,6 +392,16 @@
             label32.Text = "Nombre:";
             label32.Click += label32_Click;
             // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label8.Location = new Point(36, 199);
+            label8.Name = "label8";
+            label8.Size = new Size(90, 21);
+            label8.TabIndex = 51;
+            label8.Text = "No.Exterior:";
+            // 
             // label33
             // 
             label33.AutoSize = true;
@@ -350,6 +411,16 @@
             label33.Size = new Size(50, 28);
             label33.TabIndex = 50;
             label33.Text = "RFC:";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label9.Location = new Point(36, 223);
+            label9.Name = "label9";
+            label9.Size = new Size(66, 21);
+            label9.TabIndex = 52;
+            label9.Text = "Colonia:";
             // 
             // label34
             // 
@@ -361,6 +432,16 @@
             label34.TabIndex = 51;
             label34.Text = "No.Exterior:";
             // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label10.Location = new Point(36, 247);
+            label10.Name = "label10";
+            label10.Size = new Size(62, 21);
+            label10.TabIndex = 53;
+            label10.Text = "Ciudad:";
+            // 
             // label35
             // 
             label35.AutoSize = true;
@@ -370,6 +451,16 @@
             label35.Size = new Size(83, 28);
             label35.TabIndex = 52;
             label35.Text = "Colonia:";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label11.Location = new Point(36, 271);
+            label11.Name = "label11";
+            label11.Size = new Size(59, 21);
+            label11.TabIndex = 54;
+            label11.Text = "Estado:";
             // 
             // label36
             // 
@@ -391,6 +482,26 @@
             label37.TabIndex = 54;
             label37.Text = "Estado:";
             // 
+            // lblNombreProv
+            // 
+            lblNombreProv.AutoSize = true;
+            lblNombreProv.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblNombreProv.Location = new Point(113, 150);
+            lblNombreProv.Name = "lblNombreProv";
+            lblNombreProv.Size = new Size(61, 21);
+            lblNombreProv.TabIndex = 55;
+            lblNombreProv.Text = "label12";
+            // 
+            // lblCiudadProv
+            // 
+            lblCiudadProv.AutoSize = true;
+            lblCiudadProv.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblCiudadProv.Location = new Point(113, 247);
+            lblCiudadProv.Name = "lblCiudadProv";
+            lblCiudadProv.Size = new Size(61, 21);
+            lblCiudadProv.TabIndex = 59;
+            lblCiudadProv.Text = "label16";
+            // 
             // label38
             // 
             label38.AutoSize = true;
@@ -411,6 +522,16 @@
             label39.TabIndex = 59;
             label39.Text = "La Paz";
             // 
+            // lblEstadoProv
+            // 
+            lblEstadoProv.AutoSize = true;
+            lblEstadoProv.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblEstadoProv.Location = new Point(113, 271);
+            lblEstadoProv.Name = "lblEstadoProv";
+            lblEstadoProv.Size = new Size(61, 21);
+            lblEstadoProv.TabIndex = 60;
+            lblEstadoProv.Text = "label17";
+            // 
             // label40
             // 
             label40.AutoSize = true;
@@ -420,6 +541,16 @@
             label40.Size = new Size(170, 28);
             label40.TabIndex = 60;
             label40.Text = "Baja California Sur";
+            // 
+            // lblRFCProv
+            // 
+            lblRFCProv.AutoSize = true;
+            lblRFCProv.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblRFCProv.Location = new Point(113, 174);
+            lblRFCProv.Name = "lblRFCProv";
+            lblRFCProv.Size = new Size(61, 21);
+            lblRFCProv.TabIndex = 56;
+            lblRFCProv.Text = "label13";
             // 
             // label41
             // 
@@ -431,6 +562,16 @@
             label41.TabIndex = 56;
             label41.Text = "AS12546SQ94";
             // 
+            // lblColoniaProv
+            // 
+            lblColoniaProv.AutoSize = true;
+            lblColoniaProv.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblColoniaProv.Location = new Point(113, 223);
+            lblColoniaProv.Name = "lblColoniaProv";
+            lblColoniaProv.Size = new Size(61, 21);
+            lblColoniaProv.TabIndex = 58;
+            lblColoniaProv.Text = "label15";
+            // 
             // label42
             // 
             label42.AutoSize = true;
@@ -441,7 +582,7 @@
             label42.TabIndex = 58;
             label42.Text = "Santa Fe";
             // 
-            // label43
+            // lblNoExtProv
             // 
             label43.AutoSize = true;
             label43.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -471,11 +612,16 @@
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
             // 
-            // printDocument1
+            // label47
             // 
-            printDocument1.BeginPrint += printDocument1_BeginPrint;
-            printDocument1.EndPrint += printDocument1_EndPrint;
-            printDocument1.PrintPage += printDocument1_PrintPage;
+            label47.AutoSize = true;
+            label47.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            label47.ForeColor = SystemColors.ButtonHighlight;
+            label47.Location = new Point(8, 2);
+            label47.Name = "label47";
+            label47.Size = new Size(116, 19);
+            label47.TabIndex = 0;
+            label47.Text = "Datos del pedido:";
             // 
             // ResumenPedido
             // 
@@ -519,9 +665,10 @@
             Text = "ResumenPedido";
             Load += ResumenPedido_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            panel7.ResumeLayout(false);
-            panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            panel8.ResumeLayout(false);
+            panel8.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -534,12 +681,6 @@
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column4;
         private DataGridViewTextBoxColumn Column5;
-        private Panel panel7;
-        private Label lblTipoEmpleado;
-        private Label label2;
-        private Label lblNombre;
-        private Label label1;
-        private Label label3;
         private Label label4;
         private Label lblIDPedido;
         private Label lblFecha;
@@ -558,17 +699,26 @@
         private Label lblCiudadProv;
         private Label lblEstadoProv;
         private Label label32;
+        private Label label8;
         private Label label33;
+        private Label label9;
         private Label label34;
+        private Label label10;
         private Label label35;
+        private Label label11;
         private Label label36;
         private Label label37;
+        private Label lblNombreProv;
+        private Label lblCiudadProv;
         private Label label38;
         private Label label39;
+        private Label lblEstadoProv;
         private Label label40;
+        private Label lblRFCProv;
         private Label label41;
+        private Label lblColoniaProv;
         private Label label42;
-        private Label label43;
+        private Label lblNoExtProv;
         private Label label12;
         private PictureBox pictureBox1;
         private System.Drawing.Printing.PrintDocument printDocument1;

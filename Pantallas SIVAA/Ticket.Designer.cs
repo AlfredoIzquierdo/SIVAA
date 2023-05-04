@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            label2 = new Label();
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
@@ -56,33 +54,22 @@
             LBLFORMAPAGO = new Label();
             label9 = new Label();
             printDocument1 = new System.Drawing.Printing.PrintDocument();
+            label12 = new Label();
+            pictureBox3 = new PictureBox();
+            label41 = new Label();
+            label39 = new Label();
+            label38 = new Label();
+            label15 = new Label();
+            label17 = new Label();
+            label18 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 11.7551F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(182, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(142, 21);
-            label1.TabIndex = 0;
-            label1.Text = "NISSAN S.A DE C.V";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 10.28571F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(193, 39);
-            label2.Name = "label2";
-            label2.Size = new Size(120, 19);
-            label2.TabIndex = 1;
-            label2.Text = "RFC: 9292385235";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(-9, 72);
+            label3.Location = new Point(-9, 85);
             label3.Name = "label3";
             label3.Size = new Size(552, 15);
             label3.TabIndex = 2;
@@ -329,12 +316,107 @@
             printDocument1.EndPrint += printDocument1_EndPrint;
             printDocument1.PrintPage += printDocument1_PrintPage;
             // 
+            // label12
+            // 
+            label12.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label12.Location = new Point(305, 45);
+            label12.Name = "label12";
+            label12.Size = new Size(113, 21);
+            label12.TabIndex = 71;
+            label12.Text = "AS12546SQ94";
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = Properties.Resources.Nissan_logo;
+            pictureBox3.Location = new Point(4, 9);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(80, 70);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 67;
+            pictureBox3.TabStop = false;
+            // 
+            // label41
+            // 
+            label41.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            label41.AutoSize = true;
+            label41.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label41.Location = new Point(252, 67);
+            label41.Name = "label41";
+            label41.Size = new Size(100, 21);
+            label41.TabIndex = 70;
+            label41.Text = "6121767223";
+            // 
+            // label39
+            // 
+            label39.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            label39.AutoSize = true;
+            label39.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label39.Location = new Point(141, 46);
+            label39.Name = "label39";
+            label39.Size = new Size(84, 21);
+            label39.TabIndex = 69;
+            label39.Text = "C.P: 12312";
+            // 
+            // label38
+            // 
+            label38.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            label38.AutoSize = true;
+            label38.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label38.Location = new Point(134, 23);
+            label38.Name = "label38";
+            label38.Size = new Size(265, 21);
+            label38.TabIndex = 68;
+            label38.Text = "San gregio 126#, Santa fe,BCS,La Paz";
+            // 
+            // label15
+            // 
+            label15.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            label15.AutoSize = true;
+            label15.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label15.Location = new Point(202, 2);
+            label15.Name = "label15";
+            label15.Size = new Size(150, 21);
+            label15.TabIndex = 64;
+            label15.Text = "Nissan, La Paz,BCS";
+            // 
+            // label17
+            // 
+            label17.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            label17.AutoSize = true;
+            label17.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label17.Location = new Point(180, 67);
+            label17.Name = "label17";
+            label17.Size = new Size(71, 21);
+            label17.TabIndex = 66;
+            label17.Text = "Telefono:";
+            // 
+            // label18
+            // 
+            label18.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            label18.AutoSize = true;
+            label18.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label18.Location = new Point(257, 45);
+            label18.Name = "label18";
+            label18.Size = new Size(42, 21);
+            label18.TabIndex = 65;
+            label18.Text = "RFC:";
+            // 
             // Ticket
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(525, 504);
+            Controls.Add(label12);
+            Controls.Add(pictureBox3);
+            Controls.Add(label41);
+            Controls.Add(label39);
+            Controls.Add(label38);
+            Controls.Add(label15);
+            Controls.Add(label17);
+            Controls.Add(label18);
             Controls.Add(label9);
             Controls.Add(pictureBox1);
             Controls.Add(label16);
@@ -360,20 +442,16 @@
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
             Name = "Ticket";
             Text = "Ticket";
             Load += Ticket_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Label label1;
-        private Label label2;
         private Label label3;
         private Label label4;
         private Label label5;
@@ -400,5 +478,13 @@
         private Label LBLFORMAPAGO;
         private Label label9;
         private System.Drawing.Printing.PrintDocument printDocument1;
+        private Label label12;
+        private PictureBox pictureBox3;
+        private Label label41;
+        private Label label39;
+        private Label label38;
+        private Label label15;
+        private Label label17;
+        private Label label18;
     }
 }

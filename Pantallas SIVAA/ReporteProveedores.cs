@@ -24,7 +24,7 @@ namespace Pantallas_SIVAA
 
         private void ReporteProveedores_Load(object sender, EventArgs e)
         {
-            label7.Text = "Alfredo Izquierdo";
+            lblNombre.Text = "Alfredo Izquierdo";
             label8.Text = DateTime.Now.ToString();
             dataGridView1.DataSource = listas;
         }

@@ -22,7 +22,7 @@ namespace Pantallas_SIVAA
         private bool isFormBorderStyleChanged = false;
         List<Cliente> lista;
         Empleado _pqt;
-        public ReporteClientes(List<Cliente> list,Empleado pqt)
+        public ReporteClientes(List<Cliente> list, Empleado pqt)
         {
             _pqt = pqt;
             lista = list;
@@ -42,7 +42,7 @@ namespace Pantallas_SIVAA
             Random random = new Random();
             int numeroAleatorio = random.Next(21000, 26001);
             SaveFileDialog guardar = new SaveFileDialog();
-            guardar.FileName = numeroAleatorio.ToString()+"Cliente.pdf";
+            guardar.FileName = numeroAleatorio.ToString() + "Cliente.pdf";
 
             string paginahtml = Properties.Resources.plantilla.ToString();
             paginahtml = paginahtml.Replace("@TITULO", "REPORTE DE CLIENTES");
