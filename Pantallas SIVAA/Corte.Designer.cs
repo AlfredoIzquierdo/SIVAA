@@ -244,7 +244,7 @@
             // 
             // panel3
             // 
-            panel3.Anchor = AnchorStyles.None;
+            panel3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel3.Controls.Add(button1);
             panel3.Controls.Add(textBox1);
             panel3.Controls.Add(label3);
@@ -360,10 +360,11 @@
             panel1.Controls.Add(btnCitas);
             panel1.Controls.Add(btnStock);
             panel1.Controls.Add(btnPedidos);
-            panel1.Location = new Point(2, 78);
+            panel1.Dock = DockStyle.Left;
+            panel1.Location = new Point(0, 76);
             panel1.Margin = new Padding(1, 3, 1, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(75, 550);
+            panel1.Size = new Size(75, 552);
             panel1.TabIndex = 64;
             // 
             // pictureBox1
@@ -382,13 +383,14 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1318, 628);
+            Controls.Add(panel1);
+            Controls.Add(panel7);
             Controls.Add(pictureBox1);
             Controls.Add(panel3);
             Controls.Add(dataGridView1);
-            Controls.Add(panel7);
-            Controls.Add(panel1);
             Name = "Corte";
             Text = "Corte";
+            WindowState = FormWindowState.Maximized;
             Load += Corte_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
             panel3.ResumeLayout(false);

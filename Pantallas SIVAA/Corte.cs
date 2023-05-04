@@ -160,12 +160,17 @@ namespace Pantallas_SIVAA
                 c = cor.ListadoAll();
                 dataGridView1.DataSource = c;
                 lista = c;
+                button1.Enabled = false;
+            }
+            else
+            {
+                button1.Enabled = true;
             }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            ReporteCorteCaja rc = new ReporteCorteCaja(_pqt,lista);
+            ReporteCorteCaja rc = new ReporteCorteCaja(_pqt, lista);
             rc.Show();
         }
     }

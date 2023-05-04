@@ -60,7 +60,7 @@ namespace Pantallas_SIVAA
         private void btnCorteCaja_Click(object sender, EventArgs e)
         {
             Corte corte = new Corte(_pqt);
-            //this.Close();
+            this.Close();
             corte.Show();
 
         }
