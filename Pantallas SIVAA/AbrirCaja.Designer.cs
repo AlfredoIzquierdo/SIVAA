@@ -738,6 +738,7 @@
             dataGridView2.RowTemplate.Height = 29;
             dataGridView2.Size = new Size(389, 202);
             dataGridView2.TabIndex = 0;
+            dataGridView2.CellClick += dataGridView2_CellClick;
             // 
             // Column6
             // 
