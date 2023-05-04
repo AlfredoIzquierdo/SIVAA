@@ -43,9 +43,8 @@ namespace Pantallas_SIVAA
             ListadoUnidxPedido(_id);
             pedido = PedidoD.ObtenerPdto(_id);
             lblIDPedido.Text = pedido.IDPedido.ToString();
-            lblDia.Text = pedido.Dia.ToString();
-            lblMes.Text = pedido.Mes.ToString();
-            lblAno.Text = pedido.Año.ToString();
+            lblFecha.Text = pedido.Dia.ToString().Trim() + "/" + pedido.Mes.ToString().Trim() + "/" + pedido.Año.ToString().Trim();
+
             lblMonto.Text = pedido.Importe.ToString();
 
             Proveedor = ProveedorD.ObtenerPdto(pedido.IDProveedor);
@@ -141,6 +140,11 @@ namespace Pantallas_SIVAA
             Bitmap bitmap = new Bitmap(this.Width, this.Height);
             this.DrawToBitmap(bitmap, new Rectangle(0, 0, this.Width, this.Height));
             e.Graphics.DrawImage(bitmap, 0, 0);
+        }
+
+        private void label32_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
