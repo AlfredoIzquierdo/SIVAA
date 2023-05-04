@@ -65,7 +65,7 @@ namespace Datos
                         //Cada vez que lo lea se crea un nuevo objeto
                         CorteCaja Pqte = new CorteCaja
                         {
-                            IDCorteCaja = Convert.ToString(Dr["IDPago"]),
+                            IDCorteCaja = Convert.ToString(Dr["IDCorteCaja"]),
                             IDEmpleado = Convert.ToString(Dr["IDEmpleado"]),
                             Dia = Convert.ToInt32(Dr["Dia"]),
                             Mes = Convert.ToInt32(Dr["Mes"]),
@@ -129,6 +129,49 @@ namespace Datos
                 Cnx.Close();
             }
             return null;
+        }
+        public List<CorteCaja> ListadoTotalEspecifico(string nom, string parametro)
+        {
+            List<CorteCaja> productos = new List<CorteCaja>();
+
+            //Vuelvo a crear la conexiÃ³n
+            using (SqlConnection Cnx = new SqlConnection(CdCnx))
+            {
+                Cnx.Open();
+                //Creo el Query (todos los registros de la tabla cliente
+                string CdSql = "SELECT * FROM CorteCaja WHERE " + parametro + "=@Cl";
+                using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
+                {
+                    //Cmd.Parameters.AddWithValue("@Lc", parametro);
+                    Cmd.Parameters.AddWithValue("@Cl", nom);
+
+                    SqlDataReader Dr = Cmd.ExecuteReader();
+                    //Leo registro por registro que tiene la tabla 
+                    while (Dr.Read())
+                    {
+                        //Cada vez que lo lea se crea un nuevo objeto
+                        CorteCaja Pqte = new CorteCaja
+                        {
+                            IDCorteCaja = Convert.ToString(Dr["IDCorteCaja"]),
+                            IDEmpleado = Convert.ToString(Dr["IDEmpleado"]),
+                            Dia = Convert.ToInt32(Dr["Dia"]),
+                            Mes = Convert.ToInt32(Dr["Mes"]),
+                            Año = Convert.ToInt32(Dr["Año"]),
+                            Hora = Convert.ToString(Dr["Hora"]),
+                            FondoInicial = Convert.ToDouble(Dr["FondoInicial"]),
+                            EfectivoFinal = Convert.ToDouble(Dr["EfectivoFinal"]),
+                            TarjetaFinal = Convert.ToDouble(Dr["TarjetaFinal"]),
+                            TotalFinal = Convert.ToDouble(Dr["TotalFinal"]),
+                            BalanceEfectivo = Convert.ToDouble(Dr["BalanceEfectivo"]),
+                            BalanceTarjeta = Convert.ToDouble(Dr["BalanceTarjeta"]),
+                            Estado = Convert.ToString(Dr["Estado"])
+                        };
+                        productos.Add(Pqte);
+                    }
+                }
+                Cnx.Close();
+            }
+            return productos;
         }
         public CorteCaja BuscarCajaAbierta()
         {

@@ -1,4 +1,7 @@
-﻿using Entidades;
+﻿using Datos;
+using Entidades;
+using iTextSharp.text;
+using Logicas;
 using Pantallas_SIVAA.Pedidos;
 using System;
 using System.Collections.Generic;
@@ -15,6 +18,8 @@ namespace Pantallas_SIVAA
     public partial class Corte : Form
     {
         Empleado _pqt;
+        CorteCajaLog cor = new CorteCajaLog();
+        List<CorteCaja> lista = new List<CorteCaja>();
         public Corte(Empleado pqt)
         {
             InitializeComponent();
@@ -66,6 +71,10 @@ namespace Pantallas_SIVAA
                     lblNombre.Text = "Bienvenido: " + _pqt.Nombre + " " + _pqt.ApellidoPat;
                     break;
             }
+            List<CorteCaja> c;
+            c = cor.ListadoAll();
+            dataGridView1.DataSource = c;
+            lista = c;
         }
 
         private void dataGridView1_Click(object sender, EventArgs e)
@@ -124,5 +133,40 @@ namespace Pantallas_SIVAA
             this.Close();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            if (comboBox2.SelectedIndex > 0 && textBox1.Text == "")
+            {
+                MessageBox.Show("Favor de llenar el campo de busqueda");
+                //List<CorteCaja> c;
+                //c = cor.ListadoAll();
+                //dataGridView1.DataSource = c;
+            }
+            else
+            {
+                List<CorteCaja> c;
+                c = cor.ListadoEspecifico(textBox1.Text, comboBox2.Text);
+                dataGridView1.DataSource = c;
+                lista = c;
+            }
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox2.Text == "Todos")
+            {
+                List<CorteCaja> c;
+                c = cor.ListadoAll();
+                dataGridView1.DataSource = c;
+                lista = c;
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            ReporteCorteCaja rc = new ReporteCorteCaja(_pqt,lista);
+            rc.Show();
+        }
     }
 }

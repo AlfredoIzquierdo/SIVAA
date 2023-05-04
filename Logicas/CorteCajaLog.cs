@@ -47,7 +47,21 @@ namespace Logicas
             }
             return null;
         }
-
+        public List<CorteCaja> ListadoEspecifico(string ClPdto, string parametro)
+        {
+            List<CorteCaja> Pd = new List<CorteCaja>();
+            Mensaje.Clear();
+            if (ClPdto == "0")
+                Mensaje.Append("Por favor proporcionar una clave valida");
+            if (Mensaje.Length == 0)
+            {
+                Pd = Pdto.ListadoTotalEspecifico(ClPdto, parametro);
+                if (Pd == null)
+                    Mensaje.Append(ClPdto + " no existe en la B.D.");
+                return Pd;
+            }
+            return null;
+        }
         public CorteCaja BuscarCajaAbierta()
         {
             CorteCaja Pd = null;

@@ -96,6 +96,7 @@
             label6.Size = new Size(172, 25);
             label6.TabIndex = 42;
             label6.Text = "Periodo abarcado:";
+            label6.Visible = false;
             // 
             // dataGridView1
             // 
@@ -104,12 +105,12 @@
             dataGridView1.BackgroundColor = SystemColors.ButtonHighlight;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Enabled = false;
-            dataGridView1.Location = new Point(15, 335);
+            dataGridView1.Location = new Point(15, 311);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(994, 495);
+            dataGridView1.Size = new Size(994, 519);
             dataGridView1.TabIndex = 41;
             // 
             // lblnombreempleado
@@ -315,6 +316,7 @@
             lblPeriodo.Size = new Size(112, 25);
             lblPeriodo.TabIndex = 45;
             lblPeriodo.Text = "08/03/2023";
+            lblPeriodo.Visible = false;
             // 
             // printDocument1
             // 
