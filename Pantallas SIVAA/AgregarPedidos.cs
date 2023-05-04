@@ -299,7 +299,19 @@ namespace Pantallas_SIVAA
             {
                 MessageBox.Show("El numero de serie debe contener 10 caracteres");
             }
-            else if (cmbVehiculo.SelectedIndex < 0 || cmbVersion.SelectedIndex < 0 || cmbModelo.SelectedIndex < 0 || cmbColor.SelectedIndex < 0)
+            else
+            if (dataGridView1.Rows.Count > 0)
+            {
+                for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                {
+                    if (txtSerie.Text == dataGridView1[i, 0].Value.ToString())
+                    {
+                        MessageBox.Show("Favor de ingresar otro numero dew serie ya que ese ya existe");
+                        return;
+                    }
+                }
+            }
+            if (cmbVehiculo.SelectedIndex < 0 || cmbVersion.SelectedIndex < 0 || cmbModelo.SelectedIndex < 0 || cmbColor.SelectedIndex < 0)
             {
                 MessageBox.Show("Favor de seleccionar todos los campos");
                 return;
