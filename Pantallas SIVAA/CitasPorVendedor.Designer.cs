@@ -96,7 +96,7 @@
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(785, 187);
+            dataGridView1.Size = new Size(785, 308);
             dataGridView1.TabIndex = 49;
             // 
             // lblNombre
@@ -334,7 +334,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(828, 506);
+            ClientSize = new Size(894, 631);
             Controls.Add(panel1);
             Controls.Add(lblIdEmpleado);
             Controls.Add(panel8);
