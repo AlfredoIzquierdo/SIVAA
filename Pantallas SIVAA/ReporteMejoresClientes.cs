@@ -53,24 +53,26 @@ namespace Pantallas_SIVAA
 
 
 
-            List<ReportesEntidad> ComprasContadoC = new List<ReportesEntidad>();
-            List<ReportesEntidad> ComprasCreditoC = new List<ReportesEntidad>();
-            ComprasContadoC = reportesLOG.listadoClienteContado(diaI, mesI, AnoI, diaF, mesF, AnoF, opcion);
-            ComprasCreditoC = reportesLOG.listadoClienteCredito(diaI, mesI, AnoI, diaF, mesF, AnoF, opcion);
-            foreach (ReportesEntidad x in ComprasContadoC)
+            //List<ReportesEntidad> ComprasContadoC;
+            //List<ReportesEntidad> ComprasCreditoC;
+            List<ReportesEntidad> TotalesLista;
+            //ComprasContadoC = reportesLOG.listadoClienteContado(diaI, mesI, AnoI, diaF, mesF, AnoF, opcion);
+            //ComprasCreditoC = reportesLOG.listadoClienteCredito(diaI, mesI, AnoI, diaF, mesF, AnoF, opcion);
+            TotalesLista = reportesLOG.listadoClienteTotal(diaI, mesI, AnoI, diaF, mesF, AnoF, opcion);
+            foreach (ReportesEntidad x in TotalesLista)
             {
 
                 Cliente cliente = new Cliente();
                 cliente = clienteLog.LeerPorClave(x.IDCliente);
                 string nombrecompleto = cliente.Nombre.Trim() + " " + cliente.ApellidoPat.Trim() + " " + cliente.ApellidoMat.Trim();
                 int comprastotaltes = Convert.ToInt32(x.vecesCompro);
-                foreach (ReportesEntidad z in ComprasCreditoC)
-                {
-                    if (z.IDCliente == x.IDCliente)
-                    {
-                        comprastotaltes += Convert.ToInt32(z.vecesCompro);
-                    }
-                }
+                //foreach (ReportesEntidad z in ComprasCreditoC)
+                //{
+                //    if (z.IDCliente == x.IDCliente)
+                //    {
+                //        comprastotaltes += Convert.ToInt32(z.vecesCompro);
+                //    }
+                //}
 
                 //Clavecliente
                 Label ClaveCliente = new Label();
@@ -108,7 +110,7 @@ namespace Pantallas_SIVAA
                 //Compras totales
                 Label comprasTotales = new Label();
                 //NombreCompleto.Size = new Size(89, 28);
-                comprasTotales.Text = comprastotaltes.ToString();
+                comprasTotales.Text = x.vecesCompro;
                 comprasTotales.ForeColor = Color.Black;
                 comprasTotales.Location = new Point(xtotcom, ytotcom + desplazamiento);
                 panel6.Controls.Add(comprasTotales);
@@ -124,10 +126,14 @@ namespace Pantallas_SIVAA
 
                 desplazamiento += 30;
             }
-            ReportesEntidad mejorclien = ComprasContadoC.First();
-            Cliente mejorcliente = new Cliente();
-            mejorcliente = clienteLog.LeerPorClave(mejorclien.IDCliente);
-            lblmejorclien.Text = mejorcliente.Nombre.Trim() + " " + mejorcliente.ApellidoPat.Trim() + " " + mejorcliente.ApellidoMat.Trim();
+            //if(ComprasContadoC != null || ComprasCreditoC!= null)
+            //{
+            //    ReportesEntidad mejorclien = ComprasContadoC.First();
+            //    Cliente mejorcliente = new Cliente();
+            //    mejorcliente = clienteLog.LeerPorClave(mejorclien.IDCliente);
+            //    lblmejorclien.Text = mejorcliente.Nombre.Trim() + " " + mejorcliente.ApellidoPat.Trim() + " " + mejorcliente.ApellidoMat.Trim();
+            //}
+           
         }
 
         private void ReporteMejoresClientes_Load(object sender, EventArgs e)
@@ -172,6 +178,11 @@ namespace Pantallas_SIVAA
             Bitmap bitmap = new Bitmap(this.Width, this.Height);
             this.DrawToBitmap(bitmap, new Rectangle(0, 0, this.Width, this.Height));
             e.Graphics.DrawImage(bitmap, 0, 0);
+        }
+
+        private void ReporteMejoresClientes_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

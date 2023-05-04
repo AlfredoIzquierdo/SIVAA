@@ -40,20 +40,15 @@ namespace Pantallas_SIVAA
             lblidcot.Text = numeroAleatorio.ToString();
 
             //parte de abajo
-            List<ReporteVehiculoMasVendido> vehiculosContado = new List<ReporteVehiculoMasVendido>();
-            List<ReporteVehiculoMasVendido> vehiculosCredito = new List<ReporteVehiculoMasVendido>();
+            List<ReporteVehiculoMasVendido> vehiculosContado;
+            List<ReporteVehiculoMasVendido> vehiculosCredito;
+            List<ReporteVehiculoMasVendido> vehiculostotales;
             vehiculosContado = reportesLOG.listadoVehiculoMasVendidoContado(diaI, mesI, AnoI, diaF, mesF, AnoF, opcion);
             vehiculosCredito = reportesLOG.listadoVehiculoMasVendidoCredito(diaI, mesI, AnoI, diaF, mesF, AnoF, opcion);
-            foreach (ReporteVehiculoMasVendido x in vehiculosContado)
+            vehiculostotales = reportesLOG.listadoVehiculoMasVendidoTotal(diaI, mesI, AnoI, diaF, mesF, AnoF, opcion);
+            foreach (ReporteVehiculoMasVendido x in vehiculostotales)
             {
-                int totalVecesVendido = Convert.ToInt32(x.vecesVendido);
-                foreach (ReporteVehiculoMasVendido z in vehiculosCredito)
-                {
-                    if (x.IDVersion == z.IDVersion)
-                    {
-                        totalVecesVendido += Convert.ToInt32(z.vecesVendido);
-                    }
-                }
+               
 
                 VersionEntidad datosversion = new VersionEntidad();
                 Vehiculo datosvehiculo = new Vehiculo();
@@ -63,12 +58,12 @@ namespace Pantallas_SIVAA
                 datosversion = verlog.ObtenerPdtoPorID(x.IDVersion);
                 datosvehiculo = vehiculoLog.LeerPorClave(datosversion.IDVehiculo);
                 datosmodelo = reportesLOG.datosmodelo(datosmodeloVersion.IDModelo);
-                dgvVehiculos.Rows.Add(x.IDVersion, datosvehiculo.Nombre, datosversion.Version, datosmodelo.Año, totalVecesVendido.ToString(), reportesLOG.gananciasVersion(x.IDVersion));
+                dgvVehiculos.Rows.Add(x.IDVersion, datosvehiculo.Nombre, datosversion.Version, datosmodelo.Año, x.vecesVendido, reportesLOG.gananciasVersion(x.IDVersion));
 
             }
 
 
-            lblmejorvehiculo.Text = "Nissan " + dgvVehiculos.Rows[0].Cells[1].Value.ToString();
+            //lblmejorvehiculo.Text = "Nissan " + dgvVehiculos.Rows[0].Cells[1].Value.ToString();
         }
 
         private void ReporteUnidadesVendidas_Load(object sender, EventArgs e)

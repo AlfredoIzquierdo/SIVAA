@@ -35,16 +35,17 @@ namespace Pantallas_SIVAA
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(numericDiaF.Value<numericDiaI.Value | numericMesF.Value < numericMesI.Value| numericAnoF.Value < numericAnoI.Value)
-            {
-                MessageBox.Show("La fecha final debe ser menor a la fecha final");
-            }else
-            {
-                ReporteMejoresClientes mejorclien = new ReporteMejoresClientes(_pqt, (int)numericDiaI.Value, (int)numericMesI.Value, (int)numericAnoI.Value, (int)numericDiaF.Value, (int)numericMesF.Value, (int)numericAnoF.Value,cbPeriodoClien.Text);
+            //if (numericDiaF.Value < numericDiaI.Value | numericMesF.Value < numericMesI.Value | numericAnoF.Value < numericAnoI.Value)
+            //{
+            //    MessageBox.Show("La fecha final debe ser menor a la fecha final");
+            //}
+            //else
+            //{
+                ReporteMejoresClientes mejorclien = new ReporteMejoresClientes(_pqt, (int)numericDiaI.Value, (int)numericMesI.Value, (int)numericAnoI.Value, (int)numericDiaF.Value, (int)numericMesF.Value, (int)numericAnoF.Value, cbPeriodoClien.Text);
                 this.Close();
                 mejorclien.Show();
-            }
-            
+           // }
+
 
         }
 
@@ -57,18 +58,21 @@ namespace Pantallas_SIVAA
                 numericAnoF.Enabled = false;
                 numericAnoI.Enabled = false;
             }
-           
+
         }
 
         private void numericMesI_ValueChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void cbPeriodoClien_SelectedValueChanged(object sender, EventArgs e)
         {
             if (cbPeriodoClien.Text == "Dia")
             {
+                numericDiaI.Increment = 1;
+                numericDiaF.Increment = 1;
+                numericDiaI.Maximum = 31;
                 numericDiaI.Enabled = true;
                 numericDiaF.Enabled = true;
                 numericMesF.Enabled = false;
@@ -76,8 +80,25 @@ namespace Pantallas_SIVAA
                 numericAnoF.Enabled = false;
                 numericAnoI.Enabled = false;
             }
+            if (cbPeriodoClien.Text == "Semana")
+            {
+                numericDiaI.Enabled = true;
+                numericDiaF.Enabled = true;
+                numericDiaI.Value = 1;
+                numericDiaF.Value = 7;
+                numericDiaI.Increment = 6;
+                numericDiaI.Maximum = 25;
+                numericDiaF.Increment = 6;
+  
+
+                numericMesF.Enabled = false;
+                numericMesI.Enabled = false;
+                numericAnoF.Enabled = false;
+                numericAnoI.Enabled = false;
+            }
             if (cbPeriodoClien.Text == "Mes")
             {
+             
                 numericMesF.Enabled = true;
                 numericMesI.Enabled = true;
                 numericAnoF.Enabled = false;
@@ -87,6 +108,7 @@ namespace Pantallas_SIVAA
             }
             if (cbPeriodoClien.Text == "Año")
             {
+        
                 numericMesF.Enabled = false;
                 numericMesI.Enabled = false;
                 numericAnoF.Enabled = true;
@@ -94,6 +116,11 @@ namespace Pantallas_SIVAA
                 numericDiaI.Enabled = false;
                 numericDiaF.Enabled = false;
             }
+        }
+
+        private void numericDiaI_ValueChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

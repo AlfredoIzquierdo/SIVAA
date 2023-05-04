@@ -53,12 +53,44 @@ namespace Pantallas_SIVAA
             paginahtml = paginahtml.Replace("@NUMEROFOLIO", numeroAleatorio.ToString());
 
             string filas = string.Empty;
+            string cabecera = string.Empty;
             //cabecera
+            cabecera = "<th>" + "IDVersion" + "</th>" +
+                      "<th>" + "IDVehiculo" + "</th>" +
+                      "<th>" + "Llantas" + "</th>" +
+                      "<th>" + "TipoAsientos" + "</th>" +
+                      "<th>" + "CamaraTrasera" + "</th>" +
+                      "<th>" + "TipoCombustible" + "</th>" +
+                      "<th>" + "Version" + "</th>" +
+                      "<th>" + "Rines" + "</th>" +
+                      "<th>" + "Cilindraje" + "</th>" +
+                      "<th>" + "Costo" + "</th>" +
+                      "<th>" + "CapacidadCajuela" + "</th>" +
+                      "<th>" + "DistanciaEjes" + "</th>" +
+                      "<th>" + "Anchura" + "</th>" +
+                      "<th>" + "Altura" + "</th>" +
+                      "<th>" + "AudioVelC" + "</th>" +
+                      "<th>" + "TomaCorriente" + "</th>" +
+                      "<th>" + "TipoTraccion" + "</th>" +
+                      "<th>" + "NumPuertas" + "</th>" +
+                      "<th>" + "Transmision" + "</th>" +
+                      "<th>" + "FarosHal" + "</th>" +
+                      "<th>" + "NumEngranajes" + "</th>" +
+                      "<th>" + "ACAutom" + "</th>" +
+                      "<th>" + "FarosLED" + "</th>" +
+                      "<th>" + "RendimientoCombustible" + "</th>" +
+                      "<th>" + "FrenosTraseros" + "</th>" +
+                      "<th>" + "FrenosDelanteros" + "</th>" +
+                      "<th>" + "SuspensionDelantera" + "</th>" +
+                      "<th>" + "SuspensionTrasera" + "</th>" +
+                      "<th>" + "EspejoLatDirC" + "</th>" +
+                      "<th>" + "EspejoLatAE" + "</th>";
 
+            paginahtml = paginahtml.Replace("@CABECERA", cabecera);
             //llenar tabla
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
-                filas += "<tr>";
+               
                 filas += "<td>" + row.Cells["IDVersion"].Value.ToString() + "</td>";
                 filas += "<td>" + row.Cells["IDVehiculo"].Value.ToString() + "</td>";
                 filas += "<td>" + row.Cells["Llantas"].Value.ToString() + "</td>";
@@ -67,7 +99,34 @@ namespace Pantallas_SIVAA
                 filas += "<td>" + row.Cells["TipoCombustible"].Value.ToString() + "</td>";
                 filas += "<td>" + row.Cells["Version"].Value.ToString() + "</td>";
                 filas += "<td>" + row.Cells["Rines"].Value.ToString() + "</td>";
-                filas += "</tr>";
+                filas += "<td>" + row.Cells["TipoAsientos"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells["CamaraTrasera"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells["TipoCombustible"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells["Version"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells["Rines"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells["Cilindraje"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells["Costo"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells["CapacidadCajuela"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells["DistanciaEjes"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells["Anchura"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells["Altura"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells["AudioVelC"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells["TomaCorriente"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells["TipoTraccion"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells["NumPuertas"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells["Transmision"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells["FarosHal"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells["NumEngranajes"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells["ACAutom"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells["FarosLED"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells["RendimientoCombustible"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells["FrenosTraseros"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells["FrenosDelanteros"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells["SuspensionDelantera"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells["SuspensionTrasera"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells["EspejosLatDirC"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells["EspejosLatAE"].Value.ToString() + "</td>";
+             
                
             }
             paginahtml = paginahtml.Replace("@FILAS", filas);
@@ -97,7 +156,7 @@ namespace Pantallas_SIVAA
                 
 
             }
-
+            MessageBox.Show("Reporte guardado correctamente");
             //pictureBox1.Hide();
             ////Guardar el estado original de la propiedad "BorderStyle"
 

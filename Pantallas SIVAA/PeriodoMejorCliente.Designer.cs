@@ -90,6 +90,7 @@
             numericDiaI.Size = new Size(44, 27);
             numericDiaI.TabIndex = 6;
             numericDiaI.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            numericDiaI.ValueChanged += numericDiaI_ValueChanged;
             // 
             // numericMesI
             // 

@@ -38,6 +38,11 @@ namespace Logicas
                 
                 return datos = pqtReport.ListadoClienteFrecuenteContadoDia(DiaI, MesI, AnoI, DiaF, MesF, AnoF);
             }
+            if (Opcion == "Semana")
+            {
+
+                return datos = pqtReport.ListadoClienteFrecuenteContadoDia(DiaI, MesI, AnoI, DiaF, MesF, AnoF);
+            }
             if (Opcion == "Mes")
             {
                
@@ -68,6 +73,30 @@ namespace Logicas
             }
             return datos;
         }
+        public List<ReportesEntidad> listadoClienteTotal(int DiaI, int MesI, int AnoI, int DiaF, int MesF, int AnoF, string Opcion)
+        {
+            List<ReportesEntidad> datos = new List<ReportesEntidad>();
+            if (Opcion == "Dia")
+            {
+
+                return datos = pqtReport.ListadoClienteFrecuenteTotalDia(DiaI, MesI, AnoI, DiaF, MesF, AnoF);
+            }
+            if (Opcion == "Semana")
+            {
+
+                return datos = pqtReport.ListadoClienteFrecuenteTotalDia(DiaI, MesI, AnoI, DiaF, MesF, AnoF);
+            }
+            if (Opcion == "Mes")
+            {
+
+                return datos = pqtReport.ListadoClienteFrecuenteTotalMes(DiaI, MesI, AnoI, DiaF, MesF, AnoF);
+            }
+            if (Opcion == "Año")
+            {
+                return datos = pqtReport.ListadoClienteFrecuenteTotalAno(DiaI, MesI, AnoI, DiaF, MesF, AnoF);
+            }
+            return datos;
+        }
 
         public List<ReporteVehiculoMasVendido> listadoVehiculoMasVendidoCredito(int DiaI, int MesI, int AnoI, int DiaF, int MesF, int AnoF, string Opcion)
         {
@@ -85,6 +114,30 @@ namespace Logicas
             if (Opcion == "Año")
             {
                 return datos = pqtReport.ListadoVehiculoMasVendidoCreditoAno(DiaI, MesI, AnoI, DiaF, MesF, AnoF);
+            }
+            return datos;
+        }
+        public List<ReporteVehiculoMasVendido> listadoVehiculoMasVendidoTotal(int DiaI, int MesI, int AnoI, int DiaF, int MesF, int AnoF, string Opcion)
+        {
+            List<ReporteVehiculoMasVendido> datos = new List<ReporteVehiculoMasVendido>();
+            if (Opcion == "Dia")
+            {
+
+                return datos = pqtReport.ListadoVehiculoMasVendidoTotalDia(DiaI, MesI, AnoI, DiaF, MesF, AnoF);
+            }
+            if (Opcion == "Semana")
+            {
+
+                return datos = pqtReport.ListadoVehiculoMasVendidoTotalDia(DiaI, MesI, AnoI, DiaF, MesF, AnoF);
+            }
+            if (Opcion == "Mes")
+            {
+
+                return datos = pqtReport.ListadoVehiculoMasVendidoTotalMes(DiaI, MesI, AnoI, DiaF, MesF, AnoF);
+            }
+            if (Opcion == "Año")
+            {
+                return datos = pqtReport.ListadoVehiculoMasVendidoTotalAno(DiaI, MesI, AnoI, DiaF, MesF, AnoF);
             }
             return datos;
         }
@@ -145,7 +198,30 @@ namespace Logicas
             }
             return datos;
         }
+        public List<ReporteEmpleadoVenta> listadoEmpleadoVentasTotal(int DiaI, int MesI, int AnoI, int DiaF, int MesF, int AnoF, string Opcion)
+        {
+            List<ReporteEmpleadoVenta> datos = new List<ReporteEmpleadoVenta>();
+            if (Opcion == "Dia")
+            {
 
+                return datos = pqtReport.ListadoEmpleadoVentaCreditoAno(DiaI, MesI, AnoI, DiaF, MesF, AnoF);
+            }
+            if (Opcion == "Semana")
+            {
+
+                return datos = pqtReport.ListadoEmpleadoVentaCreditoAno(DiaI, MesI, AnoI, DiaF, MesF, AnoF);
+            }
+            if (Opcion == "Mes")
+            {
+
+                return datos = pqtReport.ListadoEmpleadoVentaCreditoMes(DiaI, MesI, AnoI, DiaF, MesF, AnoF);
+            }
+            if (Opcion == "Año")
+            {
+                return datos = pqtReport.ListadoEmpleadoVentaCreditoAno(DiaI, MesI, AnoI, DiaF, MesF, AnoF);
+            }
+            return datos;
+        }
         public ModeloVersion ObtenerModeloVersion(string idversion)
         {
             ModeloVersion datos = pqtModVer.ObtenerPdto(idversion);

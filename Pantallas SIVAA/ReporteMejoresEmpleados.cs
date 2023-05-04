@@ -42,47 +42,40 @@ namespace Pantallas_SIVAA
             lblidcot.Text = numeroAleatorio.ToString();
 
             //Parte de abajo
-            List<ReporteEmpleadoVenta> EmpleadosContado = new List<ReporteEmpleadoVenta>();
-            List<ReporteEmpleadoVenta> EmpleadosCredito = new List<ReporteEmpleadoVenta>();
+            List<ReporteEmpleadoVenta> EmpleadosContado;
+            List<ReporteEmpleadoVenta> EmpleadosCredito;
+            List<ReporteEmpleadoVenta> EmpleadoTotal;
             //List<string> valoresusados= new List<string>();
             EmpleadosContado = reportesLOG.listadoEmpleadoVentasContado(diaI, mesI, AnoI, diaF, mesF, AnoF, opcion);
             EmpleadosCredito = reportesLOG.listadoEmpleadoVentasCredito(diaI, mesI, AnoI, diaF, mesF, AnoF, opcion);
-            foreach (ReporteEmpleadoVenta x in EmpleadosContado)
+            EmpleadoTotal = reportesLOG.listadoEmpleadoVentasTotal(diaI, mesI, AnoI, diaF, mesF, AnoF, opcion);
+            foreach (ReporteEmpleadoVenta x in EmpleadoTotal)
             {
-                int totalVecesVendido = Convert.ToInt32(x.VentasRealizadas);
+                Empleado empleadoActual = new Empleado();
+                empleadoActual = empleadoLog.LeerPorClave(x.IDEmpleado);
+                string nombrecompleto1 = empleadoActual.Nombre.Trim() + " " + empleadoActual.ApellidoPat.Trim() + " " + empleadoActual.ApellidoMat.Trim();
                 bool bandera = false;
+                foreach (ReporteEmpleadoVenta z in EmpleadosContado)
+                {
+
+                    if (x.IDEmpleado == z.IDEmpleado)
+                    {
+
+                        dgvEmpleadosV.Rows.Add(x.IDEmpleado, nombrecompleto1, z.VentasRealizadas, x.VentasRealizadas, x.VentasRealizadas, reportesLOG.gananciasEmpleado(x.IDEmpleado));
+                    }
+
+                }
                 foreach (ReporteEmpleadoVenta z in EmpleadosCredito)
                 {
 
                     if (x.IDEmpleado == z.IDEmpleado)
                     {
-                        bandera = true;
 
-                        totalVecesVendido = Convert.ToInt32(x.VentasRealizadas);
-                        totalVecesVendido += Convert.ToInt32(z.VentasRealizadas);
-                        Empleado empleadoActual = new Empleado();
-                        empleadoActual = empleadoLog.LeerPorClave(x.IDEmpleado);
-                        string nombrecompleto1 = empleadoActual.Nombre.Trim() + " " + empleadoActual.ApellidoPat.Trim() + " " + empleadoActual.ApellidoMat.Trim();
-                        dgvEmpleadosV.Rows.Add(x.IDEmpleado, nombrecompleto1, z.VentasRealizadas, x.VentasRealizadas, totalVecesVendido.ToString(), reportesLOG.gananciasEmpleado(x.IDEmpleado));
-                        //int indice= EmpleadosCredito.IndexOf(z);
-                        //EmpleadosCredito.RemoveAt(indice);
-                        break;
-
+                        dgvEmpleadosV.Rows.Add(x.IDEmpleado, nombrecompleto1, z.VentasRealizadas, x.VentasRealizadas, x.VentasRealizadas, reportesLOG.gananciasEmpleado(x.IDEmpleado));
                     }
 
-
-
                 }
-                if (bandera == false)
-                {
-                    Empleado empleadoAct = new Empleado();
-                    empleadoAct = empleadoLog.LeerPorClave(x.IDEmpleado);
-                    string nombrecompleto = empleadoAct.Nombre.Trim() + " " + empleadoAct.ApellidoPat.Trim() + " " + empleadoAct.ApellidoMat.Trim();
-                    dgvEmpleadosV.Rows.Add(x.IDEmpleado, nombrecompleto, x.VentasRealizadas, 0, totalVecesVendido.ToString(), reportesLOG.gananciasEmpleado(x.IDEmpleado));
-                }
-
-
-
+                //dgvEmpleadosV.Rows.Add(x.IDEmpleado, nombrecompleto1, z.VentasRealizadas, x.VentasRealizadas, x.VentasRealizadas, reportesLOG.gananciasEmpleado(x.IDEmpleado));
 
             }
         }

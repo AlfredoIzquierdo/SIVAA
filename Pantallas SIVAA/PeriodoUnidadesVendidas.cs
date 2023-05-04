@@ -34,16 +34,16 @@ namespace Pantallas_SIVAA
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (numericDiaF.Value < numericDiaI.Value | numericMesF.Value < numericMesI.Value | numericAnoF.Value < numericAnoI.Value)
-            {
-                MessageBox.Show("Ingrese una fecha valida");
-            }
-            else
-            {
+        //    if (numericDiaF.Value < numericDiaI.Value | numericMesF.Value < numericMesI.Value | numericAnoF.Value < numericAnoI.Value)
+        //    {
+        //        MessageBox.Show("Ingrese una fecha valida");
+        //    }
+        //    else
+           // {
                 ReporteUnidadesVendidas C = new ReporteUnidadesVendidas(_pqt, (int)numericDiaI.Value, (int)numericMesI.Value, (int)numericAnoI.Value, (int)numericDiaF.Value, (int)numericMesF.Value, (int)numericAnoF.Value, cbPeriodoVeh.Text);
                 this.Close();
                 C.Show();
-            }
+            //}
 
 
         }
@@ -72,6 +72,9 @@ namespace Pantallas_SIVAA
         {
             if (cbPeriodoVeh.Text == "Dia")
             {
+                numericDiaI.Increment = 1;
+                numericDiaF.Increment = 1;
+                numericDiaI.Maximum = 31;
                 numericDiaI.Enabled = true;
                 numericDiaF.Enabled = true;
                 numericMesF.Enabled = false;
@@ -79,8 +82,25 @@ namespace Pantallas_SIVAA
                 numericAnoF.Enabled = false;
                 numericAnoI.Enabled = false;
             }
+            if (cbPeriodoVeh.Text == "Semana")
+            {
+                numericDiaI.Enabled = true;
+                numericDiaF.Enabled = true;
+                numericDiaI.Value = 1;
+                numericDiaF.Value = 7;
+                numericDiaI.Increment = 6;
+                numericDiaI.Maximum = 25;
+                numericDiaF.Increment = 6;
+
+
+                numericMesF.Enabled = false;
+                numericMesI.Enabled = false;
+                numericAnoF.Enabled = false;
+                numericAnoI.Enabled = false;
+            }
             if (cbPeriodoVeh.Text == "Mes")
             {
+
                 numericMesF.Enabled = true;
                 numericMesI.Enabled = true;
                 numericAnoF.Enabled = false;
@@ -90,6 +110,7 @@ namespace Pantallas_SIVAA
             }
             if (cbPeriodoVeh.Text == "Año")
             {
+
                 numericMesF.Enabled = false;
                 numericMesI.Enabled = false;
                 numericAnoF.Enabled = true;

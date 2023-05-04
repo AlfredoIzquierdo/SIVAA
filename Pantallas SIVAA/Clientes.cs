@@ -102,7 +102,7 @@ namespace Pantallas_SIVAA
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            ReporteClientes r = new ReporteClientes(listas);
+            ReporteClientes r = new ReporteClientes(listas,_pqt);
             r.Show();
         }
 
