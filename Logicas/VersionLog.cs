@@ -54,21 +54,7 @@ namespace Logicas
             return datos;
         }
 
-        public VersionEntidad ObtenerPdto(string ClPdto, string idVeh)
-        {
-            VersionEntidad Pd = null;
-            Mensaje.Clear();
-            if (ClPdto == "")
-                Mensaje.Append("Por favor proporcionar una versión");
-            if (Mensaje.Length == 0)
-            {
-                Pd = Pdto.ObtenerPdtoPorNombreModelo(ClPdto, idVeh);
-                if (Pd == null)
-                    Mensaje.Append("La versión no existe en la B.D.");
-                return Pd;
-            }
-            return null;
-        }
+        
         public List <VersionEntidad> ObtenerVersionesVehiculo(string nombre)
         {
             List<VersionEntidad> Pd = null;

@@ -2096,14 +2096,14 @@ MessageBox.Show("No hay registro de cotizaciones a credito de ese cliente");
             ComboVersion1.Items.Clear();
 
             versionsdisponibles = pqtLog9.ObtenerVersionesVehiculo(comboVehiculo.Text);
-            foreach (VersionEntidad ver in versionsdisponibles)
-            {
-                if (ver.EstadoVersion == "Activo")
-                {
-                    ComboVersion1.Items.Add(ver.Version);
-                    ComboVersion1.SelectedIndex = 0;
-                    ArrojarPrecioCot();
-                }
+            //foreach (VersionEntidad ver in versionsdisponibles)
+            //{
+            //    if (ver.EstadoVersion == "Activo")
+            //    {
+            //        ComboVersion1.Items.Add(ver.Version);
+            //        ComboVersion1.SelectedIndex = 0;
+            //        ArrojarPrecioCot();
+            //    }
 
 
 
@@ -2127,7 +2127,7 @@ MessageBox.Show("No hay registro de cotizaciones a credito de ese cliente");
 
                 //}
 
-            }
+            //}
         }
 
         private void rbtnConCot_CheckedChanged(object sender, EventArgs e)

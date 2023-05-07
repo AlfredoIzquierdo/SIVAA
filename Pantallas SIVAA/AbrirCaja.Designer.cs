@@ -1370,6 +1370,7 @@
             numericUpDown15.Name = "numericUpDown15";
             numericUpDown15.Size = new Size(45, 46);
             numericUpDown15.TabIndex = 99;
+            numericUpDown15.ValueChanged += numericUpDown14_ValueChanged;
             // 
             // numericUpDown16
             // 
@@ -1378,6 +1379,7 @@
             numericUpDown16.Name = "numericUpDown16";
             numericUpDown16.Size = new Size(45, 46);
             numericUpDown16.TabIndex = 100;
+            numericUpDown16.ValueChanged += numericUpDown14_ValueChanged;
             // 
             // numericUpDown17
             // 
@@ -1386,6 +1388,7 @@
             numericUpDown17.Name = "numericUpDown17";
             numericUpDown17.Size = new Size(45, 46);
             numericUpDown17.TabIndex = 101;
+            numericUpDown17.ValueChanged += numericUpDown14_ValueChanged;
             // 
             // pictureBox15
             // 
@@ -1927,6 +1930,7 @@
             numericUpDown1.Name = "numericUpDown1";
             numericUpDown1.Size = new Size(41, 46);
             numericUpDown1.TabIndex = 84;
+            numericUpDown1.ValueChanged += numericUpDown14_ValueChanged;
             // 
             // numericUpDown4
             // 
@@ -1935,6 +1939,7 @@
             numericUpDown4.Name = "numericUpDown4";
             numericUpDown4.Size = new Size(41, 46);
             numericUpDown4.TabIndex = 85;
+            numericUpDown4.ValueChanged += numericUpDown14_ValueChanged;
             // 
             // numericUpDown2
             // 
@@ -1943,6 +1948,7 @@
             numericUpDown2.Name = "numericUpDown2";
             numericUpDown2.Size = new Size(41, 46);
             numericUpDown2.TabIndex = 82;
+            numericUpDown2.ValueChanged += numericUpDown14_ValueChanged;
             // 
             // numericUpDown5
             // 
@@ -1951,6 +1957,7 @@
             numericUpDown5.Name = "numericUpDown5";
             numericUpDown5.Size = new Size(41, 46);
             numericUpDown5.TabIndex = 81;
+            numericUpDown5.ValueChanged += numericUpDown14_ValueChanged;
             // 
             // numericUpDown3
             // 
@@ -1959,6 +1966,7 @@
             numericUpDown3.Name = "numericUpDown3";
             numericUpDown3.Size = new Size(41, 46);
             numericUpDown3.TabIndex = 80;
+            numericUpDown3.ValueChanged += numericUpDown14_ValueChanged;
             // 
             // numericUpDown6
             // 
@@ -1967,6 +1975,7 @@
             numericUpDown6.Name = "numericUpDown6";
             numericUpDown6.Size = new Size(41, 46);
             numericUpDown6.TabIndex = 83;
+            numericUpDown6.ValueChanged += numericUpDown14_ValueChanged;
             // 
             // pictureBox12
             // 

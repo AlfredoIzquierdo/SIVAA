@@ -451,47 +451,7 @@ namespace Datos
             }
             return null;
         }
-        //No usar
-        public Cliente ObtenerPdto(string CodPqt,string Ap)
-        {
-            //Using que crea la conexión
-            using (SqlConnection Cnx = new SqlConnection(CdCnx))
-            {
-                //Abro la conexión y creo el Query insertar, eliminar, consultar, elminar, actualizar, consulta individaul, general, orrar todo
-                Cnx.Open();
-                string CdSql = "SELECT * FROM Cliente WHERE Nombre=@Cl and ApellidoPaterno=@Ap";
-                //Using que crea el comando que voy a ejecutar con relación al query que planeteo
-                using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
-                {
-                    //Asignar el valor a @Cl
-                    Cmd.Parameters.AddWithValue("@Cl", CodPqt);
-                    Cmd.Parameters.AddWithValue("@Ap", Ap);
-                    SqlDataReader Dr = Cmd.ExecuteReader();
-                    if (Dr.Read())
-                    {
-
-                        Cliente Pqte = new Cliente
-                        {
-                            IDCliente = Convert.ToString(Dr["IDCliente"]),
-                            Nombre = Convert.ToString(Dr["Nombre"]),
-                            ApellidoPat = Convert.ToString(Dr["ApellidoPaterno"]),
-                            ApellidoMat = Convert.ToString(Dr["ApellidoMaterno"]),
-                            RFC = Convert.ToString(Dr["RFC"]),
-                            Correo = Convert.ToString(Dr["Correo"]),
-                            Telefono = Convert.ToString(Dr["Telefono"]),
-                            NoExterior = Convert.ToString(Dr["NoExterior"]),
-                            Colonia = Convert.ToString(Dr["Colonia"]),
-                            Ciudad = Convert.ToString(Dr["Ciudad"]),
-                            Estado = Convert.ToString(Dr["Estado"]),
-                            EstadoCliente = Convert.ToString(Dr["EstadoCliente"])
-                        };
-                        return Pqte;
-                    }
-                }
-                Cnx.Close();
-            }
-            return null;
-        }
+      
         public Cliente ObtenerPdto2(string CodPqt, string Ap)
         {
             //Using que crea la conexión

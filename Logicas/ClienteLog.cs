@@ -180,14 +180,7 @@ namespace Logicas
             return null;
         }
 
-        public void Eliminar(string CodPqte)
-        {
-            Mensaje.Clear();
-            if (CodPqte == "0")
-                Mensaje.Append("Por favor proporcionar un Codigo valido");
-            if (Mensaje.Length == 0)
-                Pdto.Eliminar(CodPqte);
-        }
+      
 
         private bool ValidarProducto(Cliente Pq)
         {

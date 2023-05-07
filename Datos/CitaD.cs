@@ -276,21 +276,7 @@ namespace Datos
             return null;
         }
 
-        public void Eliminar(string CodPqt)
-        {
-            using (SqlConnection Cnx = new SqlConnection(CdCnx))
-            {
-                Cnx.Open();
-                string CdSql = "DELETE FROM Cita WHERE IDCita=@Cl";
-                using (SqlCommand Cmd = new SqlCommand(CdSql, Cnx))
-                {
-                    Cmd.Parameters.AddWithValue("@Cl", CodPqt);
-                    Cmd.ExecuteNonQuery();
-                    Cmd.Dispose();
-                }
-                Cnx.Close();
-            }
-        }
+       
 
         public void Actualizar(Cita Pqte)
         {
